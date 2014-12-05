@@ -1,0 +1,1045 @@
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmAcercaDe.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmConfiguracionGeneral.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmConfigurarTicket.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmCumple.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmLogin.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmRegistroEntradas.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.frmMain.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.frmSplash.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Properties.Resources.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.csproj.GenerateResource.Cache
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\bin\Debug\GYM.exe.config
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\bin\Debug\GYM.exe
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\bin\Debug\GYM.pdb
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Caja.frmAbrirCaja.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmCaja.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Caja.frmCerrarCaja.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Caja.frmEntradaSalida.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Empleado.formEncargadoAdministrador.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Empleado.formUsuarioComun.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Membresia.frmEditarMembresia.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Membresia.frmMembresia.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaMembresia.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Membresia.frmVisualizarMembresia.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.POS.frmCobrar.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.POS.frmProductos.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.POS.frmPuntoVenta.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.POS.frmRecuperarVenta.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Socio.frmAgregarMiembro.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Socio.frmEditarMiembro.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Socio.frmMiembros.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Socio.frmMostrarSocio.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.exe
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.pdb
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.csprojResolveAssemblyReference.cache
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Empleado.frmAgregarEmpleado.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Empleado.frmEditarTrabajador.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Empleado.frmHorario.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Empleado.frmOpcionesAvanzada.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Empleado.frmTrabajadores.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarProducto.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmEditarProducto.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmProducto.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmVisorPDF.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmReportes.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmDialogo.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasProducto.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasSociosMembresias.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasTrabajador.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\bin\Debug\GYM.exe.config
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.exe
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.pdb
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmEspere.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.POS.frmDevoluciones.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmInventario.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarInventario.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\bin\Debug\GYM.exe
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\bin\Debug\GYM.pdb
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\bin\Debug\AForge.Video.dll
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\bin\Debug\AForge.Video.VFW.dll
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\bin\Debug\itextsharp.dll
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\bin\Debug\System.Data.SQLite.dll
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.csprojResolveAssemblyReference.cache
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Caja.frmAbrirCaja.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmCaja.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Caja.frmCerrarCaja.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Caja.frmEntradaSalida.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Empleado.formEncargadoAdministrador.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Empleado.formUsuarioComun.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Empleado.frmAgregarEmpleado.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Empleado.frmEditarTrabajador.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Empleado.frmHorario.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Empleado.frmOpcionesAvanzada.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Empleado.frmTrabajadores.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmAcercaDe.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmConfiguracionGeneral.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmConfigurarTicket.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmCumple.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmEspere.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmLogin.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmRegistroEntradas.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Membresia.frmEditarMembresia.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Membresia.frmMembresia.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaMembresia.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Membresia.frmVisualizarMembresia.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.POS.frmCobrar.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.POS.frmDevoluciones.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.POS.frmProductos.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.POS.frmPuntoVenta.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.POS.frmRecuperarVenta.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarInventario.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarProducto.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmEditarProducto.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmInventario.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmProducto.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmDialogo.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasProducto.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasSociosMembresias.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasTrabajador.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmReportes.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmVisorPDF.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Socio.frmAgregarMiembro.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Socio.frmEditarMiembro.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Socio.frmMiembros.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Socio.frmMostrarSocio.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.frmMain.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.frmSplash.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Properties.Resources.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.csproj.GenerateResource.Cache
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmEncabezados.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmGaleriaIconos.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasCaja.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasPOS.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasUsuario.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.csproj.ResolveComReference.cache
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.csproj.ResolveComReference.cache
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmEncabezados.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmGaleriaIconos.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasCaja.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasPOS.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasUsuario.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Teclado.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\bin\Debug\GYM.exe.config
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.csproj.ResolveComReference.cache
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.exe
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.pdb
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\bin\Debug\GYM.exe
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\bin\Debug\GYM.pdb
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\bin\Debug\AForge.Video.dll
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\bin\Debug\AForge.Video.VFW.dll
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\bin\Debug\itextsharp.dll
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\bin\Debug\System.Data.SQLite.dll
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.csprojResolveAssemblyReference.cache
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmAcercaDe.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Caja.frmAbrirCaja.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmCaja.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Caja.frmCerrarCaja.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Caja.frmEntradaSalida.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Empleado.formEncargadoAdministrador.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Empleado.formUsuarioComun.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Empleado.frmAgregarEmpleado.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Empleado.frmEditarTrabajador.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Empleado.frmHorario.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Empleado.frmOpcionesAvanzada.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Empleado.frmTrabajadores.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmConfiguracionGeneral.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmConfigurarTicket.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmCumple.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmEspere.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmLogin.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmRegistroEntradas.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Membresia.frmEditarMembresia.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Membresia.frmMembresia.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaMembresia.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Membresia.frmVisualizarMembresia.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.POS.frmCobrar.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.POS.frmDevoluciones.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.POS.frmProductos.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.POS.frmPuntoVenta.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.POS.frmRecuperarVenta.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarInventario.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarProducto.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmEditarProducto.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmInventario.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmProducto.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmDialogo.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmEncabezados.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmGaleriaIconos.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasCaja.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasPOS.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasProducto.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasSociosMembresias.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasTrabajador.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasUsuario.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmReportes.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Reporte.frmVisorPDF.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Socio.frmAgregarMiembro.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Socio.frmEditarMiembro.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Socio.frmMiembros.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Socio.frmMostrarSocio.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.frmMain.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.frmSplash.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Properties.Resources.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Teclado.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.csproj.GenerateResource.Cache
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Teclado.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmConfiguracionBaseDatos.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmConfiguracionBaseDatos.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.POS.frmCancelarVenta.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmConfiguracionBaseDatos.resources
+C:\Users\Leo\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.POS.frmCancelarVenta.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.POS.frmCancelarVenta.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmEditarUsuario.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmNuevoUsuario.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmUsuarios.resources
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\Interop.DMRInternalLib.dll
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\Interop.DPFPCtlXLib.dll
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\Interop.DPFPDevXLib.dll
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\Interop.DPFPEngXLib.dll
+C:\Users\Ever\Dropbox\ECSY\GYM\GYM\obj\Debug\Interop.DPFPShrXLib.dll
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\Interop.DMRInternalLib.dll
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.frmConfigurarHuella.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM\GYM\obj\Debug\GYM.Formularios.Socio.frmCapturarHuella.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\bin\Debug\GYM.exe.config
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\Interop.DMRInternalLib.dll
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.csproj.ResolveComReference.cache
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.exe
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.pdb
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\bin\Debug\GYM.exe
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\bin\Debug\GYM.pdb
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.csprojResolveAssemblyReference.cache
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfigurarHuella.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmAcercaDe.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Caja.frmAbrirCaja.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmCaja.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Caja.frmCerrarCaja.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Caja.frmEntradaSalida.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.formEncargadoAdministrador.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.formUsuarioComun.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmAgregarEmpleado.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmEditarTrabajador.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmHorario.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmOpcionesAvanzada.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmTrabajadores.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfiguracionBaseDatos.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfiguracionGeneral.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfigurarTicket.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmCumple.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmEspere.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmLogin.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmRegistroEntradas.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmEditarMembresia.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmMembresia.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaMembresia.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmVisualizarMembresia.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmCancelarVenta.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmCobrar.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmDevoluciones.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmProductos.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmPuntoVenta.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmRecuperarVenta.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarInventario.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarProducto.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmEditarProducto.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmInventario.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmProducto.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmDialogo.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmEncabezados.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmGaleriaIconos.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasCaja.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasPOS.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasProducto.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasSociosMembresias.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasTrabajador.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasUsuario.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmReportes.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmVisorPDF.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmAgregarMiembro.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmCapturarHuella.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmEditarMiembro.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmMiembros.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmMostrarSocio.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmEditarUsuario.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmNuevoUsuario.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmUsuarios.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.frmMain.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.frmSplash.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Properties.Resources.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Teclado.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.csproj.GenerateResource.Cache
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmLoginConfig.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\bin\Debug\GYM.exe.config
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\Interop.DMRInternalLib.dll
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.csproj.ResolveComReference.cache
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.exe
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.pdb
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\bin\Debug\GYM.exe
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\bin\Debug\GYM.pdb
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.csprojResolveAssemblyReference.cache
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfiguracionBaseDatos.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfigurarHuella.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmAcercaDe.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Caja.frmAbrirCaja.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmCaja.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Caja.frmCerrarCaja.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Caja.frmEntradaSalida.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.formEncargadoAdministrador.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.formUsuarioComun.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmAgregarEmpleado.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmEditarTrabajador.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmHorario.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmOpcionesAvanzada.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmTrabajadores.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfiguracionGeneral.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfigurarTicket.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmCumple.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmEspere.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmLogin.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmLoginConfig.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmRegistroEntradas.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmEditarMembresia.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmMembresia.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaMembresia.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmVisualizarMembresia.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmCancelarVenta.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmCobrar.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmDevoluciones.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmProductos.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmPuntoVenta.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmRecuperarVenta.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarInventario.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarProducto.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmEditarProducto.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmInventario.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmProducto.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmDialogo.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmEncabezados.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmGaleriaIconos.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasCaja.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasPOS.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasProducto.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasSociosMembresias.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasTrabajador.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasUsuario.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmReportes.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmVisorPDF.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmAgregarMiembro.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmCapturarHuella.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmEditarMiembro.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmMiembros.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmMostrarSocio.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmEditarUsuario.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmNuevoUsuario.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmUsuarios.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.frmMain.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.frmSplash.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Properties.Resources.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Teclado.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.csproj.GenerateResource.Cache
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.frmMensaje.resources
+C:\Users\Ever\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.frmMensaje.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfiguracionSonido.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmCortesias.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmMiembroCortesia.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaCortesia.resources
+C:\Users\Chavocho\Dropbox\ECSY\GYM Red\GYM\obj\Debug\GYM.frmEspera.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\bin\Debug\GYM.exe.config
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\Interop.DMRInternalLib.dll
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.csproj.ResolveComReference.cache
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.exe
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.pdb
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\bin\Debug\GYM.exe
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\bin\Debug\GYM.pdb
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.csprojResolveAssemblyReference.cache
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfiguracionBaseDatos.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfiguracionSonido.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfigurarHuella.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmAcercaDe.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Caja.frmAbrirCaja.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmCaja.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Caja.frmCerrarCaja.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Caja.frmEntradaSalida.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.formEncargadoAdministrador.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.formUsuarioComun.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmAgregarEmpleado.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmEditarTrabajador.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmHorario.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmOpcionesAvanzada.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmTrabajadores.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfiguracionGeneral.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfigurarTicket.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmCumple.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmEspere.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmLogin.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmLoginConfig.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmRegistroEntradas.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmCortesias.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmMiembroCortesia.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaCortesia.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmEditarMembresia.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmMembresia.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaMembresia.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmVisualizarMembresia.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmCancelarVenta.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmCobrar.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmDevoluciones.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmProductos.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmPuntoVenta.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmRecuperarVenta.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarInventario.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarProducto.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmEditarProducto.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmInventario.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmProducto.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmDialogo.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmEncabezados.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmGaleriaIconos.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasCaja.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasPOS.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasProducto.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasSociosMembresias.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasTrabajador.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasUsuario.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmReportes.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmVisorPDF.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmAgregarMiembro.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmCapturarHuella.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmEditarMiembro.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmMiembros.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmMostrarSocio.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmEditarUsuario.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmNuevoUsuario.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmUsuarios.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.frmEspera.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.frmMain.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.frmMensaje.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.frmSplash.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Properties.Resources.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Teclado.resources
+C:\Users\Chavocho\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.csproj.GenerateResource.Cache
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\bin\Debug\GYM.exe.config
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\Interop.DMRInternalLib.dll
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.csproj.ResolveComReference.cache
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.exe
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.pdb
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\bin\Debug\GYM.exe
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\bin\Debug\GYM.pdb
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfiguracionBaseDatos.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfiguracionSonido.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfigurarHuella.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmAcercaDe.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Caja.frmAbrirCaja.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmCaja.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Caja.frmCerrarCaja.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Caja.frmEntradaSalida.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.formEncargadoAdministrador.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.formUsuarioComun.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmAgregarEmpleado.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmEditarTrabajador.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmHorario.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmOpcionesAvanzada.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmTrabajadores.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfiguracionGeneral.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfigurarTicket.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmCumple.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmEspere.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmLogin.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmLoginConfig.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmRegistroEntradas.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmCortesias.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmMiembroCortesia.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaCortesia.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmEditarMembresia.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmMembresia.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaMembresia.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmVisualizarMembresia.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmCancelarVenta.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmCobrar.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmDevoluciones.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmProductos.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmPuntoVenta.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmRecuperarVenta.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarInventario.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarProducto.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmEditarProducto.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmInventario.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmProducto.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmDialogo.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmEncabezados.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmGaleriaIconos.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasCaja.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasPOS.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasProducto.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasSociosMembresias.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasTrabajador.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasUsuario.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmReportes.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmVisorPDF.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmAgregarMiembro.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmCapturarHuella.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmEditarMiembro.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmMiembros.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmMostrarSocio.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmEditarUsuario.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmNuevoUsuario.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmUsuarios.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.frmEspera.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.frmMain.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.frmMensaje.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.frmSplash.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Properties.Resources.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Teclado.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.csproj.GenerateResource.Cache
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.csprojResolveAssemblyReference.cache
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\bin\Debug\GYM.exe.config
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\bin\Debug\GYM.exe
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\bin\Debug\GYM.pdb
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.csproj.ResolveComReference.cache
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfiguracionBaseDatos.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfiguracionSonido.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfigurarHuella.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmAcercaDe.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Caja.frmAbrirCaja.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmCaja.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Caja.frmCerrarCaja.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Caja.frmEntradaSalida.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.formEncargadoAdministrador.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.formUsuarioComun.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmAgregarEmpleado.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmEditarTrabajador.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmHorario.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmOpcionesAvanzada.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Empleado.frmTrabajadores.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfiguracionGeneral.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmConfigurarTicket.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmCumple.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmEspere.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmLogin.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmLoginConfig.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmRegistroEntradas.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmCortesias.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmMiembroCortesia.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaCortesia.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmEditarMembresia.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmMembresia.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaMembresia.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Membresia.frmVisualizarMembresia.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmCancelarVenta.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmCobrar.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmDevoluciones.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmProductos.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmPuntoVenta.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.POS.frmRecuperarVenta.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarInventario.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarProducto.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmEditarProducto.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmInventario.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmProducto.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmDialogo.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmEncabezados.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmGaleriaIconos.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasCaja.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasPOS.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasProducto.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasSociosMembresias.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasTrabajador.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasUsuario.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmReportes.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Reporte.frmVisorPDF.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmAgregarMiembro.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmCapturarHuella.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmEditarMiembro.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmMiembros.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.Socio.frmMostrarSocio.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmEditarUsuario.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmNuevoUsuario.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmUsuarios.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.frmEspera.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.frmMain.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.frmMensaje.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.frmSplash.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Properties.Resources.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.Teclado.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.csproj.GenerateResource.Cache
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.exe
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.pdb
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red\GYM\obj\Debug\GYM.csprojResolveAssemblyReference.cache
+E:\Users\Chavocho\Trabajos\GYM Red\GYM\bin\Debug\GYM.exe.config
+E:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\Interop.DMRInternalLib.dll
+E:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.csproj.ResolveComReference.cache
+E:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.exe
+E:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.pdb
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.Caja.frmCortes.resources
+C:\Users\Chavocho\Trabajos\GYM Red\GYM\obj\Debug\GYM.Formularios.frmCorreos.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\bin\Debug\GYM.exe.config
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\Interop.DMRInternalLib.dll
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.csproj.ResolveComReference.cache
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.exe
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.pdb
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\bin\Debug\GYM.exe
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\bin\Debug\GYM.pdb
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.csprojResolveAssemblyReference.cache
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Caja.frmCortes.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmConfiguracionBaseDatos.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmConfiguracionSonido.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmConfigurarHuella.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmCorreos.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmAcercaDe.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Caja.frmAbrirCaja.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmCaja.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Caja.frmCerrarCaja.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Caja.frmEntradaSalida.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Empleado.formEncargadoAdministrador.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Empleado.formUsuarioComun.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Empleado.frmAgregarEmpleado.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Empleado.frmEditarTrabajador.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Empleado.frmHorario.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Empleado.frmOpcionesAvanzada.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Empleado.frmTrabajadores.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmConfiguracionGeneral.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmConfigurarTicket.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmCumple.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmEspere.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmLogin.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmLoginConfig.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmRegistroEntradas.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Membresia.frmCortesias.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Membresia.frmMiembroCortesia.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaCortesia.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Membresia.frmEditarMembresia.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Membresia.frmMembresia.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaMembresia.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Membresia.frmVisualizarMembresia.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.POS.frmCancelarVenta.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.POS.frmCobrar.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.POS.frmDevoluciones.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.POS.frmProductos.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.POS.frmPuntoVenta.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.POS.frmRecuperarVenta.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarInventario.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarProducto.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmEditarProducto.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmInventario.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmProducto.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmDialogo.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmEncabezados.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmGaleriaIconos.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasCaja.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasPOS.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasProducto.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasSociosMembresias.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasTrabajador.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasUsuario.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmReportes.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmVisorPDF.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Socio.frmAgregarMiembro.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Socio.frmCapturarHuella.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Socio.frmEditarMiembro.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Socio.frmMiembros.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Socio.frmMostrarSocio.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmEditarUsuario.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmNuevoUsuario.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmUsuarios.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.frmEspera.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.frmMain.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.frmMensaje.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.frmSplash.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Properties.Resources.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.Teclado.resources
+C:\Users\Chavocho\Trabajos\GYM Red Gratis\GYM\obj\Debug\GYM.csproj.GenerateResource.Cache
+C:\Users\Chavocho\Trabajos\GYM Red - copia\GYM\bin\Debug\GYM.exe.config
+C:\Users\Chavocho\Trabajos\GYM Red - copia\GYM\obj\Debug\Interop.DMRInternalLib.dll
+C:\Users\Chavocho\Trabajos\GYM Red - copia\GYM\obj\Debug\GYM.csproj.ResolveComReference.cache
+C:\Users\Chavocho\Trabajos\GYM Red - copia\GYM\obj\Debug\GYM.exe
+C:\Users\Chavocho\Trabajos\GYM Red - copia\GYM\obj\Debug\GYM.pdb
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\bin\Debug\GYM.exe.config
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.csproj.ResolveComReference.cache
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.exe
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.pdb
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\bin\Debug\GYM.exe
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\bin\Debug\GYM.pdb
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.csprojResolveAssemblyReference.cache
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Caja.frmCortes.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmConfiguracionBaseDatos.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmConfiguracionSonido.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmConfigurarHuella.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmCorreos.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmAcercaDe.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Caja.frmAbrirCaja.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmCaja.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Caja.frmCerrarCaja.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Caja.frmEntradaSalida.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Empleado.formEncargadoAdministrador.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Empleado.formUsuarioComun.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Empleado.frmAgregarEmpleado.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Empleado.frmEditarTrabajador.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Empleado.frmHorario.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Empleado.frmOpcionesAvanzada.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Empleado.frmTrabajadores.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmConfiguracionGeneral.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmConfigurarTicket.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmCumple.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmEspere.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmLogin.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmLoginConfig.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmRegistroEntradas.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Membresia.frmCortesias.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Membresia.frmMiembroCortesia.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaCortesia.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Membresia.frmEditarMembresia.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Membresia.frmMembresia.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaMembresia.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Membresia.frmVisualizarMembresia.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.POS.frmCancelarVenta.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.POS.frmCobrar.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.POS.frmDevoluciones.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.POS.frmProductos.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.POS.frmPuntoVenta.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.POS.frmRecuperarVenta.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarInventario.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarProducto.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmEditarProducto.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmInventario.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmProducto.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmDialogo.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmEncabezados.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmGaleriaIconos.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasCaja.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasPOS.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasProducto.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasSociosMembresias.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasTrabajador.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasUsuario.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmReportes.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmVisorPDF.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Socio.frmAgregarMiembro.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Socio.frmCapturarHuella.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Socio.frmEditarMiembro.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Socio.frmMiembros.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Socio.frmMostrarSocio.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmEditarUsuario.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmNuevoUsuario.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmUsuarios.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.frmEspera.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.frmMain.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.frmMensaje.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.frmSplash.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Properties.Resources.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.Teclado.resources
+C:\Users\Ever\Dropbox\ECSY\GymCSY Archivos\GYM Red Gratis\GYM\obj\Debug\GYM.csproj.GenerateResource.Cache
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\bin\Debug\GYM.exe.config
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.csproj.ResolveComReference.cache
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.exe
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.pdb
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\bin\Debug\GYM.exe
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\bin\Debug\GYM.pdb
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.csprojResolveAssemblyReference.cache
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Caja.frmCortes.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmConfiguracionBaseDatos.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmConfiguracionSonido.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmConfigurarHuella.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmCorreos.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmAcercaDe.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Caja.frmAbrirCaja.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmCaja.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Caja.frmCerrarCaja.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Caja.frmEntradaSalida.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Empleado.formEncargadoAdministrador.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Empleado.formUsuarioComun.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Empleado.frmAgregarEmpleado.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Empleado.frmEditarTrabajador.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Empleado.frmHorario.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Empleado.frmOpcionesAvanzada.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Empleado.frmTrabajadores.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmConfiguracionGeneral.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmConfigurarTicket.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmCumple.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmEspere.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmLogin.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmLoginConfig.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmRegistroEntradas.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Membresia.frmCortesias.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Membresia.frmMiembroCortesia.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaCortesia.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Membresia.frmEditarMembresia.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Membresia.frmMembresia.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaMembresia.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Membresia.frmVisualizarMembresia.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.POS.frmCancelarVenta.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.POS.frmCobrar.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.POS.frmDevoluciones.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.POS.frmProductos.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.POS.frmPuntoVenta.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.POS.frmRecuperarVenta.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarInventario.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarProducto.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmEditarProducto.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmInventario.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmProducto.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmDialogo.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmEncabezados.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmGaleriaIconos.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasCaja.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasPOS.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasProducto.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasSociosMembresias.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasTrabajador.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasUsuario.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmReportes.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Reporte.frmVisorPDF.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Socio.frmAgregarMiembro.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Socio.frmCapturarHuella.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Socio.frmEditarMiembro.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Socio.frmMiembros.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.Socio.frmMostrarSocio.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmEditarUsuario.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmNuevoUsuario.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Formularios.frmUsuarios.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.frmEspera.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.frmMain.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.frmMensaje.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.frmSplash.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Properties.Resources.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.Teclado.resources
+C:\Users\Ever\Desktop\GYM Red Gratis\GYM\obj\Debug\GYM.csproj.GenerateResource.Cache
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\Interop.AcroPDFLib.dll
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.csproj.ResolveComReference.cache
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Caja.frmCortes.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmConfiguracionBaseDatos.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmConfiguracionSonido.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmConfigurarHuella.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmCorreos.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmAcercaDe.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Caja.frmAbrirCaja.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmCaja.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Caja.frmCerrarCaja.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Caja.frmEntradaSalida.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmConfiguracionGeneral.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmConfigurarTicket.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmCumple.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmEspere.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmLogin.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmLoginConfig.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmRegistroEntradas.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Membresia.frmCortesias.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Membresia.frmMiembroCortesia.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaCortesia.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Membresia.frmEditarMembresia.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Membresia.frmMembresia.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaMembresia.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.POS.frmCancelarVenta.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.POS.frmCobrar.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.POS.frmDevoluciones.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.POS.frmProductos.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.POS.frmPuntoVenta.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.POS.frmRecuperarVenta.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarInventario.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarProducto.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmEditarProducto.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmInventario.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmProducto.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmDialogo.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmEncabezados.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmGaleriaIconos.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasCaja.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasPOS.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasProducto.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasSociosMembresias.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasTrabajador.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasUsuario.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmReportes.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmVisorPDF.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Socio.frmAgregarMiembro.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Socio.frmCapturarHuella.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Socio.frmEditarMiembro.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Socio.frmMiembros.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Socio.frmMostrarSocio.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmEditarUsuario.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmNuevoUsuario.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmUsuarios.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.frmEspera.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.frmMain.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.frmMensaje.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.frmSplash.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Informes.frmSociosInactivos.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Properties.Resources.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Teclado.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.csproj.GenerateResource.Cache
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\bin\Debug\GYM.exe.config
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\bin\Debug\GYM.exe
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\bin\Debug\GYM.pdb
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.exe
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.pdb
+F:\Proyectos\Github\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.csprojResolveAssemblyReference.cache
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\bin\Debug\GYM.exe.config
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\Interop.DMRInternalLib.dll
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.csproj.ResolveComReference.cache
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.exe
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.pdb
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.csprojResolveAssemblyReference.cache
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Caja.frmCortes.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmConfiguracionBaseDatos.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmConfiguracionSonido.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmConfigurarHuella.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmCorreos.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmAcercaDe.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Caja.frmAbrirCaja.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmCaja.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Caja.frmCerrarCaja.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Caja.frmEntradaSalida.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmConfiguracionGeneral.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmConfigurarTicket.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmCumple.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmEspere.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmLogin.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmLoginConfig.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmRegistroEntradas.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmLockers.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmNumeroLocker.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Membresia.frmCortesias.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Membresia.frmMiembroCortesia.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaCortesia.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Membresia.frmEditarMembresia.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Membresia.frmMembresia.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaMembresia.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmPendientes.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.POS.frmCancelarVenta.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.POS.frmCobrar.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.POS.frmDevoluciones.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.POS.frmProductos.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.POS.frmPuntoVenta.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.POS.frmRecuperarVenta.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarInventario.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarProducto.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmEditarProducto.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmInventario.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmProducto.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmDialogo.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmEncabezados.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmGaleriaIconos.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasCaja.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasPOS.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasProducto.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasSociosMembresias.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasTrabajador.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasUsuario.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmReportes.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmVisorPDF.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Socio.frmAgregarMiembro.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Socio.frmCapturarHuella.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Socio.frmEditarMiembro.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Socio.frmMiembros.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Socio.frmMostrarSocio.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmEditarUsuario.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmNuevoUsuario.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmUsuarios.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmAsignarLocker.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.frmEspera.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.frmMain.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.frmMensaje.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.frmSplash.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Informes.frmSociosInactivos.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Properties.Resources.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Teclado.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.csproj.GenerateResource.Cache
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\bin\Debug\GYM.exe
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\bin\Debug\GYM.pdb
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAlmacenMostrador.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\bin\Debug\GYM.exe.config
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\Interop.DMRInternalLib.dll
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.csproj.ResolveComReference.cache
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.exe
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.pdb
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\bin\Debug\GYM.exe
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\bin\Debug\GYM.pdb
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.csprojResolveAssemblyReference.cache
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Caja.frmCortes.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmConfiguracionBaseDatos.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmConfiguracionSonido.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmConfigurarHuella.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmCorreos.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmAcercaDe.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Caja.frmAbrirCaja.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmCaja.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Caja.frmCerrarCaja.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Caja.frmEntradaSalida.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmConfiguracionGeneral.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmConfigurarTicket.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmCumple.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmEspere.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmLogin.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmLoginConfig.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmRegistroEntradas.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmLockers.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmNumeroLocker.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Membresia.frmCortesias.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Membresia.frmMiembroCortesia.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaCortesia.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Membresia.frmEditarMembresia.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Membresia.frmMembresia.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaMembresia.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmPendientes.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.POS.frmCancelarVenta.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.POS.frmCobrar.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.POS.frmDevoluciones.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.POS.frmProductos.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.POS.frmPuntoVenta.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.POS.frmRecuperarVenta.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarInventario.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAgregarProducto.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmAlmacenMostrador.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmEditarProducto.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmInventario.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmProducto.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmDialogo.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmEncabezados.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmGaleriaIconos.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasCaja.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasPOS.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasProducto.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasSociosMembresias.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasTrabajador.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasUsuario.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmReportes.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Reporte.frmVisorPDF.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Socio.frmAgregarMiembro.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Socio.frmCapturarHuella.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Socio.frmEditarMiembro.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Socio.frmMiembros.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Socio.frmMostrarSocio.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmEditarUsuario.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmNuevoUsuario.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmUsuarios.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.frmAsignarLocker.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.frmEspera.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.frmMain.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.frmMensaje.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.frmSplash.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Informes.frmSociosInactivos.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Properties.Resources.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Teclado.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.csproj.GenerateResource.Cache
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Compras.frmCompras.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Compras.frmIVA.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Compras.frmModificarProductoCompra.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Compras.frmNuevaCompra.resources
+C:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\obj\Debug\GYM.Formularios.Compras.frmProductosCompra.resources

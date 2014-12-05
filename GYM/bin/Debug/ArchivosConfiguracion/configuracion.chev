@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<configuraciones>
+  <general>
+    <soloRegistro>False</soloRegistro>
+  </general>
+  <baseDatos>
+    <servidor>localhost</servidor>
+    <base>gym_dtbs</base>
+    <usuario>root</usuario>
+    <pass>
+    </pass>
+  </baseDatos>
+  <sonidos>
+    <activar>False</activar>
+    <bien>Sonido01</bien>
+    <mal>Sonido01</mal>
+  </sonidos>
+  <caja>
+    <estado>True</estado>
+  </caja>
+  <huella>
+    <usar>False</usar>
+  </huella>
+  <tema>
+    <nombre>Predeterminado</nombre>
+    <nombreCumple>Fiesta</nombreCumple>
+    <colorFondo>-986896</colorFondo>
+    <colorLetras>-16777216</colorLetras>
+    <imagenFondo>Fondo_Default</imagenFondo>
+    <colorFondoCumple>-12156236</colorFondoCumple>
+    <colorLetrasCumple>-1</colorLetrasCumple>
+  </tema>
+  <promociones>
+    <promo01>null</promo01>
+    <promo02>null</promo02>
+    <promo03>null</promo03>
+    <promo04>null</promo04>
+    <promo05>null</promo05>
+    <promo06>null</promo06>
+  </promociones>
+  <ticket>
+    <lineaSup01>GymCSY</lineaSup01>
+    <lineaSup02>Domicilio</lineaSup02>
+    <lineaSup03>Información </lineaSup03>
+    <lineaSup04>Visitanos pronto</lineaSup04>
+    <lineaSup05>
+    </lineaSup05>
+    <lineaSup06>
+    </lineaSup06>
+    <lineaSup07>
+    </lineaSup07>
+    <lineaInf01>Página web</lineaInf01>
+    <lineaInf02>Siguenos en redes sociales</lineaInf02>
+    <lineaInf03>Gracias!</lineaInf03>
+    <impresora>Microsoft XPS Document Writer</impresora>
+    <tamPapel>300</tamPapel>
+    <turnoMat>19:34:55</turnoMat>
+    <turnoVes>19:34:55</turnoVes>
+    <preguntar>True</preguntar>
+    <imprimir>True</imprimir>
+  </ticket>
+</configuraciones>

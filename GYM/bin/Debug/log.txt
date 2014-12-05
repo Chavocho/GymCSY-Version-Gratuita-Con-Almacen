@@ -1,0 +1,133 @@
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en c:\Users\Chavocho\Trabajos\GYM Red\GYM\Clases\ConexionBD.cs:línea 100
+   en GYM.frmSplash.CrearBase() en c:\Users\Chavocho\Trabajos\GYM Red\GYM\frmSplash.cs:línea 119|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'fecha_creacion' in 'field list'
+   en CMiembro.InsertarMiembro(CMiembro miembro) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\CMiembro.cs:línea 458
+   en GYM.Formularios.Socio.frmAgregarMiembro.btnAceptar_Click(Object sender, EventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\Socio\frmAgregarMiembro.cs:línea 189|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'fecha_creacion' in 'field list'
+   en CMiembro.InsertarMiembro(CMiembro miembro) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\CMiembro.cs:línea 458
+   en GYM.Formularios.Socio.frmAgregarMiembro.btnAceptar_Click(Object sender, EventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\Socio\frmAgregarMiembro.cs:línea 189|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'create_user_id' in 'field list'
+   en CMiembro.InsertarMiembro(CMiembro miembro)
+   en GYM.Formularios.Socio.frmAgregarMiembro.btnAceptar_Click(Object sender, EventArgs e)|
+DPUruNet.SDKException: DP_FAILURE:  El desplazamiento y la longitud están fuera de los límites para esta matriz o el recuento es superior al número de elementos desde el índice al final de la colección de origen. ---> System.ArgumentException: El desplazamiento y la longitud están fuera de los límites para esta matriz o el recuento es superior al número de elementos desde el índice al final de la colección de origen.
+   en System.Buffer.BlockCopy(Array src, Int32 srcOffset, Array dst, Int32 dstOffset, Int32 count)
+   en DPUruNet.Fingerbase.readBytes(Byte[] bytes, Int32 index, Int32 numbytes)
+   en DPUruNet.Fmd.GetHeader(Byte[] bytes, Int32 format)
+   en DPUruNet.Fmd..ctor(Byte[] bytes, Int32 format, String version)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en CMiembro.ObtenerHuellas() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\CMiembro.cs:línea 556
+   en GYM.Formularios.Socio.frmAgregarMiembro.btnAceptar_Click(Object sender, EventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\Socio\frmAgregarMiembro.cs:línea 192|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Fatal error encountered during command execution. ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '?imagen' must be defined.
+   en MySql.Data.MySqlClient.Statement.SerializeParameter(MySqlParameterCollection parameters, MySqlPacket packet, String parmName, Int32 parameterIndex)
+   en MySql.Data.MySqlClient.Statement.InternalBindParameters(String sql, MySqlParameterCollection parameters, MySqlPacket packet)
+   en MySql.Data.MySqlClient.Statement.BindParameters()
+   en MySql.Data.MySqlClient.PreparableStatement.Execute()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   en CMiembro.InsertarMiembro(CMiembro miembro) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\CMiembro.cs:línea 456
+   en GYM.Formularios.Socio.frmAgregarMiembro.btnAceptar_Click(Object sender, EventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\Socio\frmAgregarMiembro.cs:línea 189|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'me.status' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsultaSelect(String consulta) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\ConexionBD.cs:línea 135
+   en GYM.Formularios.Membresia.frmMembresia.BuscarMiembros(String textoBusqueda) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\Membresia\frmMembresia.cs:línea 52|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'me.status' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsultaSelect(String consulta) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\ConexionBD.cs:línea 135
+   en GYM.Formularios.Membresia.frmMembresia.BuscarMiembros(String textoBusqueda) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\Membresia\frmMembresia.cs:línea 52|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'socio_id' in 'field list'
+   en GYM.Clases.CMembresia.InsertarMembresia() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\CMembresia.cs:línea 190
+   en GYM.Formularios.Membresia.frmNuevaMembresia.btnAceptar_Click(Object sender, EventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\Membresia\frmNuevaMembresia.cs:línea 161|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Fatal error encountered during command execution. ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '?numSocio' must be defined.
+   en MySql.Data.MySqlClient.Statement.SerializeParameter(MySqlParameterCollection parameters, MySqlPacket packet, String parmName, Int32 parameterIndex)
+   en MySql.Data.MySqlClient.Statement.InternalBindParameters(String sql, MySqlParameterCollection parameters, MySqlPacket packet)
+   en MySql.Data.MySqlClient.Statement.BindParameters()
+   en MySql.Data.MySqlClient.Statement.Execute()
+   en MySql.Data.MySqlClient.PreparableStatement.Execute()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   en GYM.Clases.CMembresia.InsertarMembresia() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\CMembresia.cs:línea 190
+   en GYM.Formularios.Membresia.frmNuevaMembresia.btnAceptar_Click(Object sender, EventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\Membresia\frmNuevaMembresia.cs:línea 161|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'gym_dtbs.socio' doesn't exist
+   en GYM.Clases.ConexionBD.EjecutarConsultaSelect(String consulta) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\ConexionBD.cs:línea 135
+   en GYM.Formularios.frmLockers.BuscarLockers() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\Lockers\frmLockers.cs:línea 65|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'socio_id' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\ConexionBD.cs:línea 100
+   en GYM.Formularios.frmLockers.InsertarLocker() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\Lockers\frmLockers.cs:línea 122|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'socio_id' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\ConexionBD.cs:línea 100
+   en GYM.Formularios.frmLockers.InsertarLocker() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\Lockers\frmLockers.cs:línea 122|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Fatal error encountered during command execution. ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '?numSocio' must be defined.
+   en MySql.Data.MySqlClient.Statement.SerializeParameter(MySqlParameterCollection parameters, MySqlPacket packet, String parmName, Int32 parameterIndex)
+   en MySql.Data.MySqlClient.Statement.InternalBindParameters(String sql, MySqlParameterCollection parameters, MySqlPacket packet)
+   en MySql.Data.MySqlClient.Statement.BindParameters()
+   en MySql.Data.MySqlClient.PreparableStatement.Execute()
+   en MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\ConexionBD.cs:línea 100
+   en GYM.Formularios.frmLockers.InsertarLocker() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\Lockers\frmLockers.cs:línea 122|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`gym_dtbs`.`locker`, CONSTRAINT `locker_socio` FOREIGN KEY (`numSocio`) REFERENCES `miembros` (`numSocio`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\ConexionBD.cs:línea 100
+   en GYM.Formularios.frmLockers.InsertarLocker() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\Lockers\frmLockers.cs:línea 122|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`gym_dtbs`.`locker`, CONSTRAINT `locker_socio` FOREIGN KEY (`numSocio`) REFERENCES `miembros` (`numSocio`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\ConexionBD.cs:línea 100
+   en GYM.Formularios.frmLockers.InsertarLocker() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\Lockers\frmLockers.cs:línea 122|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'gym_dtbs.inventario' doesn't exist
+   en GYM.Clases.CProducto.InsertarProducto() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\CProducto.cs:línea 370
+   en GYM.Formularios.PuntoDeVenta.frmAgregarProducto.btnAceptar_Click(Object sender, EventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\PuntoDeVenta\frmAgregarProducto.cs:línea 53|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'sucursal' in 'field list'
+   en GYM.Clases.CProducto.InsertarProducto() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\CProducto.cs:línea 302
+   en GYM.Formularios.PuntoDeVenta.frmAgregarProducto.btnAceptar_Click(Object sender, EventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\PuntoDeVenta\frmAgregarProducto.cs:línea 53|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'create_user' in 'field list'
+   en GYM.Clases.CProducto.InsertarProducto() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\CProducto.cs:línea 293
+   en GYM.Formularios.PuntoDeVenta.frmAgregarProducto.btnAceptar_Click(Object sender, EventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\PuntoDeVenta\frmAgregarProducto.cs:línea 53|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'gym_dtbs.inventario' doesn't exist
+   en GYM.Clases.ConexionBD.EjecutarConsultaSelect(String consulta) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\ConexionBD.cs:línea 135
+   en GYM.Formularios.PuntoDeVenta.frmInventario.BuscarProducto(String valor) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\PuntoDeVenta\frmInventario.cs:línea 46|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'gym_dtbs.inventario' doesn't exist
+   en GYM.Clases.ConexionBD.EjecutarConsultaSelect(String consulta) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\ConexionBD.cs:línea 135
+   en GYM.Formularios.POS.frmPuntoVenta.AgregarProductoDataGrid(String idProd, Int32 cantidad, Boolean insertarBase) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\POS\frmPuntoVenta.cs:línea 139|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'gym_dtbs.usuario' doesn't exist
+   en GYM.Clases.ConexionBD.EjecutarConsultaSelect(String consulta) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\ConexionBD.cs:línea 135
+   en GYM.Formularios.POS.frmPuntoVenta.ObtenerNombreUsuario() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\POS\frmPuntoVenta.cs:línea 58|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'create_user' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\ConexionBD.cs:línea 100
+   en GYM.Formularios.POS.frmPuntoVenta.NuevaVenta() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\POS\frmPuntoVenta.cs:línea 86|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'create_user_id_id' in 'field list'
+   en CMiembro.InsertarMiembro(CMiembro miembro) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\CMiembro.cs:línea 487
+   en GYM.Formularios.Socio.frmAgregarMiembro.btnAceptar_Click(Object sender, EventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\Socio\frmAgregarMiembro.cs:línea 188|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'gym_dtbs.miembro' doesn't exist
+   en GYM.Formularios.frmAsignarLocker.BuscarMiembros(String p) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\Lockers\frmAsignarLocker.cs:línea 38
+   en GYM.Formularios.frmAsignarLocker.bgwLocker_DoWork(Object sender, DoWorkEventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\Lockers\frmAsignarLocker.cs:línea 158|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'gym_dtbs.miembro' doesn't exist
+   en GYM.Formularios.frmAsignarLocker.BuscarMiembros(String p) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\Lockers\frmAsignarLocker.cs:línea 39
+   en GYM.Formularios.frmAsignarLocker.bgwLocker_DoWork(Object sender, DoWorkEventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\Lockers\frmAsignarLocker.cs:línea 160|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'l.socio_id' in 'on clause'
+   en GYM.Formularios.frmAsignarLocker.BuscarMiembros(String p) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\Lockers\frmAsignarLocker.cs:línea 39
+   en GYM.Formularios.frmAsignarLocker.bgwLocker_DoWork(Object sender, DoWorkEventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\Lockers\frmAsignarLocker.cs:línea 160|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'gym_dtbs.inventario' doesn't exist
+   en GYM.Clases.ConexionBD.EjecutarConsultaSelect(String consulta) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\ConexionBD.cs:línea 135
+   en GYM.Formularios.POS.frmProductos.BuscarProducto(String paramBusqueda) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\POS\frmProductos.cs:línea 40|
+System.FormatException: No se puede reconocer la cadena como un tipo booleano válido.
+   en System.Boolean.Parse(String value)
+   en GYM.Formularios.POS.frmRecuperarVenta.LlenarDataGrid(DataTable dt) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\POS\frmRecuperarVenta.cs:línea 76|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'gym_dtbs.venta_producto' doesn't exist
+   en GYM.Clases.ConexionBD.EjecutarConsultaSelect(String consulta) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\ConexionBD.cs:línea 135
+   en GYM.Formularios.POS.frmPuntoVenta.RecuperarVentaDetallada(Int32 folio) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\POS\frmPuntoVenta.cs:línea 477|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'gym_dtbs.venta_producto' doesn't exist
+   en GYM.Clases.ConexionBD.EjecutarConsultaSelect(String consulta) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Clases\ConexionBD.cs:línea 135
+   en GYM.Formularios.POS.frmPuntoVenta.RecuperarVentaDetallada(Int32 folio) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\POS\frmPuntoVenta.cs:línea 477|
+System.ArgumentOutOfRangeException: El valor de '0' no es válido para 'Value'. 'Value' debería estar entre 'Minimum' y 'Maximum'.
+Nombre del parámetro: Value
+   en System.Windows.Forms.NumericUpDown.set_Value(Decimal value)
+   en GYM.Formularios.POS.frmProductos.nudCantidad_ValueChanged(Object sender, EventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita\GYM\Formularios\POS\frmProductos.cs:línea 124|
+System.ArgumentException: El parámetro no es válido.
+   en GYM.Formularios.frmCumple.AgregarCumpleañeros() en c:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\Formularios\frmCumple.cs:línea 141
+   en CMiembro.ObtenerCumpleañeros() en c:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\Clases\CMiembro.cs:línea 762|
+System.ArgumentException: El parámetro no es válido.
+   en GYM.Formularios.frmCumple.AgregarCumpleañeros() en c:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\Formularios\frmCumple.cs:línea 141
+   en CMiembro.ObtenerCumpleañeros() en c:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\Clases\CMiembro.cs:línea 762|
+System.ArgumentException: El parámetro no es válido.
+   en GYM.Formularios.frmCumple.AgregarCumpleañeros() en c:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\Formularios\frmCumple.cs:línea 141
+   en CMiembro.ObtenerCumpleañeros() en c:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\Clases\CMiembro.cs:línea 762|
+System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en GYM.Formularios.frmCumple.AgregarCumpleañeros() en c:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\Formularios\frmCumple.cs:línea 145
+   en CMiembro.ObtenerCumpleañeros() en c:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\Clases\CMiembro.cs:línea 762|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'tipo' in 'field list'
+   en GYM.Clases.CTicket.ImprimirTicketMembresia(Int32 numSoc) en c:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\Clases\Ticket\CTicket.cs:línea 217
+   en GYM.Formularios.Membresia.frmNuevaMembresia.btnAceptar_Click(Object sender, EventArgs e) en c:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\Formularios\Membresia\frmNuevaMembresia.cs:línea 190|
