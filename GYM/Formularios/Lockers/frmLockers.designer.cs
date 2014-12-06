@@ -110,44 +110,52 @@
             // btnNuevo
             // 
             this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevo.Location = new System.Drawing.Point(12, 21);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(105, 33);
             this.btnNuevo.TabIndex = 3;
             this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnAsignar
             // 
             this.btnAsignar.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.btnAsignar.Location = new System.Drawing.Point(12, 147);
+            this.btnAsignar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAsignar.Location = new System.Drawing.Point(12, 138);
             this.btnAsignar.Name = "btnAsignar";
             this.btnAsignar.Size = new System.Drawing.Size(105, 33);
             this.btnAsignar.TabIndex = 4;
             this.btnAsignar.Text = "Asignar";
+            this.btnAsignar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAsignar.UseVisualStyleBackColor = true;
             this.btnAsignar.Click += new System.EventHandler(this.btnAsignar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.btnEliminar.Location = new System.Drawing.Point(12, 108);
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(12, 99);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(105, 33);
             this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.btnEditar.Location = new System.Drawing.Point(12, 69);
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditar.Location = new System.Drawing.Point(12, 60);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(105, 33);
             this.btnEditar.TabIndex = 6;
             this.btnEditar.Text = "Editar";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
