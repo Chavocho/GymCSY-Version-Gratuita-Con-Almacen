@@ -49,10 +49,11 @@ namespace GYM.Formularios.Compras
                     DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
                     foreach (DataRow dr in dt.Rows)
                     {
-                        dgvProductos.Rows.Add(new object[] { id, dr["nombre"], decimal.Parse(dr["costo"].ToString()), cant, desc });
+                        dgvProductos.Rows.Add(new object[] { id, dr["nombre"], decimal.Parse(dr["costo"].ToString()).ToString("C2"), cant, desc.ToString("C2") });
                         dgvProductos_CellClick(dgvProductos, new DataGridViewCellEventArgs(0, dgvProductos.RowCount - 1));
                     }
                 }
+                CalcularTotales();
             }
             catch (MySqlException ex)
             {
@@ -126,6 +127,8 @@ namespace GYM.Formularios.Compras
                     {
                         dr.Cells[3].Value = cant;
                         dr.Cells[4].Value = descuento;
+                        CalcularTotales();
+                        return;
                     }
                 }
             }
@@ -152,6 +155,7 @@ namespace GYM.Formularios.Compras
                     if (dr.Cells[0].Value.ToString() == id)
                     {
                         dgvProductos.Rows.Remove(dr);
+                        CalcularTotales();
                         return;
                     }
                 }
@@ -172,12 +176,12 @@ namespace GYM.Formularios.Compras
                 decimal subtotal = 0, importe = 0, descuento = 0, total = 0;
                 foreach (DataGridViewRow dr in dgvProductos.Rows)
                 {
-                    decimal costo = (decimal)dr.Cells[2].Value;
+                    decimal costo = decimal.Parse(dr.Cells[2].Value.ToString(), System.Globalization.NumberStyles.Currency);
                     int cant = (int)dr.Cells[3].Value;
                     subtotal += costo * cant;
-                    descuento += (decimal)dr.Cells[4].Value;
+                    descuento += decimal.Parse(dr.Cells[4].Value.ToString(), System.Globalization.NumberStyles.Currency);
                 }
-                importe = subtotal * (iva / 100);
+                importe = subtotal * (iva / 100M);
                 total = subtotal + importe - descuento;
 
                 lblSubtotal.Text = subtotal.ToString("C2");
@@ -188,6 +192,18 @@ namespace GYM.Formularios.Compras
             catch (InvalidCastException ex)
             {
                 CFuncionesGenerales.MensajeError("Ha ocurrido un error al sumar los totales. La conversión no pudo ser realizada.", ex);
+            }
+            catch (FormatException ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al sumar los totales. La conversión no pudo ser realizada.", ex);
+            }
+            catch (OverflowException ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al sumar los totales. Ocurrió un desbordamiento.", ex);
+            }
+            catch (ArgumentNullException ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al sumar los totales. El argumento dado al método es nulo.", ex);
             }
             catch (Exception ex)
             {
@@ -233,7 +249,7 @@ namespace GYM.Formularios.Compras
             try
             {
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "INSERT INTO compra (fecha, tipo_pago, remision, factura, folio_remision, folio_factura, subtotal, descuento, importe, create_user_id) " +
+                sql.CommandText = "INSERT INTO compra (fecha, tipo_pago, remision, factura, folio_remision, folio_factura, subtotal, descuento, impuesto, create_user_id) " +
                     "VALUES (NOW(), ?tipo_pago, ?remision, ?factura, ?folio_remision, ?folio_factura, ?subtotal, ?descuento, ?importe, ?create_user_id)";
                 sql.Parameters.AddWithValue("?tipo_pago", cboTipoPago.SelectedIndex);
                 sql.Parameters.AddWithValue("?remision", rabRemision.Checked);
@@ -264,23 +280,23 @@ namespace GYM.Formularios.Compras
             }
             catch (MySqlException ex)
             {
-                CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. No se pudo conectar con la base de datos.", ex);
+                throw ex;
             }
             catch (FormatException ex)
             {
-                CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. Ocurrió un error al dar formato a una variable.", ex);
+                throw ex;
             }
             catch (OverflowException ex)
             {
-                CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. Ocurrió un desbordamiento.", ex);
+                throw ex;
             }
             catch (ArgumentNullException ex)
             {
-                CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. El argumento dado al método es nulo.", ex);
+                throw ex;
             }
             catch (Exception ex)
             {
-                CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. Ocurrió un error genérico.", ex);
+                throw ex;
             }
         }
 
@@ -291,39 +307,40 @@ namespace GYM.Formularios.Compras
                 foreach (DataGridViewRow dr in dgvProductos.Rows)
                 {
                     MySqlCommand sql = new MySqlCommand();
-                    sql.CommandText = "INSERT INTO compra_producto (id_compra, id_producto, cantidad, precio) " +
-                        "VALUES (?id_compra, ?id_producto, ?cantidad, ?precio)";
+                    sql.CommandText = "INSERT INTO compra_producto (id_compra, id_producto, cantidad, precio, descuento) " +
+                        "VALUES (?id_compra, ?id_producto, ?cantidad, ?precio, ?descuento)";
                     sql.Parameters.AddWithValue("?id_compra", idCompra);
                     sql.Parameters.AddWithValue("?id_producto", dr.Cells[0].Value);
                     sql.Parameters.AddWithValue("?cantidad", dr.Cells[3].Value);
                     sql.Parameters.AddWithValue("?precio", decimal.Parse(dr.Cells[2].Value.ToString(), System.Globalization.NumberStyles.Currency));
                     sql.Parameters.AddWithValue("?descuento", decimal.Parse(dr.Cells[4].Value.ToString(), System.Globalization.NumberStyles.Currency));
                     ConexionBD.EjecutarConsulta(sql);
+                    CProducto.AgregarInventario(dr.Cells[0].Value.ToString(), (int)dr.Cells[3].Value);
                 }
             }
             catch (MySqlException ex)
             {
-                CFuncionesGenerales.MensajeError("No se ha podido ingresar el detallado de la compra. Ocurrió un error al conectar con la base de datos.", ex);
+                throw ex;
             }
             catch (FormatException ex)
             {
-                CFuncionesGenerales.MensajeError("No se ha podido ingresar el detallado de la compra. Ocurrió un error al dar formato a una variable.", ex);
+                throw ex;
             }
             catch (OverflowException ex)
             {
-                CFuncionesGenerales.MensajeError("No se ha podido ingresar el detallado de la compra. Ocurrió un desbordamiento.", ex);
+                throw ex;
             }
             catch (ArgumentNullException ex)
             {
-                CFuncionesGenerales.MensajeError("No se ha podido ingresar el detallado de la compra. El argumento dado al método es nulo.", ex);
+                throw ex;
             }
             catch (ArgumentException ex)
             {
-                CFuncionesGenerales.MensajeError("No se ha podido ingresar el detallado de la compra. El argumento dado al método no es admitido por éste.", ex);
+                throw ex;
             }
             catch (Exception ex)
             {
-                CFuncionesGenerales.MensajeError("No se ha podido ingresar el detallado de la compra. Ocurrió un error genérico.", ex);
+                throw ex;
             }
         }
 
@@ -391,9 +408,36 @@ namespace GYM.Formularios.Compras
         {
             if (ValidarCampos())
             {
-                IngresarCompra();
-                MessageBox.Show("Se ha ingresado la compra con éxito.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                try
+                {
+                    IngresarCompra();
+                    MessageBox.Show("Se ha ingresado la compra con éxito.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                catch (MySqlException ex)
+                {
+                    CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. No se pudo conectar con la base de datos.", ex);
+                }
+                catch (FormatException ex)
+                {
+                    CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. Ocurrió un error al dar formato a una variable.", ex);
+                }
+                catch (OverflowException ex)
+                {
+                    CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. Ocurrió un desbordamiento.", ex);
+                }
+                catch (ArgumentNullException ex)
+                {
+                    CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. El argumento dado al método es nulo.", ex);
+                }
+                catch (ArgumentException ex)
+                {
+                    CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. El argumento dado al método no es admitido por éste.", ex);
+                }
+                catch (Exception ex)
+                {
+                    CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. Ocurrió un error genérico.", ex);
+                }
             }
         }
     }

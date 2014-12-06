@@ -53,7 +53,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(298, 268);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(101, 39);
-            this.btnAceptar.TabIndex = 8;
+            this.btnAceptar.TabIndex = 7;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -67,7 +67,7 @@
             this.txbDescripcion.Name = "txbDescripcion";
             this.txbDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txbDescripcion.Size = new System.Drawing.Size(200, 75);
-            this.txbDescripcion.TabIndex = 5;
+            this.txbDescripcion.TabIndex = 4;
             // 
             // txbCosto
             // 
@@ -75,7 +75,7 @@
             this.txbCosto.Location = new System.Drawing.Point(218, 181);
             this.txbCosto.Name = "txbCosto";
             this.txbCosto.Size = new System.Drawing.Size(181, 29);
-            this.txbCosto.TabIndex = 6;
+            this.txbCosto.TabIndex = 5;
             this.txbCosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioCosto_KeyPress);
             // 
             // label7
@@ -94,7 +94,7 @@
             this.txbPrecio.Location = new System.Drawing.Point(218, 120);
             this.txbPrecio.Name = "txbPrecio";
             this.txbPrecio.Size = new System.Drawing.Size(181, 29);
-            this.txbPrecio.TabIndex = 4;
+            this.txbPrecio.TabIndex = 3;
             this.txbPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioCosto_KeyPress);
             // 
             // label6
@@ -133,7 +133,7 @@
             this.txbMarca.Location = new System.Drawing.Point(12, 120);
             this.txbMarca.Name = "txbMarca";
             this.txbMarca.Size = new System.Drawing.Size(200, 29);
-            this.txbMarca.TabIndex = 3;
+            this.txbMarca.TabIndex = 2;
             // 
             // label2
             // 
@@ -151,7 +151,7 @@
             this.txbNombre.Location = new System.Drawing.Point(12, 62);
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(200, 29);
-            this.txbNombre.TabIndex = 1;
+            this.txbNombre.TabIndex = 0;
             // 
             // label1
             // 
@@ -175,7 +175,7 @@
             this.cboPieza.Location = new System.Drawing.Point(218, 62);
             this.cboPieza.Name = "cboPieza";
             this.cboPieza.Size = new System.Drawing.Size(181, 29);
-            this.cboPieza.TabIndex = 2;
+            this.cboPieza.TabIndex = 1;
             // 
             // chbControlStock
             // 
@@ -186,7 +186,7 @@
             this.chbControlStock.Location = new System.Drawing.Point(277, 216);
             this.chbControlStock.Name = "chbControlStock";
             this.chbControlStock.Size = new System.Drawing.Size(122, 23);
-            this.chbControlStock.TabIndex = 7;
+            this.chbControlStock.TabIndex = 6;
             this.chbControlStock.Text = "Controlar stock";
             this.chbControlStock.UseVisualStyleBackColor = true;
             // 

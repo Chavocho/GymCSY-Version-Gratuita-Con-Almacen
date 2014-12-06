@@ -69,7 +69,7 @@
             this.txbNombre.Location = new System.Drawing.Point(12, 62);
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(238, 29);
-            this.txbNombre.TabIndex = 1;
+            this.txbNombre.TabIndex = 0;
             // 
             // txbMarca
             // 
@@ -77,7 +77,7 @@
             this.txbMarca.Location = new System.Drawing.Point(12, 128);
             this.txbMarca.Name = "txbMarca";
             this.txbMarca.Size = new System.Drawing.Size(238, 29);
-            this.txbMarca.TabIndex = 3;
+            this.txbMarca.TabIndex = 2;
             // 
             // lblMarca
             // 
@@ -115,7 +115,7 @@
             this.txbPrecio.Location = new System.Drawing.Point(256, 128);
             this.txbPrecio.Name = "txbPrecio";
             this.txbPrecio.Size = new System.Drawing.Size(202, 29);
-            this.txbPrecio.TabIndex = 4;
+            this.txbPrecio.TabIndex = 3;
             this.txbPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbUnidad_KeyPress);
             // 
             // lblPrecio
@@ -134,7 +134,7 @@
             this.txbCosto.Location = new System.Drawing.Point(256, 191);
             this.txbCosto.Name = "txbCosto";
             this.txbCosto.Size = new System.Drawing.Size(202, 29);
-            this.txbCosto.TabIndex = 6;
+            this.txbCosto.TabIndex = 5;
             this.txbCosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbUnidad_KeyPress);
             // 
             // lblCosto
@@ -155,7 +155,7 @@
             this.txbDescripcion.Name = "txbDescripcion";
             this.txbDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txbDescripcion.Size = new System.Drawing.Size(238, 85);
-            this.txbDescripcion.TabIndex = 7;
+            this.txbDescripcion.TabIndex = 6;
             // 
             // btnAceptar
             // 
@@ -176,7 +176,7 @@
             this.txtCantidad.Location = new System.Drawing.Point(256, 255);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(202, 29);
-            this.txtCantidad.TabIndex = 8;
+            this.txtCantidad.TabIndex = 7;
             this.txtCantidad.Text = "0";
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
@@ -217,7 +217,7 @@
             this.txtCodigo.Location = new System.Drawing.Point(12, 191);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(238, 29);
-            this.txtCodigo.TabIndex = 5;
+            this.txtCodigo.TabIndex = 4;
             // 
             // cboPieza
             // 
@@ -231,7 +231,7 @@
             this.cboPieza.Location = new System.Drawing.Point(256, 62);
             this.cboPieza.Name = "cboPieza";
             this.cboPieza.Size = new System.Drawing.Size(202, 29);
-            this.cboPieza.TabIndex = 2;
+            this.cboPieza.TabIndex = 1;
             // 
             // chbProductoServicio
             // 
@@ -264,7 +264,7 @@
             this.txtCantidadAlmacen.Location = new System.Drawing.Point(256, 311);
             this.txtCantidadAlmacen.Name = "txtCantidadAlmacen";
             this.txtCantidadAlmacen.Size = new System.Drawing.Size(202, 29);
-            this.txtCantidadAlmacen.TabIndex = 20;
+            this.txtCantidadAlmacen.TabIndex = 8;
             this.txtCantidadAlmacen.Text = "0";
             this.txtCantidadAlmacen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 

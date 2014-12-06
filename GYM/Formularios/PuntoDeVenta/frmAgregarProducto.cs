@@ -102,7 +102,8 @@ namespace GYM.Formularios.PuntoDeVenta
             cboPieza.SelectedIndex = 0;
             txbPrecio.Text = "";
             txbCosto.Text = "";
-            txtCantidad.Text = "";
+            txtCantidad.Text = "0";
+            txtCantidadAlmacen.Text = "0";
             txtCodigo.Text = "";
         }
 
@@ -221,8 +222,8 @@ namespace GYM.Formularios.PuntoDeVenta
             else
             {
                 cboPieza.Enabled = txbMarca.Enabled = txtCantidad.Enabled = txtCantidadAlmacen.Enabled = chbControlStock.Checked = chbControlStock.Enabled = true;
-                txtCantidad.Text = "";
-                txtCantidadAlmacen.Text = "";
+                txtCantidad.Text = "0";
+                txtCantidadAlmacen.Text = "0";
             }
         }
     }

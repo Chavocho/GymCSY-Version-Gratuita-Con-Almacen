@@ -37,7 +37,7 @@ namespace GYM.Formularios.Compras
                     string remision = dr["remision"].ToString(), factura = dr["factura"].ToString(),
                         folioRemision = dr["folio_remision"].ToString(), folioFactura = dr["folio_factura"].ToString();
                     decimal subtotal = decimal.Parse(dr["subtotal"].ToString()), descuento = decimal.Parse(dr["descuento"].ToString()),
-                        importe = decimal.Parse(dr["importe"].ToString()), total = (subtotal + importe - descuento);
+                        importe = decimal.Parse(dr["impuesto"].ToString()), total = (subtotal + importe - descuento);
 
                     lblFecha.Text = fecha.ToString("dd") + " de " + fecha.ToString("MMMM") + " del " + fecha.ToString("yyyy");
                     if (tipoPago == 0)
@@ -96,14 +96,14 @@ namespace GYM.Formularios.Compras
             try
             {
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "SELECT c.*, p.nombre FROM compra_producto AS c INNER JOIN producto ON (c.id_producto=p.id) WHERE id_compra=?id_compra";
+                sql.CommandText = "SELECT c.*, p.nombre AS nom FROM compra_producto AS c INNER JOIN producto AS p ON (c.id_producto=p.id) WHERE id_compra=?id_compra";
                 sql.Parameters.AddWithValue("?id_compra", idCompra);
                 DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
                 foreach (DataRow dr in dt.Rows)
                 {
-                    decimal costo = decimal.Parse(dr["costo"].ToString()), descuento = decimal.Parse(dr["descuento"].ToString());
+                    decimal costo = decimal.Parse(dr["precio"].ToString()), descuento = decimal.Parse(dr["descuento"].ToString());
                     int cant = int.Parse(dr["cantidad"].ToString());
-                    dgvCompraDetallada.Rows.Add(new object[] { dr["id_producto"], dr["nombre"], cant, costo.ToString("C2"), descuento.ToString("C2"), ((cant * costo) - descuento).ToString("C2") });
+                    dgvCompraDetallada.Rows.Add(new object[] { dr["id_producto"], dr["nom"], cant, costo.ToString("C2"), descuento.ToString("C2"), ((cant * costo) - descuento).ToString("C2") });
                 }
             }
             catch (MySqlException ex)

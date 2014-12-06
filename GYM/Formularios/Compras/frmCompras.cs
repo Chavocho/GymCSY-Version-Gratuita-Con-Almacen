@@ -49,7 +49,7 @@ namespace GYM.Formularios.Compras
                 MySqlCommand sql = new MySqlCommand();
                 sql.CommandText = "SELECT c.id, c.fecha, u.userName, c.tipo_pago, c.subtotal, c.descuento, c.impuesto FROM compra AS c LEFT JOIN usuarios AS u ON (c.create_user_id=u.id) WHERE (c.fecha BETWEEN ?fechaIni AND ?fechaFin)";
                 sql.Parameters.AddWithValue("?fechaIni", fechaIni.ToString("yyyy/MM/dd") + " 00:00:00");
-                sql.Parameters.AddWithValue("?fechaIni", fechaFin.ToString("yyyy/MM/dd") + " 23:59:59");
+                sql.Parameters.AddWithValue("?fechaFin", fechaFin.ToString("yyyy/MM/dd") + " 23:59:59");
                 dt = ConexionBD.EjecutarConsultaSelect(sql);
             }
             catch (MySqlException ex)
@@ -68,7 +68,7 @@ namespace GYM.Formularios.Compras
             {
                 foreach (DataRow dr in dt.Rows)
                 {
-                    decimal subtotal = (decimal)dr["subtotal"], importe = (decimal)dr["importe"], descuento = (decimal)dr["descuento"];
+                    decimal subtotal = (decimal)dr["subtotal"], importe = (decimal)dr["impuesto"], descuento = (decimal)dr["descuento"];
                     DateTime fecha = DateTime.Parse(dr["fecha"].ToString());
                     string tipoPago = "";
                     if (dr["tipo_pago"].ToString() == "0")

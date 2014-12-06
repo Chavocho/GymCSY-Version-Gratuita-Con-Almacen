@@ -353,6 +353,7 @@
             // 
             // txtFactura
             // 
+            this.txtFactura.Enabled = false;
             this.txtFactura.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtFactura.Location = new System.Drawing.Point(254, 91);
             this.txtFactura.Name = "txtFactura";

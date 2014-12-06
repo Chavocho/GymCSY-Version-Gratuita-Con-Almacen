@@ -51,6 +51,7 @@ namespace GYM.Formularios.Compras
                 {
                     dgvProductos.Rows.Add(new object[] { dr["id"], dr["nombre"], dr["cant_alm"], decimal.Parse(dr["costo"].ToString()).ToString("C2") });
                 }
+                dgvProductos_CellClick(dgvProductos, new DataGridViewCellEventArgs(0, 0));
             }
             catch (FormatException ex)
             {
@@ -67,6 +68,33 @@ namespace GYM.Formularios.Compras
             catch (Exception ex)
             {
                 CFuncionesGenerales.MensajeError("Ocurrio un error al mostrar la información. Ocurrió un error genérico.", ex);
+            }
+        }
+
+        private void CalcularTotales()
+        {
+            try
+            {
+                decimal desc;
+                decimal.TryParse(txtDescuento.Text, out desc);
+                decimal costo = decimal.Parse(dgvProductos[3, dgvProductos.CurrentRow.Index].Value.ToString(), System.Globalization.NumberStyles.Currency);
+                lblTotal.Text = ((costo * nudCantidad.Value) - desc).ToString("C2");
+            }
+            catch (FormatException ex)
+            {
+                CFuncionesGenerales.MensajeError("No se pudo calcular el total. No se pudo convertir la variable.", ex);
+            }
+            catch (OverflowException ex)
+            {
+                CFuncionesGenerales.MensajeError("No se pudo calcular el total. Ocurrió un desbordamiento.", ex);
+            }
+            catch (ArgumentNullException ex)
+            {
+                CFuncionesGenerales.MensajeError("No se pudo calcular el total. El argumento dado es nulo.", ex);
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("No se pudo calcular el total. Ocurrió un error genérico.", ex);
             }
         }
 
@@ -92,6 +120,7 @@ namespace GYM.Formularios.Compras
         private void bgwBusqueda_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             tmrEspera.Enabled = false;
+            CFuncionesGenerales.frmEsperaClose();
             LlenarDataGrid();
         }
 
@@ -134,6 +163,48 @@ namespace GYM.Formularios.Compras
         {
             tmrEspera.Enabled = false;
             CFuncionesGenerales.frmEspera("Espere mientras se efectua la búsqueda", this);
+        }
+
+        private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dgvProductos.RowCount > 0)
+                    CalcularTotales();
+                else
+                    lblTotal.Text = "$0.00";
+            }
+            catch
+            {
+            }
+        }
+
+        private void nudCantidad_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvProductos.CurrentRow != null)
+                    CalcularTotales();
+                else
+                    lblTotal.Text = "$0.00";
+            }
+            catch
+            {
+            }
+        }
+
+        private void txtDescuento_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvProductos.CurrentRow != null)
+                    CalcularTotales();
+                else
+                    lblTotal.Text = "$0.00";
+            }
+            catch
+            {
+            }
         }
     }
 }

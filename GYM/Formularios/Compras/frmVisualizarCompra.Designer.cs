@@ -32,26 +32,26 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVisualizarCompra));
             this.pnlCompra = new System.Windows.Forms.Panel();
-            this.lblEFecha = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.lblTipoPago = new System.Windows.Forms.Label();
-            this.lblETipoPago = new System.Windows.Forms.Label();
-            this.lblRemision = new System.Windows.Forms.Label();
-            this.lblERemision = new System.Windows.Forms.Label();
-            this.lblFactura = new System.Windows.Forms.Label();
-            this.lblEFactura = new System.Windows.Forms.Label();
-            this.lblFolioRemision = new System.Windows.Forms.Label();
-            this.lblEFolioRemision = new System.Windows.Forms.Label();
-            this.lblFolioFactura = new System.Windows.Forms.Label();
-            this.lblEFolioFactura = new System.Windows.Forms.Label();
-            this.lblSubtotal = new System.Windows.Forms.Label();
-            this.lblESubtotal = new System.Windows.Forms.Label();
-            this.lblImporte = new System.Windows.Forms.Label();
-            this.lblEImporte = new System.Windows.Forms.Label();
-            this.lblDescuento = new System.Windows.Forms.Label();
-            this.lblEDescuento = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblETotal = new System.Windows.Forms.Label();
+            this.lblDescuento = new System.Windows.Forms.Label();
+            this.lblEDescuento = new System.Windows.Forms.Label();
+            this.lblImporte = new System.Windows.Forms.Label();
+            this.lblEImporte = new System.Windows.Forms.Label();
+            this.lblSubtotal = new System.Windows.Forms.Label();
+            this.lblESubtotal = new System.Windows.Forms.Label();
+            this.lblFolioFactura = new System.Windows.Forms.Label();
+            this.lblEFolioFactura = new System.Windows.Forms.Label();
+            this.lblFolioRemision = new System.Windows.Forms.Label();
+            this.lblEFolioRemision = new System.Windows.Forms.Label();
+            this.lblFactura = new System.Windows.Forms.Label();
+            this.lblEFactura = new System.Windows.Forms.Label();
+            this.lblRemision = new System.Windows.Forms.Label();
+            this.lblERemision = new System.Windows.Forms.Label();
+            this.lblTipoPago = new System.Windows.Forms.Label();
+            this.lblETipoPago = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblEFecha = new System.Windows.Forms.Label();
             this.dgvCompraDetallada = new System.Windows.Forms.DataGridView();
             this.CIDProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,8 +66,7 @@
             // 
             // pnlCompra
             // 
-            this.pnlCompra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlCompra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlCompra.Controls.Add(this.lblTotal);
             this.pnlCompra.Controls.Add(this.lblETotal);
@@ -89,174 +88,32 @@
             this.pnlCompra.Controls.Add(this.lblETipoPago);
             this.pnlCompra.Controls.Add(this.lblFecha);
             this.pnlCompra.Controls.Add(this.lblEFecha);
+            this.pnlCompra.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.pnlCompra.Location = new System.Drawing.Point(0, 0);
             this.pnlCompra.Name = "pnlCompra";
             this.pnlCompra.Size = new System.Drawing.Size(1008, 115);
             this.pnlCompra.TabIndex = 1;
             // 
-            // lblEFecha
+            // lblTotal
             // 
-            this.lblEFecha.AutoSize = true;
-            this.lblEFecha.Location = new System.Drawing.Point(12, 9);
-            this.lblEFecha.Name = "lblEFecha";
-            this.lblEFecha.Size = new System.Drawing.Size(44, 19);
-            this.lblEFecha.TabIndex = 0;
-            this.lblEFecha.Text = "Fecha";
+            this.lblTotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTotal.Location = new System.Drawing.Point(918, 84);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(69, 19);
+            this.lblTotal.TabIndex = 19;
+            this.lblTotal.Text = "$1350.50";
             // 
-            // lblFecha
+            // lblETotal
             // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblFecha.Location = new System.Drawing.Point(62, 28);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(175, 19);
-            this.lblFecha.TabIndex = 1;
-            this.lblFecha.Text = "21 de diciembre de 2014";
-            // 
-            // lblTipoPago
-            // 
-            this.lblTipoPago.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblTipoPago.AutoSize = true;
-            this.lblTipoPago.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblTipoPago.Location = new System.Drawing.Point(421, 28);
-            this.lblTipoPago.Name = "lblTipoPago";
-            this.lblTipoPago.Size = new System.Drawing.Size(62, 19);
-            this.lblTipoPago.TabIndex = 3;
-            this.lblTipoPago.Text = "Efectivo";
-            // 
-            // lblETipoPago
-            // 
-            this.lblETipoPago.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblETipoPago.AutoSize = true;
-            this.lblETipoPago.Location = new System.Drawing.Point(331, 9);
-            this.lblETipoPago.Name = "lblETipoPago";
-            this.lblETipoPago.Size = new System.Drawing.Size(84, 19);
-            this.lblETipoPago.TabIndex = 2;
-            this.lblETipoPago.Text = "Se pago con";
-            // 
-            // lblRemision
-            // 
-            this.lblRemision.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblRemision.AutoSize = true;
-            this.lblRemision.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblRemision.Location = new System.Drawing.Point(713, 28);
-            this.lblRemision.Name = "lblRemision";
-            this.lblRemision.Size = new System.Drawing.Size(29, 19);
-            this.lblRemision.TabIndex = 5;
-            this.lblRemision.Text = "No";
-            // 
-            // lblERemision
-            // 
-            this.lblERemision.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblERemision.AutoSize = true;
-            this.lblERemision.Location = new System.Drawing.Point(584, 9);
-            this.lblERemision.Name = "lblERemision";
-            this.lblERemision.Size = new System.Drawing.Size(123, 19);
-            this.lblERemision.TabIndex = 4;
-            this.lblERemision.Text = "Se recibió remisión";
-            // 
-            // lblFactura
-            // 
-            this.lblFactura.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFactura.AutoSize = true;
-            this.lblFactura.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblFactura.Location = new System.Drawing.Point(918, 28);
-            this.lblFactura.Name = "lblFactura";
-            this.lblFactura.Size = new System.Drawing.Size(21, 19);
-            this.lblFactura.TabIndex = 7;
-            this.lblFactura.Text = "Si";
-            // 
-            // lblEFactura
-            // 
-            this.lblEFactura.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEFactura.AutoSize = true;
-            this.lblEFactura.Location = new System.Drawing.Point(799, 9);
-            this.lblEFactura.Name = "lblEFactura";
-            this.lblEFactura.Size = new System.Drawing.Size(113, 19);
-            this.lblEFactura.TabIndex = 6;
-            this.lblEFactura.Text = "Se recibió factura";
-            // 
-            // lblFolioRemision
-            // 
-            this.lblFolioRemision.AutoSize = true;
-            this.lblFolioRemision.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblFolioRemision.Location = new System.Drawing.Point(131, 84);
-            this.lblFolioRemision.Name = "lblFolioRemision";
-            this.lblFolioRemision.Size = new System.Drawing.Size(73, 19);
-            this.lblFolioRemision.TabIndex = 9;
-            this.lblFolioRemision.Text = "46528012";
-            // 
-            // lblEFolioRemision
-            // 
-            this.lblEFolioRemision.AutoSize = true;
-            this.lblEFolioRemision.Location = new System.Drawing.Point(12, 65);
-            this.lblEFolioRemision.Name = "lblEFolioRemision";
-            this.lblEFolioRemision.Size = new System.Drawing.Size(113, 19);
-            this.lblEFolioRemision.TabIndex = 8;
-            this.lblEFolioRemision.Text = "Folio de remisión";
-            // 
-            // lblFolioFactura
-            // 
-            this.lblFolioFactura.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblFolioFactura.AutoSize = true;
-            this.lblFolioFactura.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblFolioFactura.Location = new System.Drawing.Point(331, 84);
-            this.lblFolioFactura.Name = "lblFolioFactura";
-            this.lblFolioFactura.Size = new System.Drawing.Size(73, 19);
-            this.lblFolioFactura.TabIndex = 11;
-            this.lblFolioFactura.Text = "46528012";
-            // 
-            // lblEFolioFactura
-            // 
-            this.lblEFolioFactura.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblEFolioFactura.AutoSize = true;
-            this.lblEFolioFactura.Location = new System.Drawing.Point(222, 65);
-            this.lblEFolioFactura.Name = "lblEFolioFactura";
-            this.lblEFolioFactura.Size = new System.Drawing.Size(103, 19);
-            this.lblEFolioFactura.TabIndex = 10;
-            this.lblEFolioFactura.Text = "Folio de factura";
-            // 
-            // lblSubtotal
-            // 
-            this.lblSubtotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblSubtotal.AutoSize = true;
-            this.lblSubtotal.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblSubtotal.Location = new System.Drawing.Point(487, 84);
-            this.lblSubtotal.Name = "lblSubtotal";
-            this.lblSubtotal.Size = new System.Drawing.Size(69, 19);
-            this.lblSubtotal.TabIndex = 13;
-            this.lblSubtotal.Text = "$1350.50";
-            // 
-            // lblESubtotal
-            // 
-            this.lblESubtotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblESubtotal.AutoSize = true;
-            this.lblESubtotal.Location = new System.Drawing.Point(421, 65);
-            this.lblESubtotal.Name = "lblESubtotal";
-            this.lblESubtotal.Size = new System.Drawing.Size(60, 19);
-            this.lblESubtotal.TabIndex = 12;
-            this.lblESubtotal.Text = "Subtotal";
-            // 
-            // lblImporte
-            // 
-            this.lblImporte.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblImporte.AutoSize = true;
-            this.lblImporte.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblImporte.Location = new System.Drawing.Point(637, 84);
-            this.lblImporte.Name = "lblImporte";
-            this.lblImporte.Size = new System.Drawing.Size(69, 19);
-            this.lblImporte.TabIndex = 15;
-            this.lblImporte.Text = "$1350.50";
-            // 
-            // lblEImporte
-            // 
-            this.lblEImporte.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblEImporte.AutoSize = true;
-            this.lblEImporte.Location = new System.Drawing.Point(573, 65);
-            this.lblEImporte.Name = "lblEImporte";
-            this.lblEImporte.Size = new System.Drawing.Size(58, 19);
-            this.lblEImporte.TabIndex = 14;
-            this.lblEImporte.Text = "Importe";
+            this.lblETotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblETotal.AutoSize = true;
+            this.lblETotal.Location = new System.Drawing.Point(873, 65);
+            this.lblETotal.Name = "lblETotal";
+            this.lblETotal.Size = new System.Drawing.Size(39, 19);
+            this.lblETotal.TabIndex = 18;
+            this.lblETotal.Text = "Total";
             // 
             // lblDescuento
             // 
@@ -279,26 +136,173 @@
             this.lblEDescuento.TabIndex = 16;
             this.lblEDescuento.Text = "Descuento";
             // 
-            // lblTotal
+            // lblImporte
             // 
-            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblTotal.Location = new System.Drawing.Point(918, 84);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(69, 19);
-            this.lblTotal.TabIndex = 19;
-            this.lblTotal.Text = "$1350.50";
+            this.lblImporte.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblImporte.AutoSize = true;
+            this.lblImporte.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblImporte.Location = new System.Drawing.Point(637, 84);
+            this.lblImporte.Name = "lblImporte";
+            this.lblImporte.Size = new System.Drawing.Size(69, 19);
+            this.lblImporte.TabIndex = 15;
+            this.lblImporte.Text = "$1350.50";
             // 
-            // lblETotal
+            // lblEImporte
             // 
-            this.lblETotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblETotal.AutoSize = true;
-            this.lblETotal.Location = new System.Drawing.Point(873, 65);
-            this.lblETotal.Name = "lblETotal";
-            this.lblETotal.Size = new System.Drawing.Size(39, 19);
-            this.lblETotal.TabIndex = 18;
-            this.lblETotal.Text = "Total";
+            this.lblEImporte.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblEImporte.AutoSize = true;
+            this.lblEImporte.Location = new System.Drawing.Point(573, 65);
+            this.lblEImporte.Name = "lblEImporte";
+            this.lblEImporte.Size = new System.Drawing.Size(58, 19);
+            this.lblEImporte.TabIndex = 14;
+            this.lblEImporte.Text = "Importe";
+            // 
+            // lblSubtotal
+            // 
+            this.lblSubtotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblSubtotal.AutoSize = true;
+            this.lblSubtotal.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblSubtotal.Location = new System.Drawing.Point(487, 84);
+            this.lblSubtotal.Name = "lblSubtotal";
+            this.lblSubtotal.Size = new System.Drawing.Size(69, 19);
+            this.lblSubtotal.TabIndex = 13;
+            this.lblSubtotal.Text = "$1350.50";
+            // 
+            // lblESubtotal
+            // 
+            this.lblESubtotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblESubtotal.AutoSize = true;
+            this.lblESubtotal.Location = new System.Drawing.Point(421, 65);
+            this.lblESubtotal.Name = "lblESubtotal";
+            this.lblESubtotal.Size = new System.Drawing.Size(60, 19);
+            this.lblESubtotal.TabIndex = 12;
+            this.lblESubtotal.Text = "Subtotal";
+            // 
+            // lblFolioFactura
+            // 
+            this.lblFolioFactura.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblFolioFactura.AutoSize = true;
+            this.lblFolioFactura.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblFolioFactura.Location = new System.Drawing.Point(331, 84);
+            this.lblFolioFactura.Name = "lblFolioFactura";
+            this.lblFolioFactura.Size = new System.Drawing.Size(73, 19);
+            this.lblFolioFactura.TabIndex = 11;
+            this.lblFolioFactura.Text = "46528012";
+            // 
+            // lblEFolioFactura
+            // 
+            this.lblEFolioFactura.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblEFolioFactura.AutoSize = true;
+            this.lblEFolioFactura.Location = new System.Drawing.Point(222, 65);
+            this.lblEFolioFactura.Name = "lblEFolioFactura";
+            this.lblEFolioFactura.Size = new System.Drawing.Size(103, 19);
+            this.lblEFolioFactura.TabIndex = 10;
+            this.lblEFolioFactura.Text = "Folio de factura";
+            // 
+            // lblFolioRemision
+            // 
+            this.lblFolioRemision.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblFolioRemision.AutoSize = true;
+            this.lblFolioRemision.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblFolioRemision.Location = new System.Drawing.Point(131, 84);
+            this.lblFolioRemision.Name = "lblFolioRemision";
+            this.lblFolioRemision.Size = new System.Drawing.Size(73, 19);
+            this.lblFolioRemision.TabIndex = 9;
+            this.lblFolioRemision.Text = "46528012";
+            // 
+            // lblEFolioRemision
+            // 
+            this.lblEFolioRemision.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblEFolioRemision.AutoSize = true;
+            this.lblEFolioRemision.Location = new System.Drawing.Point(12, 65);
+            this.lblEFolioRemision.Name = "lblEFolioRemision";
+            this.lblEFolioRemision.Size = new System.Drawing.Size(113, 19);
+            this.lblEFolioRemision.TabIndex = 8;
+            this.lblEFolioRemision.Text = "Folio de remisión";
+            // 
+            // lblFactura
+            // 
+            this.lblFactura.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblFactura.AutoSize = true;
+            this.lblFactura.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblFactura.Location = new System.Drawing.Point(918, 28);
+            this.lblFactura.Name = "lblFactura";
+            this.lblFactura.Size = new System.Drawing.Size(21, 19);
+            this.lblFactura.TabIndex = 7;
+            this.lblFactura.Text = "Si";
+            // 
+            // lblEFactura
+            // 
+            this.lblEFactura.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblEFactura.AutoSize = true;
+            this.lblEFactura.Location = new System.Drawing.Point(799, 9);
+            this.lblEFactura.Name = "lblEFactura";
+            this.lblEFactura.Size = new System.Drawing.Size(113, 19);
+            this.lblEFactura.TabIndex = 6;
+            this.lblEFactura.Text = "Se recibió factura";
+            // 
+            // lblRemision
+            // 
+            this.lblRemision.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblRemision.AutoSize = true;
+            this.lblRemision.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblRemision.Location = new System.Drawing.Point(713, 28);
+            this.lblRemision.Name = "lblRemision";
+            this.lblRemision.Size = new System.Drawing.Size(29, 19);
+            this.lblRemision.TabIndex = 5;
+            this.lblRemision.Text = "No";
+            // 
+            // lblERemision
+            // 
+            this.lblERemision.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblERemision.AutoSize = true;
+            this.lblERemision.Location = new System.Drawing.Point(584, 9);
+            this.lblERemision.Name = "lblERemision";
+            this.lblERemision.Size = new System.Drawing.Size(123, 19);
+            this.lblERemision.TabIndex = 4;
+            this.lblERemision.Text = "Se recibió remisión";
+            // 
+            // lblTipoPago
+            // 
+            this.lblTipoPago.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTipoPago.AutoSize = true;
+            this.lblTipoPago.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTipoPago.Location = new System.Drawing.Point(421, 28);
+            this.lblTipoPago.Name = "lblTipoPago";
+            this.lblTipoPago.Size = new System.Drawing.Size(62, 19);
+            this.lblTipoPago.TabIndex = 3;
+            this.lblTipoPago.Text = "Efectivo";
+            // 
+            // lblETipoPago
+            // 
+            this.lblETipoPago.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblETipoPago.AutoSize = true;
+            this.lblETipoPago.Location = new System.Drawing.Point(331, 9);
+            this.lblETipoPago.Name = "lblETipoPago";
+            this.lblETipoPago.Size = new System.Drawing.Size(84, 19);
+            this.lblETipoPago.TabIndex = 2;
+            this.lblETipoPago.Text = "Se pago con";
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblFecha.Location = new System.Drawing.Point(62, 28);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(175, 19);
+            this.lblFecha.TabIndex = 1;
+            this.lblFecha.Text = "21 de diciembre de 2014";
+            // 
+            // lblEFecha
+            // 
+            this.lblEFecha.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblEFecha.AutoSize = true;
+            this.lblEFecha.Location = new System.Drawing.Point(12, 9);
+            this.lblEFecha.Name = "lblEFecha";
+            this.lblEFecha.Size = new System.Drawing.Size(44, 19);
+            this.lblEFecha.TabIndex = 0;
+            this.lblEFecha.Text = "Fecha";
             // 
             // dgvCompraDetallada
             // 
@@ -314,14 +318,6 @@
             this.dgvCompraDetallada.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCompraDetallada.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvCompraDetallada.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCompraDetallada.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCompraDetallada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCompraDetallada.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CIDProd,
@@ -330,6 +326,14 @@
             this.CCosto,
             this.CDescuento,
             this.CTotal});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCompraDetallada.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCompraDetallada.Location = new System.Drawing.Point(0, 115);
             this.dgvCompraDetallada.MultiSelect = false;
             this.dgvCompraDetallada.Name = "dgvCompraDetallada";
@@ -343,7 +347,7 @@
             this.dgvCompraDetallada.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCompraDetallada.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCompraDetallada.ShowEditingIcon = false;
-            this.dgvCompraDetallada.Size = new System.Drawing.Size(1008, 574);
+            this.dgvCompraDetallada.Size = new System.Drawing.Size(1008, 506);
             this.dgvCompraDetallada.TabIndex = 2;
             // 
             // CIDProd
@@ -386,7 +390,7 @@
             // 
             this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAceptar.Location = new System.Drawing.Point(921, 695);
+            this.btnAceptar.Location = new System.Drawing.Point(921, 627);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 3;
@@ -397,13 +401,13 @@
             // frmVisualizarCompra
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1008, 730);
+            this.ClientSize = new System.Drawing.Size(1008, 662);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.dgvCompraDetallada);
             this.Controls.Add(this.pnlCompra);
-            this.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1024, 736);
+            this.MinimumSize = new System.Drawing.Size(1024, 700);
             this.Name = "frmVisualizarCompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Compra";

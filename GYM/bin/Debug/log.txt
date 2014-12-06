@@ -131,3 +131,30 @@ System.FormatException: La cadena de entrada no tiene el formato correcto.
 MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'tipo' in 'field list'
    en GYM.Clases.CTicket.ImprimirTicketMembresia(Int32 numSoc) en c:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\Clases\Ticket\CTicket.cs:línea 217
    en GYM.Formularios.Membresia.frmNuevaMembresia.btnAceptar_Click(Object sender, EventArgs e) en c:\Users\Chavocho\Trabajos\GymCSY-Version-Gratuita\GYM\Formularios\Membresia\frmNuevaMembresia.cs:línea 190|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'cant_alm' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsultaSelect(String consulta) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 135
+   en GYM.Formularios.Compras.frmProductosCompra.BuscarProductos(String p) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Compras\frmProductosCompra.cs:línea 33|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'cant_alm' in 'field list'
+   en GYM.Clases.CProducto.InsertarProducto() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\CProducto.cs:línea 302
+   en GYM.Formularios.PuntoDeVenta.frmAgregarProducto.btnAceptar_Click(Object sender, EventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\PuntoDeVenta\frmAgregarProducto.cs:línea 54|
+System.InvalidCastException: La conversión especificada no es válida.
+   en GYM.Formularios.Compras.frmNuevaCompra.CalcularTotales() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Compras\frmNuevaCompra.cs:línea 179|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'importe' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 100
+   en GYM.Formularios.Compras.frmNuevaCompra.IngresarCompra() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Compras\frmNuevaCompra.cs:línea 271|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '?fechaIni' has already been defined.
+   en MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   en MySql.Data.MySqlClient.MySqlParameterCollection.Add(MySqlParameter value)
+   en MySql.Data.MySqlClient.MySqlParameterCollection.AddWithValue(String parameterName, Object value)
+   en GYM.Formularios.Compras.frmCompras.BuscarCompra(DateTime fechaIni, DateTime fechaFin) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Compras\frmCompras.cs:línea 52|
+System.ArgumentException: La columna 'importe' no pertenece a la tabla .
+   en System.Data.DataRow.GetDataColumn(String columnName)
+   en System.Data.DataRow.get_Item(String columnName)
+   en GYM.Formularios.Compras.frmCompras.LlenarDataGrid() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Compras\frmCompras.cs:línea 71|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'p.nombre' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsultaSelect(MySqlCommand comando) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 169
+   en GYM.Formularios.Compras.frmVisualizarCompra.CargarDatosCompraDetallada() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Compras\frmVisualizarCompra.cs:línea 101|
+System.ArgumentException: La columna 'costo' no pertenece a la tabla .
+   en System.Data.DataRow.GetDataColumn(String columnName)
+   en System.Data.DataRow.get_Item(String columnName)
+   en GYM.Formularios.Compras.frmVisualizarCompra.CargarDatosCompraDetallada() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Compras\frmVisualizarCompra.cs:línea 104|
