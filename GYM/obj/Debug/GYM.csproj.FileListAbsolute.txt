@@ -1123,3 +1123,8 @@ C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\De
 C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Teclado.resources
 C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.csproj.GenerateResource.Cache
 C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Compras.frmVisualizarCompra.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\bin\Debug\GYM.exe.config
+F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\Interop.AcroPDFLib.dll
+F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.csproj.ResolveComReference.cache
+F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.exe
+F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.pdb

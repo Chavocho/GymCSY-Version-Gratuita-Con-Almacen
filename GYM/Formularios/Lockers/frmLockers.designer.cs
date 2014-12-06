@@ -60,7 +60,7 @@
             this.Socio,
             this.Telefono,
             this.Estado});
-            this.dgvLockers.Location = new System.Drawing.Point(93, 12);
+            this.dgvLockers.Location = new System.Drawing.Point(123, 12);
             this.dgvLockers.Name = "dgvLockers";
             this.dgvLockers.ReadOnly = true;
             this.dgvLockers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -68,7 +68,7 @@
             this.dgvLockers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvLockers.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLockers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLockers.Size = new System.Drawing.Size(734, 257);
+            this.dgvLockers.Size = new System.Drawing.Size(788, 344);
             this.dgvLockers.TabIndex = 2;
             this.dgvLockers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLockers_CellClick);
             // 
@@ -110,9 +110,9 @@
             // btnNuevo
             // 
             this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.btnNuevo.Location = new System.Drawing.Point(12, 12);
+            this.btnNuevo.Location = new System.Drawing.Point(12, 21);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevo.Size = new System.Drawing.Size(105, 33);
             this.btnNuevo.TabIndex = 3;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -121,9 +121,9 @@
             // btnAsignar
             // 
             this.btnAsignar.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.btnAsignar.Location = new System.Drawing.Point(12, 99);
+            this.btnAsignar.Location = new System.Drawing.Point(12, 147);
             this.btnAsignar.Name = "btnAsignar";
-            this.btnAsignar.Size = new System.Drawing.Size(75, 23);
+            this.btnAsignar.Size = new System.Drawing.Size(105, 33);
             this.btnAsignar.TabIndex = 4;
             this.btnAsignar.Text = "Asignar";
             this.btnAsignar.UseVisualStyleBackColor = true;
@@ -132,9 +132,9 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.btnEliminar.Location = new System.Drawing.Point(12, 70);
+            this.btnEliminar.Location = new System.Drawing.Point(12, 108);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(105, 33);
             this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -143,9 +143,9 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.btnEditar.Location = new System.Drawing.Point(12, 41);
+            this.btnEditar.Location = new System.Drawing.Point(12, 69);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.Size = new System.Drawing.Size(105, 33);
             this.btnEditar.TabIndex = 6;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -154,7 +154,7 @@
             // frmLockers
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(839, 281);
+            this.ClientSize = new System.Drawing.Size(923, 368);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAsignar);
