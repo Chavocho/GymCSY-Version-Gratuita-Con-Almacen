@@ -79,6 +79,7 @@ namespace GYM.Formularios.Compras
         {
             if (e.KeyCode == Keys.Enter)
             {
+                tmrEspera.Enabled = true;
                 bgwBusqueda.RunWorkerAsync(txtCodigo.Text);
             }
         }
@@ -90,6 +91,7 @@ namespace GYM.Formularios.Compras
 
         private void bgwBusqueda_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            tmrEspera.Enabled = false;
             LlenarDataGrid();
         }
 
@@ -126,6 +128,12 @@ namespace GYM.Formularios.Compras
             {
                 MessageBox.Show("¡Debes seleccionar un producto!", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void tmrEspera_Tick(object sender, EventArgs e)
+        {
+            tmrEspera.Enabled = false;
+            CFuncionesGenerales.frmEspera("Espere mientras se efectua la búsqueda", this);
         }
     }
 }

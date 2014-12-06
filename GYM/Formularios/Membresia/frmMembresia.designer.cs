@@ -33,16 +33,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMembresia));
             this.dgvPersonas = new System.Windows.Forms.DataGridView();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.txtBusqueda = new System.Windows.Forms.TextBox();
-            this.lblInstruccionesBusqueda = new System.Windows.Forms.Label();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Socio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaVencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
+            this.lblInstruccionesBusqueda = new System.Windows.Forms.Label();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,64 +100,6 @@
             this.dgvPersonas.TabIndex = 1;
             this.dgvPersonas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonas_CellClick);
             // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblTitulo.Location = new System.Drawing.Point(8, 12);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(225, 21);
-            this.lblTitulo.TabIndex = 1;
-            this.lblTitulo.Text = "Administración de membresias";
-            // 
-            // txtBusqueda
-            // 
-            this.txtBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBusqueda.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtBusqueda.Location = new System.Drawing.Point(899, 39);
-            this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(173, 27);
-            this.txtBusqueda.TabIndex = 0;
-            this.txtBusqueda.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBusqueda_KeyDown);
-            // 
-            // lblInstruccionesBusqueda
-            // 
-            this.lblInstruccionesBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblInstruccionesBusqueda.AutoSize = true;
-            this.lblInstruccionesBusqueda.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.lblInstruccionesBusqueda.Location = new System.Drawing.Point(645, 43);
-            this.lblInstruccionesBusqueda.Name = "lblInstruccionesBusqueda";
-            this.lblInstruccionesBusqueda.Size = new System.Drawing.Size(248, 19);
-            this.lblInstruccionesBusqueda.TabIndex = 11;
-            this.lblInstruccionesBusqueda.Text = "Buscar por número de socio o nombre ";
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnNuevo.Image = global::GYM.Properties.Resources.ImgMembresia;
-            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(12, 72);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(140, 58);
-            this.btnNuevo.TabIndex = 2;
-            this.btnNuevo.Text = "Nueva membresía";
-            this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnEditar.Image = global::GYM.Properties.Resources.ImgEditar;
-            this.btnEditar.Location = new System.Drawing.Point(12, 136);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(140, 58);
-            this.btnEditar.TabIndex = 3;
-            this.btnEditar.Text = "Renovar membresía";
-            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
             // ID
             // 
             this.ID.HeaderText = "Número Socio";
@@ -197,6 +139,65 @@
             this.fechaVencimiento.ReadOnly = true;
             this.fechaVencimiento.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.fechaVencimiento.Width = 170;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblTitulo.Location = new System.Drawing.Point(8, 12);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(225, 21);
+            this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.Text = "Administración de membresias";
+            // 
+            // txtBusqueda
+            // 
+            this.txtBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBusqueda.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtBusqueda.Location = new System.Drawing.Point(899, 39);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(173, 27);
+            this.txtBusqueda.TabIndex = 0;
+            this.txtBusqueda.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBusqueda_KeyDown);
+            // 
+            // lblInstruccionesBusqueda
+            // 
+            this.lblInstruccionesBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblInstruccionesBusqueda.AutoSize = true;
+            this.lblInstruccionesBusqueda.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.lblInstruccionesBusqueda.Location = new System.Drawing.Point(645, 43);
+            this.lblInstruccionesBusqueda.Name = "lblInstruccionesBusqueda";
+            this.lblInstruccionesBusqueda.Size = new System.Drawing.Size(248, 19);
+            this.lblInstruccionesBusqueda.TabIndex = 11;
+            this.lblInstruccionesBusqueda.Text = "Buscar por número de socio o nombre ";
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnNuevo.Image = global::GYM.Properties.Resources.ImgMembresia;
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevo.Location = new System.Drawing.Point(12, 72);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(140, 50);
+            this.btnNuevo.TabIndex = 2;
+            this.btnNuevo.Text = "Nueva \r\nmembresía";
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnEditar.Image = global::GYM.Properties.Resources.ImgEditar;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditar.Location = new System.Drawing.Point(12, 128);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(140, 50);
+            this.btnEditar.TabIndex = 3;
+            this.btnEditar.Text = "Renovar \r\nmembresía";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // frmMembresia
             // 

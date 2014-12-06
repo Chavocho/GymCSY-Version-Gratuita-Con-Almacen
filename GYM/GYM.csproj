@@ -159,6 +159,12 @@
     <Compile Include="Formularios\Compras\frmProductosCompra.Designer.cs">
       <DependentUpon>frmProductosCompra.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Compras\frmVisualizarCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\frmVisualizarCompra.Designer.cs">
+      <DependentUpon>frmVisualizarCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Configuraciones\frmConfiguracionBaseDatos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -556,6 +562,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Compras\frmProductosCompra.resx">
       <DependentUpon>frmProductosCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\frmVisualizarCompra.resx">
+      <DependentUpon>frmVisualizarCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Configuraciones\frmConfiguracionBaseDatos.resx">
       <DependentUpon>frmConfiguracionBaseDatos.cs</DependentUpon>

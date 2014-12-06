@@ -478,9 +478,9 @@ namespace GYM
                 return;
             }
             if (!Formularios.POS.frmPuntoVenta.Instancia.Visible)
-            {
-                Formularios.POS.frmPuntoVenta.Instancia.Show(this);
-            }
+                Formularios.POS.frmPuntoVenta.Instancia.Show();
+            else
+                Formularios.POS.frmPuntoVenta.Instancia.Select();
         }
 
         private void generalToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -633,6 +633,14 @@ namespace GYM
                 Formularios.frmPendientes.Instancia.Show();
             else
                 Formularios.frmPendientes.Instancia.Select();
+        }
+
+        private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Formularios.Compras.frmCompras.Instancia.Visible)
+                Formularios.Compras.frmCompras.Instancia.Show();
+            else
+                Formularios.Compras.frmCompras.Instancia.Select();
         }
     }
 }

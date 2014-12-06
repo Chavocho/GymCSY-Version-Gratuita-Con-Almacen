@@ -55,6 +55,9 @@
             this.administraciònToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cortesíasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lockersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
+            this.pendientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.puntodeVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -92,9 +95,7 @@
             this.acercaDeGymCSYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tmrTiempo = new System.Windows.Forms.Timer(this.components);
             this.tmrCumpleaños = new System.Windows.Forms.Timer(this.components);
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
-            this.pendientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lockersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStripMain.SuspendLayout();
             this.menuStripMain.SuspendLayout();
             this.SuspendLayout();
@@ -324,11 +325,31 @@
             this.cortesíasToolStripMenuItem.Text = "Cortesías";
             this.cortesíasToolStripMenuItem.Click += new System.EventHandler(this.cortesíasToolStripMenuItem_Click);
             // 
+            // lockersToolStripMenuItem
+            // 
+            this.lockersToolStripMenuItem.Name = "lockersToolStripMenuItem";
+            this.lockersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lockersToolStripMenuItem.Text = "Lockers";
+            this.lockersToolStripMenuItem.Click += new System.EventHandler(this.lockersToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(149, 6);
+            // 
+            // pendientesToolStripMenuItem
+            // 
+            this.pendientesToolStripMenuItem.Name = "pendientesToolStripMenuItem";
+            this.pendientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pendientesToolStripMenuItem.Text = "Pendientes";
+            this.pendientesToolStripMenuItem.Click += new System.EventHandler(this.pendientesToolStripMenuItem_Click);
+            // 
             // puntodeVentaToolStripMenuItem
             // 
             this.puntodeVentaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.productosToolStripMenuItem1,
-            this.puntoDeventaToolStripMenuItem1});
+            this.puntoDeventaToolStripMenuItem1,
+            this.comprasToolStripMenuItem});
             this.puntodeVentaToolStripMenuItem.Name = "puntodeVentaToolStripMenuItem";
             this.puntodeVentaToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
             this.puntodeVentaToolStripMenuItem.Text = "Punto &de venta";
@@ -470,7 +491,7 @@
             this.toolStripSeparator10,
             this.listaDeSociosProximosAExpirarToolStripMenuItem});
             this.sociosToolStripMenuItem.Name = "sociosToolStripMenuItem";
-            this.sociosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sociosToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.sociosToolStripMenuItem.Text = "Socios";
             this.sociosToolStripMenuItem.Visible = false;
             // 
@@ -509,7 +530,7 @@
             this.casillerosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.listaDeCasillerosYDisponibilidadToolStripMenuItem});
             this.casillerosToolStripMenuItem.Name = "casillerosToolStripMenuItem";
-            this.casillerosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.casillerosToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.casillerosToolStripMenuItem.Text = "Casilleros";
             this.casillerosToolStripMenuItem.Visible = false;
             // 
@@ -522,7 +543,7 @@
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(138, 6);
             this.toolStripSeparator9.Visible = false;
             // 
             // productosToolStripMenuItem
@@ -532,7 +553,7 @@
             this.toolStripSeparator12,
             this.ventasToolStripMenuItem});
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             this.productosToolStripMenuItem.Visible = false;
             // 
@@ -556,13 +577,13 @@
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(138, 6);
             this.toolStripSeparator8.Visible = false;
             // 
             // panelToolStripMenuItem
             // 
             this.panelToolStripMenuItem.Name = "panelToolStripMenuItem";
-            this.panelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.panelToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.panelToolStripMenuItem.Text = "Panel";
             this.panelToolStripMenuItem.Visible = false;
             this.panelToolStripMenuItem.Click += new System.EventHandler(this.panelToolStripMenuItem_Click);
@@ -571,7 +592,7 @@
             // 
             this.cumpleañosToolStripMenuItem.Image = global::GYM.Properties.Resources.ImgCumpleaños;
             this.cumpleañosToolStripMenuItem.Name = "cumpleañosToolStripMenuItem";
-            this.cumpleañosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cumpleañosToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.cumpleañosToolStripMenuItem.Text = "&Cumpleaños";
             this.cumpleañosToolStripMenuItem.Click += new System.EventHandler(this.cumpleañosToolStripMenuItem_Click);
             // 
@@ -601,24 +622,12 @@
             this.tmrCumpleaños.Interval = 1000;
             this.tmrCumpleaños.Tick += new System.EventHandler(this.tmrCumpleaños_Tick);
             // 
-            // toolStripMenuItem3
+            // comprasToolStripMenuItem
             // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(149, 6);
-            // 
-            // pendientesToolStripMenuItem
-            // 
-            this.pendientesToolStripMenuItem.Name = "pendientesToolStripMenuItem";
-            this.pendientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.pendientesToolStripMenuItem.Text = "Pendientes";
-            this.pendientesToolStripMenuItem.Click += new System.EventHandler(this.pendientesToolStripMenuItem_Click);
-            // 
-            // lockersToolStripMenuItem
-            // 
-            this.lockersToolStripMenuItem.Name = "lockersToolStripMenuItem";
-            this.lockersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.lockersToolStripMenuItem.Text = "Lockers";
-            this.lockersToolStripMenuItem.Click += new System.EventHandler(this.lockersToolStripMenuItem_Click);
+            this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
+            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.comprasToolStripMenuItem.Text = "&Compras";
+            this.comprasToolStripMenuItem.Click += new System.EventHandler(this.comprasToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -714,5 +723,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem pendientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lockersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
     }
 }

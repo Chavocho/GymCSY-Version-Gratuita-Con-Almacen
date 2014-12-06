@@ -38,12 +38,12 @@
             this.lblInstrucciones = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.txtDescuento = new System.Windows.Forms.TextBox();
-            this.lblDescuento = new System.Windows.Forms.Label();
             this.CCodigoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CCosto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtDescuento = new System.Windows.Forms.TextBox();
+            this.lblDescuento = new System.Windows.Forms.Label();
             this.bgwBusqueda = new System.ComponentModel.BackgroundWorker();
             this.tmrEspera = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
@@ -160,25 +160,6 @@
             this.dgvProductos.Size = new System.Drawing.Size(648, 232);
             this.dgvProductos.TabIndex = 28;
             // 
-            // txtDescuento
-            // 
-            this.txtDescuento.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtDescuento.Location = new System.Drawing.Point(283, 287);
-            this.txtDescuento.Name = "txtDescuento";
-            this.txtDescuento.Size = new System.Drawing.Size(126, 27);
-            this.txtDescuento.TabIndex = 35;
-            this.txtDescuento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescuento_KeyPress);
-            // 
-            // lblDescuento
-            // 
-            this.lblDescuento.AutoSize = true;
-            this.lblDescuento.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblDescuento.Location = new System.Drawing.Point(195, 290);
-            this.lblDescuento.Name = "lblDescuento";
-            this.lblDescuento.Size = new System.Drawing.Size(82, 20);
-            this.lblDescuento.TabIndex = 36;
-            this.lblDescuento.Text = "Descuento:";
-            // 
             // CCodigoProducto
             // 
             this.CCodigoProducto.Frozen = true;
@@ -211,6 +192,25 @@
             this.CCosto.ReadOnly = true;
             this.CCosto.Width = 120;
             // 
+            // txtDescuento
+            // 
+            this.txtDescuento.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtDescuento.Location = new System.Drawing.Point(283, 287);
+            this.txtDescuento.Name = "txtDescuento";
+            this.txtDescuento.Size = new System.Drawing.Size(126, 27);
+            this.txtDescuento.TabIndex = 35;
+            this.txtDescuento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescuento_KeyPress);
+            // 
+            // lblDescuento
+            // 
+            this.lblDescuento.AutoSize = true;
+            this.lblDescuento.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblDescuento.Location = new System.Drawing.Point(195, 290);
+            this.lblDescuento.Name = "lblDescuento";
+            this.lblDescuento.Size = new System.Drawing.Size(82, 20);
+            this.lblDescuento.TabIndex = 36;
+            this.lblDescuento.Text = "Descuento:";
+            // 
             // bgwBusqueda
             // 
             this.bgwBusqueda.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwBusqueda_DoWork);
@@ -219,6 +219,7 @@
             // tmrEspera
             // 
             this.tmrEspera.Interval = 300;
+            this.tmrEspera.Tick += new System.EventHandler(this.tmrEspera_Tick);
             // 
             // frmProductosCompra
             // 

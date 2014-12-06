@@ -16,7 +16,6 @@ namespace GYM.Formularios.Compras
     {
         string id = "";
         private int iva = 16;
-
         public int IVA
         {
             get { return iva; }
@@ -27,9 +26,11 @@ namespace GYM.Formularios.Compras
             }
         }
         
+
         public frmNuevaCompra()
         {
             InitializeComponent();
+            cboTipoPago.SelectedIndex = 0;
         }
 
         /// <summary>
@@ -194,6 +195,138 @@ namespace GYM.Formularios.Compras
             }
         }
 
+        /// <summary>
+        /// Función que verifica que todos los campos necesarios esten completos
+        /// </summary>
+        /// <returns>Valor booleano que indica si los campos requeridos están llenos.</returns>
+        private bool ValidarCampos()
+        {
+            if (dgvProductos.RowCount <= 0)
+            {
+                MessageBox.Show("Debes ingresar al menos un producto a la compra.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if (rabRemision.Checked)
+            {
+                if (txtRemision.Text.Trim() == "")
+                {
+                    MessageBox.Show("Debes ingresar el folio de la remisión.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
+            }
+            else
+            {
+                if (txtFactura.Text.Trim() == "")
+                {
+                    MessageBox.Show("Debes ingresar el folio de la factura.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Función que inserta en la base de datos la compra.
+        /// </summary>
+        private void IngresarCompra()
+        {
+            try
+            {
+                MySqlCommand sql = new MySqlCommand();
+                sql.CommandText = "INSERT INTO compra (fecha, tipo_pago, remision, factura, folio_remision, folio_factura, subtotal, descuento, importe, create_user_id) " +
+                    "VALUES (NOW(), ?tipo_pago, ?remision, ?factura, ?folio_remision, ?folio_factura, ?subtotal, ?descuento, ?importe, ?create_user_id)";
+                sql.Parameters.AddWithValue("?tipo_pago", cboTipoPago.SelectedIndex);
+                sql.Parameters.AddWithValue("?remision", rabRemision.Checked);
+                sql.Parameters.AddWithValue("?factura", rabFactura.Checked);
+                if (rabRemision.Checked)
+                {
+                    sql.Parameters.AddWithValue("?folio_remision", txtRemision.Text);
+                    sql.Parameters.AddWithValue("?folio_factura", DBNull.Value);
+                }
+                else
+                {
+                    sql.Parameters.AddWithValue("?folio_remision", DBNull.Value);
+                    sql.Parameters.AddWithValue("?folio_factura", txtFactura.Text);
+                }
+                sql.Parameters.AddWithValue("?subtotal", decimal.Parse(lblSubtotal.Text, System.Globalization.NumberStyles.Currency));
+                sql.Parameters.AddWithValue("?descuento", decimal.Parse(lblDescuento.Text, System.Globalization.NumberStyles.Currency));
+                sql.Parameters.AddWithValue("?importe", decimal.Parse(lblImporte.Text, System.Globalization.NumberStyles.Currency));
+                sql.Parameters.AddWithValue("?create_user_id", frmMain.id);
+                ConexionBD.EjecutarConsulta(sql);
+                sql.Parameters.Clear();
+
+                int id = 0;
+                sql.CommandText = "SELECT MAX(id) AS i FROM compra LIMIT 1";
+                DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
+                foreach (DataRow dr in dt.Rows)
+                    id = (int)dr["i"];
+                IngresarCompraDetallada(id);
+            }
+            catch (MySqlException ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. No se pudo conectar con la base de datos.", ex);
+            }
+            catch (FormatException ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. Ocurrió un error al dar formato a una variable.", ex);
+            }
+            catch (OverflowException ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. Ocurrió un desbordamiento.", ex);
+            }
+            catch (ArgumentNullException ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. El argumento dado al método es nulo.", ex);
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. Ocurrió un error genérico.", ex);
+            }
+        }
+
+        private void IngresarCompraDetallada(int idCompra)
+        {
+            try
+            {
+                foreach (DataGridViewRow dr in dgvProductos.Rows)
+                {
+                    MySqlCommand sql = new MySqlCommand();
+                    sql.CommandText = "INSERT INTO compra_producto (id_compra, id_producto, cantidad, precio) " +
+                        "VALUES (?id_compra, ?id_producto, ?cantidad, ?precio)";
+                    sql.Parameters.AddWithValue("?id_compra", idCompra);
+                    sql.Parameters.AddWithValue("?id_producto", dr.Cells[0].Value);
+                    sql.Parameters.AddWithValue("?cantidad", dr.Cells[3].Value);
+                    sql.Parameters.AddWithValue("?precio", decimal.Parse(dr.Cells[2].Value.ToString(), System.Globalization.NumberStyles.Currency));
+                    sql.Parameters.AddWithValue("?descuento", decimal.Parse(dr.Cells[4].Value.ToString(), System.Globalization.NumberStyles.Currency));
+                    ConexionBD.EjecutarConsulta(sql);
+                }
+            }
+            catch (MySqlException ex)
+            {
+                CFuncionesGenerales.MensajeError("No se ha podido ingresar el detallado de la compra. Ocurrió un error al conectar con la base de datos.", ex);
+            }
+            catch (FormatException ex)
+            {
+                CFuncionesGenerales.MensajeError("No se ha podido ingresar el detallado de la compra. Ocurrió un error al dar formato a una variable.", ex);
+            }
+            catch (OverflowException ex)
+            {
+                CFuncionesGenerales.MensajeError("No se ha podido ingresar el detallado de la compra. Ocurrió un desbordamiento.", ex);
+            }
+            catch (ArgumentNullException ex)
+            {
+                CFuncionesGenerales.MensajeError("No se ha podido ingresar el detallado de la compra. El argumento dado al método es nulo.", ex);
+            }
+            catch (ArgumentException ex)
+            {
+                CFuncionesGenerales.MensajeError("No se ha podido ingresar el detallado de la compra. El argumento dado al método no es admitido por éste.", ex);
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("No se ha podido ingresar el detallado de la compra. Ocurrió un error genérico.", ex);
+            }
+        }
+
         private void btnIVA_Click(object sender, EventArgs e)
         {
             (new frmIVA(this)).ShowDialog(this);
@@ -235,6 +368,32 @@ namespace GYM.Formularios.Compras
             if (r == System.Windows.Forms.DialogResult.Yes)
             {
                 QuitarProducto(id);
+            }
+        }
+
+        private void rabRemision_CheckedChanged(object sender, EventArgs e)
+        {
+            txtRemision.Enabled = true;
+            txtFactura.Enabled = false;
+            txtRemision.Text = "";
+            txtFactura.Text = "";
+        }
+
+        private void rabFactura_CheckedChanged(object sender, EventArgs e)
+        {
+            txtFactura.Enabled = true;
+            txtRemision.Enabled = false;
+            txtFactura.Text = "";
+            txtRemision.Text = "";
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            if (ValidarCampos())
+            {
+                IngresarCompra();
+                MessageBox.Show("Se ha ingresado la compra con éxito.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
         }
     }
