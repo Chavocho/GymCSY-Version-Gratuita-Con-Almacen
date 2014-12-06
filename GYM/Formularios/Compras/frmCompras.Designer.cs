@@ -123,7 +123,7 @@
             this.btnDetallado.Name = "btnDetallado";
             this.btnDetallado.Size = new System.Drawing.Size(123, 39);
             this.btnDetallado.TabIndex = 8;
-            this.btnDetallado.Text = "Detallado de\r\ncompra";
+            this.btnDetallado.Text = "Detalle de\r\ncompra";
             this.btnDetallado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDetallado.UseVisualStyleBackColor = true;
             this.btnDetallado.Click += new System.EventHandler(this.btnDetallado_Click);

@@ -199,9 +199,10 @@
             this.lblEImporte.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.lblEImporte.Location = new System.Drawing.Point(8, 42);
             this.lblEImporte.Name = "lblEImporte";
-            this.lblEImporte.Size = new System.Drawing.Size(61, 19);
+            this.lblEImporte.Size = new System.Drawing.Size(70, 19);
             this.lblEImporte.TabIndex = 12;
-            this.lblEImporte.Text = "Importe:";
+            this.lblEImporte.Text = "Impuesto:";
+            this.lblEImporte.Click += new System.EventHandler(this.lblEImporte_Click);
             // 
             // lblSubtotal
             // 
