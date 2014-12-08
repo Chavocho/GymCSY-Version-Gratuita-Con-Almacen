@@ -407,7 +407,7 @@
             this.Controls.Add(this.pnlCompra);
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1024, 700);
+            this.MinimumSize = new System.Drawing.Size(1024, 500);
             this.Name = "frmVisualizarCompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Compra";
