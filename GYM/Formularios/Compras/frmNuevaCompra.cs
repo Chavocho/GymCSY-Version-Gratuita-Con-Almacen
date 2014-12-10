@@ -381,7 +381,7 @@ namespace GYM.Formularios.Compras
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            DialogResult r = MessageBox.Show("¿Realmente deseas quitar este producto de la venta?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult r = MessageBox.Show("¿Realmente deseas quitar este producto de la compra?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (r == System.Windows.Forms.DialogResult.Yes)
             {
                 QuitarProducto(id);
@@ -439,6 +439,11 @@ namespace GYM.Formularios.Compras
                     CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. Ocurrió un error genérico.", ex);
                 }
             }
+        }
+
+        private void lblEImporte_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

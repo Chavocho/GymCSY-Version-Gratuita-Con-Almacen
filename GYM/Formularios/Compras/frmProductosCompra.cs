@@ -29,7 +29,7 @@ namespace GYM.Formularios.Compras
             MensajeError m = new MensajeError(CFuncionesGenerales.MensajeError);
             try
             {
-                string sql = "SELECT id, nombre, cant_alm, costo FROM producto WHERE id='" + p + "' OR nombre LIKE '%" + p + "%'";
+                string sql = "SELECT id, nombre,cant,cant_alm, costo FROM producto WHERE id='" + p + "' OR nombre LIKE '%" + p + "%'";
                 dt = ConexionBD.EjecutarConsultaSelect(sql);
             }
             catch (MySqlException ex)
@@ -49,7 +49,7 @@ namespace GYM.Formularios.Compras
                 dgvProductos.Rows.Clear();
                 foreach (DataRow dr in dt.Rows)
                 {
-                    dgvProductos.Rows.Add(new object[] { dr["id"], dr["nombre"], dr["cant_alm"], decimal.Parse(dr["costo"].ToString()).ToString("C2") });
+                    dgvProductos.Rows.Add(new object[] { dr["id"], dr["nombre"], int.Parse(dr["cant"].ToString())+int.Parse(dr["cant_alm"].ToString()), decimal.Parse(dr["costo"].ToString()).ToString("C2") });
                 }
                 dgvProductos_CellClick(dgvProductos, new DataGridViewCellEventArgs(0, 0));
             }

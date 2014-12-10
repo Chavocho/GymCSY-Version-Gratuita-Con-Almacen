@@ -33,7 +33,9 @@ namespace GYM.Formularios.Compras
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            frm.ModificarProducto(id, (int)nudCantidad.Value, decimal.Parse(txtDescuento.Text));
+            decimal des;
+            decimal.TryParse(txtDescuento.Text, out des);
+            frm.ModificarProducto(id, (int)nudCantidad.Value, des);
         }
     }
 }

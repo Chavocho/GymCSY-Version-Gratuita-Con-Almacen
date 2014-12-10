@@ -17,7 +17,7 @@ namespace GYM.Formularios
         delegate void AbrirMSGBox(string mensaje, Exception ex);
         frmLockers frm;
         DataTable dt = new DataTable();
-        int idLocker, numSocio;
+        int idLocker, numSocio = 0;
 
         public frmAsignarLocker(frmLockers frm, int idLocker)
         {
@@ -70,6 +70,27 @@ namespace GYM.Formularios
 
         private bool ValidarCampos()
         {
+            if (chbPersona.Checked)
+            {
+                if (txtPersona.Text.Trim() == "")
+                {
+                    MessageBox.Show("El campo \"Nombre de persona\" es obligatorio.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
+            }
+            else
+            {
+                if (dgvSocios.RowCount == 0)
+                {
+                    MessageBox.Show("Debes seleccionar a un socio.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
+                else if (dgvSocios.CurrentRow == null)
+                {
+                    MessageBox.Show("Debes seleccionar a un socio.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
+            }
             if (txtFolio.Text.Trim() == "")
             {
                 MessageBox.Show("El campo \"Folio\" es obligatorio.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -131,6 +152,14 @@ namespace GYM.Formularios
                     sql.Parameters.AddWithValue("?terminacion", DBNull.Value);
                     sql.Parameters.AddWithValue("?folio_ticket", DBNull.Value);
                 }
+                //if (chbPersona.Checked)
+                //{
+                //    sql.Parameters.AddWithValue("?nom_persona", txtPersona.Text);
+                //}
+                //else
+                //{
+                //    sql.Parameters.AddWithValue("?nom_persona", DBNull.Value);
+                //}
                 sql.Parameters.AddWithValue("?folio_remision", txtFolio.Text);
                 sql.Parameters.AddWithValue("?create_user_id", frmMain.id);
                 ConexionBD.EjecutarConsulta(sql);
@@ -188,7 +217,10 @@ namespace GYM.Formularios
                 if (ValidarCampos())
                 {
                     InsertarLocker();
-                    MessageBox.Show("El locker ha sido asignado a " + dgvSocios[1, dgvSocios.CurrentRow.Index].Value.ToString() + ".", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (!chbPersona.Checked)
+                        MessageBox.Show("El locker ha sido asignado a " + dgvSocios[1, dgvSocios.CurrentRow.Index].Value.ToString() + ".", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("El locker ha sido asignado a " + txtPersona.Text + ".", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     frm.BuscarLockers();
                     this.Close();
                 }
@@ -238,6 +270,24 @@ namespace GYM.Formularios
         {
             if (dtpFechaFin.Value < DateTime.Now)
                 dtpFechaFin.Value = DateTime.Now;
+        }
+
+        private void chbPersona_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbPersona.Checked)
+            {
+                txtPersona.Enabled = true;
+                txtBusqueda.Enabled = false;
+                dgvSocios.Enabled = false;
+                dgvSocios.Rows.Clear();
+                numSocio = 0;
+            }
+            else
+            {
+                txtPersona.Enabled = false;
+                txtBusqueda.Enabled = true;
+                dgvSocios.Enabled = true;
+            }
         }
     }
 }

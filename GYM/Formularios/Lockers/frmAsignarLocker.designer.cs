@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAsignarLocker));
             this.dgvSocios = new System.Windows.Forms.DataGridView();
+            this.NumSocio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Socio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblNumLocker = new System.Windows.Forms.Label();
             this.lblFechaFin = new System.Windows.Forms.Label();
             this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
@@ -51,9 +54,9 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.lblFolioTicket = new System.Windows.Forms.Label();
             this.txtFolioTicket = new System.Windows.Forms.TextBox();
-            this.NumSocio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Socio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chbPersona = new System.Windows.Forms.CheckBox();
+            this.lblPersona = new System.Windows.Forms.Label();
+            this.txtPersona = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSocios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +76,7 @@
             this.NumSocio,
             this.Socio,
             this.Telefono});
-            this.dgvSocios.Location = new System.Drawing.Point(12, 43);
+            this.dgvSocios.Location = new System.Drawing.Point(12, 72);
             this.dgvSocios.Name = "dgvSocios";
             this.dgvSocios.ReadOnly = true;
             this.dgvSocios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -81,9 +84,30 @@
             this.dgvSocios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvSocios.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvSocios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSocios.Size = new System.Drawing.Size(771, 245);
+            this.dgvSocios.Size = new System.Drawing.Size(771, 216);
             this.dgvSocios.TabIndex = 1;
             this.dgvSocios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSocios_CellClick);
+            // 
+            // NumSocio
+            // 
+            this.NumSocio.HeaderText = "Número de socio";
+            this.NumSocio.Name = "NumSocio";
+            this.NumSocio.ReadOnly = true;
+            this.NumSocio.Width = 120;
+            // 
+            // Socio
+            // 
+            this.Socio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Socio.HeaderText = "Socio";
+            this.Socio.Name = "Socio";
+            this.Socio.ReadOnly = true;
+            // 
+            // Telefono
+            // 
+            this.Telefono.HeaderText = "Teléfono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            this.Telefono.Width = 150;
             // 
             // lblNumLocker
             // 
@@ -113,16 +137,16 @@
             // 
             // txtBusqueda
             // 
-            this.txtBusqueda.Location = new System.Drawing.Point(573, 12);
+            this.txtBusqueda.Location = new System.Drawing.Point(526, 12);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(210, 25);
+            this.txtBusqueda.Size = new System.Drawing.Size(257, 25);
             this.txtBusqueda.TabIndex = 0;
             this.txtBusqueda.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBusqueda_KeyDown);
             // 
             // lblBusqueda
             // 
             this.lblBusqueda.AutoSize = true;
-            this.lblBusqueda.Location = new System.Drawing.Point(367, 15);
+            this.lblBusqueda.Location = new System.Drawing.Point(320, 15);
             this.lblBusqueda.Name = "lblBusqueda";
             this.lblBusqueda.Size = new System.Drawing.Size(200, 19);
             this.lblBusqueda.TabIndex = 8;
@@ -143,7 +167,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(12, 313);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(270, 125);
+            this.txtDescripcion.Size = new System.Drawing.Size(270, 75);
             this.txtDescripcion.TabIndex = 2;
             // 
             // lblDescripcion
@@ -256,31 +280,41 @@
             this.txtFolioTicket.Size = new System.Drawing.Size(245, 25);
             this.txtFolioTicket.TabIndex = 7;
             // 
-            // NumSocio
+            // chbPersona
             // 
-            this.NumSocio.HeaderText = "Número de socio";
-            this.NumSocio.Name = "NumSocio";
-            this.NumSocio.ReadOnly = true;
-            this.NumSocio.Width = 120;
+            this.chbPersona.AutoSize = true;
+            this.chbPersona.Location = new System.Drawing.Point(526, 43);
+            this.chbPersona.Name = "chbPersona";
+            this.chbPersona.Size = new System.Drawing.Size(257, 23);
+            this.chbPersona.TabIndex = 20;
+            this.chbPersona.Text = "Rentar locker a persona no registrada";
+            this.chbPersona.UseVisualStyleBackColor = true;
+            this.chbPersona.CheckedChanged += new System.EventHandler(this.chbPersona_CheckedChanged);
             // 
-            // Socio
+            // lblPersona
             // 
-            this.Socio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Socio.HeaderText = "Socio";
-            this.Socio.Name = "Socio";
-            this.Socio.ReadOnly = true;
+            this.lblPersona.AutoSize = true;
+            this.lblPersona.Location = new System.Drawing.Point(8, 391);
+            this.lblPersona.Name = "lblPersona";
+            this.lblPersona.Size = new System.Drawing.Size(145, 19);
+            this.lblPersona.TabIndex = 22;
+            this.lblPersona.Text = "Nombre de la persona";
             // 
-            // Telefono
+            // txtPersona
             // 
-            this.Telefono.HeaderText = "Teléfono";
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            this.Telefono.Width = 150;
+            this.txtPersona.Enabled = false;
+            this.txtPersona.Location = new System.Drawing.Point(12, 413);
+            this.txtPersona.Name = "txtPersona";
+            this.txtPersona.Size = new System.Drawing.Size(270, 25);
+            this.txtPersona.TabIndex = 21;
             // 
             // frmAsignarLocker
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(795, 504);
+            this.Controls.Add(this.lblPersona);
+            this.Controls.Add(this.txtPersona);
+            this.Controls.Add(this.chbPersona);
             this.Controls.Add(this.lblFolioTicket);
             this.Controls.Add(this.txtFolioTicket);
             this.Controls.Add(this.btnAceptar);
@@ -337,5 +371,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NumSocio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Socio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.CheckBox chbPersona;
+        private System.Windows.Forms.Label lblPersona;
+        private System.Windows.Forms.TextBox txtPersona;
     }
 }
