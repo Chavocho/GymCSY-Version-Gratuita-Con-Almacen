@@ -42,6 +42,7 @@ namespace GYM.Formularios.POS
         public frmPuntoVenta()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
         }
 
         #region Metodos

@@ -17,6 +17,7 @@ namespace GYM
         public frmMensaje(string mensaje, string titulo)
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             this.lblMensaje.Text = mensaje;
             this.Text = titulo;
             this.Size = new Size(lblMensaje.Size.Width + 60, 145);

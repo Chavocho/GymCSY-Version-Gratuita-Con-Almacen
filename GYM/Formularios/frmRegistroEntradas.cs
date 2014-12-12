@@ -159,6 +159,7 @@ namespace GYM.Formularios
             this.NivelUsuario = nivelUsuario;
             this.ID = id;
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             tmrTiempo.Enabled = true;
             if (!Clases.CFuncionesGenerales.soloRegistro)
                 this.WindowState = FormWindowState.Normal;

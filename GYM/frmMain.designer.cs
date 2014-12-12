@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            this.statusStripMain = new System.Windows.Forms.StatusStrip();
-            this.statusLblUsuario = new System.Windows.Forms.ToolStripStatusLabel();
-            this.statusLblFecha = new System.Windows.Forms.ToolStripStatusLabel();
-            this.statusLblHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.toolStripArchivo = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripOpciones = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,6 +60,7 @@
             this.elToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.puntoDeventaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.movimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
@@ -93,52 +90,12 @@
             this.cumpleañosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeGymCSYToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tmrTiempo = new System.Windows.Forms.Timer(this.components);
             this.tmrCumpleaños = new System.Windows.Forms.Timer(this.components);
-            this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStripMain.SuspendLayout();
+            this.pcbUsuario = new System.Windows.Forms.PictureBox();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.menuStripMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbUsuario)).BeginInit();
             this.SuspendLayout();
-            // 
-            // statusStripMain
-            // 
-            this.statusStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.statusLblUsuario,
-            this.statusLblFecha,
-            this.statusLblHora});
-            this.statusStripMain.Location = new System.Drawing.Point(0, 526);
-            this.statusStripMain.Name = "statusStripMain";
-            this.statusStripMain.Size = new System.Drawing.Size(968, 35);
-            this.statusStripMain.TabIndex = 0;
-            this.statusStripMain.Text = "statusStripMain";
-            // 
-            // statusLblUsuario
-            // 
-            this.statusLblUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusLblUsuario.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.statusLblUsuario.Image = global::GYM.Properties.Resources.ImgUsuario;
-            this.statusLblUsuario.Name = "statusLblUsuario";
-            this.statusLblUsuario.Size = new System.Drawing.Size(317, 30);
-            this.statusLblUsuario.Spring = true;
-            this.statusLblUsuario.Text = "Usuario";
-            // 
-            // statusLblFecha
-            // 
-            this.statusLblFecha.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusLblFecha.Image = ((System.Drawing.Image)(resources.GetObject("statusLblFecha.Image")));
-            this.statusLblFecha.Name = "statusLblFecha";
-            this.statusLblFecha.Size = new System.Drawing.Size(317, 30);
-            this.statusLblFecha.Spring = true;
-            this.statusLblFecha.Text = "Fecha";
-            // 
-            // statusLblHora
-            // 
-            this.statusLblHora.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusLblHora.Image = global::GYM.Properties.Resources.ImgReloj;
-            this.statusLblHora.Name = "statusLblHora";
-            this.statusLblHora.Size = new System.Drawing.Size(317, 30);
-            this.statusLblHora.Spring = true;
-            this.statusLblHora.Text = "Hora";
             // 
             // menuStripMain
             // 
@@ -313,7 +270,7 @@
             // 
             this.administrarToolStripMenuItem.Image = global::GYM.Properties.Resources.ImgMembresia;
             this.administrarToolStripMenuItem.Name = "administrarToolStripMenuItem";
-            this.administrarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.administrarToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.administrarToolStripMenuItem.Text = "Membresías";
             this.administrarToolStripMenuItem.Click += new System.EventHandler(this.administrarToolStripMenuItem_Click);
             // 
@@ -321,26 +278,26 @@
             // 
             this.cortesíasToolStripMenuItem.Image = global::GYM.Properties.Resources.ImgCortesia;
             this.cortesíasToolStripMenuItem.Name = "cortesíasToolStripMenuItem";
-            this.cortesíasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cortesíasToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.cortesíasToolStripMenuItem.Text = "Cortesías";
             this.cortesíasToolStripMenuItem.Click += new System.EventHandler(this.cortesíasToolStripMenuItem_Click);
             // 
             // lockersToolStripMenuItem
             // 
             this.lockersToolStripMenuItem.Name = "lockersToolStripMenuItem";
-            this.lockersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lockersToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.lockersToolStripMenuItem.Text = "Lockers";
             this.lockersToolStripMenuItem.Click += new System.EventHandler(this.lockersToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(135, 6);
             // 
             // pendientesToolStripMenuItem
             // 
             this.pendientesToolStripMenuItem.Name = "pendientesToolStripMenuItem";
-            this.pendientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pendientesToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.pendientesToolStripMenuItem.Text = "Pendientes";
             this.pendientesToolStripMenuItem.Click += new System.EventHandler(this.pendientesToolStripMenuItem_Click);
             // 
@@ -392,6 +349,13 @@
             this.puntoDeventaToolStripMenuItem1.Size = new System.Drawing.Size(154, 22);
             this.puntoDeventaToolStripMenuItem1.Text = "Punto de &venta";
             this.puntoDeventaToolStripMenuItem1.Click += new System.EventHandler(this.puntoDeventaToolStripMenuItem1_Click);
+            // 
+            // comprasToolStripMenuItem
+            // 
+            this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
+            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.comprasToolStripMenuItem.Text = "&Compras";
+            this.comprasToolStripMenuItem.Click += new System.EventHandler(this.comprasToolStripMenuItem_Click);
             // 
             // movimientosToolStripMenuItem
             // 
@@ -612,22 +576,34 @@
             this.acercaDeGymCSYToolStripMenuItem.Text = "Acerca de Gym CSY";
             this.acercaDeGymCSYToolStripMenuItem.Click += new System.EventHandler(this.acercaDeGymCSYToolStripMenuItem_Click);
             // 
-            // tmrTiempo
-            // 
-            this.tmrTiempo.Interval = 1000;
-            this.tmrTiempo.Tick += new System.EventHandler(this.tmrTiempo_Tick);
-            // 
             // tmrCumpleaños
             // 
             this.tmrCumpleaños.Interval = 1000;
             this.tmrCumpleaños.Tick += new System.EventHandler(this.tmrCumpleaños_Tick);
             // 
-            // comprasToolStripMenuItem
+            // pcbUsuario
             // 
-            this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
-            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.comprasToolStripMenuItem.Text = "&Compras";
-            this.comprasToolStripMenuItem.Click += new System.EventHandler(this.comprasToolStripMenuItem_Click);
+            this.pcbUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pcbUsuario.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pcbUsuario.Location = new System.Drawing.Point(831, 47);
+            this.pcbUsuario.Name = "pcbUsuario";
+            this.pcbUsuario.Size = new System.Drawing.Size(125, 125);
+            this.pcbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbUsuario.TabIndex = 5;
+            this.pcbUsuario.TabStop = false;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
+            this.lblUsuario.Location = new System.Drawing.Point(905, 24);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(51, 20);
+            this.lblUsuario.TabIndex = 4;
+            this.lblUsuario.Text = "label1";
             // 
             // frmMain
             // 
@@ -636,7 +612,8 @@
             this.BackgroundImage = global::GYM.Properties.Resources.Fondo_Default;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(968, 561);
-            this.Controls.Add(this.statusStripMain);
+            this.Controls.Add(this.pcbUsuario);
+            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.menuStripMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStripMain;
@@ -647,10 +624,9 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.main_FormClosed);
             this.Load += new System.EventHandler(this.main_Load);
-            this.statusStripMain.ResumeLayout(false);
-            this.statusStripMain.PerformLayout();
             this.menuStripMain.ResumeLayout(false);
             this.menuStripMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -658,10 +634,6 @@
 
         #endregion
 
-        private System.Windows.Forms.StatusStrip statusStripMain;
-        private System.Windows.Forms.ToolStripStatusLabel statusLblUsuario;
-        private System.Windows.Forms.ToolStripStatusLabel statusLblFecha;
-        private System.Windows.Forms.ToolStripStatusLabel statusLblHora;
         private System.Windows.Forms.MenuStrip menuStripMain;
         private System.Windows.Forms.ToolStripMenuItem toolStripArchivo;
         private System.Windows.Forms.ToolStripMenuItem toolStripOpciones;
@@ -672,7 +644,6 @@
         private System.Windows.Forms.ToolStripMenuItem administraciònToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem informesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
-        private System.Windows.Forms.Timer tmrTiempo;
         private System.Windows.Forms.ToolStripMenuItem acercaDeGymCSYToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sociosToolStripMenuItem;
@@ -724,5 +695,7 @@
         private System.Windows.Forms.ToolStripMenuItem pendientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lockersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pcbUsuario;
+        private System.Windows.Forms.Label lblUsuario;
     }
 }

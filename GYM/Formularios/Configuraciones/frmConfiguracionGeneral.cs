@@ -67,6 +67,7 @@ namespace GYM.Formularios
         public frmConfiguracionGeneral()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
         }
 
         #region Metodos

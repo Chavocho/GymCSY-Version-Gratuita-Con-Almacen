@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GYM.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,14 @@ namespace GYM.Formularios
     public partial class frmNuevoUsuario : Form
     {
         int nivel = 0;
+        byte[] huella = null;
+
+        public byte[] Huella
+        {
+            get { return huella; }
+            set { huella = value; }
+        }
+
         frmUsuarios frm;
 
         public frmNuevoUsuario(IWin32Window frm)
@@ -26,10 +35,19 @@ namespace GYM.Formularios
         private void InsertarUsuario()
         {
             MySql.Data.MySqlClient.MySqlCommand sql = new MySql.Data.MySqlClient.MySqlCommand();
-            sql.CommandText = "INSERT INTO usuarios (userName, password, nivel) VALUES (?, ?, ?)";
-            sql.Parameters.AddWithValue("@nom", txtNombreUsu.Text);
-            sql.Parameters.AddWithValue("@pass", Clases.CFuncionesGenerales.GetHashString(txtContra.Text));
-            sql.Parameters.AddWithValue("@niv", nivel);
+            sql.CommandText = "INSERT INTO (userName, password, nivel, imagen, huella) " +
+                "VALUES (?userName, ?password, ?nivel, ?imagen, ?huella)";
+            sql.Parameters.AddWithValue("?userName", txtNombreUsu.Text);
+            sql.Parameters.AddWithValue("?password", Clases.CFuncionesGenerales.GetHashString(txtContra.Text));
+            sql.Parameters.AddWithValue("?nivel", nivel);
+            if (pcbImagenUsuario.Image != null)
+                sql.Parameters.AddWithValue("?imagen", CFuncionesGenerales.ImagenBytes(pcbImagenUsuario.Image));
+            else
+                sql.Parameters.AddWithValue("?imagen", DBNull.Value);
+            if (huella != null)
+                sql.Parameters.AddWithValue("?huella", huella);
+            else
+                sql.Parameters.AddWithValue("?huella", DBNull.Value);
             Clases.ConexionBD.EjecutarConsulta(sql);
         }
 
@@ -77,6 +95,7 @@ namespace GYM.Formularios
 
         private void frmNuevoUsuario_Load(object sender, EventArgs e)
         {
+            CFuncionesGenerales.CerrarHuellas();
             CargarNiveles();
             cboNivel.SelectedIndex = 0;
         }
@@ -101,6 +120,41 @@ namespace GYM.Formularios
                 MessageBox.Show("El usuario se ha agregado correctamente", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
+        }
+
+        private void pcbImagenUsuario_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog ofd = new OpenFileDialog();
+                ofd.Filter = "Archivos de imagen (*.jpeg, *.jpg) | *.jpeg, *.jpg";
+                ofd.Multiselect = false;
+                ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+                DialogResult r = ofd.ShowDialog();
+                if (r == System.Windows.Forms.DialogResult.OK)
+                {
+                    pcbImagenUsuario.Image = new Bitmap(ofd.FileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("Ocurrió un error al seleccionar la imagen. Hubo un error genérico.", ex);
+            }
+        }
+
+        private void btnQuitar_Click(object sender, EventArgs e)
+        {
+            pcbImagenUsuario.Image = null;
+        }
+
+        private void frmNuevoUsuario_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            CFuncionesGenerales.AbrirHuellas();
+        }
+
+        private void btnHuella_Click(object sender, EventArgs e)
+        {
+            (new Formularios.Socio.frmCapturarHuella(this)).ShowDialog();
         }
     }
 }

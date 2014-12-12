@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GYM.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace GYM.Formularios
         frmUsuarios frm;
         string id, pass;
         int nivel;
+        private byte[] huella;
+
+        public byte[] Huella
+        {
+            get { return huella; }
+            set { huella = value; }
+        }
+        
 
         public frmEditarUsuario(IWin32Window frm, string id)
         {
@@ -52,18 +61,32 @@ namespace GYM.Formularios
                 lblNombreUsuario.Text = dr["userName"].ToString();
                 pass = dr["password"].ToString();
                 nivel = Convert.ToInt32(dr["nivel"]);
+                if (dr["imagen"] != DBNull.Value)
+                    pcbImagenUsuario.Image = CFuncionesGenerales.BytesImagen((byte[])dr["imagen"]);
+                if (dr["huella"] != DBNull.Value)
+                    huella = (byte[])dr["huella"];
+                else
+                    huella = null;
             }
         }
 
         private void EditarUsuario()
         {
             MySql.Data.MySqlClient.MySqlCommand sql = new MySql.Data.MySqlClient.MySqlCommand();
-            sql.CommandText = "UPDATE usuarios SET password=?, nivel=? WHERE id='" + id + "'";
+            sql.CommandText = "UPDATE usuarios SET password=?password, nivel=?nivel, imagen=?imagen, huella=?huella WHERE id='" + id + "'";
             if (chbContrasena.Checked)
-                sql.Parameters.AddWithValue("@pass", Clases.CFuncionesGenerales.GetHashString(txtContra.Text));
+                sql.Parameters.AddWithValue("?password", Clases.CFuncionesGenerales.GetHashString(txtContra.Text));
             else
-                sql.Parameters.AddWithValue("@pass", pass);
-            sql.Parameters.AddWithValue("@niv", nivel);
+                sql.Parameters.AddWithValue("?password", pass);
+            sql.Parameters.AddWithValue("?nivel", nivel);
+            if (pcbImagenUsuario.Image != null)
+                sql.Parameters.AddWithValue("?imagen", CFuncionesGenerales.ImagenBytes(pcbImagenUsuario.Image));
+            else
+                sql.Parameters.AddWithValue("?imagen", DBNull.Value);
+            if (huella != null)
+                sql.Parameters.AddWithValue("?huella", huella);
+            else
+                sql.Parameters.AddWithValue("?huella", DBNull.Value);
             Clases.ConexionBD.EjecutarConsulta(sql);
         }
 
@@ -129,17 +152,7 @@ namespace GYM.Formularios
 
         private void chbContrasena_CheckedChanged(object sender, EventArgs e)
         {
-            if (chbContrasena.Checked)
-            {
-                pnlContra.Visible = true;
-                this.Size = new Size(this.Width, this.Height + 112);
-            }
-            else
-            {
-                pnlContra.Visible = false;
-                this.Size = new Size(this.Width, this.Height - 112);
-            }
-            this.Location = new Point(this.Location.X, (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
+            pnlContra.Enabled = chbContrasena.Checked;
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -151,6 +164,36 @@ namespace GYM.Formularios
                 MessageBox.Show("El usuario se ha modificado correctamente", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
+        }
+
+        private void pcbImagenUsuario_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog ofd = new OpenFileDialog();
+                ofd.Filter = "Archivos de imagen (*.jpeg, *.jpg) | *.jpeg;*.jpg";
+                ofd.Multiselect = false;
+                ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+                DialogResult r = ofd.ShowDialog();
+                if (r == System.Windows.Forms.DialogResult.OK)
+                {
+                    pcbImagenUsuario.Image = new Bitmap(ofd.FileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("Ocurrió un error al seleccionar la imagen. Hubo un error genérico.", ex);
+            }
+        }
+
+        private void btnQuitar_Click(object sender, EventArgs e)
+        {
+            pcbImagenUsuario.Image = null;
+        }
+
+        private void btnHuella_Click(object sender, EventArgs e)
+        {
+            (new Formularios.Socio.frmCapturarHuella(this)).ShowDialog();
         }
     }
 }

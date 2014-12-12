@@ -40,6 +40,7 @@ namespace GYM.Formularios.PuntoDeVenta
         public frmProducto()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             if (frmMain.nivelUsuario == 1)
             {
                 btnEditar.Visible = false;
@@ -158,7 +159,17 @@ namespace GYM.Formularios.PuntoDeVenta
         {
             try
             {
-                (new Clases.CTicket()).ImprimirCodigoProducto(dgvProducto[0, dgvProducto.CurrentRow.Index].Value.ToString());
+                if (CConfiguracionXML.ExisteConfiguracion("ticket"))
+                {
+                    if (dgvProducto.CurrentRow != null)
+                        (new Clases.CTicket()).ImprimirCodigoProducto(dgvProducto[0, dgvProducto.CurrentRow.Index].Value.ToString());
+                    else
+                        MessageBox.Show("Debes seleccionar un producto para imprimir su código de barras.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Antes de imprimir necesitas configurar los datos de impresión. Para hacerlo ve a la ventana principal y ve a Configuración -> Ticket.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (XmlException ex)
             {

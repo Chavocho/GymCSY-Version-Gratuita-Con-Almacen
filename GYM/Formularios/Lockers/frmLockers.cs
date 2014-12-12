@@ -54,6 +54,7 @@ namespace GYM.Formularios
         public frmLockers()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
         }
 
         public void BuscarLockers()

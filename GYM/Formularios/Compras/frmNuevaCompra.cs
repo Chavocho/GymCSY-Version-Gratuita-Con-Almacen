@@ -30,6 +30,7 @@ namespace GYM.Formularios.Compras
         public frmNuevaCompra()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             cboTipoPago.SelectedIndex = 0;
         }
 

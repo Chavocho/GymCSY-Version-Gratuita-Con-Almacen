@@ -20,6 +20,7 @@ namespace GYM.Formularios.PuntoDeVenta
         public frmAlmacenMostrador(string id)
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             this.id = id;
         }
 

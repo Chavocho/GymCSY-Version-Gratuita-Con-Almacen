@@ -18,6 +18,7 @@ namespace GYM.Formularios.PuntoDeVenta
         public frmAgregarInventario(string idProd, string nomProd, frmInventario frm)
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             this.frm = frm;
             this.idProd = idProd;
             lblNombreProducto.Text = nomProd;

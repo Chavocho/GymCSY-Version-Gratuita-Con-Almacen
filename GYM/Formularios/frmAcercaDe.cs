@@ -14,6 +14,7 @@ namespace GYM.Formularios
         public frmAcercaDe()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             this.Text = String.Format("Acerca de {0}", AssemblyTitle);
             this.labelProductName.Text = AssemblyProduct;
             this.labelVersion.Text = String.Format("Versión {0}", AssemblyVersion);

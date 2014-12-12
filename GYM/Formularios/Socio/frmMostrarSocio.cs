@@ -30,6 +30,7 @@ namespace GYM.Formularios.Socio
         {
             this.num_socio = numSocio;
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             pbImagenPerfil.Image = CMiembro.ObtenerImagenSocio(numSocio);
             mem = new Clases.CMembresia(numSocio);
             mem.ObtenerDatosMiembro();

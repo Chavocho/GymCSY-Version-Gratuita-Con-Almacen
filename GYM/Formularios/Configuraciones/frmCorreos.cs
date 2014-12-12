@@ -18,6 +18,7 @@ namespace GYM.Formularios
         public frmCorreos()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
         }
 
         private void CargarDatos()

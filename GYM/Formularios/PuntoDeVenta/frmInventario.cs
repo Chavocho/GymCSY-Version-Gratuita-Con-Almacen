@@ -34,7 +34,7 @@ namespace GYM.Formularios.PuntoDeVenta
         public frmInventario()
         {
             InitializeComponent();
-            
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
         }
 
         #region Metodos

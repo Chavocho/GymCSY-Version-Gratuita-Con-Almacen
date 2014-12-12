@@ -19,6 +19,7 @@ namespace GYM.Formularios
         public frmNumeroLocker(frmLockers frm, int numLocker = 0)
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.frm = frm;
             if (numLocker > 0)

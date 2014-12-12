@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GYM.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace GYM.Formularios
         public frmLogin()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             //Validar si es la primera ejecucion
             try
             {
@@ -24,7 +26,7 @@ namespace GYM.Formularios
                 {
                     DialogResult resultado = MessageBox.Show("No hay usuario registrados que puedan operar el software.\nFavor de registrar un usuario", "No hay usuarios registrados", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
                     if (resultado == System.Windows.Forms.DialogResult.OK)
-                        (new Formularios.frmNuevoUsuario(null)).ShowDialog(this);
+                        (new Formularios.frmNuevoUsuario(null)).ShowDialog();
                     else
                     {
                         DialogResult respuesta = MessageBox.Show("Si no genera un usuario no podrá utlizar el software.\nSi presiona Aceptar el software se cerrará, presione cancelar para agregar usuario.", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
@@ -60,7 +62,10 @@ namespace GYM.Formularios
                     DataRow dr = respuesta.Rows[0];
                     if (tbxUsuario.Text.Equals(dr["userName"]) && Clases.CFuncionesGenerales.GetHashString(tbxPassword.Text.Trim()).Equals(dr["password"]))
                     {
-                        (new frmMain(Convert.ToInt32(dr["nivel"]), Convert.ToInt32(dr["id"]), tbxUsuario.Text)).Show();
+                        Image img = null;
+                        if (dr["imagen"] != DBNull.Value)
+                            img = CFuncionesGenerales.BytesImagen((byte[])dr["imagen"]);
+                        (new frmMain(Convert.ToInt32(dr["nivel"]), Convert.ToInt32(dr["id"]), tbxUsuario.Text, img)).Show();
                         this.Close();
                     }
                     else

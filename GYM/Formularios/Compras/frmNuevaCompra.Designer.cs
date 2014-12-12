@@ -187,7 +187,7 @@
             // 
             this.lblImporte.AutoSize = true;
             this.lblImporte.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
-            this.lblImporte.Location = new System.Drawing.Point(75, 43);
+            this.lblImporte.Location = new System.Drawing.Point(82, 43);
             this.lblImporte.Name = "lblImporte";
             this.lblImporte.Size = new System.Drawing.Size(45, 19);
             this.lblImporte.TabIndex = 13;
@@ -197,7 +197,7 @@
             // 
             this.lblEImporte.AutoSize = true;
             this.lblEImporte.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.lblEImporte.Location = new System.Drawing.Point(8, 42);
+            this.lblEImporte.Location = new System.Drawing.Point(6, 43);
             this.lblEImporte.Name = "lblEImporte";
             this.lblEImporte.Size = new System.Drawing.Size(70, 19);
             this.lblEImporte.TabIndex = 12;
@@ -208,7 +208,7 @@
             // 
             this.lblSubtotal.AutoSize = true;
             this.lblSubtotal.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
-            this.lblSubtotal.Location = new System.Drawing.Point(75, 19);
+            this.lblSubtotal.Location = new System.Drawing.Point(82, 19);
             this.lblSubtotal.Name = "lblSubtotal";
             this.lblSubtotal.Size = new System.Drawing.Size(45, 19);
             this.lblSubtotal.TabIndex = 11;

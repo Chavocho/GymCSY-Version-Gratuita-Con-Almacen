@@ -19,6 +19,7 @@ namespace GYM.Formularios.POS
         public frmRecuperarVenta(IWin32Window frm)
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             this.frm = (frmPuntoVenta)frm;
         }
 

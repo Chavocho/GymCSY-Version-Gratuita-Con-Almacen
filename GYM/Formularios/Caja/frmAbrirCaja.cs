@@ -43,6 +43,7 @@ namespace GYM.Formularios.Caja
         public frmAbrirCaja()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
         }
 
         public frmAbrirCaja(frmCaja frm)
@@ -56,7 +57,7 @@ namespace GYM.Formularios.Caja
             try
             {
                 decimal efectivo = 0;
-                if (txtEfectivo.Text != "")
+                if (txtEfectivo.Text.Trim() != "")
                     efectivo = decimal.Parse(txtEfectivo.Text);
                 MySql.Data.MySqlClient.MySqlCommand sql = new MySql.Data.MySqlClient.MySqlCommand();
                 sql.CommandText = "INSERT INTO caja (efectivo, tipo_movimiento, fecha, descripcion) VALUES (?, ?, ?, ?)";
@@ -253,7 +254,7 @@ namespace GYM.Formularios.Caja
         {
             try
             {
-                if (txtEfectivo.Text != "")
+                if (txtEfectivo.Text.Trim() != "")
                 {
                     if (!(decimal.Parse(txtEfectivo.Text) < 0))
                     {

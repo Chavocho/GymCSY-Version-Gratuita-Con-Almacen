@@ -39,6 +39,7 @@ namespace GYM.Formularios.Caja
         public frmCerrarCaja()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
         }
 
         public frmCerrarCaja(frmCaja frm)

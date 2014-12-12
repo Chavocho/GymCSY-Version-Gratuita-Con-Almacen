@@ -21,6 +21,31 @@ namespace GYM
         public static string rutaRespladoBD = System.Windows.Forms.Application.StartupPath + "\\backup\\";
         public static string rutaBD = System.Windows.Forms.Application.StartupPath + "\\gym.db";
 
+        #region Instancia
+        private static frmMain frmInstancia;
+        public static frmMain Instancia
+        {
+            get
+            {
+                if (frmInstancia == null)
+                    frmInstancia = new frmMain();
+                else if (frmInstancia.IsDisposed)
+                    frmInstancia = new frmMain();
+                return frmInstancia;
+
+            }
+            set
+            {
+                frmInstancia = value;
+            }
+        }
+        #endregion
+
+        public frmMain()
+        {
+            InitializeComponent();
+        }
+
         private bool Respaldar(int tipoRespaldo)
         {
             //Mover funciones a otra clasae
@@ -103,27 +128,24 @@ namespace GYM
             }
         }
 
-
-        public frmMain(int nivelUsuario, int id, string nomUsu)
+        public frmMain(int nivelUsuario, int id, string nomUsu, Image img)
         {
             InitializeComponent();
             this.BackgroundImage = Clases.CFuncionesGenerales.img;
             frmMain.nivelUsuario = nivelUsuario;
             frmMain.id = id;
+            pcbUsuario.Image = img;
+            
             if(nivelUsuario == 1)
-            this.statusLblUsuario.Text = "Asistente: " + nomUsu;
+                lblUsuario.Text = "Asistente: " + nomUsu;
             else if (nivelUsuario == 2)
-                this.statusLblUsuario.Text = "Encargado: " + nomUsu;
+                lblUsuario.Text = "Encargado: " + nomUsu;
             else
-                this.statusLblUsuario.Text = "Administrador: " + nomUsu;
+                lblUsuario.Text = "Administrador: " + nomUsu;
+            lblUsuario.Location = new Point(this.Width - lblUsuario.Width - 30, lblUsuario.Location.Y);
 
             OcultarElementosBarra();
 
-        }
-
-        public frmMain()
-        {
-            InitializeComponent();
         }
 
         private void opcionesDeRespaldoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -134,9 +156,6 @@ namespace GYM
         private void main_Load(object sender, EventArgs e)
         {
             Clases.CFuncionesGenerales.CargarInterfaz(this);
-            statusLblFecha.Text = DateTime.Now.ToLongDateString().ToUpper();
-            statusLblHora.Text = DateTime.Now.ToShortTimeString();
-            tmrTiempo.Enabled = true;
             if (!GYM.Clases.CFuncionesGenerales.versionGratuita)
                 tmrCumpleaños.Enabled = true;
         }
@@ -173,7 +192,7 @@ namespace GYM
 
         private void tmrTiempo_Tick(object sender, EventArgs e)
         {
-            statusLblHora.Text = DateTime.Now.ToShortTimeString();
+            
         }
 
         private void ingresarSocioToolStripMenuItem_Click(object sender, EventArgs e)

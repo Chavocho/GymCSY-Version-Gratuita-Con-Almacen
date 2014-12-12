@@ -11,6 +11,7 @@ using MySql.Data.MySqlClient;
 using AForge.Video;
 using AForge.Video.DirectShow;
 using System.IO;
+using GYM.Clases;
 
 namespace GYM.Formularios.Socio
 {
@@ -79,6 +80,7 @@ namespace GYM.Formularios.Socio
         public frmEditarMiembro(int numSocio)
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             BuscarDispositivos();
             this.numSocio = numSocio;
             miem.ObtenerUsuarioPorID(numSocio);
@@ -119,32 +121,9 @@ namespace GYM.Formularios.Socio
         }
         #endregion
 
-        private void CerrarRegistro()
-        {
-            Form fRegistro = null, fConfiguracion = null;
-
-            foreach (Form frm in Application.OpenForms)
-            {
-                if (frm.Name == "frmRegistroEntradas")
-                    fRegistro = frm;
-                else if (frm.Name == "frmConfiguracionHuella")
-                    fConfiguracion = frm;
-            }
-            if (fRegistro != null)
-            {
-                loCerroReg = true;
-                fRegistro.Close();
-            }
-            if (fConfiguracion != null)
-            {
-                loCerroCon = true;
-                fConfiguracion.Close();
-            }
-        }
-
         private void frmEditarMiembro_Load(object sender, EventArgs e)
         {
-            CerrarRegistro();
+            CFuncionesGenerales.CerrarHuellas();
             if (Clases.HuellaDigital.reader == null)
                 btnHuella.Enabled = false;
             Clases.CFuncionesGenerales.CargarInterfaz(this);
@@ -255,10 +234,7 @@ namespace GYM.Formularios.Socio
 
         private void frmEditarMiembro_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (loCerroReg)
-                frmRegistroEntradas.Instancia.Show();
-            else if (loCerroCon)
-                frmConfigurarHuella.Instancia.Show();
+            CFuncionesGenerales.AbrirHuellas();
         }
     }
 }

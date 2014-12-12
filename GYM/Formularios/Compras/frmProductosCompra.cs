@@ -21,6 +21,7 @@ namespace GYM.Formularios.Compras
         public frmProductosCompra(frmNuevaCompra frm)
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             this.frm = frm;
         }
 
@@ -29,7 +30,7 @@ namespace GYM.Formularios.Compras
             MensajeError m = new MensajeError(CFuncionesGenerales.MensajeError);
             try
             {
-                string sql = "SELECT id, nombre,cant,cant_alm, costo FROM producto WHERE id='" + p + "' OR nombre LIKE '%" + p + "%'";
+                string sql = "SELECT id, nombre,cant,cant_alm, costo FROM producto WHERE (id='" + p + "' OR nombre LIKE '%" + p + "%') AND control_stock=1";
                 dt = ConexionBD.EjecutarConsultaSelect(sql);
             }
             catch (MySqlException ex)

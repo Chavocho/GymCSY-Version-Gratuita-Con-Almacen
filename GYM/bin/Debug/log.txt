@@ -164,3 +164,18 @@ MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'gym_dtbs.compra' does
 MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'gym_dtbs.registro_membresia' doesn't exist
    en GYM.Clases.ConexionBD.EjecutarConsultaSelect(MySqlCommand comando) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 169
    en GYM.Formularios.frmPendientes.RegresarCaja() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Pendientes\frmPendientes.cs:línea 313|
+System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Decimal.Parse(String s)
+   en GYM.Formularios.frmCaja.CargarVentas(DateTime fechaIni, DateTime fechaFin) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Caja\frmCaja.cs:línea 119|
+System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Decimal.Parse(String s)
+   en GYM.Formularios.frmCaja.CargarVentas(DateTime fechaIni, DateTime fechaFin) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Caja\frmCaja.cs:línea 119|
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en GYM.Formularios.PuntoDeVenta.frmProducto.btnImprimir_Click(Object sender, EventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\PuntoDeVenta\frmProducto.cs:línea 161|
+System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en GYM.Clases.CTicket.ImprimirCodigoProducto(String idProd) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\Ticket\CTicket.cs:línea 438
+   en GYM.Formularios.PuntoDeVenta.frmProducto.btnImprimir_Click(Object sender, EventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\PuntoDeVenta\frmProducto.cs:línea 162|

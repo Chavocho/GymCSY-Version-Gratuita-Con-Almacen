@@ -39,6 +39,7 @@ namespace GYM.Formularios
         public frmPendientes()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             cboPendientes.SelectedIndex = 0;
         }
 

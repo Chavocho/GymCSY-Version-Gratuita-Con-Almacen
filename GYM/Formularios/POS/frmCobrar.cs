@@ -24,6 +24,7 @@ namespace GYM.Formularios.POS
         public frmCobrar(IWin32Window frm, int idVenta, decimal total, decimal cant, List<string> idProds, List<int> cants)
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             this.frm = (frmPuntoVenta)frm;
             this.idVenta = idVenta;
             this.total = total;
@@ -285,7 +286,6 @@ namespace GYM.Formularios.POS
         {
             try
             {
-                Clases.CFuncionesGenerales.CargarInterfaz(this);
                 lblTotal.Text = (total).ToString("C2");
                 lblFolio.Text = idVenta.ToString("00000000");
                 lblCantidad.Text = cant.ToString();
@@ -311,7 +311,6 @@ namespace GYM.Formularios.POS
                 AgregarMovimientoCaja();
                 DescontarInventario();
                 ImprimirTicket();
-                frm.Close();
             }
         }
 

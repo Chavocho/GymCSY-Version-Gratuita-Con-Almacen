@@ -15,6 +15,7 @@ namespace GYM.Formularios.PuntoDeVenta
         public frmAgregarProducto()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             cboPieza.SelectedIndex = 0;
         }
 

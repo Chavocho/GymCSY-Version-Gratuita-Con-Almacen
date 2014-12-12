@@ -19,6 +19,7 @@ namespace GYM.Formularios.Compras
         public frmModificarProductoCompra(frmNuevaCompra frm, string id, string nomProd, int cant, decimal desc)
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             lblProducto.Text = nomProd;
             this.frm = frm;
             this.id = id;

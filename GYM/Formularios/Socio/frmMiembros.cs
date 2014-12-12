@@ -38,6 +38,7 @@ namespace GYM.Formularios.Socio
         public frmMiembros()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
         }
 
         private void BuscarMiembros(string busqueda)

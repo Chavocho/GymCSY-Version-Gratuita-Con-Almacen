@@ -38,6 +38,7 @@ namespace GYM.Formularios
         public frmConfigurarTicket()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
         }
 
         private void CargarDatos()

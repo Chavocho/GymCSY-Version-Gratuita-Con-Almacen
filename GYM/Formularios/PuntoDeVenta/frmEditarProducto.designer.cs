@@ -32,18 +32,19 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.txbDescripcion = new System.Windows.Forms.TextBox();
             this.txbCosto = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblCosto = new System.Windows.Forms.Label();
             this.txbPrecio = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.lblUnidad = new System.Windows.Forms.Label();
+            this.lblDescripcion = new System.Windows.Forms.Label();
             this.txbMarca = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txbNombre = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNombreProducto = new System.Windows.Forms.Label();
             this.cboPieza = new System.Windows.Forms.ComboBox();
             this.chbControlStock = new System.Windows.Forms.CheckBox();
             this.chbProductoServicio = new System.Windows.Forms.CheckBox();
+            this.lblMarca = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -78,15 +79,15 @@
             this.txbCosto.TabIndex = 5;
             this.txbCosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioCosto_KeyPress);
             // 
-            // label7
+            // lblCosto
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label7.Location = new System.Drawing.Point(214, 157);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 21);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "Precio de compra";
+            this.lblCosto.AutoSize = true;
+            this.lblCosto.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblCosto.Location = new System.Drawing.Point(214, 157);
+            this.lblCosto.Name = "lblCosto";
+            this.lblCosto.Size = new System.Drawing.Size(131, 21);
+            this.lblCosto.TabIndex = 26;
+            this.lblCosto.Text = "Precio de compra";
             // 
             // txbPrecio
             // 
@@ -97,35 +98,35 @@
             this.txbPrecio.TabIndex = 3;
             this.txbPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioCosto_KeyPress);
             // 
-            // label6
+            // lblPrecio
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label6.Location = new System.Drawing.Point(214, 96);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 21);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Precio de venta";
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblPrecio.Location = new System.Drawing.Point(214, 96);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(116, 21);
+            this.lblPrecio.TabIndex = 24;
+            this.lblPrecio.Text = "Precio de venta";
             // 
-            // label5
+            // lblUnidad
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label5.Location = new System.Drawing.Point(214, 34);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(172, 21);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Unidad (Pieza/Paquete)";
+            this.lblUnidad.AutoSize = true;
+            this.lblUnidad.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblUnidad.Location = new System.Drawing.Point(214, 38);
+            this.lblUnidad.Name = "lblUnidad";
+            this.lblUnidad.Size = new System.Drawing.Size(172, 21);
+            this.lblUnidad.TabIndex = 22;
+            this.lblUnidad.Text = "Unidad (Pieza/Paquete)";
             // 
-            // label4
+            // lblDescripcion
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label4.Location = new System.Drawing.Point(8, 157);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 21);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Descripción";
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblDescripcion.Location = new System.Drawing.Point(8, 157);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(91, 21);
+            this.lblDescripcion.TabIndex = 21;
+            this.lblDescripcion.Text = "Descripción";
             // 
             // txbMarca
             // 
@@ -153,15 +154,15 @@
             this.txbNombre.Size = new System.Drawing.Size(200, 29);
             this.txbNombre.TabIndex = 0;
             // 
-            // label1
+            // lblNombreProducto
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label1.Location = new System.Drawing.Point(8, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 21);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Nombre producto";
+            this.lblNombreProducto.AutoSize = true;
+            this.lblNombreProducto.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblNombreProducto.Location = new System.Drawing.Point(8, 38);
+            this.lblNombreProducto.Name = "lblNombreProducto";
+            this.lblNombreProducto.Size = new System.Drawing.Size(135, 21);
+            this.lblNombreProducto.TabIndex = 17;
+            this.lblNombreProducto.Text = "Nombre producto";
             // 
             // cboPieza
             // 
@@ -202,26 +203,37 @@
             this.chbProductoServicio.UseVisualStyleBackColor = true;
             this.chbProductoServicio.CheckedChanged += new System.EventHandler(this.chbProductoServicio_CheckedChanged);
             // 
+            // lblMarca
+            // 
+            this.lblMarca.AutoSize = true;
+            this.lblMarca.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblMarca.Location = new System.Drawing.Point(12, 96);
+            this.lblMarca.Name = "lblMarca";
+            this.lblMarca.Size = new System.Drawing.Size(53, 21);
+            this.lblMarca.TabIndex = 27;
+            this.lblMarca.Text = "Marca";
+            // 
             // frmEditarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(411, 319);
+            this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.chbProductoServicio);
             this.Controls.Add(this.chbControlStock);
             this.Controls.Add(this.cboPieza);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txbDescripcion);
             this.Controls.Add(this.txbCosto);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblCosto);
             this.Controls.Add(this.txbPrecio);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblPrecio);
+            this.Controls.Add(this.lblUnidad);
+            this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.txbMarca);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txbNombre);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblNombreProducto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -240,17 +252,18 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.TextBox txbDescripcion;
         private System.Windows.Forms.TextBox txbCosto;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblCosto;
         private System.Windows.Forms.TextBox txbPrecio;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblPrecio;
+        private System.Windows.Forms.Label lblUnidad;
+        private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.TextBox txbMarca;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txbNombre;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNombreProducto;
         private System.Windows.Forms.ComboBox cboPieza;
         private System.Windows.Forms.CheckBox chbControlStock;
         private System.Windows.Forms.CheckBox chbProductoServicio;
+        private System.Windows.Forms.Label lblMarca;
     }
 }

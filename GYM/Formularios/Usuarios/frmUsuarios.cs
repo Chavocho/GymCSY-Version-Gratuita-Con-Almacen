@@ -37,7 +37,6 @@ namespace GYM.Formularios
         public frmUsuarios()
         {
             InitializeComponent();
-
             GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
         }
 

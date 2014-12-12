@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInventario));
             this.dgvProducto = new System.Windows.Forms.DataGridView();
-            this.btnInventario = new System.Windows.Forms.Button();
-            this.txtBusqueda = new System.Windows.Forms.TextBox();
-            this.lblInstrucciones = new System.Windows.Forms.Label();
-            this.chbBajas = new System.Windows.Forms.CheckBox();
-            this.btnCantidadAlmacen = new System.Windows.Forms.Button();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ControlStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantidadAlmacen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnInventario = new System.Windows.Forms.Button();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
+            this.lblInstrucciones = new System.Windows.Forms.Label();
+            this.chbBajas = new System.Windows.Forms.CheckBox();
+            this.btnCantidadAlmacen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,60 +73,6 @@
             this.dgvProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProducto.Size = new System.Drawing.Size(836, 298);
             this.dgvProducto.TabIndex = 20;
-            // 
-            // btnInventario
-            // 
-            this.btnInventario.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnInventario.Location = new System.Drawing.Point(710, 382);
-            this.btnInventario.Name = "btnInventario";
-            this.btnInventario.Size = new System.Drawing.Size(138, 40);
-            this.btnInventario.TabIndex = 21;
-            this.btnInventario.Text = "Agregar al inventario";
-            this.btnInventario.UseVisualStyleBackColor = true;
-            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
-            // 
-            // txtBusqueda
-            // 
-            this.txtBusqueda.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtBusqueda.Location = new System.Drawing.Point(655, 12);
-            this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(193, 29);
-            this.txtBusqueda.TabIndex = 22;
-            this.txtBusqueda.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBusqueda_KeyDown);
-            // 
-            // lblInstrucciones
-            // 
-            this.lblInstrucciones.AutoSize = true;
-            this.lblInstrucciones.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblInstrucciones.Location = new System.Drawing.Point(342, 15);
-            this.lblInstrucciones.Name = "lblInstrucciones";
-            this.lblInstrucciones.Size = new System.Drawing.Size(307, 21);
-            this.lblInstrucciones.TabIndex = 23;
-            this.lblInstrucciones.Text = "Buscar por nombre o por código de barras:";
-            // 
-            // chbBajas
-            // 
-            this.chbBajas.AutoSize = true;
-            this.chbBajas.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.chbBajas.Location = new System.Drawing.Point(655, 47);
-            this.chbBajas.Name = "chbBajas";
-            this.chbBajas.Size = new System.Drawing.Size(193, 25);
-            this.chbBajas.TabIndex = 24;
-            this.chbBajas.Text = "Buscar bajas existencias";
-            this.chbBajas.UseVisualStyleBackColor = true;
-            this.chbBajas.CheckedChanged += new System.EventHandler(this.chbBajas_CheckedChanged);
-            // 
-            // btnCantidadAlmacen
-            // 
-            this.btnCantidadAlmacen.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCantidadAlmacen.Location = new System.Drawing.Point(566, 382);
-            this.btnCantidadAlmacen.Name = "btnCantidadAlmacen";
-            this.btnCantidadAlmacen.Size = new System.Drawing.Size(138, 40);
-            this.btnCantidadAlmacen.TabIndex = 27;
-            this.btnCantidadAlmacen.Text = "Actualizar cantidades mostrador";
-            this.btnCantidadAlmacen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCantidadAlmacen.UseVisualStyleBackColor = true;
-            this.btnCantidadAlmacen.Click += new System.EventHandler(this.btnCantidadAlmacen_Click);
             // 
             // Codigo
             // 
@@ -169,6 +115,61 @@
             this.CantTotal.Name = "CantTotal";
             this.CantTotal.ReadOnly = true;
             this.CantTotal.Width = 130;
+            // 
+            // btnInventario
+            // 
+            this.btnInventario.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnInventario.Location = new System.Drawing.Point(566, 382);
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.Size = new System.Drawing.Size(138, 40);
+            this.btnInventario.TabIndex = 21;
+            this.btnInventario.Text = "Agregar al inventario";
+            this.btnInventario.UseVisualStyleBackColor = true;
+            this.btnInventario.Visible = false;
+            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
+            // 
+            // txtBusqueda
+            // 
+            this.txtBusqueda.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtBusqueda.Location = new System.Drawing.Point(655, 12);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(193, 29);
+            this.txtBusqueda.TabIndex = 22;
+            this.txtBusqueda.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBusqueda_KeyDown);
+            // 
+            // lblInstrucciones
+            // 
+            this.lblInstrucciones.AutoSize = true;
+            this.lblInstrucciones.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblInstrucciones.Location = new System.Drawing.Point(342, 15);
+            this.lblInstrucciones.Name = "lblInstrucciones";
+            this.lblInstrucciones.Size = new System.Drawing.Size(307, 21);
+            this.lblInstrucciones.TabIndex = 23;
+            this.lblInstrucciones.Text = "Buscar por nombre o por código de barras:";
+            // 
+            // chbBajas
+            // 
+            this.chbBajas.AutoSize = true;
+            this.chbBajas.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.chbBajas.Location = new System.Drawing.Point(655, 47);
+            this.chbBajas.Name = "chbBajas";
+            this.chbBajas.Size = new System.Drawing.Size(193, 25);
+            this.chbBajas.TabIndex = 24;
+            this.chbBajas.Text = "Buscar bajas existencias";
+            this.chbBajas.UseVisualStyleBackColor = true;
+            this.chbBajas.CheckedChanged += new System.EventHandler(this.chbBajas_CheckedChanged);
+            // 
+            // btnCantidadAlmacen
+            // 
+            this.btnCantidadAlmacen.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCantidadAlmacen.Location = new System.Drawing.Point(710, 382);
+            this.btnCantidadAlmacen.Name = "btnCantidadAlmacen";
+            this.btnCantidadAlmacen.Size = new System.Drawing.Size(138, 40);
+            this.btnCantidadAlmacen.TabIndex = 27;
+            this.btnCantidadAlmacen.Text = "Actualizar cantidades mostrador";
+            this.btnCantidadAlmacen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCantidadAlmacen.UseVisualStyleBackColor = true;
+            this.btnCantidadAlmacen.Click += new System.EventHandler(this.btnCantidadAlmacen_Click);
             // 
             // frmInventario
             // 

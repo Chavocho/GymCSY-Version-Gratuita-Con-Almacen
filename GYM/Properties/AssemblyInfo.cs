@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // conjunto de atributos. Cambie estos atributos para modificar la información
 // asociada con un ensamblado.
 [assembly: AssemblyTitle("GymCSY")]
-[assembly: AssemblyDescription("Programa para adminsitración de Gimnasios. Si deseas la versión completa contactos en ventas@ec-system.com.mx")]
+[assembly: AssemblyDescription("Programa para adminsitración de Gimnasios. Si deseas más información contacta a ventas@ec-system.com.mx")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("EC SYSTEM")]
 [assembly: AssemblyProduct("GymCSY")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // Puede especificar todos los valores o establecer como predeterminados los números de compilación y de revisión 
 // mediante el carácter '*', como se muestra a continuación:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.9.0.0")]
-[assembly: AssemblyFileVersion("1.9.0.0")]
+[assembly: AssemblyVersion("1.9.3.2")]
+[assembly: AssemblyFileVersion("1.9.3.2")]

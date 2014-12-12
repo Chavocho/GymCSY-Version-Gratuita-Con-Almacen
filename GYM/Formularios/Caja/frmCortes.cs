@@ -19,6 +19,7 @@ namespace GYM.Formularios.Caja
         public frmCortes()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
         }
 
         private void BuscarCortes(DateTime fechaIni, DateTime fechaFin)

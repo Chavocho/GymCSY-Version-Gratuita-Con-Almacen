@@ -18,6 +18,7 @@ namespace GYM.Formularios.Compras
         public frmIVA(frmNuevaCompra frm)
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             this.frm = frm;
             txtIVA.Text = frm.IVA.ToString();
         }

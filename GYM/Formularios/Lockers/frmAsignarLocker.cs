@@ -22,6 +22,7 @@ namespace GYM.Formularios
         public frmAsignarLocker(frmLockers frm, int idLocker)
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             this.frm = frm;
             this.idLocker = idLocker;
             cboTipoPago.SelectedIndex = 0;

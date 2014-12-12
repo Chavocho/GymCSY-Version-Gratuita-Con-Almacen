@@ -39,6 +39,7 @@ namespace GYM.Formularios
         public frmCaja()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
         }
 
         #region Metodos

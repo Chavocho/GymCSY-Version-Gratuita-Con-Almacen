@@ -18,6 +18,7 @@ namespace GYM.Formularios.POS
         public frmDevoluciones(IWin32Window frm, int folio)
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             this.frm = (frmPuntoVenta)frm;
             this.folio = folio;
         }

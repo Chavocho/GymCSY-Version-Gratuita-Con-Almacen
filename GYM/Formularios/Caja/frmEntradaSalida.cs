@@ -58,6 +58,7 @@ namespace GYM.Formularios.Caja
         public frmEntradaSalida()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
         }
 
         private void IngresarMovimiento()

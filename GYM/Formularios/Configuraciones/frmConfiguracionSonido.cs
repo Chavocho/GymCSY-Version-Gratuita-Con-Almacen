@@ -41,6 +41,7 @@ namespace GYM.Formularios
         public frmConfiguracionSonido()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             cboSonidosBien.SelectedIndex = cboSonidosError.SelectedIndex = 0;
         }
 

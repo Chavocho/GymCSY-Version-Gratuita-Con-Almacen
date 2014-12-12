@@ -10,6 +10,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
+using GYM.Formularios;
+using System.Drawing.Imaging;
+using System.Drawing.Drawing2D;
 
 namespace GYM.Clases
 {
@@ -603,6 +606,8 @@ namespace GYM.Clases
             byte[] bimg = null;
             try
             {
+                if (img.Width > 1280 && img.Height > 800)
+                    img = RedimensionarImagen(img, (img.Width / 50), (img.Height / 50));
                 MemoryStream m = new MemoryStream();
                 img.Save(m, System.Drawing.Imaging.ImageFormat.Jpeg);
                 bimg = m.ToArray();
@@ -676,6 +681,63 @@ namespace GYM.Clases
         }
 
         /// <summary>
+        /// Función que redimensiona una imagen a una resolución dada sin recorte
+        /// </summary>
+        /// <param name="imgPhoto">Imagen a redimensionar</param>
+        /// <param name="Width">Ancho al que se desea redimensionar</param>
+        /// <param name="Height">Alto al que se desea redimensionar</param>
+        /// <returns>Imagen redimensionada</returns>
+        public static Image RedimensionarImagen(Image imgPhoto, int Width, int Height)
+        {
+            int sourceWidth = imgPhoto.Width;
+            int sourceHeight = imgPhoto.Height;
+            int sourceX = 0;
+            int sourceY = 0;
+            int destX = 0;
+            int destY = 0;
+
+            float nPercent = 0;
+            float nPercentW = 0;
+            float nPercentH = 0;
+
+            nPercentW = ((float)Width / (float)sourceWidth);
+            nPercentH = ((float)Height / (float)sourceHeight);
+            if (nPercentH < nPercentW)
+            {
+                nPercent = nPercentH;
+                destX = System.Convert.ToInt16((Width -
+                              (sourceWidth * nPercent)) / 2);
+            }
+            else
+            {
+                nPercent = nPercentW;
+                destY = System.Convert.ToInt16((Height -
+                              (sourceHeight * nPercent)) / 2);
+            }
+
+            int destWidth = (int)(sourceWidth * nPercent);
+            int destHeight = (int)(sourceHeight * nPercent);
+
+            Bitmap bmPhoto = new Bitmap(Width, Height,
+                              PixelFormat.Format24bppRgb);
+            bmPhoto.SetResolution(imgPhoto.HorizontalResolution,
+                             imgPhoto.VerticalResolution);
+
+            Graphics grPhoto = Graphics.FromImage(bmPhoto);
+            grPhoto.Clear(Color.Red);
+            grPhoto.InterpolationMode =
+                    InterpolationMode.HighQualityBicubic;
+
+            grPhoto.DrawImage(imgPhoto,
+                new Rectangle(destX, destY, destWidth, destHeight),
+                new Rectangle(sourceX, sourceY, sourceWidth, sourceHeight),
+                GraphicsUnit.Pixel);
+
+            grPhoto.Dispose();
+            return bmPhoto;
+        }
+
+        /// <summary>
         /// Función que muestra un MessageBox con un mensaje de error y el mensaje de la excepción.
         /// </summary>
         /// <param name="mensaje">Mensaje a mostrar</param>
@@ -712,6 +774,45 @@ namespace GYM.Clases
             frm = null;
         }
 
+        static bool loCerroReg = false, loCerroCon = false;
+        /// <summary>
+        /// Función que cierra determinados formularios para que se pueda usar el API de huella digital.
+        /// </summary>
+        public static void CerrarHuellas()
+        {
+            Form fRegistro = null, fConfiguracion = null;
+
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm.Name == "frmRegistroEntradas")
+                    fRegistro = frm;
+                else if (frm.Name == "frmConfiguracionHuella")
+                    fConfiguracion = frm;
+            }
+            if (fRegistro != null)
+            {
+                loCerroReg = true;
+                fRegistro.Close();
+            }
+            if (fConfiguracion != null)
+            {
+                loCerroCon = true;
+                fConfiguracion.Close();
+            }
+        }
+
+        /// <summary>
+        /// Función que abre los formularios cerrados por la función de CerrarHuellas()
+        /// </summary>
+        public static void AbrirHuellas()
+        {
+            if (loCerroReg)
+                frmRegistroEntradas.Instancia.Show();
+            else if (loCerroCon)
+                frmConfigurarHuella.Instancia.Show();
+            loCerroReg = false;
+            loCerroCon = false;
+        }
 
         #region Siempre Encima
         [DllImport("user32.DLL")]

@@ -39,6 +39,7 @@ namespace GYM.Formularios.Compras
         public frmCompras()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
         }
 
         private void BuscarCompra(DateTime fechaIni, DateTime fechaFin)

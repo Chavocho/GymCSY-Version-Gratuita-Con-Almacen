@@ -17,6 +17,7 @@ namespace GYM.Formularios.POS
         public frmCancelarVenta()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
         }
 
         private void CancelarVenta(string folio)

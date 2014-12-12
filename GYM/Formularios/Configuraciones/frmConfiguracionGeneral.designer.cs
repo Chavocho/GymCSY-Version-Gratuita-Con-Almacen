@@ -594,9 +594,9 @@
             this.chbRegistro.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chbRegistro.Location = new System.Drawing.Point(253, 663);
             this.chbRegistro.Name = "chbRegistro";
-            this.chbRegistro.Size = new System.Drawing.Size(292, 25);
+            this.chbRegistro.Size = new System.Drawing.Size(252, 25);
             this.chbRegistro.TabIndex = 22;
-            this.chbRegistro.Text = "Abrir únicamente registro de entradas";
+            this.chbRegistro.Text = "Abrir únicamente ingreso socios";
             this.chbRegistro.UseVisualStyleBackColor = true;
             // 
             // frmConfiguracionGeneral

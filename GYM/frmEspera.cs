@@ -15,6 +15,7 @@ namespace GYM
         public frmEspera(string mensaje)
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             lblMensaje.Text = mensaje;
             lblMensaje.Left = (this.Width - lblMensaje.Width) / 2;
         }

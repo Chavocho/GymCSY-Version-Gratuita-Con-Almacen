@@ -439,7 +439,7 @@
             this.Text = "Agregar Socio";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAgregarMiembro_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAgregarMiembro_FormClosed);
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagenPerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

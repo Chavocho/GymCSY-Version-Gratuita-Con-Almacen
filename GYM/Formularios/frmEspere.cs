@@ -15,6 +15,7 @@ namespace GYM.Formularios
         public frmEspere()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
         }
 
         private void frmEspere_Load(object sender, EventArgs e)

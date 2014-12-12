@@ -15,6 +15,7 @@ namespace GYM.Formularios
         public frmLoginConfig()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
         }
 
         private bool VerificarUsuario(string nom, string pass)

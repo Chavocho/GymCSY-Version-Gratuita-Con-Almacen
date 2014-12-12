@@ -18,6 +18,7 @@ namespace GYM.Formularios.PuntoDeVenta
         public frmEditarProducto(string id)
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             try
             {
                 p = CProducto.ObtenerProductoPorID(id);
@@ -86,6 +87,7 @@ namespace GYM.Formularios.PuntoDeVenta
             {
                 if (Validar())
                 {
+                    p.Nombre = txbNombre.Text;
                     p.ControlStock = chbControlStock.Checked;
                     p.Costo = decimal.Parse(txbCosto.Text);
                     p.Precio = decimal.Parse(txbPrecio.Text);

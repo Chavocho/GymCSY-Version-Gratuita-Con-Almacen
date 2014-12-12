@@ -22,6 +22,7 @@ namespace GYM.Formularios.Membresia
         public frmNuevaMembresia(int numSocio)
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             this.numSocio = numSocio;
             mem = new Clases.CMembresia(numSocio);
             rMem = new CRegistro_membresias();

@@ -38,6 +38,7 @@ namespace GYM.Formularios.Membresia
         public frmMembresia()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
         }
 
         #region Metodos

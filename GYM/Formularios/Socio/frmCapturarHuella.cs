@@ -17,10 +17,13 @@ namespace GYM.Formularios.Socio
         DataResult<Fmd> res;
         frmAgregarMiembro frmA = null;
         frmEditarMiembro frmE = null;
+        frmNuevoUsuario frmNU = null;
+        frmEditarUsuario frmEU = null;
 
         public frmCapturarHuella(frmAgregarMiembro frm)
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             this.frmA = frm;
         }
 
@@ -28,6 +31,18 @@ namespace GYM.Formularios.Socio
         {
             InitializeComponent();
             this.frmE = frm;
+        }
+
+        public frmCapturarHuella(frmNuevoUsuario frm)
+        {
+            InitializeComponent();
+            this.frmNU = frm;
+        }
+
+        public frmCapturarHuella(frmEditarUsuario frm)
+        {
+            InitializeComponent();
+            this.frmEU = frm;
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -38,6 +53,10 @@ namespace GYM.Formularios.Socio
                     frmA.huella = res.Data.Bytes;
                 else if (frmE != null)
                     frmE.huella = res.Data.Bytes;
+                else if (frmNU != null)
+                    frmNU.Huella = res.Data.Bytes;
+                else if (frmEU != null)
+                    frmEU.Huella = res.Data.Bytes;
             }
             else
             {

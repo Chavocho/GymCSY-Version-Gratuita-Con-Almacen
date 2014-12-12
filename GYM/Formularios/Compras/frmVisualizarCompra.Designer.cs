@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVisualizarCompra));
             this.pnlCompra = new System.Windows.Forms.Panel();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -153,9 +152,9 @@
             this.lblEImporte.AutoSize = true;
             this.lblEImporte.Location = new System.Drawing.Point(573, 65);
             this.lblEImporte.Name = "lblEImporte";
-            this.lblEImporte.Size = new System.Drawing.Size(58, 19);
+            this.lblEImporte.Size = new System.Drawing.Size(67, 19);
             this.lblEImporte.TabIndex = 14;
-            this.lblEImporte.Text = "Importe";
+            this.lblEImporte.Text = "Impuesto";
             // 
             // lblSubtotal
             // 
@@ -326,25 +325,17 @@
             this.CCosto,
             this.CDescuento,
             this.CTotal});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCompraDetallada.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCompraDetallada.Location = new System.Drawing.Point(0, 115);
             this.dgvCompraDetallada.MultiSelect = false;
             this.dgvCompraDetallada.Name = "dgvCompraDetallada";
             this.dgvCompraDetallada.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvCompraDetallada.RowHeadersVisible = false;
             this.dgvCompraDetallada.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvCompraDetallada.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvCompraDetallada.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCompraDetallada.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCompraDetallada.ShowEditingIcon = false;
             this.dgvCompraDetallada.Size = new System.Drawing.Size(1008, 506);

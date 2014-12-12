@@ -19,6 +19,7 @@ namespace GYM.Formularios.Compras
         public frmVisualizarCompra(int idCompra)
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             this.idCompra = idCompra;
         }
 
