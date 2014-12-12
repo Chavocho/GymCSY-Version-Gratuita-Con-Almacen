@@ -104,7 +104,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(539, 428);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(105, 40);
-            this.btnAceptar.TabIndex = 6;
+            this.btnAceptar.TabIndex = 8;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -130,7 +130,7 @@
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(240, 96);
-            this.txtDescripcion.TabIndex = 4;
+            this.txtDescripcion.TabIndex = 7;
             // 
             // lblEtiquetaFolioRemision
             // 
@@ -151,7 +151,7 @@
             this.txtFolio.Location = new System.Drawing.Point(210, 199);
             this.txtFolio.Name = "txtFolio";
             this.txtFolio.Size = new System.Drawing.Size(178, 26);
-            this.txtFolio.TabIndex = 3;
+            this.txtFolio.TabIndex = 4;
             // 
             // lblEtiquetaPrecio
             // 
@@ -172,7 +172,7 @@
             this.txtPrecio.Location = new System.Drawing.Point(16, 199);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(178, 26);
-            this.txtPrecio.TabIndex = 2;
+            this.txtPrecio.TabIndex = 3;
             // 
             // lblEtiquetaFechaInicio
             // 
@@ -363,7 +363,7 @@
             this.cbxTipoPago.Location = new System.Drawing.Point(16, 132);
             this.cbxTipoPago.Name = "cbxTipoPago";
             this.cbxTipoPago.Size = new System.Drawing.Size(178, 27);
-            this.cbxTipoPago.TabIndex = 38;
+            this.cbxTipoPago.TabIndex = 2;
             this.cbxTipoPago.SelectedIndexChanged += new System.EventHandler(this.cbxTipoPago_SelectedIndexChanged);
             // 
             // label1
@@ -396,7 +396,7 @@
             this.txtFolioTicket.Location = new System.Drawing.Point(213, 269);
             this.txtFolioTicket.Name = "txtFolioTicket";
             this.txtFolioTicket.Size = new System.Drawing.Size(178, 26);
-            this.txtFolioTicket.TabIndex = 41;
+            this.txtFolioTicket.TabIndex = 6;
             this.txtFolioTicket.EnabledChanged += new System.EventHandler(this.txtFolioTicket_EnabledChanged);
             // 
             // label2
@@ -418,7 +418,7 @@
             this.txtTerminacion.Location = new System.Drawing.Point(16, 269);
             this.txtTerminacion.Name = "txtTerminacion";
             this.txtTerminacion.Size = new System.Drawing.Size(178, 26);
-            this.txtTerminacion.TabIndex = 39;
+            this.txtTerminacion.TabIndex = 5;
             // 
             // frmEditarMembresia
             // 

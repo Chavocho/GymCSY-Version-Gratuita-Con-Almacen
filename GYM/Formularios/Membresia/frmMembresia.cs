@@ -79,6 +79,8 @@ namespace GYM.Formularios.Membresia
                         fechaI = DateTime.Parse(dr["fecha_ini"].ToString());
                         fechaIni = fechaI.ToString("dd") + " de " + fechaI.ToString("MMMM") + " del " + fechaI.ToString("yyyy");
                     }
+                    else
+                        fechaIni = "Sin información";
                     dgvPersonas.Rows.Add(new object[] { dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), status, fechaIni, fecha });
                 }
             }

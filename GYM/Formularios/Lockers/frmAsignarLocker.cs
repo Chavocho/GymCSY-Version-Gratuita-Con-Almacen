@@ -135,9 +135,17 @@ namespace GYM.Formularios
                 ConexionBD.EjecutarConsulta(sql);
                 sql.Parameters.Clear();
                 //Insertamos el registro de lockers
-                sql.CommandText = "INSERT INTO registro_locker (locker_id, fecha_fin, fecha_ini, descripcion, tipo_pago, precio, terminacion, folio_remision, folio_ticket, create_user_id, create_time) " +
-                    "VALUES (?locker_id, ?fecha_fin, NOW(), ?descripcion, ?tipo_pago, ?precio, ?terminacion, ?folio_remision, ?folio_ticket, ?create_user_id, NOW())";
+                sql.CommandText = "INSERT INTO registro_locker (locker_id, nom_persona, fecha_fin, fecha_ini, descripcion, tipo_pago, precio, terminacion, folio_remision, folio_ticket, create_user_id, create_time) " +
+                    "VALUES (?locker_id, ?nom_persona, ?fecha_fin, NOW(), ?descripcion, ?tipo_pago, ?precio, ?terminacion, ?folio_remision, ?folio_ticket, ?create_user_id, NOW())";
                 sql.Parameters.AddWithValue("?locker_id", idLocker);
+                if (chbPersona.Checked)
+                {
+                    sql.Parameters.AddWithValue("?nom_persona", txtPersona.Text);
+                }
+                else
+                {
+                    sql.Parameters.AddWithValue("?nom_persona", DBNull.Value);
+                }
                 sql.Parameters.AddWithValue("?fecha_fin", dtpFechaFin.Value);
                 sql.Parameters.AddWithValue("?descripcion", txtDescripcion.Text);
                 sql.Parameters.AddWithValue("?tipo_pago", cboTipoPago.SelectedIndex);
@@ -152,14 +160,6 @@ namespace GYM.Formularios
                     sql.Parameters.AddWithValue("?terminacion", DBNull.Value);
                     sql.Parameters.AddWithValue("?folio_ticket", DBNull.Value);
                 }
-                //if (chbPersona.Checked)
-                //{
-                //    sql.Parameters.AddWithValue("?nom_persona", txtPersona.Text);
-                //}
-                //else
-                //{
-                //    sql.Parameters.AddWithValue("?nom_persona", DBNull.Value);
-                //}
                 sql.Parameters.AddWithValue("?folio_remision", txtFolio.Text);
                 sql.Parameters.AddWithValue("?create_user_id", frmMain.id);
                 ConexionBD.EjecutarConsulta(sql);
@@ -171,6 +171,37 @@ namespace GYM.Formularios
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+
+        private void InsertarCaja()
+        {
+            try
+            {
+                MySqlCommand sql = new MySqlCommand();
+                sql.CommandText = "INSERT INTO caja (efectivo, tarjeta, tipo_movimiento, fecha, descripcion) " +
+                    "VALUES (?efectivo, ?tarjeta, ?tipo_movimiento, NOW(), ?descripcion)";
+                if (cboTipoPago.SelectedIndex == 0)
+                {
+                    sql.Parameters.AddWithValue("?efectivo", decimal.Parse(txtPrecio.Text));
+                    sql.Parameters.AddWithValue("?tarjeta", 0M);
+                }
+                else
+                {
+                    sql.Parameters.AddWithValue("?efectivo", 0M);
+                    sql.Parameters.AddWithValue("?tarjeta", decimal.Parse(txtPrecio.Text));
+                }
+                sql.Parameters.AddWithValue("?tipo_movimiento", 0);
+                sql.Parameters.AddWithValue("?descripcion", "RENTA DE LOCKER");
+                ConexionBD.EjecutarConsulta(sql);
+            }
+            catch (MySqlException ex)
+            {
+                CFuncionesGenerales.MensajeError("Hubo un error al registrar el movimiento en la caja. La conexión con la base de datos no se ha podido realizar.", ex);
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("Hubo un error al registrar el movimiento en la caja. Ha ocurrido un error genérico.", ex);
             }
         }
 
@@ -217,6 +248,7 @@ namespace GYM.Formularios
                 if (ValidarCampos())
                 {
                     InsertarLocker();
+                    InsertarCaja();
                     if (!chbPersona.Checked)
                         MessageBox.Show("El locker ha sido asignado a " + dgvSocios[1, dgvSocios.CurrentRow.Index].Value.ToString() + ".", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else

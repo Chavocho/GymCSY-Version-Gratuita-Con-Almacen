@@ -161,3 +161,6 @@ System.ArgumentException: La columna 'costo' no pertenece a la tabla .
 MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'gym_dtbs.compra' doesn't exist
    en GYM.Clases.ConexionBD.EjecutarConsultaSelect(MySqlCommand comando) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 169
    en GYM.Formularios.Compras.frmCompras.BuscarCompra(DateTime fechaIni, DateTime fechaFin) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Compras\frmCompras.cs:línea 53|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'gym_dtbs.registro_membresia' doesn't exist
+   en GYM.Clases.ConexionBD.EjecutarConsultaSelect(MySqlCommand comando) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 169
+   en GYM.Formularios.frmPendientes.RegresarCaja() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Pendientes\frmPendientes.cs:línea 313|

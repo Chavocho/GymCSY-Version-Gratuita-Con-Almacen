@@ -222,8 +222,8 @@ namespace GYM.Formularios
             {
                 dt = new DataTable();
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "SELECT l.id, s.numSocio, s.nombre, s.apellidos, l.num, l.fecha_ini, l.fecha_fin " +
-                    "FROM locker AS l INNER JOIN miembros AS s ON (l.numSocio=s.numSocio) WHERE l.estado=?estado";
+                sql.CommandText = "SELECT l.id, r.nom_persona, s.numSocio, s.nombre, s.apellidos, l.num, l.fecha_ini, l.fecha_fin " +
+                    "FROM locker AS l LEFT JOIN registro_locker AS r ON (l.id=r.locker_id) LEFT JOIN miembros AS s ON (l.numSocio=s.numSocio) WHERE l.estado=?estado";
                 sql.Parameters.AddWithValue("?estado", Clases.CMembresia.EstadoMembresia.Pendiente);
                 dt = ConexionBD.EjecutarConsultaSelect(sql);
             }
@@ -250,7 +250,15 @@ namespace GYM.Formularios
                     }
                     else
                     {
-                        dgvPendientes.Rows.Add(new object[] { dr["id"], dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), dr["num"], fechaIni.ToString("dd/MM/yyyy"), fechaFin.ToString("dd/MM/yyyy") });
+                        string nom = "";
+                        string numSocio = "Sin información";
+                        if (dr["nom_persona"] != DBNull.Value)
+                            nom = dr["nom_persona"].ToString();
+                        else 
+                            nom = dr["nombre"].ToString() + " " + dr["apellidos"].ToString();
+                        if (dr["numSocio"] != DBNull.Value)
+                            numSocio = dr["numSocio"].ToString();
+                        dgvPendientes.Rows.Add(new object[] { dr["id"], numSocio, nom, dr["num"], fechaIni.ToString("dd/MM/yyyy"), fechaFin.ToString("dd/MM/yyyy") });
                     }
                 }
             }
@@ -303,6 +311,82 @@ namespace GYM.Formularios
             }
         }
 
+        private void RegresarCaja()
+        {
+            try
+            {
+                MySqlCommand sql = new MySqlCommand();
+                sql.CommandText = "SELECT tipo_pago, precio FROM registro_membresias WHERE membresia_id=?id LIMIT 1";
+                sql.Parameters.AddWithValue("?id", id);
+                DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    sql.Parameters.Clear();
+                    sql.CommandText = "INSERT INTO caja (efectivo, tarjeta, tipo_movimiento, fecha, descripcion) " +
+                        "VALUES (?efectivo, ?tarjeta, ?tipo_movimiento, NOW(), ?descripcion)";
+                    if (dr["tipo_pago"].ToString() == "1")
+                    {
+                        sql.Parameters.AddWithValue("?efectivo", decimal.Parse(dr["precio"].ToString()) * -1);
+                        sql.Parameters.AddWithValue("?tarjeta", 0);
+                    }
+                    else
+                    {
+                        sql.Parameters.AddWithValue("?efectivo", 0);
+                        sql.Parameters.AddWithValue("?tarjeta", decimal.Parse(dr["precio"].ToString()) * -1);
+                    }
+                    sql.Parameters.AddWithValue("?tipo_movimiento", 1);
+                    sql.Parameters.AddWithValue("?descripcion", "SE HA CANCELADO LA MEMBRESÍA.");
+                    ConexionBD.EjecutarConsulta(sql);
+                }
+            }
+            catch (MySqlException ex)
+            {
+                CFuncionesGenerales.MensajeError("No se ha registrado el movimiento en caja. Ocurrió un error al conectar con la base de datos.", ex);
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("No se ha registrado el movimiento en caja. Ocurrió un error genérico.", ex);
+            }
+        }
+
+        private void RegresarLocker()
+        {
+            try
+            {
+                MySqlCommand sql = new MySqlCommand();
+                sql.CommandText = "SELECT tipo_pago, precio FROM registro_locker WHERE locker_id=?id LIMIT 1";
+                sql.Parameters.AddWithValue("?id", id);
+                DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    sql.Parameters.Clear();
+                    sql.CommandText = "INSERT INTO caja (efectivo, tarjeta, tipo_movimiento, fecha, descripcion) " +
+                        "VALUES (?efectivo, ?tarjeta, ?tipo_movimiento, NOW(), ?descripcion)";
+                    if (dr["tipo_pago"].ToString() == "0")
+                    {
+                        sql.Parameters.AddWithValue("?efectivo", decimal.Parse(dr["precio"].ToString()) * -1);
+                        sql.Parameters.AddWithValue("?tarjeta", 0);
+                    }
+                    else
+                    {
+                        sql.Parameters.AddWithValue("?efectivo", 0);
+                        sql.Parameters.AddWithValue("?tarjeta", decimal.Parse(dr["precio"].ToString()) * -1);
+                    }
+                    sql.Parameters.AddWithValue("?tipo_movimiento", 1);
+                    sql.Parameters.AddWithValue("?descripcion", "SE HA CANCELADO LA RENTA DEL LOCKER.");
+                    ConexionBD.EjecutarConsulta(sql);
+                }
+            }
+            catch (MySqlException ex)
+            {
+                CFuncionesGenerales.MensajeError("No se ha registrado el movimiento en caja. Ocurrió un error al conectar con la base de datos.", ex);
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("No se ha registrado el movimiento en caja. Ocurrió un error genérico.", ex);
+            }
+        }
+
         private void cboPendientes_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (cboPendientes.SelectedIndex)
@@ -351,24 +435,26 @@ namespace GYM.Formularios
                     id = (int)dgvPendientes[0, e.RowIndex].Value;
                     if (cboPendientes.SelectedIndex == 0)
                     {
-                        if (e.ColumnIndex == 4)
+                        if (e.ColumnIndex == 5)
                         {
                             EstadoMembresia(id, CMembresia.EstadoMembresia.Activa);
                         }
-                        else if (e.ColumnIndex == 5)
+                        else if (e.ColumnIndex == 6)
                         {
                             EstadoMembresia(id, CMembresia.EstadoMembresia.Rechazada);
+                            RegresarCaja();
                         }
                     }
                     else if (cboPendientes.SelectedIndex == 1)
                     {
-                        if (e.ColumnIndex == 5)
+                        if (e.ColumnIndex == 6)
                         {
                             EstadoLocker(id, frmLockers.EstadoLocker.Ocupado);
                         }
-                        else if (e.ColumnIndex == 6)
+                        else if (e.ColumnIndex == 7)
                         {
                             EstadoLocker(id, frmLockers.EstadoLocker.Rechazado);
+                            RegresarLocker();
                         }
                     }
                 }

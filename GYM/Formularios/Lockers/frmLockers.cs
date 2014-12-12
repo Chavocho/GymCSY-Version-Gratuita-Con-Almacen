@@ -61,7 +61,7 @@ namespace GYM.Formularios
             try
             {
                 dgvLockers.Rows.Clear();
-                string sql = "SELECT l.id, l.num, l.estado, s.nombre, s.apellidos, s.telefono, s.celular FROM locker AS l LEFT JOIN miembros AS s ON (l.numSocio=s.numSocio)";
+                string sql = "SELECT l.id, l.num, l.estado, r.nom_persona, s.nombre, s.apellidos, s.telefono, s.celular FROM locker AS l LEFT JOIN miembros AS s ON (l.numSocio=s.numSocio) LEFT JOIN registro_locker AS r ON (l.id=r.locker_id)";
                 DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
                 foreach (DataRow dr in dt.Rows)
                 {
@@ -85,6 +85,10 @@ namespace GYM.Formularios
                             tel = dr["telefono"].ToString();
                         else if (dr["celular"] != DBNull.Value)
                             tel = dr["celular"].ToString();
+                    }
+                    else if (dr["nom_persona"] != DBNull.Value)
+                    {
+                        nombre = dr["nom_persona"].ToString();
                     }
                     dgvLockers.Rows.Add(new object[] { dr["id"], dr["num"], nombre, tel, estado });
                 }

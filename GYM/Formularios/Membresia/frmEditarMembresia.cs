@@ -15,6 +15,7 @@ namespace GYM.Formularios.Membresia
     {
         int numSocio;
         DateTime fechaFin;
+        CMembresia.EstadoMembresia es;
         CMembresia mem;
         CRegistro_membresias rMem;
 
@@ -33,6 +34,7 @@ namespace GYM.Formularios.Membresia
             {
                 if (mem.FechaFin > DateTime.Now)
                     dtpFechaInicio.Value = mem.FechaFin;
+                es = mem.Estado;
                 lblUsuarioCreador.Text = ObtenerNombreUsuario(mem.CreateUser);
                 lblFechaCreacion.Text = mem.CreateTime.ToString("dd/MM/yyyy hh:mm tt");
                 lblUsuarioModificador.Text = ObtenerNombreUsuario(mem.UpdateUser);
@@ -361,7 +363,7 @@ namespace GYM.Formularios.Membresia
 
         private void dtpFechaInicio_ValueChanged(object sender, EventArgs e)
         {
-            if (dtpFechaInicio.Value.Date < mem.FechaFin.Date)
+            if (dtpFechaInicio.Value.Date < mem.FechaFin.Date && es == CMembresia.EstadoMembresia.Terminada)
                 dtpFechaInicio.Value = mem.FechaFin;
             else if (dtpFechaInicio.Value.Date < DateTime.Now.Date)
                 dtpFechaInicio.Value = DateTime.Now;
