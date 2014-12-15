@@ -387,6 +387,18 @@
     <Compile Include="Formularios\PuntoDeVenta\frmProducto.designer.cs">
       <DependentUpon>frmProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Reportes\frmReporteMembresíasSocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\frmReporteMembresíasSocio.Designer.cs">
+      <DependentUpon>frmReporteMembresíasSocio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Reportes\frmVisualizarMembresias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\frmVisualizarMembresias.Designer.cs">
+      <DependentUpon>frmVisualizarMembresias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Reporte\frmDialogo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -676,6 +688,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\PuntoDeVenta\frmProducto.resx">
       <DependentUpon>frmProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\frmReporteMembresíasSocio.resx">
+      <DependentUpon>frmReporteMembresíasSocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\frmVisualizarMembresias.resx">
+      <DependentUpon>frmVisualizarMembresias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Reporte\frmDialogo.resx">
       <DependentUpon>frmDialogo.cs</DependentUpon>

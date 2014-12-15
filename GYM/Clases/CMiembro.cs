@@ -44,8 +44,6 @@ public class CMiembro
     public bool hayCumpleañeros = false;
     public frmMain frmM;
 
-    delegate void MensajeError(string mensaje, Exception ex);
-
     #region Propiedades
     public int NumeroSocio
     {

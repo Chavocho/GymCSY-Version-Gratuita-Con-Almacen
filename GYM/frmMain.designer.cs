@@ -93,6 +93,8 @@
             this.tmrCumpleaños = new System.Windows.Forms.Timer(this.components);
             this.pcbUsuario = new System.Windows.Forms.PictureBox();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.membresíasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUsuario)).BeginInit();
             this.SuspendLayout();
@@ -103,6 +105,7 @@
             this.toolStripArchivo,
             this.toolStripSocios,
             this.administraciònToolStripMenuItem,
+            this.reportesToolStripMenuItem,
             this.puntodeVentaToolStripMenuItem,
             this.movimientosToolStripMenuItem,
             this.empleadoToolStripMenuItem,
@@ -605,6 +608,21 @@
             this.lblUsuario.TabIndex = 4;
             this.lblUsuario.Text = "label1";
             // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.membresíasToolStripMenuItem});
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Text = "Reporte&s";
+            // 
+            // membresíasToolStripMenuItem
+            // 
+            this.membresíasToolStripMenuItem.Name = "membresíasToolStripMenuItem";
+            this.membresíasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.membresíasToolStripMenuItem.Text = "Membresías";
+            this.membresíasToolStripMenuItem.Click += new System.EventHandler(this.membresíasToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -697,5 +715,7 @@
         private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
         private System.Windows.Forms.PictureBox pcbUsuario;
         private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem membresíasToolStripMenuItem;
     }
 }

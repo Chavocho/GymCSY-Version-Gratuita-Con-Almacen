@@ -179,3 +179,22 @@ System.NullReferenceException: Referencia a objeto no establecida como instancia
 System.FormatException: La cadena de entrada no tiene el formato correcto.
    en GYM.Clases.CTicket.ImprimirCodigoProducto(String idProd) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\Ticket\CTicket.cs:línea 438
    en GYM.Formularios.PuntoDeVenta.frmProducto.btnImprimir_Click(Object sender, EventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\PuntoDeVenta\frmProducto.cs:línea 162|
+System.ArgumentOutOfRangeException: El índice estaba fuera del intervalo. Debe ser un valor no negativo e inferior al tamaño de la colección.
+Nombre del parámetro: index
+   en System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   en System.Collections.Generic.List`1.get_Item(Int32 index)
+   en GYM.Formularios.Reportes.frmVisualizarMembresias.MostrarInformacion(Int32 index) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Reportes\frmVisualizarMembresias.cs:línea 100|
+System.ArgumentOutOfRangeException: El índice estaba fuera del intervalo. Debe ser un valor no negativo e inferior al tamaño de la colección.
+Nombre del parámetro: index
+   en System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   en System.Collections.Generic.List`1.get_Item(Int32 index)
+   en GYM.Formularios.Reportes.frmVisualizarMembresias.MostrarInformacion(Int32 index) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Reportes\frmVisualizarMembresias.cs:línea 100|
+System.ArgumentException: La columna 'create_user' no pertenece a la tabla registro_membresias.
+   en System.Data.DataRow.GetDataColumn(String columnName)
+   en System.Data.DataRow.get_Item(String columnName)
+   en GYM.Formularios.Reportes.frmVisualizarMembresias.BuscarRegMembresias()|
+System.ArgumentOutOfRangeException: El índice estaba fuera del intervalo. Debe ser un valor no negativo e inferior al tamaño de la colección.
+Nombre del parámetro: index
+   en System.ThrowHelper.ThrowArgumentOutOfRangeException()
+   en System.Collections.Generic.List`1.get_Item(Int32 index)
+   en GYM.Formularios.Reportes.frmVisualizarMembresias.MostrarInformacion(Int32 index)|

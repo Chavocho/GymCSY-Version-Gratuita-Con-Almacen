@@ -123,7 +123,7 @@ namespace GYM.Clases
             {
                 MySqlCommand sql = new MySqlCommand();
                 sql.CommandText = "INSERT INTO registro_membresias (membresia_id, fecha_fin, fecha_ini, tipo, descripcion, tipo_pago, precio, terminacion, folio_remision, folio_ticket, create_user_id, create_time) " +
-                    "VALUES (?membresia_id, ?fecha_fin, ?fecha_ini, ?tipo, ?descripcion, ?tipo_pago, ?precio, ?terminacion, ?folio_remision, ?folio_ticket, ?create_user_id, ?create_time)";
+                    "VALUES (?membresia_id, ?fecha_fin, ?fecha_ini, ?tipo, ?descripcion, ?tipo_pago, ?precio, ?terminacion, ?folio_remision, ?folio_ticket, ?create_user_id, NOW())";
                 sql.Parameters.AddWithValue("?membresia_id", this.IDMembresia);
                 sql.Parameters.AddWithValue("?fecha_fin", this.FechaFin);
                 sql.Parameters.AddWithValue("?fecha_ini", this.FechaInicio);
@@ -135,7 +135,6 @@ namespace GYM.Clases
                 sql.Parameters.AddWithValue("?folio_remision", this.FolioRemision);
                 sql.Parameters.AddWithValue("?folio_ticket", this.FolioTicket);
                 sql.Parameters.AddWithValue("?create_user_id", this.CreateUser);
-                sql.Parameters.AddWithValue("?create_time", this.CreateTime);
                 ConexionBD.EjecutarConsulta(sql);
             }
             catch (MySqlException ex)

@@ -14,7 +14,6 @@ namespace GYM.Formularios.Compras
 {
     public partial class frmCompras : Form
     {
-        delegate void MensajeError(string mensaje, Exception ex);
         DataTable dt = new DataTable();
 
         #region Instancia

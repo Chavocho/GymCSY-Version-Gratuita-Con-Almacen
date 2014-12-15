@@ -14,6 +14,16 @@ using GYM.Formularios;
 using System.Drawing.Imaging;
 using System.Drawing.Drawing2D;
 
+namespace System
+{
+    /// <summary>
+    /// Permite crear un delegado que te permite mostrar el mensaje de error cuando se manda a llamar desde un hilo.
+    /// </summary>
+    /// <param name="mensaje">Mensaje personalizado a mostrar.</param>
+    /// <param name="ex">Excepción que ocurrió.</param>
+    public delegate void MensajeError(string mensaje, Exception ex);
+}
+
 namespace GYM.Clases
 {
     class CFuncionesGenerales

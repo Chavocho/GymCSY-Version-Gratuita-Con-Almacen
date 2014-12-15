@@ -1203,3 +1203,5 @@ F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Inform
 F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Properties.Resources.resources
 F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Teclado.resources
 F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.csproj.GenerateResource.Cache
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reportes.frmReporteMembresíasSocio.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reportes.frmVisualizarMembresias.resources
