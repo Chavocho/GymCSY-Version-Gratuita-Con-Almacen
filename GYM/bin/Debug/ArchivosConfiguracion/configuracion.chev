@@ -22,10 +22,10 @@
     <usar>False</usar>
   </huella>
   <tema>
-    <nombre>Dark</nombre>
+    <nombre>Predeterminado</nombre>
     <nombreCumple>Fiesta</nombreCumple>
-    <colorFondo>-13487566</colorFondo>
-    <colorLetras>-656646</colorLetras>
+    <colorFondo>-986896</colorFondo>
+    <colorLetras>-16777216</colorLetras>
     <imagenFondo>Fondo_Default</imagenFondo>
     <colorFondoCumple>-12156236</colorFondoCumple>
     <colorLetrasCumple>-1</colorLetrasCumple>

@@ -35,7 +35,7 @@ namespace GYM.Formularios
         private void InsertarUsuario()
         {
             MySql.Data.MySqlClient.MySqlCommand sql = new MySql.Data.MySqlClient.MySqlCommand();
-            sql.CommandText = "INSERT INTO (userName, password, nivel, imagen, huella) " +
+            sql.CommandText = "INSERT INTO usuarios (userName, password, nivel, imagen, huella) " +
                 "VALUES (?userName, ?password, ?nivel, ?imagen, ?huella)";
             sql.Parameters.AddWithValue("?userName", txtNombreUsu.Text);
             sql.Parameters.AddWithValue("?password", Clases.CFuncionesGenerales.GetHashString(txtContra.Text));
@@ -127,7 +127,7 @@ namespace GYM.Formularios
             try
             {
                 OpenFileDialog ofd = new OpenFileDialog();
-                ofd.Filter = "Archivos de imagen (*.jpeg, *.jpg) | *.jpeg, *.jpg";
+                ofd.Filter = "Archivos de imagen (*.jpeg, *.jpg) | *.jpeg;*.jpg";
                 ofd.Multiselect = false;
                 ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
                 DialogResult r = ofd.ShowDialog();
@@ -149,12 +149,15 @@ namespace GYM.Formularios
 
         private void frmNuevoUsuario_FormClosed(object sender, FormClosedEventArgs e)
         {
-            CFuncionesGenerales.AbrirHuellas();
+            CFuncionesGenerales.CerrarHuellas();
         }
 
         private void btnHuella_Click(object sender, EventArgs e)
         {
-            (new Formularios.Socio.frmCapturarHuella(this)).ShowDialog();
+            if (!Clases.CConfiguracionXML.ExisteConfiguracion("huella", "lector"))
+                MessageBox.Show("No se ha configurado un lector de huella digital", "Gym CSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                (new Formularios.Socio.frmCapturarHuella(this)).ShowDialog();
         }
     }
 }

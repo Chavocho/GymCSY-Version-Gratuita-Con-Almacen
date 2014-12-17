@@ -33,11 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVisualizarMembresias));
             this.dgvMembresias = new System.Windows.Forms.DataGridView();
-            this.lblETipo = new System.Windows.Forms.Label();
-            this.lblTipo = new System.Windows.Forms.Label();
             this.FechaIni = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblETipo = new System.Windows.Forms.Label();
+            this.lblTipo = new System.Windows.Forms.Label();
             this.lblTipoPago = new System.Windows.Forms.Label();
             this.lblETipoPago = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
@@ -55,6 +55,7 @@
             this.lblSocio = new System.Windows.Forms.Label();
             this.lblESocio = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.lblInformacion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembresias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,31 +107,9 @@
             this.dgvMembresias.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvMembresias.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMembresias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMembresias.Size = new System.Drawing.Size(984, 340);
+            this.dgvMembresias.Size = new System.Drawing.Size(984, 316);
             this.dgvMembresias.TabIndex = 14;
             this.dgvMembresias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMembresias_CellClick);
-            // 
-            // lblETipo
-            // 
-            this.lblETipo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblETipo.AutoSize = true;
-            this.lblETipo.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblETipo.Location = new System.Drawing.Point(516, 9);
-            this.lblETipo.Name = "lblETipo";
-            this.lblETipo.Size = new System.Drawing.Size(128, 19);
-            this.lblETipo.TabIndex = 15;
-            this.lblETipo.Text = "Tipo de membresía:";
-            // 
-            // lblTipo
-            // 
-            this.lblTipo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblTipo.AutoSize = true;
-            this.lblTipo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblTipo.Location = new System.Drawing.Point(650, 28);
-            this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(17, 19);
-            this.lblTipo.TabIndex = 16;
-            this.lblTipo.Text = "2";
             // 
             // FechaIni
             // 
@@ -155,6 +134,28 @@
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.ReadOnly = true;
             // 
+            // lblETipo
+            // 
+            this.lblETipo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblETipo.AutoSize = true;
+            this.lblETipo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblETipo.Location = new System.Drawing.Point(516, 9);
+            this.lblETipo.Name = "lblETipo";
+            this.lblETipo.Size = new System.Drawing.Size(128, 19);
+            this.lblETipo.TabIndex = 15;
+            this.lblETipo.Text = "Tipo de membresía:";
+            // 
+            // lblTipo
+            // 
+            this.lblTipo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTipo.Location = new System.Drawing.Point(650, 28);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(114, 19);
+            this.lblTipo.TabIndex = 16;
+            this.lblTipo.Text = "Sin información";
+            // 
             // lblTipoPago
             // 
             this.lblTipoPago.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -162,9 +163,9 @@
             this.lblTipoPago.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblTipoPago.Location = new System.Drawing.Point(869, 28);
             this.lblTipoPago.Name = "lblTipoPago";
-            this.lblTipoPago.Size = new System.Drawing.Size(17, 19);
+            this.lblTipoPago.Size = new System.Drawing.Size(114, 19);
             this.lblTipoPago.TabIndex = 18;
-            this.lblTipoPago.Text = "2";
+            this.lblTipoPago.Text = "Sin información";
             // 
             // lblETipoPago
             // 
@@ -184,9 +185,9 @@
             this.lblPrecio.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblPrecio.Location = new System.Drawing.Point(63, 84);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(17, 19);
+            this.lblPrecio.Size = new System.Drawing.Size(114, 19);
             this.lblPrecio.TabIndex = 20;
-            this.lblPrecio.Text = "2";
+            this.lblPrecio.Text = "Sin información";
             // 
             // lblEPrecio
             // 
@@ -206,9 +207,9 @@
             this.lblFolioRemision.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblFolioRemision.Location = new System.Drawing.Point(358, 84);
             this.lblFolioRemision.Name = "lblFolioRemision";
-            this.lblFolioRemision.Size = new System.Drawing.Size(17, 19);
+            this.lblFolioRemision.Size = new System.Drawing.Size(114, 19);
             this.lblFolioRemision.TabIndex = 22;
-            this.lblFolioRemision.Text = "2";
+            this.lblFolioRemision.Text = "Sin información";
             // 
             // lblEFolioRemision
             // 
@@ -228,9 +229,9 @@
             this.lblTerminacion.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblTerminacion.Location = new System.Drawing.Point(602, 79);
             this.lblTerminacion.Name = "lblTerminacion";
-            this.lblTerminacion.Size = new System.Drawing.Size(17, 19);
+            this.lblTerminacion.Size = new System.Drawing.Size(114, 19);
             this.lblTerminacion.TabIndex = 24;
-            this.lblTerminacion.Text = "2";
+            this.lblTerminacion.Text = "Sin información";
             // 
             // lblETerminacion
             // 
@@ -250,9 +251,9 @@
             this.lblFolioTicket.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblFolioTicket.Location = new System.Drawing.Point(857, 79);
             this.lblFolioTicket.Name = "lblFolioTicket";
-            this.lblFolioTicket.Size = new System.Drawing.Size(17, 19);
+            this.lblFolioTicket.Size = new System.Drawing.Size(114, 19);
             this.lblFolioTicket.TabIndex = 26;
-            this.lblFolioTicket.Text = "2";
+            this.lblFolioTicket.Text = "Sin información";
             // 
             // lblEFolioTicket
             // 
@@ -272,9 +273,9 @@
             this.lblCreateUser.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblCreateUser.Location = new System.Drawing.Point(117, 138);
             this.lblCreateUser.Name = "lblCreateUser";
-            this.lblCreateUser.Size = new System.Drawing.Size(17, 19);
+            this.lblCreateUser.Size = new System.Drawing.Size(114, 19);
             this.lblCreateUser.TabIndex = 28;
-            this.lblCreateUser.Text = "2";
+            this.lblCreateUser.Text = "Sin información";
             // 
             // lblECreateUser
             // 
@@ -294,9 +295,9 @@
             this.lblCreateTime.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblCreateTime.Location = new System.Drawing.Point(373, 138);
             this.lblCreateTime.Name = "lblCreateTime";
-            this.lblCreateTime.Size = new System.Drawing.Size(17, 19);
+            this.lblCreateTime.Size = new System.Drawing.Size(114, 19);
             this.lblCreateTime.TabIndex = 30;
-            this.lblCreateTime.Text = "2";
+            this.lblCreateTime.Text = "Sin información";
             // 
             // lblECreateTime
             // 
@@ -335,19 +336,31 @@
             // 
             this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.btnAceptar.Location = new System.Drawing.Point(921, 527);
+            this.btnAceptar.Location = new System.Drawing.Point(894, 511);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.Size = new System.Drawing.Size(102, 39);
             this.btnAceptar.TabIndex = 37;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // lblInformacion
+            // 
+            this.lblInformacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblInformacion.AutoSize = true;
+            this.lblInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInformacion.Location = new System.Drawing.Point(40, 524);
+            this.lblInformacion.Name = "lblInformacion";
+            this.lblInformacion.Size = new System.Drawing.Size(566, 24);
+            this.lblInformacion.TabIndex = 38;
+            this.lblInformacion.Text = "Selecciona un registro para ver su información en la parte superior\r\n";
             // 
             // frmVisualizarMembresias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 562);
+            this.Controls.Add(this.lblInformacion);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblSocio);
             this.Controls.Add(this.lblESocio);
@@ -370,7 +383,8 @@
             this.Controls.Add(this.dgvMembresias);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmVisualizarMembresias";
-            this.Text = "2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Registro de membresías ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmVisualizarMembresias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembresias)).EndInit();
@@ -404,5 +418,6 @@
         private System.Windows.Forms.Label lblSocio;
         private System.Windows.Forms.Label lblESocio;
         private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Label lblInformacion;
     }
 }

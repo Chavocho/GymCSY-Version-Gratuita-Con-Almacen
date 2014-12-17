@@ -54,6 +54,8 @@
             this.lockersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.pendientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.membresíasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.puntodeVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,7 +69,7 @@
             this.agregarDineroACajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarGastoDeCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.registrarEntradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DetalladoCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cortesDeCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarInformacionPersonalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -93,8 +95,6 @@
             this.tmrCumpleaños = new System.Windows.Forms.Timer(this.components);
             this.pcbUsuario = new System.Windows.Forms.PictureBox();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.membresíasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUsuario)).BeginInit();
             this.SuspendLayout();
@@ -138,7 +138,6 @@
             this.toolStripOpciones.Size = new System.Drawing.Size(188, 22);
             this.toolStripOpciones.Text = "&Opciones de respaldo";
             this.toolStripOpciones.Visible = false;
-            this.toolStripOpciones.Click += new System.EventHandler(this.opcionesDeRespaldoToolStripMenuItem_Click);
             // 
             // respaldarBaseDeDatosToolStripMenuItem
             // 
@@ -304,6 +303,21 @@
             this.pendientesToolStripMenuItem.Text = "Pendientes";
             this.pendientesToolStripMenuItem.Click += new System.EventHandler(this.pendientesToolStripMenuItem_Click);
             // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.membresíasToolStripMenuItem});
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Text = "Report&es";
+            // 
+            // membresíasToolStripMenuItem
+            // 
+            this.membresíasToolStripMenuItem.Name = "membresíasToolStripMenuItem";
+            this.membresíasToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.membresíasToolStripMenuItem.Text = "Membresías";
+            this.membresíasToolStripMenuItem.Click += new System.EventHandler(this.membresíasToolStripMenuItem_Click);
+            // 
             // puntodeVentaToolStripMenuItem
             // 
             this.puntodeVentaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -368,7 +382,7 @@
             this.agregarDineroACajaToolStripMenuItem,
             this.agregarGastoDeCajaToolStripMenuItem,
             this.toolStripMenuItem2,
-            this.registrarEntradaToolStripMenuItem,
+            this.DetalladoCajaToolStripMenuItem,
             this.cortesDeCajaToolStripMenuItem});
             this.movimientosToolStripMenuItem.Name = "movimientosToolStripMenuItem";
             this.movimientosToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
@@ -405,12 +419,12 @@
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(182, 6);
             // 
-            // registrarEntradaToolStripMenuItem
+            // DetalladoCajaToolStripMenuItem
             // 
-            this.registrarEntradaToolStripMenuItem.Name = "registrarEntradaToolStripMenuItem";
-            this.registrarEntradaToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.registrarEntradaToolStripMenuItem.Text = "Detallado caja";
-            this.registrarEntradaToolStripMenuItem.Click += new System.EventHandler(this.registrarEntradaToolStripMenuItem_Click);
+            this.DetalladoCajaToolStripMenuItem.Name = "DetalladoCajaToolStripMenuItem";
+            this.DetalladoCajaToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.DetalladoCajaToolStripMenuItem.Text = "Detallado caja";
+            this.DetalladoCajaToolStripMenuItem.Click += new System.EventHandler(this.registrarEntradaToolStripMenuItem_Click);
             // 
             // cortesDeCajaToolStripMenuItem
             // 
@@ -588,6 +602,7 @@
             // 
             this.pcbUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pcbUsuario.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pcbUsuario.Image = global::GYM.Properties.Resources.ImgLogin;
             this.pcbUsuario.Location = new System.Drawing.Point(831, 47);
             this.pcbUsuario.Name = "pcbUsuario";
             this.pcbUsuario.Size = new System.Drawing.Size(125, 125);
@@ -601,27 +616,12 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
+            this.lblUsuario.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblUsuario.Location = new System.Drawing.Point(905, 24);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(51, 20);
             this.lblUsuario.TabIndex = 4;
             this.lblUsuario.Text = "label1";
-            // 
-            // reportesToolStripMenuItem
-            // 
-            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.membresíasToolStripMenuItem});
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.reportesToolStripMenuItem.Text = "Reporte&s";
-            // 
-            // membresíasToolStripMenuItem
-            // 
-            this.membresíasToolStripMenuItem.Name = "membresíasToolStripMenuItem";
-            this.membresíasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.membresíasToolStripMenuItem.Text = "Membresías";
-            this.membresíasToolStripMenuItem.Click += new System.EventHandler(this.membresíasToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -668,7 +668,7 @@
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem casillerosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem movimientosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registrarEntradaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DetalladoCajaToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem agregarDineroACajaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarGastoDeCajaToolStripMenuItem;

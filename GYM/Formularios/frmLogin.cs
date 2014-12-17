@@ -65,6 +65,8 @@ namespace GYM.Formularios
                         Image img = null;
                         if (dr["imagen"] != DBNull.Value)
                             img = CFuncionesGenerales.BytesImagen((byte[])dr["imagen"]);
+                        else
+                            img=pbxUsuario.Image;
                         (new frmMain(Convert.ToInt32(dr["nivel"]), Convert.ToInt32(dr["id"]), tbxUsuario.Text, img)).Show();
                         this.Close();
                     }
