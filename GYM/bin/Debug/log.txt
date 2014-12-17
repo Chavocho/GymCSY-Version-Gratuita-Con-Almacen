@@ -198,3 +198,6 @@ Nombre del parámetro: index
    en System.ThrowHelper.ThrowArgumentOutOfRangeException()
    en System.Collections.Generic.List`1.get_Item(Int32 index)
    en GYM.Formularios.Reportes.frmVisualizarMembresias.MostrarInformacion(Int32 index)|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   en GYM.Clases.CMembresia.DesactivarMembresia() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\CMembresia.cs:línea 314
+   en GYM.frmSplash.bgwCargar_DoWork(Object sender, DoWorkEventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\frmSplash.cs:línea 340|
