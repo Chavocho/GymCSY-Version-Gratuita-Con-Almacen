@@ -154,9 +154,9 @@
             this.lblInstrucciones.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.lblInstrucciones.Location = new System.Drawing.Point(151, 127);
             this.lblInstrucciones.Name = "lblInstrucciones";
-            this.lblInstrucciones.Size = new System.Drawing.Size(85, 39);
+            this.lblInstrucciones.Size = new System.Drawing.Size(103, 39);
             this.lblInstrucciones.TabIndex = 32;
-            this.lblInstrucciones.Text = "Haga clic para\r\ncambiar la ima-\r\ngen de usuario";
+            this.lblInstrucciones.Text = "Haga clic para\r\ncambiar la imagen \r\nde usuario";
             // 
             // btnQuitar
             // 

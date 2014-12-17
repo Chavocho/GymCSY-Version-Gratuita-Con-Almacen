@@ -106,9 +106,9 @@
             this.lblInformacion.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.lblInformacion.Location = new System.Drawing.Point(6, 70);
             this.lblInformacion.Name = "lblInformacion";
-            this.lblInformacion.Size = new System.Drawing.Size(229, 75);
+            this.lblInformacion.Size = new System.Drawing.Size(229, 100);
             this.lblInformacion.TabIndex = 15;
-            this.lblInformacion.Text = "*Para poder cambiar la\r\nconfiguración, inicie \r\nsesión como administrador";
+            this.lblInformacion.Text = "*Para poder cambiar la\r\nconfiguración, inicie \r\nsesión como administrador\r\n\r\n";
             // 
             // frmLoginConfig
             // 

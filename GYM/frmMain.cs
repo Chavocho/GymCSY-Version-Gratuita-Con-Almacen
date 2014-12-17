@@ -148,14 +148,11 @@ namespace GYM
 
         }
 
-        private void opcionesDeRespaldoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void main_Load(object sender, EventArgs e)
         {
             Clases.CFuncionesGenerales.CargarInterfaz(this);
+            lblUsuario.ForeColor = Color.WhiteSmoke;
             if (!GYM.Clases.CFuncionesGenerales.versionGratuita)
                 tmrCumpleaños.Enabled = true;
         }
@@ -190,10 +187,6 @@ namespace GYM
             Application.Exit();
         }
 
-        private void tmrTiempo_Tick(object sender, EventArgs e)
-        {
-            
-        }
 
         private void ingresarSocioToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -259,22 +252,24 @@ namespace GYM
 
         private void ElementosEncargado()
         {
-            configuraciónToolStripMenuItem1.Visible = false;
-            cortesDeCajaToolStripMenuItem.Visible = false;
-
+            sonidosToolStripMenuItem.Visible = false;
+            correoToolStripMenuItem.Visible = false;
+            huellaDigitalToolStripMenuItem.Visible = false;
+            baseDedatosToolStripMenuItem.Visible = false;
         }
 
         private void ElementosAyudante()
         {
             configuraciónToolStripMenuItem1.Visible = false;
-            panelToolStripMenuItem.Visible = false;
-            agregarProductoToolStripMenuItem.Visible = false;
-            inventarioToolStripMenuItem.Visible = false;
-            //administraciònToolStripMenuItem.Visible = false;
+            productosToolStripMenuItem.Visible = false;
+            comprasToolStripMenuItem.Visible = false;
+            DetalladoCajaToolStripMenuItem.Visible = false;
+            cortesDeCajaToolStripMenuItem.Visible = false;
+            empleadoToolStripMenuItem.Visible = false;
+            reportesToolStripMenuItem.Visible = false;
             cortesíasToolStripMenuItem.Visible = false;
             pendientesToolStripMenuItem.Visible = false;
-            registrarEntradaToolStripMenuItem.Visible = false;
-            cortesDeCajaToolStripMenuItem.Visible = false;
+           
         }
 
         private void toolStripSocios_Click(object sender, EventArgs e)

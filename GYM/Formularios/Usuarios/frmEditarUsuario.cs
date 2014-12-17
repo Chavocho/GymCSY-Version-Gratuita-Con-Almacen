@@ -193,7 +193,10 @@ namespace GYM.Formularios
 
         private void btnHuella_Click(object sender, EventArgs e)
         {
-            (new Formularios.Socio.frmCapturarHuella(this)).ShowDialog();
+            if (!Clases.CConfiguracionXML.ExisteConfiguracion("huella","lector"))
+                MessageBox.Show("No se ha configurado un lector de huella digital","Gym CSY",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            else
+                (new Formularios.Socio.frmCapturarHuella(this)).ShowDialog();
         }
     }
 }

@@ -15,6 +15,7 @@ namespace GYM.Formularios.Reportes
     public partial class frmVisualizarMembresias : Form
     {
         int idM, numSocio;
+        string nomSoc;
         List<int> tipo = new List<int>(), tipoPago = new List<int>(),
             terminacion = new List<int>(), folioRemision = new List<int>(),
             folioTicket = new List<int>(), createUser = new List<int>();
@@ -24,9 +25,10 @@ namespace GYM.Formularios.Reportes
         public frmVisualizarMembresias(int idM, int numSocio, string nomSocio)
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             this.idM = idM;
             this.numSocio = numSocio;
-            lblSocio.Text = nomSocio;
+            lblSocio.Text=nomSoc= nomSocio;
         }
 
         private void BuscarRegMembresias()
@@ -35,6 +37,8 @@ namespace GYM.Formularios.Reportes
             {
                 string sql = "SELECT * FROM registro_membresias WHERE membresia_id='" + idM + "'";
                 DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
+                if (dt.Rows.Count==0)
+                    MessageBox.Show(nomSoc+" no cuenta con registros de membresías","GymCSY",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 foreach (DataRow dr in dt.Rows)
                 {
                     DateTime fechaIni = DateTime.Parse(dr["fecha_ini"].ToString()), fechaFin = DateTime.Parse(dr["fecha_fin"].ToString());
@@ -172,7 +176,7 @@ namespace GYM.Formularios.Reportes
         private void frmVisualizarMembresias_Load(object sender, EventArgs e)
         {
             BuscarRegMembresias();
-            MostrarInformacion(0);
+            //MostrarInformacion(0);
         }
 
         private void dgvMembresias_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -190,5 +194,6 @@ namespace GYM.Formularios.Reportes
         {
             this.Close();
         }
+
     }
 }

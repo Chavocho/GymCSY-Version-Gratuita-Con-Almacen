@@ -41,6 +41,7 @@ namespace GYM.Formularios.Reportes
         public frmReporteMembresíasSocio()
         {
             InitializeComponent();
+            GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
         }
 
         private void BuscarMembresias(string p)
@@ -49,7 +50,7 @@ namespace GYM.Formularios.Reportes
             try
             {
                 string sql = "SELECT s.numSocio, s.nombre, s.apellidos, m.id, m.estado, m.fecha_ini, m.fecha_fin " + 
-                    "FROM miembros AS s INNER JOIN membresias AS m ON (s.numSocio=m.numSocio) WHERE s.numSocio='" + p + "' OR s.nombre LIKE '%" + p + "%' OR s.apellidos LIKE '%" + p + "%'";
+                    "FROM miembros AS s INNER JOIN membresias AS m ON (s.numSocio=m.numSocio) WHERE s.numSocio='" + p + "' OR s.nombre LIKE '%" + p + "%' OR s.apellidos LIKE '%" + p + "%' ORDER BY s.numSocio";
                 dt = ConexionBD.EjecutarConsultaSelect(sql);
             }
             catch (MySqlException ex)

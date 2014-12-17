@@ -44,7 +44,7 @@ namespace GYM.Formularios
             }
             else
             {
-                MessageBox.Show("El usuario ingresado no existe, o no es de nivel administrador.\nVerifica los datos", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El usuario ingresado no existe, o no puede realizar esta acción.\nVerifica los datos", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
