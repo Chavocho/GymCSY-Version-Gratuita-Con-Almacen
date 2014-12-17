@@ -60,7 +60,7 @@ namespace GYM.Formularios.Membresia
                     if (dr["estado"] != DBNull.Value)
                     {
                         CMembresia.EstadoMembresia es = (CMembresia.EstadoMembresia)Enum.Parse(typeof(CMembresia.EstadoMembresia), dr["estado"].ToString());
-                        if (es == CMembresia.EstadoMembresia.Terminada)
+                        if (es == CMembresia.EstadoMembresia.Inactiva)
                             status = "Inactivo";
                         else if (es == CMembresia.EstadoMembresia.Activa)
                             status = "Activo";

@@ -13,7 +13,7 @@ namespace GYM.Clases
     {
         public enum EstadoMembresia
         {
-            Terminada = 0,
+            Inactiva = 0,
             Pendiente = 1,
             Activa = 2,
             Rechazada = 3
@@ -304,8 +304,8 @@ namespace GYM.Clases
             try
             {
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "UPDATE membresias SET estado=?estado WHERE DATE_FORMAT('%Y-%m-%d', fecha_fin)<=?fecha_fin";
-                sql.Parameters.AddWithValue("?estado", EstadoMembresia.Terminada);
+                sql.CommandText = "UPDATE membresias SET estado=?estado WHERE DATE_FORMAT(fecha_fin, '%Y-%m-%d')<?fecha_fin";
+                sql.Parameters.AddWithValue("?estado", EstadoMembresia.Inactiva);
                 sql.Parameters.AddWithValue("?fecha_fin", DateTime.Now.ToString("yyyy-MM-dd"));
                 ConexionBD.EjecutarConsulta(sql);
             }

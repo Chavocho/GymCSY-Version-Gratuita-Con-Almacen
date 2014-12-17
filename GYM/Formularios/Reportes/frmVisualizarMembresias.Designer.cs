@@ -91,7 +91,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMembresias.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvMembresias.Location = new System.Drawing.Point(12, 172);
+            this.dgvMembresias.Location = new System.Drawing.Point(12, 211);
             this.dgvMembresias.Name = "dgvMembresias";
             this.dgvMembresias.ReadOnly = true;
             this.dgvMembresias.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -107,7 +107,7 @@
             this.dgvMembresias.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvMembresias.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMembresias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMembresias.Size = new System.Drawing.Size(984, 316);
+            this.dgvMembresias.Size = new System.Drawing.Size(984, 302);
             this.dgvMembresias.TabIndex = 14;
             this.dgvMembresias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMembresias_CellClick);
             // 
@@ -336,22 +336,24 @@
             // 
             this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.btnAceptar.Location = new System.Drawing.Point(894, 511);
+            this.btnAceptar.Image = global::GYM.Properties.Resources.ImgAceptar;
+            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAceptar.Location = new System.Drawing.Point(894, 519);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(102, 39);
+            this.btnAceptar.Size = new System.Drawing.Size(102, 31);
             this.btnAceptar.TabIndex = 37;
             this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // lblInformacion
             // 
-            this.lblInformacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblInformacion.AutoSize = true;
-            this.lblInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInformacion.Location = new System.Drawing.Point(40, 524);
+            this.lblInformacion.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblInformacion.Location = new System.Drawing.Point(8, 187);
             this.lblInformacion.Name = "lblInformacion";
-            this.lblInformacion.Size = new System.Drawing.Size(566, 24);
+            this.lblInformacion.Size = new System.Drawing.Size(471, 21);
             this.lblInformacion.TabIndex = 38;
             this.lblInformacion.Text = "Selecciona un registro para ver su información en la parte superior\r\n";
             // 

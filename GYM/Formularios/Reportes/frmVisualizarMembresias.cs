@@ -176,7 +176,7 @@ namespace GYM.Formularios.Reportes
         private void frmVisualizarMembresias_Load(object sender, EventArgs e)
         {
             BuscarRegMembresias();
-            //MostrarInformacion(0);
+            MostrarInformacion(0);
         }
 
         private void dgvMembresias_CellClick(object sender, DataGridViewCellEventArgs e)

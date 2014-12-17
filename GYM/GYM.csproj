@@ -107,14 +107,12 @@
   <ItemGroup>
     <Compile Include="Clases\CConfiguracionXML.cs" />
     <Compile Include="Clases\CCorreos.cs" />
-    <Compile Include="Clases\CEventosPDF.cs" />
     <Compile Include="Clases\CFuncionesGenerales.cs" />
     <Compile Include="Clases\CHorario.cs" />
     <Compile Include="Clases\CHorarioSerializable.cs" />
     <Compile Include="Clases\CMembresia.cs" />
     <Compile Include="Clases\CMiembro.cs" />
     <Compile Include="Clases\ConexionBD.cs" />
-    <Compile Include="Clases\CPDF.cs" />
     <Compile Include="Clases\CProducto.cs" />
     <Compile Include="Clases\CRegistro_membresias.cs" />
     <Compile Include="Clases\CRegistro_trabajadores.cs" />
@@ -393,77 +391,17 @@
     <Compile Include="Formularios\Reportes\frmReporteMembresíasSocio.Designer.cs">
       <DependentUpon>frmReporteMembresíasSocio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Reportes\frmReporteVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\frmReporteVentas.Designer.cs">
+      <DependentUpon>frmReporteVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Reportes\frmVisualizarMembresias.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Reportes\frmVisualizarMembresias.Designer.cs">
       <DependentUpon>frmVisualizarMembresias.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Reporte\frmDialogo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Reporte\frmDialogo.designer.cs">
-      <DependentUpon>frmDialogo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Reporte\frmEncabezados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Reporte\frmEncabezados.Designer.cs">
-      <DependentUpon>frmEncabezados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Reporte\frmGaleriaIconos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Reporte\frmGaleriaIconos.Designer.cs">
-      <DependentUpon>frmGaleriaIconos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Reporte\frmOpcionesAvanzadasCaja.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Reporte\frmOpcionesAvanzadasCaja.Designer.cs">
-      <DependentUpon>frmOpcionesAvanzadasCaja.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Reporte\frmOpcionesAvanzadasPOS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Reporte\frmOpcionesAvanzadasPOS.Designer.cs">
-      <DependentUpon>frmOpcionesAvanzadasPOS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Reporte\frmOpcionesAvanzadasProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Reporte\frmOpcionesAvanzadasProducto.designer.cs">
-      <DependentUpon>frmOpcionesAvanzadasProducto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Reporte\frmOpcionesAvanzadasSociosMembresias.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Reporte\frmOpcionesAvanzadasSociosMembresias.designer.cs">
-      <DependentUpon>frmOpcionesAvanzadasSociosMembresias.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Reporte\frmOpcionesAvanzadasTrabajador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Reporte\frmOpcionesAvanzadasTrabajador.designer.cs">
-      <DependentUpon>frmOpcionesAvanzadasTrabajador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Reporte\frmOpcionesAvanzadasUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Reporte\frmOpcionesAvanzadasUsuario.Designer.cs">
-      <DependentUpon>frmOpcionesAvanzadasUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Reporte\frmReportes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Reporte\frmReportes.designer.cs">
-      <DependentUpon>frmReportes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Reporte\frmVisorPDF.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Reporte\frmVisorPDF.designer.cs">
-      <DependentUpon>frmVisorPDF.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Socio\frmAgregarMiembro.cs">
       <SubType>Form</SubType>
@@ -692,41 +630,11 @@
     <EmbeddedResource Include="Formularios\Reportes\frmReporteMembresíasSocio.resx">
       <DependentUpon>frmReporteMembresíasSocio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\frmReporteVentas.resx">
+      <DependentUpon>frmReporteVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Reportes\frmVisualizarMembresias.resx">
       <DependentUpon>frmVisualizarMembresias.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Reporte\frmDialogo.resx">
-      <DependentUpon>frmDialogo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Reporte\frmEncabezados.resx">
-      <DependentUpon>frmEncabezados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Reporte\frmGaleriaIconos.resx">
-      <DependentUpon>frmGaleriaIconos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Reporte\frmOpcionesAvanzadasCaja.resx">
-      <DependentUpon>frmOpcionesAvanzadasCaja.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Reporte\frmOpcionesAvanzadasPOS.resx">
-      <DependentUpon>frmOpcionesAvanzadasPOS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Reporte\frmOpcionesAvanzadasProducto.resx">
-      <DependentUpon>frmOpcionesAvanzadasProducto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Reporte\frmOpcionesAvanzadasSociosMembresias.resx">
-      <DependentUpon>frmOpcionesAvanzadasSociosMembresias.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Reporte\frmOpcionesAvanzadasTrabajador.resx">
-      <DependentUpon>frmOpcionesAvanzadasTrabajador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Reporte\frmOpcionesAvanzadasUsuario.resx">
-      <DependentUpon>frmOpcionesAvanzadasUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Reporte\frmReportes.resx">
-      <DependentUpon>frmReportes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Reporte\frmVisorPDF.resx">
-      <DependentUpon>frmVisorPDF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Socio\frmAgregarMiembro.resx">
       <DependentUpon>frmAgregarMiembro.cs</DependentUpon>

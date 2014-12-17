@@ -1,4 +1,5 @@
 ﻿using GYM.Clases;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,8 @@ namespace GYM.Formularios
 {
     public partial class frmLogin : Form
     {
+        delegate void Imagen(Image img);
+        Image img;
         bool estadoTbxUsuario = false, estadoTbxPass = false;
         public frmLogin()
         {
@@ -44,6 +47,33 @@ namespace GYM.Formularios
             }
         }
 
+        private void ImagenUsuario(string userName)
+        {
+            Imagen i = new Imagen(ImagenUsuario);
+            try
+            {
+                MySqlCommand sql = new MySqlCommand();
+                sql.CommandText = "SELECT imagen FROM usuarios WHERE userName=?userName";
+                sql.Parameters.AddWithValue("?userName", userName);
+                DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    img = CFuncionesGenerales.BytesImagen((byte[])dr["imagen"]);
+                    this.Invoke(i, img);
+                    return;
+                }
+            }
+            catch
+            {
+            }
+            this.Invoke(i, GYM.Properties.Resources.ImgLogin);
+        }
+
+        private void ImagenUsuario(Image img)
+        {
+            pbxUsuario.Image = img;
+        }
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -52,34 +82,45 @@ namespace GYM.Formularios
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             if (tbxUsuario.Text.Equals("") || tbxPassword.Text.Equals(""))
-               MessageBox.Show("Debes ingresar un usuario y una contraseña para poder acceder al sistema.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            {
+                MessageBox.Show("Debes ingresar un usuario y una contraseña para poder acceder al sistema.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
                 try
                 {
-                    string sql = "Select * from usuarios where userName like '" + tbxUsuario.Text.Trim() + "' and password like '" + Clases.CFuncionesGenerales.GetHashString(tbxPassword.Text.Trim()) + "' limit 1";
-                    DataTable respuesta = Clases.ConexionBD.EjecutarConsultaSelect(sql);
-                    DataRow dr = respuesta.Rows[0];
-                    if (tbxUsuario.Text.Equals(dr["userName"]) && Clases.CFuncionesGenerales.GetHashString(tbxPassword.Text.Trim()).Equals(dr["password"]))
+                    string sql = "SELECT * FROM usuarios WHERE userName='" + tbxUsuario.Text + "' AND password='" + CFuncionesGenerales.GetHashString(tbxPassword.Text) + "'";
+                    DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
+                    foreach (DataRow dr in dt.Rows)
                     {
-                        Image img = null;
-                        if (dr["imagen"] != DBNull.Value)
-                            img = CFuncionesGenerales.BytesImagen((byte[])dr["imagen"]);
+                        if (tbxUsuario.Text.Equals(dr["userName"]) && Clases.CFuncionesGenerales.GetHashString(tbxPassword.Text.Trim()).Equals(dr["password"]))
+                        {
+                            Image img = null;
+                            if (dr["imagen"] != DBNull.Value)
+                                img = CFuncionesGenerales.BytesImagen((byte[])dr["imagen"]);
+                            else
+                                img = pbxUsuario.Image;
+                            (new frmMain(Convert.ToInt32(dr["nivel"]), Convert.ToInt32(dr["id"]), tbxUsuario.Text, img)).Show();
+                            this.Close();
+                            return;
+                        }
                         else
-                            img=pbxUsuario.Image;
-                        (new frmMain(Convert.ToInt32(dr["nivel"]), Convert.ToInt32(dr["id"]), tbxUsuario.Text, img)).Show();
-                        this.Close();
+                        {
+                            MessageBox.Show("El Usuario y/o contraseña es incorrecta.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            tbxPassword.Text = "";
+                            return;
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("El Usuario y/o contraseña es incorrecta", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        tbxPassword.Text = "";
-                    }
-
+                    MessageBox.Show("El usuario y/o contraseña es incorrecta.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (Exception)
+                catch (MySqlException ex)
                 {
-                    MessageBox.Show("El Usuario y/o contraseña es incorrecta", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    CFuncionesGenerales.MensajeError("Ocurrió un error al verificar los datos del usuario. No se ha podido conectar con la base de datos.", ex);
+                    tbxPassword.Text = "";
+                }
+                catch (Exception ex)
+                {
+                    CFuncionesGenerales.MensajeError("Ocurrió un error al verificar los datos del usuario. Ocurrió un error genérico.", ex);
                     tbxPassword.Text = "";
                 }
             }
@@ -111,9 +152,20 @@ namespace GYM.Formularios
             estadoTbxUsuario = true;
         }
 
+        private void tbxUsuario_LostFocus(object sender, EventArgs e)
+        {
+            if (!bgwImagen.IsBusy)
+                bgwImagen.RunWorkerAsync(tbxUsuario.Text);
+        }
+
         private void tbxPassword_TextChanged(object sender, EventArgs e)
         {
             estadoTbxPass = true;
+        }
+
+        private void bgwImagen_DoWork(object sender, DoWorkEventArgs e)
+        {
+            ImagenUsuario(e.Argument.ToString());
         }
 
     }

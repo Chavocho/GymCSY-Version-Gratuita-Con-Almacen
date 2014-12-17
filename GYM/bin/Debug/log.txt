@@ -242,3 +242,14 @@ System.ArgumentOutOfRangeException: El valor de '0' no es válido para 'Value'. 
 Nombre del parámetro: Value
    en System.Windows.Forms.NumericUpDown.set_Value(Decimal value)
    en GYM.Formularios.POS.frmProductos.nudCantidad_ValueChanged(Object sender, EventArgs e) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmProductos.cs:línea 129|
+System.IndexOutOfRangeException: No hay ninguna fila en la posición 0.
+   en System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   en System.Data.DataRowCollection.get_Item(Int32 index)
+   en GYM.Formularios.frmLogin.btnIngresar_Click(Object sender, EventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\frmLogin.cs:línea 63|
+System.IndexOutOfRangeException: No hay ninguna fila en la posición 0.
+   en System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   en System.Data.DataRowCollection.get_Item(Int32 index)
+   en GYM.Formularios.frmLogin.btnIngresar_Click(Object sender, EventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\frmLogin.cs:línea 63|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'nombre' in 'where clause'
+   en GYM.Clases.ConexionBD.EjecutarConsultaSelect(String consulta) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 135
+   en GYM.Formularios.frmLogin.btnIngresar_Click(Object sender, EventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\frmLogin.cs:línea 64|

@@ -417,19 +417,6 @@ namespace GYM
                 MessageBox.Show("Se ha generado un error al respaldao todo los datos\n intentelo de nuevo", "Respaldo Base de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void panelToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (GYM.Clases.CFuncionesGenerales.versionGratuita)
-            {
-                MessageBox.Show("Esta opción no está disponible en la versión gratuita de GymCSY .\nContacta con el proveedor para adquirir la versión completa.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            if (!Formularios.Reporte.frmReportes.Instancia.Visible)
-            {
-                Formularios.Reporte.frmReportes.Instancia.Show(this);
-            }
-        }
-
         private void elToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (GYM.Clases.CFuncionesGenerales.versionGratuita)

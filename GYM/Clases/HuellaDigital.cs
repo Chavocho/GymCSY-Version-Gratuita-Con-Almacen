@@ -121,7 +121,6 @@ namespace GYM.Clases
                     }
                     throw new Exception("Estatus del lector: " + result);
                 }
-
                 if ((HuellaDigital.reader.Status.Status == Constants.ReaderStatuses.DP_STATUS_BUSY))
                 {
                     Thread.Sleep(50);

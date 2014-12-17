@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using MySql.Data.MySqlClient;
 using DPUruNet;
+using GYM.Clases;
 
 namespace GYM.Formularios
 {
@@ -156,15 +157,25 @@ namespace GYM.Formularios
 
         public frmRegistroEntradas()
         {
+            InitializeComponent();
             this.NivelUsuario = nivelUsuario;
             this.ID = id;
-            InitializeComponent();
             GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             tmrTiempo.Enabled = true;
             if (!Clases.CFuncionesGenerales.soloRegistro)
                 this.WindowState = FormWindowState.Normal;
             else
                 this.WindowState = FormWindowState.Maximized;
+
+            try
+            {
+                HuellaDigital.GetStatus();
+            }
+            catch
+            {
+                btnRegEntrada.Visible = false;
+                tbxNumSocio.Size = new Size(419, 49);
+            }
         }
 
         private void archivoToolStripMenuItem_Click(object sender, EventArgs e)

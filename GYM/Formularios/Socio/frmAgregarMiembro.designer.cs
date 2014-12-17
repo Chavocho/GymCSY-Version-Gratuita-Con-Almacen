@@ -326,6 +326,7 @@
             this.cbxCamara.Name = "cbxCamara";
             this.cbxCamara.Size = new System.Drawing.Size(209, 27);
             this.cbxCamara.TabIndex = 13;
+            this.cbxCamara.SelectedIndexChanged += new System.EventHandler(this.cbxCamara_SelectedIndexChanged);
             // 
             // lblSocio
             // 

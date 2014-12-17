@@ -36,6 +36,7 @@
             this.tbxUsuario = new System.Windows.Forms.TextBox();
             this.tbxPassword = new System.Windows.Forms.TextBox();
             this.pbxUsuario = new System.Windows.Forms.PictureBox();
+            this.bgwImagen = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +71,7 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblUsuario.Location = new System.Drawing.Point(317, 32);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(81, 25);
@@ -80,10 +81,10 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblPassword.Location = new System.Drawing.Point(301, 96);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(112, 25);
+            this.lblPassword.Size = new System.Drawing.Size(113, 25);
             this.lblPassword.TabIndex = 4;
             this.lblPassword.Text = "Contraseña";
             // 
@@ -93,6 +94,7 @@
             this.tbxUsuario.Name = "tbxUsuario";
             this.tbxUsuario.Size = new System.Drawing.Size(230, 20);
             this.tbxUsuario.TabIndex = 5;
+            this.tbxUsuario.LostFocus += new System.EventHandler(this.tbxUsuario_LostFocus);
             // 
             // tbxPassword
             // 
@@ -108,9 +110,13 @@
             this.pbxUsuario.Location = new System.Drawing.Point(29, 22);
             this.pbxUsuario.Name = "pbxUsuario";
             this.pbxUsuario.Size = new System.Drawing.Size(161, 170);
-            this.pbxUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbxUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxUsuario.TabIndex = 0;
             this.pbxUsuario.TabStop = false;
+            // 
+            // bgwImagen
+            // 
+            this.bgwImagen.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwImagen_DoWork);
             // 
             // frmLogin
             // 
@@ -149,5 +155,6 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox tbxUsuario;
         private System.Windows.Forms.TextBox tbxPassword;
+        private System.ComponentModel.BackgroundWorker bgwImagen;
     }
 }

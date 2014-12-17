@@ -1094,17 +1094,6 @@ C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\De
 C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmEditarProducto.resources
 C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmInventario.resources
 C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.PuntoDeVenta.frmProducto.resources
-C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reporte.frmDialogo.resources
-C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reporte.frmEncabezados.resources
-C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reporte.frmGaleriaIconos.resources
-C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasCaja.resources
-C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasPOS.resources
-C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasProducto.resources
-C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasSociosMembresias.resources
-C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasTrabajador.resources
-C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reporte.frmOpcionesAvanzadasUsuario.resources
-C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reporte.frmReportes.resources
-C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reporte.frmVisorPDF.resources
 C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Socio.frmAgregarMiembro.resources
 C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Socio.frmCapturarHuella.resources
 C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Socio.frmEditarMiembro.resources

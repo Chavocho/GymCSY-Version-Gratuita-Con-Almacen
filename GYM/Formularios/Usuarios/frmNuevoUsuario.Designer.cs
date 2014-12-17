@@ -42,6 +42,8 @@
             this.lblInstrucciones = new System.Windows.Forms.Label();
             this.btnQuitar = new System.Windows.Forms.Button();
             this.btnHuella = new System.Windows.Forms.Button();
+            this.btnCamara = new System.Windows.Forms.Button();
+            this.cbxCamara = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagenUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -161,9 +163,9 @@
             // btnQuitar
             // 
             this.btnQuitar.Image = global::GYM.Properties.Resources.ImgEliminar;
-            this.btnQuitar.Location = new System.Drawing.Point(154, 236);
+            this.btnQuitar.Location = new System.Drawing.Point(154, 197);
             this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(50, 27);
+            this.btnQuitar.Size = new System.Drawing.Size(50, 30);
             this.btnQuitar.TabIndex = 4;
             this.btnQuitar.UseVisualStyleBackColor = true;
             this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
@@ -180,11 +182,32 @@
             this.btnHuella.UseVisualStyleBackColor = true;
             this.btnHuella.Click += new System.EventHandler(this.btnHuella_Click);
             // 
+            // btnCamara
+            // 
+            this.btnCamara.Image = global::GYM.Properties.Resources.ImgCamaraSmall;
+            this.btnCamara.Location = new System.Drawing.Point(154, 233);
+            this.btnCamara.Name = "btnCamara";
+            this.btnCamara.Size = new System.Drawing.Size(50, 30);
+            this.btnCamara.TabIndex = 33;
+            this.btnCamara.UseVisualStyleBackColor = true;
+            this.btnCamara.Click += new System.EventHandler(this.btnCamara_Click);
+            // 
+            // cbxCamara
+            // 
+            this.cbxCamara.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cbxCamara.FormattingEnabled = true;
+            this.cbxCamara.Location = new System.Drawing.Point(154, 273);
+            this.cbxCamara.Name = "cbxCamara";
+            this.cbxCamara.Size = new System.Drawing.Size(150, 29);
+            this.cbxCamara.TabIndex = 34;
+            // 
             // frmNuevoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(460, 318);
+            this.Controls.Add(this.cbxCamara);
+            this.Controls.Add(this.btnCamara);
             this.Controls.Add(this.btnHuella);
             this.Controls.Add(this.btnQuitar);
             this.Controls.Add(this.lblInstrucciones);
@@ -226,5 +249,7 @@
         private System.Windows.Forms.Label lblInstrucciones;
         private System.Windows.Forms.Button btnQuitar;
         private System.Windows.Forms.Button btnHuella;
+        private System.Windows.Forms.Button btnCamara;
+        private System.Windows.Forms.ComboBox cbxCamara;
     }
 }

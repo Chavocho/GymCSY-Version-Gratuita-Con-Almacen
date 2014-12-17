@@ -567,7 +567,6 @@
             this.panelToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.panelToolStripMenuItem.Text = "Panel";
             this.panelToolStripMenuItem.Visible = false;
-            this.panelToolStripMenuItem.Click += new System.EventHandler(this.panelToolStripMenuItem_Click);
             // 
             // cumpleañosToolStripMenuItem
             // 

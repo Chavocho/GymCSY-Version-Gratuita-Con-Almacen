@@ -181,7 +181,7 @@ namespace GYM.Formularios.Membresia
                 MostrarDatosMembresia();
                 CargarNombreMiembro();
                 CMembresia.EstadoMembresia es = Clases.CMembresia.EstadoActualMembresia(numSocio);
-                if (es == CMembresia.EstadoMembresia.Terminada || es == CMembresia.EstadoMembresia.Rechazada)
+                if (es == CMembresia.EstadoMembresia.Inactiva || es == CMembresia.EstadoMembresia.Rechazada)
                     dtpFechaInicio.Enabled = true;
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
@@ -364,7 +364,7 @@ namespace GYM.Formularios.Membresia
 
         private void dtpFechaInicio_ValueChanged(object sender, EventArgs e)
         {
-            if (dtpFechaInicio.Value.Date < mem.FechaFin.Date && es == CMembresia.EstadoMembresia.Terminada)
+            if (dtpFechaInicio.Value.Date < mem.FechaFin.Date && es == CMembresia.EstadoMembresia.Inactiva)
                 dtpFechaInicio.Value = mem.FechaFin;
             else if (dtpFechaInicio.Value.Date < DateTime.Now.Date)
                 dtpFechaInicio.Value = DateTime.Now;

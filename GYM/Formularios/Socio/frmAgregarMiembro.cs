@@ -276,5 +276,10 @@ namespace GYM.Formularios.Socio
         {
             CFuncionesGenerales.AbrirHuellas();
         }
+
+        private void cbxCamara_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

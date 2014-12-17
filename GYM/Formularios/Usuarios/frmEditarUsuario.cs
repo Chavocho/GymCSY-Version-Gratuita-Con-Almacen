@@ -1,4 +1,6 @@
-﻿using GYM.Clases;
+﻿using AForge.Video;
+using AForge.Video.DirectShow;
+using GYM.Clases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +19,9 @@ namespace GYM.Formularios
         string id, pass;
         int nivel;
         private byte[] huella;
+        private bool ExisteDispositivo = false;
+        private FilterInfoCollection DispositivoDeVideo;
+        private VideoCaptureDevice FuenteDeVideo = null;
 
         public byte[] Huella
         {
@@ -28,10 +33,62 @@ namespace GYM.Formularios
         public frmEditarUsuario(IWin32Window frm, string id)
         {
             InitializeComponent();
+            BuscarDispositivos();
             GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             this.frm = (frmUsuarios)frm;
             this.id = id;
         }
+
+        #region Funciones Camara
+
+        /*
+         * Función con la cual se cargan los dispositivos (camaras conectadas a la computadora).
+         * Recibe como parametro FilterInfoCollection @var Dispositivos
+         */
+        public void CargarDispositivos(FilterInfoCollection Dispositivos)
+        {
+            for (int i = 0; i < Dispositivos.Count; i++)
+                cbxCamara.Items.Add(Dispositivos[i].Name.ToString());
+            cbxCamara.Text = cbxCamara.Items[0].ToString();
+        }
+
+        /*
+         * BuscarDispositivos() verifica si existen webcams conectadas a la computadora
+         * return @var bool ExisteDispositivo
+         */
+        public void BuscarDispositivos()
+        {
+            DispositivoDeVideo = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            if (DispositivoDeVideo.Count == 0)
+                ExisteDispositivo = false;
+            else
+            {
+                ExisteDispositivo = true;
+                CargarDispositivos(DispositivoDeVideo);
+            }
+        }
+
+        /*
+         * TerminarFuenteVideo()
+         * Cierra la conexión con la webcam.
+         */
+        public void TerminarFuenteDeVideo()
+        {
+            if (!(FuenteDeVideo == null))
+                if (FuenteDeVideo.IsRunning)
+                {
+                    FuenteDeVideo.SignalToStop();
+                    FuenteDeVideo = null;
+                }
+        }
+
+        public void Mostrar_Imagen(object sender, NewFrameEventArgs eventArgs)
+        {
+            Bitmap Imagen = (Bitmap)eventArgs.Frame.Clone();
+            pcbImagenUsuario.Image = Imagen;
+        }
+
+        #endregion
 
         private void CargarNiveles()
         {
@@ -146,6 +203,7 @@ namespace GYM.Formularios
 
         private void frmEditarUsuario_Load(object sender, EventArgs e)
         {
+            CFuncionesGenerales.CerrarHuellas();
             ObtenerDatosUsuario();
             CargarNiveles();
         }
@@ -197,6 +255,30 @@ namespace GYM.Formularios
                 MessageBox.Show("No se ha configurado un lector de huella digital","Gym CSY",MessageBoxButtons.OK,MessageBoxIcon.Information);
             else
                 (new Formularios.Socio.frmCapturarHuella(this)).ShowDialog();
+        }
+
+        private void btnCamara_Click(object sender, EventArgs e)
+        {
+            if (ExisteDispositivo)
+            {
+                if (FuenteDeVideo == null)
+                {
+                    FuenteDeVideo = new VideoCaptureDevice(DispositivoDeVideo[cbxCamara.SelectedIndex].MonikerString);
+                    FuenteDeVideo.NewFrame += new NewFrameEventHandler(Mostrar_Imagen);
+                    FuenteDeVideo.Start();
+                    cbxCamara.Enabled = false;
+                }
+                else
+                {
+                    TerminarFuenteDeVideo();
+                    cbxCamara.Enabled = true;
+                }
+            }
+        }
+
+        private void frmEditarUsuario_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            CFuncionesGenerales.AbrirHuellas();
         }
     }
 }
