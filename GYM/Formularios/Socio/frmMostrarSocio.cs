@@ -22,7 +22,6 @@ namespace GYM.Formularios.Socio
         CMiembro miembro = new CMiembro();
         CMiembro Persona = new CMiembro();
         Clases.CMembresia mem;
-        private string rutaFoto = "photo/";
         int num_socio;
         bool ingresar=false;
 
@@ -38,8 +37,6 @@ namespace GYM.Formularios.Socio
             miembro.ObtenerUsuarioPorID(numSocio);
             lblNombre.Text = miembro.Nombre;
             lblApellido.Text = miembro.Apellidos;
-            lblDomicilio.Text = miembro.Direccion;
-            lblTelefono.Text = miembro.Telefono.ToString();
         }
 
         private void Mensaje(string mensaje)

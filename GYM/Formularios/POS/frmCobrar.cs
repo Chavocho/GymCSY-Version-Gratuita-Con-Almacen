@@ -38,10 +38,14 @@ namespace GYM.Formularios.POS
             try
             {
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "UPDATE venta SET fecha=NOW(), total=?, estado=?, abierta=? WHERE id=?";
+                sql.CommandText = "UPDATE venta SET fecha=NOW(), total=?, estado=?, abierta=?, tipo_pago=? WHERE id=?";
                 sql.Parameters.AddWithValue("@total", total);
                 sql.Parameters.AddWithValue("@estado", true);
                 sql.Parameters.AddWithValue("@abierta", false);
+                if (!chbTarjeta.Checked)
+                    sql.Parameters.AddWithValue("@tipo_pago", 0);
+                else
+                    sql.Parameters.AddWithValue("@tipo_pago", 1);
                 sql.Parameters.AddWithValue("@id", idVenta);
                 Clases.ConexionBD.EjecutarConsulta(sql);
             }
@@ -119,19 +123,29 @@ namespace GYM.Formularios.POS
             try
             {
                 if (Clases.CConfiguracionXML.ExisteConfiguracion("ticket", "imprimir"))
+                {
                     if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("ticket", "imprimir")))
+                    {
                         if (Clases.CConfiguracionXML.ExisteConfiguracion("ticket", "preguntar"))
                         {
                             if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("ticket", "preguntar")))
                             {
                                 if (MessageBox.Show("¿Deseas imprimir el ticket de esta venta?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                                {
                                     (new Clases.CTicket()).ImprimirTicketVenta(int.Parse(lblFolio.Text));
+                                }
                             }
                             else
+                            {
                                 (new Clases.CTicket()).ImprimirTicketVenta(int.Parse(lblFolio.Text));
+                            }
                         }
                         else
+                        {
                             (new Clases.CTicket()).ImprimirTicketVenta(int.Parse(lblFolio.Text));
+                        }
+                    }
+                }
             }
             catch (System.Xml.XmlException ex)
             {

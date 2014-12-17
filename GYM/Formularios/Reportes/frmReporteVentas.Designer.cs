@@ -28,55 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteVentas));
             this.btnMembresias = new System.Windows.Forms.Button();
-            this.lblInstruccionesBusqueda = new System.Windows.Forms.Label();
-            this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.dgvVentas = new System.Windows.Forms.DataGridView();
-            this.IDM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Socio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaVencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CTipoPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CCantidadProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grbFechas = new System.Windows.Forms.GroupBox();
+            this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaInicio = new System.Windows.Forms.Label();
+            this.lblFechaFin = new System.Windows.Forms.Label();
+            this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.bgwBusqueda = new System.ComponentModel.BackgroundWorker();
+            this.tmrEspera = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
+            this.grbFechas.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnMembresias
             // 
             this.btnMembresias.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnMembresias.Image = global::GYM.Properties.Resources.ImgMembresia;
+            this.btnMembresias.Image = global::GYM.Properties.Resources.ImgDinero;
             this.btnMembresias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMembresias.Location = new System.Drawing.Point(12, 43);
+            this.btnMembresias.Location = new System.Drawing.Point(12, 87);
             this.btnMembresias.Name = "btnMembresias";
             this.btnMembresias.Size = new System.Drawing.Size(126, 50);
             this.btnMembresias.TabIndex = 19;
             this.btnMembresias.Text = "Visualizar\r\nventa";
             this.btnMembresias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMembresias.UseVisualStyleBackColor = true;
-            // 
-            // lblInstruccionesBusqueda
-            // 
-            this.lblInstruccionesBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblInstruccionesBusqueda.AutoSize = true;
-            this.lblInstruccionesBusqueda.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.lblInstruccionesBusqueda.Location = new System.Drawing.Point(492, 16);
-            this.lblInstruccionesBusqueda.Name = "lblInstruccionesBusqueda";
-            this.lblInstruccionesBusqueda.Size = new System.Drawing.Size(248, 19);
-            this.lblInstruccionesBusqueda.TabIndex = 18;
-            this.lblInstruccionesBusqueda.Text = "Buscar por número de socio o nombre ";
-            // 
-            // txtBusqueda
-            // 
-            this.txtBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBusqueda.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtBusqueda.Location = new System.Drawing.Point(746, 12);
-            this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(226, 27);
-            this.txtBusqueda.TabIndex = 16;
             // 
             // dgvVentas
             // 
@@ -89,126 +76,194 @@
             this.dgvVentas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvVentas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvVentas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVentas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVentas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDM,
-            this.ID,
-            this.Socio,
-            this.Estado,
-            this.FechaInicio,
-            this.fechaVencimiento});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvVentas.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvVentas.Location = new System.Drawing.Point(144, 43);
+            this.IDV,
+            this.Fecha,
+            this.CTotal,
+            this.CTipoPago,
+            this.CCantidadProducto});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvVentas.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvVentas.Location = new System.Drawing.Point(144, 87);
             this.dgvVentas.Name = "dgvVentas";
             this.dgvVentas.ReadOnly = true;
             this.dgvVentas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVentas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVentas.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvVentas.RowHeadersVisible = false;
             this.dgvVentas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvVentas.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVentas.Size = new System.Drawing.Size(828, 507);
+            this.dgvVentas.Size = new System.Drawing.Size(828, 463);
             this.dgvVentas.TabIndex = 17;
+            this.dgvVentas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_CellClick);
             // 
-            // IDM
+            // IDV
             // 
-            this.IDM.HeaderText = "IDM";
-            this.IDM.Name = "IDM";
-            this.IDM.ReadOnly = true;
-            this.IDM.Visible = false;
+            this.IDV.Frozen = true;
+            this.IDV.HeaderText = "IDVenta";
+            this.IDV.Name = "IDV";
+            this.IDV.ReadOnly = true;
+            this.IDV.Visible = false;
             // 
-            // ID
+            // Fecha
             // 
-            this.ID.HeaderText = "Número Socio";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ID.Width = 150;
+            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
             // 
-            // Socio
+            // CTotal
             // 
-            this.Socio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Socio.HeaderText = "Nombre";
-            this.Socio.Name = "Socio";
-            this.Socio.ReadOnly = true;
-            this.Socio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.CTotal.HeaderText = "Total";
+            this.CTotal.Name = "CTotal";
+            this.CTotal.ReadOnly = true;
+            this.CTotal.Width = 120;
             // 
-            // Estado
+            // CTipoPago
             // 
-            this.Estado.HeaderText = "Estado Membresía";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Estado.Width = 180;
+            this.CTipoPago.HeaderText = "Tipo de pago";
+            this.CTipoPago.Name = "CTipoPago";
+            this.CTipoPago.ReadOnly = true;
+            this.CTipoPago.Width = 150;
             // 
-            // FechaInicio
+            // CCantidadProducto
             // 
-            this.FechaInicio.HeaderText = "Fecha Inicio";
-            this.FechaInicio.Name = "FechaInicio";
-            this.FechaInicio.ReadOnly = true;
-            this.FechaInicio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.FechaInicio.Width = 170;
+            this.CCantidadProducto.HeaderText = "Total de productos";
+            this.CCantidadProducto.Name = "CCantidadProducto";
+            this.CCantidadProducto.ReadOnly = true;
+            this.CCantidadProducto.Width = 150;
             // 
-            // fechaVencimiento
+            // grbFechas
             // 
-            this.fechaVencimiento.HeaderText = "Fecha Vencimiento";
-            this.fechaVencimiento.Name = "fechaVencimiento";
-            this.fechaVencimiento.ReadOnly = true;
-            this.fechaVencimiento.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.fechaVencimiento.Width = 170;
+            this.grbFechas.Controls.Add(this.btnBuscar);
+            this.grbFechas.Controls.Add(this.lblFechaFin);
+            this.grbFechas.Controls.Add(this.dtpFechaFin);
+            this.grbFechas.Controls.Add(this.lblFechaInicio);
+            this.grbFechas.Controls.Add(this.dtpFechaInicio);
+            this.grbFechas.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.grbFechas.Location = new System.Drawing.Point(373, 12);
+            this.grbFechas.Name = "grbFechas";
+            this.grbFechas.Size = new System.Drawing.Size(599, 69);
+            this.grbFechas.TabIndex = 20;
+            this.grbFechas.TabStop = false;
+            this.grbFechas.Text = "Búsqueda por fechas";
+            // 
+            // dtpFechaInicio
+            // 
+            this.dtpFechaInicio.CalendarFont = new System.Drawing.Font("Segoe UI", 8F);
+            this.dtpFechaInicio.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.dtpFechaInicio.Location = new System.Drawing.Point(6, 38);
+            this.dtpFechaInicio.Name = "dtpFechaInicio";
+            this.dtpFechaInicio.Size = new System.Drawing.Size(246, 25);
+            this.dtpFechaInicio.TabIndex = 0;
+            this.dtpFechaInicio.ValueChanged += new System.EventHandler(this.dtpFechas_ValueChanged);
+            // 
+            // lblFechaInicio
+            // 
+            this.lblFechaInicio.AutoSize = true;
+            this.lblFechaInicio.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblFechaInicio.Location = new System.Drawing.Point(3, 20);
+            this.lblFechaInicio.Name = "lblFechaInicio";
+            this.lblFechaInicio.Size = new System.Drawing.Size(86, 15);
+            this.lblFechaInicio.TabIndex = 1;
+            this.lblFechaInicio.Text = "Fecha de inicio";
+            // 
+            // lblFechaFin
+            // 
+            this.lblFechaFin.AutoSize = true;
+            this.lblFechaFin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblFechaFin.Location = new System.Drawing.Point(255, 20);
+            this.lblFechaFin.Name = "lblFechaFin";
+            this.lblFechaFin.Size = new System.Drawing.Size(71, 15);
+            this.lblFechaFin.TabIndex = 3;
+            this.lblFechaFin.Text = "Fecha de fin";
+            // 
+            // dtpFechaFin
+            // 
+            this.dtpFechaFin.CalendarFont = new System.Drawing.Font("Segoe UI", 8F);
+            this.dtpFechaFin.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.dtpFechaFin.Location = new System.Drawing.Point(258, 38);
+            this.dtpFechaFin.Name = "dtpFechaFin";
+            this.dtpFechaFin.Size = new System.Drawing.Size(246, 25);
+            this.dtpFechaFin.TabIndex = 2;
+            this.dtpFechaFin.ValueChanged += new System.EventHandler(this.dtpFechas_ValueChanged);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(518, 40);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 4;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // bgwBusqueda
+            // 
+            this.bgwBusqueda.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwBusqueda_DoWork);
+            this.bgwBusqueda.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwBusqueda_RunWorkerCompleted);
+            // 
+            // tmrEspera
+            // 
+            this.tmrEspera.Interval = 300;
             // 
             // frmReporteVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 562);
+            this.Controls.Add(this.grbFechas);
             this.Controls.Add(this.btnMembresias);
-            this.Controls.Add(this.lblInstruccionesBusqueda);
-            this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.dgvVentas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmReporteVentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte Ventas";
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();
+            this.grbFechas.ResumeLayout(false);
+            this.grbFechas.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button btnMembresias;
-        private System.Windows.Forms.Label lblInstruccionesBusqueda;
-        private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.DataGridView dgvVentas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Socio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaInicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaVencimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CTipoPago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CCantidadProducto;
+        private System.Windows.Forms.GroupBox grbFechas;
+        private System.Windows.Forms.DateTimePicker dtpFechaInicio;
+        private System.Windows.Forms.Label lblFechaInicio;
+        private System.Windows.Forms.Label lblFechaFin;
+        private System.Windows.Forms.DateTimePicker dtpFechaFin;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.ComponentModel.BackgroundWorker bgwBusqueda;
+        private System.Windows.Forms.Timer tmrEspera;
     }
 }
