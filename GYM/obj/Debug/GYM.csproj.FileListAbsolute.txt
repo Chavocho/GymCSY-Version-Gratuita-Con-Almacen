@@ -1195,3 +1195,4 @@ F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Teclad
 F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.csproj.GenerateResource.Cache
 F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.exe
 F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.pdb
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reportes.frmReporteVentas.resources

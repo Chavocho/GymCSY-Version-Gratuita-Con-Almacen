@@ -50,7 +50,7 @@ namespace GYM.Formularios.Reportes
             try
             {
                 string sql = "SELECT s.numSocio, s.nombre, s.apellidos, m.id, m.estado, m.fecha_ini, m.fecha_fin " + 
-                    "FROM miembros AS s INNER JOIN membresias AS m ON (s.numSocio=m.numSocio) WHERE s.numSocio='" + p + "' OR s.nombre LIKE '%" + p + "%' OR s.apellidos LIKE '%" + p + "%' ORDER BY s.numSocio";
+                    "FROM miembros AS s INNER JOIN membresias AS m ON (s.numSocio=m.numSocio) INNER JOIN registro_membresias AS r ON (m.id=r.membresia_id) WHERE s.numSocio='" + p + "' OR s.nombre LIKE '%" + p + "%' OR s.apellidos LIKE '%" + p + "%' ORDER BY s.numSocio";
                 dt = ConexionBD.EjecutarConsultaSelect(sql);
             }
             catch (MySqlException ex)
