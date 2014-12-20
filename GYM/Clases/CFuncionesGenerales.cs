@@ -614,6 +614,8 @@ namespace GYM.Clases
         public static byte[] ImagenBytes(Image img)
         {
             byte[] bimg = null;
+            if (img == null)
+                return bimg;
             try
             {
                 if (img.Width > 1280 && img.Height > 800)

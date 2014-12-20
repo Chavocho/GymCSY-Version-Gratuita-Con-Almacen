@@ -27,6 +27,8 @@ namespace GYM.Formularios.Socio
         {
             InitializeComponent();
             GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
+            cbxEstado.SelectedIndex = 0;
+            cbxSexo.SelectedIndex = 0;
             BuscarDispositivos();
             try
             {
@@ -130,10 +132,38 @@ namespace GYM.Formularios.Socio
                 MessageBox.Show("Debes haber ingresado un número de socio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return false;
             }
-            if (!tbxNombre.Text.Equals("") && !tbxApellidos.Text.Equals("") && !tbxDomicilio.Text.Equals("")&&!tbxTel.Text.Equals("")&&!tbxCelular.Text.Equals(""))
-                return true;
-            else
+            if (tbxNombre.Text.Trim() == "")
+            {
+                MessageBox.Show("Debes ingresar el nombre del socio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
+            }
+            if (tbxApellidos.Text.Trim() == "")
+            {
+                MessageBox.Show("Debes ingresar los apellidos del socio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if (tbxDomicilio.Text.Trim() == "")
+            {
+                MessageBox.Show("Debes ingresar el domicilio del socio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if (tbxTel.Text == "")
+            {
+                if (tbxCelular.Text == "")
+                {
+                    MessageBox.Show("Debes ingresar al menos un número teléfonico", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return false;
+                }
+            }
+            else if (tbxCelular.Text == "")
+            {
+                if (tbxTel.Text == "")
+                {
+                    MessageBox.Show("Debes ingresar al menos un número teléfonico", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return false;
+                }
+            }
+            return true;
         }
 
 
@@ -176,8 +206,6 @@ namespace GYM.Formularios.Socio
                     else
                         return;
                 }
-                else
-                    MessageBox.Show("Debes de ingresar todos los datos \n Si desconoces la información ingresa desconocido en el campo", "Datos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
@@ -280,6 +308,11 @@ namespace GYM.Formularios.Socio
         private void cbxCamara_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtNumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CFuncionesGenerales.VerificarEsNumero(ref sender, ref e, true);
         }
     }
 }

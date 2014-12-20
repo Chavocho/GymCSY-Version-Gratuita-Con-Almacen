@@ -95,6 +95,7 @@
             this.tmrCumpleaños = new System.Windows.Forms.Timer(this.components);
             this.pcbUsuario = new System.Windows.Forms.PictureBox();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblBETA = new System.Windows.Forms.Label();
             this.menuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUsuario)).BeginInit();
             this.SuspendLayout();
@@ -622,6 +623,19 @@
             this.lblUsuario.TabIndex = 4;
             this.lblUsuario.Text = "label1";
             // 
+            // lblBETA
+            // 
+            this.lblBETA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBETA.AutoSize = true;
+            this.lblBETA.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBETA.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.lblBETA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.lblBETA.Location = new System.Drawing.Point(899, 527);
+            this.lblBETA.Name = "lblBETA";
+            this.lblBETA.Size = new System.Drawing.Size(57, 25);
+            this.lblBETA.TabIndex = 7;
+            this.lblBETA.Text = "BETA";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -629,6 +643,7 @@
             this.BackgroundImage = global::GYM.Properties.Resources.Fondo_Default;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(968, 561);
+            this.Controls.Add(this.lblBETA);
             this.Controls.Add(this.pcbUsuario);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.menuStripMain);
@@ -716,5 +731,6 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem membresíasToolStripMenuItem;
+        private System.Windows.Forms.Label lblBETA;
     }
 }

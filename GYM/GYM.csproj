@@ -403,6 +403,12 @@
     <Compile Include="Formularios\Reportes\frmVisualizarMembresias.Designer.cs">
       <DependentUpon>frmVisualizarMembresias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Reportes\frmVisualizarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\frmVisualizarVenta.Designer.cs">
+      <DependentUpon>frmVisualizarVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Socio\frmAgregarMiembro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -457,6 +463,12 @@
     <Compile Include="Formularios\Lockers\frmAsignarLocker.designer.cs">
       <DependentUpon>frmAsignarLocker.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConfigVersion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfigVersion.Designer.cs">
+      <DependentUpon>frmConfigVersion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEspera.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -489,6 +501,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="Teclado.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -636,6 +649,9 @@
     <EmbeddedResource Include="Formularios\Reportes\frmVisualizarMembresias.resx">
       <DependentUpon>frmVisualizarMembresias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\frmVisualizarVenta.resx">
+      <DependentUpon>frmVisualizarVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Socio\frmAgregarMiembro.resx">
       <DependentUpon>frmAgregarMiembro.cs</DependentUpon>
     </EmbeddedResource>
@@ -662,6 +678,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Lockers\frmAsignarLocker.resx">
       <DependentUpon>frmAsignarLocker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfigVersion.resx">
+      <DependentUpon>frmConfigVersion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEspera.resx">
       <DependentUpon>frmEspera.cs</DependentUpon>

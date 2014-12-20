@@ -279,6 +279,11 @@ namespace GYM.Formularios
                 sql.Parameters.AddWithValue("?estado", e);
                 sql.Parameters.AddWithValue("?id", id);
                 ConexionBD.EjecutarConsulta(sql);
+                sql.Parameters.Clear();
+                sql.CommandText = "UPDATE registro_membresias SET autorizacion_user=?user, fecha_autorizacion=NOW() WHERE membresia_id=?id";
+                sql.Parameters.AddWithValue("?user", frmMain.id);
+                sql.Parameters.AddWithValue("?id", id);
+                ConexionBD.EjecutarConsulta(sql);
                 dgvPendientes.Rows.RemoveAt(dgvPendientes.CurrentRow.Index);
             }
             catch (MySqlException ex)
@@ -298,6 +303,11 @@ namespace GYM.Formularios
                 MySqlCommand sql = new MySqlCommand();
                 sql.CommandText = "UPDATE locker SET estado=?estado WHERE id=?id";
                 sql.Parameters.AddWithValue("?estado", e);
+                sql.Parameters.AddWithValue("?id", id);
+                ConexionBD.EjecutarConsulta(sql);
+                sql.Parameters.Clear();
+                sql.CommandText = "UPDATE registro_locker SET autorizacion_user=?user, fecha_autorizacion=NOW() WHERE locker_id=?id";
+                sql.Parameters.AddWithValue("?user", frmMain.id);
                 sql.Parameters.AddWithValue("?id", id);
                 ConexionBD.EjecutarConsulta(sql);
                 dgvPendientes.Rows.RemoveAt(dgvPendientes.CurrentRow.Index);

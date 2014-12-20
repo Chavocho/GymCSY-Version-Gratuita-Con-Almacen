@@ -36,6 +36,7 @@
             this.bgwCargar = new System.ComponentModel.BackgroundWorker();
             this.prbProgreso = new System.Windows.Forms.ProgressBar();
             this.pcbImagen = new System.Windows.Forms.PictureBox();
+            this.lblBETA = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,12 +110,24 @@
             this.pcbImagen.TabIndex = 0;
             this.pcbImagen.TabStop = false;
             // 
+            // lblBETA
+            // 
+            this.lblBETA.AutoSize = true;
+            this.lblBETA.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.lblBETA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.lblBETA.Location = new System.Drawing.Point(545, 9);
+            this.lblBETA.Name = "lblBETA";
+            this.lblBETA.Size = new System.Drawing.Size(57, 25);
+            this.lblBETA.TabIndex = 6;
+            this.lblBETA.Text = "BETA";
+            // 
             // frmSplash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(612, 308);
+            this.Controls.Add(this.lblBETA);
             this.Controls.Add(this.prbProgreso);
             this.Controls.Add(this.lblCargando);
             this.Controls.Add(this.lblVersion);
@@ -144,5 +157,6 @@
         private System.Windows.Forms.Label lblCargando;
         private System.ComponentModel.BackgroundWorker bgwCargar;
         private System.Windows.Forms.ProgressBar prbProgreso;
+        private System.Windows.Forms.Label lblBETA;
     }
 }

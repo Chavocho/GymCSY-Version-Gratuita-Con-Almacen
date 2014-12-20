@@ -480,7 +480,10 @@ public class CMiembro
                 sql.Parameters.AddWithValue("?huella", huella);
             else
                 sql.Parameters.AddWithValue("?huella", DBNull.Value);
-            sql.Parameters.AddWithValue("?imagen", CFuncionesGenerales.ImagenBytes(imgMiembro));
+            if (imgMiembro != null)
+                sql.Parameters.AddWithValue("@imagen", CFuncionesGenerales.ImagenBytes(imgMiembro));
+            else
+                sql.Parameters.AddWithValue("@imagen", DBNull.Value);
             ConexionBD.EjecutarConsulta(sql);
             inserto = true;
         }
@@ -527,12 +530,15 @@ public class CMiembro
             sql.Parameters.AddWithValue("@email", email);
             sql.Parameters.AddWithValue("@fecha_nac", fechaNacimiento.ToString("yyyy-MM-dd") + " 00:00:00");
             sql.Parameters.AddWithValue("@genero", genero);
-            sql.Parameters.AddWithValue("@update_user_id", createUser);
+            sql.Parameters.AddWithValue("@update_user_id", updateUser);
             if (huella != null)
                 sql.Parameters.AddWithValue("@huella", huella);
             else
                 sql.Parameters.AddWithValue("@huella", DBNull.Value);
-            sql.Parameters.AddWithValue("@imagen", CFuncionesGenerales.ImagenBytes(imgMiembro));
+            if (imgMiembro != null)
+                sql.Parameters.AddWithValue("@imagen", CFuncionesGenerales.ImagenBytes(imgMiembro));
+            else
+                sql.Parameters.AddWithValue("@imagen", DBNull.Value);
             sql.Parameters.AddWithValue("@numSocio", numSocio);
             ConexionBD.EjecutarConsulta(sql);
         }

@@ -153,6 +153,7 @@ namespace GYM
         {
             Clases.CFuncionesGenerales.CargarInterfaz(this);
             lblUsuario.ForeColor = Color.WhiteSmoke;
+            lblBETA.ForeColor = Color.FromArgb(150, 150, 150);
             if (!GYM.Clases.CFuncionesGenerales.versionGratuita)
                 tmrCumpleaños.Enabled = true;
         }
@@ -527,13 +528,6 @@ namespace GYM
                 MessageBox.Show("Hoy no hay cumpleañeros.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                MessageBox.Show("Me entearon");
-        }
-
-
         private void baseDedatosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (!Formularios.frmConfiguracionBaseDatos.Instancia.Visible)
@@ -630,6 +624,8 @@ namespace GYM
 
         private void pendientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (nivelUsuario < 2)
+                return;
             if (!Formularios.frmPendientes.Instancia.Visible)
                 Formularios.frmPendientes.Instancia.Show();
             else

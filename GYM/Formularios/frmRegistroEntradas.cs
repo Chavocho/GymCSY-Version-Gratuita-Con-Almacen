@@ -166,16 +166,6 @@ namespace GYM.Formularios
                 this.WindowState = FormWindowState.Normal;
             else
                 this.WindowState = FormWindowState.Maximized;
-
-            try
-            {
-                HuellaDigital.GetStatus();
-            }
-            catch
-            {
-                btnRegEntrada.Visible = false;
-                tbxNumSocio.Size = new Size(419, 49);
-            }
         }
 
         private void archivoToolStripMenuItem_Click(object sender, EventArgs e)

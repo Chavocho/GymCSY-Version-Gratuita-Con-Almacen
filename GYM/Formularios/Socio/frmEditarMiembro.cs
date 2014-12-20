@@ -81,6 +81,8 @@ namespace GYM.Formularios.Socio
         {
             InitializeComponent();
             GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
+            cbxEstado.SelectedIndex = 0;
+            cbxSexo.SelectedIndex = 0;
             BuscarDispositivos();
             this.numSocio = numSocio;
             miem.ObtenerUsuarioPorID(numSocio);
@@ -93,10 +95,38 @@ namespace GYM.Formularios.Socio
                 MessageBox.Show("Debes haber ingresado un número de socio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return false;
             }
-            if (!txtNombre.Text.Equals("") && !txtApellidos.Text.Equals("") && !txtDomicilio.Text.Equals("") && !txtTel.Text.Equals("") && !txtCelular.Text.Equals("") && dtpFechaNac.Value != null)
-              return true;
-            else
+            if (txtNombre.Text.Trim() == "")
+            {
+                MessageBox.Show("Debes ingresar el nombre del socio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
+            }
+            if (txtApellidos.Text.Trim() == "")
+            {
+                MessageBox.Show("Debes ingresar los apellidos del socio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if (txtDomicilio.Text.Trim() == "")
+            {
+                MessageBox.Show("Debes ingresar el domicilio del socio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if (txtTel.Text == "")
+            {
+                if (txtCelular.Text == "")
+                {
+                    MessageBox.Show("Debes ingresar al menos un número teléfonico", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return false;
+                }
+            }
+            else if (txtCelular.Text == "")
+            {
+                if (txtTel.Text == "")
+                {
+                    MessageBox.Show("Debes ingresar al menos un número teléfonico", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return false;
+                }
+            }
+            return true;
         }
 
         private void MostrarDatosMiembro()
@@ -180,8 +210,6 @@ namespace GYM.Formularios.Socio
                     else
                         return;
                 }
-                else
-                    MessageBox.Show("Debes de ingresar todos los datos \n Si desconoces la información ingresa desconocido en el campo", "Datos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
             catch (Exception ex)
             {

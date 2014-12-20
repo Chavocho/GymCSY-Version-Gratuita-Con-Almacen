@@ -46,6 +46,7 @@ namespace GYM.Formularios.Reportes
         {
             try
             {
+                dgvVentas.Rows.Clear();
                 foreach (DataRow dr in dt.Rows)
                 {
                     DateTime fecha = DateTime.Parse(dr["fecha"].ToString());
@@ -85,17 +86,30 @@ namespace GYM.Formularios.Reportes
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            
+            if (!bgwBusqueda.IsBusy)
+            {
+                tmrEspera.Enabled = true;
+                bgwBusqueda.RunWorkerAsync(new object[] { dtpFechaInicio.Value, dtpFechaFin.Value });
+            }
         }
 
         private void bgwBusqueda_DoWork(object sender, DoWorkEventArgs e)
         {
-
+            object[] a = (object[])e.Argument;
+            BuscarVentas((DateTime)a[0], (DateTime)a[1]);
         }
 
         private void bgwBusqueda_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            tmrEspera.Enabled = false;
+            CFuncionesGenerales.frmEsperaClose();
+            LlenarDataGrid();
+        }
 
+        private void tmrEspera_Tick(object sender, EventArgs e)
+        {
+            tmrEspera.Enabled = false;
+            CFuncionesGenerales.frmEspera("Espere mientras se efectua la búsqueda", this);
         }
     }
 }

@@ -160,6 +160,18 @@ namespace GYM.Formularios.Socio
                 else
                     sonido = "SonidoErrorP";
             }
+            else if (mem.Estado == Clases.CMembresia.EstadoMembresia.Inactiva)
+            {
+                lblInfo.ForeColor = Color.Red;
+                lblInfo.Visible = true;
+                lblInfo.Text = "¡Tu membresía ha terminado!";
+                lblFecha.Visible = false;
+                lblFechaFinal.Visible = false;
+                if (Clases.CFuncionesGenerales.sonidoRegBien != "Personalizado")
+                    sonido = "SonidoError" + Clases.CFuncionesGenerales.sonidoRegBien.Substring(Clases.CFuncionesGenerales.sonidoRegBien.Length - 2, 2);
+                else
+                    sonido = "SonidoErrorP";
+            }
             lblInfo.Left = (this.Width - lblInfo.Width) / 2;
             if (Clases.CFuncionesGenerales.usarSonidos)
             {

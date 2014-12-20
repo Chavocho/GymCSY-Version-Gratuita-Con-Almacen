@@ -100,6 +100,8 @@
             // 
             // cbxCamara
             // 
+            this.cbxCamara.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCamara.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxCamara.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.cbxCamara.FormattingEnabled = true;
             this.cbxCamara.Location = new System.Drawing.Point(36, 265);
@@ -109,6 +111,8 @@
             // 
             // cbxEstado
             // 
+            this.cbxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxEstado.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.cbxEstado.FormattingEnabled = true;
             this.cbxEstado.Items.AddRange(new object[] {
@@ -203,6 +207,7 @@
             // cbxSexo
             // 
             this.cbxSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSexo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxSexo.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.cbxSexo.FormattingEnabled = true;
             this.cbxSexo.Items.AddRange(new object[] {
