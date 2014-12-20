@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GYM.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,7 +24,23 @@ namespace GYM.Formularios.Reportes
         {
             try
             {
-                string sql = "";
+                string sql = "SELECT * FROM venta WHERE id='" + idV + "'";
+                DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    DateTime fecha;
+                    string folioTicket, terminacion;
+                    int estado, tipoPago;
+                    decimal total = 0;
+                    fecha = DateTime.Parse(dr["fecha"].ToString());
+                    estado = int.Parse(dr["estado"].ToString());
+                    tipoPago = int.Parse(dr["tipo_pago"].ToString());
+                    total = decimal.Parse(dr["total"].ToString());
+                    folioTicket = dr["folio_ticket"].ToString();
+                    terminacion = dr["terminacion"].ToString();
+
+
+                }
             }
             catch (Exception)
             {

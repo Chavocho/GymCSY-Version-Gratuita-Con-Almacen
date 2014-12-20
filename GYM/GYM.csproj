@@ -760,6 +760,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSY.ico" />
+    <None Include="Resources\GymCSY logo.png" />
     <None Include="Resources\ic_add_shopping_cart_grey600_18dp.png" />
     <None Include="Resources\ic_attach_money_grey600_18dp.png" />
     <None Include="Resources\socios.png" />

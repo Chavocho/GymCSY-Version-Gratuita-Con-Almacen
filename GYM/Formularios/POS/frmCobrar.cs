@@ -343,6 +343,7 @@ namespace GYM.Formularios.POS
                 }
                 if (chbTarjeta.Checked)
                 {
+                    this.Size = new System.Drawing.Size(441, 364);
                     txtEfectivo.Enabled = false;
                     if (txtEfectivo.Text != "")
                         tmpEf = decimal.Parse(txtEfectivo.Text);
@@ -352,10 +353,12 @@ namespace GYM.Formularios.POS
                 }
                 else
                 {
+                    this.Size = new System.Drawing.Size(441, 300);
                     txtEfectivo.Enabled = true;
                     txtEfectivo.Text = tmpEf.ToString();
                     txtTarjeta.Text = "";
                 }
+                this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2, (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
             }
             catch (FormatException ex)
             {

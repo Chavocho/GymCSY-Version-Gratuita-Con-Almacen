@@ -29,60 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSplash));
-            this.lblGYM = new System.Windows.Forms.Label();
-            this.lblCSY = new System.Windows.Forms.Label();
             this.lblVersion = new System.Windows.Forms.Label();
-            this.lblCargando = new System.Windows.Forms.Label();
             this.bgwCargar = new System.ComponentModel.BackgroundWorker();
             this.prbProgreso = new System.Windows.Forms.ProgressBar();
-            this.pcbImagen = new System.Windows.Forms.PictureBox();
             this.lblBETA = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblGYM
-            // 
-            this.lblGYM.AutoSize = true;
-            this.lblGYM.Font = new System.Drawing.Font("Segoe UI", 70F, System.Drawing.FontStyle.Bold);
-            this.lblGYM.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblGYM.Location = new System.Drawing.Point(24, 19);
-            this.lblGYM.Name = "lblGYM";
-            this.lblGYM.Size = new System.Drawing.Size(256, 125);
-            this.lblGYM.TabIndex = 1;
-            this.lblGYM.Text = "Gym";
-            // 
-            // lblCSY
-            // 
-            this.lblCSY.AutoSize = true;
-            this.lblCSY.Font = new System.Drawing.Font("Segoe UI", 45F);
-            this.lblCSY.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.lblCSY.Location = new System.Drawing.Point(143, 133);
-            this.lblCSY.Name = "lblCSY";
-            this.lblCSY.Size = new System.Drawing.Size(137, 81);
-            this.lblCSY.TabIndex = 2;
-            this.lblCSY.Text = "CSY";
             // 
             // lblVersion
             // 
             this.lblVersion.AutoSize = true;
             this.lblVersion.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.lblVersion.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblVersion.Location = new System.Drawing.Point(12, 267);
+            this.lblVersion.Location = new System.Drawing.Point(12, 275);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(61, 20);
             this.lblVersion.TabIndex = 3;
             this.lblVersion.Text = "v 1.0.0.0";
-            // 
-            // lblCargando
-            // 
-            this.lblCargando.AutoSize = true;
-            this.lblCargando.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblCargando.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblCargando.Location = new System.Drawing.Point(399, 95);
-            this.lblCargando.Name = "lblCargando";
-            this.lblCargando.Size = new System.Drawing.Size(160, 20);
-            this.lblCargando.TabIndex = 4;
-            this.lblCargando.Text = "Cargando el programa";
             // 
             // bgwCargar
             // 
@@ -100,16 +64,6 @@
             this.prbProgreso.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.prbProgreso.TabIndex = 5;
             // 
-            // pcbImagen
-            // 
-            this.pcbImagen.Image = global::GYM.Properties.Resources.Imagen_Inicio;
-            this.pcbImagen.Location = new System.Drawing.Point(403, 118);
-            this.pcbImagen.Name = "pcbImagen";
-            this.pcbImagen.Size = new System.Drawing.Size(305, 284);
-            this.pcbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcbImagen.TabIndex = 0;
-            this.pcbImagen.TabStop = false;
-            // 
             // lblBETA
             // 
             this.lblBETA.AutoSize = true;
@@ -121,6 +75,16 @@
             this.lblBETA.TabIndex = 6;
             this.lblBETA.Text = "BETA";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GYM.Properties.Resources.GymCSY_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(612, 272);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmSplash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -129,11 +93,8 @@
             this.ClientSize = new System.Drawing.Size(612, 308);
             this.Controls.Add(this.lblBETA);
             this.Controls.Add(this.prbProgreso);
-            this.Controls.Add(this.lblCargando);
             this.Controls.Add(this.lblVersion);
-            this.Controls.Add(this.lblCSY);
-            this.Controls.Add(this.lblGYM);
-            this.Controls.Add(this.pcbImagen);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSplash";
@@ -142,7 +103,7 @@
             this.Text = "frmSplash";
             this.Load += new System.EventHandler(this.frmSplash_Load);
             this.Shown += new System.EventHandler(this.frmSplash_Shown);
-            ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,13 +111,10 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pcbImagen;
-        private System.Windows.Forms.Label lblGYM;
-        private System.Windows.Forms.Label lblCSY;
         private System.Windows.Forms.Label lblVersion;
-        private System.Windows.Forms.Label lblCargando;
         private System.ComponentModel.BackgroundWorker bgwCargar;
         private System.Windows.Forms.ProgressBar prbProgreso;
         private System.Windows.Forms.Label lblBETA;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
