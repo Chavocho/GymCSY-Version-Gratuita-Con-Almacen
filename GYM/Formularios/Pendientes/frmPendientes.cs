@@ -203,7 +203,7 @@ namespace GYM.Formularios
                 dt = new DataTable();
                 MySqlCommand sql = new MySqlCommand();
                 sql.CommandText = "SELECT m.id, s.numSocio, s.nombre, s.apellidos, m.fecha_ini, m.fecha_fin " + 
-                    "FROM membresias AS m INNER JOIN miembros AS s ON (m.numSocio=s.numSocio) WHERE m.estado=?estado";
+                    "FROM membresias AS m INNER JOIN miembros AS s ON (m.numSocio=s.numSocio) WHERE m.estado=?estado ORDER BY s.numSocio";
                 sql.Parameters.AddWithValue("?estado", Clases.CMembresia.EstadoMembresia.Pendiente);
                 dt = ConexionBD.EjecutarConsultaSelect(sql);
             }
@@ -224,7 +224,7 @@ namespace GYM.Formularios
                 dt = new DataTable();
                 MySqlCommand sql = new MySqlCommand();
                 sql.CommandText = "SELECT l.id, r.nom_persona, s.numSocio, s.nombre, s.apellidos, l.num, l.fecha_ini, l.fecha_fin " +
-                    "FROM locker AS l LEFT JOIN registro_locker AS r ON (l.id=r.locker_id) LEFT JOIN miembros AS s ON (l.numSocio=s.numSocio) WHERE l.estado=?estado";
+                    "FROM locker AS l LEFT JOIN registro_locker AS r ON (l.id=r.locker_id) LEFT JOIN miembros AS s ON (l.numSocio=s.numSocio) WHERE l.estado=?estado ORDER BY s.numSocio";
                 sql.Parameters.AddWithValue("?estado", Clases.CMembresia.EstadoMembresia.Pendiente);
                 dt = ConexionBD.EjecutarConsultaSelect(sql);
             }

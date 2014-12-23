@@ -1,4 +1,5 @@
 ﻿using GYM.Clases;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,9 @@ namespace GYM.Formularios.Membresia
 {
     public partial class frmNuevaMembresia : Form
     {
+        List<decimal> preciosM = new List<decimal>();
         int numSocio;
+        string ultimoFolio = "", txtTmp = "";
         DateTime fechaFin;
         CMembresia mem;
         CRegistro_membresias rMem;
@@ -26,6 +29,43 @@ namespace GYM.Formularios.Membresia
             this.numSocio = numSocio;
             mem = new Clases.CMembresia(numSocio);
             rMem = new CRegistro_membresias();
+        }
+
+        private void UltimoFolio()
+        {
+            try
+            {
+                string sql = "SELECT MAX(id) AS i FROM registro_membresias";
+                DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    ultimoFolio = ((int)dr["i"] + 1).ToString();
+                }
+            }
+            catch (MySqlException ex)
+            {
+                CFuncionesGenerales.MensajeError("Ocurrió un error al generar el nuevo folio. No se ha podido conectar con la base de datos.", ex);
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("Ocurrió un error al generar el nuevo folio. Ocurrió un error genérico.", ex);
+            }
+        }
+
+        private void PreciosMembresias()
+        {
+            try
+            {
+                string sql = "SELECT precio FROM membresia";
+            }
+            catch (MySqlException ex)
+            {
+                CFuncionesGenerales.MensajeError("No se ha podido cargar el precio de la duración seleccionada. Ocurrió un error al conectar la base de datos.", ex);
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("No se ha podido cargar el precio de la duración seleccionada. Ocurrió un error genérico.", ex);
+            }
         }
 
         private void CargarNombreMiembro()
@@ -186,10 +226,15 @@ namespace GYM.Formularios.Membresia
 
                     rMem.InsertarRegistroMembresias();
                     AgregarMovimientoCaja();
-                    if (!GYM.Clases.CFuncionesGenerales.versionGratuita)
-                        if (MessageBox.Show("¿Desea imprimir el ticket?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
-                            (new Clases.CTicket()).ImprimirTicketMembresia(numSocio);
                     MessageBox.Show("Membresía agregada correctamente", "Membresías", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (!GYM.Clases.CFuncionesGenerales.versionGratuita)
+                    {
+                        if (MessageBox.Show("¿Desea imprimir el ticket?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
+                        {
+                            (new Clases.CTicket()).ImprimirTicketMembresia(numSocio);
+                            (new Clases.CTicket()).ImprimirTicketMembresia(numSocio);
+                        }
+                    }
                     this.Close();
                 }
             }
@@ -367,6 +412,7 @@ namespace GYM.Formularios.Membresia
             txtPrecio.Enabled = true;
             txtFolio.Enabled = true;
             txtDescripcion.Enabled = true;
+            chbFolio.Enabled = true;
             txtTerminacion.Enabled = (cbxTipoPago.SelectedIndex == 1? true:false);
             txtFolioTicket.Enabled = (cbxTipoPago.SelectedIndex == 1 ? true : false);
         } 
@@ -383,9 +429,22 @@ namespace GYM.Formularios.Membresia
             Clases.CFuncionesGenerales.VerificarEsNumero(ref sender, ref e, true);
         }
 
-        private void chbStatus_CheckedChanged(object sender, EventArgs e)
+        private void chbFolio_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (ultimoFolio != "")
+            {
+                if (chbFolio.Checked)
+                {
+                    txtTmp = txtFolio.Text;
+                    txtFolio.Text = ultimoFolio;
+                    txtFolio.Enabled = false;
+                }
+                else
+                {
+                    txtFolio.Text = txtTmp;
+                    txtFolio.Enabled = true;
+                }
+            }
         }     
     }
 }

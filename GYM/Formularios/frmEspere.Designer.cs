@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEspere));
             this.prbEspere = new System.Windows.Forms.ProgressBar();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -61,6 +62,7 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.prbEspere);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEspere";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GymCSY";

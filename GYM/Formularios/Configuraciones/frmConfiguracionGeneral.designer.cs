@@ -410,7 +410,7 @@
             this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnAceptar.Image = global::GYM.Properties.Resources.ImgAceptar;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(668, 652);
+            this.btnAceptar.Location = new System.Drawing.Point(669, 653);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(104, 36);
             this.btnAceptar.TabIndex = 2;
@@ -604,7 +604,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(784, 700);
+            this.ClientSize = new System.Drawing.Size(784, 701);
             this.Controls.Add(this.chbRegistro);
             this.Controls.Add(this.chbLectorHuella);
             this.Controls.Add(this.grbPromociones);

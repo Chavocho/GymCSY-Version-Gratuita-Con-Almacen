@@ -38,14 +38,22 @@ namespace GYM.Formularios.POS
             try
             {
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "UPDATE venta SET fecha=NOW(), total=?, estado=?, abierta=?, tipo_pago=? WHERE id=?";
+                sql.CommandText = "UPDATE venta SET fecha=NOW(), total=?, estado=?, abierta=?, tipo_pago=?, folio_ticket=?, terminacion=? WHERE id=?";
                 sql.Parameters.AddWithValue("@total", total);
                 sql.Parameters.AddWithValue("@estado", true);
                 sql.Parameters.AddWithValue("@abierta", false);
                 if (!chbTarjeta.Checked)
+                {
                     sql.Parameters.AddWithValue("@tipo_pago", 0);
+                    sql.Parameters.AddWithValue("@folio_ticket", DBNull.Value);
+                    sql.Parameters.AddWithValue("@terminacion", DBNull.Value);
+                }
                 else
+                {
                     sql.Parameters.AddWithValue("@tipo_pago", 1);
+                    sql.Parameters.AddWithValue("@folio_ticket", txtFolioTicket.Text);
+                    sql.Parameters.AddWithValue("@terminacion", txtTerminacion.Text);
+                }
                 sql.Parameters.AddWithValue("@id", idVenta);
                 Clases.ConexionBD.EjecutarConsulta(sql);
             }
@@ -133,15 +141,18 @@ namespace GYM.Formularios.POS
                                 if (MessageBox.Show("¿Deseas imprimir el ticket de esta venta?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
                                 {
                                     (new Clases.CTicket()).ImprimirTicketVenta(int.Parse(lblFolio.Text));
+                                    (new Clases.CTicket()).ImprimirTicketVenta(int.Parse(lblFolio.Text));
                                 }
                             }
                             else
                             {
                                 (new Clases.CTicket()).ImprimirTicketVenta(int.Parse(lblFolio.Text));
+                                (new Clases.CTicket()).ImprimirTicketVenta(int.Parse(lblFolio.Text));
                             }
                         }
                         else
                         {
+                            (new Clases.CTicket()).ImprimirTicketVenta(int.Parse(lblFolio.Text));
                             (new Clases.CTicket()).ImprimirTicketVenta(int.Parse(lblFolio.Text));
                         }
                     }
@@ -317,6 +328,19 @@ namespace GYM.Formularios.POS
 
         private void btnCobrar_Click(object sender, EventArgs e)
         {
+            if (chbTarjeta.Checked)
+            {
+                if (txtFolioTicket.Text.Trim() == "")
+                {
+                    MessageBox.Show("Se debe ingresar el folio del ticket de la tarjeta.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                if (txtTerminacion.Text.Trim() == "")
+                {
+                    MessageBox.Show("Se debe ingresar la terminación de la tarjeta.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+            }
             if (lblCambio.BackColor == Color.Red)
                 MessageBox.Show("Debes ingresar una cantidad mayor antes de poder cobrar la cuenta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
@@ -325,6 +349,7 @@ namespace GYM.Formularios.POS
                 AgregarMovimientoCaja();
                 DescontarInventario();
                 ImprimirTicket();
+                this.Close();
             }
         }
 
@@ -345,6 +370,7 @@ namespace GYM.Formularios.POS
                 {
                     this.Size = new System.Drawing.Size(441, 364);
                     txtEfectivo.Enabled = false;
+                    pnlTarjeta.Visible = true;
                     if (txtEfectivo.Text != "")
                         tmpEf = decimal.Parse(txtEfectivo.Text);
                     txtEfectivo.Text = "";
@@ -354,6 +380,7 @@ namespace GYM.Formularios.POS
                 else
                 {
                     this.Size = new System.Drawing.Size(441, 300);
+                    pnlTarjeta.Visible = false;
                     txtEfectivo.Enabled = true;
                     txtEfectivo.Text = tmpEf.ToString();
                     txtTarjeta.Text = "";

@@ -56,6 +56,7 @@ namespace GYM.Formularios.POS
             }
             catch (ArgumentNullException ex)
             {
+                Clases.CFuncionesGenerales.MensajeError("El argumento dado al método es nulo.", ex);
             }
         }
 

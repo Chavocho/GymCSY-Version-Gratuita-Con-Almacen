@@ -646,6 +646,14 @@ namespace GYM
                 Formularios.Reportes.frmReporteMembresíasSocio.Instancia.Show();
             else
                 Formularios.Reportes.frmReporteMembresíasSocio.Instancia.Select();
+        }
+
+        private void ventasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (!Formularios.Reportes.frmReporteVentas.Instancia.Visible)
+                Formularios.Reportes.frmReporteVentas.Instancia.Show();
+            else
+                Formularios.Reportes.frmReporteVentas.Instancia.Select();
         }   
     }
 }

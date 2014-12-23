@@ -37,12 +37,15 @@ namespace GYM.Formularios.Reportes
             {
                 string sql = "SELECT * FROM registro_membresias WHERE membresia_id='" + idM + "'";
                 DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
-                if (dt.Rows.Count==0)
-                    MessageBox.Show(nomSoc+" no cuenta con registros de membresías","GymCSY",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                if (dt.Rows.Count == 0)
+                {
+                    MessageBox.Show(nomSoc + " no cuenta con registros de membresías", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
                 foreach (DataRow dr in dt.Rows)
                 {
                     DateTime fechaIni = DateTime.Parse(dr["fecha_ini"].ToString()), fechaFin = DateTime.Parse(dr["fecha_fin"].ToString());
-                    dgvMembresias.Rows.Add(new object[] { fechaIni.ToString("dd/MM/yyyy"), fechaFin.ToString(""), dr["descripcion"].ToString() });
+                    dgvMembresias.Rows.Add(new object[] { fechaIni.ToString("dd/MM/yyyy"), fechaFin.ToString("dd/MM/yyyy"), dr["descripcion"].ToString() });
                     tipo.Add((int)dr["tipo"]);
                     tipoPago.Add((int)dr["tipo_pago"]);
                     precio.Add((decimal)dr["precio"]);
@@ -164,8 +167,7 @@ namespace GYM.Formularios.Reportes
                 else
                     lblFolioTicket.Text = "Sin información";
                 lblCreateUser.Text = NombreUsuario(createUser[index]);
-                lblCreateTime.Text = createTime[index].ToString("dd") + " de " + createTime[index].ToString("MMMM") + " del " + createTime[index].ToString("yyyy");
-                
+                lblCreateTime.Text = createTime[index].ToString("dd") + " de " + createTime[index].ToString("MMMM") + " del " + createTime[index].ToString("yyyy") + ", " + createTime[index].ToString("hh:mm tt");
             }
             catch (Exception ex)
             {

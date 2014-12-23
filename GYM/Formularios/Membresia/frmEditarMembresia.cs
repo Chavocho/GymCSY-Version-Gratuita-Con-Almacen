@@ -1,4 +1,5 @@
 ﻿using GYM.Clases;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,8 @@ namespace GYM.Formularios.Membresia
     public partial class frmEditarMembresia : Form
     {
         int numSocio;
+        string ultimoFolio = "";
+        string txtTmp = "";
         DateTime fechaFin;
         CMembresia.EstadoMembresia es;
         CMembresia mem;
@@ -27,6 +30,28 @@ namespace GYM.Formularios.Membresia
             this.numSocio = numSocio;
             mem = new Clases.CMembresia(numSocio);
             rMem = new CRegistro_membresias();
+            UltimoFolio();
+        }
+
+        private void UltimoFolio()
+        {
+            try
+            {
+                string sql = "SELECT MAX(id) AS i FROM registro_membresias";
+                DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    ultimoFolio = ((int)dr["i"] + 1).ToString();
+                }
+            }
+            catch (MySqlException ex)
+            {
+                CFuncionesGenerales.MensajeError("Ocurrió un error al generar el nuevo folio. No se ha podido conectar con la base de datos.", ex);
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("Ocurrió un error al generar el nuevo folio. Ocurrió un error genérico.", ex);
+            }
         }
 
         private void MostrarDatosMembresia()
@@ -245,10 +270,15 @@ namespace GYM.Formularios.Membresia
                     mem.EditarMembresia();
                     rMem.InsertarRegistroMembresias();
                     AgregarMovimientoCaja();
-                    if (!GYM.Clases.CFuncionesGenerales.versionGratuita)
-                        if (MessageBox.Show("¿Desea imprimir el ticket?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
-                            (new Clases.CTicket()).ImprimirTicketMembresia(numSocio);
                     MessageBox.Show("Membresía renovada", "Membresías", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (!GYM.Clases.CFuncionesGenerales.versionGratuita)
+                    {
+                        if (MessageBox.Show("¿Desea imprimir el ticket?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
+                        {
+                            (new Clases.CTicket()).ImprimirTicketMembresia(numSocio);
+                            (new Clases.CTicket()).ImprimirTicketMembresia(numSocio);
+                        }
+                    }
                     this.Close();
                 }
             }
@@ -430,6 +460,7 @@ namespace GYM.Formularios.Membresia
             txtPrecio.Enabled = true;
             txtFolio.Enabled = true;
             txtDescripcion.Enabled = true;
+            chbFolio.Enabled = true;
             txtTerminacion.Enabled = (cbxTipoPago.SelectedIndex == 1 ? true : false);
             txtFolioTicket.Enabled = (cbxTipoPago.SelectedIndex == 1 ? true : false);
         } 
@@ -441,9 +472,22 @@ namespace GYM.Formularios.Membresia
 
         #endregion
 
-        private void chbStatus_CheckedChanged(object sender, EventArgs e)
+        private void chbFolio_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (ultimoFolio != "")
+            {
+                if (chbFolio.Checked)
+                {
+                    txtTmp = txtFolio.Text;
+                    txtFolio.Text = ultimoFolio;
+                    txtFolio.Enabled = false;
+                }
+                else
+                {
+                    txtFolio.Text = txtTmp;
+                    txtFolio.Enabled = true;
+                }
+            }
         }
 
        

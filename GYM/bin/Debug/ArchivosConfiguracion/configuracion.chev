@@ -38,4 +38,22 @@
     <promo05>null</promo05>
     <promo06>null</promo06>
   </promociones>
+  <ticket>
+    <lineaSup01>ALGO</lineaSup01>
+    <lineaSup02>ALGO</lineaSup02>
+    <lineaSup03>ALGO</lineaSup03>
+    <lineaSup04>ALGO</lineaSup04>
+    <lineaSup05>ALGO</lineaSup05>
+    <lineaSup06>ALGO</lineaSup06>
+    <lineaSup07>ALGO</lineaSup07>
+    <lineaInf01>ALGO</lineaInf01>
+    <lineaInf02>ALGO</lineaInf02>
+    <lineaInf03>ALGO</lineaInf03>
+    <impresora>Enviar a OneNote 2013</impresora>
+    <tamPapel>300</tamPapel>
+    <turnoMat>12:05:45</turnoMat>
+    <turnoVes>12:05:45</turnoVes>
+    <preguntar>True</preguntar>
+    <imprimir>True</imprimir>
+  </ticket>
 </configuraciones>

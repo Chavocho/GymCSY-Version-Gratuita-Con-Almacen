@@ -1198,3 +1198,5 @@ C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\De
 C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.pdb
 C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.frmConfigVersion.resources
 C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reportes.frmVisualizarVenta.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Configuraciones.frmConfigurarMembresías.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Membresia.frmPrecioMembresia.resources

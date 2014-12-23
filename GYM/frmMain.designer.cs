@@ -96,6 +96,7 @@
             this.pcbUsuario = new System.Windows.Forms.PictureBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblBETA = new System.Windows.Forms.Label();
+            this.ventasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUsuario)).BeginInit();
             this.SuspendLayout();
@@ -307,7 +308,8 @@
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.membresíasToolStripMenuItem});
+            this.membresíasToolStripMenuItem,
+            this.ventasToolStripMenuItem1});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.reportesToolStripMenuItem.Text = "Report&es";
@@ -315,7 +317,7 @@
             // membresíasToolStripMenuItem
             // 
             this.membresíasToolStripMenuItem.Name = "membresíasToolStripMenuItem";
-            this.membresíasToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.membresíasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.membresíasToolStripMenuItem.Text = "Membresías";
             this.membresíasToolStripMenuItem.Click += new System.EventHandler(this.membresíasToolStripMenuItem_Click);
             // 
@@ -636,6 +638,13 @@
             this.lblBETA.TabIndex = 7;
             this.lblBETA.Text = "BETA";
             // 
+            // ventasToolStripMenuItem1
+            // 
+            this.ventasToolStripMenuItem1.Name = "ventasToolStripMenuItem1";
+            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.ventasToolStripMenuItem1.Text = "Venta&s";
+            this.ventasToolStripMenuItem1.Click += new System.EventHandler(this.ventasToolStripMenuItem1_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -732,5 +741,6 @@
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem membresíasToolStripMenuItem;
         private System.Windows.Forms.Label lblBETA;
+        private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem1;
     }
 }

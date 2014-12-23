@@ -36,13 +36,13 @@
             this.lblInstruccionesBusqueda = new System.Windows.Forms.Label();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.dgvPersonas = new System.Windows.Forms.DataGridView();
-            this.bgwBusqueda = new System.ComponentModel.BackgroundWorker();
             this.IDM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Socio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaVencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bgwBusqueda = new System.ComponentModel.BackgroundWorker();
             this.tmrConteo = new System.Windows.Forms.Timer(this.components);
             this.btnMembresias = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).BeginInit();
@@ -124,11 +124,6 @@
             this.dgvPersonas.TabIndex = 13;
             this.dgvPersonas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonas_CellClick);
             // 
-            // bgwBusqueda
-            // 
-            this.bgwBusqueda.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwBusqueda_DoWork);
-            this.bgwBusqueda.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwBusqueda_RunWorkerCompleted);
-            // 
             // IDM
             // 
             this.IDM.HeaderText = "IDM";
@@ -175,6 +170,11 @@
             this.fechaVencimiento.ReadOnly = true;
             this.fechaVencimiento.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.fechaVencimiento.Width = 170;
+            // 
+            // bgwBusqueda
+            // 
+            this.bgwBusqueda.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwBusqueda_DoWork);
+            this.bgwBusqueda.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwBusqueda_RunWorkerCompleted);
             // 
             // tmrConteo
             // 

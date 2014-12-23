@@ -40,17 +40,17 @@
             this.txtFolio = new System.Windows.Forms.TextBox();
             this.lblEtiquetaDescripcion = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
             this.lblNombreMiembro = new System.Windows.Forms.Label();
             this.lblFechaFin = new System.Windows.Forms.Label();
             this.lblEtiquetaFechaFin = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTipoPago = new System.Windows.Forms.Label();
             this.cbxTipoPago = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTerminacion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtFolioTicket = new System.Windows.Forms.TextBox();
+            this.chbFolio = new System.Windows.Forms.CheckBox();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -95,7 +95,7 @@
             this.lblEtiquetaTipo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEtiquetaTipo.AutoSize = true;
             this.lblEtiquetaTipo.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.lblEtiquetaTipo.Location = new System.Drawing.Point(12, 49);
+            this.lblEtiquetaTipo.Location = new System.Drawing.Point(9, 49);
             this.lblEtiquetaTipo.Name = "lblEtiquetaTipo";
             this.lblEtiquetaTipo.Size = new System.Drawing.Size(64, 19);
             this.lblEtiquetaTipo.TabIndex = 3;
@@ -129,7 +129,7 @@
             this.lblEtiquetaPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEtiquetaPrecio.AutoSize = true;
             this.lblEtiquetaPrecio.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.lblEtiquetaPrecio.Location = new System.Drawing.Point(12, 173);
+            this.lblEtiquetaPrecio.Location = new System.Drawing.Point(12, 182);
             this.lblEtiquetaPrecio.Name = "lblEtiquetaPrecio";
             this.lblEtiquetaPrecio.Size = new System.Drawing.Size(46, 19);
             this.lblEtiquetaPrecio.TabIndex = 8;
@@ -190,35 +190,6 @@
             this.txtDescripcion.Size = new System.Drawing.Size(240, 92);
             this.txtDescripcion.TabIndex = 7;
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnCancelar.Image = global::GYM.Properties.Resources.ImgCancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(428, 345);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(105, 40);
-            this.btnCancelar.TabIndex = 9;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnAceptar.Image = global::GYM.Properties.Resources.ImgAceptar;
-            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.Location = new System.Drawing.Point(539, 345);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(105, 40);
-            this.btnAceptar.TabIndex = 8;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
             // lblNombreMiembro
             // 
             this.lblNombreMiembro.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -252,16 +223,16 @@
             this.lblEtiquetaFechaFin.TabIndex = 18;
             this.lblEtiquetaFechaFin.Text = "Fecha de vencimiento";
             // 
-            // label1
+            // lblTipoPago
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.label1.Location = new System.Drawing.Point(12, 114);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 19);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Tipo de pago";
+            this.lblTipoPago.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTipoPago.AutoSize = true;
+            this.lblTipoPago.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.lblTipoPago.Location = new System.Drawing.Point(9, 114);
+            this.lblTipoPago.Name = "lblTipoPago";
+            this.lblTipoPago.Size = new System.Drawing.Size(89, 19);
+            this.lblTipoPago.TabIndex = 20;
+            this.lblTipoPago.Text = "Tipo de pago";
             // 
             // cbxTipoPago
             // 
@@ -321,22 +292,50 @@
             this.txtFolioTicket.Size = new System.Drawing.Size(178, 26);
             this.txtFolioTicket.TabIndex = 6;
             // 
+            // chbFolio
+            // 
+            this.chbFolio.AutoSize = true;
+            this.chbFolio.Enabled = false;
+            this.chbFolio.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.chbFolio.Location = new System.Drawing.Point(207, 138);
+            this.chbFolio.Name = "chbFolio";
+            this.chbFolio.Size = new System.Drawing.Size(215, 23);
+            this.chbFolio.TabIndex = 44;
+            this.chbFolio.Text = "Asignar folio automáticamente";
+            this.chbFolio.UseVisualStyleBackColor = true;
+            this.chbFolio.CheckedChanged += new System.EventHandler(this.chbFolio_CheckedChanged);
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnAceptar.Image = global::GYM.Properties.Resources.ImgAceptar;
+            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAceptar.Location = new System.Drawing.Point(539, 345);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(105, 40);
+            this.btnAceptar.TabIndex = 8;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
             // frmNuevaMembresia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(656, 397);
+            this.Controls.Add(this.chbFolio);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtFolioTicket);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTerminacion);
             this.Controls.Add(this.cbxTipoPago);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTipoPago);
             this.Controls.Add(this.lblEtiquetaFechaFin);
             this.Controls.Add(this.lblFechaFin);
             this.Controls.Add(this.lblNombreMiembro);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblEtiquetaDescripcion);
             this.Controls.Add(this.txtDescripcion);
@@ -372,16 +371,16 @@
         private System.Windows.Forms.TextBox txtFolio;
         private System.Windows.Forms.Label lblEtiquetaDescripcion;
         private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label lblNombreMiembro;
         private System.Windows.Forms.Label lblFechaFin;
         private System.Windows.Forms.Label lblEtiquetaFechaFin;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTipoPago;
         private System.Windows.Forms.ComboBox cbxTipoPago;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTerminacion;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtFolioTicket;
+        private System.Windows.Forms.CheckBox chbFolio;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCumple));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblCerrar = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -66,6 +67,7 @@
             this.Controls.Add(this.lblCerrar);
             this.Controls.Add(this.lblTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCumple";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Cumpleaños";

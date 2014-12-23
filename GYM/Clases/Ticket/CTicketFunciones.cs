@@ -209,7 +209,7 @@ namespace GYM.Clases
                 else
                 {
                     e.Graphics.DrawString("SERVICIO: CIERRE DE CAJA", fuenteNormal, Brushes.Black, 0, y);
-                    e.Graphics.DrawString("FECHA: " + DateTime.Now.ToString("dd/MM/yyyy hh:mm tt"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 3) * 2 - 25, y);
+                    e.Graphics.DrawString("FECHA: " + DateTime.Now.ToString("dd/MM/yyyy"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 3) * 2 - 25, y);
                 }
                 y += saltoLinea;
                 if (DateTime.Now.TimeOfDay >= turnoMat && DateTime.Now.TimeOfDay < turnoVes)
@@ -376,17 +376,9 @@ namespace GYM.Clases
         {
             try
             {
-                decimal total = 0, subtotal = 0, iva = 0;
+                decimal total = 0;
                 total = decimal.Parse(dt.Rows[0]["total"].ToString());
-                subtotal = decimal.Parse(dt.Rows[0]["subtotal"].ToString());
-                iva = total - subtotal;
                 y += saltoLinea / 2;
-                e.Graphics.DrawString("SUBTOTAL: ", fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) * 3 + 10 - e.Graphics.MeasureString("SUBTOTAL: ", fuenteNormal).Width, y);
-                e.Graphics.DrawString(subtotal.ToString("C2"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) * 3 + 10, y);
-                y += saltoLinea;
-                e.Graphics.DrawString("IVA: ", fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) * 3 + 10 - e.Graphics.MeasureString("IVA: ", fuenteNormal).Width, y);
-                e.Graphics.DrawString(iva.ToString("C2"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) * 3 + 10, y);
-                y += saltoLinea;
                 e.Graphics.DrawString("TOTAL: ", fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) * 3 + 10 - e.Graphics.MeasureString("TOTAL: ", fuenteNormal).Width, y);
                 e.Graphics.DrawString(total.ToString("C2"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) * 3 + 10, y);
                 y += saltoLinea * 3 / 2;
@@ -469,7 +461,7 @@ namespace GYM.Clases
                 decimal efRet = 0;
                 e.Graphics.DrawString("EFECTIVO", fuenteResaltada, Brushes.Black, 0F, y);
                 e.Graphics.DrawString("VOUCHERS", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) - 15, y);
-                e.Graphics.DrawString("MOVIMIENTO", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) * 2 - 25, y);
+                e.Graphics.DrawString("MOV.", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) * 2 - 25, y);
                 e.Graphics.DrawString("FECHA", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) * 3 - 25, y);
                 y += saltoLinea;
                 foreach (DataRow dr in dtCaja.Rows)
@@ -485,10 +477,11 @@ namespace GYM.Clases
                     e.Graphics.DrawString(ef.ToString("C2"), fuenteNormal, Brushes.Black, 0F, y);
                     e.Graphics.DrawString(ta.ToString("C2"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) - 15, y);
                     e.Graphics.DrawString(tipoMov, fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) * 2 - 25, y);
-                    e.Graphics.DrawString(fe.ToString("dd/MM/yyyy hh:mm tt"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) * 3 - 25, y);
+                    e.Graphics.DrawString(fe.ToString("dd/MM/yyyy"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) * 3 - 25, y);
                     totTa += ta;
                     efRet = ef;
                     y += saltoLinea;
+                    AgregarLinea(ref e, new Pen(Brushes.Black));
                 }
                 e.Graphics.DrawString("EFECTIVO RETIRADO: " + efRet.ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
                 y += saltoLinea;

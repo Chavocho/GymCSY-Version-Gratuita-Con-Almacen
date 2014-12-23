@@ -59,6 +59,7 @@
             this.txtFolioTicket = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTerminacion = new System.Windows.Forms.TextBox();
+            this.chbFolio = new System.Windows.Forms.CheckBox();
             this.grbInformación.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -420,11 +421,25 @@
             this.txtTerminacion.Size = new System.Drawing.Size(178, 26);
             this.txtTerminacion.TabIndex = 5;
             // 
+            // chbFolio
+            // 
+            this.chbFolio.AutoSize = true;
+            this.chbFolio.Enabled = false;
+            this.chbFolio.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.chbFolio.Location = new System.Drawing.Point(210, 132);
+            this.chbFolio.Name = "chbFolio";
+            this.chbFolio.Size = new System.Drawing.Size(215, 23);
+            this.chbFolio.TabIndex = 43;
+            this.chbFolio.Text = "Asignar folio automáticamente";
+            this.chbFolio.UseVisualStyleBackColor = true;
+            this.chbFolio.CheckedChanged += new System.EventHandler(this.chbFolio_CheckedChanged);
+            // 
             // frmEditarMembresia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 480);
+            this.Controls.Add(this.chbFolio);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtFolioTicket);
             this.Controls.Add(this.label2);
@@ -491,6 +506,7 @@
         private System.Windows.Forms.TextBox txtFolioTicket;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTerminacion;
+        private System.Windows.Forms.CheckBox chbFolio;
 
 
     }

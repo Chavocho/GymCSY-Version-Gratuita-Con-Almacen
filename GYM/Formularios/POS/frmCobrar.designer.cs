@@ -41,12 +41,14 @@
             this.lblFolio = new System.Windows.Forms.Label();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.lblEtiquetaCantidad = new System.Windows.Forms.Label();
-            this.btnCobrar = new System.Windows.Forms.Button();
             this.chbTarjeta = new System.Windows.Forms.CheckBox();
             this.lblFolioTicket = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtFolioTicket = new System.Windows.Forms.TextBox();
+            this.txtTerminacion = new System.Windows.Forms.TextBox();
+            this.lblTerminacion = new System.Windows.Forms.Label();
+            this.btnCobrar = new System.Windows.Forms.Button();
+            this.pnlTarjeta = new System.Windows.Forms.Panel();
+            this.pnlTarjeta.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblEtiquetaEfectivo
@@ -173,31 +175,12 @@
             this.lblEtiquetaCantidad.TabIndex = 32;
             this.lblEtiquetaCantidad.Text = "Productos Vendidos";
             // 
-            // btnCobrar
-            // 
-            this.btnCobrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCobrar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.btnCobrar.FlatAppearance.BorderSize = 2;
-            this.btnCobrar.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnCobrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnCobrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCobrar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnCobrar.Image = global::GYM.Properties.Resources.ImgAceptar;
-            this.btnCobrar.Location = new System.Drawing.Point(316, 282);
-            this.btnCobrar.Name = "btnCobrar";
-            this.btnCobrar.Size = new System.Drawing.Size(97, 32);
-            this.btnCobrar.TabIndex = 4;
-            this.btnCobrar.Text = "Aceptar";
-            this.btnCobrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCobrar.UseVisualStyleBackColor = true;
-            this.btnCobrar.Click += new System.EventHandler(this.btnCobrar_Click);
-            // 
             // chbTarjeta
             // 
             this.chbTarjeta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.chbTarjeta.AutoSize = true;
             this.chbTarjeta.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.chbTarjeta.Location = new System.Drawing.Point(12, 289);
+            this.chbTarjeta.Location = new System.Drawing.Point(12, 225);
             this.chbTarjeta.Name = "chbTarjeta";
             this.chbTarjeta.Size = new System.Drawing.Size(146, 25);
             this.chbTarjeta.TabIndex = 0;
@@ -208,52 +191,75 @@
             // lblFolioTicket
             // 
             this.lblFolioTicket.AutoSize = true;
-            this.lblFolioTicket.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblFolioTicket.Location = new System.Drawing.Point(9, 206);
+            this.lblFolioTicket.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblFolioTicket.Location = new System.Drawing.Point(8, 1);
             this.lblFolioTicket.Name = "lblFolioTicket";
-            this.lblFolioTicket.Size = new System.Drawing.Size(81, 15);
+            this.lblFolioTicket.Size = new System.Drawing.Size(94, 19);
             this.lblFolioTicket.TabIndex = 34;
             this.lblFolioTicket.Text = "Folio de ticket";
-            this.lblFolioTicket.Visible = false;
             // 
-            // textBox1
+            // txtFolioTicket
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.textBox1.Location = new System.Drawing.Point(12, 224);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(197, 25);
-            this.textBox1.TabIndex = 35;
-            this.textBox1.Visible = false;
+            this.txtFolioTicket.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtFolioTicket.Location = new System.Drawing.Point(12, 23);
+            this.txtFolioTicket.Name = "txtFolioTicket";
+            this.txtFolioTicket.Size = new System.Drawing.Size(197, 25);
+            this.txtFolioTicket.TabIndex = 35;
             // 
-            // textBox2
+            // txtTerminacion
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.textBox2.Location = new System.Drawing.Point(215, 224);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(198, 25);
-            this.textBox2.TabIndex = 37;
-            this.textBox2.Visible = false;
+            this.txtTerminacion.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtTerminacion.Location = new System.Drawing.Point(215, 23);
+            this.txtTerminacion.Name = "txtTerminacion";
+            this.txtTerminacion.Size = new System.Drawing.Size(198, 25);
+            this.txtTerminacion.TabIndex = 37;
             // 
-            // label1
+            // lblTerminacion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label1.Location = new System.Drawing.Point(212, 206);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 15);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "Terminación";
-            this.label1.Visible = false;
+            this.lblTerminacion.AutoSize = true;
+            this.lblTerminacion.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblTerminacion.Location = new System.Drawing.Point(210, 1);
+            this.lblTerminacion.Name = "lblTerminacion";
+            this.lblTerminacion.Size = new System.Drawing.Size(83, 19);
+            this.lblTerminacion.TabIndex = 36;
+            this.lblTerminacion.Text = "Terminación";
+            // 
+            // btnCobrar
+            // 
+            this.btnCobrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCobrar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.btnCobrar.FlatAppearance.BorderSize = 2;
+            this.btnCobrar.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnCobrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnCobrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCobrar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnCobrar.Image = global::GYM.Properties.Resources.ImgAceptar;
+            this.btnCobrar.Location = new System.Drawing.Point(316, 218);
+            this.btnCobrar.Name = "btnCobrar";
+            this.btnCobrar.Size = new System.Drawing.Size(97, 32);
+            this.btnCobrar.TabIndex = 4;
+            this.btnCobrar.Text = "Aceptar";
+            this.btnCobrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCobrar.UseVisualStyleBackColor = true;
+            this.btnCobrar.Click += new System.EventHandler(this.btnCobrar_Click);
+            // 
+            // pnlTarjeta
+            // 
+            this.pnlTarjeta.Controls.Add(this.txtTerminacion);
+            this.pnlTarjeta.Controls.Add(this.lblFolioTicket);
+            this.pnlTarjeta.Controls.Add(this.lblTerminacion);
+            this.pnlTarjeta.Controls.Add(this.txtFolioTicket);
+            this.pnlTarjeta.Location = new System.Drawing.Point(0, 202);
+            this.pnlTarjeta.Name = "pnlTarjeta";
+            this.pnlTarjeta.Size = new System.Drawing.Size(425, 58);
+            this.pnlTarjeta.TabIndex = 38;
+            this.pnlTarjeta.Visible = false;
             // 
             // frmCobrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(425, 326);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lblFolioTicket);
+            this.ClientSize = new System.Drawing.Size(425, 262);
             this.Controls.Add(this.chbTarjeta);
             this.Controls.Add(this.btnCobrar);
             this.Controls.Add(this.lblCantidad);
@@ -268,6 +274,7 @@
             this.Controls.Add(this.lblEtiquetaEfectivo);
             this.Controls.Add(this.lblEtiquetaTotal);
             this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.pnlTarjeta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -275,6 +282,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cobrar Venta";
             this.Load += new System.EventHandler(this.frmCobrar_Load);
+            this.pnlTarjeta.ResumeLayout(false);
+            this.pnlTarjeta.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,8 +306,9 @@
         private System.Windows.Forms.Button btnCobrar;
         private System.Windows.Forms.CheckBox chbTarjeta;
         private System.Windows.Forms.Label lblFolioTicket;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtFolioTicket;
+        private System.Windows.Forms.TextBox txtTerminacion;
+        private System.Windows.Forms.Label lblTerminacion;
+        private System.Windows.Forms.Panel pnlTarjeta;
     }
 }

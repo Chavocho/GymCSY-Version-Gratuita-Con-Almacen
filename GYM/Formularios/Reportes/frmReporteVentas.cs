@@ -16,6 +16,26 @@ namespace GYM.Formularios.Reportes
     {
         int id;
         DataTable dt;
+
+        #region Instancia
+        private static frmReporteVentas frmInstancia;
+        public static frmReporteVentas Instancia
+        {
+            get
+            {
+                if (frmInstancia == null)
+                    frmInstancia = new frmReporteVentas();
+                else if (frmInstancia.IsDisposed)
+                    frmInstancia = new frmReporteVentas();
+                return frmInstancia;
+            }
+            set
+            {
+                frmInstancia = value;
+            }
+        }
+        #endregion
+
         public frmReporteVentas()
         {
             InitializeComponent();
@@ -29,7 +49,7 @@ namespace GYM.Formularios.Reportes
                 MySqlCommand sql = new MySqlCommand();
                 sql.CommandText = "SELECT v.id, v.fecha, v.total, v.tipo_pago, SUM(vd.cantidad) AS c FROM venta AS v INNER JOIN venta_detallada AS vd ON (v.id=vd.id_venta) WHERE (v.fecha BETWEEN ?fechaIni AND ?fechaFin)";
                 sql.Parameters.AddWithValue("?fechaIni", fechaIni.ToString("yyyy/MM/dd") + " 00:00:00");
-                sql.Parameters.AddWithValue("?fechaIni", fechaFin.ToString("yyyy/MM/dd") + " 23:59:59");
+                sql.Parameters.AddWithValue("?fechaFin", fechaFin.ToString("yyyy/MM/dd") + " 23:59:59");
                 dt = ConexionBD.EjecutarConsultaSelect(sql);
             }
             catch (MySqlException ex)
@@ -58,6 +78,7 @@ namespace GYM.Formularios.Reportes
                         tipoPago = "Tarjeta";
                     dgvVentas.Rows.Add(new object[] { dr["id"], fecha.ToString("dd") + " de " + fecha.ToString("MMMM") + " del " + fecha.ToString("yyyy"), total.ToString("C2"), tipoPago, dr["c"] });
                 }
+                dgvVentas_CellClick(dgvVentas, new DataGridViewCellEventArgs(0, 0));
             }
             catch (Exception ex)
             {
@@ -110,6 +131,14 @@ namespace GYM.Formularios.Reportes
         {
             tmrEspera.Enabled = false;
             CFuncionesGenerales.frmEspera("Espere mientras se efectua la búsqueda", this);
+        }
+
+        private void btnMembresias_Click(object sender, EventArgs e)
+        {
+            if (dgvVentas.CurrentRow != null)
+            {
+                (new frmVisualizarVenta(id)).ShowDialog(this);
+            }
         }
     }
 }

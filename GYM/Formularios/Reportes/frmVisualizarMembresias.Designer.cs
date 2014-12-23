@@ -33,9 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVisualizarMembresias));
             this.dgvMembresias = new System.Windows.Forms.DataGridView();
-            this.FechaIni = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblETipo = new System.Windows.Forms.Label();
             this.lblTipo = new System.Windows.Forms.Label();
             this.lblTipoPago = new System.Windows.Forms.Label();
@@ -56,6 +53,9 @@
             this.lblESocio = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.lblInformacion = new System.Windows.Forms.Label();
+            this.FechaIni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembresias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,29 +110,6 @@
             this.dgvMembresias.Size = new System.Drawing.Size(984, 302);
             this.dgvMembresias.TabIndex = 14;
             this.dgvMembresias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMembresias_CellClick);
-            // 
-            // FechaIni
-            // 
-            this.FechaIni.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.FechaIni.HeaderText = "Fecha de inicio";
-            this.FechaIni.Name = "FechaIni";
-            this.FechaIni.ReadOnly = true;
-            this.FechaIni.Width = 250;
-            // 
-            // FechaFin
-            // 
-            this.FechaFin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.FechaFin.HeaderText = "Fecha de fin";
-            this.FechaFin.Name = "FechaFin";
-            this.FechaFin.ReadOnly = true;
-            this.FechaFin.Width = 250;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
             // 
             // lblETipo
             // 
@@ -357,6 +334,29 @@
             this.lblInformacion.TabIndex = 38;
             this.lblInformacion.Text = "Selecciona un registro para ver su información en la parte superior\r\n";
             // 
+            // FechaIni
+            // 
+            this.FechaIni.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.FechaIni.HeaderText = "Fecha de inicio";
+            this.FechaIni.Name = "FechaIni";
+            this.FechaIni.ReadOnly = true;
+            this.FechaIni.Width = 250;
+            // 
+            // FechaFin
+            // 
+            this.FechaFin.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.FechaFin.HeaderText = "Fecha de vencimiento";
+            this.FechaFin.Name = "FechaFin";
+            this.FechaFin.ReadOnly = true;
+            this.FechaFin.Width = 250;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
             // frmVisualizarMembresias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,9 +400,6 @@
         private System.Windows.Forms.DataGridView dgvMembresias;
         private System.Windows.Forms.Label lblETipo;
         private System.Windows.Forms.Label lblTipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaIni;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaFin;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.Label lblTipoPago;
         private System.Windows.Forms.Label lblETipoPago;
         private System.Windows.Forms.Label lblPrecio;
@@ -421,5 +418,8 @@
         private System.Windows.Forms.Label lblESocio;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label lblInformacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaIni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaFin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
     }
 }

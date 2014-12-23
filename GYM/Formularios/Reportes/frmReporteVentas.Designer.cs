@@ -64,6 +64,7 @@
             this.btnMembresias.Text = "Visualizar\r\nventa";
             this.btnMembresias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMembresias.UseVisualStyleBackColor = true;
+            this.btnMembresias.Click += new System.EventHandler(this.btnMembresias_Click);
             // 
             // dgvVentas
             // 
@@ -157,6 +158,7 @@
             // 
             // grbFechas
             // 
+            this.grbFechas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.grbFechas.Controls.Add(this.btnBuscar);
             this.grbFechas.Controls.Add(this.lblFechaFin);
             this.grbFechas.Controls.Add(this.dtpFechaFin);
@@ -242,6 +244,7 @@
             this.Name = "frmReporteVentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte Ventas";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();
             this.grbFechas.ResumeLayout(false);
             this.grbFechas.PerformLayout();
