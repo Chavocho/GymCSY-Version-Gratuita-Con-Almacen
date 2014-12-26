@@ -515,12 +515,12 @@ namespace GYM
 
         private void cumpleañosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            tmrCumpleaños.Enabled = false;
             if (GYM.Clases.CFuncionesGenerales.versionGratuita)
             {
                 MessageBox.Show("Esta opción no está disponible en la versión gratuita de GymCSY .\nContacta con el proveedor para adquirir la versión completa.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            tmrCumpleaños.Enabled = false;
             CMiembro c = new CMiembro(DateTime.Now);
             c.Cumpleaños(this);
             System.Threading.Thread.Sleep(1000);
@@ -654,6 +654,22 @@ namespace GYM
                 Formularios.Reportes.frmReporteVentas.Instancia.Show();
             else
                 Formularios.Reportes.frmReporteVentas.Instancia.Select();
+        }
+
+        private void preciosDemembresíasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Formularios.frmConfigurarMembresías.Instancia.Visible)
+                Formularios.frmConfigurarMembresías.Instancia.Show();
+            else
+                Formularios.frmConfigurarMembresías.Instancia.Select();
+        }
+
+        private void promocionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Formularios.Membresia.frmPromociones.Instancia.Visible)
+                Formularios.Membresia.frmPromociones.Instancia.Show();
+            else
+                Formularios.Membresia.frmPromociones.Instancia.Select();
         }   
     }
 }

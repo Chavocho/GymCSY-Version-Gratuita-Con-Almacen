@@ -112,6 +112,7 @@ namespace GYM.Formularios
                         }
                     }
                     MessageBox.Show("El usuario y/o contraseña es incorrecta.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    tbxPassword.Text = "";
                 }
                 catch (MySqlException ex)
                 {

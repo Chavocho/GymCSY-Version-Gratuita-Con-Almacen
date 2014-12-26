@@ -105,7 +105,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(341, 351);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(109, 37);
-            this.btnAceptar.TabIndex = 5;
+            this.btnAceptar.TabIndex = 7;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -199,7 +199,7 @@
             this.btnHuella.Location = new System.Drawing.Point(12, 351);
             this.btnHuella.Name = "btnHuella";
             this.btnHuella.Size = new System.Drawing.Size(136, 37);
-            this.btnHuella.TabIndex = 4;
+            this.btnHuella.TabIndex = 6;
             this.btnHuella.Text = "Capturar huella";
             this.btnHuella.UseVisualStyleBackColor = true;
             this.btnHuella.Click += new System.EventHandler(this.btnHuella_Click);
@@ -242,7 +242,7 @@
             this.cbxCamara.Location = new System.Drawing.Point(154, 355);
             this.cbxCamara.Name = "cbxCamara";
             this.cbxCamara.Size = new System.Drawing.Size(150, 29);
-            this.cbxCamara.TabIndex = 39;
+            this.cbxCamara.TabIndex = 5;
             // 
             // btnCamara
             // 
@@ -250,7 +250,7 @@
             this.btnCamara.Location = new System.Drawing.Point(154, 315);
             this.btnCamara.Name = "btnCamara";
             this.btnCamara.Size = new System.Drawing.Size(50, 30);
-            this.btnCamara.TabIndex = 38;
+            this.btnCamara.TabIndex = 4;
             this.btnCamara.UseVisualStyleBackColor = true;
             this.btnCamara.Click += new System.EventHandler(this.btnCamara_Click);
             // 

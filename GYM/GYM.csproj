@@ -295,6 +295,12 @@
     <Compile Include="Formularios\Membresia\Cortesias\frmNuevaCortesia.Designer.cs">
       <DependentUpon>frmNuevaCortesia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Membresia\frmAsignarPromo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Membresia\frmAsignarPromo.Designer.cs">
+      <DependentUpon>frmAsignarPromo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Membresia\frmEditarMembresia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -318,6 +324,24 @@
     </Compile>
     <Compile Include="Formularios\Membresia\frmPrecioMembresia.Designer.cs">
       <DependentUpon>frmPrecioMembresia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Membresia\Promociones\frmEditarPromocion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Membresia\Promociones\frmEditarPromocion.Designer.cs">
+      <DependentUpon>frmEditarPromocion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Membresia\Promociones\frmNuevaPromocion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Membresia\Promociones\frmNuevaPromocion.Designer.cs">
+      <DependentUpon>frmNuevaPromocion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Membresia\Promociones\frmPromociones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Membresia\Promociones\frmPromociones.Designer.cs">
+      <DependentUpon>frmPromociones.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Pendientes\frmPendientes.cs">
       <SubType>Form</SubType>
@@ -607,6 +631,9 @@
     <EmbeddedResource Include="Formularios\Membresia\Cortesias\frmNuevaCortesia.resx">
       <DependentUpon>frmNuevaCortesia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Membresia\frmAsignarPromo.resx">
+      <DependentUpon>frmAsignarPromo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Membresia\frmEditarMembresia.resx">
       <DependentUpon>frmEditarMembresia.cs</DependentUpon>
     </EmbeddedResource>
@@ -618,6 +645,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Membresia\frmPrecioMembresia.resx">
       <DependentUpon>frmPrecioMembresia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Membresia\Promociones\frmEditarPromocion.resx">
+      <DependentUpon>frmEditarPromocion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Membresia\Promociones\frmNuevaPromocion.resx">
+      <DependentUpon>frmNuevaPromocion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Membresia\Promociones\frmPromociones.resx">
+      <DependentUpon>frmPromociones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Pendientes\frmPendientes.resx">
       <DependentUpon>frmPendientes.cs</DependentUpon>

@@ -35,7 +35,6 @@
             this.lblEtiquetaFechaInicio = new System.Windows.Forms.Label();
             this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.lblEtiquetaPrecio = new System.Windows.Forms.Label();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
             this.lblEtiquetaFolioRemision = new System.Windows.Forms.Label();
             this.txtFolio = new System.Windows.Forms.TextBox();
             this.lblEtiquetaDescripcion = new System.Windows.Forms.Label();
@@ -49,7 +48,9 @@
             this.txtTerminacion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtFolioTicket = new System.Windows.Forms.TextBox();
-            this.chbFolio = new System.Windows.Forms.CheckBox();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.btnQuitarPromo = new System.Windows.Forms.Button();
+            this.btnAsignarPromo = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -134,17 +135,6 @@
             this.lblEtiquetaPrecio.Size = new System.Drawing.Size(46, 19);
             this.lblEtiquetaPrecio.TabIndex = 8;
             this.lblEtiquetaPrecio.Text = "Precio";
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPrecio.Enabled = false;
-            this.txtPrecio.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.txtPrecio.Location = new System.Drawing.Point(13, 204);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(178, 26);
-            this.txtPrecio.TabIndex = 3;
-            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // lblEtiquetaFolioRemision
             // 
@@ -292,18 +282,38 @@
             this.txtFolioTicket.Size = new System.Drawing.Size(178, 26);
             this.txtFolioTicket.TabIndex = 6;
             // 
-            // chbFolio
+            // lblPrecio
             // 
-            this.chbFolio.AutoSize = true;
-            this.chbFolio.Enabled = false;
-            this.chbFolio.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.chbFolio.Location = new System.Drawing.Point(207, 138);
-            this.chbFolio.Name = "chbFolio";
-            this.chbFolio.Size = new System.Drawing.Size(215, 23);
-            this.chbFolio.TabIndex = 44;
-            this.chbFolio.Text = "Asignar folio automáticamente";
-            this.chbFolio.UseVisualStyleBackColor = true;
-            this.chbFolio.CheckedChanged += new System.EventHandler(this.chbFolio_CheckedChanged);
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio.Location = new System.Drawing.Point(9, 207);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(45, 19);
+            this.lblPrecio.TabIndex = 26;
+            this.lblPrecio.Text = "$0.00";
+            // 
+            // btnQuitarPromo
+            // 
+            this.btnQuitarPromo.Enabled = false;
+            this.btnQuitarPromo.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.btnQuitarPromo.Location = new System.Drawing.Point(401, 136);
+            this.btnQuitarPromo.Name = "btnQuitarPromo";
+            this.btnQuitarPromo.Size = new System.Drawing.Size(178, 27);
+            this.btnQuitarPromo.TabIndex = 47;
+            this.btnQuitarPromo.Text = "Quitar promoción";
+            this.btnQuitarPromo.UseVisualStyleBackColor = true;
+            this.btnQuitarPromo.Click += new System.EventHandler(this.btnQuitarPromo_Click);
+            // 
+            // btnAsignarPromo
+            // 
+            this.btnAsignarPromo.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.btnAsignarPromo.Location = new System.Drawing.Point(207, 136);
+            this.btnAsignarPromo.Name = "btnAsignarPromo";
+            this.btnAsignarPromo.Size = new System.Drawing.Size(178, 27);
+            this.btnAsignarPromo.TabIndex = 46;
+            this.btnAsignarPromo.Text = "Asignar promoción";
+            this.btnAsignarPromo.UseVisualStyleBackColor = true;
+            this.btnAsignarPromo.Click += new System.EventHandler(this.btnAsignarPromo_Click);
             // 
             // btnAceptar
             // 
@@ -326,7 +336,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(656, 397);
-            this.Controls.Add(this.chbFolio);
+            this.Controls.Add(this.btnQuitarPromo);
+            this.Controls.Add(this.btnAsignarPromo);
+            this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtFolioTicket);
             this.Controls.Add(this.label2);
@@ -342,7 +354,6 @@
             this.Controls.Add(this.lblEtiquetaFolioRemision);
             this.Controls.Add(this.txtFolio);
             this.Controls.Add(this.lblEtiquetaPrecio);
-            this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.lblEtiquetaFechaInicio);
             this.Controls.Add(this.dtpFechaInicio);
             this.Controls.Add(this.lblEtiquetaTipo);
@@ -366,7 +377,6 @@
         private System.Windows.Forms.Label lblEtiquetaFechaInicio;
         private System.Windows.Forms.DateTimePicker dtpFechaInicio;
         private System.Windows.Forms.Label lblEtiquetaPrecio;
-        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label lblEtiquetaFolioRemision;
         private System.Windows.Forms.TextBox txtFolio;
         private System.Windows.Forms.Label lblEtiquetaDescripcion;
@@ -381,6 +391,8 @@
         private System.Windows.Forms.TextBox txtTerminacion;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtFolioTicket;
-        private System.Windows.Forms.CheckBox chbFolio;
+        private System.Windows.Forms.Label lblPrecio;
+        private System.Windows.Forms.Button btnQuitarPromo;
+        private System.Windows.Forms.Button btnAsignarPromo;
     }
 }

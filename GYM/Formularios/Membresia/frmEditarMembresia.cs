@@ -14,23 +14,45 @@ namespace GYM.Formularios.Membresia
 {
     public partial class frmEditarMembresia : Form
     {
-        int numSocio;
+        Dictionary<int, decimal> preciosM = new Dictionary<int, decimal>();
+        Dictionary<int, string> descripcionM = new Dictionary<int, string>();
+        int numSocio, sexo;
         string ultimoFolio = "";
-        string txtTmp = "";
         DateTime fechaFin;
         CMembresia.EstadoMembresia es;
         CMembresia mem;
         CRegistro_membresias rMem;
 
         #region Metodos
-        public frmEditarMembresia(int numSocio)
+        public frmEditarMembresia(int numSocio, int sexo)
         {
             InitializeComponent();
             GYM.Clases.CFuncionesGenerales.CargarInterfaz(this);
             this.numSocio = numSocio;
+            this.sexo = sexo;
             mem = new Clases.CMembresia(numSocio);
             rMem = new CRegistro_membresias();
             UltimoFolio();
+            ConfigFolio();
+            PreciosMembresias();
+        }
+
+        private void ConfigFolio()
+        {
+            if (CConfiguracionXML.ExisteConfiguracion("membresia", "folio"))
+            {
+                if (bool.Parse(CConfiguracionXML.LeerConfiguración("membresia", "folio")) == true)
+                {
+                    txtFolio.Text = ultimoFolio;
+                    txtFolio.Enabled = false;
+                }
+                else
+                {
+                    txtFolio.Enabled = true;
+                }
+            }
+            else
+                txtFolio.Enabled = true;
         }
 
         private void UltimoFolio()
@@ -51,6 +73,28 @@ namespace GYM.Formularios.Membresia
             catch (Exception ex)
             {
                 CFuncionesGenerales.MensajeError("Ocurrió un error al generar el nuevo folio. Ocurrió un error genérico.", ex);
+            }
+        }
+
+        private void PreciosMembresias()
+        {
+            try
+            {
+                string sql = "SELECT id, precio, descripcion FROM precio_membresia WHERE sexo='" + sexo.ToString() + "'";
+                DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    preciosM.Add((int)dr["id"], (decimal)dr["precio"]);
+                    descripcionM.Add((int)dr["id"], dr["descripcion"].ToString());
+                }
+            }
+            catch (MySqlException ex)
+            {
+                CFuncionesGenerales.MensajeError("No se ha podido cargar el precio de la duración seleccionada. Ocurrió un error al conectar la base de datos.", ex);
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("No se ha podido cargar el precio de la duración seleccionada. Ocurrió un error genérico.", ex);
             }
         }
 
@@ -95,6 +139,24 @@ namespace GYM.Formularios.Membresia
             }
         }
 
+        public void AsignarPromocion(int duracion, decimal precio, string descripcion)
+        {
+            cbxTipo.SelectedIndex = duracion;
+            cbxTipo.Enabled = false;
+            lblPrecio.Text = precio.ToString("C2");
+            btnQuitarPromo.Enabled = true;
+            txtDescripcion.Text = descripcion;
+        }
+
+        private void QuitarPromoción()
+        {
+            cbxTipo.SelectedIndex = -1;
+            cbxTipo.Enabled = true;
+            lblPrecio.Text = "$0.00";
+            btnQuitarPromo.Enabled = false;
+            txtDescripcion.Text = "";
+        }
+
         private string ObtenerNombreUsuario(int idUsuario)
         {
             string valor = "Sin información.";
@@ -130,7 +192,7 @@ namespace GYM.Formularios.Membresia
                 cbxTipoPago.Focus();
                 return false;
             }
-            if (txtPrecio.Text == "")
+            if (lblPrecio.Text == "$0.00")
             {
                 MessageBox.Show("Debes ingresar el precio que pagará el miembro", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return false;
@@ -161,9 +223,9 @@ namespace GYM.Formularios.Membresia
             try
             {
                 if (cbxTipoPago.SelectedIndex == 0)
-                    ef = decimal.Parse(txtPrecio.Text);
+                    ef = decimal.Parse(lblPrecio.Text, System.Globalization.NumberStyles.Currency);
                 else
-                    ta = decimal.Parse(txtPrecio.Text);
+                    ta = decimal.Parse(lblPrecio.Text, System.Globalization.NumberStyles.Currency);
                 MySql.Data.MySqlClient.MySqlCommand sql = new MySql.Data.MySqlClient.MySqlCommand();
                 sql.CommandText = "INSERT INTO caja (efectivo, tarjeta, tipo_movimiento, fecha, descripcion) VALUES (?, ?, ?, ?, ?)";
                 sql.Parameters.AddWithValue("@efectivo", ef);
@@ -188,6 +250,89 @@ namespace GYM.Formularios.Membresia
             catch (ArgumentNullException ex)
             {
                 Clases.CFuncionesGenerales.MensajeError("Algún método llamado en AgregarMovimientoCaja no admite argumentos nulos.", ex);
+            }
+            catch (Exception ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un error genérico.", ex);
+            }
+        }
+
+        private void ImprimirTicket()
+        {
+            try
+            {
+                if (Clases.CConfiguracionXML.ExisteConfiguracion("ticket", "imprimir"))
+                {
+                    if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("ticket", "imprimir")))
+                    {
+                        if (Clases.CConfiguracionXML.ExisteConfiguracion("ticket", "preguntar"))
+                        {
+                            if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("ticket", "preguntar")))
+                            {
+                                if (MessageBox.Show("¿Deseas imprimir el ticket de la membresía?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                                {
+                                    (new Clases.CTicket()).ImprimirTicketMembresia(numSocio);
+                                    (new Clases.CTicket()).ImprimirTicketMembresia(numSocio);
+                                }
+                            }
+                            else
+                            {
+                                (new Clases.CTicket()).ImprimirTicketMembresia(numSocio);
+                                (new Clases.CTicket()).ImprimirTicketMembresia(numSocio);
+                            }
+                        }
+                        else
+                        {
+                            (new Clases.CTicket()).ImprimirTicketMembresia(numSocio);
+                            (new Clases.CTicket()).ImprimirTicketMembresia(numSocio);
+                        }
+                    }
+                }
+            }
+            catch (System.Xml.XmlException ex)
+            {
+                MessageBox.Show("Ha ocurrido un error al querer leer del archivo XML. Mensaje de error:" + ex.Message + "\nNúmero de linea y posición: " + ex.LineNumber + ", " + ex.LinePosition,
+                    "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (System.IO.PathTooLongException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("La ruta del directorio es muy larga.", ex);
+            }
+            catch (System.IO.DirectoryNotFoundException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("El directorio del archivo de configuración no se encontró.", ex);
+            }
+            catch (System.IO.FileNotFoundException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("No se encontro el archivo de configuración.", ex);
+            }
+            catch (System.IO.IOException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un error de E/S.", ex);
+            }
+            catch (InvalidOperationException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("La llamada al método no se pudo efectuar porque el estado actual del objeto no lo permite.", ex);
+            }
+            catch (NotSupportedException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("No se pudo leer o modificar la secuencia de datos.", ex);
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("El sistema ha negado el acceso al archivo de configuración.\nPuede deberse a un error de E/S o a un error de seguridad.", ex);
+            }
+            catch (System.Security.SecurityException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un error de seguridad.", ex);
+            }
+            catch (ArgumentNullException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("El método no acepta referencias nulas.", ex);
+            }
+            catch (ArgumentException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("El argumento que se pasó al método no es aceptado por este.", ex);
             }
             catch (Exception ex)
             {
@@ -252,6 +397,7 @@ namespace GYM.Formularios.Membresia
                     mem.UpdateUser = frmMain.id;
 
                     rMem.CreateUser = frmMain.id;
+                    rMem.Precio = decimal.Parse(lblPrecio.Text, System.Globalization.NumberStyles.Currency);
                     rMem.IDMembresia = mem.IDMembresia;
                     rMem.Descripcion = txtDescripcion.Text;
                     rMem.FechaFin = fechaFin;
@@ -273,11 +419,7 @@ namespace GYM.Formularios.Membresia
                     MessageBox.Show("Membresía renovada", "Membresías", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (!GYM.Clases.CFuncionesGenerales.versionGratuita)
                     {
-                        if (MessageBox.Show("¿Desea imprimir el ticket?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
-                        {
-                            (new Clases.CTicket()).ImprimirTicketMembresia(numSocio);
-                            (new Clases.CTicket()).ImprimirTicketMembresia(numSocio);
-                        }
+                        ImprimirTicket();
                     }
                     this.Close();
                 }
@@ -335,61 +477,82 @@ namespace GYM.Formularios.Membresia
 
         private void cbxTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (cbxTipo.SelectedIndex)
+            if (cbxTipo.SelectedIndex == -1 || cbxTipo.Enabled == false)
+                return;
+            if (preciosM.ContainsKey(cbxTipo.SelectedIndex))
             {
-                case 0:
-                    fechaFin = dtpFechaInicio.Value.AddDays(7);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddDays(7).ToString("dd") + " de " + dtpFechaInicio.Value.AddDays(7).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddDays(7).ToString("yyyy");
-                    break;
-                case 1:
-                    fechaFin = dtpFechaInicio.Value.AddMonths(1);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(1).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(1).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(1).ToString("yyyy");
-                    break;
-                case 2:
-                    fechaFin = dtpFechaInicio.Value.AddMonths(2);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(2).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(2).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(2).ToString("yyyy");
-                    break;
-                case 3:
-                    fechaFin = dtpFechaInicio.Value.AddMonths(3);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(3).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(3).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(3).ToString("yyyy");
-                    break;
-                case 4:
-                    fechaFin = dtpFechaInicio.Value.AddMonths(4);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(4).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(4).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(4).ToString("yyyy");
-                    break;
-                case 5:
-                    fechaFin = dtpFechaInicio.Value.AddMonths(5);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(5).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(5).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(5).ToString("yyyy");
-                    break;
-                case 6:
-                    fechaFin = dtpFechaInicio.Value.AddMonths(6);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(6).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(6).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(6).ToString("yyyy");
-                    break;
-                case 7:
-                    fechaFin = dtpFechaInicio.Value.AddMonths(7);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(7).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(7).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(7).ToString("yyyy");
-                    break;
-                case 8:
-                    fechaFin = dtpFechaInicio.Value.AddMonths(8);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(8).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(8).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(8).ToString("yyyy");
-                    break;
-                case 9:
-                    fechaFin = dtpFechaInicio.Value.AddMonths(9);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(9).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(9).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(9).ToString("yyyy");
-                    break;
-                case 10:
-                    fechaFin = dtpFechaInicio.Value.AddMonths(10);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(10).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(10).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(10).ToString("yyyy");
-                    break;
-                case 11:
-                    fechaFin = dtpFechaInicio.Value.AddMonths(11);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(11).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(11).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(11).ToString("yyyy");
-                    break;
-                case 12:
-                    fechaFin = dtpFechaInicio.Value.AddYears(1);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddYears(1).ToString("dd") + " de " + dtpFechaInicio.Value.AddYears(1).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddYears(1).ToString("yyyy");
-                    break;
+                switch (cbxTipo.SelectedIndex)
+                {
+                    case 0:
+                        fechaFin = dtpFechaInicio.Value.AddDays(7);
+                        lblFechaFin.Text = dtpFechaInicio.Value.AddDays(7).ToString("dd") + " de " + dtpFechaInicio.Value.AddDays(7).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddDays(7).ToString("yyyy");
+                        break;
+                    case 1:
+                        fechaFin = dtpFechaInicio.Value.AddMonths(1);
+                        lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(1).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(1).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(1).ToString("yyyy");
+                        break;
+                    case 2:
+                        fechaFin = dtpFechaInicio.Value.AddMonths(2);
+                        lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(2).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(2).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(2).ToString("yyyy");
+                        break;
+                    case 3:
+                        fechaFin = dtpFechaInicio.Value.AddMonths(3);
+                        lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(3).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(3).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(3).ToString("yyyy");
+                        break;
+                    case 4:
+                        fechaFin = dtpFechaInicio.Value.AddMonths(4);
+                        lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(4).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(4).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(4).ToString("yyyy");
+                        break;
+                    case 5:
+                        fechaFin = dtpFechaInicio.Value.AddMonths(5);
+                        lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(5).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(5).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(5).ToString("yyyy");
+                        break;
+                    case 6:
+                        fechaFin = dtpFechaInicio.Value.AddMonths(6);
+                        lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(6).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(6).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(6).ToString("yyyy");
+                        break;
+                    case 7:
+                        fechaFin = dtpFechaInicio.Value.AddMonths(7);
+                        lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(7).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(7).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(7).ToString("yyyy");
+                        break;
+                    case 8:
+                        fechaFin = dtpFechaInicio.Value.AddMonths(8);
+                        lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(8).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(8).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(8).ToString("yyyy");
+                        break;
+                    case 9:
+                        fechaFin = dtpFechaInicio.Value.AddMonths(9);
+                        lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(9).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(9).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(9).ToString("yyyy");
+                        break;
+                    case 10:
+                        fechaFin = dtpFechaInicio.Value.AddMonths(10);
+                        lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(10).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(10).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(10).ToString("yyyy");
+                        break;
+                    case 11:
+                        fechaFin = dtpFechaInicio.Value.AddMonths(11);
+                        lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(11).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(11).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(11).ToString("yyyy");
+                        break;
+                    case 12:
+                        fechaFin = dtpFechaInicio.Value.AddYears(1);
+                        lblFechaFin.Text = dtpFechaInicio.Value.AddYears(1).ToString("dd") + " de " + dtpFechaInicio.Value.AddYears(1).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddYears(1).ToString("yyyy");
+                        break;
+                }
             }
+            else
+            {
+                MessageBox.Show("El precio de esa duración no ha sido configurado.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                int tmp = 0;
+                foreach (int k in preciosM.Keys)
+                {
+                    if (k > cbxTipo.SelectedIndex)
+                    {
+                        cbxTipo.SelectedIndex = tmp;
+                        break;
+                    }
+                    tmp = k;
+                }
+            }
+            lblPrecio.Text = preciosM[cbxTipo.SelectedIndex].ToString("C2");
+            txtDescripcion.Text = descripcionM[cbxTipo.SelectedIndex];  
         }
 
         private void dtpFechaInicio_ValueChanged(object sender, EventArgs e)
@@ -457,40 +620,19 @@ namespace GYM.Formularios.Membresia
         
         private void cbxTipoPago_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtPrecio.Enabled = true;
-            txtFolio.Enabled = true;
-            txtDescripcion.Enabled = true;
-            chbFolio.Enabled = true;
             txtTerminacion.Enabled = (cbxTipoPago.SelectedIndex == 1 ? true : false);
             txtFolioTicket.Enabled = (cbxTipoPago.SelectedIndex == 1 ? true : false);
         } 
-        
-        private void txtFolioTicket_EnabledChanged(object sender, EventArgs e)
+        #endregion    
+
+        private void btnAsignarPromo_Click(object sender, EventArgs e)
         {
-         
+            (new frmAsignarPromo(this, sexo)).ShowDialog(this);
         }
 
-        #endregion
-
-        private void chbFolio_CheckedChanged(object sender, EventArgs e)
+        private void btnQuitarPromo_Click(object sender, EventArgs e)
         {
-            if (ultimoFolio != "")
-            {
-                if (chbFolio.Checked)
-                {
-                    txtTmp = txtFolio.Text;
-                    txtFolio.Text = ultimoFolio;
-                    txtFolio.Enabled = false;
-                }
-                else
-                {
-                    txtFolio.Text = txtTmp;
-                    txtFolio.Enabled = true;
-                }
-            }
+            QuitarPromoción();
         }
-
-       
-     
     }
 }

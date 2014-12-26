@@ -14,7 +14,7 @@ namespace GYM.Formularios.Membresia
 {
     public partial class frmMembresia : Form
     {
-        int numSocio = 0;
+        int numSocio = 0, sexo;
 
         #region Instancia
         private static frmMembresia frmInstancia;
@@ -49,7 +49,7 @@ namespace GYM.Formularios.Membresia
             try
             {
                 //Fecha_fin
-                string sql = "SELECT mi.numSocio, mi.nombre, mi.apellidos, mi.telefono, mi.celular, me.estado, me.fecha_ini, me.fecha_fin AS fecha FROM miembros AS mi LEFT JOIN membresias AS me ON (mi.numSocio=me.numSocio) WHERE mi.numSocio='" + textoBusqueda + "' OR mi.nombre LIKE '%" + textoBusqueda + "%' OR mi.apellidos LIKE '%" + textoBusqueda + "%'";
+                string sql = "SELECT mi.numSocio, mi.nombre, mi.apellidos, mi.telefono, mi.celular, mi.genero, me.estado, me.fecha_ini, me.fecha_fin AS fecha FROM miembros AS mi LEFT JOIN membresias AS me ON (mi.numSocio=me.numSocio) WHERE mi.numSocio='" + textoBusqueda + "' OR mi.nombre LIKE '%" + textoBusqueda + "%' OR mi.apellidos LIKE '%" + textoBusqueda + "%'";
                 DataTable dt = Clases.ConexionBD.EjecutarConsultaSelect(sql);
                 foreach (DataRow dr in dt.Rows)
                 {
@@ -82,8 +82,9 @@ namespace GYM.Formularios.Membresia
                     }
                     else
                         fechaIni = "Sin información";
-                    dgvPersonas.Rows.Add(new object[] { dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), status, fechaIni, fecha });
+                    dgvPersonas.Rows.Add(new object[] { dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), status, fechaIni, fecha, dr["genero"] });
                 }
+                dgvPersonas_CellClick(dgvPersonas, new DataGridViewCellEventArgs(0, 0));
             }
             catch (MySqlException ex)
             {
@@ -106,7 +107,6 @@ namespace GYM.Formularios.Membresia
                 Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un error genérico.", ex);
             }
         }
-
         #endregion
 
         #region Eventos
@@ -123,7 +123,7 @@ namespace GYM.Formularios.Membresia
 
                 if (numSocio != 0)
                     if (!Clases.CMembresia.TieneMembresia(numSocio))
-                        (new frmNuevaMembresia(numSocio)).ShowDialog(this);
+                        (new frmNuevaMembresia(numSocio, sexo)).ShowDialog(this);
                     else
                         if (MessageBox.Show("El socio seleccionado ya tiene una membresía.\n¿Deseas renovarla?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == System.Windows.Forms.DialogResult.Yes)
                             btnEditar.PerformClick();
@@ -144,7 +144,7 @@ namespace GYM.Formularios.Membresia
             {
                 if (numSocio != 0)
                     if (Clases.CMembresia.TieneMembresia(numSocio))
-                        (new frmEditarMembresia(numSocio)).ShowDialog(this);
+                        (new frmEditarMembresia(numSocio, sexo)).ShowDialog(this);
                     else
                         if (MessageBox.Show("El socio seleccionado no tiene una membresía.\n¿Desea generar una nueva membresía?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == System.Windows.Forms.DialogResult.Yes)
                             btnNuevo.PerformClick();
@@ -164,6 +164,7 @@ namespace GYM.Formularios.Membresia
             try
             {
                 numSocio = int.Parse(dgvPersonas[0, e.RowIndex].Value.ToString());
+                sexo = (int)dgvPersonas[5, e.RowIndex].Value;
             }
             catch 
             {

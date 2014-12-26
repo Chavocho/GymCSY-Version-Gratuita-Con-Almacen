@@ -46,7 +46,7 @@
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 23;
-            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.Text = "Guardar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
@@ -66,7 +66,6 @@
             // 
             this.txtPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPrecio.Enabled = false;
             this.txtPrecio.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.txtPrecio.Location = new System.Drawing.Point(207, 31);
             this.txtPrecio.Name = "txtPrecio";
@@ -88,7 +87,6 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDescripcion.Enabled = false;
             this.txtDescripcion.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.txtDescripcion.Location = new System.Drawing.Point(12, 82);
             this.txtDescripcion.Multiline = true;
@@ -145,8 +143,11 @@
             this.Controls.Add(this.lblEtiquetaPrecio);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.btnAceptar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmPrecioMembresia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Precio Membresia";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -33,17 +33,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMembresia));
             this.dgvPersonas = new System.Windows.Forms.DataGridView();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.txtBusqueda = new System.Windows.Forms.TextBox();
-            this.lblInstruccionesBusqueda = new System.Windows.Forms.Label();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Socio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaVencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
+            this.lblInstruccionesBusqueda = new System.Windows.Forms.Label();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,6 +101,53 @@
             this.dgvPersonas.Size = new System.Drawing.Size(914, 356);
             this.dgvPersonas.TabIndex = 1;
             this.dgvPersonas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonas_CellClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "Número Socio";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ID.Width = 150;
+            // 
+            // Socio
+            // 
+            this.Socio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Socio.HeaderText = "Nombre y apellido";
+            this.Socio.Name = "Socio";
+            this.Socio.ReadOnly = true;
+            this.Socio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado Membresía";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Estado.Width = 180;
+            // 
+            // FechaInicio
+            // 
+            this.FechaInicio.HeaderText = "Fecha Inicio";
+            this.FechaInicio.Name = "FechaInicio";
+            this.FechaInicio.ReadOnly = true;
+            this.FechaInicio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.FechaInicio.Width = 170;
+            // 
+            // fechaVencimiento
+            // 
+            this.fechaVencimiento.HeaderText = "Fecha Vencimiento";
+            this.fechaVencimiento.Name = "fechaVencimiento";
+            this.fechaVencimiento.ReadOnly = true;
+            this.fechaVencimiento.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.fechaVencimiento.Width = 170;
+            // 
+            // Genero
+            // 
+            this.Genero.HeaderText = "Genero";
+            this.Genero.Name = "Genero";
+            this.Genero.ReadOnly = true;
+            this.Genero.Visible = false;
             // 
             // lblTitulo
             // 
@@ -160,53 +207,6 @@
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "Número Socio";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ID.Width = 150;
-            // 
-            // Socio
-            // 
-            this.Socio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Socio.HeaderText = "Nombre y apellido";
-            this.Socio.Name = "Socio";
-            this.Socio.ReadOnly = true;
-            this.Socio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado Membresía";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Estado.Width = 180;
-            // 
-            // FechaInicio
-            // 
-            this.FechaInicio.HeaderText = "Fecha Inicio";
-            this.FechaInicio.Name = "FechaInicio";
-            this.FechaInicio.ReadOnly = true;
-            this.FechaInicio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.FechaInicio.Width = 170;
-            // 
-            // fechaVencimiento
-            // 
-            this.fechaVencimiento.HeaderText = "Fecha Vencimiento";
-            this.fechaVencimiento.Name = "fechaVencimiento";
-            this.fechaVencimiento.ReadOnly = true;
-            this.fechaVencimiento.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.fechaVencimiento.Width = 170;
-            // 
-            // Genero
-            // 
-            this.Genero.HeaderText = "Genero";
-            this.Genero.Name = "Genero";
-            this.Genero.ReadOnly = true;
-            this.Genero.Visible = false;
             // 
             // frmMembresia
             // 

@@ -51,12 +51,13 @@ namespace GYM.Formularios.Membresia
             try
             {
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "INSERT INTO precio_membresia (id, sexo, descripcion, precio) VALUES (?id, ?sexo, ?descripcion, ?precio) " + 
-                    "ON DUPLICATE KEY UPDATE descripcion=?descripcion, precio=?precio;";
+                sql.CommandText = "INSERT INTO precio_membresia (id, sexo, descripcion, precio, create_user_id, create_time) VALUES (?id, ?sexo, ?descripcion, ?precio, ?user, NOW()) " + 
+                    "ON DUPLICATE KEY UPDATE descripcion=?descripcion, precio=?precio, update_user_id=?user, update_time=NOW();";
                 sql.Parameters.AddWithValue("?id", cbxTipo.SelectedIndex);
                 sql.Parameters.AddWithValue("?sexo", sexo);
                 sql.Parameters.AddWithValue("?descripcion", txtDescripcion.Text);
                 sql.Parameters.AddWithValue("?precio", decimal.Parse(txtPrecio.Text));
+                sql.Parameters.AddWithValue("?user", frmMain.id);
                 ConexionBD.EjecutarConsulta(sql);
             }
             catch (MySqlException ex)
@@ -64,7 +65,7 @@ namespace GYM.Formularios.Membresia
                 throw ex;
             }
             catch (Exception ex)
-            {
+            {   
                 throw ex;
             }
         }
@@ -82,7 +83,6 @@ namespace GYM.Formularios.Membresia
                 {
                     GuardarPrecio();
                     MessageBox.Show("Se ha guardado correctamente el precio.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
                 }
                 catch (MySqlException ex)
                 {

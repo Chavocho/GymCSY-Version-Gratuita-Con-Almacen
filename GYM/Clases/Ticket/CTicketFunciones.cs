@@ -423,6 +423,7 @@ namespace GYM.Clases
                 e.Graphics.DrawString("FIN: " + DateTime.Parse(ObtenerDatoDataTableMembresia("fecha_fin").ToString()).ToString("dd/MM/yyyy"), fuenteNormal, Brushes.Black, e.PageBounds.Width / 2, y);
                 y += saltoLinea;
                 e.Graphics.DrawString("TOTAL: " + decimal.Parse(ObtenerDatoDataTableMembresia("precio").ToString()).ToString("C2"), fuenteNormal, Brushes.Black, 0, y);
+                e.Graphics.DrawString("FOLIO: " + ObtenerDatoDataTableMembresia("folio_remision").ToString(), fuenteNormal, Brushes.Black, e.PageBounds.Width / 2, y);
                 y += saltoLinea;
             }
             catch (FormatException ex)

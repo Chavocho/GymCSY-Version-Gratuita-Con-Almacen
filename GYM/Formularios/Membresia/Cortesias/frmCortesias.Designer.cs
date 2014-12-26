@@ -33,14 +33,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCortesias));
             this.dgvPersonas = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Socio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaVencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblInstruccionesBusqueda = new System.Windows.Forms.Label();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Socio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaVencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +69,8 @@
             this.ID,
             this.Socio,
             this.Telefono,
-            this.fechaVencimiento});
+            this.fechaVencimiento,
+            this.Genero});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -96,35 +98,6 @@
             this.dgvPersonas.Size = new System.Drawing.Size(914, 350);
             this.dgvPersonas.TabIndex = 2;
             this.dgvPersonas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonas_CellClick);
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "Número Socio";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 150;
-            // 
-            // Socio
-            // 
-            this.Socio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Socio.HeaderText = "Nombre y apellido";
-            this.Socio.Name = "Socio";
-            this.Socio.ReadOnly = true;
-            // 
-            // Telefono
-            // 
-            this.Telefono.HeaderText = "Teléfono / Celular";
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            this.Telefono.Width = 175;
-            // 
-            // fechaVencimiento
-            // 
-            this.fechaVencimiento.HeaderText = "Fecha Vencimiento";
-            this.fechaVencimiento.Name = "fechaVencimiento";
-            this.fechaVencimiento.ReadOnly = true;
-            this.fechaVencimiento.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.fechaVencimiento.Width = 170;
             // 
             // lblInstruccionesBusqueda
             // 
@@ -176,6 +149,42 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "Número Socio";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 150;
+            // 
+            // Socio
+            // 
+            this.Socio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Socio.HeaderText = "Nombre y apellido";
+            this.Socio.Name = "Socio";
+            this.Socio.ReadOnly = true;
+            // 
+            // Telefono
+            // 
+            this.Telefono.HeaderText = "Teléfono / Celular";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            this.Telefono.Width = 175;
+            // 
+            // fechaVencimiento
+            // 
+            this.fechaVencimiento.HeaderText = "Fecha Vencimiento";
+            this.fechaVencimiento.Name = "fechaVencimiento";
+            this.fechaVencimiento.ReadOnly = true;
+            this.fechaVencimiento.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.fechaVencimiento.Width = 170;
+            // 
+            // Genero
+            // 
+            this.Genero.HeaderText = "Genero";
+            this.Genero.Name = "Genero";
+            this.Genero.ReadOnly = true;
+            this.Genero.Visible = false;
+            // 
             // frmCortesias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,11 +210,12 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Label lblInstruccionesBusqueda;
         private System.Windows.Forms.TextBox txtBusqueda;
+        public System.Windows.Forms.DataGridView dgvPersonas;
+        private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Socio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaVencimiento;
-        public System.Windows.Forms.DataGridView dgvPersonas;
-        private System.Windows.Forms.Button btnGenerar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Genero;
     }
 }

@@ -56,4 +56,7 @@
     <preguntar>True</preguntar>
     <imprimir>True</imprimir>
   </ticket>
+  <membresia>
+    <folio>True</folio>
+  </membresia>
 </configuraciones>

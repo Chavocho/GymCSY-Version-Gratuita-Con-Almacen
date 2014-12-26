@@ -32,7 +32,7 @@ namespace GYM.Formularios.Membresia
         }
         #endregion
 
-        int numSocio;
+        int numSocio, sexo;
 
         public frmCortesias()
         {
@@ -45,7 +45,7 @@ namespace GYM.Formularios.Membresia
             try
             {
                 dgvPersonas.Rows.Clear();
-                string sql = "SELECT mi.numSocio, mi.nombre, mi.apellidos, mi.telefono, mi.celular, c.fecha_fin AS fecha FROM miembros AS mi INNER JOIN cortesias AS c ON (mi.numSocio=c.numSocio) WHERE mi.numSocio='" + p + "' OR mi.nombre LIKE '%" + p + "%' OR mi.apellidos LIKE '%" + p + "%'";
+                string sql = "SELECT mi.numSocio, mi.nombre, mi.apellidos, mi.telefono, mi.celular, mi.genero, c.fecha_fin AS fecha FROM miembros AS mi INNER JOIN cortesias AS c ON (mi.numSocio=c.numSocio) WHERE mi.numSocio='" + p + "' OR mi.nombre LIKE '%" + p + "%' OR mi.apellidos LIKE '%" + p + "%'";
                 DataTable dt = Clases.ConexionBD.EjecutarConsultaSelect(sql);
                 foreach (DataRow dr in dt.Rows)
                 {
@@ -57,7 +57,7 @@ namespace GYM.Formularios.Membresia
                         tel = dr["celular"].ToString();
                     else
                         tel = dr["telefono"].ToString() + ", " + dr["celular"].ToString();
-                    dgvPersonas.Rows.Add(new object[] { dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), tel, fecha.ToString("dd") + " de " + fecha.ToString("MMMM") + " del " + fecha.ToString("yyyy") });
+                    dgvPersonas.Rows.Add(new object[] { dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), tel, fecha.ToString("dd") + " de " + fecha.ToString("MMMM") + " del " + fecha.ToString("yyyy"), dr["genero"] });
                 }
             }
             catch (MySqlException ex)
@@ -98,7 +98,7 @@ namespace GYM.Formularios.Membresia
                 DialogResult r = MessageBox.Show("¿Realmente deseas crear la membresía de este miembro de cortesía?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (r == System.Windows.Forms.DialogResult.Yes)
                 {
-                    (new frmNuevaMembresia(numSocio)).ShowDialog(this);
+                    (new frmNuevaMembresia(numSocio, sexo)).ShowDialog(this);
                 }
             }
         }
@@ -108,6 +108,7 @@ namespace GYM.Formularios.Membresia
             try
             {
                 numSocio = (int)dgvPersonas[0, e.RowIndex].Value;
+                sexo = (int)dgvPersonas[4, e.RowIndex].Value;
             }
             catch
             {
