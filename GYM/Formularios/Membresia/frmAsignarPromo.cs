@@ -26,6 +26,7 @@ namespace GYM.Formularios.Membresia
             InitializeComponent();
             this.genero = genero;
             this.frmN = frm;
+            CFuncionesGenerales.CargarInterfaz(this);
         }
 
         public frmAsignarPromo(frmEditarMembresia frm, int genero)
@@ -33,6 +34,7 @@ namespace GYM.Formularios.Membresia
             InitializeComponent();
             this.genero = genero;
             this.frmE = frm;
+            CFuncionesGenerales.CargarInterfaz(this);
         }
 
         private void BuscarPromociones()

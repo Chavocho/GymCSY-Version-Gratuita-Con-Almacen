@@ -19,6 +19,7 @@ namespace GYM.Formularios.Membresia
             InitializeComponent();
             cboTipo.SelectedIndex = 0;
             cboGenero.SelectedIndex = 0;
+            CFuncionesGenerales.CargarInterfaz(this);
         }
 
         private void InsertarPromocion()

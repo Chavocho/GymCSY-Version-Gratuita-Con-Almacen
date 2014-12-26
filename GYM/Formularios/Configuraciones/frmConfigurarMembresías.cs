@@ -38,6 +38,7 @@ namespace GYM.Formularios
         public frmConfigurarMembresías()
         {
             InitializeComponent();
+            CFuncionesGenerales.CargarInterfaz(this);
         }
 
         private void PreciosHombres()

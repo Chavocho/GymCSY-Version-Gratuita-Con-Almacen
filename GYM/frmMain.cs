@@ -270,6 +270,8 @@ namespace GYM
             reportesToolStripMenuItem.Visible = false;
             cortesíasToolStripMenuItem.Visible = false;
             pendientesToolStripMenuItem.Visible = false;
+            preciosDemembresíasToolStripMenuItem.Visible = false;
+            promocionesToolStripMenuItem.Visible = false;
            
         }
 

@@ -41,6 +41,32 @@ namespace GYM.Formularios.Reportes
             InitializeComponent();
         }
 
+        private int CantidadVentas()
+        {
+            int cant = 0;
+            try
+            {
+                string sql = "SELECT COUNT(id) AS i FROM venta";
+                DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    if (dr["i"] != DBNull.Value)
+                        cant = (int)dr["i"];
+                }
+            }
+            catch (MySqlException ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al tomar la cantidad de ventas. La ventana se cerrará. Ocurrió un error al conectar con la base de datos.", ex);
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al tomar la cantidad de ventas. La ventana se cerrará. Ocurrió un error genérico.", ex);
+                this.Close();
+            }
+            return cant;
+        }
+
         private void BuscarVentas(DateTime fechaIni, DateTime fechaFin)
         {
             MensajeError e = new MensajeError(CFuncionesGenerales.MensajeError);
@@ -54,10 +80,14 @@ namespace GYM.Formularios.Reportes
             }
             catch (MySqlException ex)
             {
+                tmrEspera.Enabled = false;
+                CFuncionesGenerales.frmEsperaClose();
                 this.Invoke(e, new object[] { "No se ha podido buscar las ventas. No se ha podido conectar con la base de datos.", ex });
             }
             catch (Exception ex)
             {
+                tmrEspera.Enabled = false;
+                CFuncionesGenerales.frmEsperaClose();
                 this.Invoke(e, new object[] { "No se ha podido buscar las ventas. Ocurrió un error genérico.", ex });
             }
         }
@@ -138,6 +168,15 @@ namespace GYM.Formularios.Reportes
             if (dgvVentas.CurrentRow != null)
             {
                 (new frmVisualizarVenta(id)).ShowDialog(this);
+            }
+        }
+
+        private void frmReporteVentas_Load(object sender, EventArgs e)
+        {
+            if (CantidadVentas() == 0)
+            {
+                MessageBox.Show("No hay ventas registradas. La ventana se cerrará.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
         }
     }

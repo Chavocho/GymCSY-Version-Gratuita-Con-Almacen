@@ -43,7 +43,6 @@
             this.huellaDigitalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sonidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.correoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.preciosDemembresíasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSesion = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSocios = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,6 +54,7 @@
             this.lockersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.pendientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.promocionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.membresíasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -98,7 +98,7 @@
             this.pcbUsuario = new System.Windows.Forms.PictureBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblBETA = new System.Windows.Forms.Label();
-            this.promocionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.preciosDemembresíasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUsuario)).BeginInit();
             this.SuspendLayout();
@@ -172,8 +172,7 @@
             this.baseDedatosToolStripMenuItem,
             this.huellaDigitalToolStripMenuItem,
             this.sonidosToolStripMenuItem,
-            this.correoToolStripMenuItem,
-            this.preciosDemembresíasToolStripMenuItem});
+            this.correoToolStripMenuItem});
             this.configuraciónToolStripMenuItem1.Name = "configuraciónToolStripMenuItem1";
             this.configuraciónToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
             this.configuraciónToolStripMenuItem1.Text = "&Configuración";
@@ -182,28 +181,28 @@
             // 
             this.ticketToolStripMenuItem1.Image = global::GYM.Properties.Resources.ImgImpresora;
             this.ticketToolStripMenuItem1.Name = "ticketToolStripMenuItem1";
-            this.ticketToolStripMenuItem1.Size = new System.Drawing.Size(195, 22);
+            this.ticketToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.ticketToolStripMenuItem1.Text = "Tic&ket";
             this.ticketToolStripMenuItem1.Click += new System.EventHandler(this.ticketToolStripMenuItem1_Click);
             // 
             // generalToolStripMenuItem
             // 
             this.generalToolStripMenuItem.Name = "generalToolStripMenuItem";
-            this.generalToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.generalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.generalToolStripMenuItem.Text = "Genera&l";
             this.generalToolStripMenuItem.Click += new System.EventHandler(this.generalToolStripMenuItem_Click_1);
             // 
             // baseDedatosToolStripMenuItem
             // 
             this.baseDedatosToolStripMenuItem.Name = "baseDedatosToolStripMenuItem";
-            this.baseDedatosToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.baseDedatosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.baseDedatosToolStripMenuItem.Text = "Base de &datos";
             this.baseDedatosToolStripMenuItem.Click += new System.EventHandler(this.baseDedatosToolStripMenuItem_Click);
             // 
             // huellaDigitalToolStripMenuItem
             // 
             this.huellaDigitalToolStripMenuItem.Name = "huellaDigitalToolStripMenuItem";
-            this.huellaDigitalToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.huellaDigitalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.huellaDigitalToolStripMenuItem.Text = "Huella Digital";
             this.huellaDigitalToolStripMenuItem.Click += new System.EventHandler(this.huellaDigitalToolStripMenuItem_Click);
             // 
@@ -211,7 +210,7 @@
             // 
             this.sonidosToolStripMenuItem.Image = global::GYM.Properties.Resources.ImgSonido;
             this.sonidosToolStripMenuItem.Name = "sonidosToolStripMenuItem";
-            this.sonidosToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.sonidosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sonidosToolStripMenuItem.Text = "Sonid&os";
             this.sonidosToolStripMenuItem.Click += new System.EventHandler(this.sonidosToolStripMenuItem_Click);
             // 
@@ -219,16 +218,9 @@
             // 
             this.correoToolStripMenuItem.Image = global::GYM.Properties.Resources.ImgMail;
             this.correoToolStripMenuItem.Name = "correoToolStripMenuItem";
-            this.correoToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.correoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.correoToolStripMenuItem.Text = "&Correo";
             this.correoToolStripMenuItem.Click += new System.EventHandler(this.correoToolStripMenuItem_Click);
-            // 
-            // preciosDemembresíasToolStripMenuItem
-            // 
-            this.preciosDemembresíasToolStripMenuItem.Name = "preciosDemembresíasToolStripMenuItem";
-            this.preciosDemembresíasToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.preciosDemembresíasToolStripMenuItem.Text = "Precios de &membresías";
-            this.preciosDemembresíasToolStripMenuItem.Click += new System.EventHandler(this.preciosDemembresíasToolStripMenuItem_Click);
             // 
             // toolStripSesion
             // 
@@ -276,7 +268,8 @@
             this.lockersToolStripMenuItem,
             this.toolStripMenuItem3,
             this.pendientesToolStripMenuItem,
-            this.promocionesToolStripMenuItem});
+            this.promocionesToolStripMenuItem,
+            this.preciosDemembresíasToolStripMenuItem});
             this.administraciònToolStripMenuItem.Name = "administraciònToolStripMenuItem";
             this.administraciònToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
             this.administraciònToolStripMenuItem.Text = "Admi&nistración";
@@ -285,7 +278,7 @@
             // 
             this.administrarToolStripMenuItem.Image = global::GYM.Properties.Resources.ImgMembresia;
             this.administrarToolStripMenuItem.Name = "administrarToolStripMenuItem";
-            this.administrarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.administrarToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.administrarToolStripMenuItem.Text = "Membresías";
             this.administrarToolStripMenuItem.Click += new System.EventHandler(this.administrarToolStripMenuItem_Click);
             // 
@@ -293,28 +286,35 @@
             // 
             this.cortesíasToolStripMenuItem.Image = global::GYM.Properties.Resources.ImgCortesia;
             this.cortesíasToolStripMenuItem.Name = "cortesíasToolStripMenuItem";
-            this.cortesíasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cortesíasToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.cortesíasToolStripMenuItem.Text = "Cortesías";
             this.cortesíasToolStripMenuItem.Click += new System.EventHandler(this.cortesíasToolStripMenuItem_Click);
             // 
             // lockersToolStripMenuItem
             // 
             this.lockersToolStripMenuItem.Name = "lockersToolStripMenuItem";
-            this.lockersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lockersToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.lockersToolStripMenuItem.Text = "Lockers";
             this.lockersToolStripMenuItem.Click += new System.EventHandler(this.lockersToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(192, 6);
             // 
             // pendientesToolStripMenuItem
             // 
             this.pendientesToolStripMenuItem.Name = "pendientesToolStripMenuItem";
-            this.pendientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pendientesToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.pendientesToolStripMenuItem.Text = "Pendientes";
             this.pendientesToolStripMenuItem.Click += new System.EventHandler(this.pendientesToolStripMenuItem_Click);
+            // 
+            // promocionesToolStripMenuItem
+            // 
+            this.promocionesToolStripMenuItem.Name = "promocionesToolStripMenuItem";
+            this.promocionesToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.promocionesToolStripMenuItem.Text = "Promoci&ones";
+            this.promocionesToolStripMenuItem.Click += new System.EventHandler(this.promocionesToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -656,12 +656,12 @@
             this.lblBETA.TabIndex = 7;
             this.lblBETA.Text = "BETA";
             // 
-            // promocionesToolStripMenuItem
+            // preciosDemembresíasToolStripMenuItem
             // 
-            this.promocionesToolStripMenuItem.Name = "promocionesToolStripMenuItem";
-            this.promocionesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.promocionesToolStripMenuItem.Text = "Promoci&ones";
-            this.promocionesToolStripMenuItem.Click += new System.EventHandler(this.promocionesToolStripMenuItem_Click);
+            this.preciosDemembresíasToolStripMenuItem.Name = "preciosDemembresíasToolStripMenuItem";
+            this.preciosDemembresíasToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.preciosDemembresíasToolStripMenuItem.Text = "Precios de &membresías";
+            this.preciosDemembresíasToolStripMenuItem.Click += new System.EventHandler(this.preciosDemembresíasToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -760,7 +760,7 @@
         private System.Windows.Forms.ToolStripMenuItem membresíasToolStripMenuItem;
         private System.Windows.Forms.Label lblBETA;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem preciosDemembresíasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem promocionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem preciosDemembresíasToolStripMenuItem;
     }
 }

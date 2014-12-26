@@ -136,7 +136,7 @@ namespace GYM.Formularios.POS
             {
                 if (!VerificarProducto(idProd, cantidad))
                 {
-                    string sql = "SELECT nombre, precio, cant FROM producto WHERE id='" + idProd + "'";
+                    string sql = "SELECT nombre, precio, cant, control_stock FROM producto WHERE id='" + idProd + "'";
                     DataTable dt = Clases.ConexionBD.EjecutarConsultaSelect(sql);
                     foreach (DataRow dr in dt.Rows)
                     {
@@ -146,10 +146,16 @@ namespace GYM.Formularios.POS
                             if (insertarBase)
                                 InsertarProductoVenta(idProd, cantidad, decimal.Parse(dr["precio"].ToString()));
                         }
+                        else if (dr["control_stock"].ToString() == "0")
+                        {
+                            dgvProductos.Rows.Add(idProd, dr["nombre"], cantidad, decimal.Parse(dr["precio"].ToString()).ToString("C2"));
+                            if (insertarBase)
+                                InsertarProductoVenta(idProd, cantidad, decimal.Parse(dr["precio"].ToString()));
+                        }
                         else
                         {
-                            MessageBox.Show("No se puede agregar más productos que los que haya en mostrador. Si tiene " + 
-                                "existencia en almacen, vaya a Punto de venta -> Productos -> Inventario, busque el producto y actualice " + 
+                            MessageBox.Show("No se puede agregar más productos que los que haya en mostrador. Si tiene " +
+                                "existencia en almacen, vaya a Punto de venta -> Productos -> Inventario, busque el producto y actualice " +
                                 "las cantidades en el mostrador.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }

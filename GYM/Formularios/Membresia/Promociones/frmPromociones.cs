@@ -39,6 +39,7 @@ namespace GYM.Formularios.Membresia
         public frmPromociones()
         {
             InitializeComponent();
+            CFuncionesGenerales.CargarInterfaz(this);
         }
 
         private void BuscarPromociones()
@@ -100,7 +101,7 @@ namespace GYM.Formularios.Membresia
                     else
                         genero = "Mujer";
 
-                    dgvPromociones.Rows.Add(new object[] { dr["id"], dr["descripcion"], precio.ToString("C2"), duracion, genero, fechaIni.ToString("dd/MM/yyyy"), fechaFin.ToString("dd/MM/yyyy") });
+                    dgvPromociones.Rows.Add(new object[] { dr["id"], dr["descripcion"], precio.ToString("C2"), duracion, genero, fechaIni.ToString("dd") + " de " + fechaIni.ToString("MMMM") + " del " + fechaIni.ToString("yyyy"), fechaFin.ToString("dd") + " de " + fechaFin.ToString("MMMM") + " del " + fechaFin.ToString("yyyy") });
                 }
                 dgvPromociones_CellClick(dgvPromociones, new DataGridViewCellEventArgs(0, 0));
             }

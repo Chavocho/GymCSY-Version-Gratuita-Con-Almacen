@@ -452,8 +452,12 @@ namespace GYM.Formularios
                         }
                         else if (e.ColumnIndex == 6)
                         {
-                            EstadoMembresia(id, CMembresia.EstadoMembresia.Rechazada);
-                            RegresarCaja();
+                            DialogResult r = MessageBox.Show("¿Realmente desea rechazar la membresía de " + dgvPendientes[2, e.RowIndex].Value.ToString() + "?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                            if (r == System.Windows.Forms.DialogResult.Yes)
+                            {
+                                EstadoMembresia(id, CMembresia.EstadoMembresia.Rechazada);
+                                RegresarCaja();
+                            }
                         }
                     }
                     else if (cboPendientes.SelectedIndex == 1)
@@ -464,8 +468,12 @@ namespace GYM.Formularios
                         }
                         else if (e.ColumnIndex == 7)
                         {
-                            EstadoLocker(id, frmLockers.EstadoLocker.Rechazado);
-                            RegresarLocker();
+                            DialogResult r = MessageBox.Show("¿Realmente desea rechazar la renta de locker a " + dgvPendientes[2, e.RowIndex].Value.ToString() + "?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                            if (r == System.Windows.Forms.DialogResult.Yes)
+                            {
+                                EstadoLocker(id, frmLockers.EstadoLocker.Rechazado);
+                                RegresarLocker();
+                            }
                         }
                     }
                 }

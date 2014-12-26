@@ -204,8 +204,7 @@
             "9 Meses",
             "10 Meses",
             "11 Meses",
-            "12 Meses",
-            ""});
+            "12 Meses"});
             this.cbxTipo.Location = new System.Drawing.Point(16, 61);
             this.cbxTipo.Name = "cbxTipo";
             this.cbxTipo.Size = new System.Drawing.Size(178, 27);

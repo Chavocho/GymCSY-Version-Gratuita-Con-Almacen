@@ -19,6 +19,7 @@ namespace GYM.Formularios.Membresia
         {
             InitializeComponent();
             this.sexo = sexo;
+            CFuncionesGenerales.CargarInterfaz(this);
         }
 
         private void CargarPrecio(int id)
