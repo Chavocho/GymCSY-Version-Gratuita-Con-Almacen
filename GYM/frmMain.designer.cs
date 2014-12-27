@@ -55,6 +55,7 @@
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.pendientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.promocionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.preciosDemembresíasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.membresíasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -98,7 +99,6 @@
             this.pcbUsuario = new System.Windows.Forms.PictureBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblBETA = new System.Windows.Forms.Label();
-            this.preciosDemembresíasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUsuario)).BeginInit();
             this.SuspendLayout();
@@ -181,28 +181,28 @@
             // 
             this.ticketToolStripMenuItem1.Image = global::GYM.Properties.Resources.ImgImpresora;
             this.ticketToolStripMenuItem1.Name = "ticketToolStripMenuItem1";
-            this.ticketToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.ticketToolStripMenuItem1.Size = new System.Drawing.Size(146, 22);
             this.ticketToolStripMenuItem1.Text = "Tic&ket";
             this.ticketToolStripMenuItem1.Click += new System.EventHandler(this.ticketToolStripMenuItem1_Click);
             // 
             // generalToolStripMenuItem
             // 
             this.generalToolStripMenuItem.Name = "generalToolStripMenuItem";
-            this.generalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.generalToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.generalToolStripMenuItem.Text = "Genera&l";
             this.generalToolStripMenuItem.Click += new System.EventHandler(this.generalToolStripMenuItem_Click_1);
             // 
             // baseDedatosToolStripMenuItem
             // 
             this.baseDedatosToolStripMenuItem.Name = "baseDedatosToolStripMenuItem";
-            this.baseDedatosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.baseDedatosToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.baseDedatosToolStripMenuItem.Text = "Base de &datos";
             this.baseDedatosToolStripMenuItem.Click += new System.EventHandler(this.baseDedatosToolStripMenuItem_Click);
             // 
             // huellaDigitalToolStripMenuItem
             // 
             this.huellaDigitalToolStripMenuItem.Name = "huellaDigitalToolStripMenuItem";
-            this.huellaDigitalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.huellaDigitalToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.huellaDigitalToolStripMenuItem.Text = "Huella Digital";
             this.huellaDigitalToolStripMenuItem.Click += new System.EventHandler(this.huellaDigitalToolStripMenuItem_Click);
             // 
@@ -210,7 +210,7 @@
             // 
             this.sonidosToolStripMenuItem.Image = global::GYM.Properties.Resources.ImgSonido;
             this.sonidosToolStripMenuItem.Name = "sonidosToolStripMenuItem";
-            this.sonidosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sonidosToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.sonidosToolStripMenuItem.Text = "Sonid&os";
             this.sonidosToolStripMenuItem.Click += new System.EventHandler(this.sonidosToolStripMenuItem_Click);
             // 
@@ -218,7 +218,7 @@
             // 
             this.correoToolStripMenuItem.Image = global::GYM.Properties.Resources.ImgMail;
             this.correoToolStripMenuItem.Name = "correoToolStripMenuItem";
-            this.correoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.correoToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.correoToolStripMenuItem.Text = "&Correo";
             this.correoToolStripMenuItem.Click += new System.EventHandler(this.correoToolStripMenuItem_Click);
             // 
@@ -315,6 +315,13 @@
             this.promocionesToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.promocionesToolStripMenuItem.Text = "Promoci&ones";
             this.promocionesToolStripMenuItem.Click += new System.EventHandler(this.promocionesToolStripMenuItem_Click);
+            // 
+            // preciosDemembresíasToolStripMenuItem
+            // 
+            this.preciosDemembresíasToolStripMenuItem.Name = "preciosDemembresíasToolStripMenuItem";
+            this.preciosDemembresíasToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.preciosDemembresíasToolStripMenuItem.Text = "Precios de &membresías";
+            this.preciosDemembresíasToolStripMenuItem.Click += new System.EventHandler(this.preciosDemembresíasToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
@@ -621,7 +628,7 @@
             // pcbUsuario
             // 
             this.pcbUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pcbUsuario.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pcbUsuario.BackColor = System.Drawing.Color.Transparent;
             this.pcbUsuario.Image = global::GYM.Properties.Resources.ImgLogin;
             this.pcbUsuario.Location = new System.Drawing.Point(831, 47);
             this.pcbUsuario.Name = "pcbUsuario";
@@ -647,7 +654,7 @@
             // 
             this.lblBETA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblBETA.AutoSize = true;
-            this.lblBETA.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBETA.BackColor = System.Drawing.Color.Transparent;
             this.lblBETA.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.lblBETA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.lblBETA.Location = new System.Drawing.Point(899, 527);
@@ -656,18 +663,11 @@
             this.lblBETA.TabIndex = 7;
             this.lblBETA.Text = "BETA";
             // 
-            // preciosDemembresíasToolStripMenuItem
-            // 
-            this.preciosDemembresíasToolStripMenuItem.Name = "preciosDemembresíasToolStripMenuItem";
-            this.preciosDemembresíasToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.preciosDemembresíasToolStripMenuItem.Text = "Precios de &membresías";
-            this.preciosDemembresíasToolStripMenuItem.Click += new System.EventHandler(this.preciosDemembresíasToolStripMenuItem_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::GYM.Properties.Resources.Fondo_Default;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(968, 561);
             this.Controls.Add(this.lblBETA);

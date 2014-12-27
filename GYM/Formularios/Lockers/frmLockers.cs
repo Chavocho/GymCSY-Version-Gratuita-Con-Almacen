@@ -125,7 +125,6 @@ namespace GYM.Formularios
                 sql.Parameters.AddWithValue("?estado", EstadoLocker.Desocupado);
                 sql.Parameters.AddWithValue("?create_user_id", frmMain.id);
                 ConexionBD.EjecutarConsulta(sql);
-                BuscarLockers();
             }
             catch (MySqlException ex)
             {
@@ -146,7 +145,6 @@ namespace GYM.Formularios
                 sql.Parameters.AddWithValue("?num", this.NumeroLocker);
                 sql.Parameters.AddWithValue("?id", this.idLocker);
                 ConexionBD.EjecutarConsulta(sql);
-                BuscarLockers();
             }
             catch (MySqlException ex)
             {
@@ -163,7 +161,7 @@ namespace GYM.Formularios
             try
             {
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "DELETE FROM locker WHERE id=?id";
+                sql.CommandText = "SET foreign_keys_checks=0; DELETE FROM locker WHERE id=?id; SET foreign_keys_checks=1;";
                 sql.Parameters.AddWithValue("?id", this.idLocker);
                 ConexionBD.EjecutarConsulta(sql);
             }
@@ -193,6 +191,7 @@ namespace GYM.Formularios
         {
             if ((new frmNumeroLocker(this)).ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
                 InsertarLocker();
+            BuscarLockers();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -201,6 +200,7 @@ namespace GYM.Formularios
             {
                 if ((new frmNumeroLocker(this, this.numLocker)).ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
                     EditarLocker();
+                BuscarLockers();
             }
         }
 
@@ -210,6 +210,7 @@ namespace GYM.Formularios
             {
                 if (MessageBox.Show("¿Deseas realmente eliminar el locker?\n(No se podrá recuperar)", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == System.Windows.Forms.DialogResult.Yes)
                     EliminarLocker();
+                BuscarLockers();
             }
         }
 
@@ -218,6 +219,7 @@ namespace GYM.Formularios
             if (idLocker > 0)
             {
                 (new frmAsignarLocker(this, idLocker)).ShowDialog(this);
+                BuscarLockers();
             }
         }
 

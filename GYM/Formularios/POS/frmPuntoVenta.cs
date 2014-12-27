@@ -406,6 +406,8 @@ namespace GYM.Formularios.POS
             lblEtiquetaFolio.Visible = true;
             btnProductos.Visible = true;
             btnCobrar.Visible = true;
+            btnMas.Enabled = true;
+            btnMenos.Enabled = true;
             lblEtiquetaNumProductos.Visible = true;
             lblNumProductos.Visible = true;
             lblEtiquetaTotal.Visible = true;
@@ -417,7 +419,7 @@ namespace GYM.Formularios.POS
         /// <summary>
         /// Función que muestra los controles cuando se recupera una venta que se encuentre cerrada
         /// </summary>
-        private void MostrarControlesRecuperada(decimal total)
+        public void MostrarControlesRecuperada(decimal total)
         {
             abierta = false;
             lblFolio.Visible = true;
@@ -429,6 +431,8 @@ namespace GYM.Formularios.POS
             txtCodigo.Enabled = false;
             btnCobrar.Visible = false;
             btnProductos.Visible = false;
+            btnMas.Enabled = false;
+            btnMenos.Enabled = false;
             lblTotal.Text = total.ToString("C2");
             lblEtiquetaTotal.Visible = true;
             lblTotal.Visible = true;

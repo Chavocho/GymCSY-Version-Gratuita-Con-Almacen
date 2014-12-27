@@ -349,6 +349,7 @@ namespace GYM.Formularios.POS
                 AgregarMovimientoCaja();
                 DescontarInventario();
                 ImprimirTicket();
+                frm.MostrarControlesRecuperada(total);
                 this.Close();
             }
         }

@@ -156,7 +156,7 @@
             this.txtFolio.Name = "txtFolio";
             this.txtFolio.Size = new System.Drawing.Size(178, 26);
             this.txtFolio.TabIndex = 4;
-            this.txtFolio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFolio_KeyPress);
+            this.txtFolio.LostFocus += new System.EventHandler(txtFolio_LostFocus);
             // 
             // lblEtiquetaDescripcion
             // 
@@ -260,6 +260,7 @@
             this.txtTerminacion.Size = new System.Drawing.Size(178, 26);
             this.txtTerminacion.TabIndex = 5;
             this.txtTerminacion.EnabledChanged += new System.EventHandler(this.txtTerminacion_EnabledChanged);
+            this.txtTerminacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFolio_KeyPress);
             // 
             // label3
             // 

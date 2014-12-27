@@ -139,6 +139,7 @@
             this.txtFolio.Name = "txtFolio";
             this.txtFolio.Size = new System.Drawing.Size(178, 26);
             this.txtFolio.TabIndex = 4;
+            this.txtFolio.LostFocus += new System.EventHandler(this.txtFolio_LostFocus);
             // 
             // lblEtiquetaPrecio
             // 
@@ -394,6 +395,7 @@
             this.txtTerminacion.Name = "txtTerminacion";
             this.txtTerminacion.Size = new System.Drawing.Size(178, 26);
             this.txtTerminacion.TabIndex = 5;
+            this.txtTerminacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmEditarMembresia_KeyPress);
             // 
             // lblPrecio
             // 
@@ -477,6 +479,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Renovar membresía";
             this.Load += new System.EventHandler(this.frmEditarMembresia_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmEditarMembresia_KeyPress);
             this.grbInformación.ResumeLayout(false);
             this.grbInformación.PerformLayout();
             this.ResumeLayout(false);

@@ -210,6 +210,7 @@
             // 
             this.txtTerminacion.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtTerminacion.Location = new System.Drawing.Point(215, 23);
+            this.txtTerminacion.MaxLength = 5;
             this.txtTerminacion.Name = "txtTerminacion";
             this.txtTerminacion.Size = new System.Drawing.Size(198, 25);
             this.txtTerminacion.TabIndex = 37;

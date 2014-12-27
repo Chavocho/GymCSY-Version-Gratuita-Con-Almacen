@@ -18,6 +18,7 @@ namespace GYM.Formularios
         frmLockers frm;
         DataTable dt = new DataTable();
         int idLocker, numSocio = 0;
+        string ultimoFolio = "";
 
         public frmAsignarLocker(frmLockers frm, int idLocker)
         {
@@ -26,6 +27,73 @@ namespace GYM.Formularios
             this.frm = frm;
             this.idLocker = idLocker;
             cboTipoPago.SelectedIndex = 0;
+            UltimoFolio();
+            ConfigFolio();
+        }
+
+        private void ConfigFolio()
+        {
+            if (CConfiguracionXML.ExisteConfiguracion("membresia", "folio"))
+            {
+                if (bool.Parse(CConfiguracionXML.LeerConfiguración("membresia", "folio")) == true)
+                {
+                    txtFolio.Text = ultimoFolio;
+                    txtFolio.Enabled = false;
+                }
+                else
+                {
+                    txtFolio.Enabled = true;
+                }
+            }
+            else
+                txtFolio.Enabled = true;
+        }
+
+        private void UltimoFolio()
+        {
+            try
+            {
+                string sql = "SELECT MAX(id) AS i FROM registro_locker";
+                DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    if (dr["i"] != DBNull.Value)
+                        ultimoFolio = ((int)dr["i"] + 1).ToString();
+                    else
+                        ultimoFolio = "1";
+                }
+            }
+            catch (MySqlException ex)
+            {
+                CFuncionesGenerales.MensajeError("Ocurrió un error al generar el nuevo folio. No se ha podido conectar con la base de datos.", ex);
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("Ocurrió un error al generar el nuevo folio. Ocurrió un error genérico.", ex);
+            }
+        }
+
+        private bool ExisteFolio(string folio)
+        {
+            bool existe = false;
+            try
+            {
+                MySqlCommand sql = new MySqlCommand();
+                sql.CommandText = "SELECT folio_remision FROM registro_locker WHERE folio_remision=?folio";
+                sql.Parameters.AddWithValue("?folio", folio);
+                DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
+                if (dt.Rows.Count > 0)
+                    existe = true;
+            }
+            catch (MySqlException ex)
+            {
+                CFuncionesGenerales.MensajeError("No se pudo comprobar el estado del folio. No se pudo establecer la conexión con la base de datos.", ex);
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("No se pudo comprobar el estado del folio. Ocurrió un error genérico.", ex);
+            }
+            return existe;
         }
 
         private void BuscarMiembros(string p)
@@ -206,6 +274,89 @@ namespace GYM.Formularios
             }
         }
 
+        private void ImprimirTicket()
+        {
+            try
+            {
+                if (Clases.CConfiguracionXML.ExisteConfiguracion("ticket", "imprimir"))
+                {
+                    if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("ticket", "imprimir")))
+                    {
+                        if (Clases.CConfiguracionXML.ExisteConfiguracion("ticket", "preguntar"))
+                        {
+                            if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("ticket", "preguntar")))
+                            {
+                                if (MessageBox.Show("¿Deseas imprimir el ticket de la asignación de locker?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                                {
+                                    (new Clases.CTicket()).ImprimirTicketLocker(idLocker);
+                                    (new Clases.CTicket()).ImprimirTicketLocker(idLocker);
+                                }
+                            }
+                            else
+                            {
+                                (new Clases.CTicket()).ImprimirTicketLocker(idLocker);
+                                (new Clases.CTicket()).ImprimirTicketLocker(idLocker);
+                            }
+                        }
+                        else
+                        {
+                            (new Clases.CTicket()).ImprimirTicketLocker(idLocker);
+                            (new Clases.CTicket()).ImprimirTicketLocker(idLocker);
+                        }
+                    }
+                }
+            }
+            catch (System.Xml.XmlException ex)
+            {
+                MessageBox.Show("Ha ocurrido un error al querer leer del archivo XML. Mensaje de error:" + ex.Message + "\nNúmero de linea y posición: " + ex.LineNumber + ", " + ex.LinePosition,
+                    "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (System.IO.PathTooLongException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("La ruta del directorio es muy larga.", ex);
+            }
+            catch (System.IO.DirectoryNotFoundException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("El directorio del archivo de configuración no se encontró.", ex);
+            }
+            catch (System.IO.FileNotFoundException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("No se encontro el archivo de configuración.", ex);
+            }
+            catch (System.IO.IOException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un error de E/S.", ex);
+            }
+            catch (InvalidOperationException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("La llamada al método no se pudo efectuar porque el estado actual del objeto no lo permite.", ex);
+            }
+            catch (NotSupportedException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("No se pudo leer o modificar la secuencia de datos.", ex);
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("El sistema ha negado el acceso al archivo de configuración.\nPuede deberse a un error de E/S o a un error de seguridad.", ex);
+            }
+            catch (System.Security.SecurityException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un error de seguridad.", ex);
+            }
+            catch (ArgumentNullException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("El método no acepta referencias nulas.", ex);
+            }
+            catch (ArgumentException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("El argumento que se pasó al método no es aceptado por este.", ex);
+            }
+            catch (Exception ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un error genérico.", ex);
+            }
+        }
+
         private void tmrConteo_Tick(object sender, EventArgs e)
         {
             tmrConteo.Enabled = false;
@@ -250,6 +401,7 @@ namespace GYM.Formularios
                 {
                     InsertarLocker();
                     InsertarCaja();
+                    ImprimirTicket();
                     if (!chbPersona.Checked)
                         MessageBox.Show("El locker ha sido asignado a " + dgvSocios[1, dgvSocios.CurrentRow.Index].Value.ToString() + ".", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
@@ -320,6 +472,16 @@ namespace GYM.Formularios
                 txtPersona.Enabled = false;
                 txtBusqueda.Enabled = true;
                 dgvSocios.Enabled = true;
+            }
+        }
+
+        private void txtFolio_LostFocus(object sender, EventArgs e)
+        {
+            if (CMembresia.ExisteFolio(txtFolio.Text))
+            {
+                MessageBox.Show("El folio ingresado ya existe, ingrese otro para poder continuar.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtFolio.Focus();
+                txtFolio.SelectAll();
             }
         }
     }

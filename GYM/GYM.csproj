@@ -175,10 +175,10 @@
     <Compile Include="Formularios\Configuraciones\frmConfigurarHuella.Designer.cs">
       <DependentUpon>frmConfigurarHuella.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Configuraciones\frmConfigurarMembresías.cs">
+    <Compile Include="Formularios\Membresia\frmConfigurarMembresías.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Configuraciones\frmConfigurarMembresías.Designer.cs">
+    <Compile Include="Formularios\Membresia\frmConfigurarMembresías.Designer.cs">
       <DependentUpon>frmConfigurarMembresías.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Configuraciones\frmCorreos.cs">
@@ -574,7 +574,7 @@
     <EmbeddedResource Include="Formularios\Configuraciones\frmConfigurarHuella.resx">
       <DependentUpon>frmConfigurarHuella.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Configuraciones\frmConfigurarMembresías.resx">
+    <EmbeddedResource Include="Formularios\Membresia\frmConfigurarMembresías.resx">
       <DependentUpon>frmConfigurarMembresías.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Configuraciones\frmCorreos.resx">
@@ -815,6 +815,8 @@
   <ItemGroup>
     <Content Include="CSY.ico" />
     <Content Include="GymCSY icono.ico" />
+    <None Include="Resources\gym_promo_title.png" />
+    <None Include="Resources\Fondo_Default.jpg" />
     <None Include="Resources\GymCSY logo.png" />
     <None Include="Resources\ic_add_shopping_cart_grey600_18dp.png" />
     <None Include="Resources\ic_attach_money_grey600_18dp.png" />
@@ -848,7 +850,6 @@
     <None Include="Resources\Play.png" />
     <None Include="Resources\Stop.png" />
     <None Include="Resources\gymcsy.png" />
-    <None Include="Resources\gym_promo_title.png" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AcroPDFLib">

@@ -18,6 +18,7 @@ namespace GYM.Clases
         DataTable dtVentaDetallada;
         DataTable dtMembresia;
         DataTable dtCaja;
+        DataTable dtLocker;
         Font fuentePequeña;
         Font fuenteNormal;
         Font fuenteResaltada;
@@ -36,6 +37,7 @@ namespace GYM.Clases
         const int saltoLineaPeque = 10;
         int folio;
         int numSoc;
+        int idLocker;
         //Variables para el corte de caja
         int idApertura;
         int idCierre;

@@ -58,7 +58,7 @@ namespace GYM.Formularios.Membresia
         {
             try
             {
-                string sql = "SELECT MAX(id) AS i FROM registro_membresias";
+                string sql = "SELECT MAX(id) AS i FROM registro_locker";
                 DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
                 foreach (DataRow dr in dt.Rows)
                 {
@@ -348,17 +348,17 @@ namespace GYM.Formularios.Membresia
                     rMem.TipoPago = cbxTipoPago.SelectedIndex + 1;
                     rMem.Precio = decimal.Parse(lblPrecio.Text, System.Globalization.NumberStyles.Currency);
                     if (txtTerminacion.Text != "")
-                        rMem.Terminacion = Convert.ToInt32(txtTerminacion.Text);
+                        rMem.Terminacion = txtTerminacion.Text;
                     else
-                        rMem.Terminacion = 0;
+                        rMem.Terminacion = "0";
                     if (txtFolio.Text != "")
-                        rMem.FolioRemision = Convert.ToInt32(txtFolio.Text);
+                        rMem.FolioRemision = txtFolio.Text;
                     else
-                        rMem.FolioRemision = 0;
+                        rMem.FolioRemision = "0";
                     if (txtFolioTicket.Text != "")
-                        rMem.FolioTicket = Convert.ToInt32(txtFolioTicket.Text);
+                        rMem.FolioTicket = txtFolioTicket.Text;
                     else
-                        rMem.FolioTicket = 0;
+                        rMem.FolioTicket = "0";
                     rMem.CreateUser = frmMain.id;
 
                     rMem.InsertarRegistroMembresias();
@@ -483,14 +483,12 @@ namespace GYM.Formularios.Membresia
                         lblFechaFin.Text = dtpFechaInicio.Value.AddYears(1).ToString("dd") + " de " + dtpFechaInicio.Value.AddYears(1).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddYears(1).ToString("yyyy");
                         break;
                 }
-                lblPrecio.Text = preciosM[cbxTipo.SelectedIndex].ToString("C2");
-                txtDescripcion.Text = descripcionM[cbxTipo.SelectedIndex];
             }
             else
             {
                 MessageBox.Show("El precio de esa duración no ha sido configurado.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cbxTipo.SelectedIndex = -1;
-                /*int tmp = 0;
+                int tmp = 0;
                 foreach (int k in preciosM.Keys)
                 {
                     if (k > cbxTipo.SelectedIndex)
@@ -499,8 +497,14 @@ namespace GYM.Formularios.Membresia
                         break;
                     }
                     tmp = k;
-                }*/
+                }
+                if (tmp < cbxTipo.SelectedIndex)
+                {
+                    cbxTipo.SelectedIndex = tmp;
+                }
             }
+            lblPrecio.Text = preciosM[cbxTipo.SelectedIndex].ToString("C2");
+            txtDescripcion.Text = descripcionM[cbxTipo.SelectedIndex];
         }
 
         private void dtpFechaInicio_ValueChanged(object sender, EventArgs e)
@@ -590,6 +594,15 @@ namespace GYM.Formularios.Membresia
         {
             QuitarPromoción();
         }
-  
+
+        private void txtFolio_LostFocus(object sender, EventArgs e)
+        {
+            if (CMembresia.ExisteFolio(txtFolio.Text))
+            {
+                MessageBox.Show("El folio ingresado ya existe, ingrese otro para poder continuar.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtFolio.Focus();
+                txtFolio.SelectAll();
+            }
+        }
     }
 }

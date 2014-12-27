@@ -26,7 +26,7 @@ namespace GYM.Formularios.Membresia
         {
             try
             {
-                string sql = "SELECT precio, descripcion FROM precio_membresia WHERE id='" + id + "'";
+                string sql = "SELECT precio, descripcion FROM precio_membresia WHERE id='" + id + "' AND sexo='" + sexo + "'";
                 DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
                 foreach (DataRow dr in dt.Rows)
                 {

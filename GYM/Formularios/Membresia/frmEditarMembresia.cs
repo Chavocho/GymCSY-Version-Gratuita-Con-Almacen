@@ -59,11 +59,14 @@ namespace GYM.Formularios.Membresia
         {
             try
             {
-                string sql = "SELECT MAX(id) AS i FROM registro_membresias";
+                string sql = "SELECT MAX(id) AS i FROM registro_locker";
                 DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
                 foreach (DataRow dr in dt.Rows)
                 {
-                    ultimoFolio = ((int)dr["i"] + 1).ToString();
+                    if (dr["i"] != DBNull.Value)
+                        ultimoFolio = ((int)dr["i"] + 1).ToString();
+                    else
+                        ultimoFolio = "1";
                 }
             }
             catch (MySqlException ex)
@@ -402,16 +405,16 @@ namespace GYM.Formularios.Membresia
                     rMem.Descripcion = txtDescripcion.Text;
                     rMem.FechaFin = fechaFin;
                     rMem.FechaInicio = dtpFechaInicio.Value;
-                    rMem.FolioRemision = int.Parse(txtFolio.Text);
+                    rMem.FolioRemision = txtFolio.Text;
                     rMem.Tipo = cbxTipoPago.SelectedIndex + 1;
                     if (txtTerminacion.Text.Trim() != "")
-                        rMem.Terminacion = Convert.ToInt32(txtTerminacion.Text);
+                        rMem.Terminacion = txtTerminacion.Text;
                     else
-                        rMem.Terminacion = 0;
+                        rMem.Terminacion = "0";
                     if (txtFolioTicket.Text.Trim() != "")
-                        rMem.FolioTicket = Convert.ToInt32(txtFolioTicket.Text);
+                        rMem.FolioTicket = txtFolioTicket.Text;
                     else
-                        rMem.FolioTicket = 0;
+                        rMem.FolioTicket = "0";
 
                     mem.EditarMembresia();
                     rMem.InsertarRegistroMembresias();
@@ -550,6 +553,10 @@ namespace GYM.Formularios.Membresia
                     }
                     tmp = k;
                 }
+                if (tmp < cbxTipo.SelectedIndex)
+                {
+                    cbxTipo.SelectedIndex = tmp;
+                }
             }
             lblPrecio.Text = preciosM[cbxTipo.SelectedIndex].ToString("C2");
             txtDescripcion.Text = descripcionM[cbxTipo.SelectedIndex];  
@@ -633,6 +640,21 @@ namespace GYM.Formularios.Membresia
         private void btnQuitarPromo_Click(object sender, EventArgs e)
         {
             QuitarPromoción();
+        }
+
+        private void frmEditarMembresia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            CFuncionesGenerales.VerificarEsNumero(ref sender, ref e, true);
+        }
+
+        private void txtFolio_LostFocus(object sender, EventArgs e)
+        {
+            if (CMembresia.ExisteFolio(txtFolio.Text))
+            {
+                MessageBox.Show("El folio ingresado ya existe, ingrese otro para poder continuar.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtFolio.Focus();
+                txtFolio.SelectAll();
+            }
         }
     }
 }

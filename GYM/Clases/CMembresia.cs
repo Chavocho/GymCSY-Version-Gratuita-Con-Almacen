@@ -326,6 +326,29 @@ namespace GYM.Clases
                 throw ex;
             }
         }
+
+        public static bool ExisteFolio(string fol)
+        {
+            bool existe = false;
+            try
+            {
+                MySqlCommand sql = new MySqlCommand();
+                sql.CommandText = "SELECT folio_remision FROM registro_membresias WHERE folio_remision=?folio";
+                sql.Parameters.AddWithValue("?folio", fol);
+                DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
+                if (dt.Rows.Count > 0)
+                    existe = true;
+            }
+            catch (MySqlException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return existe;
+        }
         #endregion
     }
 }

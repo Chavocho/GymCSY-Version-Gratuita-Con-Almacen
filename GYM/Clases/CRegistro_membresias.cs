@@ -19,9 +19,9 @@ namespace GYM.Clases
         private string descripcion;
         private int tipoPago;
         private decimal precio;
-        private int terminacion;
-        private int folioRemision;
-        private int folioTicket;
+        private string terminacion;
+        private string folioRemision;
+        private string folioTicket;
         private int createUser;
         private DateTime createTime;
 
@@ -73,19 +73,19 @@ namespace GYM.Clases
             set { precio = value; }
         }
 
-        public int Terminacion
+        public string Terminacion
         {
             get { return terminacion; }
             set { terminacion = value; }
         }
 
-        public int FolioRemision
+        public string FolioRemision
         {
             get { return folioRemision; }
             set { folioRemision = value; }
         }
 
-        public int FolioTicket
+        public string FolioTicket
         {
             get { return folioTicket; }
             set { folioTicket = value; }
@@ -172,9 +172,9 @@ namespace GYM.Clases
                     this.Descripcion = dr["descripcion"].ToString();
                     this.TipoPago = int.Parse(dr["tipo_pago"].ToString());
                     this.Precio = decimal.Parse(dr["precio"].ToString());
-                    this.Terminacion = int.Parse(dr["terminacion"].ToString());
-                    this.FolioRemision = int.Parse(dr["folio_remision"].ToString());
-                    this.FolioTicket = int.Parse(dr["folio_ticket"].ToString());
+                    this.Terminacion = dr["terminacion"].ToString();
+                    this.FolioRemision = dr["folio_remision"].ToString();
+                    this.FolioTicket = dr["folio_ticket"].ToString();
                     this.CreateUser = int.Parse(dr["create_user_id"].ToString());
                     this.createTime = DateTime.Parse(dr["create_time"].ToString());
                 }
@@ -226,9 +226,9 @@ namespace GYM.Clases
                     this.Descripcion = dr["descripcion"].ToString();
                     this.TipoPago = int.Parse(dr["tipo_pago"].ToString());
                     this.Precio = decimal.Parse(dr["precio"].ToString());
-                    this.Terminacion = int.Parse(dr["terminacion"].ToString());
-                    this.FolioRemision = int.Parse(dr["folio_remision"].ToString());
-                    this.FolioTicket = int.Parse(dr["folio_ticket"].ToString());
+                    this.Terminacion = dr["terminacion"].ToString();
+                    this.FolioRemision = dr["folio_remision"].ToString();
+                    this.FolioTicket = dr["folio_ticket"].ToString();
                     this.CreateUser = int.Parse(dr["create_user_id"].ToString());
                     this.createTime = DateTime.Parse(dr["create_time"].ToString());
                 }

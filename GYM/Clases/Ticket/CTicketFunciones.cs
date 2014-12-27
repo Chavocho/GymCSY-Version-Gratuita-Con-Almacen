@@ -119,6 +119,24 @@ namespace GYM.Clases
                 throw ex;
             }
         }
+
+        /// <summary>
+        /// Función que obtiene el dato del DataTable en la columna especifica.
+        /// </summary>
+        /// <param name="nomCol">Nombre de la columna</param>
+        /// <exception cref="System.IndexOutOfRangeException">Excepción que se produce cuando se intenta tener acceso a un elemento de una matriz con un índice que está fuera de los límites de la matriz.</exception>
+        /// <returns>Objeto con el dato</returns>
+        private object ObtenerDatoDataTableLocker(string nomCol)
+        {
+            try
+            {
+                return dtLocker.Rows[0][nomCol];
+            }
+            catch (IndexOutOfRangeException ex)
+            {
+                throw ex;
+            }
+        }
         #endregion
 
         #region Metodos Ticket
@@ -241,10 +259,10 @@ namespace GYM.Clases
             try
             {
                 y += saltoLinea / 2;
-                if (folio != 0)
-                    e.Graphics.DrawString("ATENDIO: " + ObtenerNombreUsuario(int.Parse(dt.Rows[0]["create_user_id"].ToString())), fuenteNormal, Brushes.Black, 0, y);
+                if (folio != 0 || dt != null)
+                    e.Graphics.DrawString("ATENDIÓ: " + ObtenerNombreUsuario(int.Parse(dt.Rows[0]["create_user_id"].ToString())), fuenteNormal, Brushes.Black, 0, y);
                 else
-                    e.Graphics.DrawString("ATENDIO: " + ObtenerNombreUsuario(frmMain.id), fuenteNormal, Brushes.Black, 0, y);
+                    e.Graphics.DrawString("ATENDIÓ: " + ObtenerNombreUsuario(frmMain.id), fuenteNormal, Brushes.Black, 0, y);
                 y += saltoLinea * 4 / 3;
                 if (lineaInf01 != "")
                 {
@@ -444,6 +462,49 @@ namespace GYM.Clases
             }
         }
 
+        private void AgregarDatosLocker(ref PrintPageEventArgs e)
+        {
+            try
+            {
+                DateTime fechaIni = (DateTime)ObtenerDatoDataTableLocker("fecha_ini"), 
+                    fechaFin = (DateTime)ObtenerDatoDataTableLocker("fecha_fin");
+                string tipoPago = "";
+                if (ObtenerDatoDataTableLocker("tipo_pago") == "0")
+                    tipoPago = "EFECTIVO";
+                else
+                    tipoPago = "TARJETA DE CRÉDITO";
+
+                if (ObtenerDatoDataTableLocker("nom_persona") != DBNull.Value)
+                    e.Graphics.DrawString("NOMBRE DE SOCIO: " + ObtenerDatoDataTableLocker("nom_persona"), fuenteNormal, Brushes.Black, 0, y);
+                else
+                    e.Graphics.DrawString("NOMBRE DE SOCIO: " + ObtenerNombreSocio((int)ObtenerDatoDataTableLocker("numSocio")), fuenteNormal, Brushes.Black, 0, y);
+                y += saltoLinea;
+                e.Graphics.DrawString("FECHA DE INICIO: " + fechaIni.ToString("dd") + " de " + fechaIni.ToString("MMMM") + " del " + fechaIni.ToString("yyyy"), fuenteNormal, Brushes.Black, 0, y);
+                y += saltoLinea;
+                e.Graphics.DrawString("FECHA DE TERMINACIÓN: " + fechaFin.ToString("dd") + " de " + fechaFin.ToString("MMMM") + " del " + fechaFin.ToString("yyyy"), fuenteNormal, Brushes.Black, 0, y);
+                y += saltoLinea;
+                e.Graphics.DrawString("PRECIO: " + ((decimal)ObtenerDatoDataTableLocker("precio")).ToString("C2"), fuenteNormal, Brushes.Black, 0, y);
+                y += saltoLinea;
+                e.Graphics.DrawString("SE PAGO CON: " + tipoPago, fuenteNormal, Brushes.Black, 0, y);
+            }
+            catch (FormatException ex)
+            {
+                throw ex;
+            }
+            catch (OverflowException ex)
+            {
+                throw ex;
+            }
+            catch (ArgumentNullException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         /// <summary>
         /// Función que agrega los datos del cierre de caja
         /// </summary>
@@ -484,11 +545,11 @@ namespace GYM.Clases
                     y += saltoLinea;
                     AgregarLinea(ref e, new Pen(Brushes.Black));
                 }
-                e.Graphics.DrawString("EFECTIVO RETIRADO: " + efRet.ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
+                e.Graphics.DrawString("EFECTIVO RETIRADO: " + (efRet * -1).ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
                 y += saltoLinea;
-                e.Graphics.DrawString("TOTAL DE VOUCHERS: " + totTa.ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
+                e.Graphics.DrawString("TOTAL DE VOUCHERS: " + (totTa * -1).ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
                 y += saltoLinea;
-                e.Graphics.DrawString("EFECTIVO RESTANTE: " + TotalCaja().ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
+                e.Graphics.DrawString("EFECTIVO RESTANTE: " + TotalCajaCorte().ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
                 y += saltoLinea;
             }
             catch (FormatException ex)
@@ -881,6 +942,53 @@ namespace GYM.Clases
             {
                 string sql = "SELECT * FROM caja WHERE id BETWEEN '" + idApertura + "' AND '" + idCierre + "'";
                 dtCaja = Clases.ConexionBD.EjecutarConsultaSelect(sql);
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Función que obtiene el total de caja al momento del corte efectuado.
+        /// </summary>
+        /// <returns>Total de caja en el momento en el que se presento el corte.</returns>
+        private decimal TotalCajaCorte()
+        {
+            decimal total = 0M;
+            try
+            {
+                string sql = "SELECT SUM(efectivo) AS efe FROM caja WHERE id BETWEEN '1' AND '" + idCierre + "'";
+                DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    total = (decimal)dr["efe"];
+                }
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return total;
+        }
+
+        /// <summary>
+        /// Función que obtiene todos los datos del locker
+        /// </summary>
+        private void ObtenerDatosLocker()
+        {
+            try
+            {
+                string sql = "SELECT r.*, l.numSocio FROM registro_locker AS r INNER JOIN locker AS l ON (r.locker_id=l.id) WHERE locker_id='" + idLocker + "' GROUP BY id DESC LIMIT 1";
+                dtLocker = ConexionBD.EjecutarConsultaSelect(sql);
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {

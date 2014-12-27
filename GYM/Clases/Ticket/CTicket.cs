@@ -231,6 +231,96 @@ namespace GYM.Clases
         }
 
         /// <summary>
+        /// Imprime el ticket de nueva o de renovación de locker
+        /// </summary>
+        /// <param name="numSoc">Número de socio del que se creo o renovo el locker</param>
+        /// <exception cref="System.FormatException">Excepción que se produce cuando el formato de un argumento no cumple las especificaciones de los parámetros del método invocado.</exception>
+        /// <exception cref="Systen.OverflowException">Excepción que se produce cuando una operación aritmética, de conversión de tipo o de conversión de otra naturaleza en un contexto comprobado, da como resultado una sobrecarga.</exception>
+        /// <exception cref="System.Xml.XmlException">Devuelve información detallada sobre la última excepción.</exception>
+        /// <exception cref="System.IO.PathTooLongException">Excepción que se produce cuando una ruta de acceso o un nombre de archivo supera la longitud máxima definida por el sistema.</exception>
+        /// <exception cref="System.IO.DirectoryNotFoundException">Excepción que se produce cuando no encuentra parte de un archivo o directorio.</exception>
+        /// <exception cref="System.IO.FileNotFoundException">Excepción que se produce cuando se produce un error al intentar tener acceso a un archivo que no existe en el disco.</exception>
+        /// <exception cref="System.IO.IOException">Excepción que es lanzada cuando se produce un error de E/S.</exception>
+        /// <exception cref="System.NotSupportedException">Excepción que se produce cuando no se admite un método invocado o cuando se intenta leer, buscar o escribir en una secuencia que no admite la funcionalidad invocada.</exception>
+        /// <exception cref="System.UnauthorizedAccessException">Excepción que se produce cuando el sistema operativo deniega el acceso a causa de un error de E/S o de un error de seguridad de un tipo concreto.</exception>
+        /// <exception cref="System.Security.SecurityException">La excepción que se produce cuando se detecta un error de seguridad.</exception>
+        /// <exception cref="System.ArgumentNullException">Excepción que se produce cuando se pasa una referencia nula a un método que no la acepta como argumento válido.</exception>
+        /// <exception cref="System.ArgumentException">Excepción que se produce cuando no es válido uno de los argumentos proporcionados para un método.</exception>
+        /// <exception cref="System.Exception">Representa los errores que se producen durante la ejecución de una aplicación.</exception>
+        public void ImprimirTicketLocker(int idLocker)
+        {
+            try
+            {
+                this.idLocker = idLocker;
+                dtLocker = new DataTable();
+                ObtenerDatosLocker();
+                pd.PrintPage += new PrintPageEventHandler(pd_PrintPageTicketLockers);
+                pd.DocumentName = "Ticket";
+                pd.DefaultPageSettings.PaperSize = new PaperSize("Ticket", tamPapel, 10000);
+                pd.PrinterSettings.PrinterName = impresora;
+                //ppd.Document = pd;
+                //ppd.ShowDialog();
+                pd.Print();
+            }
+            catch (InvalidPrinterException ex)
+            {
+                throw ex;
+            }
+            catch (FormatException ex)
+            {
+                throw ex;
+            }
+            catch (OverflowException ex)
+            {
+                throw ex;
+            }
+            catch (System.Xml.XmlException ex)
+            {
+                throw ex;
+            }
+            catch (System.IO.PathTooLongException ex)
+            {
+                throw ex;
+            }
+            catch (System.IO.DirectoryNotFoundException ex)
+            {
+                throw ex;
+            }
+            catch (System.IO.FileNotFoundException ex)
+            {
+                throw ex;
+            }
+            catch (System.IO.IOException ex)
+            {
+                throw ex;
+            }
+            catch (NotSupportedException ex)
+            {
+                throw ex;
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                throw ex;
+            }
+            catch (System.Security.SecurityException ex)
+            {
+                throw ex;
+            }
+            catch (ArgumentNullException ex)
+            {
+                throw ex;
+            }
+            catch (ArgumentException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
         /// Función que imprime el ticket de cierre de caja
         /// </summary>
         /// <exception cref="System.FormatException">Excepción que se produce cuando el formato de un argumento no cumple las especificaciones de los parámetros del método invocado.</exception>
@@ -565,6 +655,35 @@ namespace GYM.Clases
                 AgregarDatosMembresia(ref e);
                 AgregarLinea(ref e, new Pen(Brushes.DarkGray, 1));
                 AgregarPieTicket(ref e, dtVenta);
+            }
+            catch (ArgumentNullException ex)
+            {
+                throw ex;
+            }
+            catch (ArgumentException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Evento de impresión de ticket de locker
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void pd_PrintPageTicketLockers(object sender, PrintPageEventArgs e)
+        {
+            try
+            {
+                AgregarEncabezadoTicket(ref e);
+                AgregarLinea(ref e, new Pen(Brushes.DarkGray, 1));
+                AgregarDatosLocker(ref e);
+                AgregarLinea(ref e, new Pen(Brushes.DarkGray, 1));
+                AgregarPieTicket(ref e, null);
             }
             catch (ArgumentNullException ex)
             {

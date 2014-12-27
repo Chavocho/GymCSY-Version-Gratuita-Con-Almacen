@@ -41,11 +41,6 @@ namespace GYM
         }
         #endregion
 
-        public frmMain()
-        {
-            InitializeComponent();
-        }
-
         private bool Respaldar(int tipoRespaldo)
         {
             //Mover funciones a otra clasae
@@ -128,32 +123,31 @@ namespace GYM
             }
         }
 
-        public frmMain(int nivelUsuario, int id, string nomUsu, Image img)
+        public frmMain()
         {
             InitializeComponent();
             this.BackgroundImage = Clases.CFuncionesGenerales.img;
+        }
+
+        public void InformacionInicio(int nivelUsuario, int id, string nomUsu, Image img)
+        {
             frmMain.nivelUsuario = nivelUsuario;
             frmMain.id = id;
             pcbUsuario.Image = img;
-            
-            if(nivelUsuario == 1)
+            if (nivelUsuario == 1)
                 lblUsuario.Text = "Asistente: " + nomUsu;
             else if (nivelUsuario == 2)
                 lblUsuario.Text = "Encargado: " + nomUsu;
             else
                 lblUsuario.Text = "Administrador: " + nomUsu;
             lblUsuario.Location = new Point(this.Width - lblUsuario.Width - 30, lblUsuario.Location.Y);
-
             OcultarElementosBarra();
-
         }
-
 
         private void main_Load(object sender, EventArgs e)
         {
             Clases.CFuncionesGenerales.CargarInterfaz(this);
             lblUsuario.ForeColor = Color.WhiteSmoke;
-            lblBETA.ForeColor = Color.FromArgb(150, 150, 150);
             if (!GYM.Clases.CFuncionesGenerales.versionGratuita)
                 tmrCumpleaños.Enabled = true;
         }

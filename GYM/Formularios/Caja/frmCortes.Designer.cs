@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCortes));
             this.dgvCaja = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Efectivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vouchers = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblEtiquetaFechaFin = new System.Windows.Forms.Label();
             this.lblEtiquetaFechaInicio = new System.Windows.Forms.Label();
             this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
@@ -39,10 +43,6 @@
             this.bgwCortes = new System.ComponentModel.BackgroundWorker();
             this.tmrEspera = new System.Windows.Forms.Timer(this.components);
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Efectivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vouchers = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCaja)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,9 +71,37 @@
             this.dgvCaja.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvCaja.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCaja.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCaja.Size = new System.Drawing.Size(640, 246);
+            this.dgvCaja.Size = new System.Drawing.Size(640, 244);
             this.dgvCaja.TabIndex = 4;
             this.dgvCaja.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCaja_CellClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // Fecha
+            // 
+            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // Efectivo
+            // 
+            this.Efectivo.HeaderText = "Efectivo retirado";
+            this.Efectivo.Name = "Efectivo";
+            this.Efectivo.ReadOnly = true;
+            this.Efectivo.Width = 150;
+            // 
+            // Vouchers
+            // 
+            this.Vouchers.HeaderText = "Vouchers";
+            this.Vouchers.Name = "Vouchers";
+            this.Vouchers.ReadOnly = true;
+            this.Vouchers.Width = 150;
             // 
             // lblEtiquetaFechaFin
             // 
@@ -120,7 +148,7 @@
             this.btnImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnImprimir.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.btnImprimir.Image = global::GYM.Properties.Resources.impresora;
-            this.btnImprimir.Location = new System.Drawing.Point(384, 318);
+            this.btnImprimir.Location = new System.Drawing.Point(439, 311);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(102, 35);
             this.btnImprimir.TabIndex = 15;
@@ -143,7 +171,7 @@
             // 
             this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.Image = global::GYM.Properties.Resources.ImgBuscar;
-            this.btnBuscar.Location = new System.Drawing.Point(532, 318);
+            this.btnBuscar.Location = new System.Drawing.Point(547, 310);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(104, 37);
             this.btnBuscar.TabIndex = 16;
@@ -151,34 +179,6 @@
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // Fecha
-            // 
-            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            // 
-            // Efectivo
-            // 
-            this.Efectivo.HeaderText = "Efectivo retirado";
-            this.Efectivo.Name = "Efectivo";
-            this.Efectivo.ReadOnly = true;
-            this.Efectivo.Width = 150;
-            // 
-            // Vouchers
-            // 
-            this.Vouchers.HeaderText = "Vouchers";
-            this.Vouchers.Name = "Vouchers";
-            this.Vouchers.ReadOnly = true;
-            this.Vouchers.Width = 150;
             // 
             // frmCortes
             // 

@@ -208,6 +208,7 @@
             this.txtFolio.Name = "txtFolio";
             this.txtFolio.Size = new System.Drawing.Size(245, 25);
             this.txtFolio.TabIndex = 6;
+            this.txtFolio.LostFocus += new System.EventHandler(txtFolio_LostFocus);
             // 
             // lblFolio
             // 
