@@ -51,7 +51,7 @@ namespace GYM.Formularios.Reportes
                 foreach (DataRow dr in dt.Rows)
                 {
                     if (dr["i"] != DBNull.Value)
-                        cant = (int)dr["i"];
+                        cant = int.Parse(dr["i"].ToString());
                 }
             }
             catch (MySqlException ex)

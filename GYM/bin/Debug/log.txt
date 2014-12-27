@@ -798,3 +798,5 @@ MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'folio_ticket
 MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'folio_ticket' in 'field list'
    en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 100
    en GYM.Formularios.POS.frmCobrar.CerrarCuenta() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmCobrar.cs:línea 58|
+System.InvalidCastException: La conversión especificada no es válida.
+   en GYM.Formularios.Reportes.frmReporteVentas.CantidadVentas() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Reportes\frmReporteVentas.cs:línea 54|

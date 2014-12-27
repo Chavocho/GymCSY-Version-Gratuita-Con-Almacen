@@ -161,7 +161,7 @@ namespace GYM.Formularios
             try
             {
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "SET foreign_keys_checks=0; DELETE FROM locker WHERE id=?id; SET foreign_keys_checks=1;";
+                sql.CommandText = "SET foreign_key_checks=0; DELETE FROM locker WHERE id=?id; SET foreign_key_checks=1;";
                 sql.Parameters.AddWithValue("?id", this.idLocker);
                 ConexionBD.EjecutarConsulta(sql);
             }
