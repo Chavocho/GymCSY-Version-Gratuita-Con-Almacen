@@ -336,11 +336,12 @@ namespace GYM.Clases
         /// <exception cref="System.ArgumentNullException">Excepción que se produce cuando se pasa una referencia nula a un método que no la acepta como argumento válido.</exception>
         /// <exception cref="System.ArgumentException">Excepción que se produce cuando no es válido uno de los argumentos proporcionados para un método.</exception>
         /// <exception cref="System.Exception">Representa los errores que se producen durante la ejecución de una aplicación.</exception>
-        public void ImprimirCaja()
+        public void ImprimirCaja(bool esCierreCaja)
         {
             try
             {
                 dtCaja = new DataTable();
+                this.esCierreCaja = esCierreCaja;
                 ObtenerDatosCaja();
                 pd.PrintPage += new PrintPageEventHandler(pd_PrintPageTicketCaja);
                 pd.DocumentName = "Ticket";

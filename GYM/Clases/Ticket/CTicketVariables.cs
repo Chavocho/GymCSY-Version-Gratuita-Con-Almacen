@@ -38,6 +38,7 @@ namespace GYM.Clases
         int folio;
         int numSoc;
         int idLocker;
+        bool esCierreCaja = false;
         //Variables para el corte de caja
         int idApertura;
         int idCierre;

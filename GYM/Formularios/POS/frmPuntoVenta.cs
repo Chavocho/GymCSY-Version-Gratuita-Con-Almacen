@@ -410,8 +410,10 @@ namespace GYM.Formularios.POS
             btnMenos.Enabled = true;
             lblEtiquetaNumProductos.Visible = true;
             lblNumProductos.Visible = true;
+            lblNumProductos.Text = "0";
             lblEtiquetaTotal.Visible = true;
             lblTotal.Visible = true;
+            lblTotal.Text = "$0.00";
             txtCodigo.Focus();
             btnDevolver.Visible = false;
         }
@@ -628,8 +630,13 @@ namespace GYM.Formularios.POS
                     }
                 }
                 else
+                {
                     if (MessageBox.Show("No puedes realizar operaciones de venta si la caja esta cerrada.\n¿Deseas abrirla?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == System.Windows.Forms.DialogResult.Yes)
+                    {
                         (new Formularios.Caja.frmAbrirCaja()).ShowDialog(this);
+                        btnNueva.PerformClick();
+                    }
+                }
             }
             catch (FormatException ex)
             {

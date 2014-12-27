@@ -392,39 +392,50 @@ namespace GYM.Formularios.Membresia
         {
             try
             {
-                if (ValidarDatos())
+                if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("caja", "estado")))
                 {
-                    mem.Estado = CMembresia.EstadoMembresia.Pendiente;
-                    mem.FechaFin = fechaFin;
-                    mem.FechaInicio = dtpFechaInicio.Value;
-                    mem.UpdateUser = frmMain.id;
-
-                    rMem.CreateUser = frmMain.id;
-                    rMem.Precio = decimal.Parse(lblPrecio.Text, System.Globalization.NumberStyles.Currency);
-                    rMem.IDMembresia = mem.IDMembresia;
-                    rMem.Descripcion = txtDescripcion.Text;
-                    rMem.FechaFin = fechaFin;
-                    rMem.FechaInicio = dtpFechaInicio.Value;
-                    rMem.FolioRemision = txtFolio.Text;
-                    rMem.Tipo = cbxTipoPago.SelectedIndex + 1;
-                    if (txtTerminacion.Text.Trim() != "")
-                        rMem.Terminacion = txtTerminacion.Text;
-                    else
-                        rMem.Terminacion = "0";
-                    if (txtFolioTicket.Text.Trim() != "")
-                        rMem.FolioTicket = txtFolioTicket.Text;
-                    else
-                        rMem.FolioTicket = "0";
-
-                    mem.EditarMembresia();
-                    rMem.InsertarRegistroMembresias();
-                    AgregarMovimientoCaja();
-                    MessageBox.Show("Membresía renovada", "Membresías", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (!GYM.Clases.CFuncionesGenerales.versionGratuita)
+                    if (ValidarDatos())
                     {
-                        ImprimirTicket();
+                        mem.Estado = CMembresia.EstadoMembresia.Pendiente;
+                        mem.FechaFin = fechaFin;
+                        mem.FechaInicio = dtpFechaInicio.Value;
+                        mem.UpdateUser = frmMain.id;
+
+                        rMem.CreateUser = frmMain.id;
+                        rMem.Precio = decimal.Parse(lblPrecio.Text, System.Globalization.NumberStyles.Currency);
+                        rMem.IDMembresia = mem.IDMembresia;
+                        rMem.Descripcion = txtDescripcion.Text;
+                        rMem.FechaFin = fechaFin;
+                        rMem.FechaInicio = dtpFechaInicio.Value;
+                        rMem.FolioRemision = txtFolio.Text;
+                        rMem.Tipo = cbxTipoPago.SelectedIndex + 1;
+                        if (txtTerminacion.Text.Trim() != "")
+                            rMem.Terminacion = txtTerminacion.Text;
+                        else
+                            rMem.Terminacion = "0";
+                        if (txtFolioTicket.Text.Trim() != "")
+                            rMem.FolioTicket = txtFolioTicket.Text;
+                        else
+                            rMem.FolioTicket = "0";
+
+                        mem.EditarMembresia();
+                        rMem.InsertarRegistroMembresias();
+                        AgregarMovimientoCaja();
+                        MessageBox.Show("Membresía renovada", "Membresías", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (!GYM.Clases.CFuncionesGenerales.versionGratuita)
+                        {
+                            ImprimirTicket();
+                        }
+                        this.Close();
                     }
-                    this.Close();
+                }
+                else
+                {
+                    if (MessageBox.Show("No puedes realizar operaciones de venta si la caja esta cerrada.\n¿Deseas abrirla?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == System.Windows.Forms.DialogResult.Yes)
+                    {
+                        (new Formularios.Caja.frmAbrirCaja()).ShowDialog(this);
+                        btnAceptar.PerformClick();
+                    }
                 }
             }
             catch (System.Xml.XmlException ex)

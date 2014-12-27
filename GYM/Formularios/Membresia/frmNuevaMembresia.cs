@@ -329,46 +329,57 @@ namespace GYM.Formularios.Membresia
         {
             try
             {
-                if (ValidarDatos())
+                if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("caja", "estado")))
                 {
-                    mem.NumeroSocio = numSocio;
-                    mem.FechaInicio = dtpFechaInicio.Value;
-                    mem.FechaFin = this.fechaFin;
-                    mem.Estado = Clases.CMembresia.EstadoMembresia.Pendiente;//Al ingresar una Membresía esta queda en estado pendiente de activación.
-                    mem.CreateUser = frmMain.id;
-                    rMem.IDMembresia = mem.InsertarMembresia();
-
-                    rMem.FechaInicio = this.dtpFechaInicio.Value;
-                    rMem.FechaFin = this.fechaFin;
-                    rMem.Tipo = cbxTipo.SelectedIndex;
-                    if (txtDescripcion.Text == "")
-                        rMem.Descripcion = null;
-                    else
-                        rMem.Descripcion = txtDescripcion.Text;
-                    rMem.TipoPago = cbxTipoPago.SelectedIndex + 1;
-                    rMem.Precio = decimal.Parse(lblPrecio.Text, System.Globalization.NumberStyles.Currency);
-                    if (txtTerminacion.Text != "")
-                        rMem.Terminacion = txtTerminacion.Text;
-                    else
-                        rMem.Terminacion = "0";
-                    if (txtFolio.Text != "")
-                        rMem.FolioRemision = txtFolio.Text;
-                    else
-                        rMem.FolioRemision = "0";
-                    if (txtFolioTicket.Text != "")
-                        rMem.FolioTicket = txtFolioTicket.Text;
-                    else
-                        rMem.FolioTicket = "0";
-                    rMem.CreateUser = frmMain.id;
-
-                    rMem.InsertarRegistroMembresias();
-                    AgregarMovimientoCaja();
-                    MessageBox.Show("Membresía agregada correctamente", "Membresías", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (!GYM.Clases.CFuncionesGenerales.versionGratuita)
+                    if (ValidarDatos())
                     {
-                        ImprimirTicket();
+                        mem.NumeroSocio = numSocio;
+                        mem.FechaInicio = dtpFechaInicio.Value;
+                        mem.FechaFin = this.fechaFin;
+                        mem.Estado = Clases.CMembresia.EstadoMembresia.Pendiente;//Al ingresar una Membresía esta queda en estado pendiente de activación.
+                        mem.CreateUser = frmMain.id;
+                        rMem.IDMembresia = mem.InsertarMembresia();
+
+                        rMem.FechaInicio = this.dtpFechaInicio.Value;
+                        rMem.FechaFin = this.fechaFin;
+                        rMem.Tipo = cbxTipo.SelectedIndex;
+                        if (txtDescripcion.Text == "")
+                            rMem.Descripcion = null;
+                        else
+                            rMem.Descripcion = txtDescripcion.Text;
+                        rMem.TipoPago = cbxTipoPago.SelectedIndex + 1;
+                        rMem.Precio = decimal.Parse(lblPrecio.Text, System.Globalization.NumberStyles.Currency);
+                        if (txtTerminacion.Text != "")
+                            rMem.Terminacion = txtTerminacion.Text;
+                        else
+                            rMem.Terminacion = "0";
+                        if (txtFolio.Text != "")
+                            rMem.FolioRemision = txtFolio.Text;
+                        else
+                            rMem.FolioRemision = "0";
+                        if (txtFolioTicket.Text != "")
+                            rMem.FolioTicket = txtFolioTicket.Text;
+                        else
+                            rMem.FolioTicket = "0";
+                        rMem.CreateUser = frmMain.id;
+
+                        rMem.InsertarRegistroMembresias();
+                        AgregarMovimientoCaja();
+                        MessageBox.Show("Membresía agregada correctamente", "Membresías", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (!GYM.Clases.CFuncionesGenerales.versionGratuita)
+                        {
+                            ImprimirTicket();
+                        }
+                        this.Close();
                     }
-                    this.Close();
+                }
+                else
+                {
+                    if (MessageBox.Show("No puedes realizar operaciones de venta si la caja esta cerrada.\n¿Deseas abrirla?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == System.Windows.Forms.DialogResult.Yes)
+                    {
+                        (new Formularios.Caja.frmAbrirCaja()).ShowDialog(this);
+                        btnAceptar.PerformClick();
+                    }
                 }
             }
             catch (System.Xml.XmlException ex)

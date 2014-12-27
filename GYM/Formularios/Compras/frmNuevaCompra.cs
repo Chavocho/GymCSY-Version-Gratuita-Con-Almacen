@@ -407,37 +407,48 @@ namespace GYM.Formularios.Compras
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (ValidarCampos())
+            if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("caja", "estado")))
             {
-                try
+                if (ValidarCampos())
                 {
-                    IngresarCompra();
-                    MessageBox.Show("Se ha ingresado la compra con éxito.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    try
+                    {
+                        IngresarCompra();
+                        MessageBox.Show("Se ha ingresado la compra con éxito.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    catch (MySqlException ex)
+                    {
+                        CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. No se pudo conectar con la base de datos.", ex);
+                    }
+                    catch (FormatException ex)
+                    {
+                        CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. Ocurrió un error al dar formato a una variable.", ex);
+                    }
+                    catch (OverflowException ex)
+                    {
+                        CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. Ocurrió un desbordamiento.", ex);
+                    }
+                    catch (ArgumentNullException ex)
+                    {
+                        CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. El argumento dado al método es nulo.", ex);
+                    }
+                    catch (ArgumentException ex)
+                    {
+                        CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. El argumento dado al método no es admitido por éste.", ex);
+                    }
+                    catch (Exception ex)
+                    {
+                        CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. Ocurrió un error genérico.", ex);
+                    }
                 }
-                catch (MySqlException ex)
+            }
+            else
+            {
+                if (MessageBox.Show("No puedes realizar operaciones de compra si la caja esta cerrada.\n¿Deseas abrirla?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == System.Windows.Forms.DialogResult.Yes)
                 {
-                    CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. No se pudo conectar con la base de datos.", ex);
-                }
-                catch (FormatException ex)
-                {
-                    CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. Ocurrió un error al dar formato a una variable.", ex);
-                }
-                catch (OverflowException ex)
-                {
-                    CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. Ocurrió un desbordamiento.", ex);
-                }
-                catch (ArgumentNullException ex)
-                {
-                    CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. El argumento dado al método es nulo.", ex);
-                }
-                catch (ArgumentException ex)
-                {
-                    CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. El argumento dado al método no es admitido por éste.", ex);
-                }
-                catch (Exception ex)
-                {
-                    CFuncionesGenerales.MensajeError("Ha ocurrido un error al ingresar la compra. Ocurrió un error genérico.", ex);
+                    (new Formularios.Caja.frmAbrirCaja()).ShowDialog(this);
+                    btnAceptar.PerformClick();
                 }
             }
         }

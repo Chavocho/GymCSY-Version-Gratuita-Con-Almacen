@@ -786,3 +786,15 @@ System.InvalidCastException: La conversión especificada no es válida.
 System.IndexOutOfRangeException: No hay ninguna fila en la posición 0.
    en GYM.Clases.CTicket.ImprimirTicketMembresia(Int32 numSoc) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\Ticket\CTicket.cs:línea 229
    en GYM.Formularios.Membresia.frmNuevaMembresia.ImprimirTicket() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Membresia\frmNuevaMembresia.cs:línea 236|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'folio_ticket' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 100
+   en GYM.Formularios.POS.frmCobrar.CerrarCuenta() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmCobrar.cs:línea 58|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'folio_ticket' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 100
+   en GYM.Formularios.POS.frmCobrar.CerrarCuenta() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmCobrar.cs:línea 58|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'folio_ticket' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 100
+   en GYM.Formularios.POS.frmCobrar.CerrarCuenta() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmCobrar.cs:línea 58|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'folio_ticket' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 100
+   en GYM.Formularios.POS.frmCobrar.CerrarCuenta() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmCobrar.cs:línea 58|

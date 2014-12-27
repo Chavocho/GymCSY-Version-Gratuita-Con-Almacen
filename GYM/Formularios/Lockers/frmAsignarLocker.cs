@@ -397,17 +397,28 @@ namespace GYM.Formularios
         {
             try
             {
-                if (ValidarCampos())
+                if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("caja", "estado")))
                 {
-                    InsertarLocker();
-                    InsertarCaja();
-                    ImprimirTicket();
-                    if (!chbPersona.Checked)
-                        MessageBox.Show("El locker ha sido asignado a " + dgvSocios[1, dgvSocios.CurrentRow.Index].Value.ToString() + ".", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    else
-                        MessageBox.Show("El locker ha sido asignado a " + txtPersona.Text + ".", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    frm.BuscarLockers();
-                    this.Close();
+                    if (ValidarCampos())
+                    {
+                        InsertarLocker();
+                        InsertarCaja();
+                        ImprimirTicket();
+                        if (!chbPersona.Checked)
+                            MessageBox.Show("El locker ha sido asignado a " + dgvSocios[1, dgvSocios.CurrentRow.Index].Value.ToString() + ".", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        else
+                            MessageBox.Show("El locker ha sido asignado a " + txtPersona.Text + ".", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        frm.BuscarLockers();
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    if (MessageBox.Show("No puedes realizar operaciones de venta si la caja esta cerrada.\n¿Deseas abrirla?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == System.Windows.Forms.DialogResult.Yes)
+                    {
+                        (new Formularios.Caja.frmAbrirCaja()).ShowDialog(this);
+                        btnAceptar.PerformClick();
+                    }
                 }
             }
             catch (MySqlException ex)

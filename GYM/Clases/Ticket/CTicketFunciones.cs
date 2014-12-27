@@ -223,7 +223,7 @@ namespace GYM.Clases
                 {
                     e.Graphics.DrawString("SERVICIO: VENTA MOSTRADOR", fuenteNormal, Brushes.Black, 0, y);
                     y += saltoLinea;
-                    e.Graphics.DrawString("\nTICKET: " + folio.ToString("000000"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 3) * 2 - 10, y);
+                    e.Graphics.DrawString("\nTICKET: " + folio.ToString("000000"), fuenteNormal, Brushes.Black, 0, y);
                 }
                 else
                 {
@@ -312,7 +312,7 @@ namespace GYM.Clases
                 e.Graphics.DrawString("PRODUCTO", fuenteResaltada, Brushes.Black, 0F, y);
                 e.Graphics.DrawString("PRECIO", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) + 25, y);
                 e.Graphics.DrawString("CANT", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) * 2 + 15, y);
-                e.Graphics.DrawString("IMPORTE", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) * 3 - 5, y);
+                e.Graphics.DrawString("IMP", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) * 3 - 5, y);
                 y += saltoLinea;
                 foreach (DataRow dr in dt.Rows)
                 {
@@ -542,16 +542,24 @@ namespace GYM.Clases
                     e.Graphics.DrawString(ta.ToString("C2"), fuentePequeña, Brushes.Black, (e.PageBounds.Width / 4) - 15, y);
                     e.Graphics.DrawString(tipoMov, fuentePequeña, Brushes.Black, (e.PageBounds.Width / 4) * 2 - 25, y);
                     e.Graphics.DrawString(fe.ToString("dd/MM/yyyy"), fuentePequeña, Brushes.Black, (e.PageBounds.Width / 4) * 3 - 25, y);
-                    totTa += ta;
+                    if (ta > 0)
+                        totTa += ta;
                     efRet = ef;
                     y += saltoLinea;
                     AgregarLinea(ref e, new Pen(Brushes.Black));
                 }
                 e.Graphics.DrawString("EFECTIVO RETIRADO: " + (efRet * -1).ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
                 y += saltoLinea;
-                e.Graphics.DrawString("TOTAL DE VOUCHERS: " + (totTa * -1).ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
+                e.Graphics.DrawString("TOTAL DE VOUCHERS: " + totTa.ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
                 y += saltoLinea;
-                e.Graphics.DrawString("EFECTIVO RESTANTE: " + TotalCajaCorte().ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
+                if (!esCierreCaja)
+                {
+                    e.Graphics.DrawString("EFECTIVO RESTANTE: " + TotalCajaCorte().ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
+                }
+                else
+                {
+                    e.Graphics.DrawString("EFECTIVO RESTANTE: " + TotalCaja().ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
+                }
                 y += saltoLinea;
             }
             catch (FormatException ex)

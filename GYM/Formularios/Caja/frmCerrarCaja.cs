@@ -226,14 +226,14 @@ namespace GYM.Formularios.Caja
                         {
                             if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("ticket", "preguntar")))
                             {
-                                if (MessageBox.Show("¿Deseas imprimir el ticket de esta venta?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
-                                    (new Clases.CTicket()).ImprimirCaja();
+                                if (MessageBox.Show("¿Deseas imprimir el ticket del cierre de caja?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                                    (new Clases.CTicket()).ImprimirCaja(true);
                             }
                             else
-                                (new Clases.CTicket()).ImprimirCaja();
+                                (new Clases.CTicket()).ImprimirCaja(true);
                         }
                         else
-                            (new Clases.CTicket()).ImprimirCaja();
+                            (new Clases.CTicket()).ImprimirCaja(true);
             }
             catch (System.Xml.XmlException ex)
             {
