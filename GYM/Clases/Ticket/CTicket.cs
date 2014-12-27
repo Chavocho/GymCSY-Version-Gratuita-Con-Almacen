@@ -654,7 +654,7 @@ namespace GYM.Clases
                 AgregarLinea(ref e, new Pen(Brushes.DarkGray, 1));
                 AgregarDatosMembresia(ref e);
                 AgregarLinea(ref e, new Pen(Brushes.DarkGray, 1));
-                AgregarPieTicket(ref e, dtVenta);
+                AgregarPieTicket(ref e, null);
             }
             catch (ArgumentNullException ex)
             {

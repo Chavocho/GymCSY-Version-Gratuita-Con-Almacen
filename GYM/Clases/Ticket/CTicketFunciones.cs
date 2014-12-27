@@ -222,12 +222,14 @@ namespace GYM.Clases
                 if (!esCierreCaja)
                 {
                     e.Graphics.DrawString("SERVICIO: VENTA MOSTRADOR", fuenteNormal, Brushes.Black, 0, y);
+                    y += saltoLinea;
                     e.Graphics.DrawString("\nTICKET: " + folio.ToString("000000"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 3) * 2 - 10, y);
                 }
                 else
                 {
                     e.Graphics.DrawString("SERVICIO: CIERRE DE CAJA", fuenteNormal, Brushes.Black, 0, y+=saltoLineaPeque);
-                    e.Graphics.DrawString("FECHA: " + DateTime.Now.ToString("dd/MM/yyyy"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 3) * 2 - 25, y);
+                    y += saltoLinea;
+                    e.Graphics.DrawString("FECHA: " + DateTime.Now.ToString("dd/MM/yyyy"), fuenteNormal, Brushes.Black, 0, y);
                 }
                 y += saltoLinea+5;
                 if (DateTime.Now.TimeOfDay >= turnoMat && DateTime.Now.TimeOfDay < turnoVes)
@@ -310,7 +312,7 @@ namespace GYM.Clases
                 e.Graphics.DrawString("PRODUCTO", fuenteResaltada, Brushes.Black, 0F, y);
                 e.Graphics.DrawString("PRECIO", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) + 25, y);
                 e.Graphics.DrawString("CANT", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) * 2 + 15, y);
-                e.Graphics.DrawString("IMPORTE", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) * 3 + 5, y);
+                e.Graphics.DrawString("IMPORTE", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) * 3 - 5, y);
                 y += saltoLinea;
                 foreach (DataRow dr in dt.Rows)
                 {
@@ -319,8 +321,8 @@ namespace GYM.Clases
                     decimal cant = decimal.Parse(dr["cantidad"].ToString());
                     AgregarNombreProducto(ref e, prod);
                     e.Graphics.DrawString(precio.ToString("C2"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) + 25, y);
-                    e.Graphics.DrawString(cant.ToString(), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) * 2 + 25, y);
-                    e.Graphics.DrawString((precio * cant).ToString("C2"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) * 3 + 10, y);
+                    e.Graphics.DrawString(cant.ToString(), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) * 2 + 15, y);
+                    e.Graphics.DrawString((precio * cant).ToString("C2"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) * 3 - 5, y);
                     y += saltoLinea;
                 }
             }
@@ -469,7 +471,7 @@ namespace GYM.Clases
                 DateTime fechaIni = (DateTime)ObtenerDatoDataTableLocker("fecha_ini"), 
                     fechaFin = (DateTime)ObtenerDatoDataTableLocker("fecha_fin");
                 string tipoPago = "";
-                if (ObtenerDatoDataTableLocker("tipo_pago") == "0")
+                if (ObtenerDatoDataTableLocker("tipo_pago").ToString() == "0")
                     tipoPago = "EFECTIVO";
                 else
                     tipoPago = "TARJETA DE CRÉDITO";
@@ -479,9 +481,9 @@ namespace GYM.Clases
                 else
                     e.Graphics.DrawString("NOMBRE DE SOCIO: " + ObtenerNombreSocio((int)ObtenerDatoDataTableLocker("numSocio")), fuenteNormal, Brushes.Black, 0, y);
                 y += saltoLinea;
-                e.Graphics.DrawString("FECHA DE INICIO: " + fechaIni.ToString("dd") + " de " + fechaIni.ToString("MMMM") + " del " + fechaIni.ToString("yyyy"), fuenteNormal, Brushes.Black, 0, y);
+                e.Graphics.DrawString("INICIA: " + fechaIni.ToString("dd") + " de " + fechaIni.ToString("MMMM") + " del " + fechaIni.ToString("yyyy"), fuenteNormal, Brushes.Black, 0, y);
                 y += saltoLinea;
-                e.Graphics.DrawString("FECHA DE TERMINACIÓN: " + fechaFin.ToString("dd") + " de " + fechaFin.ToString("MMMM") + " del " + fechaFin.ToString("yyyy"), fuenteNormal, Brushes.Black, 0, y);
+                e.Graphics.DrawString("TERMINA: " + fechaFin.ToString("dd") + " de " + fechaFin.ToString("MMMM") + " del " + fechaFin.ToString("yyyy"), fuenteNormal, Brushes.Black, 0, y);
                 y += saltoLinea;
                 e.Graphics.DrawString("PRECIO: " + ((decimal)ObtenerDatoDataTableLocker("precio")).ToString("C2"), fuenteNormal, Brushes.Black, 0, y);
                 y += saltoLinea;
