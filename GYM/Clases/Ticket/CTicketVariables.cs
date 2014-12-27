@@ -21,6 +21,8 @@ namespace GYM.Clases
         Font fuentePequeña;
         Font fuenteNormal;
         Font fuenteResaltada;
+        Font fuenteGrande;
+        Font fuenteGrandeResaltada;
         TimeSpan turnoMat;
         TimeSpan turnoVes;
 
@@ -30,7 +32,8 @@ namespace GYM.Clases
         /// </summary>
         int tamPapel;
         float y;
-        const int saltoLinea = 12;
+        const int saltoLinea = 18;
+        const int saltoLineaPeque = 10;
         int folio;
         int numSoc;
         //Variables para el corte de caja

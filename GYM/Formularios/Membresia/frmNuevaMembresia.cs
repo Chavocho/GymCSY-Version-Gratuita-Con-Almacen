@@ -143,7 +143,7 @@ namespace GYM.Formularios.Membresia
           
             if (cbxTipo.SelectedIndex < 0)
             {
-                MessageBox.Show("Debes seleccionar un tipo de membresía", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debes seleccionar una duración en la membresía", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 cbxTipo.Focus();
                 return false;
             }
@@ -483,11 +483,14 @@ namespace GYM.Formularios.Membresia
                         lblFechaFin.Text = dtpFechaInicio.Value.AddYears(1).ToString("dd") + " de " + dtpFechaInicio.Value.AddYears(1).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddYears(1).ToString("yyyy");
                         break;
                 }
+                lblPrecio.Text = preciosM[cbxTipo.SelectedIndex].ToString("C2");
+                txtDescripcion.Text = descripcionM[cbxTipo.SelectedIndex];
             }
             else
             {
                 MessageBox.Show("El precio de esa duración no ha sido configurado.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                int tmp = 0;
+                cbxTipo.SelectedIndex = -1;
+                /*int tmp = 0;
                 foreach (int k in preciosM.Keys)
                 {
                     if (k > cbxTipo.SelectedIndex)
@@ -496,10 +499,8 @@ namespace GYM.Formularios.Membresia
                         break;
                     }
                     tmp = k;
-                }
+                }*/
             }
-            lblPrecio.Text = preciosM[cbxTipo.SelectedIndex].ToString("C2");
-            txtDescripcion.Text = descripcionM[cbxTipo.SelectedIndex];
         }
 
         private void dtpFechaInicio_ValueChanged(object sender, EventArgs e)

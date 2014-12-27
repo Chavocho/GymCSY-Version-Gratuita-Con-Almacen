@@ -443,3 +443,302 @@ System.NullReferenceException: Referencia a objeto no establecida como instancia
 MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'folio_ticket' in 'field list'
    en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 100
    en GYM.Formularios.POS.frmCobrar.CerrarCuenta() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmCobrar.cs:línea 58|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'gym_dtbs.promocion' doesn't exist
+   en GYM.Clases.ConexionBD.EjecutarConsultaSelect(String consulta) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 135
+   en GYM.Formularios.Membresia.frmPromociones.BuscarPromociones() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Membresia\Promociones\frmPromociones.cs:línea 51|
+System.Collections.Generic.KeyNotFoundException: La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   en GYM.Formularios.Membresia.frmNuevaMembresia.cbxTipo_SelectedIndexChanged(Object sender, EventArgs e) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Membresia\frmNuevaMembresia.cs:línea 501
+   en System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   en System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   en System.Windows.Forms.ComboBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   en System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   en System.Windows.Forms.Control.WmCommand(Message& m)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   en System.Windows.Forms.Form.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   en System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   en System.Windows.Forms.Control.DefWndProc(Message& m)
+   en System.Windows.Forms.Control.WmCommand(Message& m)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ComboBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   en System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   en System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   en System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   en System.Windows.Forms.Application.RunDialog(Form form)
+   en System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   en GYM.Formularios.Membresia.frmMembresia.btnNuevo_Click(Object sender, EventArgs e) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Membresia\frmMembresia.cs:línea 126|
+System.Collections.Generic.KeyNotFoundException: La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   en GYM.Formularios.Membresia.frmNuevaMembresia.cbxTipo_SelectedIndexChanged(Object sender, EventArgs e) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Membresia\frmNuevaMembresia.cs:línea 501
+   en System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   en System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   en System.Windows.Forms.ComboBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   en System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   en System.Windows.Forms.Control.WmCommand(Message& m)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   en System.Windows.Forms.Form.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   en System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   en System.Windows.Forms.Control.DefWndProc(Message& m)
+   en System.Windows.Forms.Control.WmCommand(Message& m)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ComboBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   en System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   en System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   en System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   en System.Windows.Forms.Application.RunDialog(Form form)
+   en System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   en GYM.Formularios.Membresia.frmMembresia.btnNuevo_Click(Object sender, EventArgs e) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Membresia\frmMembresia.cs:línea 126|
+System.Collections.Generic.KeyNotFoundException: La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   en GYM.Formularios.Membresia.frmNuevaMembresia.cbxTipo_SelectedIndexChanged(Object sender, EventArgs e) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Membresia\frmNuevaMembresia.cs:línea 501
+   en System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   en System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   en System.Windows.Forms.ComboBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   en System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   en System.Windows.Forms.Control.WmCommand(Message& m)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   en System.Windows.Forms.Form.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   en System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   en System.Windows.Forms.Control.DefWndProc(Message& m)
+   en System.Windows.Forms.Control.WmCommand(Message& m)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ComboBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   en System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   en System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   en System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   en System.Windows.Forms.Application.RunDialog(Form form)
+   en System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   en GYM.Formularios.Membresia.frmMembresia.btnNuevo_Click(Object sender, EventArgs e) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Membresia\frmMembresia.cs:línea 126|
+System.Collections.Generic.KeyNotFoundException: La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   en GYM.Formularios.Membresia.frmNuevaMembresia.cbxTipo_SelectedIndexChanged(Object sender, EventArgs e) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Membresia\frmNuevaMembresia.cs:línea 501
+   en System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   en System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   en System.Windows.Forms.ComboBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   en System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   en System.Windows.Forms.Control.WmCommand(Message& m)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   en System.Windows.Forms.Form.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   en System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   en System.Windows.Forms.Control.DefWndProc(Message& m)
+   en System.Windows.Forms.Control.WmCommand(Message& m)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ComboBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   en System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   en System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   en System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   en System.Windows.Forms.Application.RunDialog(Form form)
+   en System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   en GYM.Formularios.Membresia.frmMembresia.btnNuevo_Click(Object sender, EventArgs e) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Membresia\frmMembresia.cs:línea 126|
+System.Collections.Generic.KeyNotFoundException: La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   en GYM.Formularios.Membresia.frmNuevaMembresia.cbxTipo_SelectedIndexChanged(Object sender, EventArgs e) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Membresia\frmNuevaMembresia.cs:línea 511
+   en System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   en System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   en System.Windows.Forms.ComboBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   en System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   en System.Windows.Forms.Control.WmCommand(Message& m)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   en System.Windows.Forms.Form.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   en System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   en System.Windows.Forms.Control.DefWndProc(Message& m)
+   en System.Windows.Forms.Control.WmCommand(Message& m)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ComboBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   en System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   en System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   en System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   en System.Windows.Forms.Application.RunDialog(Form form)
+   en System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   en GYM.Formularios.Membresia.frmMembresia.btnNuevo_Click(Object sender, EventArgs e) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Membresia\frmMembresia.cs:línea 126|
+System.Collections.Generic.KeyNotFoundException: La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   en GYM.Formularios.Membresia.frmNuevaMembresia.cbxTipo_SelectedIndexChanged(Object sender, EventArgs e) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Membresia\frmNuevaMembresia.cs:línea 511
+   en System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   en System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   en System.Windows.Forms.ComboBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   en System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   en System.Windows.Forms.Control.WmCommand(Message& m)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   en System.Windows.Forms.Form.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   en System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   en System.Windows.Forms.Control.DefWndProc(Message& m)
+   en System.Windows.Forms.Control.WmCommand(Message& m)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ComboBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   en System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   en System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   en System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   en System.Windows.Forms.Application.RunDialog(Form form)
+   en System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   en GYM.Formularios.Membresia.frmMembresia.btnNuevo_Click(Object sender, EventArgs e) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Membresia\frmMembresia.cs:línea 126|
+System.Collections.Generic.KeyNotFoundException: La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   en GYM.Formularios.Membresia.frmNuevaMembresia.cbxTipo_SelectedIndexChanged(Object sender, EventArgs e) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Membresia\frmNuevaMembresia.cs:línea 511
+   en System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)
+   en System.Windows.Forms.ComboBox.WmReflectCommand(Message& m)
+   en System.Windows.Forms.ComboBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.SendMessage(HandleRef hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   en System.Windows.Forms.Control.SendMessage(Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.Control.ReflectMessageInternal(IntPtr hWnd, Message& m)
+   en System.Windows.Forms.Control.WmCommand(Message& m)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   en System.Windows.Forms.Form.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.CallWindowProc(IntPtr wndProc, IntPtr hWnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   en System.Windows.Forms.NativeWindow.DefWndProc(Message& m)
+   en System.Windows.Forms.Control.DefWndProc(Message& m)
+   en System.Windows.Forms.Control.WmCommand(Message& m)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ComboBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   en System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   en System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   en System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   en System.Windows.Forms.Application.RunDialog(Form form)
+   en System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   en GYM.Formularios.Membresia.frmMembresia.btnNuevo_Click(Object sender, EventArgs e) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Membresia\frmMembresia.cs:línea 126|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'terminacion' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 100
+   en GYM.Formularios.POS.frmCobrar.CerrarCuenta() en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmCobrar.cs:línea 58|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'terminacion' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 100
+   en GYM.Formularios.POS.frmCobrar.CerrarCuenta() en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmCobrar.cs:línea 58|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'terminacion' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 100
+   en GYM.Formularios.POS.frmCobrar.CerrarCuenta() en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmCobrar.cs:línea 58|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'terminacion' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando)
+   en GYM.Formularios.POS.frmCobrar.CerrarCuenta()|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'terminacion' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 100
+   en GYM.Formularios.POS.frmCobrar.CerrarCuenta() en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmCobrar.cs:línea 58|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'terminacion' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 100
+   en GYM.Formularios.POS.frmCobrar.CerrarCuenta() en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmCobrar.cs:línea 58|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'terminacion' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 100
+   en GYM.Formularios.POS.frmCobrar.CerrarCuenta() en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmCobrar.cs:línea 58|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'terminacion' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 100
+   en GYM.Formularios.POS.frmCobrar.CerrarCuenta() en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmCobrar.cs:línea 58|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'terminacion' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando)
+   en GYM.Formularios.POS.frmCobrar.CerrarCuenta()|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'terminacion' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando)
+   en GYM.Formularios.POS.frmCobrar.CerrarCuenta()|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'terminacion' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando)
+   en GYM.Formularios.POS.frmCobrar.CerrarCuenta()|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'terminacion' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando)
+   en GYM.Formularios.POS.frmCobrar.CerrarCuenta()|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'terminacion' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando)
+   en GYM.Formularios.POS.frmCobrar.CerrarCuenta()|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'terminacion' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 100
+   en GYM.Formularios.POS.frmCobrar.CerrarCuenta() en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmCobrar.cs:línea 58|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'terminacion' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 100
+   en GYM.Formularios.POS.frmCobrar.CerrarCuenta() en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmCobrar.cs:línea 58|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'terminacion' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando)
+   en GYM.Formularios.POS.frmCobrar.CerrarCuenta()|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'terminacion' in 'field list'
+   en GYM.Clases.ConexionBD.EjecutarConsulta(MySqlCommand comando)
+   en GYM.Formularios.POS.frmCobrar.CerrarCuenta()|

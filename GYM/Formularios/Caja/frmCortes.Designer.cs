@@ -31,10 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCortes));
             this.dgvCaja = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Efectivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vouchers = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblEtiquetaFechaFin = new System.Windows.Forms.Label();
             this.lblEtiquetaFechaInicio = new System.Windows.Forms.Label();
             this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
@@ -43,6 +39,10 @@
             this.bgwCortes = new System.ComponentModel.BackgroundWorker();
             this.tmrEspera = new System.Windows.Forms.Timer(this.components);
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Efectivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vouchers = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCaja)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,34 +74,6 @@
             this.dgvCaja.Size = new System.Drawing.Size(640, 246);
             this.dgvCaja.TabIndex = 4;
             this.dgvCaja.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCaja_CellClick);
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // Fecha
-            // 
-            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            // 
-            // Efectivo
-            // 
-            this.Efectivo.HeaderText = "Efectivo";
-            this.Efectivo.Name = "Efectivo";
-            this.Efectivo.ReadOnly = true;
-            this.Efectivo.Width = 150;
-            // 
-            // Vouchers
-            // 
-            this.Vouchers.HeaderText = "Vouchers";
-            this.Vouchers.Name = "Vouchers";
-            this.Vouchers.ReadOnly = true;
-            this.Vouchers.Width = 150;
             // 
             // lblEtiquetaFechaFin
             // 
@@ -180,6 +152,34 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.button1_Click);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // Fecha
+            // 
+            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // Efectivo
+            // 
+            this.Efectivo.HeaderText = "Efectivo retirado";
+            this.Efectivo.Name = "Efectivo";
+            this.Efectivo.ReadOnly = true;
+            this.Efectivo.Width = 150;
+            // 
+            // Vouchers
+            // 
+            this.Vouchers.HeaderText = "Vouchers";
+            this.Vouchers.Name = "Vouchers";
+            this.Vouchers.ReadOnly = true;
+            this.Vouchers.Width = 150;
+            // 
             // frmCortes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -211,12 +211,12 @@
         private System.Windows.Forms.DateTimePicker dtpFechaFin;
         private System.Windows.Forms.DateTimePicker dtpFechaInicio;
         private System.Windows.Forms.Button btnImprimir;
+        private System.ComponentModel.BackgroundWorker bgwCortes;
+        private System.Windows.Forms.Timer tmrEspera;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Efectivo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Vouchers;
-        private System.ComponentModel.BackgroundWorker bgwCortes;
-        private System.Windows.Forms.Timer tmrEspera;
-        private System.Windows.Forms.Button btnBuscar;
     }
 }

@@ -27,15 +27,19 @@ namespace GYM.Clases
                 ObtenerDatosConfiguracion();
                 if (tamPapel == 300)
                 {
-                    fuentePequeña = new Font("Segoe UI", 7, FontStyle.Regular);
-                    fuenteNormal = new Font("Segoe UI", 8, FontStyle.Regular);
-                    fuenteResaltada = new Font("Segoe UI", 8, FontStyle.Bold);
+                    fuentePequeña = new Font("Segoe UI", 8, FontStyle.Regular);
+                    fuenteNormal = new Font("Segoe UI", 10, FontStyle.Regular);
+                    fuenteResaltada = new Font("Segoe UI", 10, FontStyle.Bold);
+                    fuenteGrande = new Font("Segoe UI", 12, FontStyle.Regular);
+                    fuenteGrandeResaltada = new Font("Segoe UI", 14, FontStyle.Bold);
                 }
                 else
                 {
                     fuentePequeña = new Font("Segoe UI", 6, FontStyle.Regular);
                     fuenteNormal = new Font("Segoe UI", 7, FontStyle.Regular);
                     fuenteResaltada = new Font("Segoe UI", 7, FontStyle.Bold);
+                    fuenteGrande = new Font("Segoe UI", 9, FontStyle.Regular);
+                    fuenteGrandeResaltada = new Font("Segoe UI", 11, FontStyle.Bold);
                 }
                 y = 0;
             }
@@ -74,9 +78,9 @@ namespace GYM.Clases
                 pd.DocumentName = "Ticket";
                 pd.DefaultPageSettings.PaperSize = new PaperSize("Ticket", tamPapel, 10000);
                 pd.PrinterSettings.PrinterName = impresora;
-                ppd.Document = pd;
-                ppd.ShowDialog();
-                //pd.Print();
+                //ppd.Document = pd;
+                //ppd.ShowDialog();
+                pd.Print();
             }
             catch (InvalidPrinterException ex)
             {
@@ -164,9 +168,9 @@ namespace GYM.Clases
                 pd.DocumentName = "Ticket";
                 pd.DefaultPageSettings.PaperSize = new PaperSize("Ticket", tamPapel, 10000);
                 pd.PrinterSettings.PrinterName = impresora;
-                ppd.Document = pd;
-                ppd.ShowDialog();
-                //pd.Print();
+                //ppd.Document = pd;
+                //ppd.ShowDialog();
+                pd.Print();
             }
             catch (InvalidPrinterException ex)
             {
@@ -252,9 +256,9 @@ namespace GYM.Clases
                 pd.DocumentName = "Ticket";
                 pd.DefaultPageSettings.PaperSize = new PaperSize("Ticket", tamPapel, 10000);
                 pd.PrinterSettings.PrinterName = impresora;
-                ppd.Document = pd;
-                ppd.ShowDialog();
-                //pd.Print();
+                //ppd.Document = pd;
+                //ppd.ShowDialog();
+                pd.Print();
             }
             catch (InvalidPrinterException ex)
             {
@@ -342,9 +346,9 @@ namespace GYM.Clases
                 pd.DocumentName = "Ticket";
                 pd.DefaultPageSettings.PaperSize = new PaperSize("Ticket", tamPapel, 10000);
                 pd.PrinterSettings.PrinterName = impresora;
-                ppd.Document = pd;
-                ppd.ShowDialog();
-                //pd.Print();
+                //ppd.Document = pd;
+                //ppd.ShowDialog();
+                pd.Print();
             }
             catch (InvalidPrinterException ex)
             {
@@ -430,9 +434,9 @@ namespace GYM.Clases
                 pd.DocumentName = "Ticket";
                 pd.DefaultPageSettings.PaperSize = new PaperSize("Ticket", tamPapel, 500);
                 pd.PrinterSettings.PrinterName = impresora;
-                ppd.Document = pd;
-                ppd.ShowDialog();
-                //pd.Print();
+                //ppd.Document = pd;
+                //ppd.ShowDialog();
+                pd.Print();
             }
             catch (InvalidPrinterException ex)
             {

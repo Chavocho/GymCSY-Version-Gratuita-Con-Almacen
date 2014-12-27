@@ -129,6 +129,8 @@ namespace GYM.Formularios.Membresia
                 MessageBox.Show("Se ha asignado la promoción correctamente.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
+            else
+                this.Close();
         }
 
         private void frmAsignarPromo_Load(object sender, EventArgs e)

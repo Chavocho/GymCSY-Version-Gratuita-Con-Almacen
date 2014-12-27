@@ -135,43 +135,43 @@ namespace GYM.Clases
             {
                 if (lineaSup01 != "")
                 {
-                    CentrarTexto(ref e, lineaSup01, fuenteNormal, Brushes.Black);
-                    y += saltoLinea;
+                    CentrarTexto(ref e, lineaSup01, fuenteGrandeResaltada, Brushes.Black);
+                    y += saltoLinea+2;
                 }
 
                 if (lineaSup02 != "")
                 {
-                    CentrarTexto(ref e, lineaSup02, fuenteNormal, Brushes.Black);
+                    CentrarTexto(ref e, lineaSup02, fuenteGrande, Brushes.Black);
                     y += saltoLinea;
                 }
 
                 if (lineaSup03 != "")
                 {
-                    CentrarTexto(ref e, lineaSup03, fuenteNormal, Brushes.Black);
+                    CentrarTexto(ref e, lineaSup03, fuenteGrande, Brushes.Black);
                     y += saltoLinea;
                 }
 
                 if (lineaSup04 != "")
                 {
-                    CentrarTexto(ref e, lineaSup04, fuenteNormal, Brushes.Black);
+                    CentrarTexto(ref e, lineaSup04, fuenteGrande, Brushes.Black);
                     y += saltoLinea;
                 }
 
                 if (lineaSup05 != "")
                 {
-                    CentrarTexto(ref e, lineaSup05, fuenteNormal, Brushes.Black);
+                    CentrarTexto(ref e, lineaSup05, fuenteGrande, Brushes.Black);
                     y += saltoLinea;
                 }
 
                 if (lineaSup06 != "")
                 {
-                    CentrarTexto(ref e, lineaSup06, fuenteNormal, Brushes.Black);
+                    CentrarTexto(ref e, lineaSup06, fuenteGrande, Brushes.Black);
                     y += saltoLinea;
                 }
 
                 if (lineaSup07 != "")
                 {
-                    CentrarTexto(ref e, lineaSup07, fuenteNormal, Brushes.Black);
+                    CentrarTexto(ref e, lineaSup07, fuenteGrande, Brushes.Black);
                     y += saltoLinea;
                 }
             }
@@ -204,14 +204,14 @@ namespace GYM.Clases
                 if (!esCierreCaja)
                 {
                     e.Graphics.DrawString("SERVICIO: VENTA MOSTRADOR", fuenteNormal, Brushes.Black, 0, y);
-                    e.Graphics.DrawString("TICKET: " + folio.ToString("00000000"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 3) * 2 - 10, y);
+                    e.Graphics.DrawString("\nTICKET: " + folio.ToString("000000"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 3) * 2 - 10, y);
                 }
                 else
                 {
-                    e.Graphics.DrawString("SERVICIO: CIERRE DE CAJA", fuenteNormal, Brushes.Black, 0, y);
+                    e.Graphics.DrawString("SERVICIO: CIERRE DE CAJA", fuenteNormal, Brushes.Black, 0, y+=saltoLineaPeque);
                     e.Graphics.DrawString("FECHA: " + DateTime.Now.ToString("dd/MM/yyyy"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 3) * 2 - 25, y);
                 }
-                y += saltoLinea;
+                y += saltoLinea+5;
                 if (DateTime.Now.TimeOfDay >= turnoMat && DateTime.Now.TimeOfDay < turnoVes)
                     turno = "MATUTINO";
                 else
@@ -264,7 +264,7 @@ namespace GYM.Clases
                 y += saltoLinea;
                 CentrarTexto(ref e, "AGRADECEMOS SU PREFERENCIA", fuenteNormal, Brushes.Black);
                 y += saltoLinea;
-                CentrarTexto(ref e, "GymCSY v" + Application.ProductVersion.ToString(), fuenteNormal, Brushes.Black);
+                CentrarTexto(ref e, "GymCSY v" + Application.ProductVersion.ToString(), fuentePequeña, Brushes.Black);
             }
             catch (ArgumentNullException ex)
             {
@@ -291,8 +291,8 @@ namespace GYM.Clases
             {
                 e.Graphics.DrawString("PRODUCTO", fuenteResaltada, Brushes.Black, 0F, y);
                 e.Graphics.DrawString("PRECIO", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) + 25, y);
-                e.Graphics.DrawString("CANTIDAD", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) * 2 + 15, y);
-                e.Graphics.DrawString("IMPORTE", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) * 3 + 10, y);
+                e.Graphics.DrawString("CANT", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) * 2 + 15, y);
+                e.Graphics.DrawString("IMPORTE", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) * 3 + 5, y);
                 y += saltoLinea;
                 foreach (DataRow dr in dt.Rows)
                 {
@@ -301,7 +301,7 @@ namespace GYM.Clases
                     decimal cant = decimal.Parse(dr["cantidad"].ToString());
                     AgregarNombreProducto(ref e, prod);
                     e.Graphics.DrawString(precio.ToString("C2"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) + 25, y);
-                    e.Graphics.DrawString(cant.ToString(), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) * 2 + 15, y);
+                    e.Graphics.DrawString(cant.ToString(), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) * 2 + 25, y);
                     e.Graphics.DrawString((precio * cant).ToString("C2"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) * 3 + 10, y);
                     y += saltoLinea;
                 }
@@ -417,8 +417,8 @@ namespace GYM.Clases
         {
             try
             {
-                e.Graphics.DrawString("NOMBRE SOCIO: " + ObtenerNombreSocio(numSoc), fuenteNormal, Brushes.Black, 0, y);
-                y += saltoLinea;
+                e.Graphics.DrawString("NOMBRE SOCIO: \n" + ObtenerNombreSocio(numSoc), fuenteNormal, Brushes.Black, 0, y);
+                y += saltoLinea+15;
                 e.Graphics.DrawString("INICIO: " + DateTime.Parse(ObtenerDatoDataTableMembresia("fecha_ini").ToString()).ToString("dd/MM/yyyy"), fuenteNormal, Brushes.Black, 0, y);
                 e.Graphics.DrawString("FIN: " + DateTime.Parse(ObtenerDatoDataTableMembresia("fecha_fin").ToString()).ToString("dd/MM/yyyy"), fuenteNormal, Brushes.Black, e.PageBounds.Width / 2, y);
                 y += saltoLinea;
@@ -460,9 +460,9 @@ namespace GYM.Clases
             {
                 decimal totTa = 0;
                 decimal efRet = 0;
-                e.Graphics.DrawString("EFECTIVO", fuenteResaltada, Brushes.Black, 0F, y);
+                e.Graphics.DrawString("EFVO", fuenteResaltada, Brushes.Black, 0F, y);
                 e.Graphics.DrawString("VOUCHERS", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) - 15, y);
-                e.Graphics.DrawString("MOV.", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) * 2 - 25, y);
+                e.Graphics.DrawString("MOV.", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) * 2 - 10, y);
                 e.Graphics.DrawString("FECHA", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) * 3 - 25, y);
                 y += saltoLinea;
                 foreach (DataRow dr in dtCaja.Rows)
@@ -475,10 +475,10 @@ namespace GYM.Clases
                         tipoMov = "ENTRADA";
                     else
                         tipoMov = "SALIDA";
-                    e.Graphics.DrawString(ef.ToString("C2"), fuenteNormal, Brushes.Black, 0F, y);
-                    e.Graphics.DrawString(ta.ToString("C2"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) - 15, y);
-                    e.Graphics.DrawString(tipoMov, fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) * 2 - 25, y);
-                    e.Graphics.DrawString(fe.ToString("dd/MM/yyyy"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) * 3 - 25, y);
+                    e.Graphics.DrawString(ef.ToString("C2"), fuentePequeña, Brushes.Black, 0F, y);
+                    e.Graphics.DrawString(ta.ToString("C2"), fuentePequeña, Brushes.Black, (e.PageBounds.Width / 4) - 15, y);
+                    e.Graphics.DrawString(tipoMov, fuentePequeña, Brushes.Black, (e.PageBounds.Width / 4) * 2 - 25, y);
+                    e.Graphics.DrawString(fe.ToString("dd/MM/yyyy"), fuentePequeña, Brushes.Black, (e.PageBounds.Width / 4) * 3 - 25, y);
                     totTa += ta;
                     efRet = ef;
                     y += saltoLinea;
@@ -486,7 +486,7 @@ namespace GYM.Clases
                 }
                 e.Graphics.DrawString("EFECTIVO RETIRADO: " + efRet.ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
                 y += saltoLinea;
-                e.Graphics.DrawString("TOTAL DE VOUCHERS RETIRADOS: " + totTa.ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
+                e.Graphics.DrawString("TOTAL DE VOUCHERS: " + totTa.ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
                 y += saltoLinea;
                 e.Graphics.DrawString("EFECTIVO RESTANTE: " + TotalCaja().ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
                 y += saltoLinea;
@@ -531,7 +531,7 @@ namespace GYM.Clases
             try
             {
                 int salto;
-                e.Graphics.DrawString("PRODUCTO: " + ObtenerNombreProducto(idProd), fuenteNormal, Brushes.Black, 0, y);
+                e.Graphics.DrawString("PRODUCTO: " + ObtenerNombreProducto(idProd), fuenteGrande, Brushes.Black, 0, y);
                 y += 30;
                 CentrarTexto(ref e, "*" + idProd.ToString() + "*", new Font("IDAutomationHC39M", 10), Brushes.Black);
                 salto = Convert.ToInt32(e.Graphics.MeasureString(idProd.ToString(), new Font("IDAutomationHC39M", 10)).Height - 10);
