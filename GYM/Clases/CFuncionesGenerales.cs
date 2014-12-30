@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Security.Cryptography;
 using System.Xml;
 using System.Collections.Generic;
@@ -824,6 +825,34 @@ namespace GYM.Clases
                 frmConfigurarHuella.Instancia.Show();
             loCerroReg = false;
             loCerroCon = false;
+        }
+
+        /// <summary>
+        /// Función que obtiene el nombre de usuario de acuerdo con su id
+        /// </summary>
+        /// <param name="id">ID del usuario</param>
+        /// <returns>Nombre del usuario</returns>
+        public static string NombreUsuario(string id)
+        {
+            string nomUsu = "Sin información";
+            try
+            {
+                string sql = "SELECT userName FROM usuarios WHERE id='" + id + "'";
+                DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    nomUsu = dr["userName"].ToString();
+                }
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return nomUsu;
         }
 
         #region Siempre Encima

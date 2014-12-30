@@ -710,9 +710,9 @@
             this.chbFolio.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.chbFolio.Location = new System.Drawing.Point(12, 224);
             this.chbFolio.Name = "chbFolio";
-            this.chbFolio.Size = new System.Drawing.Size(215, 23);
+            this.chbFolio.Size = new System.Drawing.Size(219, 42);
             this.chbFolio.TabIndex = 45;
-            this.chbFolio.Text = "Asignar folio automáticamente";
+            this.chbFolio.Text = "Asignar folio automáticamente \r\nde membresía/locker";
             this.chbFolio.UseVisualStyleBackColor = true;
             this.chbFolio.CheckedChanged += new System.EventHandler(this.chbFolio_CheckedChanged);
             // 

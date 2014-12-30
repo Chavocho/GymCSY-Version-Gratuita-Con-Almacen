@@ -16,7 +16,7 @@
     <mal>Sonido01</mal>
   </sonidos>
   <caja>
-    <estado>False</estado>
+    <estado>True</estado>
   </caja>
   <huella>
     <usar>False</usar>

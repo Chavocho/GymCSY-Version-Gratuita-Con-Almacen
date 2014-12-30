@@ -1203,3 +1203,5 @@ F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formul
 F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reportes.frmReporteVentas.resources
 F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reportes.frmVisualizarVenta.resources
 F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.frmConfigVersion.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Membresia.frmEditarPromocionHorario.resources
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaPromocionHorario.resources

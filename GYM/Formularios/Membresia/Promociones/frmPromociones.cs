@@ -40,9 +40,10 @@ namespace GYM.Formularios.Membresia
         {
             InitializeComponent();
             CFuncionesGenerales.CargarInterfaz(this);
+            cboTipoPromo.SelectedIndex = 0;
         }
 
-        private void BuscarPromociones()
+        private void BuscarPromocionesFechas()
         {
             try
             {
@@ -115,7 +116,80 @@ namespace GYM.Formularios.Membresia
             }
         }
 
-        private void EliminarPromocion()
+        private void BuscarPromocionesHorarios()
+        {
+            try
+            {
+                dgvPromociones.Rows.Clear();
+                string sql = "SELECT * FROM promocion_horario ORDER BY hora_inicio ASC";
+                DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    string duracion = "", genero = "";
+                    DateTime horaIni = DateTime.Parse(dr["hora_inicio"].ToString()), horaFin = DateTime.Parse(dr["hora_fin"].ToString());
+                    decimal precio = (decimal)dr["precio"];
+                    switch ((int)dr["duracion"])
+                    {
+                        case 0:
+                            duracion = "Semanal";
+                            break;
+                        case 1:
+                            duracion = "Un mes";
+                            break;
+                        case 2:
+                            duracion = "Dos meses";
+                            break;
+                        case 3:
+                            duracion = "Tres meses";
+                            break;
+                        case 4:
+                            duracion = "Cuatro meses";
+                            break;
+                        case 5:
+                            duracion = "Cinco meses";
+                            break;
+                        case 6:
+                            duracion = "Seis meses";
+                            break;
+                        case 7:
+                            duracion = "Siete meses";
+                            break;
+                        case 8:
+                            duracion = "Ocho meses";
+                            break;
+                        case 9:
+                            duracion = "Nueve meses";
+                            break;
+                        case 10:
+                            duracion = "Diez meses";
+                            break;
+                        case 11:
+                            duracion = "Once meses";
+                            break;
+                        case 12:
+                            duracion = "Doce meses";
+                            break;
+                    }
+                    if (dr["genero"].ToString() == "0")
+                        genero = "Hombre";
+                    else
+                        genero = "Mujer";
+
+                    dgvPromociones.Rows.Add(new object[] { dr["id"], dr["descripcion"], precio.ToString("C2"), duracion, genero, horaIni.ToString("hh:mm tt"), horaFin.ToString("hh:mm tt")});
+                }
+                dgvPromociones_CellClick(dgvPromociones, new DataGridViewCellEventArgs(0, 0));
+            }
+            catch (MySqlException ex)
+            {
+                CFuncionesGenerales.MensajeError("No se ha podido obtener las promociones. No se pudo conectar con la base de datos.", ex);
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("No se ha podido obtener las promociones. Ha ocurrido un error genérico.", ex);
+            }
+        }
+
+        private void EliminarPromocionFecha()
         {
             try
             {
@@ -132,18 +206,51 @@ namespace GYM.Formularios.Membresia
             }
         }
 
+        private void EliminarPromocionHorario()
+        {
+            try
+            {
+                string sql = "DELETE FROM promocion_horario WHERE id='" + id + "'";
+                ConexionBD.EjecutarConsulta(sql);
+            }
+            catch (MySqlException ex)
+            {
+                CFuncionesGenerales.MensajeError("No se ha podido eliminar la promoción. No se pudo conectar con la base de datos.", ex);
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("No se ha podido eliminar la promoción. Ha ocurrido un error genérico.", ex);
+            }
+        }
+
         private void btnNueva_Click(object sender, EventArgs e)
         {
-            (new frmNuevaPromocion()).ShowDialog(this);
-            BuscarPromociones();
+            if (cboTipoPromo.SelectedIndex == 0)
+            {
+                (new frmNuevaPromocion()).ShowDialog(this);
+                BuscarPromocionesFechas();
+            }
+            else
+            {
+                (new frmNuevaPromocionHorario()).ShowDialog(this);
+                BuscarPromocionesHorarios();
+            }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
             if (dgvPromociones.CurrentRow != null)
             {
-                (new frmEditarPromocion(id)).ShowDialog(this);
-                BuscarPromociones();
+                if (cboTipoPromo.SelectedIndex == 0)
+                {
+                    (new frmEditarPromocion(id)).ShowDialog(this);
+                    BuscarPromocionesFechas();
+                }
+                else
+                {
+                    (new frmEditarPromocionHorario(id)).ShowDialog(this);
+                    BuscarPromocionesHorarios();
+                }
             }
         }
 
@@ -154,7 +261,14 @@ namespace GYM.Formularios.Membresia
                 DialogResult r = MessageBox.Show("¿Realmente deseas eliminar ésta promoción?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                 if (r == System.Windows.Forms.DialogResult.Yes)
                 {
-                    EliminarPromocion();
+                    if (cboTipoPromo.SelectedIndex == 0)
+                    {
+                        EliminarPromocionFecha();
+                    }
+                    else
+                    {
+                        EliminarPromocionHorario();
+                    }
                     MessageBox.Show("Se ha eliminado correctamente la promoción.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dgvPromociones.Rows.RemoveAt(dgvPromociones.CurrentRow.Index);
                 }
@@ -172,9 +286,22 @@ namespace GYM.Formularios.Membresia
             }
         }
 
-        private void frmPromociones_Load(object sender, EventArgs e)
+        private void cboTipoPromo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            BuscarPromociones();
+            //5 y 6 las columnas
+            switch (cboTipoPromo.SelectedIndex)
+            {
+                case 0 :
+                    dgvPromociones.Columns[5].HeaderText = "Fecha de inicio";
+                    dgvPromociones.Columns[6].HeaderText = "Fecha de terminación";
+                    BuscarPromocionesFechas();
+                    break;
+                case 1:
+                    dgvPromociones.Columns[5].HeaderText = "Hora de inicio";
+                    dgvPromociones.Columns[6].HeaderText = "Hora de terminación";
+                    BuscarPromocionesHorarios();
+                    break;
+            }
         }
     }
 }

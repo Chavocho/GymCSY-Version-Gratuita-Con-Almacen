@@ -45,6 +45,8 @@
             // 
             this.dgvPendientes.AllowUserToAddRows = false;
             this.dgvPendientes.AllowUserToDeleteRows = false;
+            this.dgvPendientes.AllowUserToResizeColumns = false;
+            this.dgvPendientes.AllowUserToResizeRows = false;
             this.dgvPendientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -91,6 +93,7 @@
             // 
             // cboPendientes
             // 
+            this.cboPendientes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cboPendientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPendientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboPendientes.Font = new System.Drawing.Font("Segoe UI", 12F);
@@ -106,6 +109,7 @@
             // 
             // lblInstruccion
             // 
+            this.lblInstruccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblInstruccion.AutoSize = true;
             this.lblInstruccion.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblInstruccion.Location = new System.Drawing.Point(619, 18);
@@ -132,12 +136,11 @@
             this.Controls.Add(this.lblInstruccion);
             this.Controls.Add(this.cboPendientes);
             this.Controls.Add(this.dgvPendientes);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.Name = "frmPendientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pendientes";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dgvPendientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

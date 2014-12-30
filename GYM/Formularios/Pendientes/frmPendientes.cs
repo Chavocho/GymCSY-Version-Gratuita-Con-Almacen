@@ -48,8 +48,13 @@ namespace GYM.Formularios
             DataGridViewColumn id = new DataGridViewColumn();
             DataGridViewColumn numSocio = new DataGridViewColumn();
             DataGridViewColumn socio = new DataGridViewColumn();
+            DataGridViewColumn descripcion = new DataGridViewColumn();
             DataGridViewColumn fechaIni = new DataGridViewColumn();
             DataGridViewColumn fechaFin = new DataGridViewColumn();
+            DataGridViewColumn fechaPago = new DataGridViewColumn();
+            DataGridViewColumn numTicket = new DataGridViewColumn();
+            DataGridViewColumn monto = new DataGridViewColumn();
+            DataGridViewColumn usuario = new DataGridViewColumn();
             DataGridViewButtonColumn btnAceptar = new DataGridViewButtonColumn();
             DataGridViewButtonColumn btnRechazar = new DataGridViewButtonColumn();
             DataGridViewCell cell = new DataGridViewTextBoxCell();
@@ -68,6 +73,7 @@ namespace GYM.Formularios
             numSocio.Name = "NumSocio";
             numSocio.HeaderText = "Num. Socio";
             numSocio.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            numSocio.Width = 100;
             numSocio.Resizable = DataGridViewTriState.False;
             numSocio.ReadOnly = true;
             numSocio.CellTemplate = cell;
@@ -75,28 +81,74 @@ namespace GYM.Formularios
             socio.Visible = true;
             socio.Name = "Socio";
             socio.HeaderText = "Socio";
-            socio.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            socio.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            socio.Width = 250;
             socio.Resizable = DataGridViewTriState.False;
             socio.ReadOnly = true;
             socio.CellTemplate = cell;
+            //Configuración descripcion
+            descripcion.Visible = true;
+            descripcion.Name = "Descripcion";
+            descripcion.HeaderText = "Descripción";
+            descripcion.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            descripcion.Width = 250;
+            descripcion.Resizable = DataGridViewTriState.False;
+            descripcion.ReadOnly = true;
+            descripcion.CellTemplate = cell;
             //Configuración fecha inicio
             fechaIni.Visible = true;
             fechaIni.Name = "FechaInicio";
-            fechaIni.HeaderText = "Fecha Inicio membresía";
+            fechaIni.HeaderText = "Fecha inicio";
             fechaIni.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            fechaIni.Width = 200;
+            fechaIni.Width = 150;
             fechaIni.Resizable = DataGridViewTriState.False;
             fechaIni.ReadOnly = true;
             fechaIni.CellTemplate = cell;
             //Configuración fecha fin
             fechaFin.Visible = true;
             fechaFin.Name = "FechaFin";
-            fechaFin.HeaderText = "Fecha vencimiento membresía.";
+            fechaFin.HeaderText = "Fecha vencimiento";
             fechaFin.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            fechaFin.Width = 220;
+            fechaFin.Width = 150;
             fechaFin.Resizable = DataGridViewTriState.False;
             fechaFin.ReadOnly = true;
             fechaFin.CellTemplate = cell;
+            //Configuración fecha de pago
+            fechaPago.Visible = true;
+            fechaPago.Name = "FechaPago";
+            fechaPago.HeaderText = "Fecha de pago";
+            fechaPago.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            fechaPago.Width = 150;
+            fechaPago.Resizable = DataGridViewTriState.False;
+            fechaPago.ReadOnly = true;
+            fechaPago.CellTemplate = cell;
+            //Configuración número ticket
+            numTicket.Visible = true;
+            numTicket.Name = "NumTicket";
+            numTicket.HeaderText = "Num. de ticket";
+            numTicket.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            numTicket.Width = 130;
+            numTicket.Resizable = DataGridViewTriState.False;
+            numTicket.ReadOnly = true;
+            numTicket.CellTemplate = cell;
+            //Configuración monto
+            monto.Visible = true;
+            monto.Name = "Monto";
+            monto.HeaderText = "Monto";
+            monto.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            monto.Width = 100;
+            monto.Resizable = DataGridViewTriState.False;
+            monto.ReadOnly = true;
+            monto.CellTemplate = cell;
+            //Configuración usuario
+            usuario.Visible = true;
+            usuario.Name = "Usuario";
+            usuario.HeaderText = "Usuario";
+            usuario.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            usuario.Width = 140;
+            usuario.Resizable = DataGridViewTriState.False;
+            usuario.ReadOnly = true;
+            usuario.CellTemplate = cell;
             //Configuración botones
             btnAceptar.AutoSizeMode = btnRechazar.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             btnAceptar.Width = btnRechazar.Width = 100;
@@ -108,8 +160,13 @@ namespace GYM.Formularios
             dgvPendientes.Columns.Add(id);
             dgvPendientes.Columns.Add(numSocio);
             dgvPendientes.Columns.Add(socio);
+            dgvPendientes.Columns.Add(descripcion);
             dgvPendientes.Columns.Add(fechaIni);
             dgvPendientes.Columns.Add(fechaFin);
+            dgvPendientes.Columns.Add(fechaPago);
+            dgvPendientes.Columns.Add(numTicket);
+            dgvPendientes.Columns.Add(monto);
+            dgvPendientes.Columns.Add(usuario);
             dgvPendientes.Columns.Add(btnAceptar);
             dgvPendientes.Columns.Add(btnRechazar);
         }
@@ -120,8 +177,13 @@ namespace GYM.Formularios
             DataGridViewColumn numSocio = new DataGridViewColumn();
             DataGridViewColumn socio = new DataGridViewColumn();
             DataGridViewColumn num = new DataGridViewColumn();
+            DataGridViewColumn descripcion = new DataGridViewColumn();
             DataGridViewColumn fechaIni = new DataGridViewColumn();
             DataGridViewColumn fechaFin = new DataGridViewColumn();
+            DataGridViewColumn fechaPago = new DataGridViewColumn();
+            DataGridViewColumn numTicket = new DataGridViewColumn();
+            DataGridViewColumn monto = new DataGridViewColumn();
+            DataGridViewColumn usuario = new DataGridViewColumn();
             DataGridViewButtonColumn btnAceptar = new DataGridViewButtonColumn();
             DataGridViewButtonColumn btnRechazar = new DataGridViewButtonColumn();
             DataGridViewCell cell = new DataGridViewTextBoxCell();
@@ -140,6 +202,7 @@ namespace GYM.Formularios
             numSocio.Name = "NumSocio";
             numSocio.HeaderText = "Num. Socio";
             numSocio.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            numSocio.Width = 100;
             numSocio.Resizable = DataGridViewTriState.False;
             numSocio.ReadOnly = true;
             numSocio.CellTemplate = cell;
@@ -147,7 +210,8 @@ namespace GYM.Formularios
             socio.Visible = true;
             socio.Name = "Socio";
             socio.HeaderText = "Socio";
-            socio.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            socio.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            socio.Width = 250;
             socio.Resizable = DataGridViewTriState.False;
             socio.ReadOnly = true;
             socio.CellTemplate = cell;
@@ -160,6 +224,15 @@ namespace GYM.Formularios
             num.Resizable = DataGridViewTriState.False;
             num.ReadOnly = true;
             num.CellTemplate = cell;
+            //Configuración descripcion
+            descripcion.Visible = true;
+            descripcion.Name = "Descripcion";
+            descripcion.HeaderText = "Descripción";
+            descripcion.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            descripcion.Width = 250;
+            descripcion.Resizable = DataGridViewTriState.False;
+            descripcion.ReadOnly = true;
+            descripcion.CellTemplate = cell;
             //Configuración fecha inicio
             fechaIni.Visible = true;
             fechaIni.Name = "FechaInicio";
@@ -178,6 +251,42 @@ namespace GYM.Formularios
             fechaFin.Resizable = DataGridViewTriState.False;
             fechaFin.ReadOnly = true;
             fechaFin.CellTemplate = cell;
+            //Configuración fecha de pago
+            fechaPago.Visible = true;
+            fechaPago.Name = "FechaPago";
+            fechaPago.HeaderText = "Fecha de pago";
+            fechaPago.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            fechaPago.Width = 200;
+            fechaPago.Resizable = DataGridViewTriState.False;
+            fechaPago.ReadOnly = true;
+            fechaPago.CellTemplate = cell;
+            //Configuración número ticket
+            numTicket.Visible = true;
+            numTicket.Name = "NumTicket";
+            numTicket.HeaderText = "Num. de ticket";
+            numTicket.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            numTicket.Width = 130;
+            numTicket.Resizable = DataGridViewTriState.False;
+            numTicket.ReadOnly = true;
+            numTicket.CellTemplate = cell;
+            //Configuración monto
+            monto.Visible = true;
+            monto.Name = "Monto";
+            monto.HeaderText = "Monto";
+            monto.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            monto.Width = 100;
+            monto.Resizable = DataGridViewTriState.False;
+            monto.ReadOnly = true;
+            monto.CellTemplate = cell;
+            //Configuración usuario
+            usuario.Visible = true;
+            usuario.Name = "Usuario";
+            usuario.HeaderText = "Usuario";
+            usuario.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            usuario.Width = 140;
+            usuario.Resizable = DataGridViewTriState.False;
+            usuario.ReadOnly = true;
+            usuario.CellTemplate = cell;
             //Configuración botones
             btnAceptar.AutoSizeMode = btnRechazar.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             btnAceptar.Width = btnRechazar.Width = 100;
@@ -190,8 +299,13 @@ namespace GYM.Formularios
             dgvPendientes.Columns.Add(numSocio);
             dgvPendientes.Columns.Add(socio);
             dgvPendientes.Columns.Add(num);
+            dgvPendientes.Columns.Add(descripcion);
             dgvPendientes.Columns.Add(fechaIni);
             dgvPendientes.Columns.Add(fechaFin);
+            dgvPendientes.Columns.Add(fechaPago);
+            dgvPendientes.Columns.Add(numTicket);
+            dgvPendientes.Columns.Add(monto);
+            dgvPendientes.Columns.Add(usuario);
             dgvPendientes.Columns.Add(btnAceptar);
             dgvPendientes.Columns.Add(btnRechazar);
         }
@@ -202,8 +316,8 @@ namespace GYM.Formularios
             {
                 dt = new DataTable();
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "SELECT m.id, s.numSocio, s.nombre, s.apellidos, m.fecha_ini, m.fecha_fin " + 
-                    "FROM membresias AS m INNER JOIN miembros AS s ON (m.numSocio=s.numSocio) WHERE m.estado=?estado ORDER BY s.numSocio";
+                sql.CommandText = "SELECT s.numSocio, s.nombre, s.apellidos, m.id, m.fecha_ini, m.fecha_fin, MAX(r.id) as rID, r.descripcion, r.precio, r.folio_remision, r.create_user_id, r.create_time " + 
+                    "FROM miembros AS s INNER JOIN membresias AS m ON (m.numSocio=s.numSocio) AND m.estado=?estado INNER JOIN registro_membresias AS r ON(m.id=r.membresia_id) GROUP BY m.id;";
                 sql.Parameters.AddWithValue("?estado", Clases.CMembresia.EstadoMembresia.Pendiente);
                 dt = ConexionBD.EjecutarConsultaSelect(sql);
             }
@@ -223,8 +337,8 @@ namespace GYM.Formularios
             {
                 dt = new DataTable();
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "SELECT l.id, r.nom_persona, s.numSocio, s.nombre, s.apellidos, l.num, l.fecha_ini, l.fecha_fin " +
-                    "FROM locker AS l LEFT JOIN registro_locker AS r ON (l.id=r.locker_id) LEFT JOIN miembros AS s ON (l.numSocio=s.numSocio) WHERE l.estado=?estado ORDER BY s.numSocio";
+                sql.CommandText = "SELECT l.id, MAX(r.id) AS rID, r.nom_persona, s.numSocio, s.nombre, s.apellidos, l.num, l.fecha_ini, l.fecha_fin, r.descripcion, r.create_time, r.create_user_id, r.folio_remision, r.precio " +
+                    "FROM locker AS l INNER JOIN registro_locker AS r ON (l.id=r.locker_id) LEFT JOIN miembros AS s ON (l.numSocio=s.numSocio) WHERE l.estado=?estado ORDER BY s.numSocio";
                 sql.Parameters.AddWithValue("?estado", Clases.CMembresia.EstadoMembresia.Pendiente);
                 dt = ConexionBD.EjecutarConsultaSelect(sql);
             }
@@ -244,10 +358,10 @@ namespace GYM.Formularios
             {
                 foreach (DataRow dr in dt.Rows)
                 {
-                    DateTime fechaIni = DateTime.Parse(dr["fecha_ini"].ToString()), fechaFin = DateTime.Parse(dr["fecha_fin"].ToString());
+                    DateTime fechaIni = DateTime.Parse(dr["fecha_ini"].ToString()), fechaFin = DateTime.Parse(dr["fecha_fin"].ToString()), fechaPago = DateTime.Parse(dr["create_time"].ToString());
                     if (cboPendientes.SelectedIndex == 0)
                     {
-                        dgvPendientes.Rows.Add(new object[] { dr["id"], dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), fechaIni.ToString("dd/MM/yyyy"), fechaFin.ToString("dd/MM/yyyy") });
+                        dgvPendientes.Rows.Add(new object[] { dr["id"], dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), dr["descripcion"], fechaIni.ToString("dd/MM/yyyy"), fechaFin.ToString("dd/MM/yyyy"), fechaPago.ToString("dd/MM/yyyy"), dr["folio_remision"], ((decimal)dr["precio"]).ToString("C2"), CFuncionesGenerales.NombreUsuario(dr["create_user_id"].ToString()) });
                     }
                     else
                     {
@@ -259,13 +373,12 @@ namespace GYM.Formularios
                             nom = dr["nombre"].ToString() + " " + dr["apellidos"].ToString();
                         if (dr["numSocio"] != DBNull.Value)
                             numSocio = dr["numSocio"].ToString();
-                        dgvPendientes.Rows.Add(new object[] { dr["id"], numSocio, nom, dr["num"], fechaIni.ToString("dd/MM/yyyy"), fechaFin.ToString("dd/MM/yyyy") });
+                        dgvPendientes.Rows.Add(new object[] { dr["id"], numSocio, nom, dr["num"], dr["descripcion"], fechaIni.ToString("dd/MM/yyyy"), fechaFin.ToString("dd/MM/yyyy"), fechaPago.ToString("dd/MM/yyyy"), dr["folio_remision"], ((decimal)dr["precio"]).ToString("C2"), CFuncionesGenerales.NombreUsuario(dr["create_user_id"].ToString()) });
                     }
                 }
             }
             catch (Exception)
             {
-                
                 throw;
             }
         }
@@ -446,11 +559,11 @@ namespace GYM.Formularios
                     id = (int)dgvPendientes[0, e.RowIndex].Value;
                     if (cboPendientes.SelectedIndex == 0)
                     {
-                        if (e.ColumnIndex == 5)
+                        if (e.ColumnIndex == 10)
                         {
                             EstadoMembresia(id, CMembresia.EstadoMembresia.Activa);
                         }
-                        else if (e.ColumnIndex == 6)
+                        else if (e.ColumnIndex == 11)
                         {
                             DialogResult r = MessageBox.Show("¿Realmente desea rechazar la membresía de " + dgvPendientes[2, e.RowIndex].Value.ToString() + "?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                             if (r == System.Windows.Forms.DialogResult.Yes)
@@ -462,11 +575,11 @@ namespace GYM.Formularios
                     }
                     else if (cboPendientes.SelectedIndex == 1)
                     {
-                        if (e.ColumnIndex == 6)
+                        if (e.ColumnIndex == 11)
                         {
                             EstadoLocker(id, frmLockers.EstadoLocker.Ocupado);
                         }
-                        else if (e.ColumnIndex == 7)
+                        else if (e.ColumnIndex == 12)
                         {
                             DialogResult r = MessageBox.Show("¿Realmente desea rechazar la renta de locker a " + dgvPendientes[2, e.RowIndex].Value.ToString() + "?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                             if (r == System.Windows.Forms.DialogResult.Yes)

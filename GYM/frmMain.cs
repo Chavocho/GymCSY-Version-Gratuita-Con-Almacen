@@ -140,7 +140,7 @@ namespace GYM
                 lblUsuario.Text = "Encargado: " + nomUsu;
             else
                 lblUsuario.Text = "Administrador: " + nomUsu;
-            lblUsuario.Location = new Point(this.Width - lblUsuario.Width - 30, lblUsuario.Location.Y);
+            lblUsuario.Location = new Point(this.Width - lblUsuario.Width - 30, lblUsuario.Location.Y); 
             OcultarElementosBarra();
         }
 
@@ -242,7 +242,6 @@ namespace GYM
                     break;
                 
             }
-
         }
 
         private void ElementosEncargado()
@@ -257,7 +256,6 @@ namespace GYM
         {
             configuraciónToolStripMenuItem1.Visible = false;
             productosToolStripMenuItem.Visible = false;
-            comprasToolStripMenuItem.Visible = false;
             DetalladoCajaToolStripMenuItem.Visible = false;
             cortesDeCajaToolStripMenuItem.Visible = false;
             empleadoToolStripMenuItem.Visible = false;
@@ -666,6 +664,31 @@ namespace GYM
                 Formularios.Membresia.frmPromociones.Instancia.Show();
             else
                 Formularios.Membresia.frmPromociones.Instancia.Select();
+        }
+
+        private void frmMain_VisibleChanged(object sender, EventArgs e)
+        {
+            if (!this.Visible)
+            {
+                sonidosToolStripMenuItem.Visible = true;
+                correoToolStripMenuItem.Visible = true;
+                huellaDigitalToolStripMenuItem.Visible = true;
+                baseDedatosToolStripMenuItem.Visible = true;
+                configuraciónToolStripMenuItem1.Visible = true;
+                productosToolStripMenuItem.Visible = true;
+                DetalladoCajaToolStripMenuItem.Visible = true;
+                cortesDeCajaToolStripMenuItem.Visible = true;
+                empleadoToolStripMenuItem.Visible = true;
+                reportesToolStripMenuItem.Visible = true;
+                cortesíasToolStripMenuItem.Visible = true;
+                pendientesToolStripMenuItem.Visible = true;
+                preciosDemembresíasToolStripMenuItem.Visible = true;
+                promocionesToolStripMenuItem.Visible = true;
+            }
+            else
+            {
+                OcultarElementosBarra();
+            }
         }   
     }
 }

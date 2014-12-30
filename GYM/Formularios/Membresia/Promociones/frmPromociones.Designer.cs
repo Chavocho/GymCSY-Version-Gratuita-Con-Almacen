@@ -36,6 +36,8 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dgvPromociones = new System.Windows.Forms.DataGridView();
+            this.cboTipoPromo = new System.Windows.Forms.ComboBox();
+            this.lblETipoPromo = new System.Windows.Forms.Label();
             this.CID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +51,7 @@
             // btnNueva
             // 
             this.btnNueva.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnNueva.Location = new System.Drawing.Point(12, 12);
+            this.btnNueva.Location = new System.Drawing.Point(12, 47);
             this.btnNueva.Name = "btnNueva";
             this.btnNueva.Size = new System.Drawing.Size(115, 34);
             this.btnNueva.TabIndex = 1;
@@ -61,7 +63,7 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnEditar.Location = new System.Drawing.Point(12, 52);
+            this.btnEditar.Location = new System.Drawing.Point(12, 87);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(115, 34);
             this.btnEditar.TabIndex = 2;
@@ -73,7 +75,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnEliminar.Location = new System.Drawing.Point(12, 92);
+            this.btnEliminar.Location = new System.Drawing.Point(12, 127);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(115, 34);
             this.btnEliminar.TabIndex = 3;
@@ -118,7 +120,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPromociones.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvPromociones.Location = new System.Drawing.Point(133, 12);
+            this.dgvPromociones.Location = new System.Drawing.Point(133, 47);
             this.dgvPromociones.MultiSelect = false;
             this.dgvPromociones.Name = "dgvPromociones";
             this.dgvPromociones.ReadOnly = true;
@@ -135,9 +137,34 @@
             this.dgvPromociones.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvPromociones.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPromociones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPromociones.Size = new System.Drawing.Size(1039, 398);
+            this.dgvPromociones.Size = new System.Drawing.Size(1039, 363);
             this.dgvPromociones.TabIndex = 4;
             this.dgvPromociones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPromociones_CellClick);
+            // 
+            // cboTipoPromo
+            // 
+            this.cboTipoPromo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipoPromo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboTipoPromo.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cboTipoPromo.FormattingEnabled = true;
+            this.cboTipoPromo.Items.AddRange(new object[] {
+            "Por fecha",
+            "Por horario"});
+            this.cboTipoPromo.Location = new System.Drawing.Point(912, 12);
+            this.cboTipoPromo.Name = "cboTipoPromo";
+            this.cboTipoPromo.Size = new System.Drawing.Size(260, 29);
+            this.cboTipoPromo.TabIndex = 5;
+            this.cboTipoPromo.SelectedIndexChanged += new System.EventHandler(this.cboTipoPromo_SelectedIndexChanged);
+            // 
+            // lblETipoPromo
+            // 
+            this.lblETipoPromo.AutoSize = true;
+            this.lblETipoPromo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblETipoPromo.Location = new System.Drawing.Point(782, 18);
+            this.lblETipoPromo.Name = "lblETipoPromo";
+            this.lblETipoPromo.Size = new System.Drawing.Size(124, 19);
+            this.lblETipoPromo.TabIndex = 6;
+            this.lblETipoPromo.Text = "Tipo de promoción";
             // 
             // CID
             // 
@@ -190,6 +217,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 422);
+            this.Controls.Add(this.lblETipoPromo);
+            this.Controls.Add(this.cboTipoPromo);
             this.Controls.Add(this.dgvPromociones);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
@@ -199,9 +228,9 @@
             this.Name = "frmPromociones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Promociones";
-            this.Load += new System.EventHandler(this.frmPromociones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPromociones)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -211,6 +240,8 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridView dgvPromociones;
+        private System.Windows.Forms.ComboBox cboTipoPromo;
+        private System.Windows.Forms.Label lblETipoPromo;
         private System.Windows.Forms.DataGridViewTextBoxColumn CID;
         private System.Windows.Forms.DataGridViewTextBoxColumn CDescripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPrecio;

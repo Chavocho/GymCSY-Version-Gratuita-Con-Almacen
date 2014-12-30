@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using GYM.Clases;
 
 
 namespace GYM.Formularios.Socio
@@ -19,6 +20,7 @@ namespace GYM.Formularios.Socio
         private delegate void EnviarMensaje(string mensaje);
 
         int c = 0;
+        DateTime horaIni, horaFin;
         CMiembro miembro = new CMiembro();
         CMiembro Persona = new CMiembro();
         Clases.CMembresia mem;
@@ -42,6 +44,28 @@ namespace GYM.Formularios.Socio
         private void Mensaje(string mensaje)
         {
             MessageBox.Show(mensaje, "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void HorasPromocion()
+        {
+            try
+            {
+                string sql = "SELECT hora_inicio, hora_fin FROM promocion_horario WHERE id='" + mem.IDPromocion + "'";
+                DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    horaIni = DateTime.Parse(DateTime.Now.ToString("dd-MM-yyyy ") + dr["hora_inicio"].ToString());
+                    horaFin = DateTime.Parse(DateTime.Now.ToString("dd-MM-yyyy ") + dr["hora_fin"].ToString());
+                }
+            }
+            catch (MySqlException ex)
+            {
+                CFuncionesGenerales.MensajeError("No se ha podido obtener los horarios de la promoción del socio. Ocurrió un error al conectar con la base de datos.", ex);
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("No se ha podido obtener los horarios de la promoción del socio. Ocurrió un error genérico.", ex);
+            }
         }
 
         private bool TieneCortesia()
@@ -114,7 +138,34 @@ namespace GYM.Formularios.Socio
             }
             else if (mem.Estado == Clases.CMembresia.EstadoMembresia.Activa || mem.Estado == Clases.CMembresia.EstadoMembresia.Pendiente)
             {
-                if (fechaSocio.Equals(DateTime.Now.ToString("yyyy/MM/dd")) || fechaSocio <= (DateTime.Now))
+                if (mem.IDPromocion > 0)
+                {
+                    HorasPromocion();
+                    TimeSpan horIni = horaIni.TimeOfDay, horFin = horaFin.TimeOfDay, horAct = DateTime.Now.TimeOfDay;
+                    if (horAct >= horIni && horAct <= horFin)
+                    {
+                        lblInfo.ForeColor = Color.Lime;
+                        lblInfo.Visible = true;
+                        lblFechaFinal.Text = fechaSocio.ToString("dd") + " de " + fechaSocio.ToString("MMMM") + " del " + fechaSocio.ToString("yyyy");
+                        ingresar = true;
+                        if (Clases.CFuncionesGenerales.sonidoRegBien != "Personalizado")
+                            sonido = "SonidoBien" + Clases.CFuncionesGenerales.sonidoRegBien.Substring(Clases.CFuncionesGenerales.sonidoRegBien.Length - 2, 2);
+                        else
+                            sonido = "SonidoBienP";
+                    }
+                    else
+                    {
+                        lblInfo.ForeColor = Color.Red;
+                        lblInfo.Visible = true;
+                        lblInfo.Text = "¡Tu membresía no cubre este horario!"; 
+                        lblFechaFinal.Text = fechaSocio.ToString("dd") + " de " + fechaSocio.ToString("MMMM") + " del " + fechaSocio.ToString("yyyy");
+                        if (Clases.CFuncionesGenerales.sonidoRegMal != "Personalizado")
+                            sonido = "SonidoError" + Clases.CFuncionesGenerales.sonidoRegMal.Substring(Clases.CFuncionesGenerales.sonidoRegMal.Length - 2, 2);
+                        else
+                            sonido = "SonidoErrorP";
+                    }
+                }
+                else if (fechaSocio.Equals(DateTime.Now.ToString("yyyy/MM/dd")) || fechaSocio <= (DateTime.Now))
                 {
                     lblInfo.ForeColor = Color.Red;
                     lblInfo.Visible = true;

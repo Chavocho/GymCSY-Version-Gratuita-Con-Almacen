@@ -15,7 +15,6 @@ namespace GYM.Formularios.Caja
         decimal efectivoCaja;
         frmCaja frm = null;
 
-
         #region Instancia
         private static frmAbrirCaja frmInstancia;
 

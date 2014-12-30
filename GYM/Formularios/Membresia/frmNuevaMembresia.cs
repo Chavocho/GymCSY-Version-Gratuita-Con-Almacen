@@ -16,7 +16,7 @@ namespace GYM.Formularios.Membresia
     {
         Dictionary<int, decimal> preciosM = new Dictionary<int, decimal>();
         Dictionary<int, string> descripcionM = new Dictionary<int, string>();
-        int numSocio, sexo;
+        int numSocio, sexo, idPromo = -1;
         string ultimoFolio = "";
         DateTime fechaFin;
         CMembresia mem;
@@ -138,6 +138,16 @@ namespace GYM.Formularios.Membresia
             txtDescripcion.Text = "";
         }
 
+        public void AsignarPromocionHorario(int id, int duracion, decimal precio, string descripcion)
+        {
+            idPromo = id;
+        }
+
+        private void QuitarPromocionHorario()
+        {
+            idPromo = -1;
+        }
+
         private bool ValidarDatos()
         {
           
@@ -189,7 +199,8 @@ namespace GYM.Formularios.Membresia
                 else
                     ta = decimal.Parse(lblPrecio.Text, System.Globalization.NumberStyles.Currency);
                 MySql.Data.MySqlClient.MySqlCommand sql = new MySql.Data.MySqlClient.MySqlCommand();
-                sql.CommandText = "INSERT INTO caja (efectivo, tarjeta, tipo_movimiento, fecha, descripcion) VALUES (?, ?, ?, ?, ?)";
+                sql.CommandText = "INSERT INTO caja (id_membresia, efectivo, tarjeta, tipo_movimiento, fecha, descripcion) VALUES (?, ?, ?, ?, ?, ?)";
+                sql.Parameters.AddWithValue("@id_membresia", rMem.IDMembresia);
                 sql.Parameters.AddWithValue("@efectivo", ef);
                 sql.Parameters.AddWithValue("@tarjeta", ta);
                 sql.Parameters.AddWithValue("@tipo_movimiento", 0);
@@ -336,6 +347,7 @@ namespace GYM.Formularios.Membresia
                         mem.NumeroSocio = numSocio;
                         mem.FechaInicio = dtpFechaInicio.Value;
                         mem.FechaFin = this.fechaFin;
+                        mem.IDPromocion = idPromo;
                         mem.Estado = Clases.CMembresia.EstadoMembresia.Pendiente;//Al ingresar una Membresía esta queda en estado pendiente de activación.
                         mem.CreateUser = frmMain.id;
                         rMem.IDMembresia = mem.InsertarMembresia();
@@ -512,6 +524,17 @@ namespace GYM.Formularios.Membresia
                 if (tmp < cbxTipo.SelectedIndex)
                 {
                     cbxTipo.SelectedIndex = tmp;
+                }
+                else
+                {
+                    for (int i = 0; i < cbxTipo.Items.Count; i++)
+                    {
+                        if (preciosM.ContainsKey(i))
+                        {
+                            cbxTipo.SelectedIndex = i;
+                            break;
+                        }
+                    }
                 }
             }
             lblPrecio.Text = preciosM[cbxTipo.SelectedIndex].ToString("C2");

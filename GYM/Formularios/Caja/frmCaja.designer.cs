@@ -30,11 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCaja));
             this.dgvCaja = new System.Windows.Forms.DataGridView();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Efectivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vouchers = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoMovimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEntrada = new System.Windows.Forms.Button();
             this.btnSalida = new System.Windows.Forms.Button();
             this.btnAbrirCerrar = new System.Windows.Forms.Button();
@@ -55,6 +50,14 @@
             this.lblEtiquetaVouchers02 = new System.Windows.Forms.Label();
             this.lblEfectivoCaja = new System.Windows.Forms.Label();
             this.lblEfectivoMostrado = new System.Windows.Forms.Label();
+            this.CVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CMembresia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Efectivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vouchers = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoMovimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CVendedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCaja)).BeginInit();
             this.grbFechas.SuspendLayout();
             this.grbConcepto.SuspendLayout();
@@ -65,17 +68,23 @@
             // 
             this.dgvCaja.AllowUserToAddRows = false;
             this.dgvCaja.AllowUserToDeleteRows = false;
+            this.dgvCaja.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCaja.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.dgvCaja.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCaja.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvCaja.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvCaja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvCaja.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CVenta,
+            this.CMembresia,
             this.Fecha,
             this.Efectivo,
             this.Vouchers,
             this.TipoMovimiento,
-            this.Descripcion});
+            this.Descripcion,
+            this.CVendedor});
             this.dgvCaja.Location = new System.Drawing.Point(12, 100);
             this.dgvCaja.Name = "dgvCaja";
             this.dgvCaja.ReadOnly = true;
@@ -87,43 +96,9 @@
             this.dgvCaja.Size = new System.Drawing.Size(920, 242);
             this.dgvCaja.TabIndex = 3;
             // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 200;
-            // 
-            // Efectivo
-            // 
-            this.Efectivo.HeaderText = "Efectivo";
-            this.Efectivo.Name = "Efectivo";
-            this.Efectivo.ReadOnly = true;
-            this.Efectivo.Width = 150;
-            // 
-            // Vouchers
-            // 
-            this.Vouchers.HeaderText = "Vouchers";
-            this.Vouchers.Name = "Vouchers";
-            this.Vouchers.ReadOnly = true;
-            this.Vouchers.Width = 150;
-            // 
-            // TipoMovimiento
-            // 
-            this.TipoMovimiento.HeaderText = "Tipo de movimiento";
-            this.TipoMovimiento.Name = "TipoMovimiento";
-            this.TipoMovimiento.ReadOnly = true;
-            this.TipoMovimiento.Width = 150;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            // 
             // btnEntrada
             // 
+            this.btnEntrada.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnEntrada.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.btnEntrada.Location = new System.Drawing.Point(12, 439);
             this.btnEntrada.Name = "btnEntrada";
@@ -135,6 +110,7 @@
             // 
             // btnSalida
             // 
+            this.btnSalida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSalida.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.btnSalida.Location = new System.Drawing.Point(113, 439);
             this.btnSalida.Name = "btnSalida";
@@ -146,6 +122,7 @@
             // 
             // btnAbrirCerrar
             // 
+            this.btnAbrirCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAbrirCerrar.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.btnAbrirCerrar.Location = new System.Drawing.Point(808, 439);
             this.btnAbrirCerrar.Name = "btnAbrirCerrar";
@@ -211,6 +188,7 @@
             // 
             // grbConcepto
             // 
+            this.grbConcepto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.grbConcepto.Controls.Add(this.chbRespetarFechas);
             this.grbConcepto.Controls.Add(this.txtConcepto);
             this.grbConcepto.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -264,6 +242,8 @@
             // 
             // grbTotales
             // 
+            this.grbTotales.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grbTotales.Controls.Add(this.lblVouchersCaja);
             this.grbTotales.Controls.Add(this.lblVouchersMostrado);
             this.grbTotales.Controls.Add(this.lblEtiquetaVouchers01);
@@ -346,6 +326,60 @@
             this.lblEfectivoMostrado.TabIndex = 14;
             this.lblEfectivoMostrado.Text = "$0.00";
             // 
+            // CVenta
+            // 
+            this.CVenta.HeaderText = "Folio de venta";
+            this.CVenta.Name = "CVenta";
+            this.CVenta.ReadOnly = true;
+            this.CVenta.Width = 130;
+            // 
+            // CMembresia
+            // 
+            this.CMembresia.HeaderText = "Folio de membresía";
+            this.CMembresia.Name = "CMembresia";
+            this.CMembresia.ReadOnly = true;
+            this.CMembresia.Width = 130;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 200;
+            // 
+            // Efectivo
+            // 
+            this.Efectivo.HeaderText = "Efectivo";
+            this.Efectivo.Name = "Efectivo";
+            this.Efectivo.ReadOnly = true;
+            // 
+            // Vouchers
+            // 
+            this.Vouchers.HeaderText = "Vouchers";
+            this.Vouchers.Name = "Vouchers";
+            this.Vouchers.ReadOnly = true;
+            // 
+            // TipoMovimiento
+            // 
+            this.TipoMovimiento.HeaderText = "Tipo de movimiento";
+            this.TipoMovimiento.Name = "TipoMovimiento";
+            this.TipoMovimiento.ReadOnly = true;
+            this.TipoMovimiento.Width = 150;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
+            // CVendedor
+            // 
+            this.CVendedor.HeaderText = "Vendedor";
+            this.CVendedor.Name = "CVendedor";
+            this.CVendedor.ReadOnly = true;
+            this.CVendedor.Width = 150;
+            // 
             // frmCaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -359,12 +393,11 @@
             this.Controls.Add(this.dgvCaja);
             this.Controls.Add(this.grbFechas);
             this.Controls.Add(this.btnEntrada);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.Name = "frmCaja";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Caja";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmCaja_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCaja)).EndInit();
             this.grbFechas.ResumeLayout(false);
@@ -399,11 +432,14 @@
         private System.Windows.Forms.Label lblEfectivoCaja;
         private System.Windows.Forms.Label lblEfectivoMostrado;
         private System.Windows.Forms.CheckBox chbRespetarFechas;
+        public System.Windows.Forms.Button btnAbrirCerrar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CMembresia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Efectivo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Vouchers;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoMovimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        public System.Windows.Forms.Button btnAbrirCerrar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CVendedor;
     }
 }

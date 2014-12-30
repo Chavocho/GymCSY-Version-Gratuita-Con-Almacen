@@ -325,17 +325,29 @@
     <Compile Include="Formularios\Membresia\frmPrecioMembresia.Designer.cs">
       <DependentUpon>frmPrecioMembresia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Membresia\Promociones\frmEditarPromocion.cs">
+    <Compile Include="Formularios\Membresia\Promociones\frmEditarPromocionFecha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Membresia\Promociones\frmEditarPromocion.Designer.cs">
-      <DependentUpon>frmEditarPromocion.cs</DependentUpon>
+    <Compile Include="Formularios\Membresia\Promociones\frmEditarPromocionFecha.Designer.cs">
+      <DependentUpon>frmEditarPromocionFecha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Membresia\Promociones\frmNuevaPromocion.cs">
+    <Compile Include="Formularios\Membresia\Promociones\frmEditarPromocionHorario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Membresia\Promociones\frmNuevaPromocion.Designer.cs">
-      <DependentUpon>frmNuevaPromocion.cs</DependentUpon>
+    <Compile Include="Formularios\Membresia\Promociones\frmEditarPromocionHorario.Designer.cs">
+      <DependentUpon>frmEditarPromocionHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Membresia\Promociones\frmNuevaPromocionFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Membresia\Promociones\frmNuevaPromocionFecha.Designer.cs">
+      <DependentUpon>frmNuevaPromocionFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Membresia\Promociones\frmNuevaPromocionHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Membresia\Promociones\frmNuevaPromocionHorario.Designer.cs">
+      <DependentUpon>frmNuevaPromocionHorario.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Membresia\Promociones\frmPromociones.cs">
       <SubType>Form</SubType>
@@ -646,11 +658,17 @@
     <EmbeddedResource Include="Formularios\Membresia\frmPrecioMembresia.resx">
       <DependentUpon>frmPrecioMembresia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Membresia\Promociones\frmEditarPromocion.resx">
-      <DependentUpon>frmEditarPromocion.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Membresia\Promociones\frmEditarPromocionFecha.resx">
+      <DependentUpon>frmEditarPromocionFecha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Membresia\Promociones\frmNuevaPromocion.resx">
-      <DependentUpon>frmNuevaPromocion.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Membresia\Promociones\frmEditarPromocionHorario.resx">
+      <DependentUpon>frmEditarPromocionHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Membresia\Promociones\frmNuevaPromocionFecha.resx">
+      <DependentUpon>frmNuevaPromocionFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Membresia\Promociones\frmNuevaPromocionHorario.resx">
+      <DependentUpon>frmNuevaPromocionHorario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Membresia\Promociones\frmPromociones.resx">
       <DependentUpon>frmPromociones.cs</DependentUpon>
@@ -871,7 +889,9 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

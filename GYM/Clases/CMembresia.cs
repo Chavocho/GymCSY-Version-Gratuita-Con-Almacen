@@ -22,8 +22,10 @@ namespace GYM.Clases
         #region Propiedades
         private int idMembresia;
         private int numSocio;
+        private DateTime fechaIni;
         private DateTime fechaFin;
         private EstadoMembresia estado;
+        private int idPromocion = 0;
         private int createUser;
         private DateTime createTime;
         private int updateUser;
@@ -46,7 +48,6 @@ namespace GYM.Clases
             get { return fechaFin; }
             set { fechaFin = value; }
         }
-        private DateTime fechaIni;
 
         public DateTime FechaInicio
         {
@@ -60,6 +61,12 @@ namespace GYM.Clases
             set { estado = value; }
         }
 
+        public int IDPromocion
+        {
+            get { return idPromocion; }
+            set { idPromocion = value; }
+        }
+        
         public int CreateUser
         {
             get { return createUser; }
@@ -171,12 +178,16 @@ namespace GYM.Clases
             try
             {
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "INSERT INTO membresias (numSocio, fecha_ini, fecha_fin, estado, create_time, create_user_id) " +
-                    "VALUES (?numSocio, ?fecha_ini, ?fecha_fin, ?estado, NOW(), ?create_user_id)";
+                sql.CommandText = "INSERT INTO membresias (numSocio, fecha_ini, fecha_fin, estado, id_promocion, create_time, create_user_id) " +
+                    "VALUES (?numSocio, ?fecha_ini, ?fecha_fin, ?estado, ?id_promocion, NOW(), ?create_user_id)";
                 sql.Parameters.AddWithValue("?numSocio", NumeroSocio);
                 sql.Parameters.AddWithValue("?fecha_ini", FechaInicio);
                 sql.Parameters.AddWithValue("?fecha_fin", FechaFin);
                 sql.Parameters.AddWithValue("?estado", Estado);
+                if (IDPromocion <= 0)
+                    sql.Parameters.AddWithValue("?id_promocion", DBNull.Value);
+                else
+                    sql.Parameters.AddWithValue("?id_promocion", IDPromocion);
                 sql.Parameters.AddWithValue("?create_user_id", CreateUser);
                 ConexionBD.EjecutarConsulta(sql);
                 sql.Parameters.Clear();
@@ -207,10 +218,14 @@ namespace GYM.Clases
             {
                 MySqlCommand sql = new MySqlCommand();
                 sql.CommandText = "UPDATE membresias SET fecha_ini=?fecha_ini, fecha_fin=?fecha_fin, " +
-                    "estado=?estado, update_time=NOW(), update_user_id=?update_user_id WHERE id=?id";
+                    "estado=?estado, id_promocion=?id_promocion, update_time=NOW(), update_user_id=?update_user_id WHERE id=?id";
                 sql.Parameters.AddWithValue("?fecha_ini", FechaInicio);
                 sql.Parameters.AddWithValue("?fecha_fin", FechaFin);
                 sql.Parameters.AddWithValue("?estado", Estado);
+                if (IDPromocion <= 0)
+                    sql.Parameters.AddWithValue("?id_promocion", DBNull.Value);
+                else
+                    sql.Parameters.AddWithValue("?id_promocion", IDPromocion);
                 sql.Parameters.AddWithValue("?update_user_id", UpdateUser);
                 sql.Parameters.AddWithValue("?id", IDMembresia);
                 ConexionBD.EjecutarConsulta(sql);
@@ -248,6 +263,10 @@ namespace GYM.Clases
                     FechaInicio = DateTime.Parse(dr["fecha_ini"].ToString());
                     FechaFin = DateTime.Parse(dr["fecha_fin"].ToString());
                     Estado = (EstadoMembresia)Enum.Parse(typeof(EstadoMembresia), dr["estado"].ToString());
+                    if (dr["id_promocion"] != DBNull.Value)
+                        idPromocion = (int)dr["id_promocion"];
+                    else
+                        idPromocion = -1;
                     if (dr["create_time"] != DBNull.Value)
                         createTime = DateTime.Parse(dr["create_time"].ToString());
                     else

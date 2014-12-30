@@ -156,7 +156,7 @@
             this.txtFolio.Name = "txtFolio";
             this.txtFolio.Size = new System.Drawing.Size(178, 26);
             this.txtFolio.TabIndex = 4;
-            this.txtFolio.LostFocus += new System.EventHandler(txtFolio_LostFocus);
+            this.txtFolio.LostFocus += new System.EventHandler(this.txtFolio_LostFocus);
             // 
             // lblEtiquetaDescripcion
             // 

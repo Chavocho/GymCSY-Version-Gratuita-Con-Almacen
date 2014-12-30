@@ -16,7 +16,7 @@ namespace GYM.Formularios.Membresia
     {
         Dictionary<int, decimal> preciosM = new Dictionary<int, decimal>();
         Dictionary<int, string> descripcionM = new Dictionary<int, string>();
-        int numSocio, sexo;
+        int numSocio, sexo, idPromo = -1;
         string ultimoFolio = "";
         DateTime fechaFin;
         CMembresia.EstadoMembresia es;
@@ -160,6 +160,26 @@ namespace GYM.Formularios.Membresia
             txtDescripcion.Text = "";
         }
 
+        public void AsignarPromocionHorario(int id, int duracion, decimal precio, string descripcion)
+        {
+            idPromo = id;
+            cbxTipo.SelectedIndex = duracion;
+            cbxTipo.Enabled = false;
+            lblPrecio.Text = precio.ToString("C2");
+            btnQuitarPromo.Enabled = true;
+            txtDescripcion.Text = descripcion;
+        }
+
+        private void QuitarPromocionHorario()
+        {
+            idPromo = -1;
+            cbxTipo.SelectedIndex = -1;
+            cbxTipo.Enabled = true;
+            lblPrecio.Text = "$0.00";
+            btnQuitarPromo.Enabled = false;
+            txtDescripcion.Text = "";
+        }
+
         private string ObtenerNombreUsuario(int idUsuario)
         {
             string valor = "Sin información.";
@@ -230,7 +250,8 @@ namespace GYM.Formularios.Membresia
                 else
                     ta = decimal.Parse(lblPrecio.Text, System.Globalization.NumberStyles.Currency);
                 MySql.Data.MySqlClient.MySqlCommand sql = new MySql.Data.MySqlClient.MySqlCommand();
-                sql.CommandText = "INSERT INTO caja (efectivo, tarjeta, tipo_movimiento, fecha, descripcion) VALUES (?, ?, ?, ?, ?)";
+                sql.CommandText = "INSERT INTO caja (id_membresia, efectivo, tarjeta, tipo_movimiento, fecha, descripcion) VALUES (?, ?, ?, ?, ?, ?)";
+                sql.Parameters.AddWithValue("@id_membresia", rMem.IDMembresia);
                 sql.Parameters.AddWithValue("@efectivo", ef);
                 sql.Parameters.AddWithValue("@tarjeta", ta);
                 sql.Parameters.AddWithValue("@tipo_movimiento", 0);
@@ -397,6 +418,7 @@ namespace GYM.Formularios.Membresia
                     if (ValidarDatos())
                     {
                         mem.Estado = CMembresia.EstadoMembresia.Pendiente;
+                        mem.IDPromocion = idPromo;
                         mem.FechaFin = fechaFin;
                         mem.FechaInicio = dtpFechaInicio.Value;
                         mem.UpdateUser = frmMain.id;
@@ -567,6 +589,17 @@ namespace GYM.Formularios.Membresia
                 if (tmp < cbxTipo.SelectedIndex)
                 {
                     cbxTipo.SelectedIndex = tmp;
+                }
+                else
+                {
+                    for (int i = 0; i < cbxTipo.Items.Count; i++)
+                    {
+                        if (preciosM.ContainsKey(i))
+                        {
+                            cbxTipo.SelectedIndex = i;
+                            break;
+                        }
+                    }
                 }
             }
             lblPrecio.Text = preciosM[cbxTipo.SelectedIndex].ToString("C2");
