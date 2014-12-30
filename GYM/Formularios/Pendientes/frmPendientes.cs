@@ -58,6 +58,7 @@ namespace GYM.Formularios
             DataGridViewButtonColumn btnAceptar = new DataGridViewButtonColumn();
             DataGridViewButtonColumn btnRechazar = new DataGridViewButtonColumn();
             DataGridViewCell cell = new DataGridViewTextBoxCell();
+
             dgvPendientes.Columns.Clear();
             //Configuración de ID
             id.Visible = false;
@@ -317,7 +318,7 @@ namespace GYM.Formularios
                 dt = new DataTable();
                 MySqlCommand sql = new MySqlCommand();
                 sql.CommandText = "SELECT s.numSocio, s.nombre, s.apellidos, m.id, m.fecha_ini, m.fecha_fin, MAX(r.id) as rID, r.descripcion, r.precio, r.folio_remision, r.create_user_id, r.create_time " + 
-                    "FROM miembros AS s INNER JOIN membresias AS m ON (m.numSocio=s.numSocio) AND m.estado=?estado INNER JOIN registro_membresias AS r ON(m.id=r.membresia_id) GROUP BY m.id;";
+                    "FROM miembros AS s INNER JOIN membresias AS m ON (m.numSocio=s.numSocio) AND m.estado=?estado INNER JOIN registro_membresias AS r ON(m.id=r.membresia_id) GROUP BY m.id ORDER BY r.create_time;";
                 sql.Parameters.AddWithValue("?estado", Clases.CMembresia.EstadoMembresia.Pendiente);
                 dt = ConexionBD.EjecutarConsultaSelect(sql);
             }
@@ -338,7 +339,7 @@ namespace GYM.Formularios
                 dt = new DataTable();
                 MySqlCommand sql = new MySqlCommand();
                 sql.CommandText = "SELECT l.id, MAX(r.id) AS rID, r.nom_persona, s.numSocio, s.nombre, s.apellidos, l.num, l.fecha_ini, l.fecha_fin, r.descripcion, r.create_time, r.create_user_id, r.folio_remision, r.precio " +
-                    "FROM locker AS l INNER JOIN registro_locker AS r ON (l.id=r.locker_id) LEFT JOIN miembros AS s ON (l.numSocio=s.numSocio) WHERE l.estado=?estado ORDER BY s.numSocio";
+                    "FROM locker AS l INNER JOIN registro_locker AS r ON (l.id=r.locker_id) LEFT JOIN miembros AS s ON (l.numSocio=s.numSocio) WHERE l.estado=?estado ORDER BY r.create_time";
                 sql.Parameters.AddWithValue("?estado", Clases.CMembresia.EstadoMembresia.Pendiente);
                 dt = ConexionBD.EjecutarConsultaSelect(sql);
             }

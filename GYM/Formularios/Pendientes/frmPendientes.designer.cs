@@ -45,6 +45,7 @@
             // 
             this.dgvPendientes.AllowUserToAddRows = false;
             this.dgvPendientes.AllowUserToDeleteRows = false;
+            this.dgvPendientes.AllowUserToOrderColumns = true;
             this.dgvPendientes.AllowUserToResizeColumns = false;
             this.dgvPendientes.AllowUserToResizeRows = false;
             this.dgvPendientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -72,6 +73,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPendientes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPendientes.Location = new System.Drawing.Point(12, 47);
+            this.dgvPendientes.MultiSelect = false;
             this.dgvPendientes.Name = "dgvPendientes";
             this.dgvPendientes.ReadOnly = true;
             this.dgvPendientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
