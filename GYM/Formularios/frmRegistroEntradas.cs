@@ -310,7 +310,7 @@ namespace GYM.Formularios
                 tclSocios.Visible = true;
                 if (this.WindowState != FormWindowState.Maximized)
                 {
-                    this.Size = new Size(this.Size.Width, this.Size.Height + 200);
+                    this.Size = new Size(this.Size.Width, this.Size.Height + 195);
                     this.Location = new Point(this.Location.X, (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
                 }
             }
@@ -319,7 +319,7 @@ namespace GYM.Formularios
                 tclSocios.Visible = false;
                 if (this.WindowState != FormWindowState.Maximized)
                 {
-                    this.Size = new Size(this.Size.Width, this.Size.Height - 200);
+                    this.Size = new Size(this.Size.Width, this.Size.Height - 195);
                     this.Location = new Point(this.Location.X, (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
                 }
             }

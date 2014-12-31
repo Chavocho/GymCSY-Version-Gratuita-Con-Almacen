@@ -32,6 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVisualizarVenta));
             this.btnAceptar = new System.Windows.Forms.Button();
             this.dgvVentaDetallada = new System.Windows.Forms.DataGridView();
+            this.CIDProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlVenta = new System.Windows.Forms.Panel();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblETotal = new System.Windows.Forms.Label();
@@ -49,11 +54,8 @@
             this.lblETipoPago = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblEFecha = new System.Windows.Forms.Label();
-            this.CIDProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblRemision = new System.Windows.Forms.Label();
+            this.lblERemision = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentaDetallada)).BeginInit();
             this.pnlVenta.SuspendLayout();
             this.SuspendLayout();
@@ -107,10 +109,42 @@
             this.dgvVentaDetallada.Size = new System.Drawing.Size(1008, 306);
             this.dgvVentaDetallada.TabIndex = 5;
             // 
+            // CIDProd
+            // 
+            this.CIDProd.HeaderText = "Código de producto";
+            this.CIDProd.Name = "CIDProd";
+            this.CIDProd.Width = 150;
+            // 
+            // CNombre
+            // 
+            this.CNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CNombre.HeaderText = "Nombre del producto";
+            this.CNombre.Name = "CNombre";
+            // 
+            // CCantidad
+            // 
+            this.CCantidad.HeaderText = "Cantidad";
+            this.CCantidad.Name = "CCantidad";
+            this.CCantidad.Width = 130;
+            // 
+            // CPrecio
+            // 
+            this.CPrecio.HeaderText = "Precio";
+            this.CPrecio.Name = "CPrecio";
+            this.CPrecio.Width = 130;
+            // 
+            // CTotal
+            // 
+            this.CTotal.HeaderText = "Total de producto";
+            this.CTotal.Name = "CTotal";
+            this.CTotal.Width = 130;
+            // 
             // pnlVenta
             // 
             this.pnlVenta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlVenta.Controls.Add(this.lblRemision);
+            this.pnlVenta.Controls.Add(this.lblERemision);
             this.pnlVenta.Controls.Add(this.lblTotal);
             this.pnlVenta.Controls.Add(this.lblETotal);
             this.pnlVenta.Controls.Add(this.lblUpdateTime);
@@ -138,7 +172,7 @@
             this.lblTotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblTotal.Location = new System.Drawing.Point(886, 28);
+            this.lblTotal.Location = new System.Drawing.Point(877, 84);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(69, 19);
             this.lblTotal.TabIndex = 19;
@@ -148,7 +182,7 @@
             // 
             this.lblETotal.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblETotal.AutoSize = true;
-            this.lblETotal.Location = new System.Drawing.Point(841, 9);
+            this.lblETotal.Location = new System.Drawing.Point(832, 65);
             this.lblETotal.Name = "lblETotal";
             this.lblETotal.Size = new System.Drawing.Size(39, 19);
             this.lblETotal.TabIndex = 18;
@@ -180,7 +214,7 @@
             this.lblUpdateUser.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblUpdateUser.AutoSize = true;
             this.lblUpdateUser.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblUpdateUser.Location = new System.Drawing.Point(391, 84);
+            this.lblUpdateUser.Location = new System.Drawing.Point(359, 84);
             this.lblUpdateUser.Name = "lblUpdateUser";
             this.lblUpdateUser.Size = new System.Drawing.Size(51, 19);
             this.lblUpdateUser.TabIndex = 15;
@@ -192,16 +226,16 @@
             this.lblEUpdateUser.AutoSize = true;
             this.lblEUpdateUser.Location = new System.Drawing.Point(253, 65);
             this.lblEUpdateUser.Name = "lblEUpdateUser";
-            this.lblEUpdateUser.Size = new System.Drawing.Size(132, 19);
+            this.lblEUpdateUser.Size = new System.Drawing.Size(100, 19);
             this.lblEUpdateUser.TabIndex = 14;
-            this.lblEUpdateUser.Text = "Usuario modificador";
+            this.lblEUpdateUser.Text = "Modificó venta";
             // 
             // lblCreateUser
             // 
             this.lblCreateUser.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCreateUser.AutoSize = true;
             this.lblCreateUser.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblCreateUser.Location = new System.Drawing.Point(124, 84);
+            this.lblCreateUser.Location = new System.Drawing.Point(70, 84);
             this.lblCreateUser.Name = "lblCreateUser";
             this.lblCreateUser.Size = new System.Drawing.Size(50, 19);
             this.lblCreateUser.TabIndex = 13;
@@ -213,16 +247,16 @@
             this.lblECreateUser.AutoSize = true;
             this.lblECreateUser.Location = new System.Drawing.Point(12, 65);
             this.lblECreateUser.Name = "lblECreateUser";
-            this.lblECreateUser.Size = new System.Drawing.Size(106, 19);
+            this.lblECreateUser.Size = new System.Drawing.Size(52, 19);
             this.lblECreateUser.TabIndex = 12;
-            this.lblECreateUser.Text = "Usuario creador";
+            this.lblECreateUser.Text = "Vendió";
             // 
             // lblTerminacion
             // 
             this.lblTerminacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTerminacion.AutoSize = true;
             this.lblTerminacion.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblTerminacion.Location = new System.Drawing.Point(760, 28);
+            this.lblTerminacion.Location = new System.Drawing.Point(952, 28);
             this.lblTerminacion.Name = "lblTerminacion";
             this.lblTerminacion.Size = new System.Drawing.Size(41, 19);
             this.lblTerminacion.TabIndex = 7;
@@ -232,7 +266,7 @@
             // 
             this.lblETerminacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblETerminacion.AutoSize = true;
-            this.lblETerminacion.Location = new System.Drawing.Point(609, 9);
+            this.lblETerminacion.Location = new System.Drawing.Point(801, 9);
             this.lblETerminacion.Name = "lblETerminacion";
             this.lblETerminacion.Size = new System.Drawing.Size(145, 19);
             this.lblETerminacion.TabIndex = 6;
@@ -243,7 +277,7 @@
             this.lblFolioTicket.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblFolioTicket.AutoSize = true;
             this.lblFolioTicket.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblFolioTicket.Location = new System.Drawing.Point(518, 28);
+            this.lblFolioTicket.Location = new System.Drawing.Point(710, 28);
             this.lblFolioTicket.Name = "lblFolioTicket";
             this.lblFolioTicket.Size = new System.Drawing.Size(73, 19);
             this.lblFolioTicket.TabIndex = 5;
@@ -253,18 +287,18 @@
             // 
             this.lblEFolioTicket.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEFolioTicket.AutoSize = true;
-            this.lblEFolioTicket.Location = new System.Drawing.Point(418, 9);
+            this.lblEFolioTicket.Location = new System.Drawing.Point(585, 9);
             this.lblEFolioTicket.Name = "lblEFolioTicket";
-            this.lblEFolioTicket.Size = new System.Drawing.Size(94, 19);
+            this.lblEFolioTicket.Size = new System.Drawing.Size(129, 19);
             this.lblEFolioTicket.TabIndex = 4;
-            this.lblEFolioTicket.Text = "Folio de ticket";
+            this.lblEFolioTicket.Text = "Folio ticket terminal";
             // 
             // lblTipoPago
             // 
             this.lblTipoPago.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTipoPago.AutoSize = true;
             this.lblTipoPago.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblTipoPago.Location = new System.Drawing.Point(343, 28);
+            this.lblTipoPago.Location = new System.Drawing.Point(328, 28);
             this.lblTipoPago.Name = "lblTipoPago";
             this.lblTipoPago.Size = new System.Drawing.Size(62, 19);
             this.lblTipoPago.TabIndex = 3;
@@ -274,7 +308,7 @@
             // 
             this.lblETipoPago.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblETipoPago.AutoSize = true;
-            this.lblETipoPago.Location = new System.Drawing.Point(253, 9);
+            this.lblETipoPago.Location = new System.Drawing.Point(238, 9);
             this.lblETipoPago.Name = "lblETipoPago";
             this.lblETipoPago.Size = new System.Drawing.Size(84, 19);
             this.lblETipoPago.TabIndex = 2;
@@ -301,35 +335,26 @@
             this.lblEFecha.TabIndex = 0;
             this.lblEFecha.Text = "Fecha";
             // 
-            // CIDProd
+            // lblRemision
             // 
-            this.CIDProd.HeaderText = "Código de producto";
-            this.CIDProd.Name = "CIDProd";
-            this.CIDProd.Width = 150;
+            this.lblRemision.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblRemision.AutoSize = true;
+            this.lblRemision.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblRemision.Location = new System.Drawing.Point(496, 28);
+            this.lblRemision.Name = "lblRemision";
+            this.lblRemision.Size = new System.Drawing.Size(73, 19);
+            this.lblRemision.TabIndex = 21;
+            this.lblRemision.Text = "00000004";
             // 
-            // CNombre
+            // lblERemision
             // 
-            this.CNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CNombre.HeaderText = "Nombre del producto";
-            this.CNombre.Name = "CNombre";
-            // 
-            // CCantidad
-            // 
-            this.CCantidad.HeaderText = "Cantidad";
-            this.CCantidad.Name = "CCantidad";
-            this.CCantidad.Width = 130;
-            // 
-            // CPrecio
-            // 
-            this.CPrecio.HeaderText = "Precio";
-            this.CPrecio.Name = "CPrecio";
-            this.CPrecio.Width = 130;
-            // 
-            // CTotal
-            // 
-            this.CTotal.HeaderText = "Total de producto";
-            this.CTotal.Name = "CTotal";
-            this.CTotal.Width = 130;
+            this.lblERemision.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblERemision.AutoSize = true;
+            this.lblERemision.Location = new System.Drawing.Point(396, 9);
+            this.lblERemision.Name = "lblERemision";
+            this.lblERemision.Size = new System.Drawing.Size(94, 19);
+            this.lblERemision.TabIndex = 20;
+            this.lblERemision.Text = "Folio remisión";
             // 
             // frmVisualizarVenta
             // 
@@ -377,5 +402,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn CTotal;
+        private System.Windows.Forms.Label lblRemision;
+        private System.Windows.Forms.Label lblERemision;
     }
 }

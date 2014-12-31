@@ -16,6 +16,7 @@ namespace GYM.Formularios.Reportes
     {
         int id;
         DataTable dt;
+        delegate void Mensajes(string mensaje);
 
         #region Instancia
         private static frmReporteVentas frmInstancia;
@@ -39,6 +40,11 @@ namespace GYM.Formularios.Reportes
         public frmReporteVentas()
         {
             InitializeComponent();
+        }
+
+        private void Mensaje(string mensaje)
+        {
+            MessageBox.Show(mensaje, "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private int CantidadVentas()
@@ -69,7 +75,7 @@ namespace GYM.Formularios.Reportes
 
         private void BuscarVentas(DateTime fechaIni, DateTime fechaFin)
         {
-            MensajeError e = new MensajeError(CFuncionesGenerales.MensajeError);
+            Mensajes e = new Mensajes(Mensaje);
             try
             {
                 MySqlCommand sql = new MySqlCommand();
@@ -78,17 +84,17 @@ namespace GYM.Formularios.Reportes
                 sql.Parameters.AddWithValue("?fechaFin", fechaFin.ToString("yyyy/MM/dd") + " 23:59:59");
                 dt = ConexionBD.EjecutarConsultaSelect(sql);
             }
-            catch (MySqlException ex)
+            catch (MySqlException)
             {
                 tmrEspera.Enabled = false;
                 CFuncionesGenerales.frmEsperaClose();
-                this.Invoke(e, new object[] { "No se ha podido buscar las ventas. No se ha podido conectar con la base de datos.", ex });
+                this.Invoke(e, new object[] { "No se encontraron ventas en esas fechas." });
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 tmrEspera.Enabled = false;
                 CFuncionesGenerales.frmEsperaClose();
-                this.Invoke(e, new object[] { "No se ha podido buscar las ventas. Ocurrió un error genérico.", ex });
+                this.Invoke(e, new object[] { "No se encontraron ventas en esas fechas." });
             }
         }
 

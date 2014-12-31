@@ -55,6 +55,7 @@ namespace GYM.Formularios.Reportes
                         lblTipoPago.Text = "Efectivo";
                     else
                         lblTipoPago.Text = "Tarjeta";
+                    lblRemision.Text = int.Parse(dr["id"].ToString()).ToString("00000000");
                     lblFolioTicket.Text = folioTicket;
                     lblTerminacion.Text = terminacion;
                     lblTotal.Text = total.ToString("C2");

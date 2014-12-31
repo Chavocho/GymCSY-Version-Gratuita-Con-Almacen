@@ -50,7 +50,7 @@
             this.lblNumSocio.AutoSize = true;
             this.lblNumSocio.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.lblNumSocio.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblNumSocio.Location = new System.Drawing.Point(478, 62);
+            this.lblNumSocio.Location = new System.Drawing.Point(478, 58);
             this.lblNumSocio.Name = "lblNumSocio";
             this.lblNumSocio.Size = new System.Drawing.Size(364, 25);
             this.lblNumSocio.TabIndex = 0;
@@ -61,7 +61,7 @@
             // 
             this.tbxNumSocio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tbxNumSocio.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.tbxNumSocio.Location = new System.Drawing.Point(423, 90);
+            this.tbxNumSocio.Location = new System.Drawing.Point(423, 86);
             this.tbxNumSocio.MaxLength = 8;
             this.tbxNumSocio.Name = "tbxNumSocio";
             this.tbxNumSocio.Size = new System.Drawing.Size(273, 34);
@@ -75,7 +75,7 @@
             this.btnRegEntrada.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnRegEntrada.Image = global::GYM.Properties.Resources.ImgAceptar;
             this.btnRegEntrada.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegEntrada.Location = new System.Drawing.Point(702, 90);
+            this.btnRegEntrada.Location = new System.Drawing.Point(702, 86);
             this.btnRegEntrada.Name = "btnRegEntrada";
             this.btnRegEntrada.Size = new System.Drawing.Size(140, 34);
             this.btnRegEntrada.TabIndex = 2;
@@ -86,11 +86,11 @@
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.lblFecha.ForeColor = System.Drawing.SystemColors.Desktop;
             this.lblFecha.Location = new System.Drawing.Point(2, 5);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(136, 30);
+            this.lblFecha.Size = new System.Drawing.Size(119, 25);
             this.lblFecha.TabIndex = 6;
             this.lblFecha.Text = "Fecha y hora";
             this.lblFecha.Click += new System.EventHandler(this.lblFecha_Click);
@@ -109,11 +109,11 @@
             // 
             this.lblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.lblHora.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.lblHora.ForeColor = System.Drawing.SystemColors.Desktop;
             this.lblHora.Location = new System.Drawing.Point(502, 5);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(136, 30);
+            this.lblHora.Size = new System.Drawing.Size(119, 25);
             this.lblHora.TabIndex = 8;
             this.lblHora.Text = "Fecha y hora";
             // 
@@ -122,7 +122,7 @@
             this.chbTeclado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.chbTeclado.AutoSize = true;
             this.chbTeclado.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.chbTeclado.Location = new System.Drawing.Point(624, 137);
+            this.chbTeclado.Location = new System.Drawing.Point(624, 133);
             this.chbTeclado.Name = "chbTeclado";
             this.chbTeclado.Size = new System.Drawing.Size(218, 25);
             this.chbTeclado.TabIndex = 9;
@@ -146,17 +146,17 @@
             this.pcbPromociones.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pcbPromociones.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pcbPromociones.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pcbPromociones.Image = global::GYM.Properties.Resources.gym_promo_title;
-            this.pcbPromociones.Location = new System.Drawing.Point(0, 168);
+            this.pcbPromociones.Image = ((System.Drawing.Image)(resources.GetObject("pcbPromociones.Image")));
+            this.pcbPromociones.Location = new System.Drawing.Point(0, 164);
             this.pcbPromociones.Name = "pcbPromociones";
-            this.pcbPromociones.Size = new System.Drawing.Size(854, 287);
+            this.pcbPromociones.Size = new System.Drawing.Size(854, 341);
             this.pcbPromociones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbPromociones.TabIndex = 4;
             this.pcbPromociones.TabStop = false;
             // 
             // tclSocios
             // 
-            this.tclSocios.Location = new System.Drawing.Point(7, 40);
+            this.tclSocios.Location = new System.Drawing.Point(7, 33);
             this.tclSocios.MaximumSize = new System.Drawing.Size(324, 325);
             this.tclSocios.MinimumSize = new System.Drawing.Size(324, 325);
             this.tclSocios.Name = "tclSocios";
@@ -169,7 +169,7 @@
             this.AcceptButton = this.btnRegEntrada;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 455);
+            this.ClientSize = new System.Drawing.Size(854, 505);
             this.Controls.Add(this.btnConfiguración);
             this.Controls.Add(this.chbTeclado);
             this.Controls.Add(this.lblHora);

@@ -17,10 +17,10 @@ namespace GYM.Formularios.Reportes
         int idM, numSocio;
         string nomSoc;
         List<int> tipo = new List<int>(), tipoPago = new List<int>(),
-            terminacion = new List<int>(), folioRemision = new List<int>(),
-            folioTicket = new List<int>(), createUser = new List<int>();
+            terminacion = new List<int>(), createUser = new List<int>(), autorizador = new List<int>();
+        List<string> folioTicket = new List<string>(), folioRemision = new List<string>();
         List<decimal> precio = new List<decimal>();
-        List<DateTime> createTime = new List<DateTime>();
+        List<DateTime> createTime = new List<DateTime>(), fechaAutorizacion = new List<DateTime>();
 
         public frmVisualizarMembresias(int idM, int numSocio, string nomSocio)
         {
@@ -35,31 +35,44 @@ namespace GYM.Formularios.Reportes
         {
             try
             {
-                string sql = "SELECT * FROM registro_membresias WHERE membresia_id='" + idM + "'";
+                string sql = "SELECT * FROM registro_membresias WHERE membresia_id='" + idM + "' ORDER BY create_time";
                 DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
                 if (dt.Rows.Count == 0)
                 {
                     MessageBox.Show(nomSoc + " no cuenta con registros de membresías", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
+                    return;
                 }
                 foreach (DataRow dr in dt.Rows)
                 {
-                    DateTime fechaIni = DateTime.Parse(dr["fecha_ini"].ToString()), fechaFin = DateTime.Parse(dr["fecha_fin"].ToString());
-                    dgvMembresias.Rows.Add(new object[] { fechaIni.ToString("dd/MM/yyyy"), fechaFin.ToString("dd/MM/yyyy"), dr["descripcion"].ToString() });
+                    DateTime fechaIni = DateTime.Parse(dr["fecha_ini"].ToString()), fechaFin = DateTime.Parse(dr["fecha_fin"].ToString()), fechaPago = (DateTime)dr["create_time"];
+
+                    dgvMembresias.Rows.Add(new object[] { fechaIni.ToString("dd") + " de " + fechaIni.ToString("MMMM") + " del " + fechaIni.ToString("yyyy"), 
+                        fechaFin.ToString("dd") + " de " + fechaFin.ToString("MMMM") + " del " + fechaFin.ToString("yyyy"), 
+                        fechaPago.ToString("dd") + " de " + fechaPago.ToString("MMMM") + " del " + fechaPago.ToString("yyyy"), 
+                        dr["descripcion"].ToString() });
+
                     tipo.Add((int)dr["tipo"]);
                     tipoPago.Add((int)dr["tipo_pago"]);
                     precio.Add((decimal)dr["precio"]);
-                    folioRemision.Add((int)dr["folio_remision"]);
+                    folioRemision.Add(dr["folio_remision"].ToString());
                     if (dr["terminacion"] != DBNull.Value)
-                        terminacion.Add((int)dr["terminacion"]);
+                        terminacion.Add(int.Parse(dr["terminacion"].ToString()));
                     else
                         terminacion.Add(-1);
-                    if (dr["folio_ticket"] != DBNull.Value)
-                        folioTicket.Add((int)dr["folio_ticket"]);
+                    if (dr["folio_ticket"].ToString() != "0")
+                        folioTicket.Add(dr["folio_ticket"].ToString());
                     else
-                        folioTicket.Add(-1);
+                        folioTicket.Add("Sin información");
+                    if (dr["autorizacion_user"] != DBNull.Value)
+                        autorizador.Add((int)dr["autorizacion_user"]);
+                    else
+                        autorizador.Add(0);
+                    if (dr["fecha_autorizacion"] != DBNull.Value)
+                        fechaAutorizacion.Add((DateTime)dr["fecha_autorizacion"]);
+                    else
+                        fechaAutorizacion.Add(new DateTime());
                     createUser.Add((int)dr["create_user_id"]);
-                    createTime.Add((DateTime)dr["create_time"]);
                 }
             }
             catch (InvalidCastException ex)
@@ -103,6 +116,8 @@ namespace GYM.Formularios.Reportes
         {
             try
             {
+                if (index < 0)
+                    return;
                 //Mostramos primero el tipo
                 switch (tipo[index])
                 {
@@ -162,12 +177,13 @@ namespace GYM.Formularios.Reportes
                     lblTerminacion.Text = terminacion[index].ToString();
                 else
                     lblTerminacion.Text = "Sin información";
-                if (folioTicket[index] > 0)
-                    lblFolioTicket.Text = folioTicket[index].ToString();
-                else
-                    lblFolioTicket.Text = "Sin información";
+                lblFolioTicket.Text = folioTicket[index].ToString();
                 lblCreateUser.Text = NombreUsuario(createUser[index]);
-                lblCreateTime.Text = createTime[index].ToString("dd") + " de " + createTime[index].ToString("MMMM") + " del " + createTime[index].ToString("yyyy") + ", " + createTime[index].ToString("hh:mm tt");
+                lblUsuarioAut.Text = NombreUsuario(autorizador[index]);
+                if (fechaAutorizacion[index] != new DateTime())
+                    lblFechaAut.Text = fechaAutorizacion[index].ToString("dd") + " de " + fechaAutorizacion[index].ToString("MMMM") + " del " + fechaAutorizacion[index].ToString("yyyy");
+                else
+                    lblFechaAut.Text = "Sin información";
             }
             catch (Exception ex)
             {
@@ -195,6 +211,11 @@ namespace GYM.Formularios.Reportes
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvMembresias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
     }

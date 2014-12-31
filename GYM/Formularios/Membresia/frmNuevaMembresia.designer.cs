@@ -143,9 +143,9 @@
             this.lblEtiquetaFolioRemision.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.lblEtiquetaFolioRemision.Location = new System.Drawing.Point(203, 182);
             this.lblEtiquetaFolioRemision.Name = "lblEtiquetaFolioRemision";
-            this.lblEtiquetaFolioRemision.Size = new System.Drawing.Size(113, 19);
+            this.lblEtiquetaFolioRemision.Size = new System.Drawing.Size(94, 19);
             this.lblEtiquetaFolioRemision.TabIndex = 10;
-            this.lblEtiquetaFolioRemision.Text = "Folio de remisión";
+            this.lblEtiquetaFolioRemision.Text = "Folio remisión";
             // 
             // txtFolio
             // 
@@ -198,9 +198,8 @@
             this.lblFechaFin.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblFechaFin.Location = new System.Drawing.Point(397, 72);
             this.lblFechaFin.Name = "lblFechaFin";
-            this.lblFechaFin.Size = new System.Drawing.Size(70, 21);
+            this.lblFechaFin.Size = new System.Drawing.Size(0, 21);
             this.lblFechaFin.TabIndex = 17;
-            this.lblFechaFin.Text = "--/--/----";
             // 
             // lblEtiquetaFechaFin
             // 
@@ -246,9 +245,9 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.label2.Location = new System.Drawing.Point(9, 248);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 19);
+            this.label2.Size = new System.Drawing.Size(126, 19);
             this.label2.TabIndex = 23;
-            this.label2.Text = "Terminacion de la tarjeta";
+            this.label2.Text = "Terminación tarjeta";
             // 
             // txtTerminacion
             // 
@@ -269,9 +268,9 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.label3.Location = new System.Drawing.Point(203, 248);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 19);
+            this.label3.Size = new System.Drawing.Size(129, 19);
             this.label3.TabIndex = 25;
-            this.label3.Text = "Folio del ticket";
+            this.label3.Text = "Folio ticket terminal";
             // 
             // txtFolioTicket
             // 

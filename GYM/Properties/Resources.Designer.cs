@@ -115,7 +115,7 @@ namespace GYM.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap GymCSY_logo {
             get {
-                object obj = ResourceManager.GetObject("GymCSY logo", resourceCulture);
+                object obj = ResourceManager.GetObject("GymCSY_logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

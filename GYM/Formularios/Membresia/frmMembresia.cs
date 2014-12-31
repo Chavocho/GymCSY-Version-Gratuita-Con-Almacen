@@ -43,6 +43,44 @@ namespace GYM.Formularios.Membresia
 
         #region Metodos
 
+        private int PreciosH()
+        {
+            int cant = 0;
+            try
+            {
+                string sql = "SELECT COUNT(id) AS i FROM precio_membresia WHERE sexo=0";
+                DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    if (dr["i"] != DBNull.Value)
+                        cant = int.Parse(dr["i"].ToString());
+                }
+            }
+            catch
+            {
+            }
+            return cant;
+        }
+
+        private int PreciosM()
+        {
+            int cant = 0;
+            try
+            {
+                string sql = "SELECT COUNT(id) AS i FROM precio_membresia WHERE sexo=1";
+                DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    if (dr["i"] != DBNull.Value)
+                        cant = int.Parse(dr["i"].ToString());
+                }
+            }
+            catch
+            {
+            }
+            return cant;
+        }
+
         private void BuscarMiembros(string textoBusqueda)
         {
             dgvPersonas.Rows.Clear();
@@ -107,6 +145,8 @@ namespace GYM.Formularios.Membresia
                 Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un error genérico.", ex);
             }
         }
+
+
         #endregion
 
         #region Eventos
@@ -120,13 +160,36 @@ namespace GYM.Formularios.Membresia
         {
             try
             {
-
                 if (numSocio != 0)
+                {
                     if (!Clases.CMembresia.TieneMembresia(numSocio))
+                    {
+                        if (sexo == 0)
+                        {
+                            if (PreciosH() == 0)
+                            {
+                                MessageBox.Show("No tienes precios para hombres configurados. Es necesario configurarlos para asignar una membresía.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            if (PreciosM() == 0)
+                            {
+                                MessageBox.Show("No tienes precios para mujeres configurados. Es necesario configurarlos para asignar una membresía.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                return;
+                            }
+                        }
                         (new frmNuevaMembresia(numSocio, sexo)).ShowDialog(this);
+                    }
                     else
+                    {
                         if (MessageBox.Show("El socio seleccionado ya tiene una membresía.\n¿Deseas renovarla?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == System.Windows.Forms.DialogResult.Yes)
+                        {
                             btnEditar.PerformClick();
+                        }
+                    }
+                }
             }
             catch (MySqlException ex)
             {
@@ -143,11 +206,35 @@ namespace GYM.Formularios.Membresia
             try
             {
                 if (numSocio != 0)
+                {
                     if (Clases.CMembresia.TieneMembresia(numSocio))
+                    {
+                        if (sexo == 0)
+                        {
+                            if (PreciosH() == 0)
+                            {
+                                MessageBox.Show("No tienes precios para hombres configurados. Es necesario configurarlos para asignar una membresía.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            if (PreciosM() == 0)
+                            {
+                                MessageBox.Show("No tienes precios para mujeres configurados. Es necesario configurarlos para asignar una membresía.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                return;
+                            }
+                        }
                         (new frmEditarMembresia(numSocio, sexo)).ShowDialog(this);
+                    }
                     else
+                    {
                         if (MessageBox.Show("El socio seleccionado no tiene una membresía.\n¿Desea generar una nueva membresía?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == System.Windows.Forms.DialogResult.Yes)
+                        {
                             btnNuevo.PerformClick();
+                        }
+                    }
+                }
             }
             catch (MySqlException ex)
             {

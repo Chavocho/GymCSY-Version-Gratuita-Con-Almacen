@@ -47,12 +47,15 @@
             this.lblEFolioTicket = new System.Windows.Forms.Label();
             this.lblCreateUser = new System.Windows.Forms.Label();
             this.lblECreateUser = new System.Windows.Forms.Label();
-            this.lblCreateTime = new System.Windows.Forms.Label();
-            this.lblECreateTime = new System.Windows.Forms.Label();
             this.lblSocio = new System.Windows.Forms.Label();
             this.lblESocio = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.lblInformacion = new System.Windows.Forms.Label();
+            this.lblFechaAut = new System.Windows.Forms.Label();
+            this.lblEFechaAut = new System.Windows.Forms.Label();
+            this.lblUsuarioAut = new System.Windows.Forms.Label();
+            this.lblEUsuarioAut = new System.Windows.Forms.Label();
+            this.CFechaPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaIni = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,6 +83,7 @@
             this.dgvMembresias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMembresias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMembresias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CFechaPago,
             this.FechaIni,
             this.FechaFin,
             this.Descripcion});
@@ -91,7 +95,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMembresias.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvMembresias.Location = new System.Drawing.Point(12, 211);
+            this.dgvMembresias.Location = new System.Drawing.Point(12, 197);
             this.dgvMembresias.Name = "dgvMembresias";
             this.dgvMembresias.ReadOnly = true;
             this.dgvMembresias.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -107,27 +111,28 @@
             this.dgvMembresias.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvMembresias.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMembresias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMembresias.Size = new System.Drawing.Size(984, 302);
+            this.dgvMembresias.Size = new System.Drawing.Size(984, 316);
             this.dgvMembresias.TabIndex = 14;
             this.dgvMembresias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMembresias_CellClick);
+            this.dgvMembresias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMembresias_CellContentClick);
             // 
             // lblETipo
             // 
             this.lblETipo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblETipo.AutoSize = true;
             this.lblETipo.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblETipo.Location = new System.Drawing.Point(516, 9);
+            this.lblETipo.Location = new System.Drawing.Point(510, 9);
             this.lblETipo.Name = "lblETipo";
-            this.lblETipo.Size = new System.Drawing.Size(128, 19);
+            this.lblETipo.Size = new System.Drawing.Size(119, 19);
             this.lblETipo.TabIndex = 15;
-            this.lblETipo.Text = "Tipo de membresía:";
+            this.lblETipo.Text = "Tiempo adquirido:";
             // 
             // lblTipo
             // 
             this.lblTipo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTipo.AutoSize = true;
             this.lblTipo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblTipo.Location = new System.Drawing.Point(650, 28);
+            this.lblTipo.Location = new System.Drawing.Point(635, 28);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(114, 19);
             this.lblTipo.TabIndex = 16;
@@ -162,9 +167,9 @@
             this.lblPrecio.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblPrecio.Location = new System.Drawing.Point(63, 84);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(114, 19);
+            this.lblPrecio.Size = new System.Drawing.Size(45, 19);
             this.lblPrecio.TabIndex = 20;
-            this.lblPrecio.Text = "Sin información";
+            this.lblPrecio.Text = "$0.00";
             // 
             // lblEPrecio
             // 
@@ -182,7 +187,7 @@
             this.lblFolioRemision.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblFolioRemision.AutoSize = true;
             this.lblFolioRemision.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblFolioRemision.Location = new System.Drawing.Point(358, 84);
+            this.lblFolioRemision.Location = new System.Drawing.Point(315, 84);
             this.lblFolioRemision.Name = "lblFolioRemision";
             this.lblFolioRemision.Size = new System.Drawing.Size(114, 19);
             this.lblFolioRemision.TabIndex = 22;
@@ -193,18 +198,18 @@
             this.lblEFolioRemision.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEFolioRemision.AutoSize = true;
             this.lblEFolioRemision.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblEFolioRemision.Location = new System.Drawing.Point(236, 65);
+            this.lblEFolioRemision.Location = new System.Drawing.Point(193, 65);
             this.lblEFolioRemision.Name = "lblEFolioRemision";
-            this.lblEFolioRemision.Size = new System.Drawing.Size(116, 19);
+            this.lblEFolioRemision.Size = new System.Drawing.Size(97, 19);
             this.lblEFolioRemision.TabIndex = 21;
-            this.lblEFolioRemision.Text = "Folio de remisión:";
+            this.lblEFolioRemision.Text = "Folio remisión:";
             // 
             // lblTerminacion
             // 
             this.lblTerminacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTerminacion.AutoSize = true;
             this.lblTerminacion.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblTerminacion.Location = new System.Drawing.Point(602, 79);
+            this.lblTerminacion.Location = new System.Drawing.Point(581, 79);
             this.lblTerminacion.Name = "lblTerminacion";
             this.lblTerminacion.Size = new System.Drawing.Size(114, 19);
             this.lblTerminacion.TabIndex = 24;
@@ -215,11 +220,11 @@
             this.lblETerminacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblETerminacion.AutoSize = true;
             this.lblETerminacion.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblETerminacion.Location = new System.Drawing.Point(510, 65);
+            this.lblETerminacion.Location = new System.Drawing.Point(446, 65);
             this.lblETerminacion.Name = "lblETerminacion";
-            this.lblETerminacion.Size = new System.Drawing.Size(86, 19);
+            this.lblETerminacion.Size = new System.Drawing.Size(129, 19);
             this.lblETerminacion.TabIndex = 23;
-            this.lblETerminacion.Text = "Terminación:";
+            this.lblETerminacion.Text = "Terminación tarjeta:";
             // 
             // lblFolioTicket
             // 
@@ -237,18 +242,18 @@
             this.lblEFolioTicket.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEFolioTicket.AutoSize = true;
             this.lblEFolioTicket.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblEFolioTicket.Location = new System.Drawing.Point(754, 65);
+            this.lblEFolioTicket.Location = new System.Drawing.Point(719, 65);
             this.lblEFolioTicket.Name = "lblEFolioTicket";
-            this.lblEFolioTicket.Size = new System.Drawing.Size(97, 19);
+            this.lblEFolioTicket.Size = new System.Drawing.Size(132, 19);
             this.lblEFolioTicket.TabIndex = 25;
-            this.lblEFolioTicket.Text = "Folio de ticket:";
+            this.lblEFolioTicket.Text = "Folio ticket terminal:";
             // 
             // lblCreateUser
             // 
             this.lblCreateUser.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCreateUser.AutoSize = true;
             this.lblCreateUser.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblCreateUser.Location = new System.Drawing.Point(117, 138);
+            this.lblCreateUser.Location = new System.Drawing.Point(63, 138);
             this.lblCreateUser.Name = "lblCreateUser";
             this.lblCreateUser.Size = new System.Drawing.Size(114, 19);
             this.lblCreateUser.TabIndex = 28;
@@ -261,31 +266,9 @@
             this.lblECreateUser.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblECreateUser.Location = new System.Drawing.Point(8, 121);
             this.lblECreateUser.Name = "lblECreateUser";
-            this.lblECreateUser.Size = new System.Drawing.Size(109, 19);
+            this.lblECreateUser.Size = new System.Drawing.Size(55, 19);
             this.lblECreateUser.TabIndex = 27;
-            this.lblECreateUser.Text = "Usuario creador:";
-            // 
-            // lblCreateTime
-            // 
-            this.lblCreateTime.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblCreateTime.AutoSize = true;
-            this.lblCreateTime.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblCreateTime.Location = new System.Drawing.Point(373, 138);
-            this.lblCreateTime.Name = "lblCreateTime";
-            this.lblCreateTime.Size = new System.Drawing.Size(114, 19);
-            this.lblCreateTime.TabIndex = 30;
-            this.lblCreateTime.Text = "Sin información";
-            // 
-            // lblECreateTime
-            // 
-            this.lblECreateTime.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblECreateTime.AutoSize = true;
-            this.lblECreateTime.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblECreateTime.Location = new System.Drawing.Point(254, 121);
-            this.lblECreateTime.Name = "lblECreateTime";
-            this.lblECreateTime.Size = new System.Drawing.Size(120, 19);
-            this.lblECreateTime.TabIndex = 29;
-            this.lblECreateTime.Text = "Fecha de creación:";
+            this.lblECreateUser.Text = "Vendió:";
             // 
             // lblSocio
             // 
@@ -328,11 +311,62 @@
             // 
             this.lblInformacion.AutoSize = true;
             this.lblInformacion.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblInformacion.Location = new System.Drawing.Point(8, 187);
+            this.lblInformacion.Location = new System.Drawing.Point(12, 173);
             this.lblInformacion.Name = "lblInformacion";
             this.lblInformacion.Size = new System.Drawing.Size(471, 21);
             this.lblInformacion.TabIndex = 38;
             this.lblInformacion.Text = "Selecciona un registro para ver su información en la parte superior\r\n";
+            // 
+            // lblFechaAut
+            // 
+            this.lblFechaAut.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblFechaAut.AutoSize = true;
+            this.lblFechaAut.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblFechaAut.Location = new System.Drawing.Point(660, 138);
+            this.lblFechaAut.Name = "lblFechaAut";
+            this.lblFechaAut.Size = new System.Drawing.Size(114, 19);
+            this.lblFechaAut.TabIndex = 40;
+            this.lblFechaAut.Text = "Sin información";
+            // 
+            // lblEFechaAut
+            // 
+            this.lblEFechaAut.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblEFechaAut.AutoSize = true;
+            this.lblEFechaAut.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblEFechaAut.Location = new System.Drawing.Point(510, 121);
+            this.lblEFechaAut.Name = "lblEFechaAut";
+            this.lblEFechaAut.Size = new System.Drawing.Size(144, 19);
+            this.lblEFechaAut.TabIndex = 39;
+            this.lblEFechaAut.Text = "Fecha de autorización:";
+            // 
+            // lblUsuarioAut
+            // 
+            this.lblUsuarioAut.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblUsuarioAut.AutoSize = true;
+            this.lblUsuarioAut.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblUsuarioAut.Location = new System.Drawing.Point(306, 138);
+            this.lblUsuarioAut.Name = "lblUsuarioAut";
+            this.lblUsuarioAut.Size = new System.Drawing.Size(114, 19);
+            this.lblUsuarioAut.TabIndex = 42;
+            this.lblUsuarioAut.Text = "Sin información";
+            // 
+            // lblEUsuarioAut
+            // 
+            this.lblEUsuarioAut.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblEUsuarioAut.AutoSize = true;
+            this.lblEUsuarioAut.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblEUsuarioAut.Location = new System.Drawing.Point(236, 121);
+            this.lblEUsuarioAut.Name = "lblEUsuarioAut";
+            this.lblEUsuarioAut.Size = new System.Drawing.Size(64, 19);
+            this.lblEUsuarioAut.TabIndex = 41;
+            this.lblEUsuarioAut.Text = "Autorizó:";
+            // 
+            // CFechaPago
+            // 
+            this.CFechaPago.HeaderText = "Fecha de pago";
+            this.CFechaPago.Name = "CFechaPago";
+            this.CFechaPago.ReadOnly = true;
+            this.CFechaPago.Width = 250;
             // 
             // FechaIni
             // 
@@ -362,12 +396,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 562);
+            this.Controls.Add(this.lblUsuarioAut);
+            this.Controls.Add(this.lblEUsuarioAut);
+            this.Controls.Add(this.lblFechaAut);
+            this.Controls.Add(this.lblEFechaAut);
             this.Controls.Add(this.lblInformacion);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblSocio);
             this.Controls.Add(this.lblESocio);
-            this.Controls.Add(this.lblCreateTime);
-            this.Controls.Add(this.lblECreateTime);
             this.Controls.Add(this.lblCreateUser);
             this.Controls.Add(this.lblECreateUser);
             this.Controls.Add(this.lblFolioTicket);
@@ -412,12 +448,15 @@
         private System.Windows.Forms.Label lblEFolioTicket;
         private System.Windows.Forms.Label lblCreateUser;
         private System.Windows.Forms.Label lblECreateUser;
-        private System.Windows.Forms.Label lblCreateTime;
-        private System.Windows.Forms.Label lblECreateTime;
         private System.Windows.Forms.Label lblSocio;
         private System.Windows.Forms.Label lblESocio;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label lblInformacion;
+        private System.Windows.Forms.Label lblFechaAut;
+        private System.Windows.Forms.Label lblEFechaAut;
+        private System.Windows.Forms.Label lblUsuarioAut;
+        private System.Windows.Forms.Label lblEUsuarioAut;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CFechaPago;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaIni;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaFin;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;

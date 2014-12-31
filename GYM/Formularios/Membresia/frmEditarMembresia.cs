@@ -144,8 +144,8 @@ namespace GYM.Formularios.Membresia
 
         public void AsignarPromocion(int duracion, decimal precio, string descripcion)
         {
-            cbxTipo.SelectedIndex = duracion;
             cbxTipo.Enabled = false;
+            cbxTipo.SelectedIndex = duracion;
             lblPrecio.Text = precio.ToString("C2");
             btnQuitarPromo.Enabled = true;
             txtDescripcion.Text = descripcion;
@@ -153,8 +153,8 @@ namespace GYM.Formularios.Membresia
 
         private void QuitarPromoción()
         {
-            cbxTipo.SelectedIndex = -1;
             cbxTipo.Enabled = true;
+            cbxTipo.SelectedIndex = -1;
             lblPrecio.Text = "$0.00";
             btnQuitarPromo.Enabled = false;
             txtDescripcion.Text = "";
@@ -163,8 +163,8 @@ namespace GYM.Formularios.Membresia
         public void AsignarPromocionHorario(int id, int duracion, decimal precio, string descripcion)
         {
             idPromo = id;
-            cbxTipo.SelectedIndex = duracion;
             cbxTipo.Enabled = false;
+            cbxTipo.SelectedIndex = duracion;
             lblPrecio.Text = precio.ToString("C2");
             btnQuitarPromo.Enabled = true;
             txtDescripcion.Text = descripcion;
@@ -173,8 +173,8 @@ namespace GYM.Formularios.Membresia
         private void QuitarPromocionHorario()
         {
             idPromo = -1;
-            cbxTipo.SelectedIndex = -1;
             cbxTipo.Enabled = true;
+            cbxTipo.SelectedIndex = -1;
             lblPrecio.Text = "$0.00";
             btnQuitarPromo.Enabled = false;
             txtDescripcion.Text = "";
@@ -576,29 +576,12 @@ namespace GYM.Formularios.Membresia
             else
             {
                 MessageBox.Show("El precio de esa duración no ha sido configurado.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                int tmp = 0;
-                foreach (int k in preciosM.Keys)
+                for (int i = 0; i < cbxTipo.Items.Count; i++)
                 {
-                    if (k > cbxTipo.SelectedIndex)
+                    if (preciosM.ContainsKey(i))
                     {
-                        cbxTipo.SelectedIndex = tmp;
+                        cbxTipo.SelectedIndex = i;
                         break;
-                    }
-                    tmp = k;
-                }
-                if (tmp < cbxTipo.SelectedIndex)
-                {
-                    cbxTipo.SelectedIndex = tmp;
-                }
-                else
-                {
-                    for (int i = 0; i < cbxTipo.Items.Count; i++)
-                    {
-                        if (preciosM.ContainsKey(i))
-                        {
-                            cbxTipo.SelectedIndex = i;
-                            break;
-                        }
                     }
                 }
             }
