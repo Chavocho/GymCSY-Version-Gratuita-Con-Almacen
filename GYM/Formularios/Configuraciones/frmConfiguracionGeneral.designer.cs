@@ -610,7 +610,9 @@
             this.Controls.Add(this.grbPromociones);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.grbVisual);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(800, 739);
             this.Name = "frmConfiguracionGeneral";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

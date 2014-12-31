@@ -182,7 +182,9 @@
             this.Controls.Add(this.lblAp);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.pbImagenPerfil);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmMostrarSocio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Bienvenido";

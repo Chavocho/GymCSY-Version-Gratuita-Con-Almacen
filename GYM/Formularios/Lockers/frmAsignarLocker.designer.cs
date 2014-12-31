@@ -137,6 +137,7 @@
             // 
             // txtBusqueda
             // 
+            this.txtBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBusqueda.Location = new System.Drawing.Point(526, 12);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(257, 25);
@@ -145,6 +146,7 @@
             // 
             // lblBusqueda
             // 
+            this.lblBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblBusqueda.AutoSize = true;
             this.lblBusqueda.Location = new System.Drawing.Point(320, 15);
             this.lblBusqueda.Name = "lblBusqueda";
@@ -208,7 +210,7 @@
             this.txtFolio.Name = "txtFolio";
             this.txtFolio.Size = new System.Drawing.Size(245, 25);
             this.txtFolio.TabIndex = 6;
-            this.txtFolio.LostFocus += new System.EventHandler(txtFolio_LostFocus);
+            this.txtFolio.LostFocus += new System.EventHandler(this.txtFolio_LostFocus);
             // 
             // lblFolio
             // 
@@ -283,6 +285,7 @@
             // 
             // chbPersona
             // 
+            this.chbPersona.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chbPersona.AutoSize = true;
             this.chbPersona.Location = new System.Drawing.Point(526, 43);
             this.chbPersona.Name = "chbPersona";
@@ -336,7 +339,9 @@
             this.Controls.Add(this.lblNumLocker);
             this.Controls.Add(this.dgvSocios);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmAsignarLocker";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asignar Locker";

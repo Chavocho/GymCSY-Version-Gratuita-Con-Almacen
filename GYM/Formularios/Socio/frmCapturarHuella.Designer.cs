@@ -62,7 +62,9 @@
             this.ClientSize = new System.Drawing.Size(410, 326);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.pcbHuella);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmCapturarHuella";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Capturar Huella";

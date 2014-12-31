@@ -33,15 +33,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAsignarPromo));
             this.dgvPromociones = new System.Windows.Forms.DataGridView();
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.cboTipoPromo = new System.Windows.Forms.ComboBox();
-            this.lblETipoPromo = new System.Windows.Forms.Label();
             this.CID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CHoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CHoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CDuracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.cboTipoPromo = new System.Windows.Forms.ComboBox();
+            this.lblETipoPromo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPromociones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,43 +100,6 @@
             this.dgvPromociones.TabIndex = 5;
             this.dgvPromociones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPromociones_CellClick);
             // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.btnAceptar.Location = new System.Drawing.Point(807, 327);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 6;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
-            // cboTipoPromo
-            // 
-            this.cboTipoPromo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTipoPromo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboTipoPromo.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cboTipoPromo.FormattingEnabled = true;
-            this.cboTipoPromo.Items.AddRange(new object[] {
-            "Por fecha",
-            "Por horario"});
-            this.cboTipoPromo.Location = new System.Drawing.Point(597, 12);
-            this.cboTipoPromo.Name = "cboTipoPromo";
-            this.cboTipoPromo.Size = new System.Drawing.Size(285, 29);
-            this.cboTipoPromo.TabIndex = 7;
-            this.cboTipoPromo.SelectedIndexChanged += new System.EventHandler(this.cboTipoPromo_SelectedIndexChanged);
-            // 
-            // lblETipoPromo
-            // 
-            this.lblETipoPromo.AutoSize = true;
-            this.lblETipoPromo.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblETipoPromo.Location = new System.Drawing.Point(467, 18);
-            this.lblETipoPromo.Name = "lblETipoPromo";
-            this.lblETipoPromo.Size = new System.Drawing.Size(124, 19);
-            this.lblETipoPromo.TabIndex = 8;
-            this.lblETipoPromo.Text = "Tipo de promoción";
-            // 
             // CID
             // 
             this.CID.HeaderText = "ID";
@@ -179,6 +142,43 @@
             this.CDuracion.Name = "CDuracion";
             this.CDuracion.ReadOnly = true;
             // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.btnAceptar.Location = new System.Drawing.Point(807, 327);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 6;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // cboTipoPromo
+            // 
+            this.cboTipoPromo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipoPromo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboTipoPromo.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cboTipoPromo.FormattingEnabled = true;
+            this.cboTipoPromo.Items.AddRange(new object[] {
+            "Por fecha",
+            "Por horario"});
+            this.cboTipoPromo.Location = new System.Drawing.Point(597, 12);
+            this.cboTipoPromo.Name = "cboTipoPromo";
+            this.cboTipoPromo.Size = new System.Drawing.Size(285, 29);
+            this.cboTipoPromo.TabIndex = 7;
+            this.cboTipoPromo.SelectedIndexChanged += new System.EventHandler(this.cboTipoPromo_SelectedIndexChanged);
+            // 
+            // lblETipoPromo
+            // 
+            this.lblETipoPromo.AutoSize = true;
+            this.lblETipoPromo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblETipoPromo.Location = new System.Drawing.Point(467, 18);
+            this.lblETipoPromo.Name = "lblETipoPromo";
+            this.lblETipoPromo.Size = new System.Drawing.Size(124, 19);
+            this.lblETipoPromo.TabIndex = 8;
+            this.lblETipoPromo.Text = "Tipo de promoción";
+            // 
             // frmAsignarPromo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,7 +188,9 @@
             this.Controls.Add(this.cboTipoPromo);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.dgvPromociones);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmAsignarPromo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asignar Promoción";
