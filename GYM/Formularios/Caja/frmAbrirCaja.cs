@@ -59,11 +59,11 @@ namespace GYM.Formularios.Caja
                 if (txtEfectivo.Text.Trim() != "")
                     efectivo = decimal.Parse(txtEfectivo.Text);
                 MySql.Data.MySqlClient.MySqlCommand sql = new MySql.Data.MySqlClient.MySqlCommand();
-                sql.CommandText = "INSERT INTO caja (efectivo, tipo_movimiento, fecha, descripcion) VALUES (?, ?, ?, ?)";
+                sql.CommandText = "INSERT INTO caja (efectivo, tipo_movimiento, fecha, descripcion, create_user_id, create_time) VALUES (?, ?, NOW(), ?, ?, NOW())";
                 sql.Parameters.AddWithValue("@efectivo", efectivo.ToString("0.00"));
                 sql.Parameters.AddWithValue("@tipo_movimiento", 0);
-                sql.Parameters.AddWithValue("@fecha", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                 sql.Parameters.AddWithValue("@descripcion", "APERTURA DE CAJA");
+                sql.Parameters.AddWithValue("@create_user", frmMain.id);
                 Clases.ConexionBD.EjecutarConsulta(sql);
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)

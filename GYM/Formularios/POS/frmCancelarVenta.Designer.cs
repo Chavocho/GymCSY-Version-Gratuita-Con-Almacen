@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCancelarVenta));
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.txtFolio = new System.Windows.Forms.TextBox();
             this.lblInstrucciones = new System.Windows.Forms.Label();
             this.dgvVentas = new System.Windows.Forms.DataGridView();
@@ -46,22 +45,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             this.grbFechas.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.btnCerrar.FlatAppearance.BorderSize = 2;
-            this.btnCerrar.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCerrar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnCerrar.Location = new System.Drawing.Point(584, 339);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(88, 40);
-            this.btnCerrar.TabIndex = 30;
-            this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // txtFolio
             // 
@@ -105,7 +88,7 @@
             this.dgvVentas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvVentas.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVentas.Size = new System.Drawing.Size(660, 242);
+            this.dgvVentas.Size = new System.Drawing.Size(660, 238);
             this.dgvVentas.TabIndex = 29;
             this.dgvVentas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_CellClick);
             // 
@@ -198,7 +181,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnCancelar.Image = global::GYM.Properties.Resources.ImgCancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(12, 339);
+            this.btnCancelar.Location = new System.Drawing.Point(517, 339);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(155, 40);
             this.btnCancelar.TabIndex = 32;
@@ -213,7 +196,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 391);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.txtFolio);
             this.Controls.Add(this.lblInstrucciones);
             this.Controls.Add(this.dgvVentas);
@@ -233,7 +215,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.TextBox txtFolio;
         private System.Windows.Forms.Label lblInstrucciones;
         public System.Windows.Forms.DataGridView dgvVentas;

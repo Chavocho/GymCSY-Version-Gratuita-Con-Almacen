@@ -260,7 +260,6 @@ namespace GYM
             cortesDeCajaToolStripMenuItem.Visible = false;
             empleadoToolStripMenuItem.Visible = false;
             reportesToolStripMenuItem.Visible = false;
-            cortesíasToolStripMenuItem.Visible = false;
             pendientesToolStripMenuItem.Visible = false;
             preciosDemembresíasToolStripMenuItem.Visible = false;
             promocionesToolStripMenuItem.Visible = false;

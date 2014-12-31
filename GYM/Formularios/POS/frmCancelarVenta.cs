@@ -31,13 +31,13 @@ namespace GYM.Formularios.POS
         {
             try
             {
-                List<int> prod = new List<int>();
+                List<string> prod = new List<string>();
                 List<int> cant = new List<int>();
                 string sql = "SELECT id_producto, cantidad FROM venta_detallada WHERE id_venta='" + folio + "'";
                 DataTable dt = Clases.ConexionBD.EjecutarConsultaSelect(sql);
                 foreach (DataRow dr in dt.Rows)
                 {
-                    prod.Add(Convert.ToInt32(dr["id_producto"]));
+                    prod.Add(dr["id_producto"].ToString());
                     cant.Add(Convert.ToInt32(dr["cantidad"]));
                 }
                 RegresarInventario(prod, cant, folio);
@@ -60,7 +60,7 @@ namespace GYM.Formularios.POS
             }
         }
 
-        private void RegresarInventario(List<int> prods, List<int> cants, string folio)
+        private void RegresarInventario(List<string> prods, List<int> cants, string folio)
         {
             try
             {
