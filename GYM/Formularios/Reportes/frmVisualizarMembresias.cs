@@ -16,9 +16,8 @@ namespace GYM.Formularios.Reportes
     {
         int idM, numSocio;
         string nomSoc;
-        List<int> tipo = new List<int>(), tipoPago = new List<int>(),
-            terminacion = new List<int>(), createUser = new List<int>(), autorizador = new List<int>();
-        List<string> folioTicket = new List<string>(), folioRemision = new List<string>();
+        List<int> tipo = new List<int>(), tipoPago = new List<int>(), createUser = new List<int>(), autorizador = new List<int>();
+        List<string> folioTicket = new List<string>(), folioRemision = new List<string>(), terminacion = new List<string>();
         List<decimal> precio = new List<decimal>();
         List<DateTime> createTime = new List<DateTime>(), fechaAutorizacion = new List<DateTime>();
 
@@ -57,9 +56,9 @@ namespace GYM.Formularios.Reportes
                     precio.Add((decimal)dr["precio"]);
                     folioRemision.Add(dr["folio_remision"].ToString());
                     if (dr["terminacion"] != DBNull.Value)
-                        terminacion.Add(int.Parse(dr["terminacion"].ToString()));
+                        terminacion.Add(dr["terminacion"].ToString());
                     else
-                        terminacion.Add(-1);
+                        terminacion.Add("Sin información");
                     if (dr["folio_ticket"].ToString() != "0")
                         folioTicket.Add(dr["folio_ticket"].ToString());
                     else
@@ -173,10 +172,7 @@ namespace GYM.Formularios.Reportes
                 }
                 lblPrecio.Text = precio[index].ToString("C2");
                 lblFolioRemision.Text = folioRemision[index].ToString();
-                if (terminacion[index] > 0)
-                    lblTerminacion.Text = terminacion[index].ToString();
-                else
-                    lblTerminacion.Text = "Sin información";
+                lblTerminacion.Text = terminacion[index].ToString();
                 lblFolioTicket.Text = folioTicket[index].ToString();
                 lblCreateUser.Text = NombreUsuario(createUser[index]);
                 lblUsuarioAut.Text = NombreUsuario(autorizador[index]);
