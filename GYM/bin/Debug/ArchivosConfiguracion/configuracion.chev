@@ -1,63 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <configuraciones>
   <general>
-    <soloRegistro>False</soloRegistro>
+    <soloRegistro>N+vHEU14oFA=</soloRegistro>
   </general>
   <baseDatos>
-    <servidor>localhost</servidor>
-    <base>gym_dtbs</base>
-    <usuario>root</usuario>
-    <pass>
-    </pass>
+    <servidor>zvTeDRrHY/uBjw53VYdUTA==</servidor>
+    <base>RfWw4tJUXr/jw9O6MgwIDg==</base>
+    <usuario>W6dleDll19E=</usuario>
+    <pass>48PTujIMCA4=</pass>
   </baseDatos>
   <sonidos>
-    <activar>False</activar>
-    <bien>Sonido01</bien>
-    <mal>Sonido01</mal>
+    <activar>N+vHEU14oFA=</activar>
+    <bien>8ZSxTvWEsmnjw9O6MgwIDg==</bien>
+    <mal>8ZSxTvWEsmnjw9O6MgwIDg==</mal>
   </sonidos>
   <caja>
-    <estado>True</estado>
+    <estado>u0f/8tw9dgA=</estado>
   </caja>
   <huella>
-    <usar>False</usar>
+    <usar>N+vHEU14oFA=</usar>
   </huella>
   <tema>
-    <nombre>Clear</nombre>
-    <nombreCumple>Fiesta</nombreCumple>
-    <colorFondo>-197380</colorFondo>
-    <colorLetras>-11842741</colorLetras>
-    <imagenFondo>Fondo_Default</imagenFondo>
-    <colorFondoCumple>-12156236</colorFondoCumple>
-    <colorLetrasCumple>-1</colorLetrasCumple>
+    <nombre>eV6jBSwhAd69iPTF0pnb0Q==</nombre>
+    <nombreCumple>FVVMTuR+QFw=</nombreCumple>
+    <colorFondo>wlPT0M1RXXk=</colorFondo>
+    <colorLetras>l+7MElWx642n9/LL4PuHCw==</colorLetras>
+    <imagenFondo>+4e2rzlzK+E/uXqQD/l6FA==</imagenFondo>
+    <colorFondoCumple>bQh8rYpKxFSn9/LL4PuHCw==</colorFondoCumple>
+    <colorLetrasCumple>Qv0HlpeC70g=</colorLetrasCumple>
   </tema>
   <promociones>
-    <promo01>null</promo01>
-    <promo02>null</promo02>
-    <promo03>null</promo03>
-    <promo04>null</promo04>
-    <promo05>null</promo05>
-    <promo06>null</promo06>
+    <promo01>uykvgS+nPZMD6b895g7+I37Tvhu7PlKX9s42KMjwevynI1nmm1iO9B5CeMAR+L/aIJ4OrNAodiwbYatxlgkymrZfTiZdrb6HxOE0oJM6+Hlz0kes6j404QQoWgnh14JCYR5MH7/y8lo=</promo01>
+    <promo02>GzR2ldQ65M8=</promo02>
+    <promo03>GzR2ldQ65M8=</promo03>
+    <promo04>GzR2ldQ65M8=</promo04>
+    <promo05>GzR2ldQ65M8=</promo05>
+    <promo06>GzR2ldQ65M8=</promo06>
   </promociones>
-  <ticket>
-    <lineaSup01>GymCSY</lineaSup01>
-    <lineaSup02>Trinidad Fagarad #527-A</lineaSup02>
-    <lineaSup03>RFC VATE930411TC7</lineaSup03>
-    <lineaSup04>Guadalajara, Jalisco</lineaSup04>
-    <lineaSup05>Consulta nuestras promociones</lineaSup05>
-    <lineaSup06>ec-system.com.mx</lineaSup06>
-    <lineaSup07>
-    </lineaSup07>
-    <lineaInf01>Siguenos en Facebook</lineaInf01>
-    <lineaInf02>Firma __________________________</lineaInf02>
-    <lineaInf03>Acepto el reglamento</lineaInf03>
-    <impresora>Microsoft XPS Document Writer</impresora>
-    <tamPapel>210</tamPapel>
-    <turnoMat>12:05:45</turnoMat>
-    <turnoVes>12:05:45</turnoVes>
-    <preguntar>True</preguntar>
-    <imprimir>True</imprimir>
-  </ticket>
-  <membresia>
-    <folio>True</folio>
-  </membresia>
 </configuraciones>

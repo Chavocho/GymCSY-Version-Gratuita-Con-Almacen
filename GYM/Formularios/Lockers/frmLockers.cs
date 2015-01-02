@@ -80,11 +80,11 @@ namespace GYM.Formularios
                     if (dr["nombre"] != DBNull.Value)
                     {
                         nombre = dr["nombre"].ToString() + " " + dr["apellidos"].ToString();
-                        if (dr["telefono"] != DBNull.Value && dr["celular"] != DBNull.Value)
+                        if (dr["telefono"].ToString().Trim() != "" && dr["celular"].ToString().Trim() != "")
                             tel = dr["telefono"].ToString() + ", " + dr["celular"].ToString();
-                        else if (dr["telefono"] != DBNull.Value)
+                        else if (dr["telefono"].ToString().Trim() != "")
                             tel = dr["telefono"].ToString();
-                        else if (dr["celular"] != DBNull.Value)
+                        else if (dr["celular"].ToString().Trim() != "")
                             tel = dr["celular"].ToString();
                     }
                     else if (dr["nom_persona"] != DBNull.Value)

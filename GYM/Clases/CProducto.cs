@@ -258,7 +258,7 @@ namespace GYM.Clases
         {
             try
             {
-                string sql = "UPDATE producto SET cant=cant+" + cant.ToString() + " WHERE id='" + id + "' AND control_stock=1"; ;
+                string sql = "UPDATE producto SET cant=cant+" + cant.ToString() + " WHERE id='"     + id + "' AND control_stock=1"; ;
                 Clases.ConexionBD.EjecutarConsulta(sql);
             }
             catch (MySqlException ex)

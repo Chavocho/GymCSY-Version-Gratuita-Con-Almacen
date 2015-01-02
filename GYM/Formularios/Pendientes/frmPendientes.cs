@@ -45,270 +45,12 @@ namespace GYM.Formularios
 
         private void ColumnasMembresia()
         {
-            DataGridViewColumn id = new DataGridViewColumn();
-            DataGridViewColumn numSocio = new DataGridViewColumn();
-            DataGridViewColumn socio = new DataGridViewColumn();
-            DataGridViewColumn descripcion = new DataGridViewColumn();
-            DataGridViewColumn fechaIni = new DataGridViewColumn();
-            DataGridViewColumn fechaFin = new DataGridViewColumn();
-            DataGridViewColumn fechaPago = new DataGridViewColumn();
-            DataGridViewColumn numTicket = new DataGridViewColumn();
-            DataGridViewColumn monto = new DataGridViewColumn();
-            DataGridViewColumn usuario = new DataGridViewColumn();
-            DataGridViewButtonColumn btnAceptar = new DataGridViewButtonColumn();
-            DataGridViewButtonColumn btnRechazar = new DataGridViewButtonColumn();
-            DataGridViewCell cell = new DataGridViewTextBoxCell();
-
-            dgvPendientes.Columns.Clear();
-            //Configuración de ID
-            id.Visible = false;
-            id.Name = "ID";
-            id.HeaderText = "ID";
-            id.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            id.Width = 1;
-            id.Resizable = DataGridViewTriState.False;
-            id.ReadOnly = true;
-            id.CellTemplate = cell;
-            //Configuración de numSocio
-            numSocio.Visible = true;
-            numSocio.Name = "NumSocio";
-            numSocio.HeaderText = "Num. Socio";
-            numSocio.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            numSocio.Width = 100;
-            numSocio.Resizable = DataGridViewTriState.False;
-            numSocio.ReadOnly = true;
-            numSocio.CellTemplate = cell;
-            //Configuración de socio
-            socio.Visible = true;
-            socio.Name = "Socio";
-            socio.HeaderText = "Socio";
-            socio.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            socio.Width = 250;
-            socio.Resizable = DataGridViewTriState.False;
-            socio.ReadOnly = true;
-            socio.CellTemplate = cell;
-            //Configuración descripcion
-            descripcion.Visible = true;
-            descripcion.Name = "Descripcion";
-            descripcion.HeaderText = "Descripción";
-            descripcion.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            descripcion.Width = 250;
-            descripcion.Resizable = DataGridViewTriState.False;
-            descripcion.ReadOnly = true;
-            descripcion.CellTemplate = cell;
-            //Configuración fecha inicio
-            fechaIni.Visible = true;
-            fechaIni.Name = "FechaInicio";
-            fechaIni.HeaderText = "Fecha inicio";
-            fechaIni.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            fechaIni.Width = 150;
-            fechaIni.Resizable = DataGridViewTriState.False;
-            fechaIni.ReadOnly = true;
-            fechaIni.CellTemplate = cell;
-            //Configuración fecha fin
-            fechaFin.Visible = true;
-            fechaFin.Name = "FechaFin";
-            fechaFin.HeaderText = "Fecha vencimiento";
-            fechaFin.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            fechaFin.Width = 150;
-            fechaFin.Resizable = DataGridViewTriState.False;
-            fechaFin.ReadOnly = true;
-            fechaFin.CellTemplate = cell;
-            //Configuración fecha de pago
-            fechaPago.Visible = true;
-            fechaPago.Name = "FechaPago";
-            fechaPago.HeaderText = "Fecha de pago";
-            fechaPago.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            fechaPago.Width = 150;
-            fechaPago.Resizable = DataGridViewTriState.False;
-            fechaPago.ReadOnly = true;
-            fechaPago.CellTemplate = cell;
-            //Configuración número ticket
-            numTicket.Visible = true;
-            numTicket.Name = "NumTicket";
-            numTicket.HeaderText = "Num. de ticket";
-            numTicket.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            numTicket.Width = 130;
-            numTicket.Resizable = DataGridViewTriState.False;
-            numTicket.ReadOnly = true;
-            numTicket.CellTemplate = cell;
-            //Configuración monto
-            monto.Visible = true;
-            monto.Name = "Monto";
-            monto.HeaderText = "Monto";
-            monto.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            monto.Width = 100;
-            monto.Resizable = DataGridViewTriState.False;
-            monto.ReadOnly = true;
-            monto.CellTemplate = cell;
-            //Configuración usuario
-            usuario.Visible = true;
-            usuario.Name = "Usuario";
-            usuario.HeaderText = "Usuario";
-            usuario.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            usuario.Width = 140;
-            usuario.Resizable = DataGridViewTriState.False;
-            usuario.ReadOnly = true;
-            usuario.CellTemplate = cell;
-            //Configuración botones
-            btnAceptar.AutoSizeMode = btnRechazar.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            btnAceptar.Width = btnRechazar.Width = 100;
-            btnAceptar.Resizable = btnRechazar.Resizable = DataGridViewTriState.False;
-            btnAceptar.UseColumnTextForButtonValue = btnRechazar.UseColumnTextForButtonValue = true;
-            btnAceptar.Text = "Aceptar";
-            btnRechazar.Text = "Rechazar";
-
-            dgvPendientes.Columns.Add(id);
-            dgvPendientes.Columns.Add(numSocio);
-            dgvPendientes.Columns.Add(socio);
-            dgvPendientes.Columns.Add(descripcion);
-            dgvPendientes.Columns.Add(fechaIni);
-            dgvPendientes.Columns.Add(fechaFin);
-            dgvPendientes.Columns.Add(fechaPago);
-            dgvPendientes.Columns.Add(numTicket);
-            dgvPendientes.Columns.Add(monto);
-            dgvPendientes.Columns.Add(usuario);
-            dgvPendientes.Columns.Add(btnAceptar);
-            dgvPendientes.Columns.Add(btnRechazar);
+            dgvPendientes.Columns[3].Visible = false;
         }
 
         private void ColumnasLocker()
         {
-            DataGridViewColumn id = new DataGridViewColumn();
-            DataGridViewColumn numSocio = new DataGridViewColumn();
-            DataGridViewColumn socio = new DataGridViewColumn();
-            DataGridViewColumn num = new DataGridViewColumn();
-            DataGridViewColumn descripcion = new DataGridViewColumn();
-            DataGridViewColumn fechaIni = new DataGridViewColumn();
-            DataGridViewColumn fechaFin = new DataGridViewColumn();
-            DataGridViewColumn fechaPago = new DataGridViewColumn();
-            DataGridViewColumn numTicket = new DataGridViewColumn();
-            DataGridViewColumn monto = new DataGridViewColumn();
-            DataGridViewColumn usuario = new DataGridViewColumn();
-            DataGridViewButtonColumn btnAceptar = new DataGridViewButtonColumn();
-            DataGridViewButtonColumn btnRechazar = new DataGridViewButtonColumn();
-            DataGridViewCell cell = new DataGridViewTextBoxCell();
-            dgvPendientes.Columns.Clear();
-            //Configuración de ID
-            id.Visible = false;
-            id.Name = "ID";
-            id.HeaderText = "ID";
-            id.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            id.Width = 1;
-            id.Resizable = DataGridViewTriState.False;
-            id.ReadOnly = true;
-            id.CellTemplate = cell;
-            //Configuración de numSocio
-            numSocio.Visible = true;
-            numSocio.Name = "NumSocio";
-            numSocio.HeaderText = "Num. Socio";
-            numSocio.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            numSocio.Width = 100;
-            numSocio.Resizable = DataGridViewTriState.False;
-            numSocio.ReadOnly = true;
-            numSocio.CellTemplate = cell;
-            //Configuración de socio
-            socio.Visible = true;
-            socio.Name = "Socio";
-            socio.HeaderText = "Socio";
-            socio.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            socio.Width = 250;
-            socio.Resizable = DataGridViewTriState.False;
-            socio.ReadOnly = true;
-            socio.CellTemplate = cell;
-            //Configuración de num
-            num.Visible = true;
-            num.Name = "Num";
-            num.HeaderText = "Número de locker";
-            num.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            num.Width = 145;
-            num.Resizable = DataGridViewTriState.False;
-            num.ReadOnly = true;
-            num.CellTemplate = cell;
-            //Configuración descripcion
-            descripcion.Visible = true;
-            descripcion.Name = "Descripcion";
-            descripcion.HeaderText = "Descripción";
-            descripcion.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            descripcion.Width = 250;
-            descripcion.Resizable = DataGridViewTriState.False;
-            descripcion.ReadOnly = true;
-            descripcion.CellTemplate = cell;
-            //Configuración fecha inicio
-            fechaIni.Visible = true;
-            fechaIni.Name = "FechaInicio";
-            fechaIni.HeaderText = "Fecha inicio renta locker";
-            fechaIni.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            fechaIni.Width = 175;
-            fechaIni.Resizable = DataGridViewTriState.False;
-            fechaIni.ReadOnly = true;
-            fechaIni.CellTemplate = cell;
-            //Configuración fecha fin
-            fechaFin.Visible = true;
-            fechaFin.Name = "FechaFin";
-            fechaFin.HeaderText = "Fecha fin renta locker";
-            fechaFin.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            fechaFin.Width = 175;
-            fechaFin.Resizable = DataGridViewTriState.False;
-            fechaFin.ReadOnly = true;
-            fechaFin.CellTemplate = cell;
-            //Configuración fecha de pago
-            fechaPago.Visible = true;
-            fechaPago.Name = "FechaPago";
-            fechaPago.HeaderText = "Fecha de pago";
-            fechaPago.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            fechaPago.Width = 200;
-            fechaPago.Resizable = DataGridViewTriState.False;
-            fechaPago.ReadOnly = true;
-            fechaPago.CellTemplate = cell;
-            //Configuración número ticket
-            numTicket.Visible = true;
-            numTicket.Name = "NumTicket";
-            numTicket.HeaderText = "Num. de ticket";
-            numTicket.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            numTicket.Width = 130;
-            numTicket.Resizable = DataGridViewTriState.False;
-            numTicket.ReadOnly = true;
-            numTicket.CellTemplate = cell;
-            //Configuración monto
-            monto.Visible = true;
-            monto.Name = "Monto";
-            monto.HeaderText = "Monto";
-            monto.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            monto.Width = 100;
-            monto.Resizable = DataGridViewTriState.False;
-            monto.ReadOnly = true;
-            monto.CellTemplate = cell;
-            //Configuración usuario
-            usuario.Visible = true;
-            usuario.Name = "Usuario";
-            usuario.HeaderText = "Usuario";
-            usuario.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            usuario.Width = 140;
-            usuario.Resizable = DataGridViewTriState.False;
-            usuario.ReadOnly = true;
-            usuario.CellTemplate = cell;
-            //Configuración botones
-            btnAceptar.AutoSizeMode = btnRechazar.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            btnAceptar.Width = btnRechazar.Width = 100;
-            btnAceptar.Resizable = btnRechazar.Resizable = DataGridViewTriState.False;  
-            btnAceptar.UseColumnTextForButtonValue = btnRechazar.UseColumnTextForButtonValue = true;
-            btnAceptar.Text = "Aceptar";
-            btnRechazar.Text = "Rechazar";
-
-            dgvPendientes.Columns.Add(id);
-            dgvPendientes.Columns.Add(numSocio);
-            dgvPendientes.Columns.Add(socio);
-            dgvPendientes.Columns.Add(num);
-            dgvPendientes.Columns.Add(descripcion);
-            dgvPendientes.Columns.Add(fechaIni);
-            dgvPendientes.Columns.Add(fechaFin);
-            dgvPendientes.Columns.Add(fechaPago);
-            dgvPendientes.Columns.Add(numTicket);
-            dgvPendientes.Columns.Add(monto);
-            dgvPendientes.Columns.Add(usuario);
-            dgvPendientes.Columns.Add(btnAceptar);
-            dgvPendientes.Columns.Add(btnRechazar);
+            dgvPendientes.Columns[3].Visible = true;
         }
 
         private void BuscarPendientesMembresia()
@@ -362,7 +104,7 @@ namespace GYM.Formularios
                     DateTime fechaIni = DateTime.Parse(dr["fecha_ini"].ToString()), fechaFin = DateTime.Parse(dr["fecha_fin"].ToString()), fechaPago = DateTime.Parse(dr["create_time"].ToString());
                     if (cboPendientes.SelectedIndex == 0)
                     {
-                        dgvPendientes.Rows.Add(new object[] { dr["id"], dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), dr["descripcion"], fechaIni.ToString("dd/MM/yyyy"), fechaFin.ToString("dd/MM/yyyy"), fechaPago.ToString("dd/MM/yyyy"), dr["folio_remision"], ((decimal)dr["precio"]).ToString("C2"), CFuncionesGenerales.NombreUsuario(dr["create_user_id"].ToString()) });
+                        dgvPendientes.Rows.Add(new object[] { dr["id"], dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), "", dr["descripcion"], fechaIni.ToString("dd/MM/yyyy"), fechaFin.ToString("dd/MM/yyyy"), fechaPago.ToString("dd/MM/yyyy"), dr["folio_remision"], ((decimal)dr["precio"]).ToString("C2"), CFuncionesGenerales.NombreUsuario(dr["create_user_id"].ToString()) });
                     }
                     else
                     {
@@ -514,6 +256,7 @@ namespace GYM.Formularios
 
         private void cboPendientes_SelectedIndexChanged(object sender, EventArgs e)
         {
+            dgvPendientes.Rows.Clear();
             switch (cboPendientes.SelectedIndex)
             {
                 case 0:
@@ -560,11 +303,11 @@ namespace GYM.Formularios
                     id = (int)dgvPendientes[0, e.RowIndex].Value;
                     if (cboPendientes.SelectedIndex == 0)
                     {
-                        if (e.ColumnIndex == 10)
+                        if (e.ColumnIndex == 11)
                         {
                             EstadoMembresia(id, CMembresia.EstadoMembresia.Activa);
                         }
-                        else if (e.ColumnIndex == 11)
+                        else if (e.ColumnIndex == 12)
                         {
                             DialogResult r = MessageBox.Show("¿Realmente desea rechazar la membresía de " + dgvPendientes[2, e.RowIndex].Value.ToString() + "?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                             if (r == System.Windows.Forms.DialogResult.Yes)

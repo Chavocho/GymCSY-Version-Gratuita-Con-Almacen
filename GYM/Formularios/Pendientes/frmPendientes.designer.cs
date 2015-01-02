@@ -38,6 +38,19 @@
             this.lblInstruccion = new System.Windows.Forms.Label();
             this.bgwBusqueda = new System.ComponentModel.BackgroundWorker();
             this.tmrEspera = new System.Windows.Forms.Timer(this.components);
+            this.CID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CNumSocio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CSocio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CFechaIni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CFechaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CFechaPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CNumTicket = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CMonto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CBtnAceptar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.CBtnRechazar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPendientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,13 +70,27 @@
             this.dgvPendientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvPendientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPendientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPendientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CID,
+            this.CNumSocio,
+            this.CSocio,
+            this.CNum,
+            this.CDescripcion,
+            this.CFechaIni,
+            this.CFechaFin,
+            this.CFechaPago,
+            this.CNumTicket,
+            this.CMonto,
+            this.CUsuario,
+            this.CBtnAceptar,
+            this.CBtnRechazar});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -130,6 +157,99 @@
             this.tmrEspera.Interval = 300;
             this.tmrEspera.Tick += new System.EventHandler(this.tmrEspera_Tick);
             // 
+            // CID
+            // 
+            this.CID.HeaderText = "ID";
+            this.CID.Name = "CID";
+            this.CID.ReadOnly = true;
+            this.CID.Visible = false;
+            // 
+            // CNumSocio
+            // 
+            this.CNumSocio.HeaderText = "Num. socio";
+            this.CNumSocio.Name = "CNumSocio";
+            this.CNumSocio.ReadOnly = true;
+            // 
+            // CSocio
+            // 
+            this.CSocio.HeaderText = "Socio";
+            this.CSocio.Name = "CSocio";
+            this.CSocio.ReadOnly = true;
+            this.CSocio.Width = 250;
+            // 
+            // CNum
+            // 
+            this.CNum.HeaderText = "Num. locker";
+            this.CNum.Name = "CNum";
+            this.CNum.ReadOnly = true;
+            this.CNum.Visible = false;
+            this.CNum.Width = 130;
+            // 
+            // CDescripcion
+            // 
+            this.CDescripcion.HeaderText = "Descripción";
+            this.CDescripcion.Name = "CDescripcion";
+            this.CDescripcion.ReadOnly = true;
+            this.CDescripcion.Width = 250;
+            // 
+            // CFechaIni
+            // 
+            this.CFechaIni.HeaderText = "Fecha inicio";
+            this.CFechaIni.Name = "CFechaIni";
+            this.CFechaIni.ReadOnly = true;
+            this.CFechaIni.Width = 175;
+            // 
+            // CFechaFin
+            // 
+            this.CFechaFin.HeaderText = "Fecha terminación";
+            this.CFechaFin.Name = "CFechaFin";
+            this.CFechaFin.ReadOnly = true;
+            this.CFechaFin.Width = 175;
+            // 
+            // CFechaPago
+            // 
+            this.CFechaPago.HeaderText = "Fecha pago";
+            this.CFechaPago.Name = "CFechaPago";
+            this.CFechaPago.ReadOnly = true;
+            this.CFechaPago.Width = 175;
+            // 
+            // CNumTicket
+            // 
+            this.CNumTicket.HeaderText = "Núm. ticket";
+            this.CNumTicket.Name = "CNumTicket";
+            this.CNumTicket.ReadOnly = true;
+            this.CNumTicket.Width = 130;
+            // 
+            // CMonto
+            // 
+            this.CMonto.HeaderText = "Monto";
+            this.CMonto.Name = "CMonto";
+            this.CMonto.ReadOnly = true;
+            this.CMonto.Width = 130;
+            // 
+            // CUsuario
+            // 
+            this.CUsuario.HeaderText = "Usuario";
+            this.CUsuario.Name = "CUsuario";
+            this.CUsuario.ReadOnly = true;
+            this.CUsuario.Width = 140;
+            // 
+            // CBtnAceptar
+            // 
+            this.CBtnAceptar.HeaderText = "";
+            this.CBtnAceptar.Name = "CBtnAceptar";
+            this.CBtnAceptar.ReadOnly = true;
+            this.CBtnAceptar.Text = "Aceptar";
+            this.CBtnAceptar.UseColumnTextForButtonValue = true;
+            // 
+            // CBtnRechazar
+            // 
+            this.CBtnRechazar.HeaderText = "";
+            this.CBtnRechazar.Name = "CBtnRechazar";
+            this.CBtnRechazar.ReadOnly = true;
+            this.CBtnRechazar.Text = "Rechazar";
+            this.CBtnRechazar.UseColumnTextForButtonValue = true;
+            // 
             // frmPendientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -156,5 +276,18 @@
         private System.Windows.Forms.Label lblInstruccion;
         private System.ComponentModel.BackgroundWorker bgwBusqueda;
         private System.Windows.Forms.Timer tmrEspera;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CNumSocio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CSocio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CNum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CDescripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CFechaIni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CFechaFin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CFechaPago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CNumTicket;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CMonto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CUsuario;
+        private System.Windows.Forms.DataGridViewButtonColumn CBtnAceptar;
+        private System.Windows.Forms.DataGridViewButtonColumn CBtnRechazar;
     }
 }

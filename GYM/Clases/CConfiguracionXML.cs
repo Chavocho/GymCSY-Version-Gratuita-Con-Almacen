@@ -49,7 +49,7 @@ namespace GYM.Clases
                 {
                     //Obtenemos el segundo nodo a partir del primer nodo para tener acceso a su información
                     XmlNodeList nodoSec = nodoInt.GetElementsByTagName(nodoSecundario);
-                    dato = nodoSec[0].InnerText;
+                    dato = CFuncionesGenerales.Descifrar(nodoSec[0].InnerText);
                 }
             }
             catch (XmlException ex)
@@ -134,7 +134,7 @@ namespace GYM.Clases
                             if (nodo1.Name == nodoPrincipal)
                                 foreach (XmlNode nodo2 in nodo1)
                                     if (nodo2.Name == nodoSecundario)
-                                        nodo2.InnerText = valor;
+                                        nodo2.InnerText = CFuncionesGenerales.Cifrar(valor);
                         xml.Save(ruta);
                     }
                     else
@@ -146,7 +146,7 @@ namespace GYM.Clases
                             if (nodo1.Name == nodoPrincipal)
                             {
                                 XmlNode nodo2 = xml.CreateNode(XmlNodeType.Element, nodoSecundario, null);
-                                nodo2.InnerText = valor;
+                                nodo2.InnerText = CFuncionesGenerales.Cifrar(valor);
                                 nodo1.AppendChild(nodo2);
                             }
                         xml.Save(ruta);

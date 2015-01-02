@@ -488,7 +488,7 @@ namespace GYM.Formularios
 
         private void txtFolio_LostFocus(object sender, EventArgs e)
         {
-            if (CMembresia.ExisteFolio(txtFolio.Text))
+            if (ExisteFolio(txtFolio.Text))
             {
                 MessageBox.Show("El folio ingresado ya existe, ingrese otro para poder continuar.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtFolio.Focus();

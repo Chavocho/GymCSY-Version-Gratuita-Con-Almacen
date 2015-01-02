@@ -127,32 +127,32 @@ namespace GYM
 
         private void CargarPromociones()
         {
-            if (CConfiguracionXML.LeerConfiguración("promociones", "promo01") != "null")
+            if (CConfiguracionXML.LeerConfiguración("promociones", "promo01") != "null" && File.Exists(CConfiguracionXML.LeerConfiguración("promociones", "promo01")))
                 Clases.CFuncionesGenerales.promo01 = new Bitmap(CConfiguracionXML.LeerConfiguración("promociones", "promo01"));
             else
                 Clases.CFuncionesGenerales.promo01 = null;
 
-            if (CConfiguracionXML.LeerConfiguración("promociones", "promo02") != "null")
+            if (CConfiguracionXML.LeerConfiguración("promociones", "promo02") != "null" && File.Exists(CConfiguracionXML.LeerConfiguración("promociones", "promo02")))
                 Clases.CFuncionesGenerales.promo02 = new Bitmap(CConfiguracionXML.LeerConfiguración("promociones", "promo02"));
             else
                 Clases.CFuncionesGenerales.promo02 = null;
 
-            if (CConfiguracionXML.LeerConfiguración("promociones", "promo03") != "null")
+            if (CConfiguracionXML.LeerConfiguración("promociones", "promo03") != "null" && File.Exists(CConfiguracionXML.LeerConfiguración("promociones", "promo03")))
                 Clases.CFuncionesGenerales.promo03 = new Bitmap(CConfiguracionXML.LeerConfiguración("promociones", "promo03"));
             else
                 Clases.CFuncionesGenerales.promo03 = null;
 
-            if (CConfiguracionXML.LeerConfiguración("promociones", "promo04") != "null")
+            if (CConfiguracionXML.LeerConfiguración("promociones", "promo04") != "null" && File.Exists(CConfiguracionXML.LeerConfiguración("promociones", "promo04")))
                 Clases.CFuncionesGenerales.promo04 = new Bitmap(CConfiguracionXML.LeerConfiguración("promociones", "promo04"));
             else
                 Clases.CFuncionesGenerales.promo04 = null;
 
-            if (CConfiguracionXML.LeerConfiguración("promociones", "promo05") != "null")
+            if (CConfiguracionXML.LeerConfiguración("promociones", "promo05") != "null" && File.Exists(CConfiguracionXML.LeerConfiguración("promociones", "promo05")))
                 Clases.CFuncionesGenerales.promo05 = new Bitmap(CConfiguracionXML.LeerConfiguración("promociones", "promo05"));
             else
                 Clases.CFuncionesGenerales.promo05 = null;
 
-            if (CConfiguracionXML.LeerConfiguración("promociones", "promo06") != "null")
+            if (CConfiguracionXML.LeerConfiguración("promociones", "promo06") != "null" && File.Exists(CConfiguracionXML.LeerConfiguración("promociones", "promo06")))
                 Clases.CFuncionesGenerales.promo06 = new Bitmap(CConfiguracionXML.LeerConfiguración("promociones", "promo06"));
             else
                 Clases.CFuncionesGenerales.promo06 = null;
@@ -312,6 +312,10 @@ namespace GYM
                 {
                     MessageBox.Show("No haz activado la licencia de este producto. Adquiere tu licencia hablando al:\n33354656\nO contactanos en ventas@ec-system.com.mx", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Application.Exit();
+                }
+                if (!Directory.Exists(Application.StartupPath + "\\Img"))
+                {
+                    Directory.CreateDirectory(Application.StartupPath + "\\Img");
                 }
                 if (!CConfiguracionXML.ExisteConfiguracion("general", "soloRegistro"))
                 {
