@@ -902,3 +902,9 @@ Nombre del parámetro: index
    en System.ThrowHelper.ThrowArgumentOutOfRangeException()
    en System.Collections.Generic.List`1.get_Item(Int32 index)
    en GYM.Formularios.Reportes.frmVisualizarMembresias.MostrarInformacion(Int32 index) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Reportes\frmVisualizarMembresias.cs:línea 120|
+System.FormatException: No se puede reconocer la cadena como un tipo booleano válido.
+   en System.Boolean.Parse(String value)
+   en GYM.Formularios.POS.frmCancelarVenta.LlenarDataGrid(DataTable dt) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmCancelarVenta.cs:línea 144|
+System.FormatException: No se puede reconocer la cadena como un tipo booleano válido.
+   en System.Boolean.Parse(String value)
+   en GYM.Formularios.POS.frmCancelarVenta.LlenarDataGrid(DataTable dt) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmCancelarVenta.cs:línea 144|

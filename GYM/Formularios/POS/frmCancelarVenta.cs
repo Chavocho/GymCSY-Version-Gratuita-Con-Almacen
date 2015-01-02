@@ -25,6 +25,7 @@ namespace GYM.Formularios.POS
             CambiarColorDataGrid();
             string sql = "UPDATE venta SET estado=0 WHERE id='" + folio + "'";
             Clases.ConexionBD.EjecutarConsulta(sql);
+            RegresarInventario(folio);
         }
 
         private void RegresarInventario(string folio)
@@ -69,7 +70,7 @@ namespace GYM.Formularios.POS
                 {
                     sql = "UPDATE venta_detallada SET cantidad=0 WHERE id_producto='" + prods[i] + "' AND id_venta='" + folio + "'";
                     Clases.ConexionBD.EjecutarConsulta(sql);
-                    Clases.CProducto.AgregarInventario(prods[i].ToString(), cants[i]);
+                    Clases.CProducto.AgregarInventarioMostrador(prods[i].ToString(), cants[i]);
                 }
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
@@ -131,6 +132,7 @@ namespace GYM.Formularios.POS
             dgvVentas.Rows[dgvVentas.CurrentRow.Index].DefaultCellStyle.ForeColor = Color.FromArgb(150, 0, 0);
             dgvVentas.Rows[dgvVentas.CurrentRow.Index].DefaultCellStyle.SelectionBackColor = Color.FromArgb(150, 0, 0);
             dgvVentas.Rows[dgvVentas.CurrentRow.Index].DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgvVentas[3, dgvVentas.CurrentRow.Index].Value = "Cancelada";
         }
 
         private void LlenarDataGrid(DataTable dt)
@@ -141,12 +143,12 @@ namespace GYM.Formularios.POS
                 string estaAbierta = "";
                 foreach (DataRow dr in dt.Rows)
                 {
-                    if (bool.Parse(dr["estado"].ToString()) == true)
+                    if (dr["estado"].ToString() == "1")
                         estaAbierta = "Normal";
                     else
                         estaAbierta = "Cancelada";
                     dgvVentas.Rows.Add(new object[] { int.Parse(dr["id"].ToString()).ToString("00000000"), DateTime.Parse(dr["fecha"].ToString()).ToString("dd/MM/yyyy hh:mm tt"), decimal.Parse(dr["total"].ToString()).ToString("C2"), estaAbierta });
-                    if (bool.Parse(dr["estado"].ToString()) == false)
+                    if (dr["estado"].ToString() == "0")
                     {
                         dgvVentas.Rows[dgvVentas.RowCount - 1].DefaultCellStyle.BackColor = Color.WhiteSmoke;
                         dgvVentas.Rows[dgvVentas.RowCount - 1].DefaultCellStyle.ForeColor = Color.FromArgb(150, 0, 0);

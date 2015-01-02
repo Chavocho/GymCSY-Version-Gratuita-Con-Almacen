@@ -234,7 +234,31 @@ namespace GYM.Clases
         {
             try
             {
-                string sql = "UPDATE producto SET cant_alm=cant_alm+" + cant.ToString() + " WHERE id='" + id + "'"; ;
+                string sql = "UPDATE producto SET cant_alm=cant_alm+" + cant.ToString() + " WHERE id='" + id + "' AND control_stock=1"; ;
+                Clases.ConexionBD.EjecutarConsulta(sql);
+            }
+            catch (MySqlException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Función que agrega a la cantidad existente en el inventario la cantidad indicada en el parametro
+        /// </summary>
+        /// <param name="id">ID del producto</param>
+        /// <param name="cant">Cantidad a sumar en el inventario</param>
+        /// <exception cref="MySql.Data.MySqlClient.MySqlException">Excepción que se lanza cuando ocurre un error con la conexión a la base de datos o con la ejecución de la consulta</exception>
+        /// <exception cref="System.Exception">Representa los errores que se producen durante la ejecución de una aplicación.</exception>
+        public static void AgregarInventarioMostrador(string id, int cant)
+        {
+            try
+            {
+                string sql = "UPDATE producto SET cant=cant+" + cant.ToString() + " WHERE id='" + id + "' AND control_stock=1"; ;
                 Clases.ConexionBD.EjecutarConsulta(sql);
             }
             catch (MySqlException ex)
