@@ -61,7 +61,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(143, 127);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 2;
+            this.btnAceptar.TabIndex = 4;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -90,7 +90,7 @@
             this.lblECantMostrador.Location = new System.Drawing.Point(8, 47);
             this.lblECantMostrador.Name = "lblECantMostrador";
             this.lblECantMostrador.Size = new System.Drawing.Size(154, 19);
-            this.lblECantMostrador.TabIndex = 4;
+            this.lblECantMostrador.TabIndex = 2;
             this.lblECantMostrador.Text = "Cantidad en mostrador:";
             // 
             // frmAlmacenMostrador

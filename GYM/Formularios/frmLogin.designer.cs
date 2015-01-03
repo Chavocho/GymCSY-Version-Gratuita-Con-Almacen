@@ -48,7 +48,7 @@
             this.btnIngresar.Location = new System.Drawing.Point(373, 160);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(99, 32);
-            this.btnIngresar.TabIndex = 1;
+            this.btnIngresar.TabIndex = 4;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnIngresar.UseVisualStyleBackColor = true;
@@ -62,7 +62,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(242, 160);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(99, 32);
-            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -75,7 +75,7 @@
             this.lblUsuario.Location = new System.Drawing.Point(317, 32);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(81, 25);
-            this.lblUsuario.TabIndex = 3;
+            this.lblUsuario.TabIndex = 0;
             this.lblUsuario.Text = "Usuario";
             // 
             // lblPassword
@@ -85,7 +85,7 @@
             this.lblPassword.Location = new System.Drawing.Point(301, 96);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(113, 25);
-            this.lblPassword.TabIndex = 4;
+            this.lblPassword.TabIndex = 2;
             this.lblPassword.Text = "Contraseña";
             // 
             // tbxUsuario
@@ -93,7 +93,7 @@
             this.tbxUsuario.Location = new System.Drawing.Point(242, 60);
             this.tbxUsuario.Name = "tbxUsuario";
             this.tbxUsuario.Size = new System.Drawing.Size(230, 20);
-            this.tbxUsuario.TabIndex = 5;
+            this.tbxUsuario.TabIndex = 1;
             this.tbxUsuario.LostFocus += new System.EventHandler(this.tbxUsuario_LostFocus);
             // 
             // tbxPassword
@@ -102,7 +102,7 @@
             this.tbxPassword.Name = "tbxPassword";
             this.tbxPassword.PasswordChar = '*';
             this.tbxPassword.Size = new System.Drawing.Size(230, 20);
-            this.tbxPassword.TabIndex = 6;
+            this.tbxPassword.TabIndex = 3;
             // 
             // pbxUsuario
             // 

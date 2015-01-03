@@ -14,6 +14,7 @@ using System.Runtime.InteropServices;
 using GYM.Formularios;
 using System.Drawing.Imaging;
 using System.Drawing.Drawing2D;
+using MySql.Data.MySqlClient;
 
 namespace System
 {
@@ -853,6 +854,34 @@ namespace GYM.Clases
                 throw ex;
             }
             return nomUsu;
+        }
+
+        public static void DesactivarLockers()
+        {
+            try
+            {
+                MySqlCommand sql = new MySqlCommand();
+                sql.CommandText = "UPDATE locker SET estado=?estado WHERE DATE_FORMAT(fecha_fin, '%Y-%m-%d')<?fecha_fin";
+                sql.Parameters.AddWithValue("?estado", frmLockers.EstadoLocker.Desocupado);
+                sql.Parameters.AddWithValue("?fecha_fin", DateTime.Now.ToString("yyyy-MM-dd"));
+                ConexionBD.EjecutarConsulta(sql);
+            }
+            catch (MySqlException ex)
+            {
+                throw ex;
+            }
+            catch (FormatException ex)
+            {
+                throw ex;
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         #region Siempre Encima

@@ -38,6 +38,8 @@
             this.CPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlVenta = new System.Windows.Forms.Panel();
+            this.lblRemision = new System.Windows.Forms.Label();
+            this.lblERemision = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblETotal = new System.Windows.Forms.Label();
             this.lblUpdateTime = new System.Windows.Forms.Label();
@@ -54,8 +56,6 @@
             this.lblETipoPago = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblEFecha = new System.Windows.Forms.Label();
-            this.lblRemision = new System.Windows.Forms.Label();
-            this.lblERemision = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentaDetallada)).BeginInit();
             this.pnlVenta.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +67,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(921, 427);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 6;
+            this.btnAceptar.TabIndex = 2;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -107,7 +107,7 @@
             this.dgvVentaDetallada.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVentaDetallada.ShowEditingIcon = false;
             this.dgvVentaDetallada.Size = new System.Drawing.Size(1008, 306);
-            this.dgvVentaDetallada.TabIndex = 5;
+            this.dgvVentaDetallada.TabIndex = 1;
             // 
             // CIDProd
             // 
@@ -165,7 +165,28 @@
             this.pnlVenta.Location = new System.Drawing.Point(0, 0);
             this.pnlVenta.Name = "pnlVenta";
             this.pnlVenta.Size = new System.Drawing.Size(1008, 115);
-            this.pnlVenta.TabIndex = 4;
+            this.pnlVenta.TabIndex = 0;
+            // 
+            // lblRemision
+            // 
+            this.lblRemision.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblRemision.AutoSize = true;
+            this.lblRemision.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblRemision.Location = new System.Drawing.Point(496, 28);
+            this.lblRemision.Name = "lblRemision";
+            this.lblRemision.Size = new System.Drawing.Size(73, 19);
+            this.lblRemision.TabIndex = 5;
+            this.lblRemision.Text = "00000004";
+            // 
+            // lblERemision
+            // 
+            this.lblERemision.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblERemision.AutoSize = true;
+            this.lblERemision.Location = new System.Drawing.Point(396, 9);
+            this.lblERemision.Name = "lblERemision";
+            this.lblERemision.Size = new System.Drawing.Size(94, 19);
+            this.lblERemision.TabIndex = 4;
+            this.lblERemision.Text = "Folio remisión";
             // 
             // lblTotal
             // 
@@ -175,7 +196,7 @@
             this.lblTotal.Location = new System.Drawing.Point(877, 84);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(69, 19);
-            this.lblTotal.TabIndex = 19;
+            this.lblTotal.TabIndex = 17;
             this.lblTotal.Text = "$1350.50";
             // 
             // lblETotal
@@ -185,7 +206,7 @@
             this.lblETotal.Location = new System.Drawing.Point(832, 65);
             this.lblETotal.Name = "lblETotal";
             this.lblETotal.Size = new System.Drawing.Size(39, 19);
-            this.lblETotal.TabIndex = 18;
+            this.lblETotal.TabIndex = 16;
             this.lblETotal.Text = "Total";
             // 
             // lblUpdateTime
@@ -196,7 +217,7 @@
             this.lblUpdateTime.Location = new System.Drawing.Point(622, 84);
             this.lblUpdateTime.Name = "lblUpdateTime";
             this.lblUpdateTime.Size = new System.Drawing.Size(179, 19);
-            this.lblUpdateTime.TabIndex = 17;
+            this.lblUpdateTime.TabIndex = 15;
             this.lblUpdateTime.Text = "23 de diciembre del 2014";
             // 
             // lblEUpdateTime
@@ -206,7 +227,7 @@
             this.lblEUpdateTime.Location = new System.Drawing.Point(489, 65);
             this.lblEUpdateTime.Name = "lblEUpdateTime";
             this.lblEUpdateTime.Size = new System.Drawing.Size(124, 19);
-            this.lblEUpdateTime.TabIndex = 16;
+            this.lblEUpdateTime.TabIndex = 14;
             this.lblEUpdateTime.Text = "Fecha modificación";
             // 
             // lblUpdateUser
@@ -217,7 +238,7 @@
             this.lblUpdateUser.Location = new System.Drawing.Point(359, 84);
             this.lblUpdateUser.Name = "lblUpdateUser";
             this.lblUpdateUser.Size = new System.Drawing.Size(51, 19);
-            this.lblUpdateUser.TabIndex = 15;
+            this.lblUpdateUser.TabIndex = 13;
             this.lblUpdateUser.Text = "admin";
             // 
             // lblEUpdateUser
@@ -227,7 +248,7 @@
             this.lblEUpdateUser.Location = new System.Drawing.Point(253, 65);
             this.lblEUpdateUser.Name = "lblEUpdateUser";
             this.lblEUpdateUser.Size = new System.Drawing.Size(100, 19);
-            this.lblEUpdateUser.TabIndex = 14;
+            this.lblEUpdateUser.TabIndex = 12;
             this.lblEUpdateUser.Text = "Modificó venta";
             // 
             // lblCreateUser
@@ -238,7 +259,7 @@
             this.lblCreateUser.Location = new System.Drawing.Point(70, 84);
             this.lblCreateUser.Name = "lblCreateUser";
             this.lblCreateUser.Size = new System.Drawing.Size(50, 19);
-            this.lblCreateUser.TabIndex = 13;
+            this.lblCreateUser.TabIndex = 11;
             this.lblCreateUser.Text = "MARY";
             // 
             // lblECreateUser
@@ -248,7 +269,7 @@
             this.lblECreateUser.Location = new System.Drawing.Point(12, 65);
             this.lblECreateUser.Name = "lblECreateUser";
             this.lblECreateUser.Size = new System.Drawing.Size(52, 19);
-            this.lblECreateUser.TabIndex = 12;
+            this.lblECreateUser.TabIndex = 10;
             this.lblECreateUser.Text = "Vendió";
             // 
             // lblTerminacion
@@ -259,7 +280,7 @@
             this.lblTerminacion.Location = new System.Drawing.Point(952, 28);
             this.lblTerminacion.Name = "lblTerminacion";
             this.lblTerminacion.Size = new System.Drawing.Size(41, 19);
-            this.lblTerminacion.TabIndex = 7;
+            this.lblTerminacion.TabIndex = 9;
             this.lblTerminacion.Text = "1233";
             // 
             // lblETerminacion
@@ -269,7 +290,7 @@
             this.lblETerminacion.Location = new System.Drawing.Point(801, 9);
             this.lblETerminacion.Name = "lblETerminacion";
             this.lblETerminacion.Size = new System.Drawing.Size(145, 19);
-            this.lblETerminacion.TabIndex = 6;
+            this.lblETerminacion.TabIndex = 8;
             this.lblETerminacion.Text = "Terminación de tarjeta";
             // 
             // lblFolioTicket
@@ -280,7 +301,7 @@
             this.lblFolioTicket.Location = new System.Drawing.Point(710, 28);
             this.lblFolioTicket.Name = "lblFolioTicket";
             this.lblFolioTicket.Size = new System.Drawing.Size(73, 19);
-            this.lblFolioTicket.TabIndex = 5;
+            this.lblFolioTicket.TabIndex = 7;
             this.lblFolioTicket.Text = "36259323";
             // 
             // lblEFolioTicket
@@ -290,7 +311,7 @@
             this.lblEFolioTicket.Location = new System.Drawing.Point(585, 9);
             this.lblEFolioTicket.Name = "lblEFolioTicket";
             this.lblEFolioTicket.Size = new System.Drawing.Size(129, 19);
-            this.lblEFolioTicket.TabIndex = 4;
+            this.lblEFolioTicket.TabIndex = 6;
             this.lblEFolioTicket.Text = "Folio ticket terminal";
             // 
             // lblTipoPago
@@ -334,27 +355,6 @@
             this.lblEFecha.Size = new System.Drawing.Size(44, 19);
             this.lblEFecha.TabIndex = 0;
             this.lblEFecha.Text = "Fecha";
-            // 
-            // lblRemision
-            // 
-            this.lblRemision.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblRemision.AutoSize = true;
-            this.lblRemision.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblRemision.Location = new System.Drawing.Point(496, 28);
-            this.lblRemision.Name = "lblRemision";
-            this.lblRemision.Size = new System.Drawing.Size(73, 19);
-            this.lblRemision.TabIndex = 21;
-            this.lblRemision.Text = "00000004";
-            // 
-            // lblERemision
-            // 
-            this.lblERemision.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblERemision.AutoSize = true;
-            this.lblERemision.Location = new System.Drawing.Point(396, 9);
-            this.lblERemision.Name = "lblERemision";
-            this.lblERemision.Size = new System.Drawing.Size(94, 19);
-            this.lblERemision.TabIndex = 20;
-            this.lblERemision.Text = "Folio remisión";
             // 
             // frmVisualizarVenta
             // 

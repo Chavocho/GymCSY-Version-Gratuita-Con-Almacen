@@ -45,7 +45,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(406, 163);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(101, 30);
-            this.btnAceptar.TabIndex = 2;
+            this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -59,7 +59,7 @@
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(287, 84);
-            this.txtDescripcion.TabIndex = 1;
+            this.txtDescripcion.TabIndex = 5;
             // 
             // lblDescripcion
             // 
@@ -68,7 +68,7 @@
             this.lblDescripcion.Location = new System.Drawing.Point(220, 37);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(91, 21);
-            this.lblDescripcion.TabIndex = 9;
+            this.lblDescripcion.TabIndex = 4;
             this.lblDescripcion.Text = "Descripción";
             // 
             // lblEfectivo
@@ -78,7 +78,7 @@
             this.lblEfectivo.Location = new System.Drawing.Point(12, 37);
             this.lblEfectivo.Name = "lblEfectivo";
             this.lblEfectivo.Size = new System.Drawing.Size(80, 21);
-            this.lblEfectivo.TabIndex = 10;
+            this.lblEfectivo.TabIndex = 2;
             this.lblEfectivo.Text = "Efectivo a ";
             // 
             // txtEfectivo
@@ -87,7 +87,7 @@
             this.txtEfectivo.Location = new System.Drawing.Point(12, 61);
             this.txtEfectivo.Name = "txtEfectivo";
             this.txtEfectivo.Size = new System.Drawing.Size(202, 29);
-            this.txtEfectivo.TabIndex = 0;
+            this.txtEfectivo.TabIndex = 3;
             this.txtEfectivo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEfectivo_KeyPress);
             this.txtEfectivo.LostFocus += new System.EventHandler(this.txtEfectivo_LostFocus);
             // 
@@ -98,7 +98,7 @@
             this.lblAtiende.Location = new System.Drawing.Point(82, 9);
             this.lblAtiende.Name = "lblAtiende";
             this.lblAtiende.Size = new System.Drawing.Size(60, 20);
-            this.lblAtiende.TabIndex = 13;
+            this.lblAtiende.TabIndex = 1;
             this.lblAtiende.Text = "Alguien";
             // 
             // lblEtiquetaAtiende
@@ -108,7 +108,7 @@
             this.lblEtiquetaAtiende.Location = new System.Drawing.Point(12, 9);
             this.lblEtiquetaAtiende.Name = "lblEtiquetaAtiende";
             this.lblEtiquetaAtiende.Size = new System.Drawing.Size(64, 20);
-            this.lblEtiquetaAtiende.TabIndex = 12;
+            this.lblEtiquetaAtiende.TabIndex = 0;
             this.lblEtiquetaAtiende.Text = "Atiende:";
             // 
             // frmEntradaSalida

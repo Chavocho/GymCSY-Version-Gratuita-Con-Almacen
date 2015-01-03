@@ -418,7 +418,7 @@
             this.groupBox2.Location = new System.Drawing.Point(12, 118);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(594, 100);
-            this.groupBox2.TabIndex = 26;
+            this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Precios mujeres";
             // 
@@ -688,7 +688,7 @@
             this.btnPreciosHombres.Location = new System.Drawing.Point(474, 254);
             this.btnPreciosHombres.Name = "btnPreciosHombres";
             this.btnPreciosHombres.Size = new System.Drawing.Size(132, 34);
-            this.btnPreciosHombres.TabIndex = 27;
+            this.btnPreciosHombres.TabIndex = 4;
             this.btnPreciosHombres.Text = "Asignar precios hombres";
             this.btnPreciosHombres.UseVisualStyleBackColor = true;
             this.btnPreciosHombres.Click += new System.EventHandler(this.btnPreciosHombres_Click);
@@ -699,7 +699,7 @@
             this.btnPreciosMujeres.Location = new System.Drawing.Point(336, 254);
             this.btnPreciosMujeres.Name = "btnPreciosMujeres";
             this.btnPreciosMujeres.Size = new System.Drawing.Size(132, 34);
-            this.btnPreciosMujeres.TabIndex = 28;
+            this.btnPreciosMujeres.TabIndex = 3;
             this.btnPreciosMujeres.Text = "Asignar precios mujeres";
             this.btnPreciosMujeres.UseVisualStyleBackColor = true;
             this.btnPreciosMujeres.Click += new System.EventHandler(this.btnPreciosMujeres_Click);
@@ -711,7 +711,7 @@
             this.chbFolio.Location = new System.Drawing.Point(12, 224);
             this.chbFolio.Name = "chbFolio";
             this.chbFolio.Size = new System.Drawing.Size(219, 42);
-            this.chbFolio.TabIndex = 45;
+            this.chbFolio.TabIndex = 2;
             this.chbFolio.Text = "Asignar folio automáticamente \r\nde membresía/locker";
             this.chbFolio.UseVisualStyleBackColor = true;
             this.chbFolio.CheckedChanged += new System.EventHandler(this.chbFolio_CheckedChanged);

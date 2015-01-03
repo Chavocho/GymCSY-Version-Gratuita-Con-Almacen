@@ -50,7 +50,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(247, 280);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(151, 34);
-            this.btnAceptar.TabIndex = 16;
+            this.btnAceptar.TabIndex = 0;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);

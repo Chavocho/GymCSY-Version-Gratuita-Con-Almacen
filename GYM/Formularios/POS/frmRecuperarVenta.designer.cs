@@ -70,7 +70,7 @@
             this.dgvVentas.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVentas.Size = new System.Drawing.Size(660, 242);
-            this.dgvVentas.TabIndex = 2;
+            this.dgvVentas.TabIndex = 3;
             this.dgvVentas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_CellClick);
             // 
             // ID
@@ -106,7 +106,7 @@
             this.txtFolio.Location = new System.Drawing.Point(446, 49);
             this.txtFolio.Name = "txtFolio";
             this.txtFolio.Size = new System.Drawing.Size(226, 29);
-            this.txtFolio.TabIndex = 1;
+            this.txtFolio.TabIndex = 2;
             this.txtFolio.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFolio_KeyDown);
             // 
             // lblInstrucciones
@@ -116,7 +116,7 @@
             this.lblInstrucciones.Location = new System.Drawing.Point(442, 26);
             this.lblInstrucciones.Name = "lblInstrucciones";
             this.lblInstrucciones.Size = new System.Drawing.Size(107, 19);
-            this.lblInstrucciones.TabIndex = 26;
+            this.lblInstrucciones.TabIndex = 1;
             this.lblInstrucciones.Text = "Buscar por folio:";
             // 
             // dtpFechaInicio
@@ -125,7 +125,7 @@
             this.dtpFechaInicio.Location = new System.Drawing.Point(6, 40);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(200, 29);
-            this.dtpFechaInicio.TabIndex = 0;
+            this.dtpFechaInicio.TabIndex = 1;
             this.dtpFechaInicio.ValueChanged += new System.EventHandler(this.dtpFechaInicio_ValueChanged);
             // 
             // dtpFechaFin
@@ -134,7 +134,7 @@
             this.dtpFechaFin.Location = new System.Drawing.Point(212, 40);
             this.dtpFechaFin.Name = "dtpFechaFin";
             this.dtpFechaFin.Size = new System.Drawing.Size(200, 29);
-            this.dtpFechaFin.TabIndex = 1;
+            this.dtpFechaFin.TabIndex = 3;
             this.dtpFechaFin.ValueChanged += new System.EventHandler(this.dtpFechaFin_ValueChanged);
             // 
             // lblEtiquetaInicio
@@ -144,7 +144,7 @@
             this.lblEtiquetaInicio.Location = new System.Drawing.Point(6, 17);
             this.lblEtiquetaInicio.Name = "lblEtiquetaInicio";
             this.lblEtiquetaInicio.Size = new System.Drawing.Size(83, 19);
-            this.lblEtiquetaInicio.TabIndex = 30;
+            this.lblEtiquetaInicio.TabIndex = 0;
             this.lblEtiquetaInicio.Text = "Fecha Inicio:";
             // 
             // lblEtiquetaFin
@@ -154,7 +154,7 @@
             this.lblEtiquetaFin.Location = new System.Drawing.Point(208, 17);
             this.lblEtiquetaFin.Name = "lblEtiquetaFin";
             this.lblEtiquetaFin.Size = new System.Drawing.Size(69, 19);
-            this.lblEtiquetaFin.TabIndex = 31;
+            this.lblEtiquetaFin.TabIndex = 2;
             this.lblEtiquetaFin.Text = "Fecha Fin:";
             // 
             // btnAceptar
@@ -168,7 +168,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(584, 339);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(88, 32);
-            this.btnAceptar.TabIndex = 3;
+            this.btnAceptar.TabIndex = 4;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);

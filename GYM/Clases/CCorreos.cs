@@ -134,28 +134,31 @@ namespace GYM.Clases
         {
             try
             {
-                email = new MailMessage();
-                smtp = new SmtpClient();
-                string[] destinatarios = correosDestino.Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                if (CConfiguracionXML.ExisteConfiguracion("correo"))
+                {
+                    email = new MailMessage();
+                    smtp = new SmtpClient();
+                    string[] destinatarios = correosDestino.Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-                smtp.Credentials = new NetworkCredential(@correoOrigen, @contraseña);
-                smtp.Host = host;
-                smtp.Port = puerto;
-                smtp.EnableSsl = true;
-                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                    smtp.Credentials = new NetworkCredential(@correoOrigen, @contraseña);
+                    smtp.Host = host;
+                    smtp.Port = puerto;
+                    smtp.EnableSsl = true;
+                    smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
 
-                for (int i = 0; i < destinatarios.Length; i++)
-                    email.To.Add(new MailAddress(destinatarios[i]));
-                email.From = new MailAddress(correoOrigen, "GymCSY", Encoding.UTF8);
-                email.Subject = asunto;
-                email.Body = cuerpo;
-                email.IsBodyHtml = false;
-                if (adjuntos != null)
-                    for (int i = 0; i < adjuntos.Length; i++)
-                        email.Attachments.Add(new Attachment(adjuntos[i]));
-                smtp.Send(email);
-                email.Dispose();
-                smtp.Dispose();
+                    for (int i = 0; i < destinatarios.Length; i++)
+                        email.To.Add(new MailAddress(destinatarios[i]));
+                    email.From = new MailAddress(correoOrigen, "GymCSY", Encoding.UTF8);
+                    email.Subject = asunto;
+                    email.Body = cuerpo;
+                    email.IsBodyHtml = false;
+                    if (adjuntos != null)
+                        for (int i = 0; i < adjuntos.Length; i++)
+                            email.Attachments.Add(new Attachment(adjuntos[i]));
+                    smtp.Send(email);
+                    email.Dispose();
+                    smtp.Dispose();
+                }
             }
             catch (SmtpFailedRecipientsException ex)
             {

@@ -80,7 +80,7 @@
             this.dgvProductos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductos.Size = new System.Drawing.Size(808, 255);
-            this.dgvProductos.TabIndex = 5;
+            this.dgvProductos.TabIndex = 11;
             this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
             this.dgvProductos.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvProductos_RowsAdded);
             this.dgvProductos.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvProductos_RowsRemoved);
@@ -126,7 +126,7 @@
             this.btnNueva.Location = new System.Drawing.Point(12, 373);
             this.btnNueva.Name = "btnNueva";
             this.btnNueva.Size = new System.Drawing.Size(102, 48);
-            this.btnNueva.TabIndex = 1;
+            this.btnNueva.TabIndex = 4;
             this.btnNueva.Text = "Nueva Venta (F1)";
             this.btnNueva.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNueva.UseVisualStyleBackColor = true;
@@ -144,7 +144,7 @@
             this.btnProductos.Location = new System.Drawing.Point(336, 373);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(102, 48);
-            this.btnProductos.TabIndex = 3;
+            this.btnProductos.TabIndex = 7;
             this.btnProductos.Text = "Productos\r\n(F4)";
             this.btnProductos.UseVisualStyleBackColor = true;
             this.btnProductos.Visible = false;
@@ -162,7 +162,7 @@
             this.btnRecuperar.Location = new System.Drawing.Point(120, 373);
             this.btnRecuperar.Name = "btnRecuperar";
             this.btnRecuperar.Size = new System.Drawing.Size(102, 48);
-            this.btnRecuperar.TabIndex = 2;
+            this.btnRecuperar.TabIndex = 5;
             this.btnRecuperar.Text = "Recuperar Venta (F2)";
             this.btnRecuperar.UseVisualStyleBackColor = true;
             this.btnRecuperar.Click += new System.EventHandler(this.btnRecuperar_Click);
@@ -179,7 +179,7 @@
             this.btnDevolver.Location = new System.Drawing.Point(444, 373);
             this.btnDevolver.Name = "btnDevolver";
             this.btnDevolver.Size = new System.Drawing.Size(102, 48);
-            this.btnDevolver.TabIndex = 4;
+            this.btnDevolver.TabIndex = 8;
             this.btnDevolver.Text = "Devolver Producto(s) (F5)";
             this.btnDevolver.UseVisualStyleBackColor = true;
             this.btnDevolver.Visible = false;
@@ -192,7 +192,7 @@
             this.lblTotal.Location = new System.Drawing.Point(740, 295);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(49, 21);
-            this.lblTotal.TabIndex = 10;
+            this.lblTotal.TabIndex = 15;
             this.lblTotal.Text = "$0.00";
             this.lblTotal.Visible = false;
             // 
@@ -203,7 +203,7 @@
             this.lblEtiquetaAtiende.Location = new System.Drawing.Point(8, 9);
             this.lblEtiquetaAtiende.Name = "lblEtiquetaAtiende";
             this.lblEtiquetaAtiende.Size = new System.Drawing.Size(81, 20);
-            this.lblEtiquetaAtiende.TabIndex = 11;
+            this.lblEtiquetaAtiende.TabIndex = 0;
             this.lblEtiquetaAtiende.Text = "Le atiende:";
             // 
             // lblUsuario
@@ -213,7 +213,7 @@
             this.lblUsuario.Location = new System.Drawing.Point(95, 9);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(59, 20);
-            this.lblUsuario.TabIndex = 12;
+            this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Usuario";
             // 
             // lblNumProductos
@@ -234,7 +234,7 @@
             this.lblEtiquetaNumProductos.Location = new System.Drawing.Point(464, 295);
             this.lblEtiquetaNumProductos.Name = "lblEtiquetaNumProductos";
             this.lblEtiquetaNumProductos.Size = new System.Drawing.Size(125, 21);
-            this.lblEtiquetaNumProductos.TabIndex = 14;
+            this.lblEtiquetaNumProductos.TabIndex = 12;
             this.lblEtiquetaNumProductos.Text = "Num. productos:";
             this.lblEtiquetaNumProductos.Visible = false;
             // 
@@ -245,7 +245,7 @@
             this.lblEtiquetaTotal.Location = new System.Drawing.Point(688, 295);
             this.lblEtiquetaTotal.Name = "lblEtiquetaTotal";
             this.lblEtiquetaTotal.Size = new System.Drawing.Size(47, 21);
-            this.lblEtiquetaTotal.TabIndex = 15;
+            this.lblEtiquetaTotal.TabIndex = 14;
             this.lblEtiquetaTotal.Text = "Total:";
             this.lblEtiquetaTotal.Visible = false;
             // 
@@ -256,7 +256,7 @@
             this.lblFolio.Location = new System.Drawing.Point(699, 9);
             this.lblFolio.Name = "lblFolio";
             this.lblFolio.Size = new System.Drawing.Size(73, 20);
-            this.lblFolio.TabIndex = 18;
+            this.lblFolio.TabIndex = 3;
             this.lblFolio.Text = "00000000";
             this.lblFolio.Visible = false;
             // 
@@ -267,7 +267,7 @@
             this.lblEtiquetaFolio.Location = new System.Drawing.Point(648, 9);
             this.lblEtiquetaFolio.Name = "lblEtiquetaFolio";
             this.lblEtiquetaFolio.Size = new System.Drawing.Size(45, 20);
-            this.lblEtiquetaFolio.TabIndex = 17;
+            this.lblEtiquetaFolio.TabIndex = 2;
             this.lblEtiquetaFolio.Text = "Folio:";
             this.lblEtiquetaFolio.Visible = false;
             // 
@@ -278,7 +278,7 @@
             this.txtCodigo.Location = new System.Drawing.Point(12, 298);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(318, 29);
-            this.txtCodigo.TabIndex = 0;
+            this.txtCodigo.TabIndex = 10;
             this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // btnCancelar
@@ -293,7 +293,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(228, 373);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(102, 48);
-            this.btnCancelar.TabIndex = 19;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar Ventas (F3)";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -314,7 +314,7 @@
             this.btnMenos.Location = new System.Drawing.Point(826, 104);
             this.btnMenos.Name = "btnMenos";
             this.btnMenos.Size = new System.Drawing.Size(35, 35);
-            this.btnMenos.TabIndex = 7;
+            this.btnMenos.TabIndex = 17;
             this.btnMenos.UseVisualStyleBackColor = true;
             this.btnMenos.Click += new System.EventHandler(this.btnMenos_Click);
             // 
@@ -334,7 +334,7 @@
             this.btnMas.Location = new System.Drawing.Point(826, 63);
             this.btnMas.Name = "btnMas";
             this.btnMas.Size = new System.Drawing.Size(35, 35);
-            this.btnMas.TabIndex = 6;
+            this.btnMas.TabIndex = 16;
             this.btnMas.UseVisualStyleBackColor = true;
             this.btnMas.Click += new System.EventHandler(this.btnMas_Click);
             // 
@@ -351,7 +351,7 @@
             this.btnCobrar.Location = new System.Drawing.Point(759, 373);
             this.btnCobrar.Name = "btnCobrar";
             this.btnCobrar.Size = new System.Drawing.Size(102, 48);
-            this.btnCobrar.TabIndex = 8;
+            this.btnCobrar.TabIndex = 9;
             this.btnCobrar.Text = "Cobrar\r\n(F6)";
             this.btnCobrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCobrar.UseVisualStyleBackColor = true;

@@ -60,7 +60,7 @@
             this.btnMembresias.Location = new System.Drawing.Point(12, 87);
             this.btnMembresias.Name = "btnMembresias";
             this.btnMembresias.Size = new System.Drawing.Size(126, 50);
-            this.btnMembresias.TabIndex = 19;
+            this.btnMembresias.TabIndex = 2;
             this.btnMembresias.Text = "Visualizar\r\nventa";
             this.btnMembresias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMembresias.UseVisualStyleBackColor = true;
@@ -117,7 +117,7 @@
             this.dgvVentas.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVentas.Size = new System.Drawing.Size(828, 463);
-            this.dgvVentas.TabIndex = 17;
+            this.dgvVentas.TabIndex = 1;
             this.dgvVentas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_CellClick);
             // 
             // IDV
@@ -168,7 +168,7 @@
             this.grbFechas.Location = new System.Drawing.Point(373, 12);
             this.grbFechas.Name = "grbFechas";
             this.grbFechas.Size = new System.Drawing.Size(599, 69);
-            this.grbFechas.TabIndex = 20;
+            this.grbFechas.TabIndex = 0;
             this.grbFechas.TabStop = false;
             this.grbFechas.Text = "Búsqueda por fechas";
             // 
@@ -189,7 +189,7 @@
             this.lblFechaFin.Location = new System.Drawing.Point(255, 20);
             this.lblFechaFin.Name = "lblFechaFin";
             this.lblFechaFin.Size = new System.Drawing.Size(71, 15);
-            this.lblFechaFin.TabIndex = 3;
+            this.lblFechaFin.TabIndex = 2;
             this.lblFechaFin.Text = "Fecha de fin";
             // 
             // dtpFechaFin
@@ -199,7 +199,7 @@
             this.dtpFechaFin.Location = new System.Drawing.Point(258, 38);
             this.dtpFechaFin.Name = "dtpFechaFin";
             this.dtpFechaFin.Size = new System.Drawing.Size(246, 25);
-            this.dtpFechaFin.TabIndex = 2;
+            this.dtpFechaFin.TabIndex = 3;
             this.dtpFechaFin.ValueChanged += new System.EventHandler(this.dtpFechas_ValueChanged);
             // 
             // lblFechaInicio
@@ -209,7 +209,7 @@
             this.lblFechaInicio.Location = new System.Drawing.Point(3, 20);
             this.lblFechaInicio.Name = "lblFechaInicio";
             this.lblFechaInicio.Size = new System.Drawing.Size(86, 15);
-            this.lblFechaInicio.TabIndex = 1;
+            this.lblFechaInicio.TabIndex = 0;
             this.lblFechaInicio.Text = "Fecha de inicio";
             // 
             // dtpFechaInicio
@@ -219,7 +219,7 @@
             this.dtpFechaInicio.Location = new System.Drawing.Point(6, 38);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(246, 25);
-            this.dtpFechaInicio.TabIndex = 0;
+            this.dtpFechaInicio.TabIndex = 1;
             this.dtpFechaInicio.ValueChanged += new System.EventHandler(this.dtpFechas_ValueChanged);
             // 
             // bgwBusqueda

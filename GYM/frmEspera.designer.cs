@@ -40,7 +40,7 @@
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(502, 19);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.progressBar1.TabIndex = 0;
+            this.progressBar1.TabIndex = 1;
             // 
             // lblMensaje
             // 
@@ -50,7 +50,7 @@
             this.lblMensaje.Location = new System.Drawing.Point(225, 18);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(77, 21);
-            this.lblMensaje.TabIndex = 1;
+            this.lblMensaje.TabIndex = 0;
             this.lblMensaje.Text = "Buscando";
             // 
             // frmEspera

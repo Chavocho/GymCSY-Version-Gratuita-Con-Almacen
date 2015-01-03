@@ -125,7 +125,7 @@
             this.btnPredeterminado.Location = new System.Drawing.Point(316, 137);
             this.btnPredeterminado.Name = "btnPredeterminado";
             this.btnPredeterminado.Size = new System.Drawing.Size(102, 27);
-            this.btnPredeterminado.TabIndex = 3;
+            this.btnPredeterminado.TabIndex = 9;
             this.btnPredeterminado.Text = "Predeterminado";
             this.btnPredeterminado.UseVisualStyleBackColor = true;
             this.btnPredeterminado.Click += new System.EventHandler(this.btnPredeterminado_Click);
@@ -137,7 +137,7 @@
             this.lblTemaCumple.Location = new System.Drawing.Point(6, 222);
             this.lblTemaCumple.Name = "lblTemaCumple";
             this.lblTemaCumple.Size = new System.Drawing.Size(51, 21);
-            this.lblTemaCumple.TabIndex = 20;
+            this.lblTemaCumple.TabIndex = 13;
             this.lblTemaCumple.Text = "Tema:";
             // 
             // cbxTemaCumple
@@ -152,7 +152,7 @@
             this.cbxTemaCumple.Location = new System.Drawing.Point(63, 211);
             this.cbxTemaCumple.Name = "cbxTemaCumple";
             this.cbxTemaCumple.Size = new System.Drawing.Size(234, 29);
-            this.cbxTemaCumple.TabIndex = 5;
+            this.cbxTemaCumple.TabIndex = 14;
             this.cbxTemaCumple.SelectedIndexChanged += new System.EventHandler(this.cbxTemaCumple_SelectedIndexChanged);
             // 
             // txtFondoCumple
@@ -162,7 +162,7 @@
             this.txtFondoCumple.Location = new System.Drawing.Point(480, 257);
             this.txtFondoCumple.Name = "txtFondoCumple";
             this.txtFondoCumple.Size = new System.Drawing.Size(114, 29);
-            this.txtFondoCumple.TabIndex = 7;
+            this.txtFondoCumple.TabIndex = 0;
             this.txtFondoCumple.GotFocus += new System.EventHandler(this.txtFondoCumple_GotFocus);
             this.txtFondoCumple.LostFocus += new System.EventHandler(this.txtFondoCumple_LostFocus);
             // 
@@ -187,7 +187,7 @@
             this.lblFondoCumple.Location = new System.Drawing.Point(303, 260);
             this.lblFondoCumple.Name = "lblFondoCumple";
             this.lblFondoCumple.Size = new System.Drawing.Size(117, 21);
-            this.lblFondoCumple.TabIndex = 16;
+            this.lblFondoCumple.TabIndex = 17;
             this.lblFondoCumple.Text = "Color de fondo:";
             // 
             // txtLetrasCumple
@@ -197,7 +197,7 @@
             this.txtLetrasCumple.Location = new System.Drawing.Point(183, 257);
             this.txtLetrasCumple.Name = "txtLetrasCumple";
             this.txtLetrasCumple.Size = new System.Drawing.Size(114, 29);
-            this.txtLetrasCumple.TabIndex = 6;
+            this.txtLetrasCumple.TabIndex = 16;
             this.txtLetrasCumple.GotFocus += new System.EventHandler(this.txtLetrasCumple_GotFocus);
             this.txtLetrasCumple.LostFocus += new System.EventHandler(this.txtLetrasCumple_LostFocus);
             // 
@@ -222,7 +222,7 @@
             this.lblLetrasCumple.Location = new System.Drawing.Point(6, 260);
             this.lblLetrasCumple.Name = "lblLetrasCumple";
             this.lblLetrasCumple.Size = new System.Drawing.Size(114, 21);
-            this.lblLetrasCumple.TabIndex = 13;
+            this.lblLetrasCumple.TabIndex = 15;
             this.lblLetrasCumple.Text = "Color de letras:";
             // 
             // lblPersonalizarCumple
@@ -254,7 +254,7 @@
             this.btnQuitar.Location = new System.Drawing.Point(424, 137);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(50, 27);
-            this.btnQuitar.TabIndex = 4;
+            this.btnQuitar.TabIndex = 10;
             this.btnQuitar.UseVisualStyleBackColor = true;
             this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
             // 
@@ -265,7 +265,7 @@
             this.lblEtiquetaFondo.Location = new System.Drawing.Point(343, 25);
             this.lblEtiquetaFondo.Name = "lblEtiquetaFondo";
             this.lblEtiquetaFondo.Size = new System.Drawing.Size(131, 21);
-            this.lblEtiquetaFondo.TabIndex = 9;
+            this.lblEtiquetaFondo.TabIndex = 8;
             this.lblEtiquetaFondo.Text = "Imagen de fondo:";
             // 
             // lblPersonalizar
@@ -276,7 +276,7 @@
             this.lblPersonalizar.Location = new System.Drawing.Point(6, 61);
             this.lblPersonalizar.Name = "lblPersonalizar";
             this.lblPersonalizar.Size = new System.Drawing.Size(188, 19);
-            this.lblPersonalizar.TabIndex = 8;
+            this.lblPersonalizar.TabIndex = 2;
             this.lblPersonalizar.Text = "Personalizar colores ventanas";
             // 
             // txtRGBFondo
@@ -286,7 +286,7 @@
             this.txtRGBFondo.Location = new System.Drawing.Point(183, 135);
             this.txtRGBFondo.Name = "txtRGBFondo";
             this.txtRGBFondo.Size = new System.Drawing.Size(114, 29);
-            this.txtRGBFondo.TabIndex = 2;
+            this.txtRGBFondo.TabIndex = 7;
             this.txtRGBFondo.GotFocus += new System.EventHandler(this.txtRGBFondo_GotFocus);
             this.txtRGBFondo.LostFocus += new System.EventHandler(this.txtRGBFondo_LostFocus);
             // 
@@ -297,7 +297,7 @@
             this.txtRGBLetras.Location = new System.Drawing.Point(183, 94);
             this.txtRGBLetras.Name = "txtRGBLetras";
             this.txtRGBLetras.Size = new System.Drawing.Size(114, 29);
-            this.txtRGBLetras.TabIndex = 1;
+            this.txtRGBLetras.TabIndex = 5;
             this.txtRGBLetras.GotFocus += new System.EventHandler(this.txtRGBLetras_GotFocus);
             this.txtRGBLetras.LostFocus += new System.EventHandler(this.txtRGBLetras_LostFocus);
             // 
@@ -334,7 +334,7 @@
             this.lblFondo.Location = new System.Drawing.Point(6, 138);
             this.lblFondo.Name = "lblFondo";
             this.lblFondo.Size = new System.Drawing.Size(117, 21);
-            this.lblFondo.TabIndex = 3;
+            this.lblFondo.TabIndex = 6;
             this.lblFondo.Text = "Color de fondo:";
             // 
             // lblLetras
@@ -345,7 +345,7 @@
             this.lblLetras.Location = new System.Drawing.Point(6, 97);
             this.lblLetras.Name = "lblLetras";
             this.lblLetras.Size = new System.Drawing.Size(114, 21);
-            this.lblLetras.TabIndex = 2;
+            this.lblLetras.TabIndex = 3;
             this.lblLetras.Text = "Color de letras:";
             // 
             // lblTema
@@ -355,7 +355,7 @@
             this.lblTema.Location = new System.Drawing.Point(6, 25);
             this.lblTema.Name = "lblTema";
             this.lblTema.Size = new System.Drawing.Size(51, 21);
-            this.lblTema.TabIndex = 1;
+            this.lblTema.TabIndex = 0;
             this.lblTema.Text = "Tema:";
             // 
             // cbxTema
@@ -372,7 +372,7 @@
             this.cbxTema.Location = new System.Drawing.Point(63, 22);
             this.cbxTema.Name = "cbxTema";
             this.cbxTema.Size = new System.Drawing.Size(234, 29);
-            this.cbxTema.TabIndex = 0;
+            this.cbxTema.TabIndex = 1;
             this.cbxTema.SelectedIndexChanged += new System.EventHandler(this.cbxTema_SelectedIndexChanged);
             // 
             // shapeContainer1
@@ -384,7 +384,7 @@
             this.lnsSeparador02,
             this.lnsSeparador01});
             this.shapeContainer1.Size = new System.Drawing.Size(754, 278);
-            this.shapeContainer1.TabIndex = 21;
+            this.shapeContainer1.TabIndex = 11;
             this.shapeContainer1.TabStop = false;
             // 
             // lnsSeparador02
@@ -413,7 +413,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(669, 653);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(104, 36);
-            this.btnAceptar.TabIndex = 2;
+            this.btnAceptar.TabIndex = 4;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -446,7 +446,7 @@
             this.btnQuitarPromo06.Location = new System.Drawing.Point(513, 294);
             this.btnQuitarPromo06.Name = "btnQuitarPromo06";
             this.btnQuitarPromo06.Size = new System.Drawing.Size(50, 27);
-            this.btnQuitarPromo06.TabIndex = 27;
+            this.btnQuitarPromo06.TabIndex = 5;
             this.btnQuitarPromo06.UseVisualStyleBackColor = true;
             this.btnQuitarPromo06.Click += new System.EventHandler(this.btnQuitarPromo06_Click);
             // 
@@ -456,7 +456,7 @@
             this.btnQuitarPromo05.Location = new System.Drawing.Point(262, 294);
             this.btnQuitarPromo05.Name = "btnQuitarPromo05";
             this.btnQuitarPromo05.Size = new System.Drawing.Size(50, 27);
-            this.btnQuitarPromo05.TabIndex = 26;
+            this.btnQuitarPromo05.TabIndex = 4;
             this.btnQuitarPromo05.UseVisualStyleBackColor = true;
             this.btnQuitarPromo05.Click += new System.EventHandler(this.btnQuitarPromo05_Click);
             // 
@@ -466,7 +466,7 @@
             this.btnQuitarPromo04.Location = new System.Drawing.Point(11, 294);
             this.btnQuitarPromo04.Name = "btnQuitarPromo04";
             this.btnQuitarPromo04.Size = new System.Drawing.Size(50, 27);
-            this.btnQuitarPromo04.TabIndex = 25;
+            this.btnQuitarPromo04.TabIndex = 3;
             this.btnQuitarPromo04.UseVisualStyleBackColor = true;
             this.btnQuitarPromo04.Click += new System.EventHandler(this.btnQuitarPromo04_Click);
             // 
@@ -476,7 +476,7 @@
             this.btnQuitarPromo03.Location = new System.Drawing.Point(513, 140);
             this.btnQuitarPromo03.Name = "btnQuitarPromo03";
             this.btnQuitarPromo03.Size = new System.Drawing.Size(50, 27);
-            this.btnQuitarPromo03.TabIndex = 24;
+            this.btnQuitarPromo03.TabIndex = 2;
             this.btnQuitarPromo03.UseVisualStyleBackColor = true;
             this.btnQuitarPromo03.Click += new System.EventHandler(this.btnQuitarPromo03_Click);
             // 
@@ -486,7 +486,7 @@
             this.btnQuitarPromo02.Location = new System.Drawing.Point(262, 140);
             this.btnQuitarPromo02.Name = "btnQuitarPromo02";
             this.btnQuitarPromo02.Size = new System.Drawing.Size(50, 27);
-            this.btnQuitarPromo02.TabIndex = 23;
+            this.btnQuitarPromo02.TabIndex = 1;
             this.btnQuitarPromo02.UseVisualStyleBackColor = true;
             this.btnQuitarPromo02.Click += new System.EventHandler(this.btnQuitarPromo02_Click);
             // 
@@ -496,7 +496,7 @@
             this.btnQuitarPromo01.Location = new System.Drawing.Point(11, 140);
             this.btnQuitarPromo01.Name = "btnQuitarPromo01";
             this.btnQuitarPromo01.Size = new System.Drawing.Size(50, 27);
-            this.btnQuitarPromo01.TabIndex = 22;
+            this.btnQuitarPromo01.TabIndex = 0;
             this.btnQuitarPromo01.UseVisualStyleBackColor = true;
             this.btnQuitarPromo01.Click += new System.EventHandler(this.btnQuitarPromo01_Click);
             // 
@@ -584,7 +584,7 @@
             this.chbLectorHuella.Location = new System.Drawing.Point(12, 663);
             this.chbLectorHuella.Name = "chbLectorHuella";
             this.chbLectorHuella.Size = new System.Drawing.Size(235, 25);
-            this.chbLectorHuella.TabIndex = 3;
+            this.chbLectorHuella.TabIndex = 2;
             this.chbLectorHuella.Text = "Utilizar lector de huella digital";
             this.chbLectorHuella.UseVisualStyleBackColor = true;
             // 
@@ -595,7 +595,7 @@
             this.chbRegistro.Location = new System.Drawing.Point(253, 663);
             this.chbRegistro.Name = "chbRegistro";
             this.chbRegistro.Size = new System.Drawing.Size(252, 25);
-            this.chbRegistro.TabIndex = 22;
+            this.chbRegistro.TabIndex = 3;
             this.chbRegistro.Text = "Abrir únicamente ingreso socios";
             this.chbRegistro.UseVisualStyleBackColor = true;
             // 

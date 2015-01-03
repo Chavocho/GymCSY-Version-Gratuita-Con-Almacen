@@ -70,7 +70,7 @@
             this.lblEtiquetaTipo.Location = new System.Drawing.Point(6, 19);
             this.lblEtiquetaTipo.Name = "lblEtiquetaTipo";
             this.lblEtiquetaTipo.Size = new System.Drawing.Size(64, 19);
-            this.lblEtiquetaTipo.TabIndex = 4;
+            this.lblEtiquetaTipo.TabIndex = 0;
             this.lblEtiquetaTipo.Text = "Duración";
             // 
             // lblEtiquetaFechaInicio
@@ -80,7 +80,7 @@
             this.lblEtiquetaFechaInicio.Location = new System.Drawing.Point(186, 20);
             this.lblEtiquetaFechaInicio.Name = "lblEtiquetaFechaInicio";
             this.lblEtiquetaFechaInicio.Size = new System.Drawing.Size(98, 19);
-            this.lblEtiquetaFechaInicio.TabIndex = 8;
+            this.lblEtiquetaFechaInicio.TabIndex = 2;
             this.lblEtiquetaFechaInicio.Text = "Fecha de inicio";
             // 
             // dtpFechaInicio
@@ -89,7 +89,7 @@
             this.dtpFechaInicio.Location = new System.Drawing.Point(190, 42);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(178, 26);
-            this.dtpFechaInicio.TabIndex = 7;
+            this.dtpFechaInicio.TabIndex = 3;
             this.dtpFechaInicio.ValueChanged += new System.EventHandler(this.dtpFechaInicio_ValueChanged);
             // 
             // grbFechas
@@ -106,7 +106,7 @@
             this.grbFechas.Location = new System.Drawing.Point(12, 12);
             this.grbFechas.Name = "grbFechas";
             this.grbFechas.Size = new System.Drawing.Size(586, 78);
-            this.grbFechas.TabIndex = 9;
+            this.grbFechas.TabIndex = 0;
             this.grbFechas.TabStop = false;
             this.grbFechas.Text = "Configuración de fechas";
             // 
@@ -117,7 +117,7 @@
             this.lblEtiquetaFechaFin.Location = new System.Drawing.Point(374, 19);
             this.lblEtiquetaFechaFin.Name = "lblEtiquetaFechaFin";
             this.lblEtiquetaFechaFin.Size = new System.Drawing.Size(141, 19);
-            this.lblEtiquetaFechaFin.TabIndex = 20;
+            this.lblEtiquetaFechaFin.TabIndex = 4;
             this.lblEtiquetaFechaFin.Text = "Fecha de vencimiento";
             // 
             // lblFechaFin
@@ -127,7 +127,7 @@
             this.lblFechaFin.Location = new System.Drawing.Point(374, 42);
             this.lblFechaFin.Name = "lblFechaFin";
             this.lblFechaFin.Size = new System.Drawing.Size(70, 21);
-            this.lblFechaFin.TabIndex = 19;
+            this.lblFechaFin.TabIndex = 5;
             this.lblFechaFin.Text = "--/--/----";
             // 
             // txtComentarios
@@ -138,7 +138,7 @@
             this.txtComentarios.Multiline = true;
             this.txtComentarios.Name = "txtComentarios";
             this.txtComentarios.Size = new System.Drawing.Size(295, 114);
-            this.txtComentarios.TabIndex = 10;
+            this.txtComentarios.TabIndex = 2;
             // 
             // lblEtiquetaComentarios
             // 
@@ -148,7 +148,7 @@
             this.lblEtiquetaComentarios.Location = new System.Drawing.Point(8, 93);
             this.lblEtiquetaComentarios.Name = "lblEtiquetaComentarios";
             this.lblEtiquetaComentarios.Size = new System.Drawing.Size(87, 19);
-            this.lblEtiquetaComentarios.TabIndex = 21;
+            this.lblEtiquetaComentarios.TabIndex = 1;
             this.lblEtiquetaComentarios.Text = "Comentarios";
             // 
             // btnAceptar
@@ -159,7 +159,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(496, 190);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(102, 39);
-            this.btnAceptar.TabIndex = 22;
+            this.btnAceptar.TabIndex = 5;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -174,7 +174,7 @@
             this.btnMiembro.Location = new System.Drawing.Point(313, 190);
             this.btnMiembro.Name = "btnMiembro";
             this.btnMiembro.Size = new System.Drawing.Size(114, 39);
-            this.btnMiembro.TabIndex = 23;
+            this.btnMiembro.TabIndex = 4;
             this.btnMiembro.Text = "Buscar socio";
             this.btnMiembro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMiembro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -188,7 +188,7 @@
             this.lblMiembro.Location = new System.Drawing.Point(309, 94);
             this.lblMiembro.Name = "lblMiembro";
             this.lblMiembro.Size = new System.Drawing.Size(0, 19);
-            this.lblMiembro.TabIndex = 24;
+            this.lblMiembro.TabIndex = 3;
             // 
             // frmNuevaCortesia
             // 

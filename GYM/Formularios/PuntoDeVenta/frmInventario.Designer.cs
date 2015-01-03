@@ -72,7 +72,7 @@
             this.dgvProducto.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProducto.Size = new System.Drawing.Size(836, 298);
-            this.dgvProducto.TabIndex = 20;
+            this.dgvProducto.TabIndex = 3;
             // 
             // Codigo
             // 
@@ -122,7 +122,7 @@
             this.btnInventario.Location = new System.Drawing.Point(566, 382);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Size = new System.Drawing.Size(138, 40);
-            this.btnInventario.TabIndex = 21;
+            this.btnInventario.TabIndex = 4;
             this.btnInventario.Text = "Agregar al inventario";
             this.btnInventario.UseVisualStyleBackColor = true;
             this.btnInventario.Visible = false;
@@ -134,7 +134,7 @@
             this.txtBusqueda.Location = new System.Drawing.Point(655, 12);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(193, 29);
-            this.txtBusqueda.TabIndex = 22;
+            this.txtBusqueda.TabIndex = 1;
             this.txtBusqueda.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBusqueda_KeyDown);
             // 
             // lblInstrucciones
@@ -144,7 +144,7 @@
             this.lblInstrucciones.Location = new System.Drawing.Point(342, 15);
             this.lblInstrucciones.Name = "lblInstrucciones";
             this.lblInstrucciones.Size = new System.Drawing.Size(307, 21);
-            this.lblInstrucciones.TabIndex = 23;
+            this.lblInstrucciones.TabIndex = 0;
             this.lblInstrucciones.Text = "Buscar por nombre o por código de barras:";
             // 
             // chbBajas
@@ -154,7 +154,7 @@
             this.chbBajas.Location = new System.Drawing.Point(655, 47);
             this.chbBajas.Name = "chbBajas";
             this.chbBajas.Size = new System.Drawing.Size(193, 25);
-            this.chbBajas.TabIndex = 24;
+            this.chbBajas.TabIndex = 2;
             this.chbBajas.Text = "Buscar bajas existencias";
             this.chbBajas.UseVisualStyleBackColor = true;
             this.chbBajas.CheckedChanged += new System.EventHandler(this.chbBajas_CheckedChanged);
@@ -165,7 +165,7 @@
             this.btnCantidadAlmacen.Location = new System.Drawing.Point(710, 382);
             this.btnCantidadAlmacen.Name = "btnCantidadAlmacen";
             this.btnCantidadAlmacen.Size = new System.Drawing.Size(138, 40);
-            this.btnCantidadAlmacen.TabIndex = 27;
+            this.btnCantidadAlmacen.TabIndex = 5;
             this.btnCantidadAlmacen.Text = "Actualizar cantidades mostrador";
             this.btnCantidadAlmacen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCantidadAlmacen.UseVisualStyleBackColor = true;

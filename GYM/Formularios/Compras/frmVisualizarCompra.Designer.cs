@@ -91,7 +91,7 @@
             this.pnlCompra.Location = new System.Drawing.Point(0, 0);
             this.pnlCompra.Name = "pnlCompra";
             this.pnlCompra.Size = new System.Drawing.Size(1008, 115);
-            this.pnlCompra.TabIndex = 1;
+            this.pnlCompra.TabIndex = 0;
             // 
             // lblTotal
             // 
@@ -339,7 +339,7 @@
             this.dgvCompraDetallada.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCompraDetallada.ShowEditingIcon = false;
             this.dgvCompraDetallada.Size = new System.Drawing.Size(1008, 506);
-            this.dgvCompraDetallada.TabIndex = 2;
+            this.dgvCompraDetallada.TabIndex = 1;
             // 
             // CIDProd
             // 
@@ -384,7 +384,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(921, 627);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 3;
+            this.btnAceptar.TabIndex = 2;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);

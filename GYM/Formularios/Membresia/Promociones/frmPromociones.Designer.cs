@@ -36,8 +36,6 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dgvPromociones = new System.Windows.Forms.DataGridView();
-            this.cboTipoPromo = new System.Windows.Forms.ComboBox();
-            this.lblETipoPromo = new System.Windows.Forms.Label();
             this.CID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +43,8 @@
             this.Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CFechaIni = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CFechaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cboTipoPromo = new System.Windows.Forms.ComboBox();
+            this.lblETipoPromo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPromociones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +54,7 @@
             this.btnNueva.Location = new System.Drawing.Point(12, 47);
             this.btnNueva.Name = "btnNueva";
             this.btnNueva.Size = new System.Drawing.Size(115, 34);
-            this.btnNueva.TabIndex = 1;
+            this.btnNueva.TabIndex = 3;
             this.btnNueva.Text = "Nueva";
             this.btnNueva.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNueva.UseVisualStyleBackColor = true;
@@ -66,7 +66,7 @@
             this.btnEditar.Location = new System.Drawing.Point(12, 87);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(115, 34);
-            this.btnEditar.TabIndex = 2;
+            this.btnEditar.TabIndex = 4;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -78,7 +78,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(12, 127);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(115, 34);
-            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -138,33 +138,8 @@
             this.dgvPromociones.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPromociones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPromociones.Size = new System.Drawing.Size(1039, 363);
-            this.dgvPromociones.TabIndex = 4;
+            this.dgvPromociones.TabIndex = 2;
             this.dgvPromociones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPromociones_CellClick);
-            // 
-            // cboTipoPromo
-            // 
-            this.cboTipoPromo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTipoPromo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboTipoPromo.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cboTipoPromo.FormattingEnabled = true;
-            this.cboTipoPromo.Items.AddRange(new object[] {
-            "Por fecha",
-            "Por horario"});
-            this.cboTipoPromo.Location = new System.Drawing.Point(912, 12);
-            this.cboTipoPromo.Name = "cboTipoPromo";
-            this.cboTipoPromo.Size = new System.Drawing.Size(260, 29);
-            this.cboTipoPromo.TabIndex = 5;
-            this.cboTipoPromo.SelectedIndexChanged += new System.EventHandler(this.cboTipoPromo_SelectedIndexChanged);
-            // 
-            // lblETipoPromo
-            // 
-            this.lblETipoPromo.AutoSize = true;
-            this.lblETipoPromo.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblETipoPromo.Location = new System.Drawing.Point(782, 18);
-            this.lblETipoPromo.Name = "lblETipoPromo";
-            this.lblETipoPromo.Size = new System.Drawing.Size(124, 19);
-            this.lblETipoPromo.TabIndex = 6;
-            this.lblETipoPromo.Text = "Tipo de promoción";
             // 
             // CID
             // 
@@ -211,6 +186,31 @@
             this.CFechaFin.Name = "CFechaFin";
             this.CFechaFin.ReadOnly = true;
             this.CFechaFin.Width = 200;
+            // 
+            // cboTipoPromo
+            // 
+            this.cboTipoPromo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipoPromo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboTipoPromo.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cboTipoPromo.FormattingEnabled = true;
+            this.cboTipoPromo.Items.AddRange(new object[] {
+            "Por fecha",
+            "Por horario"});
+            this.cboTipoPromo.Location = new System.Drawing.Point(912, 12);
+            this.cboTipoPromo.Name = "cboTipoPromo";
+            this.cboTipoPromo.Size = new System.Drawing.Size(260, 29);
+            this.cboTipoPromo.TabIndex = 1;
+            this.cboTipoPromo.SelectedIndexChanged += new System.EventHandler(this.cboTipoPromo_SelectedIndexChanged);
+            // 
+            // lblETipoPromo
+            // 
+            this.lblETipoPromo.AutoSize = true;
+            this.lblETipoPromo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblETipoPromo.Location = new System.Drawing.Point(782, 18);
+            this.lblETipoPromo.Name = "lblETipoPromo";
+            this.lblETipoPromo.Size = new System.Drawing.Size(124, 19);
+            this.lblETipoPromo.TabIndex = 0;
+            this.lblETipoPromo.Text = "Tipo de promoción";
             // 
             // frmPromociones
             // 

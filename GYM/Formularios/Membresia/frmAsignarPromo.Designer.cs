@@ -97,7 +97,7 @@
             this.dgvPromociones.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPromociones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPromociones.Size = new System.Drawing.Size(870, 274);
-            this.dgvPromociones.TabIndex = 5;
+            this.dgvPromociones.TabIndex = 2;
             this.dgvPromociones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPromociones_CellClick);
             // 
             // CID
@@ -149,7 +149,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(807, 327);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 6;
+            this.btnAceptar.TabIndex = 3;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -166,7 +166,7 @@
             this.cboTipoPromo.Location = new System.Drawing.Point(597, 12);
             this.cboTipoPromo.Name = "cboTipoPromo";
             this.cboTipoPromo.Size = new System.Drawing.Size(285, 29);
-            this.cboTipoPromo.TabIndex = 7;
+            this.cboTipoPromo.TabIndex = 1;
             this.cboTipoPromo.SelectedIndexChanged += new System.EventHandler(this.cboTipoPromo_SelectedIndexChanged);
             // 
             // lblETipoPromo
@@ -176,7 +176,7 @@
             this.lblETipoPromo.Location = new System.Drawing.Point(467, 18);
             this.lblETipoPromo.Name = "lblETipoPromo";
             this.lblETipoPromo.Size = new System.Drawing.Size(124, 19);
-            this.lblETipoPromo.TabIndex = 8;
+            this.lblETipoPromo.TabIndex = 0;
             this.lblETipoPromo.Text = "Tipo de promoción";
             // 
             // frmAsignarPromo

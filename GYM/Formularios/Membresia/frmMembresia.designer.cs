@@ -99,7 +99,7 @@
             this.dgvPersonas.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPersonas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPersonas.Size = new System.Drawing.Size(914, 356);
-            this.dgvPersonas.TabIndex = 1;
+            this.dgvPersonas.TabIndex = 3;
             this.dgvPersonas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonas_CellClick);
             // 
             // ID
@@ -156,7 +156,7 @@
             this.lblTitulo.Location = new System.Drawing.Point(12, 9);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(225, 21);
-            this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Administración de membresias";
             // 
             // txtBusqueda
@@ -166,7 +166,7 @@
             this.txtBusqueda.Location = new System.Drawing.Point(899, 12);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(173, 27);
-            this.txtBusqueda.TabIndex = 0;
+            this.txtBusqueda.TabIndex = 2;
             this.txtBusqueda.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBusqueda_KeyDown);
             // 
             // lblInstruccionesBusqueda
@@ -177,7 +177,7 @@
             this.lblInstruccionesBusqueda.Location = new System.Drawing.Point(645, 16);
             this.lblInstruccionesBusqueda.Name = "lblInstruccionesBusqueda";
             this.lblInstruccionesBusqueda.Size = new System.Drawing.Size(248, 19);
-            this.lblInstruccionesBusqueda.TabIndex = 11;
+            this.lblInstruccionesBusqueda.TabIndex = 1;
             this.lblInstruccionesBusqueda.Text = "Buscar por número de socio o nombre ";
             // 
             // btnNuevo
@@ -188,7 +188,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(12, 45);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(140, 50);
-            this.btnNuevo.TabIndex = 2;
+            this.btnNuevo.TabIndex = 4;
             this.btnNuevo.Text = "Nueva \r\nmembresía";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -202,7 +202,7 @@
             this.btnEditar.Location = new System.Drawing.Point(12, 101);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(140, 50);
-            this.btnEditar.TabIndex = 3;
+            this.btnEditar.TabIndex = 5;
             this.btnEditar.Text = "Renovar \r\nmembresía";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.UseVisualStyleBackColor = true;

@@ -40,7 +40,7 @@
             this.prbEspere.Name = "prbEspere";
             this.prbEspere.Size = new System.Drawing.Size(573, 23);
             this.prbEspere.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.prbEspere.TabIndex = 0;
+            this.prbEspere.TabIndex = 1;
             this.prbEspere.Value = 100;
             // 
             // lblTitulo
@@ -50,7 +50,7 @@
             this.lblTitulo.Location = new System.Drawing.Point(138, 9);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(320, 28);
-            this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Espere, guardando la configuración";
             // 
             // frmEspere

@@ -64,7 +64,7 @@
             this.lblSeleccionar.Location = new System.Drawing.Point(211, 12);
             this.lblSeleccionar.Name = "lblSeleccionar";
             this.lblSeleccionar.Size = new System.Drawing.Size(133, 21);
-            this.lblSeleccionar.TabIndex = 2;
+            this.lblSeleccionar.TabIndex = 0;
             this.lblSeleccionar.Text = "Selecciona Lector:";
             // 
             // btnRefrescar
@@ -75,7 +75,7 @@
             this.btnRefrescar.Location = new System.Drawing.Point(301, 71);
             this.btnRefrescar.Name = "btnRefrescar";
             this.btnRefrescar.Size = new System.Drawing.Size(144, 32);
-            this.btnRefrescar.TabIndex = 5;
+            this.btnRefrescar.TabIndex = 2;
             this.btnRefrescar.Text = "Recargar lista";
             this.btnRefrescar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRefrescar.UseVisualStyleBackColor = true;
@@ -88,7 +88,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(348, 232);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(97, 32);
-            this.btnAceptar.TabIndex = 6;
+            this.btnAceptar.TabIndex = 4;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -102,7 +102,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(231, 232);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(111, 32);
-            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;

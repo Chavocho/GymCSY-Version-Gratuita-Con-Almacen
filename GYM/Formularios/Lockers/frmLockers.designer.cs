@@ -69,7 +69,7 @@
             this.dgvLockers.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLockers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLockers.Size = new System.Drawing.Size(788, 344);
-            this.dgvLockers.TabIndex = 2;
+            this.dgvLockers.TabIndex = 0;
             this.dgvLockers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLockers_CellClick);
             // 
             // IDL
@@ -114,7 +114,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(12, 21);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(105, 33);
-            this.btnNuevo.TabIndex = 3;
+            this.btnNuevo.TabIndex = 1;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -140,7 +140,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(12, 99);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(105, 33);
-            this.btnEliminar.TabIndex = 5;
+            this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -153,7 +153,7 @@
             this.btnEditar.Location = new System.Drawing.Point(12, 60);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(105, 33);
-            this.btnEditar.TabIndex = 6;
+            this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.UseVisualStyleBackColor = true;

@@ -80,9 +80,9 @@ namespace GYM.Formularios
             {
                 dt = new DataTable();
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "SELECT l.id, MAX(r.id) AS rID, r.nom_persona, s.numSocio, s.nombre, s.apellidos, l.num, l.fecha_ini, l.fecha_fin, r.descripcion, r.create_time, r.create_user_id, r.folio_remision, r.precio " +
-                    "FROM locker AS l INNER JOIN registro_locker AS r ON (l.id=r.locker_id) LEFT JOIN miembros AS s ON (l.numSocio=s.numSocio) WHERE l.estado=?estado ORDER BY r.create_time";
-                sql.Parameters.AddWithValue("?estado", Clases.CMembresia.EstadoMembresia.Pendiente);
+                sql.CommandText = "SELECT l.id, MAX(r.id), r.nom_persona, s.numSocio, s.nombre, s.apellidos, l.num, l.fecha_ini, l.fecha_fin, r.descripcion, r.create_time, r.create_user_id, r.folio_remision, r.precio " +
+                    "FROM locker AS l LEFT JOIN registro_locker AS r ON (l.id=r.locker_id) LEFT JOIN miembros AS s ON (l.numSocio=s.numSocio) WHERE l.estado=?estado GROUP BY l.id ORDER BY r.create_time";
+                sql.Parameters.AddWithValue("?estado", frmLockers.EstadoLocker.Pendiente);
                 dt = ConexionBD.EjecutarConsultaSelect(sql);
             }
             catch (MySqlException ex)
@@ -189,8 +189,8 @@ namespace GYM.Formularios
                 foreach (DataRow dr in dt.Rows)
                 {
                     sql.Parameters.Clear();
-                    sql.CommandText = "INSERT INTO caja (efectivo, tarjeta, tipo_movimiento, fecha, descripcion) " +
-                        "VALUES (?efectivo, ?tarjeta, ?tipo_movimiento, NOW(), ?descripcion)";
+                    sql.CommandText = "INSERT INTO caja (efectivo, tarjeta, tipo_movimiento, fecha, descripcion, create_user_id, create_time) " +
+                        "VALUES (?efectivo, ?tarjeta, ?tipo_movimiento, NOW(), ?descripcion, ?create_user_id, NOW())";
                     if (dr["tipo_pago"].ToString() == "1")
                     {
                         sql.Parameters.AddWithValue("?efectivo", decimal.Parse(dr["precio"].ToString()) * -1);
@@ -203,6 +203,7 @@ namespace GYM.Formularios
                     }
                     sql.Parameters.AddWithValue("?tipo_movimiento", 1);
                     sql.Parameters.AddWithValue("?descripcion", "SE HA CANCELADO LA MEMBRESÍA.");
+                    sql.Parameters.AddWithValue("?create_user_id", frmMain.id);
                     ConexionBD.EjecutarConsulta(sql);
                 }
             }
@@ -227,8 +228,8 @@ namespace GYM.Formularios
                 foreach (DataRow dr in dt.Rows)
                 {
                     sql.Parameters.Clear();
-                    sql.CommandText = "INSERT INTO caja (efectivo, tarjeta, tipo_movimiento, fecha, descripcion) " +
-                        "VALUES (?efectivo, ?tarjeta, ?tipo_movimiento, NOW(), ?descripcion)";
+                    sql.CommandText = "INSERT INTO caja (efectivo, tarjeta, tipo_movimiento, fecha, descripcion, create_user_id, create_time) " +
+                        "VALUES (?efectivo, ?tarjeta, ?tipo_movimiento, NOW(), ?descripcion, ?create_user_id, NOW())";
                     if (dr["tipo_pago"].ToString() == "0")
                     {
                         sql.Parameters.AddWithValue("?efectivo", decimal.Parse(dr["precio"].ToString()) * -1);
@@ -241,6 +242,7 @@ namespace GYM.Formularios
                     }
                     sql.Parameters.AddWithValue("?tipo_movimiento", 1);
                     sql.Parameters.AddWithValue("?descripcion", "SE HA CANCELADO LA RENTA DEL LOCKER.");
+                    sql.Parameters.AddWithValue("?create_user_id", frmMain.id);
                     ConexionBD.EjecutarConsulta(sql);
                 }
             }

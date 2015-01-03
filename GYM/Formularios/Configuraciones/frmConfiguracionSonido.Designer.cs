@@ -52,7 +52,7 @@
             this.lblTema.Location = new System.Drawing.Point(6, 19);
             this.lblTema.Name = "lblTema";
             this.lblTema.Size = new System.Drawing.Size(188, 21);
-            this.lblTema.TabIndex = 3;
+            this.lblTema.TabIndex = 0;
             this.lblTema.Text = "Sonido membresía activa:";
             // 
             // cboSonidosBien
@@ -71,7 +71,7 @@
             this.cboSonidosBien.Location = new System.Drawing.Point(10, 43);
             this.cboSonidosBien.Name = "cboSonidosBien";
             this.cboSonidosBien.Size = new System.Drawing.Size(215, 29);
-            this.cboSonidosBien.TabIndex = 2;
+            this.cboSonidosBien.TabIndex = 1;
             this.cboSonidosBien.SelectedIndexChanged += new System.EventHandler(this.cboSonidosBien_SelectedIndexChanged);
             // 
             // grbSonidosMembresia
@@ -87,7 +87,7 @@
             this.grbSonidosMembresia.Location = new System.Drawing.Point(12, 43);
             this.grbSonidosMembresia.Name = "grbSonidosMembresia";
             this.grbSonidosMembresia.Size = new System.Drawing.Size(357, 137);
-            this.grbSonidosMembresia.TabIndex = 4;
+            this.grbSonidosMembresia.TabIndex = 1;
             this.grbSonidosMembresia.TabStop = false;
             this.grbSonidosMembresia.Text = "Sonidos puerta";
             // 
@@ -107,7 +107,7 @@
             this.cboSonidosError.Location = new System.Drawing.Point(10, 99);
             this.cboSonidosError.Name = "cboSonidosError";
             this.cboSonidosError.Size = new System.Drawing.Size(215, 29);
-            this.cboSonidosError.TabIndex = 8;
+            this.cboSonidosError.TabIndex = 3;
             this.cboSonidosError.SelectedIndexChanged += new System.EventHandler(this.cboSonidosError_SelectedIndexChanged);
             // 
             // pcbPlayMal
@@ -128,7 +128,7 @@
             this.label1.Location = new System.Drawing.Point(6, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(219, 21);
-            this.label1.TabIndex = 6;
+            this.label1.TabIndex = 2;
             this.label1.Text = "Sonido membresía terminada:";
             // 
             // pcbPlayBien
@@ -149,7 +149,7 @@
             this.chbSonidosMembresias.Location = new System.Drawing.Point(12, 12);
             this.chbSonidosMembresias.Name = "chbSonidosMembresias";
             this.chbSonidosMembresias.Size = new System.Drawing.Size(364, 25);
-            this.chbSonidosMembresias.TabIndex = 4;
+            this.chbSonidosMembresias.TabIndex = 0;
             this.chbSonidosMembresias.Text = "Utilizar alertas de sonido en registro de entradas";
             this.chbSonidosMembresias.UseVisualStyleBackColor = true;
             this.chbSonidosMembresias.CheckedChanged += new System.EventHandler(this.chbSonidosMembresias_CheckedChanged);
@@ -160,7 +160,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(270, 187);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(99, 36);
-            this.btnAceptar.TabIndex = 5;
+            this.btnAceptar.TabIndex = 3;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -177,7 +177,7 @@
             this.btnGrabar.Location = new System.Drawing.Point(12, 187);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(120, 36);
-            this.btnGrabar.TabIndex = 6;
+            this.btnGrabar.TabIndex = 2;
             this.btnGrabar.Text = "Grabar sonido";
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);

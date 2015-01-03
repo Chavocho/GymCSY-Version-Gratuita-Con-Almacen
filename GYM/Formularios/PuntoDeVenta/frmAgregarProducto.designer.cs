@@ -60,7 +60,7 @@
             this.lblNombreProducto.Location = new System.Drawing.Point(8, 38);
             this.lblNombreProducto.Name = "lblNombreProducto";
             this.lblNombreProducto.Size = new System.Drawing.Size(135, 21);
-            this.lblNombreProducto.TabIndex = 0;
+            this.lblNombreProducto.TabIndex = 1;
             this.lblNombreProducto.Text = "Nombre producto";
             // 
             // txbNombre
@@ -69,7 +69,7 @@
             this.txbNombre.Location = new System.Drawing.Point(12, 62);
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(238, 29);
-            this.txbNombre.TabIndex = 0;
+            this.txbNombre.TabIndex = 2;
             // 
             // txbMarca
             // 
@@ -77,7 +77,7 @@
             this.txbMarca.Location = new System.Drawing.Point(12, 128);
             this.txbMarca.Name = "txbMarca";
             this.txbMarca.Size = new System.Drawing.Size(238, 29);
-            this.txbMarca.TabIndex = 2;
+            this.txbMarca.TabIndex = 6;
             // 
             // lblMarca
             // 
@@ -86,7 +86,7 @@
             this.lblMarca.Location = new System.Drawing.Point(8, 104);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(53, 21);
-            this.lblMarca.TabIndex = 2;
+            this.lblMarca.TabIndex = 5;
             this.lblMarca.Text = "Marca";
             // 
             // lblDescripcion
@@ -96,7 +96,7 @@
             this.lblDescripcion.Location = new System.Drawing.Point(8, 231);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(91, 21);
-            this.lblDescripcion.TabIndex = 5;
+            this.lblDescripcion.TabIndex = 13;
             this.lblDescripcion.Text = "Descripción";
             // 
             // lblUnidad
@@ -106,7 +106,7 @@
             this.lblUnidad.Location = new System.Drawing.Point(252, 38);
             this.lblUnidad.Name = "lblUnidad";
             this.lblUnidad.Size = new System.Drawing.Size(172, 21);
-            this.lblUnidad.TabIndex = 6;
+            this.lblUnidad.TabIndex = 3;
             this.lblUnidad.Text = "Unidad (Pieza/Paquete)";
             // 
             // txbPrecio
@@ -115,7 +115,7 @@
             this.txbPrecio.Location = new System.Drawing.Point(256, 128);
             this.txbPrecio.Name = "txbPrecio";
             this.txbPrecio.Size = new System.Drawing.Size(202, 29);
-            this.txbPrecio.TabIndex = 3;
+            this.txbPrecio.TabIndex = 8;
             this.txbPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbUnidad_KeyPress);
             // 
             // lblPrecio
@@ -125,7 +125,7 @@
             this.lblPrecio.Location = new System.Drawing.Point(252, 104);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(116, 21);
-            this.lblPrecio.TabIndex = 8;
+            this.lblPrecio.TabIndex = 7;
             this.lblPrecio.Text = "Precio de venta";
             // 
             // txbCosto
@@ -134,7 +134,7 @@
             this.txbCosto.Location = new System.Drawing.Point(256, 191);
             this.txbCosto.Name = "txbCosto";
             this.txbCosto.Size = new System.Drawing.Size(202, 29);
-            this.txbCosto.TabIndex = 5;
+            this.txbCosto.TabIndex = 12;
             this.txbCosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbUnidad_KeyPress);
             // 
             // lblCosto
@@ -144,7 +144,7 @@
             this.lblCosto.Location = new System.Drawing.Point(252, 167);
             this.lblCosto.Name = "lblCosto";
             this.lblCosto.Size = new System.Drawing.Size(131, 21);
-            this.lblCosto.TabIndex = 10;
+            this.lblCosto.TabIndex = 11;
             this.lblCosto.Text = "Precio de compra";
             // 
             // txbDescripcion
@@ -155,7 +155,7 @@
             this.txbDescripcion.Name = "txbDescripcion";
             this.txbDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txbDescripcion.Size = new System.Drawing.Size(238, 85);
-            this.txbDescripcion.TabIndex = 6;
+            this.txbDescripcion.TabIndex = 14;
             // 
             // btnAceptar
             // 
@@ -164,7 +164,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(360, 346);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(98, 42);
-            this.btnAceptar.TabIndex = 11;
+            this.btnAceptar.TabIndex = 21;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -176,7 +176,7 @@
             this.txtCantidad.Location = new System.Drawing.Point(256, 255);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(202, 29);
-            this.txtCantidad.TabIndex = 7;
+            this.txtCantidad.TabIndex = 16;
             this.txtCantidad.Text = "0";
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
@@ -187,7 +187,7 @@
             this.lblCantidad.Location = new System.Drawing.Point(252, 231);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(170, 21);
-            this.lblCantidad.TabIndex = 17;
+            this.lblCantidad.TabIndex = 15;
             this.lblCantidad.Text = "Cantidad en mostrador";
             // 
             // btnAgregarOtro
@@ -196,7 +196,7 @@
             this.btnAgregarOtro.Location = new System.Drawing.Point(256, 346);
             this.btnAgregarOtro.Name = "btnAgregarOtro";
             this.btnAgregarOtro.Size = new System.Drawing.Size(98, 42);
-            this.btnAgregarOtro.TabIndex = 10;
+            this.btnAgregarOtro.TabIndex = 20;
             this.btnAgregarOtro.Text = "Guardar y agregar otro";
             this.btnAgregarOtro.UseVisualStyleBackColor = true;
             this.btnAgregarOtro.Click += new System.EventHandler(this.btnAgregarOtro_Click);
@@ -208,7 +208,7 @@
             this.lblCodigo.Location = new System.Drawing.Point(8, 167);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(60, 21);
-            this.lblCodigo.TabIndex = 19;
+            this.lblCodigo.TabIndex = 9;
             this.lblCodigo.Text = "Código";
             // 
             // txtCodigo
@@ -217,7 +217,7 @@
             this.txtCodigo.Location = new System.Drawing.Point(12, 191);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(238, 29);
-            this.txtCodigo.TabIndex = 4;
+            this.txtCodigo.TabIndex = 10;
             // 
             // cboPieza
             // 
@@ -231,7 +231,7 @@
             this.cboPieza.Location = new System.Drawing.Point(256, 62);
             this.cboPieza.Name = "cboPieza";
             this.cboPieza.Size = new System.Drawing.Size(202, 29);
-            this.cboPieza.TabIndex = 1;
+            this.cboPieza.TabIndex = 4;
             // 
             // chbProductoServicio
             // 
@@ -254,7 +254,7 @@
             this.chbControlStock.Location = new System.Drawing.Point(12, 346);
             this.chbControlStock.Name = "chbControlStock";
             this.chbControlStock.Size = new System.Drawing.Size(122, 23);
-            this.chbControlStock.TabIndex = 9;
+            this.chbControlStock.TabIndex = 19;
             this.chbControlStock.Text = "Controlar stock";
             this.chbControlStock.UseVisualStyleBackColor = true;
             // 
@@ -264,7 +264,7 @@
             this.txtCantidadAlmacen.Location = new System.Drawing.Point(256, 311);
             this.txtCantidadAlmacen.Name = "txtCantidadAlmacen";
             this.txtCantidadAlmacen.Size = new System.Drawing.Size(202, 29);
-            this.txtCantidadAlmacen.TabIndex = 8;
+            this.txtCantidadAlmacen.TabIndex = 18;
             this.txtCantidadAlmacen.Text = "0";
             this.txtCantidadAlmacen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
@@ -275,7 +275,7 @@
             this.lblCantidadAlmacen.Location = new System.Drawing.Point(252, 287);
             this.lblCantidadAlmacen.Name = "lblCantidadAlmacen";
             this.lblCantidadAlmacen.Size = new System.Drawing.Size(155, 21);
-            this.lblCantidadAlmacen.TabIndex = 21;
+            this.lblCantidadAlmacen.TabIndex = 17;
             this.lblCantidadAlmacen.Text = "Cantidad en almacen";
             // 
             // frmAgregarProducto

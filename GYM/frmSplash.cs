@@ -50,7 +50,7 @@ namespace GYM
                 info.FileName = "C:\\xampp\\mysql_start.bat";
                 p.StartInfo = info;
                 p.Start();
-                System.Threading.Thread.Sleep(3000);
+                System.Threading.Thread.Sleep(4500);
             }
             catch (Exception ex)
             {
@@ -351,6 +351,20 @@ namespace GYM
                 {
                     CFuncionesGenerales.MensajeError("No se ha podido desactivar las membresías a los usuarios. Ocurrio un error genérico.", ex);
                 }
+
+                try
+                {
+                    CFuncionesGenerales.DesactivarLockers();
+                }
+                catch (MySqlException ex)
+                {
+                    CFuncionesGenerales.MensajeError("No se ha podido desactivar los lockers a los usuarios. No se ha podido conectar con la base de datos.", ex);
+                }
+                catch (Exception ex)
+                {
+                    CFuncionesGenerales.MensajeError("No se ha podido desactivar los lockers a los usuarios. Ocurrio un error genérico.", ex);
+                }
+
                 bgwCargar.ReportProgress(20);
                 if (!CConfiguracionXML.ExisteConfiguracion("tema"))
                 {

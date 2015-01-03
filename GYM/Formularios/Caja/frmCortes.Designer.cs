@@ -111,7 +111,7 @@
             this.lblEtiquetaFechaFin.Location = new System.Drawing.Point(353, 9);
             this.lblEtiquetaFechaFin.Name = "lblEtiquetaFechaFin";
             this.lblEtiquetaFechaFin.Size = new System.Drawing.Size(73, 13);
-            this.lblEtiquetaFechaFin.TabIndex = 14;
+            this.lblEtiquetaFechaFin.TabIndex = 2;
             this.lblEtiquetaFechaFin.Text = "Fecha de fin:";
             // 
             // lblEtiquetaFechaInicio
@@ -121,7 +121,7 @@
             this.lblEtiquetaFechaInicio.Location = new System.Drawing.Point(9, 9);
             this.lblEtiquetaFechaInicio.Name = "lblEtiquetaFechaInicio";
             this.lblEtiquetaFechaInicio.Size = new System.Drawing.Size(87, 13);
-            this.lblEtiquetaFechaInicio.TabIndex = 13;
+            this.lblEtiquetaFechaInicio.TabIndex = 0;
             this.lblEtiquetaFechaInicio.Text = "Fecha de inicio:";
             // 
             // dtpFechaFin
@@ -131,7 +131,7 @@
             this.dtpFechaFin.Location = new System.Drawing.Point(356, 25);
             this.dtpFechaFin.Name = "dtpFechaFin";
             this.dtpFechaFin.Size = new System.Drawing.Size(296, 29);
-            this.dtpFechaFin.TabIndex = 12;
+            this.dtpFechaFin.TabIndex = 3;
             this.dtpFechaFin.ValueChanged += new System.EventHandler(this.dtpFechas_ValueChanged);
             // 
             // dtpFechaInicio
@@ -140,7 +140,7 @@
             this.dtpFechaInicio.Location = new System.Drawing.Point(12, 25);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(296, 29);
-            this.dtpFechaInicio.TabIndex = 11;
+            this.dtpFechaInicio.TabIndex = 1;
             this.dtpFechaInicio.ValueChanged += new System.EventHandler(this.dtpFechas_ValueChanged);
             // 
             // btnImprimir
@@ -151,7 +151,7 @@
             this.btnImprimir.Location = new System.Drawing.Point(439, 311);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(102, 35);
-            this.btnImprimir.TabIndex = 15;
+            this.btnImprimir.TabIndex = 6;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnImprimir.UseVisualStyleBackColor = true;
@@ -174,7 +174,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(547, 310);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(104, 37);
-            this.btnBuscar.TabIndex = 16;
+            this.btnBuscar.TabIndex = 5;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscar.UseVisualStyleBackColor = true;

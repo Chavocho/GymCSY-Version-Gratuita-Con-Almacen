@@ -89,7 +89,7 @@
             this.dgvProductos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductos.Size = new System.Drawing.Size(984, 265);
-            this.dgvProductos.TabIndex = 7;
+            this.dgvProductos.TabIndex = 0;
             this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
             this.dgvProductos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellDoubleClick);
             // 
@@ -139,7 +139,7 @@
             this.grbTotales.Location = new System.Drawing.Point(12, 330);
             this.grbTotales.Name = "grbTotales";
             this.grbTotales.Size = new System.Drawing.Size(334, 75);
-            this.grbTotales.TabIndex = 8;
+            this.grbTotales.TabIndex = 4;
             this.grbTotales.TabStop = false;
             this.grbTotales.Text = "Totales";
             // 
@@ -150,7 +150,7 @@
             this.lblDescuento.Location = new System.Drawing.Point(240, 19);
             this.lblDescuento.Name = "lblDescuento";
             this.lblDescuento.Size = new System.Drawing.Size(45, 19);
-            this.lblDescuento.TabIndex = 17;
+            this.lblDescuento.TabIndex = 5;
             this.lblDescuento.Text = "$0.00";
             // 
             // lblEDescuento
@@ -160,7 +160,7 @@
             this.lblEDescuento.Location = new System.Drawing.Point(157, 19);
             this.lblEDescuento.Name = "lblEDescuento";
             this.lblEDescuento.Size = new System.Drawing.Size(77, 19);
-            this.lblEDescuento.TabIndex = 16;
+            this.lblEDescuento.TabIndex = 4;
             this.lblEDescuento.Text = "Descuento:";
             // 
             // lblTotal
@@ -170,7 +170,7 @@
             this.lblTotal.Location = new System.Drawing.Point(240, 43);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(45, 19);
-            this.lblTotal.TabIndex = 15;
+            this.lblTotal.TabIndex = 7;
             this.lblTotal.Text = "$0.00";
             // 
             // lblETotal
@@ -180,7 +180,7 @@
             this.lblETotal.Location = new System.Drawing.Point(192, 43);
             this.lblETotal.Name = "lblETotal";
             this.lblETotal.Size = new System.Drawing.Size(42, 19);
-            this.lblETotal.TabIndex = 14;
+            this.lblETotal.TabIndex = 6;
             this.lblETotal.Text = "Total:";
             // 
             // lblImporte
@@ -190,7 +190,7 @@
             this.lblImporte.Location = new System.Drawing.Point(82, 43);
             this.lblImporte.Name = "lblImporte";
             this.lblImporte.Size = new System.Drawing.Size(45, 19);
-            this.lblImporte.TabIndex = 13;
+            this.lblImporte.TabIndex = 3;
             this.lblImporte.Text = "$0.00";
             // 
             // lblEImporte
@@ -200,7 +200,7 @@
             this.lblEImporte.Location = new System.Drawing.Point(6, 43);
             this.lblEImporte.Name = "lblEImporte";
             this.lblEImporte.Size = new System.Drawing.Size(70, 19);
-            this.lblEImporte.TabIndex = 12;
+            this.lblEImporte.TabIndex = 2;
             this.lblEImporte.Text = "Impuesto:";
             this.lblEImporte.Click += new System.EventHandler(this.lblEImporte_Click);
             // 
@@ -211,7 +211,7 @@
             this.lblSubtotal.Location = new System.Drawing.Point(82, 19);
             this.lblSubtotal.Name = "lblSubtotal";
             this.lblSubtotal.Size = new System.Drawing.Size(45, 19);
-            this.lblSubtotal.TabIndex = 11;
+            this.lblSubtotal.TabIndex = 1;
             this.lblSubtotal.Text = "$0.00";
             // 
             // lblESubtotal
@@ -221,7 +221,7 @@
             this.lblESubtotal.Location = new System.Drawing.Point(6, 19);
             this.lblESubtotal.Name = "lblESubtotal";
             this.lblESubtotal.Size = new System.Drawing.Size(63, 19);
-            this.lblESubtotal.TabIndex = 10;
+            this.lblESubtotal.TabIndex = 0;
             this.lblESubtotal.Text = "Subtotal:";
             // 
             // btnIVA
@@ -230,7 +230,7 @@
             this.btnIVA.Location = new System.Drawing.Point(12, 283);
             this.btnIVA.Name = "btnIVA";
             this.btnIVA.Size = new System.Drawing.Size(135, 23);
-            this.btnIVA.TabIndex = 9;
+            this.btnIVA.TabIndex = 1;
             this.btnIVA.Text = "Configurar I.V.A.";
             this.btnIVA.UseVisualStyleBackColor = true;
             this.btnIVA.Click += new System.EventHandler(this.btnIVA_Click);
@@ -241,7 +241,7 @@
             this.btnProductos.Location = new System.Drawing.Point(153, 283);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(135, 23);
-            this.btnProductos.TabIndex = 11;
+            this.btnProductos.TabIndex = 2;
             this.btnProductos.Text = "Agregar producto";
             this.btnProductos.UseVisualStyleBackColor = true;
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
@@ -252,7 +252,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(861, 283);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(135, 23);
-            this.btnEliminar.TabIndex = 12;
+            this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar producto";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -268,7 +268,7 @@
             this.cboTipoPago.Location = new System.Drawing.Point(6, 41);
             this.cboTipoPago.Name = "cboTipoPago";
             this.cboTipoPago.Size = new System.Drawing.Size(242, 25);
-            this.cboTipoPago.TabIndex = 22;
+            this.cboTipoPago.TabIndex = 1;
             // 
             // lblTipoPago
             // 
@@ -277,7 +277,7 @@
             this.lblTipoPago.Location = new System.Drawing.Point(2, 19);
             this.lblTipoPago.Name = "lblTipoPago";
             this.lblTipoPago.Size = new System.Drawing.Size(89, 19);
-            this.lblTipoPago.TabIndex = 18;
+            this.lblTipoPago.TabIndex = 0;
             this.lblTipoPago.Text = "Tipo de pago";
             // 
             // txtRemision
@@ -286,7 +286,7 @@
             this.txtRemision.Location = new System.Drawing.Point(6, 91);
             this.txtRemision.Name = "txtRemision";
             this.txtRemision.Size = new System.Drawing.Size(242, 25);
-            this.txtRemision.TabIndex = 23;
+            this.txtRemision.TabIndex = 5;
             // 
             // lblFolioRemision
             // 
@@ -295,7 +295,7 @@
             this.lblFolioRemision.Location = new System.Drawing.Point(2, 69);
             this.lblFolioRemision.Name = "lblFolioRemision";
             this.lblFolioRemision.Size = new System.Drawing.Size(94, 19);
-            this.lblFolioRemision.TabIndex = 24;
+            this.lblFolioRemision.TabIndex = 4;
             this.lblFolioRemision.Text = "Folio remisión";
             // 
             // grbCompra
@@ -312,7 +312,7 @@
             this.grbCompra.Location = new System.Drawing.Point(352, 283);
             this.grbCompra.Name = "grbCompra";
             this.grbCompra.Size = new System.Drawing.Size(503, 122);
-            this.grbCompra.TabIndex = 25;
+            this.grbCompra.TabIndex = 5;
             this.grbCompra.TabStop = false;
             this.grbCompra.Text = "Datos de compra";
             // 
@@ -323,7 +323,7 @@
             this.rabFactura.Location = new System.Drawing.Point(366, 41);
             this.rabFactura.Name = "rabFactura";
             this.rabFactura.Size = new System.Drawing.Size(72, 23);
-            this.rabFactura.TabIndex = 30;
+            this.rabFactura.TabIndex = 3;
             this.rabFactura.Text = "Factura";
             this.rabFactura.UseVisualStyleBackColor = true;
             this.rabFactura.CheckedChanged += new System.EventHandler(this.rabFactura_CheckedChanged);
@@ -336,7 +336,7 @@
             this.rabRemision.Location = new System.Drawing.Point(254, 41);
             this.rabRemision.Name = "rabRemision";
             this.rabRemision.Size = new System.Drawing.Size(82, 23);
-            this.rabRemision.TabIndex = 29;
+            this.rabRemision.TabIndex = 2;
             this.rabRemision.TabStop = true;
             this.rabRemision.Text = "Remision";
             this.rabRemision.UseVisualStyleBackColor = true;
@@ -349,7 +349,7 @@
             this.lblFolioFactura.Location = new System.Drawing.Point(250, 69);
             this.lblFolioFactura.Name = "lblFolioFactura";
             this.lblFolioFactura.Size = new System.Drawing.Size(84, 19);
-            this.lblFolioFactura.TabIndex = 26;
+            this.lblFolioFactura.TabIndex = 6;
             this.lblFolioFactura.Text = "Folio factura";
             // 
             // txtFactura
@@ -359,7 +359,7 @@
             this.txtFactura.Location = new System.Drawing.Point(254, 91);
             this.txtFactura.Name = "txtFactura";
             this.txtFactura.Size = new System.Drawing.Size(243, 25);
-            this.txtFactura.TabIndex = 25;
+            this.txtFactura.TabIndex = 7;
             // 
             // btnAceptar
             // 
@@ -369,7 +369,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(861, 366);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(135, 39);
-            this.btnAceptar.TabIndex = 10;
+            this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Ingresar compra";
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAceptar.UseVisualStyleBackColor = true;

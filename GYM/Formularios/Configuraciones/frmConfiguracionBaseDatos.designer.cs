@@ -48,7 +48,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(456, 134);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(104, 36);
-            this.btnAceptar.TabIndex = 11;
+            this.btnAceptar.TabIndex = 8;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -62,7 +62,7 @@
             this.lblPass.Location = new System.Drawing.Point(285, 67);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(89, 21);
-            this.lblPass.TabIndex = 21;
+            this.lblPass.TabIndex = 6;
             this.lblPass.Text = "Contraseña";
             // 
             // txtPass
@@ -71,7 +71,7 @@
             this.txtPass.Location = new System.Drawing.Point(289, 91);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(271, 29);
-            this.txtPass.TabIndex = 17;
+            this.txtPass.TabIndex = 7;
             // 
             // lblBaseDatos
             // 
@@ -81,7 +81,7 @@
             this.lblBaseDatos.Location = new System.Drawing.Point(285, 7);
             this.lblBaseDatos.Name = "lblBaseDatos";
             this.lblBaseDatos.Size = new System.Drawing.Size(105, 21);
-            this.lblBaseDatos.TabIndex = 20;
+            this.lblBaseDatos.TabIndex = 2;
             this.lblBaseDatos.Text = "Base de datos";
             // 
             // txtBaseDatos
@@ -90,7 +90,7 @@
             this.txtBaseDatos.Location = new System.Drawing.Point(289, 31);
             this.txtBaseDatos.Name = "txtBaseDatos";
             this.txtBaseDatos.Size = new System.Drawing.Size(271, 29);
-            this.txtBaseDatos.TabIndex = 15;
+            this.txtBaseDatos.TabIndex = 3;
             // 
             // lblUsuario
             // 
@@ -100,7 +100,7 @@
             this.lblUsuario.Location = new System.Drawing.Point(8, 67);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(64, 21);
-            this.lblUsuario.TabIndex = 19;
+            this.lblUsuario.TabIndex = 4;
             this.lblUsuario.Text = "Usuario";
             // 
             // txtUsuario
@@ -109,7 +109,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(12, 91);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(271, 29);
-            this.txtUsuario.TabIndex = 16;
+            this.txtUsuario.TabIndex = 5;
             // 
             // lblServidor
             // 
@@ -119,7 +119,7 @@
             this.lblServidor.Location = new System.Drawing.Point(8, 7);
             this.lblServidor.Name = "lblServidor";
             this.lblServidor.Size = new System.Drawing.Size(69, 21);
-            this.lblServidor.TabIndex = 18;
+            this.lblServidor.TabIndex = 0;
             this.lblServidor.Text = "Servidor";
             // 
             // txtServidor
@@ -128,10 +128,11 @@
             this.txtServidor.Location = new System.Drawing.Point(12, 31);
             this.txtServidor.Name = "txtServidor";
             this.txtServidor.Size = new System.Drawing.Size(271, 29);
-            this.txtServidor.TabIndex = 14;
+            this.txtServidor.TabIndex = 1;
             // 
             // frmConfiguracionBaseDatos
             // 
+            this.AcceptButton = this.btnAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(572, 182);

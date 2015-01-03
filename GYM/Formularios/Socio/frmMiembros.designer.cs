@@ -55,7 +55,7 @@
             this.btnEditar.Location = new System.Drawing.Point(12, 118);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(153, 40);
-            this.btnEditar.TabIndex = 3;
+            this.btnEditar.TabIndex = 5;
             this.btnEditar.Text = "Modificar socio";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -69,7 +69,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(14, 71);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(151, 41);
-            this.btnNuevo.TabIndex = 2;
+            this.btnNuevo.TabIndex = 4;
             this.btnNuevo.Text = "Nuevo socio";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -83,7 +83,7 @@
             this.lblInstruccionesBusqueda.Location = new System.Drawing.Point(647, 42);
             this.lblInstruccionesBusqueda.Name = "lblInstruccionesBusqueda";
             this.lblInstruccionesBusqueda.Size = new System.Drawing.Size(248, 19);
-            this.lblInstruccionesBusqueda.TabIndex = 17;
+            this.lblInstruccionesBusqueda.TabIndex = 1;
             this.lblInstruccionesBusqueda.Text = "Buscar por número de socio o nombre ";
             // 
             // txtBusqueda
@@ -93,7 +93,7 @@
             this.txtBusqueda.Location = new System.Drawing.Point(901, 38);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(173, 27);
-            this.txtBusqueda.TabIndex = 0;
+            this.txtBusqueda.TabIndex = 2;
             this.txtBusqueda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusqueda_KeyPress);
             // 
             // lblTitulo
@@ -103,7 +103,7 @@
             this.lblTitulo.Location = new System.Drawing.Point(10, 11);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(183, 21);
-            this.lblTitulo.TabIndex = 15;
+            this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Administración de socios";
             // 
             // dgvPersonas
@@ -157,7 +157,7 @@
             this.dgvPersonas.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPersonas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPersonas.Size = new System.Drawing.Size(900, 329);
-            this.dgvPersonas.TabIndex = 1;
+            this.dgvPersonas.TabIndex = 3;
             this.dgvPersonas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonas_CellClick);
             // 
             // ID

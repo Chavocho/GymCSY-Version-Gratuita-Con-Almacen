@@ -46,7 +46,7 @@
             this.lblDescuento.Location = new System.Drawing.Point(207, 46);
             this.lblDescuento.Name = "lblDescuento";
             this.lblDescuento.Size = new System.Drawing.Size(77, 19);
-            this.lblDescuento.TabIndex = 40;
+            this.lblDescuento.TabIndex = 4;
             this.lblDescuento.Text = "Descuento:";
             // 
             // txtDescuento
@@ -55,7 +55,7 @@
             this.txtDescuento.Location = new System.Drawing.Point(290, 42);
             this.txtDescuento.Name = "txtDescuento";
             this.txtDescuento.Size = new System.Drawing.Size(126, 27);
-            this.txtDescuento.TabIndex = 39;
+            this.txtDescuento.TabIndex = 5;
             this.txtDescuento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescuento_KeyPress);
             // 
             // lblCantidad
@@ -65,7 +65,7 @@
             this.lblCantidad.Location = new System.Drawing.Point(12, 46);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(67, 19);
-            this.lblCantidad.TabIndex = 38;
+            this.lblCantidad.TabIndex = 2;
             this.lblCantidad.Text = "Cantidad:";
             // 
             // nudCantidad
@@ -84,7 +84,7 @@
             0});
             this.nudCantidad.Name = "nudCantidad";
             this.nudCantidad.Size = new System.Drawing.Size(99, 25);
-            this.nudCantidad.TabIndex = 37;
+            this.nudCantidad.TabIndex = 3;
             this.nudCantidad.Value = new decimal(new int[] {
             1,
             0,
@@ -98,7 +98,7 @@
             this.lblEProducto.Location = new System.Drawing.Point(12, 9);
             this.lblEProducto.Name = "lblEProducto";
             this.lblEProducto.Size = new System.Drawing.Size(68, 19);
-            this.lblEProducto.TabIndex = 41;
+            this.lblEProducto.TabIndex = 0;
             this.lblEProducto.Text = "Producto:";
             // 
             // lblProducto
@@ -108,7 +108,7 @@
             this.lblProducto.Location = new System.Drawing.Point(90, 9);
             this.lblProducto.Name = "lblProducto";
             this.lblProducto.Size = new System.Drawing.Size(129, 20);
-            this.lblProducto.TabIndex = 42;
+            this.lblProducto.TabIndex = 1;
             this.lblProducto.Text = "Nombre producto";
             // 
             // btnAceptar
@@ -117,7 +117,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(333, 85);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(83, 23);
-            this.btnAceptar.TabIndex = 43;
+            this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);

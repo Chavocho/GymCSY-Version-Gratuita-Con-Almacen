@@ -118,7 +118,7 @@
             this.lblImagen.Location = new System.Drawing.Point(367, 229);
             this.lblImagen.Name = "lblImagen";
             this.lblImagen.Size = new System.Drawing.Size(121, 26);
-            this.lblImagen.TabIndex = 10;
+            this.lblImagen.TabIndex = 8;
             this.lblImagen.Text = "Imagen para el\r\ncorreo de cumpleaños";
             // 
             // pbxCorreo
@@ -149,7 +149,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(538, 296);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(93, 31);
-            this.btnAceptar.TabIndex = 8;
+            this.btnAceptar.TabIndex = 9;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.UseVisualStyleBackColor = true;

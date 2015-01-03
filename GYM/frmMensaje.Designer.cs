@@ -44,7 +44,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(317, 58);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(100, 32);
-            this.btnAceptar.TabIndex = 0;
+            this.btnAceptar.TabIndex = 1;
             this.btnAceptar.Text = "Aceptar (3)";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -57,7 +57,7 @@
             this.lblMensaje.Location = new System.Drawing.Point(192, 9);
             this.lblMensaje.Name = "lblMensaje";
             this.lblMensaje.Size = new System.Drawing.Size(0, 19);
-            this.lblMensaje.TabIndex = 1;
+            this.lblMensaje.TabIndex = 0;
             // 
             // tmrConteo
             // 

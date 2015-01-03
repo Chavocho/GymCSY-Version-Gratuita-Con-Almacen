@@ -62,7 +62,7 @@
             this.lblAp.Location = new System.Drawing.Point(258, 87);
             this.lblAp.Name = "lblAp";
             this.lblAp.Size = new System.Drawing.Size(77, 21);
-            this.lblAp.TabIndex = 38;
+            this.lblAp.TabIndex = 2;
             this.lblAp.Text = "Apellidos:";
             // 
             // lblName
@@ -72,7 +72,7 @@
             this.lblName.Location = new System.Drawing.Point(264, 12);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(71, 21);
-            this.lblName.TabIndex = 36;
+            this.lblName.TabIndex = 0;
             this.lblName.Text = "Nombre:";
             // 
             // btnAceptar
@@ -81,7 +81,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(365, 357);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(87, 40);
-            this.btnAceptar.TabIndex = 62;
+            this.btnAceptar.TabIndex = 7;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Visible = false;
@@ -95,7 +95,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(469, 357);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(166, 40);
-            this.btnCancelar.TabIndex = 61;
+            this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -108,7 +108,7 @@
             this.lblNombre.Location = new System.Drawing.Point(364, 12);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(73, 21);
-            this.lblNombre.TabIndex = 64;
+            this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre";
             // 
             // lblApellido
@@ -119,7 +119,7 @@
             this.lblApellido.Location = new System.Drawing.Point(364, 87);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(82, 21);
-            this.lblApellido.TabIndex = 65;
+            this.lblApellido.TabIndex = 3;
             this.lblApellido.Text = "Apellidos";
             // 
             // lblInfo
@@ -130,7 +130,7 @@
             this.lblInfo.Location = new System.Drawing.Point(61, 253);
             this.lblInfo.Name = "lblInfo";
             this.lblInfo.Size = new System.Drawing.Size(203, 47);
-            this.lblInfo.TabIndex = 68;
+            this.lblInfo.TabIndex = 6;
             this.lblInfo.Text = "Bienvenido";
             this.lblInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblInfo.Visible = false;
@@ -143,7 +143,7 @@
             this.lblFechaFinal.Location = new System.Drawing.Point(364, 163);
             this.lblFechaFinal.Name = "lblFechaFinal";
             this.lblFechaFinal.Size = new System.Drawing.Size(54, 21);
-            this.lblFechaFinal.TabIndex = 70;
+            this.lblFechaFinal.TabIndex = 5;
             this.lblFechaFinal.Text = "Fecha";
             // 
             // lblFecha
@@ -153,7 +153,7 @@
             this.lblFecha.Location = new System.Drawing.Point(191, 163);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(144, 21);
-            this.lblFecha.TabIndex = 69;
+            this.lblFecha.TabIndex = 4;
             this.lblFecha.Text = "Fecha Vencimiento:";
             // 
             // tmrCerrar

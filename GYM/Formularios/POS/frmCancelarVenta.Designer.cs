@@ -52,7 +52,7 @@
             this.txtFolio.Location = new System.Drawing.Point(446, 49);
             this.txtFolio.Name = "txtFolio";
             this.txtFolio.Size = new System.Drawing.Size(226, 29);
-            this.txtFolio.TabIndex = 28;
+            this.txtFolio.TabIndex = 2;
             this.txtFolio.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFolio_KeyDown);
             // 
             // lblInstrucciones
@@ -62,7 +62,7 @@
             this.lblInstrucciones.Location = new System.Drawing.Point(442, 26);
             this.lblInstrucciones.Name = "lblInstrucciones";
             this.lblInstrucciones.Size = new System.Drawing.Size(107, 19);
-            this.lblInstrucciones.TabIndex = 31;
+            this.lblInstrucciones.TabIndex = 1;
             this.lblInstrucciones.Text = "Buscar por folio:";
             // 
             // dgvVentas
@@ -89,7 +89,7 @@
             this.dgvVentas.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVentas.Size = new System.Drawing.Size(660, 238);
-            this.dgvVentas.TabIndex = 29;
+            this.dgvVentas.TabIndex = 3;
             this.dgvVentas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_CellClick);
             // 
             // ID
@@ -129,7 +129,7 @@
             this.grbFechas.Location = new System.Drawing.Point(12, 9);
             this.grbFechas.Name = "grbFechas";
             this.grbFechas.Size = new System.Drawing.Size(424, 76);
-            this.grbFechas.TabIndex = 27;
+            this.grbFechas.TabIndex = 0;
             this.grbFechas.TabStop = false;
             this.grbFechas.Text = "Buscar por fechas";
             // 
@@ -140,7 +140,7 @@
             this.lblEtiquetaInicio.Location = new System.Drawing.Point(6, 17);
             this.lblEtiquetaInicio.Name = "lblEtiquetaInicio";
             this.lblEtiquetaInicio.Size = new System.Drawing.Size(83, 19);
-            this.lblEtiquetaInicio.TabIndex = 30;
+            this.lblEtiquetaInicio.TabIndex = 0;
             this.lblEtiquetaInicio.Text = "Fecha Inicio:";
             // 
             // lblEtiquetaFin
@@ -150,7 +150,7 @@
             this.lblEtiquetaFin.Location = new System.Drawing.Point(208, 17);
             this.lblEtiquetaFin.Name = "lblEtiquetaFin";
             this.lblEtiquetaFin.Size = new System.Drawing.Size(69, 19);
-            this.lblEtiquetaFin.TabIndex = 31;
+            this.lblEtiquetaFin.TabIndex = 2;
             this.lblEtiquetaFin.Text = "Fecha Fin:";
             // 
             // dtpFechaInicio
@@ -159,7 +159,7 @@
             this.dtpFechaInicio.Location = new System.Drawing.Point(6, 40);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(200, 29);
-            this.dtpFechaInicio.TabIndex = 0;
+            this.dtpFechaInicio.TabIndex = 1;
             this.dtpFechaInicio.ValueChanged += new System.EventHandler(this.dtpFechas_ValueChanged);
             // 
             // dtpFechaFin
@@ -168,7 +168,7 @@
             this.dtpFechaFin.Location = new System.Drawing.Point(212, 40);
             this.dtpFechaFin.Name = "dtpFechaFin";
             this.dtpFechaFin.Size = new System.Drawing.Size(200, 29);
-            this.dtpFechaFin.TabIndex = 1;
+            this.dtpFechaFin.TabIndex = 3;
             this.dtpFechaFin.ValueChanged += new System.EventHandler(this.dtpFechas_ValueChanged);
             // 
             // btnCancelar
@@ -184,7 +184,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(517, 339);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(155, 40);
-            this.btnCancelar.TabIndex = 32;
+            this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar venta";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;

@@ -54,7 +54,7 @@
             this.lblUsuario.Location = new System.Drawing.Point(8, 9);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(140, 20);
-            this.lblUsuario.TabIndex = 23;
+            this.lblUsuario.TabIndex = 0;
             this.lblUsuario.Text = "Nombre de usuario:";
             // 
             // txtNombreUsu
@@ -63,7 +63,7 @@
             this.txtNombreUsu.Location = new System.Drawing.Point(12, 32);
             this.txtNombreUsu.Name = "txtNombreUsu";
             this.txtNombreUsu.Size = new System.Drawing.Size(215, 29);
-            this.txtNombreUsu.TabIndex = 0;
+            this.txtNombreUsu.TabIndex = 1;
             // 
             // lblContra
             // 
@@ -72,7 +72,7 @@
             this.lblContra.Location = new System.Drawing.Point(8, 69);
             this.lblContra.Name = "lblContra";
             this.lblContra.Size = new System.Drawing.Size(86, 20);
-            this.lblContra.TabIndex = 25;
+            this.lblContra.TabIndex = 4;
             this.lblContra.Text = "Contraseña:";
             // 
             // txtContra
@@ -82,7 +82,7 @@
             this.txtContra.Name = "txtContra";
             this.txtContra.PasswordChar = '•';
             this.txtContra.Size = new System.Drawing.Size(215, 29);
-            this.txtContra.TabIndex = 2;
+            this.txtContra.TabIndex = 5;
             // 
             // lblRepContra
             // 
@@ -91,7 +91,7 @@
             this.lblRepContra.Location = new System.Drawing.Point(229, 69);
             this.lblRepContra.Name = "lblRepContra";
             this.lblRepContra.Size = new System.Drawing.Size(147, 20);
-            this.lblRepContra.TabIndex = 27;
+            this.lblRepContra.TabIndex = 6;
             this.lblRepContra.Text = "Repita la contraseña:";
             // 
             // txtRepContra
@@ -101,7 +101,7 @@
             this.txtRepContra.Name = "txtRepContra";
             this.txtRepContra.PasswordChar = '•';
             this.txtRepContra.Size = new System.Drawing.Size(215, 29);
-            this.txtRepContra.TabIndex = 3;
+            this.txtRepContra.TabIndex = 7;
             // 
             // cboNivel
             // 
@@ -112,7 +112,7 @@
             this.cboNivel.Location = new System.Drawing.Point(233, 32);
             this.cboNivel.Name = "cboNivel";
             this.cboNivel.Size = new System.Drawing.Size(215, 29);
-            this.cboNivel.TabIndex = 1;
+            this.cboNivel.TabIndex = 3;
             this.cboNivel.SelectedIndexChanged += new System.EventHandler(this.cboNivel_SelectedIndexChanged);
             // 
             // lblNivel
@@ -122,7 +122,7 @@
             this.lblNivel.Location = new System.Drawing.Point(229, 9);
             this.lblNivel.Name = "lblNivel";
             this.lblNivel.Size = new System.Drawing.Size(46, 20);
-            this.lblNivel.TabIndex = 29;
+            this.lblNivel.TabIndex = 2;
             this.lblNivel.Text = "Nivel:";
             // 
             // btnAceptar
@@ -133,7 +133,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(339, 269);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(109, 37);
-            this.btnAceptar.TabIndex = 8;
+            this.btnAceptar.TabIndex = 13;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -157,7 +157,7 @@
             this.lblInstrucciones.Location = new System.Drawing.Point(151, 127);
             this.lblInstrucciones.Name = "lblInstrucciones";
             this.lblInstrucciones.Size = new System.Drawing.Size(103, 39);
-            this.lblInstrucciones.TabIndex = 32;
+            this.lblInstrucciones.TabIndex = 8;
             this.lblInstrucciones.Text = "Haga clic para\r\ncambiar la imagen \r\nde usuario";
             // 
             // btnQuitar
@@ -166,7 +166,7 @@
             this.btnQuitar.Location = new System.Drawing.Point(154, 197);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(50, 30);
-            this.btnQuitar.TabIndex = 4;
+            this.btnQuitar.TabIndex = 9;
             this.btnQuitar.UseVisualStyleBackColor = true;
             this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
             // 
@@ -177,7 +177,7 @@
             this.btnHuella.Location = new System.Drawing.Point(12, 269);
             this.btnHuella.Name = "btnHuella";
             this.btnHuella.Size = new System.Drawing.Size(136, 37);
-            this.btnHuella.TabIndex = 7;
+            this.btnHuella.TabIndex = 11;
             this.btnHuella.Text = "Capturar huella";
             this.btnHuella.UseVisualStyleBackColor = true;
             this.btnHuella.Click += new System.EventHandler(this.btnHuella_Click);
@@ -188,7 +188,7 @@
             this.btnCamara.Location = new System.Drawing.Point(154, 233);
             this.btnCamara.Name = "btnCamara";
             this.btnCamara.Size = new System.Drawing.Size(50, 30);
-            this.btnCamara.TabIndex = 5;
+            this.btnCamara.TabIndex = 10;
             this.btnCamara.UseVisualStyleBackColor = true;
             this.btnCamara.Click += new System.EventHandler(this.btnCamara_Click);
             // 
@@ -199,7 +199,7 @@
             this.cbxCamara.Location = new System.Drawing.Point(154, 273);
             this.cbxCamara.Name = "cbxCamara";
             this.cbxCamara.Size = new System.Drawing.Size(150, 29);
-            this.cbxCamara.TabIndex = 6;
+            this.cbxCamara.TabIndex = 12;
             // 
             // frmNuevoUsuario
             // 

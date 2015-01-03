@@ -56,7 +56,7 @@
             this.lblInstruccionesBusqueda.Location = new System.Drawing.Point(516, 16);
             this.lblInstruccionesBusqueda.Name = "lblInstruccionesBusqueda";
             this.lblInstruccionesBusqueda.Size = new System.Drawing.Size(248, 19);
-            this.lblInstruccionesBusqueda.TabIndex = 14;
+            this.lblInstruccionesBusqueda.TabIndex = 0;
             this.lblInstruccionesBusqueda.Text = "Buscar por número de socio o nombre ";
             // 
             // txtBusqueda
@@ -66,7 +66,7 @@
             this.txtBusqueda.Location = new System.Drawing.Point(770, 12);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(226, 27);
-            this.txtBusqueda.TabIndex = 12;
+            this.txtBusqueda.TabIndex = 1;
             this.txtBusqueda.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBusqueda_KeyDown);
             // 
             // dgvPersonas
@@ -121,7 +121,7 @@
             this.dgvPersonas.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPersonas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPersonas.Size = new System.Drawing.Size(852, 500);
-            this.dgvPersonas.TabIndex = 13;
+            this.dgvPersonas.TabIndex = 3;
             this.dgvPersonas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonas_CellClick);
             // 
             // IDM
@@ -189,7 +189,7 @@
             this.btnMembresias.Location = new System.Drawing.Point(12, 50);
             this.btnMembresias.Name = "btnMembresias";
             this.btnMembresias.Size = new System.Drawing.Size(126, 50);
-            this.btnMembresias.TabIndex = 15;
+            this.btnMembresias.TabIndex = 2;
             this.btnMembresias.Text = "Visualizar membresías";
             this.btnMembresias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMembresias.UseVisualStyleBackColor = true;

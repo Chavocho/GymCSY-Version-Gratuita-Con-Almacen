@@ -142,11 +142,6 @@ namespace GYM.Formularios.Socio
                 MessageBox.Show("Debes ingresar los apellidos del socio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
             }
-            if (tbxDomicilio.Text.Trim() == "")
-            {
-                MessageBox.Show("Debes ingresar el domicilio del socio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
-            }
             if (tbxTel.Text == "")
             {
                 if (tbxCelular.Text == "")

@@ -154,7 +154,7 @@ namespace GYM.Clases
                 if (lineaSup01 != "")
                 {
                     CentrarTexto(ref e, lineaSup01, fuenteGrandeResaltada, Brushes.Black);
-                    y += saltoLinea+2;
+                    y += saltoLinea + 2;
                 }
 
                 if (lineaSup02 != "")
@@ -530,6 +530,7 @@ namespace GYM.Clases
                 y += saltoLinea;
                 foreach (DataRow dr in dtCaja.Rows)
                 {
+                    string efe, tar;
                     decimal ef = decimal.Parse(dr["efectivo"].ToString());
                     decimal ta = decimal.Parse(dr["tarjeta"].ToString());
                     DateTime fe = DateTime.Parse(dr["fecha"].ToString());
@@ -538,8 +539,17 @@ namespace GYM.Clases
                         tipoMov = "ENTRADA";
                     else
                         tipoMov = "SALIDA";
-                    e.Graphics.DrawString(ef.ToString("C2"), fuentePequeña, Brushes.Black, 0F, y);
-                    e.Graphics.DrawString(ta.ToString("C2"), fuentePequeña, Brushes.Black, (e.PageBounds.Width / 4) - 15, y);
+                    if (ef < 0)
+                        efe = (ef * -1).ToString("C2");
+                    else
+                        efe = ef.ToString("C2");
+                    if (ta < 0)
+                        tar = (ta * -1).ToString("C2");
+                    else
+                        tar = ta.ToString("C2");
+
+                    e.Graphics.DrawString(efe, fuentePequeña, Brushes.Black, 0F, y);
+                    e.Graphics.DrawString(tar, fuentePequeña, Brushes.Black, (e.PageBounds.Width / 4) - 15, y);
                     e.Graphics.DrawString(tipoMov, fuentePequeña, Brushes.Black, (e.PageBounds.Width / 4) * 2 - 25, y);
                     e.Graphics.DrawString(fe.ToString("dd/MM/yyyy"), fuentePequeña, Brushes.Black, (e.PageBounds.Width / 4) * 3 - 25, y);
                     if (ta > 0)

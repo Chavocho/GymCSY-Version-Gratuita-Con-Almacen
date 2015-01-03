@@ -71,7 +71,7 @@
             this.dgvProductos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductos.Size = new System.Drawing.Size(648, 232);
-            this.dgvProductos.TabIndex = 1;
+            this.dgvProductos.TabIndex = 2;
             this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
             // 
             // CodigoProducto
@@ -120,7 +120,7 @@
             this.txtCodigo.Location = new System.Drawing.Point(445, 12);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(215, 29);
-            this.txtCodigo.TabIndex = 0;
+            this.txtCodigo.TabIndex = 1;
             this.txtCodigo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodigo_KeyDown);
             // 
             // lblInstrucciones
@@ -130,7 +130,7 @@
             this.lblInstrucciones.Location = new System.Drawing.Point(240, 16);
             this.lblInstrucciones.Name = "lblInstrucciones";
             this.lblInstrucciones.Size = new System.Drawing.Size(199, 20);
-            this.lblInstrucciones.TabIndex = 21;
+            this.lblInstrucciones.TabIndex = 0;
             this.lblInstrucciones.Text = "Buscar por nombre o código";
             // 
             // btnAceptar
@@ -139,7 +139,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(568, 288);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(92, 33);
-            this.btnAceptar.TabIndex = 3;
+            this.btnAceptar.TabIndex = 7;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -161,7 +161,7 @@
             0});
             this.nudCantidad.Name = "nudCantidad";
             this.nudCantidad.Size = new System.Drawing.Size(99, 25);
-            this.nudCantidad.TabIndex = 2;
+            this.nudCantidad.TabIndex = 4;
             this.nudCantidad.Value = new decimal(new int[] {
             1,
             0,
@@ -176,7 +176,7 @@
             this.lblCantidad.Location = new System.Drawing.Point(12, 293);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(72, 20);
-            this.lblCantidad.TabIndex = 24;
+            this.lblCantidad.TabIndex = 3;
             this.lblCantidad.Text = "Cantidad:";
             // 
             // lblEtiquetaTotal
@@ -186,7 +186,7 @@
             this.lblEtiquetaTotal.Location = new System.Drawing.Point(240, 292);
             this.lblEtiquetaTotal.Name = "lblEtiquetaTotal";
             this.lblEtiquetaTotal.Size = new System.Drawing.Size(46, 20);
-            this.lblEtiquetaTotal.TabIndex = 25;
+            this.lblEtiquetaTotal.TabIndex = 5;
             this.lblEtiquetaTotal.Text = "Total:";
             // 
             // lblTotal
@@ -196,7 +196,7 @@
             this.lblTotal.Location = new System.Drawing.Point(292, 292);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(44, 20);
-            this.lblTotal.TabIndex = 26;
+            this.lblTotal.TabIndex = 6;
             this.lblTotal.Text = "$0.00";
             // 
             // frmProductos

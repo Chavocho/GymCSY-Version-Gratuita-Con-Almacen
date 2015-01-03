@@ -216,10 +216,21 @@ namespace GYM.Formularios
 
         private void btnAsignar_Click(object sender, EventArgs e)
         {
-            if (idLocker > 0)
+            if (dgvLockers.CurrentRow != null)
             {
-                (new frmAsignarLocker(this, idLocker)).ShowDialog(this);
-                BuscarLockers();
+                string estadoLocker = dgvLockers[4, dgvLockers.CurrentRow.Index].Value.ToString();
+                if (idLocker > 0)
+                {
+                    if (estadoLocker != "Pendiente" && estadoLocker != "Ocupado")
+                    {
+                        (new frmAsignarLocker(this, idLocker)).ShowDialog(this);
+                        BuscarLockers();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No puedes asignar un locker que ya se encuentra ocupado.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
             }
         }
 

@@ -51,32 +51,9 @@ namespace GYM.Formularios
         {
             try
             {
-                dgvCaja.Rows.Clear();
-                string tipoMov = "", idVenta = "", idMembresia = "", nomUsu = "";
-                string sql = "SELECT DISTINCT c.id_venta, v.create_user_id AS uv, r.folio_remision, r.create_user_id AS um, c.efectivo, c.tarjeta, c.tipo_movimiento, c.fecha, c.descripcion FROM caja AS c LEFT JOIN registro_membresias AS r ON (c.id_membresia=r.membresia_id) LEFT JOIN venta AS v ON (c.id_venta=v.id) WHERE c.descripcion LIKE '%" + concepto + "%' GROUP BY r.id ORDER BY r.id DESC";
+                string sql = "SELECT c.id, c.id_venta, v.create_user_id AS uv, r.folio_remision, r.create_user_id AS um, c.efectivo, c.tarjeta, c.tipo_movimiento, c.fecha, c.descripcion FROM caja AS c LEFT JOIN registro_membresias AS r ON (c.id_membresia=r.membresia_id) LEFT JOIN venta AS v ON (c.id_venta=v.id) WHERE c.descripcion LIKE '%" + concepto + "%' ORDER BY c.fecha;";
                 DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
-                foreach (DataRow dr in dt.Rows)
-                {
-                    if (dr["tipo_movimiento"].ToString() == "0")
-                        tipoMov = "Entrada";
-                    else
-                        tipoMov = "Salida";
-                    if (dr["id_venta"].ToString() == "0")
-                        idVenta = "Sin información";
-                    else
-                        idVenta = dr["id_venta"].ToString();
-                    if (dr["folio_remision"] != DBNull.Value)
-                        idMembresia = dr["folio_remision"].ToString();
-                    else
-                        idMembresia = "Sin información";
-                    if (dr["uv"] != DBNull.Value)
-                        nomUsu = CFuncionesGenerales.NombreUsuario(dr["uv"].ToString());
-                    else if (dr["um"] != DBNull.Value)
-                        nomUsu = CFuncionesGenerales.NombreUsuario(dr["um"].ToString());
-                    else
-                        nomUsu = "Sin información";
-                    dgvCaja.Rows.Add(new object[] { idVenta, idMembresia, DateTime.Parse(dr["fecha"].ToString()).ToString("dd-MM-yyyy hh:mm tt"), decimal.Parse(dr["efectivo"].ToString()).ToString("C2"), decimal.Parse(dr["tarjeta"].ToString()).ToString("C2"), tipoMov, dr["descripcion"].ToString(), nomUsu });
-                }
+                LlenarDataGrid(dt);
                 CalcularTotales();
             }
             catch (MySqlException ex)
@@ -118,35 +95,12 @@ namespace GYM.Formularios
         {
             try
             {
-                dgvCaja.Rows.Clear();
-                string tipoMov = "", idVenta = "", idMembresia = "", nomUsu = "";
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "SELECT DISTINCT c.id_venta, v.create_user_id AS uv, r.folio_remision, r.create_user_id AS um, c.efectivo, c.tarjeta, c.tipo_movimiento, c.fecha, c.descripcion FROM caja AS c LEFT JOIN registro_membresias AS r ON (c.id_membresia=r.membresia_id) LEFT JOIN venta AS v ON (c.id_venta=v.id) WHERE (c.fecha BETWEEN ? AND ?) GROUP BY r.id ORDER BY r.id DESC";
+                sql.CommandText = "SELECT c.id_venta, v.create_user_id AS uv, r.folio_remision, r.create_user_id AS um, c.efectivo, c.tarjeta, c.tipo_movimiento, c.fecha, c.descripcion FROM caja AS c LEFT JOIN registro_membresias AS r ON (c.id_membresia=r.membresia_id) LEFT JOIN venta AS v ON (c.id_venta=v.id) WHERE (c.fecha BETWEEN ? AND ?) ORDER BY c.fecha";
                 sql.Parameters.AddWithValue("@fechaIni", fechaIni.ToString("yyyy-MM-dd") + " 00:00:00");
                 sql.Parameters.AddWithValue("@fechaFin", fechaFin.ToString("yyyy-MM-dd") + " 23:59:59");
                 DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
-                foreach (DataRow dr in dt.Rows)
-                {
-                    if (dr["tipo_movimiento"].ToString() == "0")
-                        tipoMov = "Entrada";
-                    else
-                        tipoMov = "Salida"; 
-                    if (dr["id_venta"].ToString() == "0")
-                        idVenta = "Sin información";
-                    else
-                        idVenta = dr["id_venta"].ToString();
-                    if (dr["folio_remision"] != DBNull.Value)
-                        idMembresia = dr["folio_remision"].ToString();
-                    else
-                        idMembresia = "Sin información";
-                    if (dr["uv"] != DBNull.Value)
-                        nomUsu = CFuncionesGenerales.NombreUsuario(dr["uv"].ToString());
-                    else if (dr["um"] != DBNull.Value)
-                        nomUsu = CFuncionesGenerales.NombreUsuario(dr["um"].ToString());
-                    else
-                        nomUsu = "Sin información";
-                    dgvCaja.Rows.Add(new object[] { idVenta, idMembresia, DateTime.Parse(dr["fecha"].ToString()).ToString("dd-MM-yyyy hh:mm tt"), decimal.Parse(dr["efectivo"].ToString()).ToString("C2"), decimal.Parse(dr["tarjeta"].ToString()).ToString("C2"), tipoMov, dr["descripcion"].ToString(), nomUsu });
-                }
+                LlenarDataGrid(dt);
                 CalcularTotales();
             }
             catch (MySqlException ex)
@@ -183,35 +137,12 @@ namespace GYM.Formularios
         {
             try
             {
-                dgvCaja.Rows.Clear();
-                string tipoMov = "", idVenta = "", idMembresia = "", nomUsu = "";
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "SELECT DISTINCT c.id_venta, v.create_user_id AS uv, r.folio_remision, r.create_user_id AS um, c.efectivo, c.tarjeta, c.tipo_movimiento, c.fecha, c.descripcion FROM caja AS c LEFT JOIN registro_membresias AS r ON (c.id_membresia=r.membresia_id) LEFT JOIN venta AS v ON (c.id_venta=v.id) WHERE (c.fecha BETWEEN ? AND ?) AND c.descripcion LIKE '%" + concepto + "%' GROUP BY r.id ORDER BY r.id DESC";
+                sql.CommandText = "SELECT c.id_venta, v.create_user_id AS uv, r.folio_remision, r.create_user_id AS um, c.efectivo, c.tarjeta, c.tipo_movimiento, c.fecha, c.descripcion FROM caja AS c LEFT JOIN registro_membresias AS r ON (c.id_membresia=r.membresia_id) LEFT JOIN venta AS v ON (c.id_venta=v.id) WHERE (c.fecha BETWEEN ? AND ?) AND c.descripcion LIKE '%" + concepto + "%' ORDER BY c.fecha";
                 sql.Parameters.AddWithValue("@fechaIni", fechaIni.ToString("yyyy-MM-dd") + " 00:00:00");
                 sql.Parameters.AddWithValue("@fechaFin", fechaFin.ToString("yyyy-MM-dd") + " 23:59:59");
                 DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
-                foreach (DataRow dr in dt.Rows)
-                {
-                    if (dr["tipo_movimiento"].ToString() == "0")
-                        tipoMov = "Entrada";
-                    else
-                        tipoMov = "Salida"; 
-                    if (dr["id_venta"].ToString() == "0")
-                        idVenta = "Sin información";
-                    else
-                        idVenta = dr["id_venta"].ToString();
-                    if (dr["folio_remision"] != DBNull.Value)
-                        idMembresia = dr["folio_remision"].ToString();
-                    else
-                        idMembresia = "Sin información";
-                    if (dr["uv"] != DBNull.Value)
-                        nomUsu = CFuncionesGenerales.NombreUsuario(dr["uv"].ToString());
-                    else if (dr["um"] != DBNull.Value)
-                        nomUsu = CFuncionesGenerales.NombreUsuario(dr["um"].ToString());
-                    else
-                        nomUsu = "Sin información";
-                    dgvCaja.Rows.Add(new object[] { idVenta, idMembresia, DateTime.Parse(dr["fecha"].ToString()).ToString("dd-MM-yyyy hh:mm tt"), decimal.Parse(dr["efectivo"].ToString()).ToString("C2"), decimal.Parse(dr["tarjeta"].ToString()).ToString("C2"), tipoMov, dr["descripcion"].ToString(), nomUsu });
-                }
+                LlenarDataGrid(dt);
                 CalcularTotales();
             }
             catch (MySqlException ex)
@@ -241,6 +172,34 @@ namespace GYM.Formularios
             catch (Exception ex)
             {
                 Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un error genérico.", ex);
+            }
+        }
+
+        private void LlenarDataGrid(DataTable dt)
+        {
+            dgvCaja.Rows.Clear();
+            string tipoMov = "", idVenta = "", idMembresia = "", nomUsu = "";
+            foreach (DataRow dr in dt.Rows)
+            {
+                if (dr["tipo_movimiento"].ToString() == "0")
+                    tipoMov = "Entrada";
+                else
+                    tipoMov = "Salida";
+                if (dr["id_venta"].ToString() == "0")
+                    idVenta = "Sin información";
+                else
+                    idVenta = dr["id_venta"].ToString();
+                if (dr["folio_remision"] != DBNull.Value)
+                    idMembresia = dr["folio_remision"].ToString();
+                else
+                    idMembresia = "Sin información";
+                if (dr["uv"] != DBNull.Value)
+                    nomUsu = CFuncionesGenerales.NombreUsuario(dr["uv"].ToString());
+                else if (dr["um"] != DBNull.Value)
+                    nomUsu = CFuncionesGenerales.NombreUsuario(dr["um"].ToString());
+                else
+                    nomUsu = "Sin información";
+                dgvCaja.Rows.Add(new object[] { idVenta, idMembresia, DateTime.Parse(dr["fecha"].ToString()).ToString("dd-MM-yyyy hh:mm tt"), decimal.Parse(dr["efectivo"].ToString()).ToString("C2"), decimal.Parse(dr["tarjeta"].ToString()).ToString("C2"), tipoMov, dr["descripcion"].ToString(), nomUsu });
             }
         }
 

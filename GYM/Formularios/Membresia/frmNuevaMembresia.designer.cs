@@ -88,7 +88,7 @@
             this.cbxTipo.Location = new System.Drawing.Point(13, 71);
             this.cbxTipo.Name = "cbxTipo";
             this.cbxTipo.Size = new System.Drawing.Size(178, 27);
-            this.cbxTipo.TabIndex = 0;
+            this.cbxTipo.TabIndex = 3;
             this.cbxTipo.SelectedIndexChanged += new System.EventHandler(this.cbxTipo_SelectedIndexChanged);
             // 
             // lblEtiquetaTipo
@@ -99,7 +99,7 @@
             this.lblEtiquetaTipo.Location = new System.Drawing.Point(9, 49);
             this.lblEtiquetaTipo.Name = "lblEtiquetaTipo";
             this.lblEtiquetaTipo.Size = new System.Drawing.Size(64, 19);
-            this.lblEtiquetaTipo.TabIndex = 3;
+            this.lblEtiquetaTipo.TabIndex = 2;
             this.lblEtiquetaTipo.Text = "Duración";
             // 
             // lblEtiquetaFechaInicio
@@ -110,7 +110,7 @@
             this.lblEtiquetaFechaInicio.Location = new System.Drawing.Point(203, 50);
             this.lblEtiquetaFechaInicio.Name = "lblEtiquetaFechaInicio";
             this.lblEtiquetaFechaInicio.Size = new System.Drawing.Size(98, 19);
-            this.lblEtiquetaFechaInicio.TabIndex = 6;
+            this.lblEtiquetaFechaInicio.TabIndex = 4;
             this.lblEtiquetaFechaInicio.Text = "Fecha de inicio";
             // 
             // dtpFechaInicio
@@ -122,7 +122,7 @@
             this.dtpFechaInicio.Location = new System.Drawing.Point(207, 72);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(178, 26);
-            this.dtpFechaInicio.TabIndex = 1;
+            this.dtpFechaInicio.TabIndex = 5;
             this.dtpFechaInicio.ValueChanged += new System.EventHandler(this.dtpFechaInicio_ValueChanged);
             // 
             // lblEtiquetaPrecio
@@ -133,7 +133,7 @@
             this.lblEtiquetaPrecio.Location = new System.Drawing.Point(12, 182);
             this.lblEtiquetaPrecio.Name = "lblEtiquetaPrecio";
             this.lblEtiquetaPrecio.Size = new System.Drawing.Size(46, 19);
-            this.lblEtiquetaPrecio.TabIndex = 8;
+            this.lblEtiquetaPrecio.TabIndex = 12;
             this.lblEtiquetaPrecio.Text = "Precio";
             // 
             // lblEtiquetaFolioRemision
@@ -144,7 +144,7 @@
             this.lblEtiquetaFolioRemision.Location = new System.Drawing.Point(203, 182);
             this.lblEtiquetaFolioRemision.Name = "lblEtiquetaFolioRemision";
             this.lblEtiquetaFolioRemision.Size = new System.Drawing.Size(94, 19);
-            this.lblEtiquetaFolioRemision.TabIndex = 10;
+            this.lblEtiquetaFolioRemision.TabIndex = 14;
             this.lblEtiquetaFolioRemision.Text = "Folio remisión";
             // 
             // txtFolio
@@ -155,7 +155,7 @@
             this.txtFolio.Location = new System.Drawing.Point(207, 204);
             this.txtFolio.Name = "txtFolio";
             this.txtFolio.Size = new System.Drawing.Size(178, 26);
-            this.txtFolio.TabIndex = 4;
+            this.txtFolio.TabIndex = 15;
             this.txtFolio.LostFocus += new System.EventHandler(this.txtFolio_LostFocus);
             // 
             // lblEtiquetaDescripcion
@@ -166,7 +166,7 @@
             this.lblEtiquetaDescripcion.Location = new System.Drawing.Point(397, 182);
             this.lblEtiquetaDescripcion.Name = "lblEtiquetaDescripcion";
             this.lblEtiquetaDescripcion.Size = new System.Drawing.Size(79, 19);
-            this.lblEtiquetaDescripcion.TabIndex = 13;
+            this.lblEtiquetaDescripcion.TabIndex = 20;
             this.lblEtiquetaDescripcion.Text = "Descripción";
             // 
             // txtDescripcion
@@ -178,7 +178,7 @@
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(240, 92);
-            this.txtDescripcion.TabIndex = 7;
+            this.txtDescripcion.TabIndex = 21;
             // 
             // lblNombreMiembro
             // 
@@ -188,7 +188,7 @@
             this.lblNombreMiembro.Location = new System.Drawing.Point(430, 4);
             this.lblNombreMiembro.Name = "lblNombreMiembro";
             this.lblNombreMiembro.Size = new System.Drawing.Size(214, 21);
-            this.lblNombreMiembro.TabIndex = 16;
+            this.lblNombreMiembro.TabIndex = 1;
             this.lblNombreMiembro.Text = "Añadir una nueva membresía";
             // 
             // lblFechaFin
@@ -199,7 +199,7 @@
             this.lblFechaFin.Location = new System.Drawing.Point(397, 72);
             this.lblFechaFin.Name = "lblFechaFin";
             this.lblFechaFin.Size = new System.Drawing.Size(0, 21);
-            this.lblFechaFin.TabIndex = 17;
+            this.lblFechaFin.TabIndex = 7;
             // 
             // lblEtiquetaFechaFin
             // 
@@ -209,7 +209,7 @@
             this.lblEtiquetaFechaFin.Location = new System.Drawing.Point(397, 49);
             this.lblEtiquetaFechaFin.Name = "lblEtiquetaFechaFin";
             this.lblEtiquetaFechaFin.Size = new System.Drawing.Size(141, 19);
-            this.lblEtiquetaFechaFin.TabIndex = 18;
+            this.lblEtiquetaFechaFin.TabIndex = 6;
             this.lblEtiquetaFechaFin.Text = "Fecha de vencimiento";
             // 
             // lblTipoPago
@@ -220,7 +220,7 @@
             this.lblTipoPago.Location = new System.Drawing.Point(9, 114);
             this.lblTipoPago.Name = "lblTipoPago";
             this.lblTipoPago.Size = new System.Drawing.Size(89, 19);
-            this.lblTipoPago.TabIndex = 20;
+            this.lblTipoPago.TabIndex = 8;
             this.lblTipoPago.Text = "Tipo de pago";
             // 
             // cbxTipoPago
@@ -235,7 +235,7 @@
             this.cbxTipoPago.Location = new System.Drawing.Point(13, 136);
             this.cbxTipoPago.Name = "cbxTipoPago";
             this.cbxTipoPago.Size = new System.Drawing.Size(178, 27);
-            this.cbxTipoPago.TabIndex = 2;
+            this.cbxTipoPago.TabIndex = 9;
             this.cbxTipoPago.SelectedIndexChanged += new System.EventHandler(this.cbxTipoPago_SelectedIndexChanged);
             // 
             // label2
@@ -246,7 +246,7 @@
             this.label2.Location = new System.Drawing.Point(9, 248);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 19);
-            this.label2.TabIndex = 23;
+            this.label2.TabIndex = 16;
             this.label2.Text = "Terminación tarjeta";
             // 
             // txtTerminacion
@@ -257,7 +257,7 @@
             this.txtTerminacion.Location = new System.Drawing.Point(13, 270);
             this.txtTerminacion.Name = "txtTerminacion";
             this.txtTerminacion.Size = new System.Drawing.Size(178, 26);
-            this.txtTerminacion.TabIndex = 5;
+            this.txtTerminacion.TabIndex = 17;
             this.txtTerminacion.EnabledChanged += new System.EventHandler(this.txtTerminacion_EnabledChanged);
             this.txtTerminacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFolio_KeyPress);
             // 
@@ -269,7 +269,7 @@
             this.label3.Location = new System.Drawing.Point(203, 248);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 19);
-            this.label3.TabIndex = 25;
+            this.label3.TabIndex = 18;
             this.label3.Text = "Folio ticket terminal";
             // 
             // txtFolioTicket
@@ -280,7 +280,7 @@
             this.txtFolioTicket.Location = new System.Drawing.Point(207, 270);
             this.txtFolioTicket.Name = "txtFolioTicket";
             this.txtFolioTicket.Size = new System.Drawing.Size(178, 26);
-            this.txtFolioTicket.TabIndex = 6;
+            this.txtFolioTicket.TabIndex = 19;
             // 
             // lblPrecio
             // 
@@ -289,7 +289,7 @@
             this.lblPrecio.Location = new System.Drawing.Point(9, 207);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(45, 19);
-            this.lblPrecio.TabIndex = 26;
+            this.lblPrecio.TabIndex = 13;
             this.lblPrecio.Text = "$0.00";
             // 
             // btnQuitarPromo
@@ -299,7 +299,7 @@
             this.btnQuitarPromo.Location = new System.Drawing.Point(401, 136);
             this.btnQuitarPromo.Name = "btnQuitarPromo";
             this.btnQuitarPromo.Size = new System.Drawing.Size(178, 27);
-            this.btnQuitarPromo.TabIndex = 47;
+            this.btnQuitarPromo.TabIndex = 11;
             this.btnQuitarPromo.Text = "Quitar promoción";
             this.btnQuitarPromo.UseVisualStyleBackColor = true;
             this.btnQuitarPromo.Click += new System.EventHandler(this.btnQuitarPromo_Click);
@@ -310,7 +310,7 @@
             this.btnAsignarPromo.Location = new System.Drawing.Point(207, 136);
             this.btnAsignarPromo.Name = "btnAsignarPromo";
             this.btnAsignarPromo.Size = new System.Drawing.Size(178, 27);
-            this.btnAsignarPromo.TabIndex = 46;
+            this.btnAsignarPromo.TabIndex = 10;
             this.btnAsignarPromo.Text = "Asignar promoción";
             this.btnAsignarPromo.UseVisualStyleBackColor = true;
             this.btnAsignarPromo.Click += new System.EventHandler(this.btnAsignarPromo_Click);
@@ -324,7 +324,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(539, 345);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(105, 40);
-            this.btnAceptar.TabIndex = 8;
+            this.btnAceptar.TabIndex = 22;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.UseVisualStyleBackColor = true;

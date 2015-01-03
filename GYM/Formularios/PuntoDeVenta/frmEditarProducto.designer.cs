@@ -38,7 +38,6 @@
             this.lblUnidad = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.txbMarca = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txbNombre = new System.Windows.Forms.TextBox();
             this.lblNombreProducto = new System.Windows.Forms.Label();
             this.cboPieza = new System.Windows.Forms.ComboBox();
@@ -54,7 +53,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(298, 268);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(101, 39);
-            this.btnAceptar.TabIndex = 7;
+            this.btnAceptar.TabIndex = 14;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -68,7 +67,7 @@
             this.txbDescripcion.Name = "txbDescripcion";
             this.txbDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txbDescripcion.Size = new System.Drawing.Size(200, 75);
-            this.txbDescripcion.TabIndex = 4;
+            this.txbDescripcion.TabIndex = 10;
             // 
             // txbCosto
             // 
@@ -76,7 +75,7 @@
             this.txbCosto.Location = new System.Drawing.Point(218, 181);
             this.txbCosto.Name = "txbCosto";
             this.txbCosto.Size = new System.Drawing.Size(181, 29);
-            this.txbCosto.TabIndex = 5;
+            this.txbCosto.TabIndex = 12;
             this.txbCosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioCosto_KeyPress);
             // 
             // lblCosto
@@ -86,7 +85,7 @@
             this.lblCosto.Location = new System.Drawing.Point(214, 157);
             this.lblCosto.Name = "lblCosto";
             this.lblCosto.Size = new System.Drawing.Size(131, 21);
-            this.lblCosto.TabIndex = 26;
+            this.lblCosto.TabIndex = 11;
             this.lblCosto.Text = "Precio de compra";
             // 
             // txbPrecio
@@ -95,7 +94,7 @@
             this.txbPrecio.Location = new System.Drawing.Point(218, 120);
             this.txbPrecio.Name = "txbPrecio";
             this.txbPrecio.Size = new System.Drawing.Size(181, 29);
-            this.txbPrecio.TabIndex = 3;
+            this.txbPrecio.TabIndex = 8;
             this.txbPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioCosto_KeyPress);
             // 
             // lblPrecio
@@ -105,7 +104,7 @@
             this.lblPrecio.Location = new System.Drawing.Point(214, 96);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(116, 21);
-            this.lblPrecio.TabIndex = 24;
+            this.lblPrecio.TabIndex = 7;
             this.lblPrecio.Text = "Precio de venta";
             // 
             // lblUnidad
@@ -115,7 +114,7 @@
             this.lblUnidad.Location = new System.Drawing.Point(214, 38);
             this.lblUnidad.Name = "lblUnidad";
             this.lblUnidad.Size = new System.Drawing.Size(172, 21);
-            this.lblUnidad.TabIndex = 22;
+            this.lblUnidad.TabIndex = 3;
             this.lblUnidad.Text = "Unidad (Pieza/Paquete)";
             // 
             // lblDescripcion
@@ -125,7 +124,7 @@
             this.lblDescripcion.Location = new System.Drawing.Point(8, 157);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(91, 21);
-            this.lblDescripcion.TabIndex = 21;
+            this.lblDescripcion.TabIndex = 9;
             this.lblDescripcion.Text = "Descripción";
             // 
             // txbMarca
@@ -134,17 +133,7 @@
             this.txbMarca.Location = new System.Drawing.Point(12, 120);
             this.txbMarca.Name = "txbMarca";
             this.txbMarca.Size = new System.Drawing.Size(200, 29);
-            this.txbMarca.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label2.Location = new System.Drawing.Point(8, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 21);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Marca";
+            this.txbMarca.TabIndex = 6;
             // 
             // txbNombre
             // 
@@ -152,7 +141,7 @@
             this.txbNombre.Location = new System.Drawing.Point(12, 62);
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(200, 29);
-            this.txbNombre.TabIndex = 0;
+            this.txbNombre.TabIndex = 2;
             // 
             // lblNombreProducto
             // 
@@ -161,7 +150,7 @@
             this.lblNombreProducto.Location = new System.Drawing.Point(8, 38);
             this.lblNombreProducto.Name = "lblNombreProducto";
             this.lblNombreProducto.Size = new System.Drawing.Size(135, 21);
-            this.lblNombreProducto.TabIndex = 17;
+            this.lblNombreProducto.TabIndex = 1;
             this.lblNombreProducto.Text = "Nombre producto";
             // 
             // cboPieza
@@ -176,7 +165,7 @@
             this.cboPieza.Location = new System.Drawing.Point(218, 62);
             this.cboPieza.Name = "cboPieza";
             this.cboPieza.Size = new System.Drawing.Size(181, 29);
-            this.cboPieza.TabIndex = 1;
+            this.cboPieza.TabIndex = 4;
             // 
             // chbControlStock
             // 
@@ -187,7 +176,7 @@
             this.chbControlStock.Location = new System.Drawing.Point(277, 216);
             this.chbControlStock.Name = "chbControlStock";
             this.chbControlStock.Size = new System.Drawing.Size(122, 23);
-            this.chbControlStock.TabIndex = 6;
+            this.chbControlStock.TabIndex = 13;
             this.chbControlStock.Text = "Controlar stock";
             this.chbControlStock.UseVisualStyleBackColor = true;
             // 
@@ -210,7 +199,7 @@
             this.lblMarca.Location = new System.Drawing.Point(12, 96);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(53, 21);
-            this.lblMarca.TabIndex = 27;
+            this.lblMarca.TabIndex = 5;
             this.lblMarca.Text = "Marca";
             // 
             // frmEditarProducto
@@ -231,7 +220,6 @@
             this.Controls.Add(this.lblUnidad);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.txbMarca);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.txbNombre);
             this.Controls.Add(this.lblNombreProducto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -258,7 +246,6 @@
         private System.Windows.Forms.Label lblUnidad;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.TextBox txbMarca;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txbNombre;
         private System.Windows.Forms.Label lblNombreProducto;
         private System.Windows.Forms.ComboBox cboPieza;

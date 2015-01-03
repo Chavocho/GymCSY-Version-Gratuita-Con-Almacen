@@ -65,7 +65,7 @@
             this.cboGenero.Location = new System.Drawing.Point(12, 198);
             this.cboGenero.Name = "cboGenero";
             this.cboGenero.Size = new System.Drawing.Size(243, 27);
-            this.cboGenero.TabIndex = 38;
+            this.cboGenero.TabIndex = 11;
             // 
             // lblEGenero
             // 
@@ -74,7 +74,7 @@
             this.lblEGenero.Location = new System.Drawing.Point(8, 176);
             this.lblEGenero.Name = "lblEGenero";
             this.lblEGenero.Size = new System.Drawing.Size(54, 19);
-            this.lblEGenero.TabIndex = 37;
+            this.lblEGenero.TabIndex = 10;
             this.lblEGenero.Text = "Genero";
             // 
             // btnAceptar
@@ -83,7 +83,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(422, 315);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(82, 23);
-            this.btnAceptar.TabIndex = 36;
+            this.btnAceptar.TabIndex = 13;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -110,7 +110,7 @@
             this.cboTipo.Location = new System.Drawing.Point(261, 141);
             this.cboTipo.Name = "cboTipo";
             this.cboTipo.Size = new System.Drawing.Size(243, 27);
-            this.cboTipo.TabIndex = 35;
+            this.cboTipo.TabIndex = 9;
             // 
             // lblEDuracion
             // 
@@ -119,7 +119,7 @@
             this.lblEDuracion.Location = new System.Drawing.Point(257, 119);
             this.lblEDuracion.Name = "lblEDuracion";
             this.lblEDuracion.Size = new System.Drawing.Size(64, 19);
-            this.lblEDuracion.TabIndex = 34;
+            this.lblEDuracion.TabIndex = 8;
             this.lblEDuracion.Text = "Duración";
             // 
             // txtPrecio
@@ -128,7 +128,7 @@
             this.txtPrecio.Location = new System.Drawing.Point(261, 86);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(243, 25);
-            this.txtPrecio.TabIndex = 33;
+            this.txtPrecio.TabIndex = 7;
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // lblEPrecio
@@ -138,7 +138,7 @@
             this.lblEPrecio.Location = new System.Drawing.Point(257, 64);
             this.lblEPrecio.Name = "lblEPrecio";
             this.lblEPrecio.Size = new System.Drawing.Size(46, 19);
-            this.lblEPrecio.TabIndex = 32;
+            this.lblEPrecio.TabIndex = 6;
             this.lblEPrecio.Text = "Precio";
             // 
             // txtDescripcion
@@ -148,7 +148,7 @@
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(243, 82);
-            this.txtDescripcion.TabIndex = 31;
+            this.txtDescripcion.TabIndex = 5;
             // 
             // lblEDescripcion
             // 
@@ -157,7 +157,7 @@
             this.lblEDescripcion.Location = new System.Drawing.Point(8, 64);
             this.lblEDescripcion.Name = "lblEDescripcion";
             this.lblEDescripcion.Size = new System.Drawing.Size(79, 19);
-            this.lblEDescripcion.TabIndex = 30;
+            this.lblEDescripcion.TabIndex = 4;
             this.lblEDescripcion.Text = "Descripción";
             // 
             // lblEFechaFin
@@ -166,9 +166,9 @@
             this.lblEFechaFin.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblEFechaFin.Location = new System.Drawing.Point(257, 9);
             this.lblEFechaFin.Name = "lblEFechaFin";
-            this.lblEFechaFin.Size = new System.Drawing.Size(139, 19);
-            this.lblEFechaFin.TabIndex = 29;
-            this.lblEFechaFin.Text = "Fecha de terminación";
+            this.lblEFechaFin.Size = new System.Drawing.Size(134, 19);
+            this.lblEFechaFin.TabIndex = 2;
+            this.lblEFechaFin.Text = "Hora de terminación";
             // 
             // dtpHoraFin
             // 
@@ -179,7 +179,7 @@
             this.dtpHoraFin.Name = "dtpHoraFin";
             this.dtpHoraFin.ShowUpDown = true;
             this.dtpHoraFin.Size = new System.Drawing.Size(243, 25);
-            this.dtpHoraFin.TabIndex = 28;
+            this.dtpHoraFin.TabIndex = 3;
             // 
             // lblEFechaInicio
             // 
@@ -187,9 +187,9 @@
             this.lblEFechaInicio.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lblEFechaInicio.Location = new System.Drawing.Point(8, 9);
             this.lblEFechaInicio.Name = "lblEFechaInicio";
-            this.lblEFechaInicio.Size = new System.Drawing.Size(98, 19);
-            this.lblEFechaInicio.TabIndex = 27;
-            this.lblEFechaInicio.Text = "Fecha de inicio";
+            this.lblEFechaInicio.Size = new System.Drawing.Size(93, 19);
+            this.lblEFechaInicio.TabIndex = 0;
+            this.lblEFechaInicio.Text = "Hora de inicio";
             // 
             // dtpHoraInicio
             // 
@@ -200,7 +200,7 @@
             this.dtpHoraInicio.Name = "dtpHoraInicio";
             this.dtpHoraInicio.ShowUpDown = true;
             this.dtpHoraInicio.Size = new System.Drawing.Size(243, 25);
-            this.dtpHoraInicio.TabIndex = 26;
+            this.dtpHoraInicio.TabIndex = 1;
             // 
             // grbDatos
             // 
@@ -216,7 +216,7 @@
             this.grbDatos.Location = new System.Drawing.Point(12, 238);
             this.grbDatos.Name = "grbDatos";
             this.grbDatos.Size = new System.Drawing.Size(320, 100);
-            this.grbDatos.TabIndex = 39;
+            this.grbDatos.TabIndex = 12;
             this.grbDatos.TabStop = false;
             this.grbDatos.Text = "Datos de promoción";
             // 
@@ -227,7 +227,7 @@
             this.lblUpdateUser.Location = new System.Drawing.Point(125, 58);
             this.lblUpdateUser.Name = "lblUpdateUser";
             this.lblUpdateUser.Size = new System.Drawing.Size(94, 15);
-            this.lblUpdateUser.TabIndex = 7;
+            this.lblUpdateUser.TabIndex = 5;
             this.lblUpdateUser.Text = "Sin información";
             // 
             // lblEUpdateUser
@@ -237,7 +237,7 @@
             this.lblEUpdateUser.Location = new System.Drawing.Point(6, 58);
             this.lblEUpdateUser.Name = "lblEUpdateUser";
             this.lblEUpdateUser.Size = new System.Drawing.Size(118, 15);
-            this.lblEUpdateUser.TabIndex = 6;
+            this.lblEUpdateUser.TabIndex = 4;
             this.lblEUpdateUser.Text = "Usuario modificador:";
             // 
             // lblUpdateTime
@@ -247,7 +247,7 @@
             this.lblUpdateTime.Location = new System.Drawing.Point(125, 78);
             this.lblUpdateTime.Name = "lblUpdateTime";
             this.lblUpdateTime.Size = new System.Drawing.Size(94, 15);
-            this.lblUpdateTime.TabIndex = 5;
+            this.lblUpdateTime.TabIndex = 7;
             this.lblUpdateTime.Text = "Sin información";
             // 
             // lblEUpdateTime
@@ -257,7 +257,7 @@
             this.lblEUpdateTime.Location = new System.Drawing.Point(5, 78);
             this.lblEUpdateTime.Name = "lblEUpdateTime";
             this.lblEUpdateTime.Size = new System.Drawing.Size(114, 15);
-            this.lblEUpdateTime.TabIndex = 4;
+            this.lblEUpdateTime.TabIndex = 6;
             this.lblEUpdateTime.Text = "Fecha modificación:";
             // 
             // lblCreateTime

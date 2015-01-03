@@ -45,7 +45,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(322, 157);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 23;
+            this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Guardar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -59,7 +59,7 @@
             this.lblEtiquetaPrecio.Location = new System.Drawing.Point(203, 9);
             this.lblEtiquetaPrecio.Name = "lblEtiquetaPrecio";
             this.lblEtiquetaPrecio.Size = new System.Drawing.Size(46, 19);
-            this.lblEtiquetaPrecio.TabIndex = 25;
+            this.lblEtiquetaPrecio.TabIndex = 2;
             this.lblEtiquetaPrecio.Text = "Precio";
             // 
             // txtPrecio
@@ -70,7 +70,7 @@
             this.txtPrecio.Location = new System.Drawing.Point(207, 31);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(190, 26);
-            this.txtPrecio.TabIndex = 24;
+            this.txtPrecio.TabIndex = 3;
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // lblEtiquetaDescripcion
@@ -81,7 +81,7 @@
             this.lblEtiquetaDescripcion.Location = new System.Drawing.Point(8, 60);
             this.lblEtiquetaDescripcion.Name = "lblEtiquetaDescripcion";
             this.lblEtiquetaDescripcion.Size = new System.Drawing.Size(79, 19);
-            this.lblEtiquetaDescripcion.TabIndex = 27;
+            this.lblEtiquetaDescripcion.TabIndex = 4;
             this.lblEtiquetaDescripcion.Text = "Descripción";
             // 
             // txtDescripcion
@@ -92,7 +92,7 @@
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(189, 98);
-            this.txtDescripcion.TabIndex = 26;
+            this.txtDescripcion.TabIndex = 5;
             // 
             // lblEtiquetaTipo
             // 
@@ -102,7 +102,7 @@
             this.lblEtiquetaTipo.Location = new System.Drawing.Point(8, 8);
             this.lblEtiquetaTipo.Name = "lblEtiquetaTipo";
             this.lblEtiquetaTipo.Size = new System.Drawing.Size(64, 19);
-            this.lblEtiquetaTipo.TabIndex = 29;
+            this.lblEtiquetaTipo.TabIndex = 0;
             this.lblEtiquetaTipo.Text = "Duración";
             // 
             // cbxTipo
@@ -128,7 +128,7 @@
             this.cbxTipo.Location = new System.Drawing.Point(12, 30);
             this.cbxTipo.Name = "cbxTipo";
             this.cbxTipo.Size = new System.Drawing.Size(189, 27);
-            this.cbxTipo.TabIndex = 28;
+            this.cbxTipo.TabIndex = 1;
             this.cbxTipo.SelectedIndexChanged += new System.EventHandler(this.cbxTipo_SelectedIndexChanged);
             // 
             // frmPrecioMembresia

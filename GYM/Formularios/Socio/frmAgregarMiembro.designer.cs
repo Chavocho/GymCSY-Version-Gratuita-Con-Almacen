@@ -43,7 +43,6 @@
             this.tbxTel = new System.Windows.Forms.TextBox();
             this.tbxEmail = new System.Windows.Forms.TextBox();
             this.cbxSexo = new System.Windows.Forms.ComboBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnTomarFoto = new System.Windows.Forms.Button();
             this.pbxImagenPerfil = new System.Windows.Forms.PictureBox();
@@ -69,7 +68,7 @@
             this.label1.Location = new System.Drawing.Point(327, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 19);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 4;
             this.label1.Text = "Nombre:";
             // 
             // label2
@@ -79,7 +78,7 @@
             this.label2.Location = new System.Drawing.Point(323, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 19);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 6;
             this.label2.Text = "Apellidos:";
             // 
             // label3
@@ -89,7 +88,7 @@
             this.label3.Location = new System.Drawing.Point(306, 108);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 19);
-            this.label3.TabIndex = 4;
+            this.label3.TabIndex = 8;
             this.label3.Text = "Fecha de nacimiento:";
             // 
             // Sexo
@@ -99,7 +98,7 @@
             this.Sexo.Location = new System.Drawing.Point(548, 108);
             this.Sexo.Name = "Sexo";
             this.Sexo.Size = new System.Drawing.Size(40, 19);
-            this.Sexo.TabIndex = 6;
+            this.Sexo.TabIndex = 10;
             this.Sexo.Text = "Sexo:";
             // 
             // label4
@@ -109,7 +108,7 @@
             this.label4.Location = new System.Drawing.Point(319, 141);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 19);
-            this.label4.TabIndex = 7;
+            this.label4.TabIndex = 12;
             this.label4.Text = "Domicilio:";
             // 
             // label6
@@ -119,7 +118,7 @@
             this.label6.Location = new System.Drawing.Point(334, 173);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 19);
-            this.label6.TabIndex = 9;
+            this.label6.TabIndex = 14;
             this.label6.Text = "Estado:";
             // 
             // label8
@@ -129,7 +128,7 @@
             this.label8.Location = new System.Drawing.Point(325, 238);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 19);
-            this.label8.TabIndex = 11;
+            this.label8.TabIndex = 20;
             this.label8.Text = "Telefono:";
             // 
             // label9
@@ -139,7 +138,7 @@
             this.label9.Location = new System.Drawing.Point(343, 270);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 19);
-            this.label9.TabIndex = 12;
+            this.label9.TabIndex = 22;
             this.label9.Text = "Email:";
             // 
             // tbxNombre
@@ -148,7 +147,7 @@
             this.tbxNombre.Location = new System.Drawing.Point(393, 41);
             this.tbxNombre.Name = "tbxNombre";
             this.tbxNombre.Size = new System.Drawing.Size(301, 26);
-            this.tbxNombre.TabIndex = 2;
+            this.tbxNombre.TabIndex = 5;
             // 
             // tbxApellidos
             // 
@@ -156,7 +155,7 @@
             this.tbxApellidos.Location = new System.Drawing.Point(393, 73);
             this.tbxApellidos.Name = "tbxApellidos";
             this.tbxApellidos.Size = new System.Drawing.Size(301, 26);
-            this.tbxApellidos.TabIndex = 3;
+            this.tbxApellidos.TabIndex = 7;
             // 
             // tbxDomicilio
             // 
@@ -164,7 +163,7 @@
             this.tbxDomicilio.Location = new System.Drawing.Point(393, 138);
             this.tbxDomicilio.Name = "tbxDomicilio";
             this.tbxDomicilio.Size = new System.Drawing.Size(301, 26);
-            this.tbxDomicilio.TabIndex = 6;
+            this.tbxDomicilio.TabIndex = 13;
             // 
             // tbxTel
             // 
@@ -172,7 +171,7 @@
             this.tbxTel.Location = new System.Drawing.Point(393, 235);
             this.tbxTel.Name = "tbxTel";
             this.tbxTel.Size = new System.Drawing.Size(149, 26);
-            this.tbxTel.TabIndex = 11;
+            this.tbxTel.TabIndex = 21;
             this.tbxTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeros_KeyPress);
             // 
             // tbxEmail
@@ -181,7 +180,7 @@
             this.tbxEmail.Location = new System.Drawing.Point(393, 267);
             this.tbxEmail.Name = "tbxEmail";
             this.tbxEmail.Size = new System.Drawing.Size(301, 26);
-            this.tbxEmail.TabIndex = 12;
+            this.tbxEmail.TabIndex = 23;
             // 
             // cbxSexo
             // 
@@ -195,21 +194,7 @@
             this.cbxSexo.Location = new System.Drawing.Point(592, 105);
             this.cbxSexo.Name = "cbxSexo";
             this.cbxSexo.Size = new System.Drawing.Size(102, 27);
-            this.cbxSexo.TabIndex = 5;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnCancelar.Image = global::GYM.Properties.Resources.ImgCancelar;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(386, 365);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(151, 34);
-            this.btnCancelar.TabIndex = 16;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.cbxSexo.TabIndex = 11;
             // 
             // btnAceptar
             // 
@@ -219,7 +204,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(543, 365);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(151, 34);
-            this.btnAceptar.TabIndex = 15;
+            this.btnAceptar.TabIndex = 27;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -232,7 +217,7 @@
             this.btnTomarFoto.Location = new System.Drawing.Point(67, 302);
             this.btnTomarFoto.Name = "btnTomarFoto";
             this.btnTomarFoto.Size = new System.Drawing.Size(151, 44);
-            this.btnTomarFoto.TabIndex = 14;
+            this.btnTomarFoto.TabIndex = 25;
             this.btnTomarFoto.Text = "Iniciar Camara";
             this.btnTomarFoto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTomarFoto.UseVisualStyleBackColor = true;
@@ -255,7 +240,7 @@
             this.timePickerFechaNac.Location = new System.Drawing.Point(449, 105);
             this.timePickerFechaNac.Name = "timePickerFechaNac";
             this.timePickerFechaNac.Size = new System.Drawing.Size(93, 26);
-            this.timePickerFechaNac.TabIndex = 4;
+            this.timePickerFechaNac.TabIndex = 9;
             // 
             // label10
             // 
@@ -264,7 +249,7 @@
             this.label10.Location = new System.Drawing.Point(487, 12);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(101, 19);
-            this.label10.TabIndex = 28;
+            this.label10.TabIndex = 2;
             this.label10.Text = "Fecha de inicio:";
             // 
             // timePickerFechaIni
@@ -275,7 +260,7 @@
             this.timePickerFechaIni.Location = new System.Drawing.Point(594, 9);
             this.timePickerFechaIni.Name = "timePickerFechaIni";
             this.timePickerFechaIni.Size = new System.Drawing.Size(100, 26);
-            this.timePickerFechaIni.TabIndex = 1;
+            this.timePickerFechaIni.TabIndex = 3;
             // 
             // cbxEstado
             // 
@@ -319,7 +304,7 @@
             this.cbxEstado.Location = new System.Drawing.Point(393, 170);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(112, 27);
-            this.cbxEstado.TabIndex = 7;
+            this.cbxEstado.TabIndex = 15;
             // 
             // cbxCamara
             // 
@@ -330,7 +315,7 @@
             this.cbxCamara.Location = new System.Drawing.Point(36, 262);
             this.cbxCamara.Name = "cbxCamara";
             this.cbxCamara.Size = new System.Drawing.Size(209, 27);
-            this.cbxCamara.TabIndex = 13;
+            this.cbxCamara.TabIndex = 24;
             this.cbxCamara.SelectedIndexChanged += new System.EventHandler(this.cbxCamara_SelectedIndexChanged);
             // 
             // lblSocio
@@ -340,7 +325,7 @@
             this.lblSocio.Location = new System.Drawing.Point(271, 12);
             this.lblSocio.Name = "lblSocio";
             this.lblSocio.Size = new System.Drawing.Size(116, 19);
-            this.lblSocio.TabIndex = 33;
+            this.lblSocio.TabIndex = 0;
             this.lblSocio.Text = "Número de socio:";
             // 
             // lblCiudad
@@ -350,7 +335,7 @@
             this.lblCiudad.Location = new System.Drawing.Point(511, 173);
             this.lblCiudad.Name = "lblCiudad";
             this.lblCiudad.Size = new System.Drawing.Size(55, 19);
-            this.lblCiudad.TabIndex = 35;
+            this.lblCiudad.TabIndex = 16;
             this.lblCiudad.Text = "Ciudad:";
             // 
             // tbxCiudad
@@ -359,7 +344,7 @@
             this.tbxCiudad.Location = new System.Drawing.Point(572, 170);
             this.tbxCiudad.Name = "tbxCiudad";
             this.tbxCiudad.Size = new System.Drawing.Size(122, 26);
-            this.tbxCiudad.TabIndex = 9;
+            this.tbxCiudad.TabIndex = 17;
             // 
             // tbxCelular
             // 
@@ -367,7 +352,7 @@
             this.tbxCelular.Location = new System.Drawing.Point(393, 203);
             this.tbxCelular.Name = "tbxCelular";
             this.tbxCelular.Size = new System.Drawing.Size(149, 26);
-            this.tbxCelular.TabIndex = 10;
+            this.tbxCelular.TabIndex = 19;
             this.tbxCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeros_KeyPress);
             // 
             // label5
@@ -377,7 +362,7 @@
             this.label5.Location = new System.Drawing.Point(336, 206);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 19);
-            this.label5.TabIndex = 8;
+            this.label5.TabIndex = 18;
             this.label5.Text = "Celular:";
             // 
             // txtNumSocio
@@ -386,7 +371,7 @@
             this.txtNumSocio.Location = new System.Drawing.Point(393, 9);
             this.txtNumSocio.Name = "txtNumSocio";
             this.txtNumSocio.Size = new System.Drawing.Size(80, 26);
-            this.txtNumSocio.TabIndex = 0;
+            this.txtNumSocio.TabIndex = 1;
             this.txtNumSocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumSocio_KeyPress);
             // 
             // btnHuella
@@ -395,7 +380,7 @@
             this.btnHuella.Location = new System.Drawing.Point(67, 352);
             this.btnHuella.Name = "btnHuella";
             this.btnHuella.Size = new System.Drawing.Size(151, 34);
-            this.btnHuella.TabIndex = 36;
+            this.btnHuella.TabIndex = 26;
             this.btnHuella.Text = "Capturar huella";
             this.btnHuella.UseVisualStyleBackColor = true;
             this.btnHuella.Click += new System.EventHandler(this.btnHuella_Click);
@@ -405,7 +390,6 @@
             this.AcceptButton = this.btnAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(706, 411);
             this.Controls.Add(this.btnHuella);
             this.Controls.Add(this.txtNumSocio);
@@ -419,7 +403,6 @@
             this.Controls.Add(this.timePickerFechaNac);
             this.Controls.Add(this.btnTomarFoto);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.cbxSexo);
             this.Controls.Add(this.tbxEmail);
             this.Controls.Add(this.tbxTel);
@@ -470,7 +453,6 @@
         private System.Windows.Forms.TextBox tbxTel;
         private System.Windows.Forms.TextBox tbxEmail;
         private System.Windows.Forms.ComboBox cbxSexo;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnTomarFoto;
         private System.Windows.Forms.DateTimePicker timePickerFechaNac;

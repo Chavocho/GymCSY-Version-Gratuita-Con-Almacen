@@ -48,7 +48,7 @@
             this.txtEfectivo.Location = new System.Drawing.Point(177, 149);
             this.txtEfectivo.Name = "txtEfectivo";
             this.txtEfectivo.Size = new System.Drawing.Size(170, 31);
-            this.txtEfectivo.TabIndex = 0;
+            this.txtEfectivo.TabIndex = 7;
             this.txtEfectivo.TextChanged += new System.EventHandler(this.txtEfectivo_TextChanged);
             this.txtEfectivo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEfectivo_KeyPress);
             // 
@@ -59,7 +59,7 @@
             this.lblEtiquetaEfectivoTotal.Location = new System.Drawing.Point(12, 197);
             this.lblEtiquetaEfectivoTotal.Name = "lblEtiquetaEfectivoTotal";
             this.lblEtiquetaEfectivoTotal.Size = new System.Drawing.Size(131, 28);
-            this.lblEtiquetaEfectivoTotal.TabIndex = 14;
+            this.lblEtiquetaEfectivoTotal.TabIndex = 8;
             this.lblEtiquetaEfectivoTotal.Text = "Efectivo total:";
             // 
             // lblTotal
@@ -71,7 +71,7 @@
             this.lblTotal.Location = new System.Drawing.Point(177, 197);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(60, 28);
-            this.lblTotal.TabIndex = 13;
+            this.lblTotal.TabIndex = 9;
             this.lblTotal.Text = "$0.00";
             // 
             // lblEtiquetaEfectivoDejar
@@ -81,7 +81,7 @@
             this.lblEtiquetaEfectivoDejar.Location = new System.Drawing.Point(12, 147);
             this.lblEtiquetaEfectivoDejar.Name = "lblEtiquetaEfectivoDejar";
             this.lblEtiquetaEfectivoDejar.Size = new System.Drawing.Size(158, 28);
-            this.lblEtiquetaEfectivoDejar.TabIndex = 12;
+            this.lblEtiquetaEfectivoDejar.TabIndex = 6;
             this.lblEtiquetaEfectivoDejar.Text = "Efectivo a retirar:";
             // 
             // lblAtiende
@@ -91,7 +91,7 @@
             this.lblAtiende.Location = new System.Drawing.Point(82, 9);
             this.lblAtiende.Name = "lblAtiende";
             this.lblAtiende.Size = new System.Drawing.Size(60, 20);
-            this.lblAtiende.TabIndex = 11;
+            this.lblAtiende.TabIndex = 1;
             this.lblAtiende.Text = "Alguien";
             // 
             // lblEtiquetaAtiende
@@ -101,7 +101,7 @@
             this.lblEtiquetaAtiende.Location = new System.Drawing.Point(12, 9);
             this.lblEtiquetaAtiende.Name = "lblEtiquetaAtiende";
             this.lblEtiquetaAtiende.Size = new System.Drawing.Size(64, 20);
-            this.lblEtiquetaAtiende.TabIndex = 10;
+            this.lblEtiquetaAtiende.TabIndex = 0;
             this.lblEtiquetaAtiende.Text = "Atiende:";
             // 
             // lblEfectivoCaja
@@ -111,7 +111,7 @@
             this.lblEfectivoCaja.Location = new System.Drawing.Point(177, 47);
             this.lblEfectivoCaja.Name = "lblEfectivoCaja";
             this.lblEfectivoCaja.Size = new System.Drawing.Size(60, 28);
-            this.lblEfectivoCaja.TabIndex = 9;
+            this.lblEfectivoCaja.TabIndex = 3;
             this.lblEfectivoCaja.Text = "$0.00";
             // 
             // lblEtiquetaEfectivoCaja
@@ -121,7 +121,7 @@
             this.lblEtiquetaEfectivoCaja.Location = new System.Drawing.Point(12, 47);
             this.lblEtiquetaEfectivoCaja.Name = "lblEtiquetaEfectivoCaja";
             this.lblEtiquetaEfectivoCaja.Size = new System.Drawing.Size(150, 28);
-            this.lblEtiquetaEfectivoCaja.TabIndex = 8;
+            this.lblEtiquetaEfectivoCaja.TabIndex = 2;
             this.lblEtiquetaEfectivoCaja.Text = "Efectivo en caja:";
             // 
             // lblVouchers
@@ -131,7 +131,7 @@
             this.lblVouchers.Location = new System.Drawing.Point(177, 97);
             this.lblVouchers.Name = "lblVouchers";
             this.lblVouchers.Size = new System.Drawing.Size(60, 28);
-            this.lblVouchers.TabIndex = 17;
+            this.lblVouchers.TabIndex = 5;
             this.lblVouchers.Text = "$0.00";
             // 
             // lblEtiquetaVouchers
@@ -141,7 +141,7 @@
             this.lblEtiquetaVouchers.Location = new System.Drawing.Point(10, 97);
             this.lblEtiquetaVouchers.Name = "lblEtiquetaVouchers";
             this.lblEtiquetaVouchers.Size = new System.Drawing.Size(161, 28);
-            this.lblEtiquetaVouchers.TabIndex = 16;
+            this.lblEtiquetaVouchers.TabIndex = 4;
             this.lblEtiquetaVouchers.Text = "Vouchers en caja:";
             // 
             // btnAceptar
@@ -152,7 +152,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(242, 237);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(103, 32);
-            this.btnAceptar.TabIndex = 1;
+            this.btnAceptar.TabIndex = 10;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.UseVisualStyleBackColor = true;

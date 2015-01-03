@@ -51,7 +51,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(9, 130);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(120, 56);
-            this.btnEliminar.TabIndex = 22;
+            this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Eliminar producto";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -65,7 +65,7 @@
             this.btnEditar.Location = new System.Drawing.Point(9, 68);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(120, 56);
-            this.btnEditar.TabIndex = 21;
+            this.btnEditar.TabIndex = 4;
             this.btnEditar.Text = "Modificar producto";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -79,7 +79,7 @@
             this.lblInstruccionesBusqueda.Location = new System.Drawing.Point(377, 43);
             this.lblInstruccionesBusqueda.Name = "lblInstruccionesBusqueda";
             this.lblInstruccionesBusqueda.Size = new System.Drawing.Size(273, 19);
-            this.lblInstruccionesBusqueda.TabIndex = 24;
+            this.lblInstruccionesBusqueda.TabIndex = 1;
             this.lblInstruccionesBusqueda.Text = "Buscar por número de producto o nombre ";
             // 
             // txtBusqueda
@@ -89,7 +89,7 @@
             this.txtBusqueda.Location = new System.Drawing.Point(656, 35);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(173, 27);
-            this.txtBusqueda.TabIndex = 18;
+            this.txtBusqueda.TabIndex = 2;
             this.txtBusqueda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusqueda_KeyPress);
             // 
             // lblTitulo
@@ -99,7 +99,7 @@
             this.lblTitulo.Location = new System.Drawing.Point(7, 8);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(210, 21);
-            this.lblTitulo.TabIndex = 23;
+            this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Administración de productos";
             // 
             // dgvProducto
@@ -129,7 +129,7 @@
             this.dgvProducto.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProducto.Size = new System.Drawing.Size(694, 323);
-            this.dgvProducto.TabIndex = 19;
+            this.dgvProducto.TabIndex = 3;
             this.dgvProducto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducto_CellClick);
             // 
             // Codigo
@@ -172,7 +172,7 @@
             this.btnImprimir.Location = new System.Drawing.Point(9, 192);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(120, 56);
-            this.btnImprimir.TabIndex = 25;
+            this.btnImprimir.TabIndex = 6;
             this.btnImprimir.Text = "Imprimir código de barras";
             this.btnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnImprimir.UseVisualStyleBackColor = true;

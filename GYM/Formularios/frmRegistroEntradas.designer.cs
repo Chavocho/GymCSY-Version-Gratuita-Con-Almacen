@@ -53,7 +53,7 @@
             this.lblNumSocio.Location = new System.Drawing.Point(478, 58);
             this.lblNumSocio.Name = "lblNumSocio";
             this.lblNumSocio.Size = new System.Drawing.Size(364, 25);
-            this.lblNumSocio.TabIndex = 0;
+            this.lblNumSocio.TabIndex = 3;
             this.lblNumSocio.Text = "Ingrese su número de socio y presione enter";
             this.lblNumSocio.Click += new System.EventHandler(this.lblNumSocio_Click);
             // 
@@ -65,7 +65,7 @@
             this.tbxNumSocio.MaxLength = 8;
             this.tbxNumSocio.Name = "tbxNumSocio";
             this.tbxNumSocio.Size = new System.Drawing.Size(273, 34);
-            this.tbxNumSocio.TabIndex = 1;
+            this.tbxNumSocio.TabIndex = 4;
             this.tbxNumSocio.TextChanged += new System.EventHandler(this.tbxNumSocio_TextChanged);
             this.tbxNumSocio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxNumSocio_KeyPress);
             // 
@@ -78,7 +78,7 @@
             this.btnRegEntrada.Location = new System.Drawing.Point(702, 86);
             this.btnRegEntrada.Name = "btnRegEntrada";
             this.btnRegEntrada.Size = new System.Drawing.Size(140, 34);
-            this.btnRegEntrada.TabIndex = 2;
+            this.btnRegEntrada.TabIndex = 5;
             this.btnRegEntrada.Text = "Aceptar";
             this.btnRegEntrada.UseVisualStyleBackColor = true;
             this.btnRegEntrada.Click += new System.EventHandler(this.btnRegEntrada_Click);
@@ -91,7 +91,7 @@
             this.lblFecha.Location = new System.Drawing.Point(2, 5);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(119, 25);
-            this.lblFecha.TabIndex = 6;
+            this.lblFecha.TabIndex = 0;
             this.lblFecha.Text = "Fecha y hora";
             this.lblFecha.Click += new System.EventHandler(this.lblFecha_Click);
             // 
@@ -114,7 +114,7 @@
             this.lblHora.Location = new System.Drawing.Point(502, 5);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(119, 25);
-            this.lblHora.TabIndex = 8;
+            this.lblHora.TabIndex = 1;
             this.lblHora.Text = "Fecha y hora";
             // 
             // chbTeclado
@@ -125,7 +125,7 @@
             this.chbTeclado.Location = new System.Drawing.Point(624, 133);
             this.chbTeclado.Name = "chbTeclado";
             this.chbTeclado.Size = new System.Drawing.Size(218, 25);
-            this.chbTeclado.TabIndex = 9;
+            this.chbTeclado.TabIndex = 6;
             this.chbTeclado.Text = "Mostrar teclado en pantalla";
             this.chbTeclado.UseVisualStyleBackColor = true;
             this.chbTeclado.CheckedChanged += new System.EventHandler(this.chbTeclado_CheckedChanged);
@@ -136,7 +136,7 @@
             this.btnConfiguración.Location = new System.Drawing.Point(722, 12);
             this.btnConfiguración.Name = "btnConfiguración";
             this.btnConfiguración.Size = new System.Drawing.Size(120, 25);
-            this.btnConfiguración.TabIndex = 10;
+            this.btnConfiguración.TabIndex = 2;
             this.btnConfiguración.Text = "Cambiar configuración";
             this.btnConfiguración.UseVisualStyleBackColor = true;
             this.btnConfiguración.Click += new System.EventHandler(this.btnConfiguración_Click);

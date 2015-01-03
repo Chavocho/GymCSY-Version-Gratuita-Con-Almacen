@@ -40,7 +40,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(256, 52);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 0;
+            this.btnAceptar.TabIndex = 2;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -51,7 +51,7 @@
             this.lblIVA.Location = new System.Drawing.Point(9, 9);
             this.lblIVA.Name = "lblIVA";
             this.lblIVA.Size = new System.Drawing.Size(77, 13);
-            this.lblIVA.TabIndex = 1;
+            this.lblIVA.TabIndex = 0;
             this.lblIVA.Text = "Valor del I.V.A.";
             // 
             // txtIVA
@@ -60,7 +60,7 @@
             this.txtIVA.Location = new System.Drawing.Point(12, 25);
             this.txtIVA.Name = "txtIVA";
             this.txtIVA.Size = new System.Drawing.Size(195, 25);
-            this.txtIVA.TabIndex = 2;
+            this.txtIVA.TabIndex = 1;
             this.txtIVA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIVA_KeyPress);
             // 
             // frmIVA

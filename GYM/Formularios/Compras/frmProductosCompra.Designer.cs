@@ -57,7 +57,7 @@
             this.lblTotal.Location = new System.Drawing.Point(478, 290);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(44, 20);
-            this.lblTotal.TabIndex = 34;
+            this.lblTotal.TabIndex = 8;
             this.lblTotal.Text = "$0.00";
             // 
             // lblEtiquetaTotal
@@ -67,7 +67,7 @@
             this.lblEtiquetaTotal.Location = new System.Drawing.Point(426, 290);
             this.lblEtiquetaTotal.Name = "lblEtiquetaTotal";
             this.lblEtiquetaTotal.Size = new System.Drawing.Size(46, 20);
-            this.lblEtiquetaTotal.TabIndex = 33;
+            this.lblEtiquetaTotal.TabIndex = 7;
             this.lblEtiquetaTotal.Text = "Total:";
             // 
             // lblCantidad
@@ -77,7 +77,7 @@
             this.lblCantidad.Location = new System.Drawing.Point(12, 290);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(72, 20);
-            this.lblCantidad.TabIndex = 32;
+            this.lblCantidad.TabIndex = 3;
             this.lblCantidad.Text = "Cantidad:";
             // 
             // nudCantidad
@@ -96,7 +96,7 @@
             0});
             this.nudCantidad.Name = "nudCantidad";
             this.nudCantidad.Size = new System.Drawing.Size(99, 25);
-            this.nudCantidad.TabIndex = 29;
+            this.nudCantidad.TabIndex = 4;
             this.nudCantidad.Value = new decimal(new int[] {
             1,
             0,
@@ -110,7 +110,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(568, 285);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(92, 33);
-            this.btnAceptar.TabIndex = 30;
+            this.btnAceptar.TabIndex = 9;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -123,7 +123,7 @@
             this.lblInstrucciones.Location = new System.Drawing.Point(240, 13);
             this.lblInstrucciones.Name = "lblInstrucciones";
             this.lblInstrucciones.Size = new System.Drawing.Size(199, 20);
-            this.lblInstrucciones.TabIndex = 31;
+            this.lblInstrucciones.TabIndex = 0;
             this.lblInstrucciones.Text = "Buscar por nombre o código";
             // 
             // txtCodigo
@@ -132,7 +132,7 @@
             this.txtCodigo.Location = new System.Drawing.Point(445, 9);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(215, 29);
-            this.txtCodigo.TabIndex = 27;
+            this.txtCodigo.TabIndex = 1;
             this.txtCodigo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodigo_KeyDown);
             // 
             // dgvProductos
@@ -159,7 +159,7 @@
             this.dgvProductos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductos.Size = new System.Drawing.Size(648, 232);
-            this.dgvProductos.TabIndex = 28;
+            this.dgvProductos.TabIndex = 2;
             this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
             // 
             // CCodigoProducto
@@ -201,7 +201,7 @@
             this.txtDescuento.Location = new System.Drawing.Point(283, 287);
             this.txtDescuento.Name = "txtDescuento";
             this.txtDescuento.Size = new System.Drawing.Size(126, 27);
-            this.txtDescuento.TabIndex = 35;
+            this.txtDescuento.TabIndex = 6;
             this.txtDescuento.TextChanged += new System.EventHandler(this.txtDescuento_TextChanged);
             this.txtDescuento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescuento_KeyPress);
             // 
@@ -212,7 +212,7 @@
             this.lblDescuento.Location = new System.Drawing.Point(195, 290);
             this.lblDescuento.Name = "lblDescuento";
             this.lblDescuento.Size = new System.Drawing.Size(82, 20);
-            this.lblDescuento.TabIndex = 36;
+            this.lblDescuento.TabIndex = 5;
             this.lblDescuento.Text = "Descuento:";
             // 
             // bgwBusqueda

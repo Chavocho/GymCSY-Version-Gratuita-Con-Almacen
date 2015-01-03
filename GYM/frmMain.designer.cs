@@ -118,7 +118,7 @@
             this.menuStripMain.Location = new System.Drawing.Point(0, 0);
             this.menuStripMain.Name = "menuStripMain";
             this.menuStripMain.Size = new System.Drawing.Size(968, 24);
-            this.menuStripMain.TabIndex = 1;
+            this.menuStripMain.TabIndex = 0;
             this.menuStripMain.Text = "menuStrip";
             // 
             // toolStripArchivo
@@ -647,7 +647,7 @@
             this.lblUsuario.Location = new System.Drawing.Point(905, 24);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(51, 20);
-            this.lblUsuario.TabIndex = 4;
+            this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "label1";
             // 
             // lblBETA
@@ -660,7 +660,7 @@
             this.lblBETA.Location = new System.Drawing.Point(899, 527);
             this.lblBETA.Name = "lblBETA";
             this.lblBETA.Size = new System.Drawing.Size(57, 25);
-            this.lblBETA.TabIndex = 7;
+            this.lblBETA.TabIndex = 2;
             this.lblBETA.Text = "BETA";
             // 
             // frmMain

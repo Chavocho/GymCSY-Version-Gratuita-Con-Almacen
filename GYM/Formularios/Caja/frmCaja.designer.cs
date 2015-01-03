@@ -94,7 +94,7 @@
             this.dgvCaja.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCaja.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCaja.Size = new System.Drawing.Size(920, 242);
-            this.dgvCaja.TabIndex = 3;
+            this.dgvCaja.TabIndex = 2;
             // 
             // btnEntrada
             // 
@@ -103,7 +103,7 @@
             this.btnEntrada.Location = new System.Drawing.Point(12, 439);
             this.btnEntrada.Name = "btnEntrada";
             this.btnEntrada.Size = new System.Drawing.Size(95, 30);
-            this.btnEntrada.TabIndex = 4;
+            this.btnEntrada.TabIndex = 6;
             this.btnEntrada.Text = "Entrada";
             this.btnEntrada.UseVisualStyleBackColor = true;
             this.btnEntrada.Click += new System.EventHandler(this.btnEntrada_Click);
@@ -115,7 +115,7 @@
             this.btnSalida.Location = new System.Drawing.Point(113, 439);
             this.btnSalida.Name = "btnSalida";
             this.btnSalida.Size = new System.Drawing.Size(95, 30);
-            this.btnSalida.TabIndex = 3;
+            this.btnSalida.TabIndex = 5;
             this.btnSalida.Text = "Salida";
             this.btnSalida.UseVisualStyleBackColor = true;
             this.btnSalida.Click += new System.EventHandler(this.btnSalida_Click);
@@ -127,7 +127,7 @@
             this.btnAbrirCerrar.Location = new System.Drawing.Point(808, 439);
             this.btnAbrirCerrar.Name = "btnAbrirCerrar";
             this.btnAbrirCerrar.Size = new System.Drawing.Size(124, 30);
-            this.btnAbrirCerrar.TabIndex = 2;
+            this.btnAbrirCerrar.TabIndex = 4;
             this.btnAbrirCerrar.Text = "Abrir Caja";
             this.btnAbrirCerrar.UseVisualStyleBackColor = true;
             this.btnAbrirCerrar.Click += new System.EventHandler(this.btnAbrirCerrar_Click);
@@ -138,7 +138,7 @@
             this.dtpFechaInicio.Location = new System.Drawing.Point(6, 35);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(324, 29);
-            this.dtpFechaInicio.TabIndex = 0;
+            this.dtpFechaInicio.TabIndex = 1;
             this.dtpFechaInicio.ValueChanged += new System.EventHandler(this.dtpFechas_ValueChanged);
             // 
             // grbFechas
@@ -163,7 +163,7 @@
             this.lblEtiquetaFechaFin.Location = new System.Drawing.Point(333, 19);
             this.lblEtiquetaFechaFin.Name = "lblEtiquetaFechaFin";
             this.lblEtiquetaFechaFin.Size = new System.Drawing.Size(73, 13);
-            this.lblEtiquetaFechaFin.TabIndex = 10;
+            this.lblEtiquetaFechaFin.TabIndex = 2;
             this.lblEtiquetaFechaFin.Text = "Fecha de fin:";
             // 
             // lblEtiquetaFechaInicio
@@ -173,7 +173,7 @@
             this.lblEtiquetaFechaInicio.Location = new System.Drawing.Point(6, 19);
             this.lblEtiquetaFechaInicio.Name = "lblEtiquetaFechaInicio";
             this.lblEtiquetaFechaInicio.Size = new System.Drawing.Size(87, 13);
-            this.lblEtiquetaFechaInicio.TabIndex = 9;
+            this.lblEtiquetaFechaInicio.TabIndex = 0;
             this.lblEtiquetaFechaInicio.Text = "Fecha de inicio:";
             // 
             // dtpFechaFin
@@ -183,7 +183,7 @@
             this.dtpFechaFin.Location = new System.Drawing.Point(336, 35);
             this.dtpFechaFin.Name = "dtpFechaFin";
             this.dtpFechaFin.Size = new System.Drawing.Size(324, 29);
-            this.dtpFechaFin.TabIndex = 1;
+            this.dtpFechaFin.TabIndex = 3;
             this.dtpFechaFin.ValueChanged += new System.EventHandler(this.dtpFechas_ValueChanged);
             // 
             // grbConcepto
@@ -226,7 +226,7 @@
             this.lblEtiquetaEfectivo01.Location = new System.Drawing.Point(6, 19);
             this.lblEtiquetaEfectivo01.Name = "lblEtiquetaEfectivo01";
             this.lblEtiquetaEfectivo01.Size = new System.Drawing.Size(175, 19);
-            this.lblEtiquetaEfectivo01.TabIndex = 12;
+            this.lblEtiquetaEfectivo01.TabIndex = 0;
             this.lblEtiquetaEfectivo01.Text = "Total de efectivo mostrado:";
             // 
             // lblEtiquetaEfectivo02
@@ -237,7 +237,7 @@
             this.lblEtiquetaEfectivo02.Location = new System.Drawing.Point(23, 55);
             this.lblEtiquetaEfectivo02.Name = "lblEtiquetaEfectivo02";
             this.lblEtiquetaEfectivo02.Size = new System.Drawing.Size(158, 19);
-            this.lblEtiquetaEfectivo02.TabIndex = 13;
+            this.lblEtiquetaEfectivo02.TabIndex = 2;
             this.lblEtiquetaEfectivo02.Text = "Total de efectivo en caja:";
             // 
             // grbTotales
@@ -256,7 +256,7 @@
             this.grbTotales.Location = new System.Drawing.Point(12, 348);
             this.grbTotales.Name = "grbTotales";
             this.grbTotales.Size = new System.Drawing.Size(920, 85);
-            this.grbTotales.TabIndex = 14;
+            this.grbTotales.TabIndex = 3;
             this.grbTotales.TabStop = false;
             this.grbTotales.Text = "Totales";
             // 
@@ -268,7 +268,7 @@
             this.lblVouchersCaja.Location = new System.Drawing.Point(646, 55);
             this.lblVouchersCaja.Name = "lblVouchersCaja";
             this.lblVouchersCaja.Size = new System.Drawing.Size(44, 19);
-            this.lblVouchersCaja.TabIndex = 19;
+            this.lblVouchersCaja.TabIndex = 7;
             this.lblVouchersCaja.Text = "$0.00";
             // 
             // lblVouchersMostrado
@@ -279,7 +279,7 @@
             this.lblVouchersMostrado.Location = new System.Drawing.Point(646, 19);
             this.lblVouchersMostrado.Name = "lblVouchersMostrado";
             this.lblVouchersMostrado.Size = new System.Drawing.Size(44, 19);
-            this.lblVouchersMostrado.TabIndex = 18;
+            this.lblVouchersMostrado.TabIndex = 5;
             this.lblVouchersMostrado.Text = "$0.00";
             // 
             // lblEtiquetaVouchers01
@@ -290,7 +290,7 @@
             this.lblEtiquetaVouchers01.Location = new System.Drawing.Point(457, 19);
             this.lblEtiquetaVouchers01.Name = "lblEtiquetaVouchers01";
             this.lblEtiquetaVouchers01.Size = new System.Drawing.Size(183, 19);
-            this.lblEtiquetaVouchers01.TabIndex = 16;
+            this.lblEtiquetaVouchers01.TabIndex = 4;
             this.lblEtiquetaVouchers01.Text = "Total de vouchers mostrado:";
             // 
             // lblEtiquetaVouchers02
@@ -301,7 +301,7 @@
             this.lblEtiquetaVouchers02.Location = new System.Drawing.Point(474, 55);
             this.lblEtiquetaVouchers02.Name = "lblEtiquetaVouchers02";
             this.lblEtiquetaVouchers02.Size = new System.Drawing.Size(166, 19);
-            this.lblEtiquetaVouchers02.TabIndex = 17;
+            this.lblEtiquetaVouchers02.TabIndex = 6;
             this.lblEtiquetaVouchers02.Text = "Total de vouchers en caja:";
             // 
             // lblEfectivoCaja
@@ -312,7 +312,7 @@
             this.lblEfectivoCaja.Location = new System.Drawing.Point(187, 55);
             this.lblEfectivoCaja.Name = "lblEfectivoCaja";
             this.lblEfectivoCaja.Size = new System.Drawing.Size(44, 19);
-            this.lblEfectivoCaja.TabIndex = 15;
+            this.lblEfectivoCaja.TabIndex = 3;
             this.lblEfectivoCaja.Text = "$0.00";
             // 
             // lblEfectivoMostrado
@@ -323,7 +323,7 @@
             this.lblEfectivoMostrado.Location = new System.Drawing.Point(187, 19);
             this.lblEfectivoMostrado.Name = "lblEfectivoMostrado";
             this.lblEfectivoMostrado.Size = new System.Drawing.Size(44, 19);
-            this.lblEfectivoMostrado.TabIndex = 14;
+            this.lblEfectivoMostrado.TabIndex = 1;
             this.lblEfectivoMostrado.Text = "$0.00";
             // 
             // CVenta
@@ -331,14 +331,14 @@
             this.CVenta.HeaderText = "Folio de venta";
             this.CVenta.Name = "CVenta";
             this.CVenta.ReadOnly = true;
-            this.CVenta.Width = 130;
+            this.CVenta.Width = 110;
             // 
             // CMembresia
             // 
             this.CMembresia.HeaderText = "Folio de membresía";
             this.CMembresia.Name = "CMembresia";
             this.CMembresia.ReadOnly = true;
-            this.CMembresia.Width = 130;
+            this.CMembresia.Width = 110;
             // 
             // Fecha
             // 

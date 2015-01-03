@@ -50,7 +50,7 @@
             this.dtpFechaInicio.Location = new System.Drawing.Point(12, 31);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(243, 25);
-            this.dtpFechaInicio.TabIndex = 0;
+            this.dtpFechaInicio.TabIndex = 1;
             this.dtpFechaInicio.ValueChanged += new System.EventHandler(this.dtpFechas_ValueChanged);
             // 
             // lblEFechaInicio
@@ -60,7 +60,7 @@
             this.lblEFechaInicio.Location = new System.Drawing.Point(8, 9);
             this.lblEFechaInicio.Name = "lblEFechaInicio";
             this.lblEFechaInicio.Size = new System.Drawing.Size(98, 19);
-            this.lblEFechaInicio.TabIndex = 1;
+            this.lblEFechaInicio.TabIndex = 0;
             this.lblEFechaInicio.Text = "Fecha de inicio";
             // 
             // lblEFechaFin
@@ -70,7 +70,7 @@
             this.lblEFechaFin.Location = new System.Drawing.Point(257, 9);
             this.lblEFechaFin.Name = "lblEFechaFin";
             this.lblEFechaFin.Size = new System.Drawing.Size(139, 19);
-            this.lblEFechaFin.TabIndex = 3;
+            this.lblEFechaFin.TabIndex = 2;
             this.lblEFechaFin.Text = "Fecha de terminación";
             // 
             // dtpFechaFin
@@ -79,7 +79,7 @@
             this.dtpFechaFin.Location = new System.Drawing.Point(261, 31);
             this.dtpFechaFin.Name = "dtpFechaFin";
             this.dtpFechaFin.Size = new System.Drawing.Size(243, 25);
-            this.dtpFechaFin.TabIndex = 2;
+            this.dtpFechaFin.TabIndex = 3;
             this.dtpFechaFin.ValueChanged += new System.EventHandler(this.dtpFechas_ValueChanged);
             // 
             // lblEDescripcion
@@ -160,7 +160,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(422, 244);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(82, 23);
-            this.btnAceptar.TabIndex = 10;
+            this.btnAceptar.TabIndex = 12;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -172,7 +172,7 @@
             this.lblEGenero.Location = new System.Drawing.Point(8, 176);
             this.lblEGenero.Name = "lblEGenero";
             this.lblEGenero.Size = new System.Drawing.Size(54, 19);
-            this.lblEGenero.TabIndex = 11;
+            this.lblEGenero.TabIndex = 10;
             this.lblEGenero.Text = "Genero";
             // 
             // cboGenero
@@ -186,7 +186,7 @@
             this.cboGenero.Location = new System.Drawing.Point(12, 198);
             this.cboGenero.Name = "cboGenero";
             this.cboGenero.Size = new System.Drawing.Size(243, 27);
-            this.cboGenero.TabIndex = 12;
+            this.cboGenero.TabIndex = 11;
             // 
             // frmNuevaPromocion
             // 

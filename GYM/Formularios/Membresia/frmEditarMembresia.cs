@@ -59,7 +59,7 @@ namespace GYM.Formularios.Membresia
         {
             try
             {
-                string sql = "SELECT MAX(id) AS i FROM registro_locker";
+                string sql = "SELECT MAX(id) AS i FROM registro_membresias";
                 DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
                 foreach (DataRow dr in dt.Rows)
                 {
@@ -105,16 +105,9 @@ namespace GYM.Formularios.Membresia
         {
             try
             {
-                if (mem.FechaFin > DateTime.Now)
+                if (mem.FechaFin > DateTime.Now && (mem.Estado == CMembresia.EstadoMembresia.Activa || mem.Estado == CMembresia.EstadoMembresia.Pendiente))
                     dtpFechaInicio.Value = mem.FechaFin;
                 es = mem.Estado;
-                lblUsuarioCreador.Text = ObtenerNombreUsuario(mem.CreateUser);
-                lblFechaCreacion.Text = mem.CreateTime.ToString("dd/MM/yyyy hh:mm tt");
-                lblUsuarioModificador.Text = ObtenerNombreUsuario(mem.UpdateUser);
-                if (mem.UpdateTime != new DateTime())
-                    lblFechaModificacion.Text = mem.UpdateTime.ToString("dd/MM/yyyy hh:mm tt");
-                else
-                    lblFechaModificacion.Text = "Sin información.";
             }
             catch (ArgumentOutOfRangeException ex)
             {
@@ -144,40 +137,40 @@ namespace GYM.Formularios.Membresia
 
         public void AsignarPromocion(int duracion, decimal precio, string descripcion)
         {
-            cbxTipo.Enabled = false;
-            cbxTipo.SelectedIndex = duracion;
             lblPrecio.Text = precio.ToString("C2");
             btnQuitarPromo.Enabled = true;
             txtDescripcion.Text = descripcion;
+            cbxTipo.SelectedIndex = duracion;
+            cbxTipo.Enabled = false;
         }
 
         private void QuitarPromoción()
         {
-            cbxTipo.Enabled = true;
-            cbxTipo.SelectedIndex = -1;
             lblPrecio.Text = "$0.00";
             btnQuitarPromo.Enabled = false;
             txtDescripcion.Text = "";
+            cbxTipo.Enabled = true;
+            cbxTipo.SelectedIndex = -1;
         }
 
         public void AsignarPromocionHorario(int id, int duracion, decimal precio, string descripcion)
         {
             idPromo = id;
-            cbxTipo.Enabled = false;
-            cbxTipo.SelectedIndex = duracion;
             lblPrecio.Text = precio.ToString("C2");
             btnQuitarPromo.Enabled = true;
             txtDescripcion.Text = descripcion;
+            cbxTipo.SelectedIndex = duracion;
+            cbxTipo.Enabled = false;
         }
 
         private void QuitarPromocionHorario()
         {
             idPromo = -1;
-            cbxTipo.Enabled = true;
-            cbxTipo.SelectedIndex = -1;
             lblPrecio.Text = "$0.00";
             btnQuitarPromo.Enabled = false;
             txtDescripcion.Text = "";
+            cbxTipo.Enabled = true;
+            cbxTipo.SelectedIndex = -1;
         }
 
         private string ObtenerNombreUsuario(int idUsuario)
@@ -250,13 +243,14 @@ namespace GYM.Formularios.Membresia
                 else
                     ta = decimal.Parse(lblPrecio.Text, System.Globalization.NumberStyles.Currency);
                 MySql.Data.MySqlClient.MySqlCommand sql = new MySql.Data.MySqlClient.MySqlCommand();
-                sql.CommandText = "INSERT INTO caja (id_membresia, efectivo, tarjeta, tipo_movimiento, fecha, descripcion) VALUES (?, ?, ?, ?, ?, ?)";
+                sql.CommandText = "INSERT INTO caja (id_membresia, efectivo, tarjeta, tipo_movimiento, fecha, descripcion, create_user_id, create_time) VALUES (?, ?, ?, ?, ?, ?, ?, NOW())";
                 sql.Parameters.AddWithValue("@id_membresia", rMem.IDMembresia);
                 sql.Parameters.AddWithValue("@efectivo", ef);
                 sql.Parameters.AddWithValue("@tarjeta", ta);
                 sql.Parameters.AddWithValue("@tipo_movimiento", 0);
                 sql.Parameters.AddWithValue("@fecha", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                 sql.Parameters.AddWithValue("@descripcion", "RENOVACIÓN MEMBRESÍA");
+                sql.Parameters.AddWithValue("@create_user_id", frmMain.id);
                 Clases.ConexionBD.EjecutarConsulta(sql);
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
@@ -513,8 +507,11 @@ namespace GYM.Formularios.Membresia
 
         private void cbxTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbxTipo.SelectedIndex == -1 || cbxTipo.Enabled == false)
+            if (cbxTipo.SelectedIndex == -1 || btnQuitarPromo.Enabled == true)
+            {
+                dtpFechaInicio_ValueChanged(dtpFechaInicio, new EventArgs());
                 return;
+            }
             if (preciosM.ContainsKey(cbxTipo.SelectedIndex))
             {
                 switch (cbxTipo.SelectedIndex)
@@ -648,6 +645,10 @@ namespace GYM.Formularios.Membresia
                 case 12:
                     fechaFin = dtpFechaInicio.Value.AddYears(1);
                     lblFechaFin.Text = dtpFechaInicio.Value.AddYears(1).ToString("dd") + " de " + dtpFechaInicio.Value.AddYears(1).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddYears(1).ToString("yyyy");
+                    break;
+                default:
+                    fechaFin = new DateTime();
+                    lblFechaFin.Text = "";
                     break;
             }
         }   

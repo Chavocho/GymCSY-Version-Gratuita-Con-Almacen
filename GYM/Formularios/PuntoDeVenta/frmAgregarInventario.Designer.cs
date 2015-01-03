@@ -41,7 +41,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(215, 73);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(80, 30);
-            this.btnAceptar.TabIndex = 0;
+            this.btnAceptar.TabIndex = 3;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -53,7 +53,7 @@
             this.lblNombreProducto.Location = new System.Drawing.Point(12, 9);
             this.lblNombreProducto.Name = "lblNombreProducto";
             this.lblNombreProducto.Size = new System.Drawing.Size(73, 21);
-            this.lblNombreProducto.TabIndex = 1;
+            this.lblNombreProducto.TabIndex = 0;
             this.lblNombreProducto.Text = "Producto";
             // 
             // txtCantidad
@@ -72,7 +72,7 @@
             this.lblCantidad.Location = new System.Drawing.Point(12, 39);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(145, 21);
-            this.lblCantidad.TabIndex = 3;
+            this.lblCantidad.TabIndex = 1;
             this.lblCantidad.Text = "Cantidad a ingresar";
             // 
             // frmAgregarInventario

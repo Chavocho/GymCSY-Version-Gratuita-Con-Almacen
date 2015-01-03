@@ -77,7 +77,7 @@
             this.dgvCompras.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCompras.Size = new System.Drawing.Size(720, 284);
-            this.dgvCompras.TabIndex = 6;
+            this.dgvCompras.TabIndex = 1;
             // 
             // ID
             // 
@@ -122,7 +122,7 @@
             this.btnDetallado.Location = new System.Drawing.Point(12, 130);
             this.btnDetallado.Name = "btnDetallado";
             this.btnDetallado.Size = new System.Drawing.Size(123, 39);
-            this.btnDetallado.TabIndex = 8;
+            this.btnDetallado.TabIndex = 3;
             this.btnDetallado.Text = "Detalle de\r\ncompra";
             this.btnDetallado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDetallado.UseVisualStyleBackColor = true;
@@ -136,7 +136,7 @@
             this.btnNuevaCompra.Location = new System.Drawing.Point(12, 85);
             this.btnNuevaCompra.Name = "btnNuevaCompra";
             this.btnNuevaCompra.Size = new System.Drawing.Size(123, 39);
-            this.btnNuevaCompra.TabIndex = 7;
+            this.btnNuevaCompra.TabIndex = 2;
             this.btnNuevaCompra.Text = "Nueva compra";
             this.btnNuevaCompra.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevaCompra.UseVisualStyleBackColor = true;
@@ -148,7 +148,7 @@
             this.dtpFechaInicio.Location = new System.Drawing.Point(9, 34);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(240, 25);
-            this.dtpFechaInicio.TabIndex = 9;
+            this.dtpFechaInicio.TabIndex = 1;
             this.dtpFechaInicio.ValueChanged += new System.EventHandler(this.dtpFechas_ValueChanged);
             // 
             // lblFechaInicio
@@ -158,7 +158,7 @@
             this.lblFechaInicio.Location = new System.Drawing.Point(6, 16);
             this.lblFechaInicio.Name = "lblFechaInicio";
             this.lblFechaInicio.Size = new System.Drawing.Size(86, 15);
-            this.lblFechaInicio.TabIndex = 10;
+            this.lblFechaInicio.TabIndex = 0;
             this.lblFechaInicio.Text = "Fecha de inicio";
             // 
             // grbFechas
@@ -172,7 +172,7 @@
             this.grbFechas.Location = new System.Drawing.Point(253, 12);
             this.grbFechas.Name = "grbFechas";
             this.grbFechas.Size = new System.Drawing.Size(608, 67);
-            this.grbFechas.TabIndex = 11;
+            this.grbFechas.TabIndex = 0;
             this.grbFechas.TabStop = false;
             this.grbFechas.Text = "Búsqueda por fechas";
             // 
@@ -181,7 +181,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(501, 34);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(101, 25);
-            this.btnBuscar.TabIndex = 13;
+            this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -193,7 +193,7 @@
             this.lblFechaFin.Location = new System.Drawing.Point(252, 16);
             this.lblFechaFin.Name = "lblFechaFin";
             this.lblFechaFin.Size = new System.Drawing.Size(71, 15);
-            this.lblFechaFin.TabIndex = 12;
+            this.lblFechaFin.TabIndex = 2;
             this.lblFechaFin.Text = "Fecha de fin";
             // 
             // dtpFechaFin
@@ -202,7 +202,7 @@
             this.dtpFechaFin.Location = new System.Drawing.Point(255, 34);
             this.dtpFechaFin.Name = "dtpFechaFin";
             this.dtpFechaFin.Size = new System.Drawing.Size(240, 25);
-            this.dtpFechaFin.TabIndex = 11;
+            this.dtpFechaFin.TabIndex = 3;
             this.dtpFechaFin.ValueChanged += new System.EventHandler(this.dtpFechas_ValueChanged);
             // 
             // bgwBusqueda

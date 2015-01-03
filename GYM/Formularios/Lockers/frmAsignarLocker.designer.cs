@@ -85,7 +85,7 @@
             this.dgvSocios.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvSocios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSocios.Size = new System.Drawing.Size(771, 216);
-            this.dgvSocios.TabIndex = 1;
+            this.dgvSocios.TabIndex = 4;
             this.dgvSocios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSocios_CellClick);
             // 
             // NumSocio
@@ -115,7 +115,7 @@
             this.lblNumLocker.Location = new System.Drawing.Point(12, 15);
             this.lblNumLocker.Name = "lblNumLocker";
             this.lblNumLocker.Size = new System.Drawing.Size(125, 19);
-            this.lblNumLocker.TabIndex = 4;
+            this.lblNumLocker.TabIndex = 0;
             this.lblNumLocker.Text = "Número de locker: ";
             // 
             // lblFechaFin
@@ -124,7 +124,7 @@
             this.lblFechaFin.Location = new System.Drawing.Point(284, 291);
             this.lblFechaFin.Name = "lblFechaFin";
             this.lblFechaFin.Size = new System.Drawing.Size(82, 19);
-            this.lblFechaFin.TabIndex = 5;
+            this.lblFechaFin.TabIndex = 7;
             this.lblFechaFin.Text = "Fecha de fin";
             // 
             // dtpFechaFin
@@ -132,7 +132,7 @@
             this.dtpFechaFin.Location = new System.Drawing.Point(288, 313);
             this.dtpFechaFin.Name = "dtpFechaFin";
             this.dtpFechaFin.Size = new System.Drawing.Size(245, 25);
-            this.dtpFechaFin.TabIndex = 3;
+            this.dtpFechaFin.TabIndex = 8;
             this.dtpFechaFin.ValueChanged += new System.EventHandler(this.dtpFechaFin_ValueChanged);
             // 
             // txtBusqueda
@@ -141,7 +141,7 @@
             this.txtBusqueda.Location = new System.Drawing.Point(526, 12);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(257, 25);
-            this.txtBusqueda.TabIndex = 0;
+            this.txtBusqueda.TabIndex = 2;
             this.txtBusqueda.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBusqueda_KeyDown);
             // 
             // lblBusqueda
@@ -151,7 +151,7 @@
             this.lblBusqueda.Location = new System.Drawing.Point(320, 15);
             this.lblBusqueda.Name = "lblBusqueda";
             this.lblBusqueda.Size = new System.Drawing.Size(200, 19);
-            this.lblBusqueda.TabIndex = 8;
+            this.lblBusqueda.TabIndex = 1;
             this.lblBusqueda.Text = "Búsqueda de socio por nombre";
             // 
             // bgwLocker
@@ -170,7 +170,7 @@
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(270, 75);
-            this.txtDescripcion.TabIndex = 2;
+            this.txtDescripcion.TabIndex = 6;
             // 
             // lblDescripcion
             // 
@@ -178,7 +178,7 @@
             this.lblDescripcion.Location = new System.Drawing.Point(8, 291);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(79, 19);
-            this.lblDescripcion.TabIndex = 10;
+            this.lblDescripcion.TabIndex = 5;
             this.lblDescripcion.Text = "Descripción";
             // 
             // lblTipoPago
@@ -187,7 +187,7 @@
             this.lblTipoPago.Location = new System.Drawing.Point(534, 291);
             this.lblTipoPago.Name = "lblTipoPago";
             this.lblTipoPago.Size = new System.Drawing.Size(89, 19);
-            this.lblTipoPago.TabIndex = 11;
+            this.lblTipoPago.TabIndex = 9;
             this.lblTipoPago.Text = "Tipo de pago";
             // 
             // cboTipoPago
@@ -201,7 +201,7 @@
             this.cboTipoPago.Location = new System.Drawing.Point(538, 313);
             this.cboTipoPago.Name = "cboTipoPago";
             this.cboTipoPago.Size = new System.Drawing.Size(244, 25);
-            this.cboTipoPago.TabIndex = 4;
+            this.cboTipoPago.TabIndex = 10;
             this.cboTipoPago.SelectedIndexChanged += new System.EventHandler(this.cboTipoPago_SelectedIndexChanged);
             // 
             // txtFolio
@@ -209,7 +209,7 @@
             this.txtFolio.Location = new System.Drawing.Point(538, 363);
             this.txtFolio.Name = "txtFolio";
             this.txtFolio.Size = new System.Drawing.Size(245, 25);
-            this.txtFolio.TabIndex = 6;
+            this.txtFolio.TabIndex = 14;
             this.txtFolio.LostFocus += new System.EventHandler(this.txtFolio_LostFocus);
             // 
             // lblFolio
@@ -218,7 +218,7 @@
             this.lblFolio.Location = new System.Drawing.Point(534, 341);
             this.lblFolio.Name = "lblFolio";
             this.lblFolio.Size = new System.Drawing.Size(38, 19);
-            this.lblFolio.TabIndex = 14;
+            this.lblFolio.TabIndex = 13;
             this.lblFolio.Text = "Folio";
             // 
             // lblPrecio
@@ -227,7 +227,7 @@
             this.lblPrecio.Location = new System.Drawing.Point(284, 341);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(46, 19);
-            this.lblPrecio.TabIndex = 16;
+            this.lblPrecio.TabIndex = 11;
             this.lblPrecio.Text = "Precio";
             // 
             // txtPrecio
@@ -235,7 +235,7 @@
             this.txtPrecio.Location = new System.Drawing.Point(288, 363);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(245, 25);
-            this.txtPrecio.TabIndex = 5;
+            this.txtPrecio.TabIndex = 12;
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // lblTerminación
@@ -244,7 +244,7 @@
             this.lblTerminación.Location = new System.Drawing.Point(534, 391);
             this.lblTerminación.Name = "lblTerminación";
             this.lblTerminación.Size = new System.Drawing.Size(83, 19);
-            this.lblTerminación.TabIndex = 17;
+            this.lblTerminación.TabIndex = 19;
             this.lblTerminación.Text = "Terminación";
             // 
             // txtTerminación
@@ -253,7 +253,7 @@
             this.txtTerminación.Location = new System.Drawing.Point(538, 413);
             this.txtTerminación.Name = "txtTerminación";
             this.txtTerminación.Size = new System.Drawing.Size(245, 25);
-            this.txtTerminación.TabIndex = 8;
+            this.txtTerminación.TabIndex = 20;
             // 
             // btnAceptar
             // 
@@ -261,7 +261,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(708, 469);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 9;
+            this.btnAceptar.TabIndex = 21;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -272,7 +272,7 @@
             this.lblFolioTicket.Location = new System.Drawing.Point(284, 391);
             this.lblFolioTicket.Name = "lblFolioTicket";
             this.lblFolioTicket.Size = new System.Drawing.Size(75, 19);
-            this.lblFolioTicket.TabIndex = 19;
+            this.lblFolioTicket.TabIndex = 17;
             this.lblFolioTicket.Text = "Folio ticket";
             // 
             // txtFolioTicket
@@ -281,7 +281,7 @@
             this.txtFolioTicket.Location = new System.Drawing.Point(288, 413);
             this.txtFolioTicket.Name = "txtFolioTicket";
             this.txtFolioTicket.Size = new System.Drawing.Size(245, 25);
-            this.txtFolioTicket.TabIndex = 7;
+            this.txtFolioTicket.TabIndex = 18;
             // 
             // chbPersona
             // 
@@ -290,7 +290,7 @@
             this.chbPersona.Location = new System.Drawing.Point(526, 43);
             this.chbPersona.Name = "chbPersona";
             this.chbPersona.Size = new System.Drawing.Size(257, 23);
-            this.chbPersona.TabIndex = 20;
+            this.chbPersona.TabIndex = 3;
             this.chbPersona.Text = "Rentar locker a persona no registrada";
             this.chbPersona.UseVisualStyleBackColor = true;
             this.chbPersona.CheckedChanged += new System.EventHandler(this.chbPersona_CheckedChanged);
@@ -301,7 +301,7 @@
             this.lblPersona.Location = new System.Drawing.Point(8, 391);
             this.lblPersona.Name = "lblPersona";
             this.lblPersona.Size = new System.Drawing.Size(145, 19);
-            this.lblPersona.TabIndex = 22;
+            this.lblPersona.TabIndex = 15;
             this.lblPersona.Text = "Nombre de la persona";
             // 
             // txtPersona
@@ -310,7 +310,7 @@
             this.txtPersona.Location = new System.Drawing.Point(12, 413);
             this.txtPersona.Name = "txtPersona";
             this.txtPersona.Size = new System.Drawing.Size(270, 25);
-            this.txtPersona.TabIndex = 21;
+            this.txtPersona.TabIndex = 16;
             // 
             // frmAsignarLocker
             // 

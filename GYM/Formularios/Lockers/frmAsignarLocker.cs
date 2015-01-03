@@ -248,8 +248,8 @@ namespace GYM.Formularios
             try
             {
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "INSERT INTO caja (efectivo, tarjeta, tipo_movimiento, fecha, descripcion) " +
-                    "VALUES (?efectivo, ?tarjeta, ?tipo_movimiento, NOW(), ?descripcion)";
+                sql.CommandText = "INSERT INTO caja (efectivo, tarjeta, tipo_movimiento, fecha, descripcion, create_user_id, create_time) " +
+                    "VALUES (?efectivo, ?tarjeta, ?tipo_movimiento, NOW(), ?descripcion, ?create_user_id, NOW())";
                 if (cboTipoPago.SelectedIndex == 0)
                 {
                     sql.Parameters.AddWithValue("?efectivo", decimal.Parse(txtPrecio.Text));
@@ -262,6 +262,7 @@ namespace GYM.Formularios
                 }
                 sql.Parameters.AddWithValue("?tipo_movimiento", 0);
                 sql.Parameters.AddWithValue("?descripcion", "RENTA DE LOCKER");
+                sql.Parameters.AddWithValue("?create_user_id", frmMain.id);
                 ConexionBD.EjecutarConsulta(sql);
             }
             catch (MySqlException ex)

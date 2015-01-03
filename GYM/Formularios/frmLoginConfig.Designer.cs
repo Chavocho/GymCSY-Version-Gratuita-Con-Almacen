@@ -44,14 +44,14 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(230, 20);
-            this.txtPassword.TabIndex = 14;
+            this.txtPassword.TabIndex = 4;
             // 
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(242, 60);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(230, 20);
-            this.txtUsuario.TabIndex = 13;
+            this.txtUsuario.TabIndex = 2;
             // 
             // lblPassword
             // 
@@ -60,7 +60,7 @@
             this.lblPassword.Location = new System.Drawing.Point(301, 96);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(113, 25);
-            this.lblPassword.TabIndex = 12;
+            this.lblPassword.TabIndex = 3;
             this.lblPassword.Text = "Contraseña";
             // 
             // lblUsuario
@@ -70,7 +70,7 @@
             this.lblUsuario.Location = new System.Drawing.Point(317, 32);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(81, 25);
-            this.lblUsuario.TabIndex = 11;
+            this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Usuario";
             // 
             // btnCancelar
@@ -81,7 +81,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(242, 160);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(104, 32);
-            this.btnCancelar.TabIndex = 10;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -95,7 +95,7 @@
             this.btnIngresar.Location = new System.Drawing.Point(373, 160);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(99, 32);
-            this.btnIngresar.TabIndex = 9;
+            this.btnIngresar.TabIndex = 5;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnIngresar.UseVisualStyleBackColor = true;
@@ -108,7 +108,7 @@
             this.lblInformacion.Location = new System.Drawing.Point(6, 70);
             this.lblInformacion.Name = "lblInformacion";
             this.lblInformacion.Size = new System.Drawing.Size(229, 100);
-            this.lblInformacion.TabIndex = 15;
+            this.lblInformacion.TabIndex = 0;
             this.lblInformacion.Text = "*Para poder cambiar la\r\nconfiguración, inicie \r\nsesión como administrador\r\n\r\n";
             // 
             // frmLoginConfig

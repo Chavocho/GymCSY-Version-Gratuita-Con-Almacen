@@ -77,14 +77,14 @@ namespace GYM.Formularios.POS
                 if (txtTarjeta.Text != "")
                     tarjeta = decimal.Parse(txtTarjeta.Text, System.Globalization.NumberStyles.Currency);
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "INSERT INTO caja (id_venta, efectivo, tarjeta, tipo_movimiento, fecha, descripcion) VALUES (?, ?, ?, ?, ?, ?)";
+                sql.CommandText = "INSERT INTO caja (id_venta, efectivo, tarjeta, tipo_movimiento, fecha, descripcion, create_user_id, create_time) VALUES (?, ?, ?, ?, NOW(), ?, ?, NOW())";
                 sql.Parameters.AddWithValue("@id_venta", int.Parse(lblFolio.Text));
                 sql.Parameters.AddWithValue("@efectivo", efectivo.ToString("0.00"));
                 sql.Parameters.AddWithValue("@tarjeta", tarjeta.ToString("0.00"));
                 //Entrada = 0, Salida = 1
                 sql.Parameters.AddWithValue("@tipoMov", 0);
-                sql.Parameters.AddWithValue("@fecha", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                 sql.Parameters.AddWithValue("@descripcion", "VENTA POS");
+                sql.Parameters.AddWithValue("@create_user_id", frmMain.id);
                 Clases.ConexionBD.EjecutarConsulta(sql);
             }
             catch (MySqlException ex)

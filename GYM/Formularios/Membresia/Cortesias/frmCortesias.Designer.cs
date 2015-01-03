@@ -143,7 +143,7 @@
             this.lblInstruccionesBusqueda.Location = new System.Drawing.Point(625, 16);
             this.lblInstruccionesBusqueda.Name = "lblInstruccionesBusqueda";
             this.lblInstruccionesBusqueda.Size = new System.Drawing.Size(248, 19);
-            this.lblInstruccionesBusqueda.TabIndex = 13;
+            this.lblInstruccionesBusqueda.TabIndex = 0;
             this.lblInstruccionesBusqueda.Text = "Buscar por número de socio o nombre ";
             // 
             // txtBusqueda
@@ -153,7 +153,7 @@
             this.txtBusqueda.Location = new System.Drawing.Point(879, 12);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(193, 27);
-            this.txtBusqueda.TabIndex = 12;
+            this.txtBusqueda.TabIndex = 1;
             this.txtBusqueda.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBusqueda_KeyDown);
             // 
             // btnGenerar
@@ -165,7 +165,7 @@
             this.btnGenerar.Location = new System.Drawing.Point(895, 401);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(177, 37);
-            this.btnGenerar.TabIndex = 15;
+            this.btnGenerar.TabIndex = 4;
             this.btnGenerar.Text = "Generar membresía";
             this.btnGenerar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGenerar.UseVisualStyleBackColor = true;
@@ -179,7 +179,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(12, 45);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(140, 42);
-            this.btnNuevo.TabIndex = 4;
+            this.btnNuevo.TabIndex = 3;
             this.btnNuevo.Text = "Nueva Cortesía";
             this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevo.UseVisualStyleBackColor = true;

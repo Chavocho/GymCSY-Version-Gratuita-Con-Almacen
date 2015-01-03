@@ -58,7 +58,7 @@
             this.lblEtiquetaEfectivo.Location = new System.Drawing.Point(200, 67);
             this.lblEtiquetaEfectivo.Name = "lblEtiquetaEfectivo";
             this.lblEtiquetaEfectivo.Size = new System.Drawing.Size(67, 21);
-            this.lblEtiquetaEfectivo.TabIndex = 24;
+            this.lblEtiquetaEfectivo.TabIndex = 6;
             this.lblEtiquetaEfectivo.Text = "Efectivo:";
             // 
             // txtEfectivo
@@ -68,7 +68,7 @@
             this.txtEfectivo.MaxLength = 6;
             this.txtEfectivo.Name = "txtEfectivo";
             this.txtEfectivo.Size = new System.Drawing.Size(116, 29);
-            this.txtEfectivo.TabIndex = 1;
+            this.txtEfectivo.TabIndex = 7;
             this.txtEfectivo.TextChanged += new System.EventHandler(this.txtEfectivo_TextChanged);
             this.txtEfectivo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDinero_KeyPress);
             // 
@@ -79,7 +79,7 @@
             this.txtTarjeta.Location = new System.Drawing.Point(274, 108);
             this.txtTarjeta.Name = "txtTarjeta";
             this.txtTarjeta.Size = new System.Drawing.Size(116, 29);
-            this.txtTarjeta.TabIndex = 3;
+            this.txtTarjeta.TabIndex = 9;
             this.txtTarjeta.TextChanged += new System.EventHandler(this.txtTarjeta_TextChanged);
             this.txtTarjeta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDinero_KeyPress);
             // 
@@ -90,7 +90,7 @@
             this.lblEtiquetaTarjeta.Location = new System.Drawing.Point(208, 111);
             this.lblEtiquetaTarjeta.Name = "lblEtiquetaTarjeta";
             this.lblEtiquetaTarjeta.Size = new System.Drawing.Size(60, 21);
-            this.lblEtiquetaTarjeta.TabIndex = 26;
+            this.lblEtiquetaTarjeta.TabIndex = 8;
             this.lblEtiquetaTarjeta.Text = "Tarjeta:";
             // 
             // lblTotal
@@ -100,7 +100,7 @@
             this.lblTotal.Location = new System.Drawing.Point(277, 23);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(49, 21);
-            this.lblTotal.TabIndex = 22;
+            this.lblTotal.TabIndex = 5;
             this.lblTotal.Text = "$0.00";
             // 
             // lblEtiquetaTotal
@@ -110,7 +110,7 @@
             this.lblEtiquetaTotal.Location = new System.Drawing.Point(224, 23);
             this.lblEtiquetaTotal.Name = "lblEtiquetaTotal";
             this.lblEtiquetaTotal.Size = new System.Drawing.Size(47, 21);
-            this.lblEtiquetaTotal.TabIndex = 23;
+            this.lblEtiquetaTotal.TabIndex = 4;
             this.lblEtiquetaTotal.Text = "Total:";
             // 
             // lblEtiquetaCambio
@@ -120,7 +120,7 @@
             this.lblEtiquetaCambio.Location = new System.Drawing.Point(200, 155);
             this.lblEtiquetaCambio.Name = "lblEtiquetaCambio";
             this.lblEtiquetaCambio.Size = new System.Drawing.Size(67, 21);
-            this.lblEtiquetaCambio.TabIndex = 29;
+            this.lblEtiquetaCambio.TabIndex = 10;
             this.lblEtiquetaCambio.Text = "Cambio:";
             // 
             // lblCambio
@@ -132,7 +132,7 @@
             this.lblCambio.Location = new System.Drawing.Point(273, 155);
             this.lblCambio.Name = "lblCambio";
             this.lblCambio.Size = new System.Drawing.Size(49, 21);
-            this.lblCambio.TabIndex = 2;
+            this.lblCambio.TabIndex = 11;
             this.lblCambio.Text = "$0.00";
             // 
             // lblEtiquetaFolio
@@ -142,7 +142,7 @@
             this.lblEtiquetaFolio.Location = new System.Drawing.Point(7, 23);
             this.lblEtiquetaFolio.Name = "lblEtiquetaFolio";
             this.lblEtiquetaFolio.Size = new System.Drawing.Size(47, 21);
-            this.lblEtiquetaFolio.TabIndex = 30;
+            this.lblEtiquetaFolio.TabIndex = 0;
             this.lblEtiquetaFolio.Text = "Folio:";
             // 
             // lblFolio
@@ -152,7 +152,7 @@
             this.lblFolio.Location = new System.Drawing.Point(7, 54);
             this.lblFolio.Name = "lblFolio";
             this.lblFolio.Size = new System.Drawing.Size(82, 21);
-            this.lblFolio.TabIndex = 31;
+            this.lblFolio.TabIndex = 1;
             this.lblFolio.Text = "00000000";
             // 
             // lblCantidad
@@ -162,7 +162,7 @@
             this.lblCantidad.Location = new System.Drawing.Point(7, 129);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(19, 21);
-            this.lblCantidad.TabIndex = 33;
+            this.lblCantidad.TabIndex = 3;
             this.lblCantidad.Text = "0";
             // 
             // lblEtiquetaCantidad
@@ -172,7 +172,7 @@
             this.lblEtiquetaCantidad.Location = new System.Drawing.Point(7, 98);
             this.lblEtiquetaCantidad.Name = "lblEtiquetaCantidad";
             this.lblEtiquetaCantidad.Size = new System.Drawing.Size(149, 21);
-            this.lblEtiquetaCantidad.TabIndex = 32;
+            this.lblEtiquetaCantidad.TabIndex = 2;
             this.lblEtiquetaCantidad.Text = "Productos Vendidos";
             // 
             // chbTarjeta
@@ -183,7 +183,7 @@
             this.chbTarjeta.Location = new System.Drawing.Point(12, 225);
             this.chbTarjeta.Name = "chbTarjeta";
             this.chbTarjeta.Size = new System.Drawing.Size(146, 25);
-            this.chbTarjeta.TabIndex = 0;
+            this.chbTarjeta.TabIndex = 13;
             this.chbTarjeta.Text = "Pagar con tarjeta";
             this.chbTarjeta.UseVisualStyleBackColor = true;
             this.chbTarjeta.CheckedChanged += new System.EventHandler(this.chbTarjeta_CheckedChanged);
@@ -195,7 +195,7 @@
             this.lblFolioTicket.Location = new System.Drawing.Point(8, 1);
             this.lblFolioTicket.Name = "lblFolioTicket";
             this.lblFolioTicket.Size = new System.Drawing.Size(94, 19);
-            this.lblFolioTicket.TabIndex = 34;
+            this.lblFolioTicket.TabIndex = 0;
             this.lblFolioTicket.Text = "Folio de ticket";
             // 
             // txtFolioTicket
@@ -204,7 +204,7 @@
             this.txtFolioTicket.Location = new System.Drawing.Point(12, 23);
             this.txtFolioTicket.Name = "txtFolioTicket";
             this.txtFolioTicket.Size = new System.Drawing.Size(197, 25);
-            this.txtFolioTicket.TabIndex = 35;
+            this.txtFolioTicket.TabIndex = 1;
             // 
             // txtTerminacion
             // 
@@ -213,7 +213,7 @@
             this.txtTerminacion.MaxLength = 5;
             this.txtTerminacion.Name = "txtTerminacion";
             this.txtTerminacion.Size = new System.Drawing.Size(198, 25);
-            this.txtTerminacion.TabIndex = 37;
+            this.txtTerminacion.TabIndex = 3;
             // 
             // lblTerminacion
             // 
@@ -222,7 +222,7 @@
             this.lblTerminacion.Location = new System.Drawing.Point(210, 1);
             this.lblTerminacion.Name = "lblTerminacion";
             this.lblTerminacion.Size = new System.Drawing.Size(83, 19);
-            this.lblTerminacion.TabIndex = 36;
+            this.lblTerminacion.TabIndex = 2;
             this.lblTerminacion.Text = "Terminación";
             // 
             // btnCobrar
@@ -238,7 +238,7 @@
             this.btnCobrar.Location = new System.Drawing.Point(316, 218);
             this.btnCobrar.Name = "btnCobrar";
             this.btnCobrar.Size = new System.Drawing.Size(97, 32);
-            this.btnCobrar.TabIndex = 4;
+            this.btnCobrar.TabIndex = 14;
             this.btnCobrar.Text = "Aceptar";
             this.btnCobrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCobrar.UseVisualStyleBackColor = true;
@@ -253,7 +253,7 @@
             this.pnlTarjeta.Location = new System.Drawing.Point(0, 202);
             this.pnlTarjeta.Name = "pnlTarjeta";
             this.pnlTarjeta.Size = new System.Drawing.Size(425, 58);
-            this.pnlTarjeta.TabIndex = 38;
+            this.pnlTarjeta.TabIndex = 12;
             this.pnlTarjeta.Visible = false;
             // 
             // frmCobrar

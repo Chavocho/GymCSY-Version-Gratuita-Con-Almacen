@@ -71,10 +71,11 @@ namespace GYM.Formularios.Caja
                 else
                     efectivo = decimal.Parse(txtEfectivo.Text) * -1;
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "INSERT INTO caja (efectivo, tipo_movimiento, fecha, descripcion) VALUES (?, ?, NOW(), ?)";
+                sql.CommandText = "INSERT INTO caja (efectivo, tipo_movimiento, fecha, descripcion, create_user_id, create_time) VALUES (?, ?, NOW(), ?, ?, NOW())";
                 sql.Parameters.AddWithValue("@efectivo", efectivo.ToString("0.00"));
                 sql.Parameters.AddWithValue("@tipoMovimiento", tipoMovimiento);
                 sql.Parameters.AddWithValue("@descripcion", txtDescripcion.Text);
+                sql.Parameters.AddWithValue("@create_user_id", frmMain.id);
                 Clases.ConexionBD.EjecutarConsulta(sql);
             }
             catch (MySqlException ex)

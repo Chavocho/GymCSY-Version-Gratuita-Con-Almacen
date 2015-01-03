@@ -66,7 +66,7 @@
             this.lblInstruccionesTicket.Location = new System.Drawing.Point(548, 12);
             this.lblInstruccionesTicket.Name = "lblInstruccionesTicket";
             this.lblInstruccionesTicket.Size = new System.Drawing.Size(142, 117);
-            this.lblInstruccionesTicket.TabIndex = 1;
+            this.lblInstruccionesTicket.TabIndex = 11;
             this.lblInstruccionesTicket.Text = resources.GetString("lblInstruccionesTicket.Text");
             this.lblInstruccionesTicket.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -78,7 +78,7 @@
             this.txtLineaSuperior01.Location = new System.Drawing.Point(705, 24);
             this.txtLineaSuperior01.Name = "txtLineaSuperior01";
             this.txtLineaSuperior01.Size = new System.Drawing.Size(283, 23);
-            this.txtLineaSuperior01.TabIndex = 3;
+            this.txtLineaSuperior01.TabIndex = 12;
             this.txtLineaSuperior01.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtLineaSuperior02
@@ -89,7 +89,7 @@
             this.txtLineaSuperior02.Location = new System.Drawing.Point(705, 53);
             this.txtLineaSuperior02.Name = "txtLineaSuperior02";
             this.txtLineaSuperior02.Size = new System.Drawing.Size(283, 23);
-            this.txtLineaSuperior02.TabIndex = 4;
+            this.txtLineaSuperior02.TabIndex = 13;
             this.txtLineaSuperior02.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtLineaSuperior03
@@ -100,7 +100,7 @@
             this.txtLineaSuperior03.Location = new System.Drawing.Point(705, 82);
             this.txtLineaSuperior03.Name = "txtLineaSuperior03";
             this.txtLineaSuperior03.Size = new System.Drawing.Size(283, 23);
-            this.txtLineaSuperior03.TabIndex = 5;
+            this.txtLineaSuperior03.TabIndex = 14;
             this.txtLineaSuperior03.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtLineaSuperior06
@@ -111,7 +111,7 @@
             this.txtLineaSuperior06.Location = new System.Drawing.Point(705, 169);
             this.txtLineaSuperior06.Name = "txtLineaSuperior06";
             this.txtLineaSuperior06.Size = new System.Drawing.Size(283, 23);
-            this.txtLineaSuperior06.TabIndex = 8;
+            this.txtLineaSuperior06.TabIndex = 17;
             this.txtLineaSuperior06.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtLineaSuperior05
@@ -122,7 +122,7 @@
             this.txtLineaSuperior05.Location = new System.Drawing.Point(705, 140);
             this.txtLineaSuperior05.Name = "txtLineaSuperior05";
             this.txtLineaSuperior05.Size = new System.Drawing.Size(283, 23);
-            this.txtLineaSuperior05.TabIndex = 7;
+            this.txtLineaSuperior05.TabIndex = 16;
             this.txtLineaSuperior05.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtLineaSuperior04
@@ -133,7 +133,7 @@
             this.txtLineaSuperior04.Location = new System.Drawing.Point(705, 111);
             this.txtLineaSuperior04.Name = "txtLineaSuperior04";
             this.txtLineaSuperior04.Size = new System.Drawing.Size(283, 23);
-            this.txtLineaSuperior04.TabIndex = 6;
+            this.txtLineaSuperior04.TabIndex = 15;
             this.txtLineaSuperior04.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // cbxImpresoras
@@ -144,7 +144,7 @@
             this.cbxImpresoras.Location = new System.Drawing.Point(184, 79);
             this.cbxImpresoras.Name = "cbxImpresoras";
             this.cbxImpresoras.Size = new System.Drawing.Size(186, 29);
-            this.cbxImpresoras.TabIndex = 1;
+            this.cbxImpresoras.TabIndex = 2;
             this.cbxImpresoras.SelectedIndexChanged += new System.EventHandler(this.cbxImpresoras_SelectedIndexChanged);
             // 
             // lblImpresoras
@@ -154,7 +154,7 @@
             this.lblImpresoras.Location = new System.Drawing.Point(180, 57);
             this.lblImpresoras.Name = "lblImpresoras";
             this.lblImpresoras.Size = new System.Drawing.Size(80, 19);
-            this.lblImpresoras.TabIndex = 18;
+            this.lblImpresoras.TabIndex = 1;
             this.lblImpresoras.Text = "Impresoras:";
             // 
             // lblTitulo
@@ -164,7 +164,7 @@
             this.lblTitulo.Location = new System.Drawing.Point(12, 9);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(157, 25);
-            this.lblTitulo.TabIndex = 19;
+            this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Configurar Ticket";
             // 
             // lblTamPapel
@@ -174,7 +174,7 @@
             this.lblTamPapel.Location = new System.Drawing.Point(180, 127);
             this.lblTamPapel.Name = "lblTamPapel";
             this.lblTamPapel.Size = new System.Drawing.Size(120, 19);
-            this.lblTamPapel.TabIndex = 22;
+            this.lblTamPapel.TabIndex = 3;
             this.lblTamPapel.Text = "Tamaño del papel:";
             // 
             // cbxTamPapel
@@ -188,7 +188,7 @@
             this.cbxTamPapel.Location = new System.Drawing.Point(184, 149);
             this.cbxTamPapel.Name = "cbxTamPapel";
             this.cbxTamPapel.Size = new System.Drawing.Size(186, 29);
-            this.cbxTamPapel.TabIndex = 2;
+            this.cbxTamPapel.TabIndex = 4;
             this.cbxTamPapel.SelectedIndexChanged += new System.EventHandler(this.cbxTamPapel_SelectedIndexChanged);
             // 
             // txtLineaSuperior07
@@ -199,7 +199,7 @@
             this.txtLineaSuperior07.Location = new System.Drawing.Point(705, 198);
             this.txtLineaSuperior07.Name = "txtLineaSuperior07";
             this.txtLineaSuperior07.Size = new System.Drawing.Size(283, 23);
-            this.txtLineaSuperior07.TabIndex = 9;
+            this.txtLineaSuperior07.TabIndex = 18;
             this.txtLineaSuperior07.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtLineaInferior03
@@ -210,7 +210,7 @@
             this.txtLineaInferior03.Location = new System.Drawing.Point(705, 426);
             this.txtLineaInferior03.Name = "txtLineaInferior03";
             this.txtLineaInferior03.Size = new System.Drawing.Size(283, 23);
-            this.txtLineaInferior03.TabIndex = 12;
+            this.txtLineaInferior03.TabIndex = 21;
             this.txtLineaInferior03.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtLineaInferior02
@@ -221,7 +221,7 @@
             this.txtLineaInferior02.Location = new System.Drawing.Point(705, 397);
             this.txtLineaInferior02.Name = "txtLineaInferior02";
             this.txtLineaInferior02.Size = new System.Drawing.Size(283, 23);
-            this.txtLineaInferior02.TabIndex = 11;
+            this.txtLineaInferior02.TabIndex = 20;
             this.txtLineaInferior02.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtLineaInferior01
@@ -232,7 +232,7 @@
             this.txtLineaInferior01.Location = new System.Drawing.Point(705, 368);
             this.txtLineaInferior01.Name = "txtLineaInferior01";
             this.txtLineaInferior01.Size = new System.Drawing.Size(283, 23);
-            this.txtLineaInferior01.TabIndex = 10;
+            this.txtLineaInferior01.TabIndex = 19;
             this.txtLineaInferior01.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dtpTurnoMat
@@ -243,7 +243,7 @@
             this.dtpTurnoMat.Name = "dtpTurnoMat";
             this.dtpTurnoMat.ShowUpDown = true;
             this.dtpTurnoMat.Size = new System.Drawing.Size(186, 29);
-            this.dtpTurnoMat.TabIndex = 23;
+            this.dtpTurnoMat.TabIndex = 6;
             // 
             // dtpTurnoVes
             // 
@@ -253,7 +253,7 @@
             this.dtpTurnoVes.Name = "dtpTurnoVes";
             this.dtpTurnoVes.ShowUpDown = true;
             this.dtpTurnoVes.Size = new System.Drawing.Size(186, 29);
-            this.dtpTurnoVes.TabIndex = 24;
+            this.dtpTurnoVes.TabIndex = 8;
             // 
             // lblTurnoMat
             // 
@@ -262,7 +262,7 @@
             this.lblTurnoMat.Location = new System.Drawing.Point(16, 261);
             this.lblTurnoMat.Name = "lblTurnoMat";
             this.lblTurnoMat.Size = new System.Drawing.Size(142, 19);
-            this.lblTurnoMat.TabIndex = 25;
+            this.lblTurnoMat.TabIndex = 5;
             this.lblTurnoMat.Text = "Inicio turno matutino:";
             // 
             // lblTurnoVes
@@ -272,7 +272,7 @@
             this.lblTurnoVes.Location = new System.Drawing.Point(208, 261);
             this.lblTurnoVes.Name = "lblTurnoVes";
             this.lblTurnoVes.Size = new System.Drawing.Size(150, 19);
-            this.lblTurnoVes.TabIndex = 26;
+            this.lblTurnoVes.TabIndex = 7;
             this.lblTurnoVes.Text = "Inicio turno vespertino:";
             // 
             // chbPreguntar
@@ -282,7 +282,7 @@
             this.chbPreguntar.Location = new System.Drawing.Point(20, 432);
             this.chbPreguntar.Name = "chbPreguntar";
             this.chbPreguntar.Size = new System.Drawing.Size(380, 25);
-            this.chbPreguntar.TabIndex = 27;
+            this.chbPreguntar.TabIndex = 10;
             this.chbPreguntar.Text = "Preguntar si se desea imprimir con cada impresión";
             this.chbPreguntar.UseVisualStyleBackColor = true;
             // 
@@ -293,7 +293,7 @@
             this.chbImprimirTickets.Location = new System.Drawing.Point(20, 368);
             this.chbImprimirTickets.Name = "chbImprimirTickets";
             this.chbImprimirTickets.Size = new System.Drawing.Size(138, 25);
-            this.chbImprimirTickets.TabIndex = 28;
+            this.chbImprimirTickets.TabIndex = 9;
             this.chbImprimirTickets.Text = "Imprimir tickets";
             this.chbImprimirTickets.UseVisualStyleBackColor = true;
             // 
@@ -316,7 +316,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(909, 463);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(87, 30);
-            this.btnAceptar.TabIndex = 13;
+            this.btnAceptar.TabIndex = 22;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.UseVisualStyleBackColor = true;

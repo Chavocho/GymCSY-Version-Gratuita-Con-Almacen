@@ -32,8 +32,8 @@ namespace GYM.Formularios.Membresia
                     DateTime fechaCreacion = (DateTime)dr["create_time"], fechaModificacion = new DateTime();
                     if (dr["update_time"] != DBNull.Value)
                         fechaModificacion = (DateTime)dr["update_time"];
-                    dtpHoraInicio.Value = (DateTime)dr["hora_inicio"];
-                    dtpHoraFin.Value = (DateTime)dr["hora_fin"];
+                    dtpHoraInicio.Value = DateTime.Parse(DateTime.Now.ToString("yyyy-MM-dd ") + dr["hora_inicio"].ToString());
+                    dtpHoraFin.Value = DateTime.Parse(DateTime.Now.ToString("yyyy-MM-dd ") + dr["hora_fin"].ToString());
                     txtDescripcion.Text = dr["descripcion"].ToString();
                     txtPrecio.Text = dr["precio"].ToString();
                     cboTipo.SelectedIndex = (int)dr["duracion"];
@@ -71,6 +71,7 @@ namespace GYM.Formularios.Membresia
                 sql.Parameters.AddWithValue("?descripcion", txtDescripcion.Text);
                 sql.Parameters.AddWithValue("?genero", cboGenero.SelectedIndex);
                 sql.Parameters.AddWithValue("?update_user_id", frmMain.id);
+                sql.Parameters.AddWithValue("?id", id);
                 ConexionBD.EjecutarConsulta(sql);
             }
             catch (MySqlException ex)

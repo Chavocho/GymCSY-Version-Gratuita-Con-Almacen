@@ -127,7 +127,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(634, 347);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(101, 34);
-            this.btnAceptar.TabIndex = 23;
+            this.btnAceptar.TabIndex = 3;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -140,7 +140,7 @@
             this.txtBusqueda.Location = new System.Drawing.Point(562, 12);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(173, 27);
-            this.txtBusqueda.TabIndex = 18;
+            this.txtBusqueda.TabIndex = 1;
             this.txtBusqueda.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBusqueda_KeyDown);
             // 
             // lblInstruccionesBusqueda
@@ -151,7 +151,7 @@
             this.lblInstruccionesBusqueda.Location = new System.Drawing.Point(308, 16);
             this.lblInstruccionesBusqueda.Name = "lblInstruccionesBusqueda";
             this.lblInstruccionesBusqueda.Size = new System.Drawing.Size(248, 19);
-            this.lblInstruccionesBusqueda.TabIndex = 19;
+            this.lblInstruccionesBusqueda.TabIndex = 0;
             this.lblInstruccionesBusqueda.Text = "Buscar por número de socio o nombre ";
             // 
             // tmrEspera
