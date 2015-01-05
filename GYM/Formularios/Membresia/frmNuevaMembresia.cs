@@ -626,12 +626,12 @@ namespace GYM.Formularios.Membresia
 
         private void txtFolio_LostFocus(object sender, EventArgs e)
         {
-            if (CMembresia.ExisteFolio(txtFolio.Text))
-            {
-                MessageBox.Show("El folio ingresado ya existe, ingrese otro para poder continuar.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtFolio.Focus();
-                txtFolio.SelectAll();
-            }
+            //if (CMembresia.ExisteFolio(txtFolio.Text))
+            //{
+            //    MessageBox.Show("El folio ingresado ya existe, ingrese otro para poder continuar.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    txtFolio.Focus();
+            //    txtFolio.SelectAll();
+            //}
         }
     }
 }

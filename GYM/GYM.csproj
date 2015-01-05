@@ -577,7 +577,13 @@
     <EmbeddedResource Include="Formularios\Compras\frmVisualizarCompra.resx">
       <DependentUpon>frmVisualizarCompra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Configuraciones\frmConfiguracionBaseDatos.es-MX.resx">
+      <DependentUpon>frmConfiguracionBaseDatos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Configuraciones\frmConfiguracionBaseDatos.resx">
+      <DependentUpon>frmConfiguracionBaseDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Configuraciones\frmConfiguracionBaseDatos.sk.resx">
       <DependentUpon>frmConfiguracionBaseDatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Configuraciones\frmConfiguracionSonido.resx">
