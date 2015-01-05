@@ -106,8 +106,13 @@ namespace GYM.Formularios
             try
             {
                 GuardarConfig();
-                MessageBox.Show("La aplicación se cerrará.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Application.Exit();
+                if (frmMain.Instancia.Visible)
+                {
+                    MessageBox.Show("La aplicación se cerrará.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Application.Exit();
+                }
+                else
+                    this.Close();
             }
             catch (ObjectDisposedException ex)
             {
