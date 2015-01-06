@@ -34,6 +34,7 @@ namespace GYM.Formularios.PuntoDeVenta
                 {
                     chbProductoServicio.Checked = true;
                 }
+                chbControlStock.Checked = p.ControlStock;
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
@@ -87,7 +88,9 @@ namespace GYM.Formularios.PuntoDeVenta
             {
                 if (Validar())
                 {
+                    p.ID = this.idProducto;
                     p.Nombre = txbNombre.Text;
+                    p.Marca = txbMarca.Text;
                     p.ControlStock = chbControlStock.Checked;
                     p.Costo = decimal.Parse(txbCosto.Text);
                     p.Precio = decimal.Parse(txbPrecio.Text);
@@ -99,8 +102,6 @@ namespace GYM.Formularios.PuntoDeVenta
                     MessageBox.Show("Se ha actualizados con éxito", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
-                else
-                    MessageBox.Show("Favor de llenar todo los campos", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
