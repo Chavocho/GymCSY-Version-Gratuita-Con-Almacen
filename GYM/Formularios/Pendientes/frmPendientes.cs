@@ -286,14 +286,15 @@ namespace GYM.Formularios
 
         private void bgwBusqueda_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            tmrEspera_Tick(tmrEspera, new EventArgs());
+            tmrEspera.Enabled = false;
+            CFuncionesGenerales.frmEsperaClose();
             LlenarDataGrid();
         }
 
         private void tmrEspera_Tick(object sender, EventArgs e)
         {
             tmrEspera.Enabled = false;
-            CFuncionesGenerales.frmEsperaClose();
+            CFuncionesGenerales.frmEspera("Espere, búscando pendientes", this);
         }
 
         private void dgvPendientes_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -399,8 +399,8 @@ namespace GYM.Clases
                 decimal total = 0;
                 total = decimal.Parse(dt.Rows[0]["total"].ToString());
                 y += saltoLinea / 2;
-                e.Graphics.DrawString("TOTAL: ", fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) * 3 + 10 - e.Graphics.MeasureString("TOTAL: ", fuenteNormal).Width, y);
-                e.Graphics.DrawString(total.ToString("C2"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) * 3 + 10, y);
+                e.Graphics.DrawString("TOTAL: ", fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) * 3 - 20 - e.Graphics.MeasureString("TOTAL: ", fuenteNormal).Width, y);
+                e.Graphics.DrawString(total.ToString("C2"), fuenteNormal, Brushes.Black, (e.PageBounds.Width / 4) * 3 - 20, y);
                 y += saltoLinea * 3 / 2;
 
                 string tot = Clases.CFuncionesGenerales.ConvertirNumeroLetra(total.ToString());
