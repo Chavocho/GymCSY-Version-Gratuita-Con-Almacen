@@ -103,7 +103,7 @@ namespace GYM.Formularios.Membresia
             }
         }
 
-        private void dgvPersonas_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvPersonas_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             try
             {

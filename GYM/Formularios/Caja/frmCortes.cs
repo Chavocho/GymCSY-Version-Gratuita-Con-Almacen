@@ -53,8 +53,6 @@ namespace GYM.Formularios.Caja
                     fechas = DateTime.Parse(dr["fecha"].ToString());
                     dgvCaja.Rows.Add(new object[] { dr["id"], fechas.ToString("dd") + " de " + fechas.ToString("MMMM") + " del " + fechas.ToString("yyyy"), (decimal.Parse(dr["efectivo"].ToString()) * -1).ToString("C2"), (decimal.Parse(dr["tarjeta"].ToString()) * -1).ToString("C2") });
                 }
-                if (dgvCaja.RowCount > 0)
-                    dgvCaja_CellClick(dgvCaja, new DataGridViewCellEventArgs(0, 0));
             }
             catch (FormatException ex)
             {
@@ -81,23 +79,6 @@ namespace GYM.Formularios.Caja
             {
                 Clases.CTicket t = new Clases.CTicket();
                 t.ImprimirCorteCaja(idA, idC);
-            }
-        }
-
-        private void dgvCaja_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                idC = (int)dgvCaja[0, e.RowIndex].Value;
-                string sql = "SELECT MAX(id) AS idA FROM caja WHERE descripcion = 'APERTURA DE CAJA' AND id<" + idC;
-                DataTable dt = Clases.ConexionBD.EjecutarConsultaSelect(sql);
-                foreach (DataRow dr in dt.Rows)
-                {
-                    idA = (int)dr["idA"];
-                }
-            }
-            catch
-            {
             }
         }
 
@@ -142,6 +123,23 @@ namespace GYM.Formularios.Caja
                 dtpFechaFin.Value = dtpFechaInicio.Value.AddDays(1);
             bgwCortes.RunWorkerAsync(new object[] { dtpFechaInicio.Value, dtpFechaFin.Value });
             tmrEspera.Enabled = true;
+        }
+
+        private void dgvCaja_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                idC = (int)dgvCaja[0, e.RowIndex].Value;
+                string sql = "SELECT MAX(id) AS idA FROM caja WHERE descripcion = 'APERTURA DE CAJA' AND id<" + idC;
+                DataTable dt = Clases.ConexionBD.EjecutarConsultaSelect(sql);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    idA = (int)dr["idA"];
+                }
+            }
+            catch
+            {
+            }
         }
     }
 }

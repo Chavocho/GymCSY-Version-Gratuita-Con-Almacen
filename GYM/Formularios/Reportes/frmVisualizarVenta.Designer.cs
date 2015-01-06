@@ -174,9 +174,8 @@
             this.lblRemision.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblRemision.Location = new System.Drawing.Point(496, 28);
             this.lblRemision.Name = "lblRemision";
-            this.lblRemision.Size = new System.Drawing.Size(73, 19);
+            this.lblRemision.Size = new System.Drawing.Size(0, 19);
             this.lblRemision.TabIndex = 5;
-            this.lblRemision.Text = "00000004";
             // 
             // lblERemision
             // 
@@ -195,9 +194,8 @@
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblTotal.Location = new System.Drawing.Point(877, 84);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(69, 19);
+            this.lblTotal.Size = new System.Drawing.Size(0, 19);
             this.lblTotal.TabIndex = 17;
-            this.lblTotal.Text = "$1350.50";
             // 
             // lblETotal
             // 
@@ -216,9 +214,8 @@
             this.lblUpdateTime.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblUpdateTime.Location = new System.Drawing.Point(622, 84);
             this.lblUpdateTime.Name = "lblUpdateTime";
-            this.lblUpdateTime.Size = new System.Drawing.Size(179, 19);
+            this.lblUpdateTime.Size = new System.Drawing.Size(0, 19);
             this.lblUpdateTime.TabIndex = 15;
-            this.lblUpdateTime.Text = "23 de diciembre del 2014";
             // 
             // lblEUpdateTime
             // 
@@ -237,9 +234,8 @@
             this.lblUpdateUser.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblUpdateUser.Location = new System.Drawing.Point(359, 84);
             this.lblUpdateUser.Name = "lblUpdateUser";
-            this.lblUpdateUser.Size = new System.Drawing.Size(51, 19);
+            this.lblUpdateUser.Size = new System.Drawing.Size(0, 19);
             this.lblUpdateUser.TabIndex = 13;
-            this.lblUpdateUser.Text = "admin";
             // 
             // lblEUpdateUser
             // 
@@ -258,9 +254,8 @@
             this.lblCreateUser.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblCreateUser.Location = new System.Drawing.Point(70, 84);
             this.lblCreateUser.Name = "lblCreateUser";
-            this.lblCreateUser.Size = new System.Drawing.Size(50, 19);
+            this.lblCreateUser.Size = new System.Drawing.Size(0, 19);
             this.lblCreateUser.TabIndex = 11;
-            this.lblCreateUser.Text = "MARY";
             // 
             // lblECreateUser
             // 
@@ -279,9 +274,8 @@
             this.lblTerminacion.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblTerminacion.Location = new System.Drawing.Point(952, 28);
             this.lblTerminacion.Name = "lblTerminacion";
-            this.lblTerminacion.Size = new System.Drawing.Size(41, 19);
+            this.lblTerminacion.Size = new System.Drawing.Size(0, 19);
             this.lblTerminacion.TabIndex = 9;
-            this.lblTerminacion.Text = "1233";
             // 
             // lblETerminacion
             // 
@@ -300,9 +294,8 @@
             this.lblFolioTicket.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblFolioTicket.Location = new System.Drawing.Point(710, 28);
             this.lblFolioTicket.Name = "lblFolioTicket";
-            this.lblFolioTicket.Size = new System.Drawing.Size(73, 19);
+            this.lblFolioTicket.Size = new System.Drawing.Size(0, 19);
             this.lblFolioTicket.TabIndex = 7;
-            this.lblFolioTicket.Text = "36259323";
             // 
             // lblEFolioTicket
             // 
@@ -321,9 +314,8 @@
             this.lblTipoPago.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblTipoPago.Location = new System.Drawing.Point(328, 28);
             this.lblTipoPago.Name = "lblTipoPago";
-            this.lblTipoPago.Size = new System.Drawing.Size(62, 19);
+            this.lblTipoPago.Size = new System.Drawing.Size(0, 19);
             this.lblTipoPago.TabIndex = 3;
-            this.lblTipoPago.Text = "Efectivo";
             // 
             // lblETipoPago
             // 
@@ -342,9 +334,8 @@
             this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblFecha.Location = new System.Drawing.Point(62, 28);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(179, 19);
+            this.lblFecha.Size = new System.Drawing.Size(0, 19);
             this.lblFecha.TabIndex = 1;
-            this.lblFecha.Text = "21 de diciembre del 2014";
             // 
             // lblEFecha
             // 

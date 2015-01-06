@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLockers));
             this.dgvLockers = new System.Windows.Forms.DataGridView();
             this.IDL = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +54,14 @@
             this.dgvLockers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvLockers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvLockers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLockers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvLockers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvLockers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDL,
@@ -70,7 +79,7 @@
             this.dgvLockers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLockers.Size = new System.Drawing.Size(788, 344);
             this.dgvLockers.TabIndex = 0;
-            this.dgvLockers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLockers_CellClick);
+            this.dgvLockers.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLockers_RowEnter);
             // 
             // IDL
             // 

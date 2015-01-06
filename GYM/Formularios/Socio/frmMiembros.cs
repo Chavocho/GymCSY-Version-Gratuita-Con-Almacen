@@ -89,17 +89,6 @@ namespace GYM.Formularios.Socio
             if (e.KeyChar == (char)Keys.Enter)
                 BuscarMiembros(txtBusqueda.Text);
         }
-
-        private void dgvPersonas_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                numSocio = int.Parse(dgvPersonas[0, e.RowIndex].Value.ToString());
-            }
-            catch
-            {
-            }
-        }
         #endregion
 
 
@@ -112,6 +101,17 @@ namespace GYM.Formularios.Socio
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvPersonas_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                numSocio = int.Parse(dgvPersonas[0, e.RowIndex].Value.ToString());
+            }
+            catch
+            {
+            }
         }
     }
 }

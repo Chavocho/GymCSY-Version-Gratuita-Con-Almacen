@@ -61,7 +61,6 @@ namespace GYM.Formularios.Membresia
                         dgvPersonas.Rows.Add(new object[] { dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), tel });
                     }
                 }
-                dgvPersonas_CellClick(dgvPersonas, new DataGridViewCellEventArgs(0, 0));
             }
             catch (InvalidOperationException ex)
             {
@@ -105,7 +104,13 @@ namespace GYM.Formularios.Membresia
             this.Close();
         }
 
-        private void dgvPersonas_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void tmrEspera_Tick(object sender, EventArgs e)
+        {
+            tmrEspera.Enabled = false;
+            Clases.CFuncionesGenerales.frmEspera("Espere, búscando los miembros sin membresías.", this);
+        }
+
+        private void dgvPersonas_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -116,12 +121,6 @@ namespace GYM.Formularios.Membresia
             {
                 numSocio = 0;
             }
-        }
-
-        private void tmrEspera_Tick(object sender, EventArgs e)
-        {
-            tmrEspera.Enabled = false;
-            Clases.CFuncionesGenerales.frmEspera("Espere, búscando los miembros sin membresías.", this);
         }
     }
 }

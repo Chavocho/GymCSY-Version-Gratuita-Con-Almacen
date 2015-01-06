@@ -86,7 +86,7 @@
             this.dgvSocios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSocios.Size = new System.Drawing.Size(771, 216);
             this.dgvSocios.TabIndex = 4;
-            this.dgvSocios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSocios_CellClick);
+            this.dgvSocios.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSocios_RowEnter);
             // 
             // NumSocio
             // 

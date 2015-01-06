@@ -98,18 +98,6 @@ namespace GYM.Formularios.PuntoDeVenta
                 MessageBox.Show("seleccione un producto valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        private void dgvProducto_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                celdaSeleccionad = e.RowIndex;
-                id = this.dgvProducto[0, e.RowIndex].Value.ToString();
-            }
-            catch
-            {
-            }
-        }
-
         private void Productos_Load(object sender, EventArgs e)
         {
             if (Clases.CFuncionesGenerales.AperturaUnicaFormulario(this.Name))
@@ -214,6 +202,18 @@ namespace GYM.Formularios.PuntoDeVenta
             catch (Exception ex)
             {
                 CFuncionesGenerales.MensajeError("No se pudo imprimir el código. Ha ocurrido un error genérico.", ex);
+            }
+        }
+
+        private void dgvProducto_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                celdaSeleccionad = e.RowIndex;
+                id = this.dgvProducto[0, e.RowIndex].Value.ToString();
+            }
+            catch
+            {
             }
         }
     }

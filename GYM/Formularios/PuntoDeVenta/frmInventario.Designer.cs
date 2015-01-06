@@ -73,6 +73,7 @@
             this.dgvProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProducto.Size = new System.Drawing.Size(836, 298);
             this.dgvProducto.TabIndex = 3;
+            this.dgvProducto.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducto_RowEnter);
             // 
             // Codigo
             // 

@@ -122,7 +122,6 @@ namespace GYM.Formularios.Membresia
                         fechaIni = "Sin información";
                     dgvPersonas.Rows.Add(new object[] { dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), status, fechaIni, fecha, dr["genero"] });
                 }
-                dgvPersonas_CellClick(dgvPersonas, new DataGridViewCellEventArgs(0, 0));
             }
             catch (MySqlException ex)
             {
@@ -246,18 +245,6 @@ namespace GYM.Formularios.Membresia
             }
         }
 
-        private void dgvPersonas_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                numSocio = int.Parse(dgvPersonas[0, e.RowIndex].Value.ToString());
-                sexo = (int)dgvPersonas[5, e.RowIndex].Value;
-            }
-            catch 
-            {
-            }
-        }
-
         private void frmMembresia_Shown(object sender, EventArgs e)
         {
             txtBusqueda.Focus();
@@ -273,6 +260,18 @@ namespace GYM.Formularios.Membresia
             catch (Exception ex)
             {
                 Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un error genérico.", ex);
+            }
+        }
+
+        private void dgvPersonas_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                numSocio = int.Parse(dgvPersonas[0, e.RowIndex].Value.ToString());
+                sexo = (int)dgvPersonas[5, e.RowIndex].Value;
+            }
+            catch
+            {
             }
         }
     }

@@ -93,7 +93,6 @@ namespace GYM.Formularios
                     }
                     dgvLockers.Rows.Add(new object[] { dr["id"], dr["num"], nombre, tel, estado });
                 }
-                dgvLockers_CellClick(dgvLockers, new DataGridViewCellEventArgs(0, 0));
             }
             catch (MySqlException ex)
             {
@@ -175,18 +174,6 @@ namespace GYM.Formularios
             }
         }
 
-        private void dgvLockers_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                idLocker = (int)dgvLockers[0, e.RowIndex].Value;
-                numLocker = (int)dgvLockers[1, e.RowIndex].Value;
-            }
-            catch
-            {
-            }
-        }
-
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             if ((new frmNumeroLocker(this)).ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
@@ -237,6 +224,18 @@ namespace GYM.Formularios
         private void frmLockers_Load(object sender, EventArgs e)
         {
             BuscarLockers();
+        }
+
+        private void dgvLockers_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                idLocker = (int)dgvLockers[0, e.RowIndex].Value;
+                numLocker = (int)dgvLockers[1, e.RowIndex].Value;
+            }
+            catch
+            {
+            }
         }
     }
 }

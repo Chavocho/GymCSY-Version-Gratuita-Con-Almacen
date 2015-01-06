@@ -78,6 +78,7 @@
             this.dgvCompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCompras.Size = new System.Drawing.Size(720, 284);
             this.dgvCompras.TabIndex = 1;
+            this.dgvCompras.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCompras_RowEnter);
             // 
             // ID
             // 

@@ -72,8 +72,6 @@ namespace GYM.Clases
             try
             {
                 this.folio = folio;
-                ObtenerDatosVenta();
-                ObtenerDatosVentaDetallada();
                 pd.PrintPage += new PrintPageEventHandler(pd_PrintPageTicketVenta);
                 pd.DocumentName = "Ticket";
                 pd.DefaultPageSettings.PaperSize = new PaperSize("Ticket", tamPapel, 10000);

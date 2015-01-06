@@ -104,7 +104,6 @@ namespace GYM.Formularios.Membresia
 
                     dgvPromociones.Rows.Add(new object[] { dr["id"], dr["descripcion"], precio.ToString("C2"), duracion, genero, fechaIni.ToString("dd") + " de " + fechaIni.ToString("MMMM") + " del " + fechaIni.ToString("yyyy"), fechaFin.ToString("dd") + " de " + fechaFin.ToString("MMMM") + " del " + fechaFin.ToString("yyyy") });
                 }
-                dgvPromociones_CellClick(dgvPromociones, new DataGridViewCellEventArgs(0, 0));
             }
             catch (MySqlException ex)
             {
@@ -177,7 +176,6 @@ namespace GYM.Formularios.Membresia
 
                     dgvPromociones.Rows.Add(new object[] { dr["id"], dr["descripcion"], precio.ToString("C2"), duracion, genero, horaIni.ToString("hh:mm tt"), horaFin.ToString("hh:mm tt")});
                 }
-                dgvPromociones_CellClick(dgvPromociones, new DataGridViewCellEventArgs(0, 0));
             }
             catch (MySqlException ex)
             {
@@ -275,17 +273,6 @@ namespace GYM.Formularios.Membresia
             }
         }
 
-        private void dgvPromociones_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                id = (int)dgvPromociones[0, e.RowIndex].Value;
-            }
-            catch 
-            {
-            }
-        }
-
         private void cboTipoPromo_SelectedIndexChanged(object sender, EventArgs e)
         {
             //5 y 6 las columnas
@@ -301,6 +288,17 @@ namespace GYM.Formularios.Membresia
                     dgvPromociones.Columns[6].HeaderText = "Hora de terminación";
                     BuscarPromocionesHorarios();
                     break;
+            }
+        }
+
+        private void dgvPromociones_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                id = (int)dgvPromociones[0, e.RowIndex].Value;
+            }
+            catch
+            {
             }
         }
     }

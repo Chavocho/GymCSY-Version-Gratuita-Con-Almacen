@@ -15,6 +15,7 @@ namespace GYM.Formularios.Compras
     public partial class frmCompras : Form
     {
         DataTable dt = new DataTable();
+        int id;
 
         #region Instancia
         private static frmCompras frmInstancia;
@@ -131,11 +132,22 @@ namespace GYM.Formularios.Compras
         {
             if (dgvCompras.CurrentRow != null)
             {
-                (new frmVisualizarCompra((int)dgvCompras[0, dgvCompras.CurrentRow.Index].Value)).ShowDialog(this);
+                (new frmVisualizarCompra(id)).ShowDialog(this);
             }
             else
             {
                 MessageBox.Show("Debes seleccionar una compra para poderla visualizar.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void dgvCompras_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                id = (int)dgvCompras[0, dgvCompras.CurrentRow.Index].Value;
+            }
+            catch
+            {
             }
         }
     }

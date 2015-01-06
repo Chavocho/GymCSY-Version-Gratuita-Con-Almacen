@@ -79,7 +79,7 @@ namespace GYM.Formularios.Reportes
             try
             {
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "SELECT v.id, v.fecha, v.total, v.tipo_pago, SUM(vd.cantidad) AS c FROM venta AS v INNER JOIN venta_detallada AS vd ON (v.id=vd.id_venta) WHERE (v.fecha BETWEEN ?fechaIni AND ?fechaFin)";
+                sql.CommandText = "SELECT v.id, v.fecha, v.total, v.tipo_pago, SUM(vd.cantidad) AS c FROM venta AS v INNER JOIN venta_detallada AS vd ON (v.id=vd.id_venta) WHERE (v.fecha BETWEEN ?fechaIni AND ?fechaFin) GROUP BY v.id";
                 sql.Parameters.AddWithValue("?fechaIni", fechaIni.ToString("yyyy/MM/dd") + " 00:00:00");
                 sql.Parameters.AddWithValue("?fechaFin", fechaFin.ToString("yyyy/MM/dd") + " 23:59:59");
                 dt = ConexionBD.EjecutarConsultaSelect(sql);
@@ -132,13 +132,7 @@ namespace GYM.Formularios.Reportes
 
         private void dgvVentas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
-                id = (int)dgvVentas[0, e.RowIndex].Value;
-            }
-            catch
-            {
-            }
+            
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -183,6 +177,17 @@ namespace GYM.Formularios.Reportes
             {
                 MessageBox.Show("No hay ventas registradas. La ventana se cerrará.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
+            }
+        }
+
+        private void dgvVentas_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                id = (int)dgvVentas[0, e.RowIndex].Value;
+            }
+            catch
+            {
             }
         }
     }

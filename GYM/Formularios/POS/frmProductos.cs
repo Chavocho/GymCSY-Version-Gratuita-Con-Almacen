@@ -69,45 +69,6 @@ namespace GYM.Formularios.POS
             {
                 Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un error genérico.", ex);
             }
-            dgvProductos_CellClick(dgvProductos, new DataGridViewCellEventArgs(0, 0));
-        }
-
-        private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                if (dgvProductos.RowCount > 0)
-                {
-                    nudCantidad.Value = 1;
-                    for (int i = 0; i < cant.Count; i++)
-                    {
-                        dgvProductos[2, i].Value = cant[i];
-                    }
-                    id = dgvProductos[0, dgvProductos.CurrentRow.Index].Value.ToString();
-                    precio = decimal.Parse(dgvProductos[3, dgvProductos.CurrentRow.Index].Value.ToString(), System.Globalization.NumberStyles.Currency);
-                    lblTotal.Text = (precio * nudCantidad.Value).ToString("C2");
-                }
-            }
-            catch (InvalidOperationException ex)
-            {
-                Clases.CFuncionesGenerales.MensajeError("El estado actual del objeto no permite ejecutar operaciones en él.", ex);
-            }
-            catch (FormatException ex)
-            {
-                Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un error al tratar de dar formato una variable.", ex);
-            }
-            catch (OverflowException ex)
-            {
-                Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un desbordamiento.", ex);
-            }
-            catch (ArgumentNullException ex)
-            {
-                Clases.CFuncionesGenerales.MensajeError("Algún método invocado en el evento CellClick del DataGridView no admite argumentos nulos.", ex);
-            }
-            catch (ArgumentException ex)
-            {
-                Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un error genérico.", ex);
-            }
         }
 
         private void nudCantidad_ValueChanged(object sender, EventArgs e)
@@ -173,6 +134,44 @@ namespace GYM.Formularios.POS
         {
             Clases.CFuncionesGenerales.CargarInterfaz(this);
             txtCodigo.Focus();
+        }
+
+        private void dgvProductos_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dgvProductos.RowCount > 0)
+                {
+                    nudCantidad.Value = 1;
+                    for (int i = 0; i < cant.Count; i++)
+                    {
+                        dgvProductos[2, i].Value = cant[i];
+                    }
+                    id = dgvProductos[0, dgvProductos.CurrentRow.Index].Value.ToString();
+                    precio = decimal.Parse(dgvProductos[3, dgvProductos.CurrentRow.Index].Value.ToString(), System.Globalization.NumberStyles.Currency);
+                    lblTotal.Text = (precio * nudCantidad.Value).ToString("C2");
+                }
+            }
+            catch (InvalidOperationException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("El estado actual del objeto no permite ejecutar operaciones en él.", ex);
+            }
+            catch (FormatException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un error al tratar de dar formato una variable.", ex);
+            }
+            catch (OverflowException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un desbordamiento.", ex);
+            }
+            catch (ArgumentNullException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("Algún método invocado en el evento CellClick del DataGridView no admite argumentos nulos.", ex);
+            }
+            catch (ArgumentException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un error genérico.", ex);
+            }
         }
     }
 }

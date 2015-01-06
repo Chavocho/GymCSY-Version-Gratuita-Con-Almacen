@@ -118,7 +118,7 @@
             this.dgvPendientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPendientes.Size = new System.Drawing.Size(960, 352);
             this.dgvPendientes.TabIndex = 2;
-            this.dgvPendientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonas_CellClick);
+            this.dgvPendientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPendientes_CellClick);
             // 
             // CID
             // 

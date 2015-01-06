@@ -113,8 +113,7 @@
             this.dgvMembresias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMembresias.Size = new System.Drawing.Size(984, 316);
             this.dgvMembresias.TabIndex = 21;
-            this.dgvMembresias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMembresias_CellClick);
-            this.dgvMembresias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMembresias_CellContentClick);
+            this.dgvMembresias.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMembresias_RowEnter);
             // 
             // CFechaPago
             // 

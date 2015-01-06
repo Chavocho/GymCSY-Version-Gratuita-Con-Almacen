@@ -70,6 +70,7 @@ namespace GYM.Formularios.POS
         {
             try
             {
+                folio = 0;
                 dgvVentas.Rows.Clear();
                 string estaAbierta = "";
                 foreach (DataRow dr in dt.Rows)
@@ -80,10 +81,6 @@ namespace GYM.Formularios.POS
                         estaAbierta = "Abierta";
                     dgvVentas.Rows.Add(new object[] { int.Parse(dr["id"].ToString()).ToString("00000000"), DateTime.Parse(dr["fecha"].ToString()).ToString("dd/MM/yyyy hh:mm tt"), decimal.Parse(dr["total"].ToString()).ToString("C2"), estaAbierta });
                 }
-                if (dgvVentas.RowCount > 0)
-                    dgvVentas_CellClick(dgvVentas, new DataGridViewCellEventArgs(0, 0));
-                else
-                    folio = 0;
             }
             catch (FormatException ex)
             {
@@ -104,18 +101,6 @@ namespace GYM.Formularios.POS
             catch (Exception ex)
             {
                 Clases.CFuncionesGenerales.MensajeError("No se pudo mostrar la información. ", ex);
-            }
-        }
-
-        private void dgvVentas_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                folio = int.Parse(dgvVentas[0, e.RowIndex].Value.ToString());
-            }
-            catch (Exception ex)
-            {
-                Clases.CFuncionesGenerales.MensajeError("Ocurrio un error al dar click en el DataGridView", ex);
             }
         }
 
@@ -154,6 +139,18 @@ namespace GYM.Formularios.POS
         {
             Clases.CFuncionesGenerales.CargarInterfaz(this);
             BuscarVentaFechas(DateTime.Now, DateTime.Now);
+        }
+
+        private void dgvVentas_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                folio = int.Parse(dgvVentas[0, e.RowIndex].Value.ToString());
+            }
+            catch (Exception ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("Ocurrio un error al dar click en el DataGridView", ex);
+            }
         }
     }
 }

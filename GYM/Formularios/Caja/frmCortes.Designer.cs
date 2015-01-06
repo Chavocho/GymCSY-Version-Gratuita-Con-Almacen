@@ -73,7 +73,7 @@
             this.dgvCaja.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCaja.Size = new System.Drawing.Size(640, 244);
             this.dgvCaja.TabIndex = 4;
-            this.dgvCaja.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCaja_CellClick);
+            this.dgvCaja.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCaja_RowEnter);
             // 
             // ID
             // 

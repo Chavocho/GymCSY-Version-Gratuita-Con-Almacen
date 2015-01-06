@@ -129,7 +129,6 @@ namespace GYM.Formularios
                         tel = dr["celular"].ToString();
                     dgvSocios.Rows.Add(new object[] { dr["numSocio"], dr["nombre"] + " " + dr["apellidos"], tel });
                 }
-                dgvSocios_CellClick(dgvSocios, new DataGridViewCellEventArgs(0, 0));
             }
             catch (Exception ex)
             {
@@ -432,17 +431,6 @@ namespace GYM.Formularios
             }
         }
 
-        private void dgvSocios_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                numSocio = (int)dgvSocios[0, e.RowIndex].Value;
-            }
-            catch
-            {
-            }
-        }
-
         private void txtBusqueda_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -495,6 +483,17 @@ namespace GYM.Formularios
             //    txtFolio.Focus();
             //    txtFolio.SelectAll();
             //}
+        }
+
+        private void dgvSocios_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                numSocio = (int)dgvSocios[0, e.RowIndex].Value;
+            }
+            catch
+            {
+            }
         }
     }
 }

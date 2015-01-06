@@ -51,7 +51,6 @@ namespace GYM.Formularios.Compras
                     foreach (DataRow dr in dt.Rows)
                     {
                         dgvProductos.Rows.Add(new object[] { id, dr["nombre"], decimal.Parse(dr["costo"].ToString()).ToString("C2"), cant, desc.ToString("C2") });
-                        dgvProductos_CellClick(dgvProductos, new DataGridViewCellEventArgs(0, dgvProductos.RowCount - 1));
                     }
                 }
                 CalcularTotales();
@@ -96,7 +95,6 @@ namespace GYM.Formularios.Compras
                     {
                         dr.Cells[3].Value = (int)dr.Cells[3].Value + cant;
                         dr.Cells[4].Value = desc;
-                        dgvProductos_CellClick(dgvProductos, new DataGridViewCellEventArgs(0, dr.Index));
                         return true;
                     }
                 }
@@ -369,17 +367,6 @@ namespace GYM.Formularios.Compras
             }
         }
 
-        private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                id = dgvProductos[e.ColumnIndex, e.RowIndex].Value.ToString();
-            }
-            catch
-            {
-            }
-        }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             DialogResult r = MessageBox.Show("¿Realmente deseas quitar este producto de la compra?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -456,6 +443,17 @@ namespace GYM.Formularios.Compras
         private void lblEImporte_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvProductos_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                id = dgvProductos[e.ColumnIndex, e.RowIndex].Value.ToString();
+            }
+            catch
+            {
+            }
         }
     }
 }

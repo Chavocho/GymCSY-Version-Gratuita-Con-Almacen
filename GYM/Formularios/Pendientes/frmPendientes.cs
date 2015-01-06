@@ -296,7 +296,7 @@ namespace GYM.Formularios
             CFuncionesGenerales.frmEsperaClose();
         }
 
-        private void dgvPersonas_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvPendientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -339,7 +339,7 @@ namespace GYM.Formularios
             }
             catch
             {
-                
+
             }
         }
     }

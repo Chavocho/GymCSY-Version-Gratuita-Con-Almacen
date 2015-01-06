@@ -139,7 +139,7 @@
             this.dgvPromociones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPromociones.Size = new System.Drawing.Size(1039, 363);
             this.dgvPromociones.TabIndex = 2;
-            this.dgvPromociones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPromociones_CellClick);
+            this.dgvPromociones.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPromociones_RowEnter);
             // 
             // CID
             // 

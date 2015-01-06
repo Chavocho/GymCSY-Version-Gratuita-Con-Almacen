@@ -257,6 +257,7 @@
             this.chbControlStock.TabIndex = 19;
             this.chbControlStock.Text = "Controlar stock";
             this.chbControlStock.UseVisualStyleBackColor = true;
+            this.chbControlStock.CheckedChanged += new System.EventHandler(this.chbControlStock_CheckedChanged);
             // 
             // txtCantidadAlmacen
             // 

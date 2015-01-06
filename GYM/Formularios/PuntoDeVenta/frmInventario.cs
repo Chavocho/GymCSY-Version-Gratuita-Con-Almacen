@@ -12,6 +12,8 @@ namespace GYM.Formularios.PuntoDeVenta
 {
     public partial class frmInventario : Form
     {
+        string id;
+
         #region Instancia
         private static frmInventario frmInstancia;
         public static frmInventario Instancia
@@ -161,12 +163,23 @@ namespace GYM.Formularios.PuntoDeVenta
             {
                 if ((bool)dgvProducto[3, dgvProducto.CurrentRow.Index].Value == true)
                 {
-                    (new frmAlmacenMostrador(dgvProducto[0, dgvProducto.CurrentRow.Index].Value.ToString())).ShowDialog(this);
+                    (new frmAlmacenMostrador(id)).ShowDialog(this);
                 }
                 else
                 {
                     MessageBox.Show("No puedes mover productos entre inventarios de un producto que no tiene habilitado controlar stock.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+            }
+        }
+
+        private void dgvProducto_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                id = dgvProducto[0, e.RowIndex].Value.ToString();
+            }
+            catch
+            {
             }
         }
     }

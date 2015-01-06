@@ -100,7 +100,6 @@ namespace GYM.Formularios.Membresia
                     }
                     dgvPromociones.Rows.Add(new object[] { dr["id"], "", "", dr["descripcion"].ToString(), precio.ToString("C2"), duracion });
                 }
-                dgvPromociones_CellClick(dgvPromociones, new DataGridViewCellEventArgs(0, 0));
             }
             catch (MySqlException ex)
             {
@@ -172,7 +171,6 @@ namespace GYM.Formularios.Membresia
                     }
                     dgvPromociones.Rows.Add(new object[] { dr["id"], DateTime.Parse("01-01-0001 " + dr["hora_inicio"].ToString()).ToString("hh:mm tt"), DateTime.Parse("01-01-0001 " + dr["hora_fin"].ToString()).ToString("hh:mm tt"), dr["descripcion"].ToString(), precio.ToString("C2"), duracion });
                 }
-                dgvPromociones_CellClick(dgvPromociones, new DataGridViewCellEventArgs(0, 0));
             }
             catch (MySqlException ex)
             {
@@ -181,18 +179,6 @@ namespace GYM.Formularios.Membresia
             catch (Exception ex)
             {
                 CFuncionesGenerales.MensajeError("No se ha podido buscar las promociones. Ocurrió un error genérico.", ex);
-            }
-        }
-
-        private void dgvPromociones_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                id = (int)dgvPromociones[0, dgvPromociones.CurrentRow.Index].Value;
-                precio = decimal.Parse(dgvPromociones[4, e.RowIndex].Value.ToString(), System.Globalization.NumberStyles.Currency);
-            }
-            catch
-            {
             }
         }
 
@@ -236,6 +222,18 @@ namespace GYM.Formularios.Membresia
                 case 1:
                     BuscarPromocionesHorario();
                     break;
+            }
+        }
+
+        private void dgvPromociones_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                id = (int)dgvPromociones[0, dgvPromociones.CurrentRow.Index].Value;
+                precio = decimal.Parse(dgvPromociones[4, e.RowIndex].Value.ToString(), System.Globalization.NumberStyles.Currency);
+            }
+            catch
+            {
             }
         }
     }

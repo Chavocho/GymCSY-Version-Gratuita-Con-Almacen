@@ -139,6 +139,7 @@ namespace GYM.Formularios.POS
         {
             try
             {
+                folio = 0;
                 dgvVentas.Rows.Clear();
                 string estaAbierta = "";
                 foreach (DataRow dr in dt.Rows)
@@ -156,10 +157,6 @@ namespace GYM.Formularios.POS
                         dgvVentas.Rows[dgvVentas.RowCount - 1].DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
                     }
                 }
-                if (dgvVentas.RowCount > 0)
-                    dgvVentas_CellClick(dgvVentas, new DataGridViewCellEventArgs(0, 0));
-                else
-                    folio = 0;
             }
             catch (FormatException ex)
             {
@@ -176,30 +173,6 @@ namespace GYM.Formularios.POS
             catch (Exception ex)
             {
                 Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un error genérico.", ex);
-            }
-        }
-
-        private void dgvVentas_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                folio = int.Parse(dgvVentas[0, e.RowIndex].Value.ToString());
-            }
-            catch (FormatException ex)
-            {
-                Clases.CFuncionesGenerales.MensajeError("No se pudo convertir el valor del folio a int. El formato no es correcto.", ex);
-            }
-            catch (OverflowException ex)
-            {
-                Clases.CFuncionesGenerales.MensajeError("No se pudo convertir el valor del folio a int. Ha ocurrido un desbordamiento.", ex);
-            }
-            catch (ArgumentNullException ex)
-            {
-                Clases.CFuncionesGenerales.MensajeError("No se pudo convertir el valor del folio a int. El argumento dado es nulo.", ex);
-            }
-            catch (Exception ex)
-            {
-                Clases.CFuncionesGenerales.MensajeError("No se pudo convertir el valor del folio a int. Ha ocurrido un error genérico.", ex);
             }
         }
 
@@ -246,6 +219,30 @@ namespace GYM.Formularios.POS
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvVentas_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                folio = int.Parse(dgvVentas[0, e.RowIndex].Value.ToString());
+            }
+            catch (FormatException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("No se pudo convertir el valor del folio a int. El formato no es correcto.", ex);
+            }
+            catch (OverflowException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("No se pudo convertir el valor del folio a int. Ha ocurrido un desbordamiento.", ex);
+            }
+            catch (ArgumentNullException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("No se pudo convertir el valor del folio a int. El argumento dado es nulo.", ex);
+            }
+            catch (Exception ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("No se pudo convertir el valor del folio a int. Ha ocurrido un error genérico.", ex);
+            }
         }
     }
 }

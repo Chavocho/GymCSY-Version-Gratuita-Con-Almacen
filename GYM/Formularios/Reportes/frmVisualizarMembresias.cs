@@ -45,11 +45,7 @@ namespace GYM.Formularios.Reportes
                 foreach (DataRow dr in dt.Rows)
                 {
                     DateTime fechaIni = DateTime.Parse(dr["fecha_ini"].ToString()), fechaFin = DateTime.Parse(dr["fecha_fin"].ToString()), fechaPago = (DateTime)dr["create_time"];
-
-                    dgvMembresias.Rows.Add(new object[] { fechaIni.ToString("dd") + " de " + fechaIni.ToString("MMMM") + " del " + fechaIni.ToString("yyyy"), 
-                        fechaFin.ToString("dd") + " de " + fechaFin.ToString("MMMM") + " del " + fechaFin.ToString("yyyy"), 
-                        fechaPago.ToString("dd") + " de " + fechaPago.ToString("MMMM") + " del " + fechaPago.ToString("yyyy"), 
-                        dr["descripcion"].ToString() });
+                    string descripcion = dr["descripcion"].ToString();
 
                     tipo.Add((int)dr["tipo"]);
                     tipoPago.Add((int)dr["tipo_pago"]);
@@ -72,6 +68,10 @@ namespace GYM.Formularios.Reportes
                     else
                         fechaAutorizacion.Add(new DateTime());
                     createUser.Add((int)dr["create_user_id"]);
+                    dgvMembresias.Rows.Add(new object[] { fechaPago.ToString("dd") + " de " + fechaPago.ToString("MMMM") + " del " + fechaPago.ToString("yyyy"), 
+                        fechaIni.ToString("dd") + " de " + fechaIni.ToString("MMMM") + " del " + fechaIni.ToString("yyyy"),
+                        fechaFin.ToString("dd") + " de " + fechaFin.ToString("MMMM") + " del " + fechaFin.ToString("yyyy"), 
+                        descripcion });
                 }
             }
             catch (InvalidCastException ex)
@@ -190,10 +190,14 @@ namespace GYM.Formularios.Reportes
         private void frmVisualizarMembresias_Load(object sender, EventArgs e)
         {
             BuscarRegMembresias();
-            MostrarInformacion(0);
         }
 
-        private void dgvMembresias_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dgvMembresias_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -202,16 +206,6 @@ namespace GYM.Formularios.Reportes
             catch
             {
             }
-        }
-
-        private void btnAceptar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void dgvMembresias_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
     }

@@ -51,7 +51,6 @@ namespace GYM.Formularios.Compras
                 {
                     dgvProductos.Rows.Add(new object[] { dr["id"], dr["nombre"], int.Parse(dr["cant"].ToString())+int.Parse(dr["cant_alm"].ToString()), decimal.Parse(dr["costo"].ToString()).ToString("C2") });
                 }
-                dgvProductos_CellClick(dgvProductos, new DataGridViewCellEventArgs(0, 0));
             }
             catch (FormatException ex)
             {
@@ -165,20 +164,6 @@ namespace GYM.Formularios.Compras
             CFuncionesGenerales.frmEspera("Espere mientras se efectua la búsqueda", this);
         }
 
-        private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                if (dgvProductos.RowCount > 0)
-                    CalcularTotales();
-                else
-                    lblTotal.Text = "$0.00";
-            }
-            catch
-            {
-            }
-        }
-
         private void nudCantidad_ValueChanged(object sender, EventArgs e)
         {
             try
@@ -198,6 +183,20 @@ namespace GYM.Formularios.Compras
             try
             {
                 if (dgvProductos.CurrentRow != null)
+                    CalcularTotales();
+                else
+                    lblTotal.Text = "$0.00";
+            }
+            catch
+            {
+            }
+        }
+
+        private void dgvProductos_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dgvProductos.RowCount > 0)
                     CalcularTotales();
                 else
                     lblTotal.Text = "$0.00";

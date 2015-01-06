@@ -227,5 +227,21 @@ namespace GYM.Formularios.PuntoDeVenta
                 txtCantidadAlmacen.Text = "0";
             }
         }
+
+        private void chbControlStock_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!chbControlStock.Checked)
+            {
+                txtCantidad.Text = "0";
+                txtCantidadAlmacen.Text = "0";
+                txtCantidad.Enabled = false;
+                txtCantidadAlmacen.Enabled = false;
+            }
+            else
+            {
+                txtCantidad.Enabled = true;
+                txtCantidadAlmacen.Enabled = true;
+            }
+        }
     }
 }

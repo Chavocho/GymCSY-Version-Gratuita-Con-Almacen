@@ -50,7 +50,7 @@ namespace GYM.Formularios.Reportes
             try
             {
                 string sql = "SELECT s.numSocio, s.nombre, s.apellidos, m.id, m.estado, m.fecha_ini, m.fecha_fin " + 
-                    "FROM miembros AS s INNER JOIN membresias AS m ON (s.numSocio=m.numSocio) INNER JOIN registro_membresias AS r ON (m.id=r.membresia_id) WHERE s.numSocio='" + p + "' OR s.nombre LIKE '%" + p + "%' OR s.apellidos LIKE '%" + p + "%' ORDER BY s.numSocio";
+                    "FROM miembros AS s INNER JOIN membresias AS m ON (s.numSocio=m.numSocio) WHERE s.numSocio='" + p + "' OR s.nombre LIKE '%" + p + "%' OR s.apellidos LIKE '%" + p + "%' ORDER BY s.numSocio";
                 dt = ConexionBD.EjecutarConsultaSelect(sql);
             }
             catch (MySqlException ex)
@@ -87,7 +87,6 @@ namespace GYM.Formularios.Reportes
                     CFuncionesGenerales.MensajeError("No se pudo mostrar el dato de un socio. Ocurrió un error genérico.", ex);
                 }
             }
-            dgvPersonas_CellClick(dgvPersonas, new DataGridViewCellEventArgs(0, 0));
         }
 
         private void bgwBusqueda_DoWork(object sender, DoWorkEventArgs e)
@@ -125,7 +124,7 @@ namespace GYM.Formularios.Reportes
                 MessageBox.Show("Debes seleccionar antes a un socio para visualizar ésta información.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void dgvPersonas_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvPersonas_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             try
             {

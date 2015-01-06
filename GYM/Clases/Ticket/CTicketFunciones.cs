@@ -223,7 +223,7 @@ namespace GYM.Clases
                 {
                     e.Graphics.DrawString("SERVICIO: VENTA MOSTRADOR", fuenteNormal, Brushes.Black, 0, y);
                     y += saltoLinea;
-                    e.Graphics.DrawString("\nTICKET: " + folio.ToString("000000"), fuenteNormal, Brushes.Black, 0, y);
+                    e.Graphics.DrawString("TICKET: " + folio.ToString("000000"), fuenteNormal, Brushes.Black, 0, y);
                 }
                 else
                 {
@@ -231,7 +231,7 @@ namespace GYM.Clases
                     y += saltoLinea;
                     e.Graphics.DrawString("FECHA: " + DateTime.Now.ToString("dd/MM/yyyy"), fuenteNormal, Brushes.Black, 0, y);
                 }
-                y += saltoLinea+5;
+                y += saltoLinea + 5;
                 if (DateTime.Now.TimeOfDay >= turnoMat && DateTime.Now.TimeOfDay < turnoVes)
                     turno = "MATUTINO";
                 else

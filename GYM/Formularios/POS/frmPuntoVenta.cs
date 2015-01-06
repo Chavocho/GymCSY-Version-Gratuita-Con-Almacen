@@ -159,7 +159,6 @@ namespace GYM.Formularios.POS
                                 "las cantidades en el mostrador.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
-                    dgvProductos_CellClick(dgvProductos, new DataGridViewCellEventArgs(0, dgvProductos.RowCount));
                     SumarTotales();
                 }
             }
@@ -674,18 +673,6 @@ namespace GYM.Formularios.POS
             txtCodigo.Focus();
         }
 
-        private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                idProducto = dgvProductos[0, e.RowIndex].Value.ToString();
-            }
-            catch
-            {
-
-            }
-        }
-
         private void btnCobrar_Click(object sender, EventArgs e)
         {
             try
@@ -946,6 +933,18 @@ namespace GYM.Formularios.POS
             catch (Exception ex)
             {
                 Clases.CFuncionesGenerales.MensajeError("No se pudo modificar la cantidad del producto. Ocurrio un error genérico.", ex);
+            }
+        }
+
+        private void dgvProductos_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                idProducto = dgvProductos[0, e.RowIndex].Value.ToString();
+            }
+            catch
+            {
+
             }
         }
     }

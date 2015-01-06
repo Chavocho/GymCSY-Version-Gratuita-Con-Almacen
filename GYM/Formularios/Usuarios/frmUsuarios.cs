@@ -57,7 +57,6 @@ namespace GYM.Formularios
                     niv = "Asistente";
                 dgvUsuarios.Rows.Add(new object[] { dr["id"], dr["userName"], niv });
             }
-            dgvUsuarios_CellClick(dgvUsuarios, new DataGridViewCellEventArgs(0, 0));
         }
 
         private void EliminarUsuario(string id)
@@ -65,15 +64,6 @@ namespace GYM.Formularios
             string sql = "DELETE FROM usuarios WHERE id='" + id + "'";
             Clases.ConexionBD.EjecutarConsultaSelect(sql);
             dgvUsuarios.Rows.RemoveAt(dgvUsuarios.CurrentRow.Index);
-        }
-
-        private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                id = dgvUsuarios[0, e.RowIndex].Value.ToString();
-            }
-            catch { }
         }
 
         private void frmUsuarios_Load(object sender, EventArgs e)
@@ -146,6 +136,15 @@ namespace GYM.Formularios
                 else
                     MessageBox.Show("No tienes permisos para eliminar a este usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void dgvUsuarios_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                id = dgvUsuarios[0, e.RowIndex].Value.ToString();
+            }
+            catch { }
         }
     }
 }
