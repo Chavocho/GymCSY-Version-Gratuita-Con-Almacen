@@ -41,7 +41,7 @@ namespace GYM.Formularios.POS
                 DataTable dt = Clases.ConexionBD.EjecutarConsultaSelect(sql);
                 foreach (DataRow dr in dt.Rows)
                 {
-                    dgvProductos.Rows.Add(dr["id"], dr["nombre"], Convert.ToInt32(dr["cant"]), decimal.Parse(dr["precio"].ToString()).ToString("C2"), dr["control_stock"]);
+                    dgvProductos.Rows.Add(dr["id"], dr["nombre"], int.Parse(dr["cant"].ToString()), decimal.Parse(dr["precio"].ToString()).ToString("C2"), dr["control_stock"]);
                     cant.Add(Convert.ToInt32(dr["cant"]));
                 }
             }
@@ -76,11 +76,6 @@ namespace GYM.Formularios.POS
             try
             {
                 if ((cant[dgvProductos.CurrentRow.Index] - Convert.ToInt32(nudCantidad.Value)) >= 0)
-                {
-                    dgvProductos[2, dgvProductos.CurrentRow.Index].Value = cant[dgvProductos.CurrentRow.Index] - Convert.ToInt32(nudCantidad.Value);
-                    lblTotal.Text = (precio * nudCantidad.Value).ToString("C2");
-                }
-                else if (dgvProductos[4, dgvProductos.CurrentRow.Index].Value.ToString() == "0")
                 {
                     lblTotal.Text = (precio * nudCantidad.Value).ToString("C2");
                 }
@@ -140,15 +135,15 @@ namespace GYM.Formularios.POS
         {
             try
             {
-                if (dgvProductos.RowCount > 0)
+                if (dgvProductos.CurrentRow != null)
                 {
                     nudCantidad.Value = 1;
                     for (int i = 0; i < cant.Count; i++)
                     {
                         dgvProductos[2, i].Value = cant[i];
                     }
-                    id = dgvProductos[0, dgvProductos.CurrentRow.Index].Value.ToString();
-                    precio = decimal.Parse(dgvProductos[3, dgvProductos.CurrentRow.Index].Value.ToString(), System.Globalization.NumberStyles.Currency);
+                    id = dgvProductos[0, e.RowIndex].Value.ToString();
+                    precio = decimal.Parse(dgvProductos[3, e.RowIndex].Value.ToString(), System.Globalization.NumberStyles.Currency);
                     lblTotal.Text = (precio * nudCantidad.Value).ToString("C2");
                 }
             }

@@ -941,3 +941,55 @@ Nombre del parámetro: index
    en System.ThrowHelper.ThrowArgumentOutOfRangeException()
    en System.Collections.Generic.List`1.get_Item(Int32 index)
    en GYM.Formularios.Reportes.frmVisualizarMembresias.MostrarInformacion(Int32 index)|
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en GYM.Formularios.POS.frmProductos.dgvProductos_RowEnter(Object sender, DataGridViewCellEventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmProductos.cs:línea 150
+   en System.Windows.Forms.DataGridView.OnRowEnter(DataGridViewCellEventArgs e)
+   en System.Windows.Forms.DataGridView.OnRowEnter(DataGridViewCell& dataGridViewCell, Int32 columnIndex, Int32 rowIndex, Boolean canCreateNewRow, Boolean validationFailureOccurred)
+   en System.Windows.Forms.DataGridView.SetCurrentCellAddressCore(Int32 columnIndex, Int32 rowIndex, Boolean setAnchorCellAddress, Boolean validateCurrentCell, Boolean throughMouseClick)
+   en System.Windows.Forms.DataGridView.SetAndSelectCurrentCellAddress(Int32 columnIndex, Int32 rowIndex, Boolean setAnchorCellAddress, Boolean validateCurrentCell, Boolean throughMouseClick, Boolean clearSelection, Boolean forceCurrentCellSelection)
+   en System.Windows.Forms.DataGridView.MakeFirstDisplayedCellCurrentCell(Boolean includeNewRow)
+   en System.Windows.Forms.DataGridView.OnRowCollectionChanged_PostNotification(Boolean recreateNewRow, Boolean allowSettingCurrentCell, CollectionChangeAction cca, DataGridViewRow dataGridViewRow, Int32 rowIndex)
+   en System.Windows.Forms.DataGridViewRowCollection.OnCollectionChanged_PostNotification(CollectionChangeAction cca, Int32 rowIndex, Int32 rowCount, DataGridViewRow dataGridViewRow, Boolean changeIsDeletion, Boolean changeIsInsertion, Boolean recreateNewRow, Point newCurrentCell)
+   en System.Windows.Forms.DataGridViewRowCollection.OnCollectionChanged(CollectionChangeEventArgs e, Int32 rowIndex, Int32 rowCount)
+   en System.Windows.Forms.DataGridViewRowCollection.AddInternal(Boolean newRow, Object[] values)
+   en System.Windows.Forms.DataGridViewRowCollection.Add(Object[] values)
+   en GYM.Formularios.POS.frmProductos.BuscarProducto(String paramBusqueda) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmProductos.cs:línea 44|
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en GYM.Formularios.POS.frmProductos.dgvProductos_RowEnter(Object sender, DataGridViewCellEventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmProductos.cs:línea 155
+   en System.Windows.Forms.DataGridView.OnRowEnter(DataGridViewCellEventArgs e)
+   en System.Windows.Forms.DataGridView.OnRowEnter(DataGridViewCell& dataGridViewCell, Int32 columnIndex, Int32 rowIndex, Boolean canCreateNewRow, Boolean validationFailureOccurred)
+   en System.Windows.Forms.DataGridView.SetCurrentCellAddressCore(Int32 columnIndex, Int32 rowIndex, Boolean setAnchorCellAddress, Boolean validateCurrentCell, Boolean throughMouseClick)
+   en System.Windows.Forms.DataGridView.SetAndSelectCurrentCellAddress(Int32 columnIndex, Int32 rowIndex, Boolean setAnchorCellAddress, Boolean validateCurrentCell, Boolean throughMouseClick, Boolean clearSelection, Boolean forceCurrentCellSelection)
+   en System.Windows.Forms.DataGridView.MakeFirstDisplayedCellCurrentCell(Boolean includeNewRow)
+   en System.Windows.Forms.DataGridView.OnRowCollectionChanged_PostNotification(Boolean recreateNewRow, Boolean allowSettingCurrentCell, CollectionChangeAction cca, DataGridViewRow dataGridViewRow, Int32 rowIndex)
+   en System.Windows.Forms.DataGridViewRowCollection.OnCollectionChanged_PostNotification(CollectionChangeAction cca, Int32 rowIndex, Int32 rowCount, DataGridViewRow dataGridViewRow, Boolean changeIsDeletion, Boolean changeIsInsertion, Boolean recreateNewRow, Point newCurrentCell)
+   en System.Windows.Forms.DataGridViewRowCollection.OnCollectionChanged(CollectionChangeEventArgs e, Int32 rowIndex, Int32 rowCount)
+   en System.Windows.Forms.DataGridViewRowCollection.AddInternal(Boolean newRow, Object[] values)
+   en System.Windows.Forms.DataGridViewRowCollection.Add(Object[] values)
+   en GYM.Formularios.POS.frmProductos.BuscarProducto(String paramBusqueda) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmProductos.cs:línea 49|
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en GYM.Formularios.POS.frmProductos.dgvProductos_RowEnter(Object sender, DataGridViewCellEventArgs e) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmProductos.cs:línea 155
+   en System.Windows.Forms.DataGridView.OnRowEnter(DataGridViewCellEventArgs e)
+   en System.Windows.Forms.DataGridView.OnRowEnter(DataGridViewCell& dataGridViewCell, Int32 columnIndex, Int32 rowIndex, Boolean canCreateNewRow, Boolean validationFailureOccurred)
+   en System.Windows.Forms.DataGridView.SetCurrentCellAddressCore(Int32 columnIndex, Int32 rowIndex, Boolean setAnchorCellAddress, Boolean validateCurrentCell, Boolean throughMouseClick)
+   en System.Windows.Forms.DataGridView.SetAndSelectCurrentCellAddress(Int32 columnIndex, Int32 rowIndex, Boolean setAnchorCellAddress, Boolean validateCurrentCell, Boolean throughMouseClick, Boolean clearSelection, Boolean forceCurrentCellSelection)
+   en System.Windows.Forms.DataGridView.MakeFirstDisplayedCellCurrentCell(Boolean includeNewRow)
+   en System.Windows.Forms.DataGridView.OnRowCollectionChanged_PostNotification(Boolean recreateNewRow, Boolean allowSettingCurrentCell, CollectionChangeAction cca, DataGridViewRow dataGridViewRow, Int32 rowIndex)
+   en System.Windows.Forms.DataGridViewRowCollection.OnCollectionChanged_PostNotification(CollectionChangeAction cca, Int32 rowIndex, Int32 rowCount, DataGridViewRow dataGridViewRow, Boolean changeIsDeletion, Boolean changeIsInsertion, Boolean recreateNewRow, Point newCurrentCell)
+   en System.Windows.Forms.DataGridViewRowCollection.OnCollectionChanged(CollectionChangeEventArgs e, Int32 rowIndex, Int32 rowCount)
+   en System.Windows.Forms.DataGridViewRowCollection.AddInternal(Boolean newRow, Object[] values)
+   en System.Windows.Forms.DataGridViewRowCollection.Add(Object[] values)
+   en GYM.Formularios.POS.frmProductos.BuscarProducto(String paramBusqueda) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\POS\frmProductos.cs:línea 49|
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en GYM.Formularios.POS.frmProductos.dgvProductos_RowEnter(Object sender, DataGridViewCellEventArgs e)
+   en System.Windows.Forms.DataGridView.OnRowEnter(DataGridViewCellEventArgs e)
+   en System.Windows.Forms.DataGridView.OnRowEnter(DataGridViewCell& dataGridViewCell, Int32 columnIndex, Int32 rowIndex, Boolean canCreateNewRow, Boolean validationFailureOccurred)
+   en System.Windows.Forms.DataGridView.SetCurrentCellAddressCore(Int32 columnIndex, Int32 rowIndex, Boolean setAnchorCellAddress, Boolean validateCurrentCell, Boolean throughMouseClick)
+   en System.Windows.Forms.DataGridView.SetAndSelectCurrentCellAddress(Int32 columnIndex, Int32 rowIndex, Boolean setAnchorCellAddress, Boolean validateCurrentCell, Boolean throughMouseClick, Boolean clearSelection, Boolean forceCurrentCellSelection)
+   en System.Windows.Forms.DataGridView.MakeFirstDisplayedCellCurrentCell(Boolean includeNewRow)
+   en System.Windows.Forms.DataGridView.OnRowCollectionChanged_PostNotification(Boolean recreateNewRow, Boolean allowSettingCurrentCell, CollectionChangeAction cca, DataGridViewRow dataGridViewRow, Int32 rowIndex)
+   en System.Windows.Forms.DataGridViewRowCollection.OnCollectionChanged_PostNotification(CollectionChangeAction cca, Int32 rowIndex, Int32 rowCount, DataGridViewRow dataGridViewRow, Boolean changeIsDeletion, Boolean changeIsInsertion, Boolean recreateNewRow, Point newCurrentCell)
+   en System.Windows.Forms.DataGridViewRowCollection.OnCollectionChanged(CollectionChangeEventArgs e, Int32 rowIndex, Int32 rowCount)
+   en System.Windows.Forms.DataGridViewRowCollection.AddInternal(Boolean newRow, Object[] values)
+   en System.Windows.Forms.DataGridViewRowCollection.Add(Object[] values)
+   en GYM.Formularios.POS.frmProductos.BuscarProducto(String paramBusqueda)|
