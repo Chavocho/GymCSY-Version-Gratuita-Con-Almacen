@@ -32,8 +32,8 @@
             this.lblVersion = new System.Windows.Forms.Label();
             this.bgwCargar = new System.ComponentModel.BackgroundWorker();
             this.prbProgreso = new System.Windows.Forms.ProgressBar();
-            this.lblBETA = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblBETA = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +64,16 @@
             this.prbProgreso.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.prbProgreso.TabIndex = 5;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GYM.Properties.Resources.GymCSY_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(612, 272);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // lblBETA
             // 
             this.lblBETA.AutoSize = true;
@@ -74,16 +84,7 @@
             this.lblBETA.Size = new System.Drawing.Size(57, 25);
             this.lblBETA.TabIndex = 6;
             this.lblBETA.Text = "BETA";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GYM.Properties.Resources.GymCSY_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(612, 272);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.lblBETA.Visible = false;
             // 
             // frmSplash
             // 
@@ -114,7 +115,7 @@
         private System.Windows.Forms.Label lblVersion;
         private System.ComponentModel.BackgroundWorker bgwCargar;
         private System.Windows.Forms.ProgressBar prbProgreso;
-        private System.Windows.Forms.Label lblBETA;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblBETA;
     }
 }

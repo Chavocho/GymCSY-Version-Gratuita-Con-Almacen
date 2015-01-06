@@ -662,6 +662,7 @@
             this.lblBETA.Size = new System.Drawing.Size(57, 25);
             this.lblBETA.TabIndex = 2;
             this.lblBETA.Text = "BETA";
+            this.lblBETA.Visible = false;
             // 
             // frmMain
             // 
