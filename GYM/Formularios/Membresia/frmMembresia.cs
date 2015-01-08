@@ -145,7 +145,25 @@ namespace GYM.Formularios.Membresia
             }
         }
 
-
+        private void EstadoPendiente(string numSocio)
+        {
+            try
+            {
+                MySqlCommand sql = new MySqlCommand();
+                sql.CommandText = "UPDATE membresias SET estado=?estado WHERE numSocio=?numSocio";
+                sql.Parameters.AddWithValue("?estado", CMembresia.EstadoMembresia.Pendiente);
+                sql.Parameters.AddWithValue("?numSocio", numSocio);
+                ConexionBD.EjecutarConsulta(sql);
+            }
+            catch (MySqlException ex)
+            {
+                CFuncionesGenerales.MensajeError("No se ha podido cambiar el estado de la membresía. Ocurrió un error al conectar con la base de datos.", ex);
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("No se ha podido cambiar el estado de la membresía. Ha ocurrido un error genérico.", ex);
+            }
+        }
         #endregion
 
         #region Eventos
@@ -272,6 +290,22 @@ namespace GYM.Formularios.Membresia
             }
             catch
             {
+            }
+        }
+
+        private void btnPendiente_Click(object sender, EventArgs e)
+        {
+            if (dgvPersonas.CurrentRow != null)
+            {
+                if (dgvPersonas[2, dgvPersonas.CurrentRow.Index].Value.ToString() == "Activo")
+                {
+                    DialogResult r = MessageBox.Show("¿Realmente desea cambiar el estado de la membresía de " + dgvPersonas[1, dgvPersonas.CurrentRow.Index].Value.ToString() + " a pendiente?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (r == System.Windows.Forms.DialogResult.Yes)
+                    {
+                        EstadoPendiente(numSocio.ToString());
+                        dgvPersonas[2, dgvPersonas.CurrentRow.Index].Value = "Pendiente";
+                    }
+                }
             }
         }
     }

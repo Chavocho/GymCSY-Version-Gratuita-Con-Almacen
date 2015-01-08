@@ -43,15 +43,16 @@
             this.cbxTipo = new System.Windows.Forms.ComboBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.cbxTipoPago = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblETipoPago = new System.Windows.Forms.Label();
+            this.lblEFolioTicket = new System.Windows.Forms.Label();
             this.txtFolioTicket = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblETerminacion = new System.Windows.Forms.Label();
             this.txtTerminacion = new System.Windows.Forms.TextBox();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.btnAsignarPromo = new System.Windows.Forms.Button();
             this.btnQuitarPromo = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.lblInfo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblEtiquetaFechaFin
@@ -213,25 +214,25 @@
             this.cbxTipoPago.TabIndex = 9;
             this.cbxTipoPago.SelectedIndexChanged += new System.EventHandler(this.cbxTipoPago_SelectedIndexChanged);
             // 
-            // label1
+            // lblETipoPago
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.label1.Location = new System.Drawing.Point(15, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 19);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Tipo de pago";
+            this.lblETipoPago.AutoSize = true;
+            this.lblETipoPago.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.lblETipoPago.Location = new System.Drawing.Point(15, 110);
+            this.lblETipoPago.Name = "lblETipoPago";
+            this.lblETipoPago.Size = new System.Drawing.Size(89, 19);
+            this.lblETipoPago.TabIndex = 8;
+            this.lblETipoPago.Text = "Tipo de pago";
             // 
-            // label3
+            // lblEFolioTicket
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.label3.Location = new System.Drawing.Point(206, 247);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 19);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Folio ticket terminal";
+            this.lblEFolioTicket.AutoSize = true;
+            this.lblEFolioTicket.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.lblEFolioTicket.Location = new System.Drawing.Point(206, 247);
+            this.lblEFolioTicket.Name = "lblEFolioTicket";
+            this.lblEFolioTicket.Size = new System.Drawing.Size(129, 19);
+            this.lblEFolioTicket.TabIndex = 18;
+            this.lblEFolioTicket.Text = "Folio ticket terminal";
             // 
             // txtFolioTicket
             // 
@@ -242,15 +243,15 @@
             this.txtFolioTicket.Size = new System.Drawing.Size(178, 26);
             this.txtFolioTicket.TabIndex = 19;
             // 
-            // label2
+            // lblETerminacion
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.label2.Location = new System.Drawing.Point(12, 247);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 19);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Terminación tarjeta";
+            this.lblETerminacion.AutoSize = true;
+            this.lblETerminacion.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.lblETerminacion.Location = new System.Drawing.Point(12, 247);
+            this.lblETerminacion.Name = "lblETerminacion";
+            this.lblETerminacion.Size = new System.Drawing.Size(126, 19);
+            this.lblETerminacion.TabIndex = 16;
+            this.lblETerminacion.Text = "Terminación tarjeta";
             // 
             // txtTerminacion
             // 
@@ -310,20 +311,31 @@
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
+            // lblInfo
+            // 
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblInfo.Location = new System.Drawing.Point(15, 325);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(0, 21);
+            this.lblInfo.TabIndex = 23;
+            this.lblInfo.Visible = false;
+            // 
             // frmEditarMembresia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 397);
+            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.btnQuitarPromo);
             this.Controls.Add(this.btnAsignarPromo);
             this.Controls.Add(this.lblPrecio);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblEFolioTicket);
             this.Controls.Add(this.txtFolioTicket);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblETerminacion);
             this.Controls.Add(this.txtTerminacion);
             this.Controls.Add(this.cbxTipoPago);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblETipoPago);
             this.Controls.Add(this.lblEtiquetaFechaFin);
             this.Controls.Add(this.lblFechaFin);
             this.Controls.Add(this.lblNombreMiembro);
@@ -368,14 +380,15 @@
         private System.Windows.Forms.ComboBox cbxTipo;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.ComboBox cbxTipoPago;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblETipoPago;
+        private System.Windows.Forms.Label lblEFolioTicket;
         private System.Windows.Forms.TextBox txtFolioTicket;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblETerminacion;
         private System.Windows.Forms.TextBox txtTerminacion;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.Button btnAsignarPromo;
         private System.Windows.Forms.Button btnQuitarPromo;
+        private System.Windows.Forms.Label lblInfo;
 
 
     }

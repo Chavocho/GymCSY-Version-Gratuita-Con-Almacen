@@ -993,3 +993,6 @@ System.NullReferenceException: Referencia a objeto no establecida como instancia
    en System.Windows.Forms.DataGridViewRowCollection.AddInternal(Boolean newRow, Object[] values)
    en System.Windows.Forms.DataGridViewRowCollection.Add(Object[] values)
    en GYM.Formularios.POS.frmProductos.BuscarProducto(String paramBusqueda)|
+System.ArgumentException: La columna 'numSocio' no pertenece a la tabla .
+   en GYM.Clases.CTicket.ImprimirTicketMembresia(Int32 numSoc) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\Ticket\CTicket.cs:línea 223
+   en GYM.Formularios.Membresia.frmEditarMembresia.ImprimirTicket() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Membresia\frmEditarMembresia.cs:línea 292|

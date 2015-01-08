@@ -30,7 +30,7 @@
     <colorLetrasCumple>Qv0HlpeC70g=</colorLetrasCumple>
   </tema>
   <promociones>
-    <promo01>uykvgS+nPZMD6b895g7+I37Tvhu7PlKX9s42KMjwevynI1nmm1iO9B5CeMAR+L/aIJ4OrNAodiwbYatxlgkymrZfTiZdrb6HxOE0oJM6+Hlz0kes6j404QQoWgnh14JCYR5MH7/y8lo=</promo01>
+    <promo01>GzR2ldQ65M8=</promo01>
     <promo02>GzR2ldQ65M8=</promo02>
     <promo03>GzR2ldQ65M8=</promo03>
     <promo04>GzR2ldQ65M8=</promo04>
@@ -40,22 +40,4 @@
   <membresia>
     <folio>u0f/8tw9dgA=</folio>
   </membresia>
-  <ticket>
-    <lineaSup01>WtAJQYKd8XY=</lineaSup01>
-    <lineaSup02>MkmbzBhLEDE=</lineaSup02>
-    <lineaSup03>UmV1s3q4EBY=</lineaSup03>
-    <lineaSup04>iVUwSgrhwH8=</lineaSup04>
-    <lineaSup05>WtAJQYKd8XY=</lineaSup05>
-    <lineaSup06>NZb6GklLLX0=</lineaSup06>
-    <lineaSup07>bnzjTpHAdszTElUsuf+C4Q==</lineaSup07>
-    <lineaInf01>9bvNFi4glJE=</lineaInf01>
-    <lineaInf02>B7+L2soc9NE=</lineaInf02>
-    <lineaInf03>/wX/B4IPGBs=</lineaInf03>
-    <impresora>zwpLp03/SW9wJiS+KK1eV2mEx2DgiwLWRqeo5Lj+U0w=</impresora>
-    <tamPapel>dOb+iCadBDw=</tamPapel>
-    <turnoMat>bkTUEmEVICnjw9O6MgwIDg==</turnoMat>
-    <turnoVes>bkTUEmEVICnjw9O6MgwIDg==</turnoVes>
-    <preguntar>u0f/8tw9dgA=</preguntar>
-    <imprimir>u0f/8tw9dgA=</imprimir>
-  </ticket>
 </configuraciones>

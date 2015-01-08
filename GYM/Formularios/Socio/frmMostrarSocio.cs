@@ -176,7 +176,7 @@ namespace GYM.Formularios.Socio
                     else
                         sonido = "SonidoErrorP";
                 }
-                else if (fechaSocio.Date >= fechaX && fechaSocio.Date <= DateTime.Now.Date.AddDays(5))
+                else if (DateTime.Now.Date >= mem.FechaInicio.Date && fechaSocio.Date >= fechaX && fechaSocio.Date <= DateTime.Now.Date.AddDays(5))
                 {
                     lblInfo.Visible = true;
                     lblInfo.Text = "Bienvenido\nTu membresia esta por expirar";
@@ -186,6 +186,17 @@ namespace GYM.Formularios.Socio
                         sonido = "SonidoBien" + Clases.CFuncionesGenerales.sonidoRegBien.Substring(Clases.CFuncionesGenerales.sonidoRegBien.Length - 2, 2);
                     else
                         sonido = "SonidoBienP";
+                }
+                else if (DateTime.Now.Date < mem.FechaInicio.Date)
+                {
+                    lblInfo.ForeColor = Color.Orange;
+                    lblInfo.Visible = true;
+                    lblInfo.Text = "Tu membresía aún no ha iniciado.\nVuelve el " + mem.FechaInicio.ToString("dd") + " de " + mem.FechaInicio.ToString("MMMM") + " del " + mem.FechaInicio.ToString("yyyy");
+                    lblFechaFinal.Text = fechaSocio.ToString("dd") + " de " + fechaSocio.ToString("MMMM") + " del " + fechaSocio.ToString("yyyy");
+                    if (Clases.CFuncionesGenerales.sonidoRegMal != "Personalizado")
+                        sonido = "SonidoError" + Clases.CFuncionesGenerales.sonidoRegMal.Substring(Clases.CFuncionesGenerales.sonidoRegMal.Length - 2, 2);
+                    else
+                        sonido = "SonidoErrorP";
                 }
                 else
                 {

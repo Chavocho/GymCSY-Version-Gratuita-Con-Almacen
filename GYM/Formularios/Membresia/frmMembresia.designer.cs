@@ -44,6 +44,7 @@
             this.lblInstruccionesBusqueda = new System.Windows.Forms.Label();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
+            this.btnPendiente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -208,6 +209,19 @@
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
+            // btnPendiente
+            // 
+            this.btnPendiente.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnPendiente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPendiente.Location = new System.Drawing.Point(12, 157);
+            this.btnPendiente.Name = "btnPendiente";
+            this.btnPendiente.Size = new System.Drawing.Size(140, 50);
+            this.btnPendiente.TabIndex = 6;
+            this.btnPendiente.Text = "Actualizar estado a pendiente";
+            this.btnPendiente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPendiente.UseVisualStyleBackColor = true;
+            this.btnPendiente.Click += new System.EventHandler(this.btnPendiente_Click);
+            // 
             // frmMembresia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,6 +229,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1084, 411);
+            this.Controls.Add(this.btnPendiente);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.lblInstruccionesBusqueda);
@@ -247,6 +262,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaVencimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Genero;
+        private System.Windows.Forms.Button btnPendiente;
 
     }
 }

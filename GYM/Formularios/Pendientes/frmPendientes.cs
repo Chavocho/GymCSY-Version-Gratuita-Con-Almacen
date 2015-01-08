@@ -34,6 +34,7 @@ namespace GYM.Formularios
         #endregion
 
         int id;
+        List<int> numSocios = new List<int>();
         DataTable dt;
 
         public frmPendientes()
@@ -59,8 +60,9 @@ namespace GYM.Formularios
             {
                 dt = new DataTable();
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "SELECT s.numSocio, s.nombre, s.apellidos, m.id, m.fecha_ini, m.fecha_fin, MAX(r.id) as rID, r.descripcion, r.precio, r.folio_remision, r.create_user_id, r.create_time " + 
-                    "FROM miembros AS s INNER JOIN membresias AS m ON (m.numSocio=s.numSocio) AND m.estado=?estado INNER JOIN registro_membresias AS r ON(m.id=r.membresia_id) GROUP BY m.id ORDER BY r.create_time;";
+                sql.CommandText = "SELECT s.numSocio, s.nombre, s.apellidos, m.id, m.fecha_ini, m.fecha_fin, r.descripcion, r.precio, r.folio_remision, r.create_user_id, r.create_time " + 
+                    "FROM miembros AS s INNER JOIN membresias AS m ON (m.numSocio=s.numSocio) INNER JOIN registro_membresias AS r ON (m.id=r.membresia_id) " + 
+                    "WHERE m.estado=?estado GROUP BY s.numSocio, m.id, r.id DESC;";
                 sql.Parameters.AddWithValue("?estado", Clases.CMembresia.EstadoMembresia.Pendiente);
                 dt = ConexionBD.EjecutarConsultaSelect(sql);
             }
@@ -99,12 +101,17 @@ namespace GYM.Formularios
         {
             try
             {
+                numSocios.Clear();
                 foreach (DataRow dr in dt.Rows)
                 {
                     DateTime fechaIni = DateTime.Parse(dr["fecha_ini"].ToString()), fechaFin = DateTime.Parse(dr["fecha_fin"].ToString()), fechaPago = DateTime.Parse(dr["create_time"].ToString());
                     if (cboPendientes.SelectedIndex == 0)
                     {
-                        dgvPendientes.Rows.Add(new object[] { dr["id"], dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), "", dr["descripcion"], fechaIni.ToString("dd/MM/yyyy"), fechaFin.ToString("dd/MM/yyyy"), fechaPago.ToString("dd/MM/yyyy"), dr["folio_remision"], ((decimal)dr["precio"]).ToString("C2"), CFuncionesGenerales.NombreUsuario(dr["create_user_id"].ToString()) });
+                        if (!numSocios.Contains((int)dr["numSocio"]))
+                        {
+                            numSocios.Add((int)dr["numSocio"]);
+                            dgvPendientes.Rows.Add(new object[] { dr["id"], dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), "", dr["descripcion"], fechaIni.ToString("dd/MM/yyyy"), fechaFin.ToString("dd/MM/yyyy"), fechaPago.ToString("dd/MM/yyyy"), dr["folio_remision"], ((decimal)dr["precio"]).ToString("C2"), CFuncionesGenerales.NombreUsuario(dr["create_user_id"].ToString()) });
+                        }
                     }
                     else
                     {

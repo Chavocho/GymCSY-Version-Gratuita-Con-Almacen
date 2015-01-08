@@ -18,7 +18,7 @@ namespace GYM.Formularios.Membresia
         Dictionary<int, string> descripcionM = new Dictionary<int, string>();
         int numSocio, sexo, idPromo = -1;
         string ultimoFolio = "";
-        DateTime fechaFin;
+        DateTime fechaIni, fechaFin;
         CMembresia.EstadoMembresia es;
         CMembresia mem;
         CRegistro_membresias rMem;
@@ -105,8 +105,18 @@ namespace GYM.Formularios.Membresia
         {
             try
             {
-                if (mem.FechaFin > DateTime.Now && (mem.Estado == CMembresia.EstadoMembresia.Activa || mem.Estado == CMembresia.EstadoMembresia.Pendiente))
-                    dtpFechaInicio.Value = mem.FechaFin;
+                if (mem.Estado == CMembresia.EstadoMembresia.Activa || mem.Estado == CMembresia.EstadoMembresia.Pendiente)
+                {
+                    fechaIni = mem.FechaInicio;
+                    dtpFechaInicio.Value = mem.FechaInicio;
+                    dtpFechaInicio.Enabled = false;
+                    lblInfo.Text = "La membresía de este socio se encuentra activa. La duración\n" +
+                        "de la renovación se agregará a la fecha de vencimiento (" + mem.FechaFin.ToString("dd/MMMM/yyyy") + ")\n" + 
+                        "de la membresía actual.";
+                    lblInfo.Visible = true;
+                }
+                //if (mem.FechaFin > DateTime.Now && (mem.Estado == CMembresia.EstadoMembresia.Activa || mem.Estado == CMembresia.EstadoMembresia.Pendiente))
+                //    dtpFechaInicio.Value = mem.FechaFin;
                 es = mem.Estado;
             }
             catch (ArgumentOutOfRangeException ex)
@@ -411,6 +421,7 @@ namespace GYM.Formularios.Membresia
                 {
                     if (ValidarDatos())
                     {
+                        
                         mem.Estado = CMembresia.EstadoMembresia.Pendiente;
                         mem.IDPromocion = idPromo;
                         mem.FechaFin = fechaFin;
@@ -514,6 +525,40 @@ namespace GYM.Formularios.Membresia
             }
             if (preciosM.ContainsKey(cbxTipo.SelectedIndex))
             {
+                Fechas(dtpFechaInicio.Enabled);
+            }
+            else
+            {
+                MessageBox.Show("El precio de esa duración no ha sido configurado.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                for (int i = 0; i < cbxTipo.Items.Count; i++)
+                {
+                    if (preciosM.ContainsKey(i))
+                    {
+                        cbxTipo.SelectedIndex = i;
+                        break;
+                    }
+                }
+            }
+            lblPrecio.Text = preciosM[cbxTipo.SelectedIndex].ToString("C2");
+            txtDescripcion.Text = descripcionM[cbxTipo.SelectedIndex];  
+        }
+
+        private void dtpFechaInicio_ValueChanged(object sender, EventArgs e)
+        {
+            if (es == CMembresia.EstadoMembresia.Activa || es == CMembresia.EstadoMembresia.Pendiente)
+            {
+                Fechas(dtpFechaInicio.Enabled);
+            }
+            //if (dtpFechaInicio.Value.Date < mem.FechaFin.Date && es == CMembresia.EstadoMembresia.Activa)
+            //    dtpFechaInicio.Value = mem.FechaFin;
+            //else if (dtpFechaInicio.Value.Date < DateTime.Now.Date)
+            //    dtpFechaInicio.Value = DateTime.Now;
+            
+        }
+        private void Fechas(bool noEsMembresiaActiva)
+        {
+            if (noEsMembresiaActiva)
+            {
                 switch (cbxTipo.SelectedIndex)
                 {
                     case 0:
@@ -568,91 +613,75 @@ namespace GYM.Formularios.Membresia
                         fechaFin = dtpFechaInicio.Value.AddYears(1);
                         lblFechaFin.Text = dtpFechaInicio.Value.AddYears(1).ToString("dd") + " de " + dtpFechaInicio.Value.AddYears(1).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddYears(1).ToString("yyyy");
                         break;
+                    default:
+                        fechaFin = new DateTime();
+                        lblFechaFin.Text = "";
+                        break;
                 }
             }
             else
             {
-                MessageBox.Show("El precio de esa duración no ha sido configurado.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                for (int i = 0; i < cbxTipo.Items.Count; i++)
+                switch (cbxTipo.SelectedIndex)
                 {
-                    if (preciosM.ContainsKey(i))
-                    {
-                        cbxTipo.SelectedIndex = i;
+                    case 0:
+                        fechaFin = mem.FechaFin.AddDays(7);
+                        lblFechaFin.Text = mem.FechaFin.AddDays(7).ToString("dd") + " de " + mem.FechaFin.AddDays(7).ToString("MMMM") + " del " + mem.FechaFin.AddDays(7).ToString("yyyy");
                         break;
-                    }
+                    case 1:
+                        fechaFin = mem.FechaFin.AddMonths(1);
+                        lblFechaFin.Text = mem.FechaFin.AddMonths(1).ToString("dd") + " de " + mem.FechaFin.AddMonths(1).ToString("MMMM") + " del " + mem.FechaFin.AddMonths(1).ToString("yyyy");
+                        break;
+                    case 2:
+                        fechaFin = mem.FechaFin.AddMonths(2);
+                        lblFechaFin.Text = mem.FechaFin.AddMonths(2).ToString("dd") + " de " + mem.FechaFin.AddMonths(2).ToString("MMMM") + " del " + mem.FechaFin.AddMonths(2).ToString("yyyy");
+                        break;
+                    case 3:
+                        fechaFin = mem.FechaFin.AddMonths(3);
+                        lblFechaFin.Text = mem.FechaFin.AddMonths(3).ToString("dd") + " de " + mem.FechaFin.AddMonths(3).ToString("MMMM") + " del " + mem.FechaFin.AddMonths(3).ToString("yyyy");
+                        break;
+                    case 4:
+                        fechaFin = mem.FechaFin.AddMonths(4);
+                        lblFechaFin.Text = mem.FechaFin.AddMonths(4).ToString("dd") + " de " + mem.FechaFin.AddMonths(4).ToString("MMMM") + " del " + mem.FechaFin.AddMonths(4).ToString("yyyy");
+                        break;
+                    case 5:
+                        fechaFin = mem.FechaFin.AddMonths(5);
+                        lblFechaFin.Text = mem.FechaFin.AddMonths(5).ToString("dd") + " de " + mem.FechaFin.AddMonths(5).ToString("MMMM") + " del " + mem.FechaFin.AddMonths(5).ToString("yyyy");
+                        break;
+                    case 6:
+                        fechaFin = mem.FechaFin.AddMonths(6);
+                        lblFechaFin.Text = mem.FechaFin.AddMonths(6).ToString("dd") + " de " + mem.FechaFin.AddMonths(6).ToString("MMMM") + " del " + mem.FechaFin.AddMonths(6).ToString("yyyy");
+                        break;
+                    case 7:
+                        fechaFin = mem.FechaFin.AddMonths(7);
+                        lblFechaFin.Text = mem.FechaFin.AddMonths(7).ToString("dd") + " de " + mem.FechaFin.AddMonths(7).ToString("MMMM") + " del " + mem.FechaFin.AddMonths(7).ToString("yyyy");
+                        break;
+                    case 8:
+                        fechaFin = mem.FechaFin.AddMonths(8);
+                        lblFechaFin.Text = mem.FechaFin.AddMonths(8).ToString("dd") + " de " + mem.FechaFin.AddMonths(8).ToString("MMMM") + " del " + mem.FechaFin.AddMonths(8).ToString("yyyy");
+                        break;
+                    case 9:
+                        fechaFin = mem.FechaFin.AddMonths(9);
+                        lblFechaFin.Text = mem.FechaFin.AddMonths(9).ToString("dd") + " de " + mem.FechaFin.AddMonths(9).ToString("MMMM") + " del " + mem.FechaFin.AddMonths(9).ToString("yyyy");
+                        break;
+                    case 10:
+                        fechaFin = mem.FechaFin.AddMonths(10);
+                        lblFechaFin.Text = mem.FechaFin.AddMonths(10).ToString("dd") + " de " + mem.FechaFin.AddMonths(10).ToString("MMMM") + " del " + mem.FechaFin.AddMonths(10).ToString("yyyy");
+                        break;
+                    case 11:
+                        fechaFin = mem.FechaFin.AddMonths(11);
+                        lblFechaFin.Text = mem.FechaFin.AddMonths(11).ToString("dd") + " de " + mem.FechaFin.AddMonths(11).ToString("MMMM") + " del " + mem.FechaFin.AddMonths(11).ToString("yyyy");
+                        break;
+                    case 12:
+                        fechaFin = mem.FechaFin.AddYears(1);
+                        lblFechaFin.Text = mem.FechaFin.AddYears(1).ToString("dd") + " de " + mem.FechaFin.AddYears(1).ToString("MMMM") + " del " + mem.FechaFin.AddYears(1).ToString("yyyy");
+                        break;
+                    default:
+                        fechaFin = new DateTime();
+                        lblFechaFin.Text = "";
+                        break;
                 }
             }
-            lblPrecio.Text = preciosM[cbxTipo.SelectedIndex].ToString("C2");
-            txtDescripcion.Text = descripcionM[cbxTipo.SelectedIndex];  
         }
-
-        private void dtpFechaInicio_ValueChanged(object sender, EventArgs e)
-        {
-            if (dtpFechaInicio.Value.Date < mem.FechaFin.Date && es == CMembresia.EstadoMembresia.Inactiva)
-                dtpFechaInicio.Value = mem.FechaFin;
-            else if (dtpFechaInicio.Value.Date < DateTime.Now.Date)
-                dtpFechaInicio.Value = DateTime.Now;
-            switch (cbxTipo.SelectedIndex)
-            {
-                case 0:
-                    fechaFin = dtpFechaInicio.Value.AddDays(7);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddDays(7).ToString("dd") + " de " + dtpFechaInicio.Value.AddDays(7).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddDays(7).ToString("yyyy");
-                    break;
-                case 1:
-                    fechaFin = dtpFechaInicio.Value.AddMonths(1);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(1).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(1).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(1).ToString("yyyy");
-                    break;
-                case 2:
-                    fechaFin = dtpFechaInicio.Value.AddMonths(2);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(2).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(2).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(2).ToString("yyyy");
-                    break;
-                case 3:
-                    fechaFin = dtpFechaInicio.Value.AddMonths(3);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(3).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(3).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(3).ToString("yyyy");
-                    break;
-                case 4:
-                    fechaFin = dtpFechaInicio.Value.AddMonths(4);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(4).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(4).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(4).ToString("yyyy");
-                    break;
-                case 5:
-                    fechaFin = dtpFechaInicio.Value.AddMonths(5);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(5).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(5).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(5).ToString("yyyy");
-                    break;
-                case 6:
-                    fechaFin = dtpFechaInicio.Value.AddMonths(6);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(6).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(6).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(6).ToString("yyyy");
-                    break;
-                case 7:
-                    fechaFin = dtpFechaInicio.Value.AddMonths(7);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(7).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(7).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(7).ToString("yyyy");
-                    break;
-                case 8:
-                    fechaFin = dtpFechaInicio.Value.AddMonths(8);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(8).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(8).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(8).ToString("yyyy");
-                    break;
-                case 9:
-                    fechaFin = dtpFechaInicio.Value.AddMonths(9);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(9).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(9).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(9).ToString("yyyy");
-                    break;
-                case 10:
-                    fechaFin = dtpFechaInicio.Value.AddMonths(10);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(10).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(10).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(10).ToString("yyyy");
-                    break;
-                case 11:
-                    fechaFin = dtpFechaInicio.Value.AddMonths(11);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddMonths(11).ToString("dd") + " de " + dtpFechaInicio.Value.AddMonths(11).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddMonths(11).ToString("yyyy");
-                    break;
-                case 12:
-                    fechaFin = dtpFechaInicio.Value.AddYears(1);
-                    lblFechaFin.Text = dtpFechaInicio.Value.AddYears(1).ToString("dd") + " de " + dtpFechaInicio.Value.AddYears(1).ToString("MMMM") + " del " + dtpFechaInicio.Value.AddYears(1).ToString("yyyy");
-                    break;
-                default:
-                    fechaFin = new DateTime();
-                    lblFechaFin.Text = "";
-                    break;
-            }
-        }   
-        
         private void cbxTipoPago_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtTerminacion.Enabled = (cbxTipoPago.SelectedIndex == 1 ? true : false);

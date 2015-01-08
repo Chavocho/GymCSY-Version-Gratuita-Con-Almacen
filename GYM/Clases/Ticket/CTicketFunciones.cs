@@ -437,8 +437,10 @@ namespace GYM.Clases
         {
             try
             {
-                e.Graphics.DrawString("NOMBRE SOCIO: \n" + ObtenerNombreSocio(numSoc), fuenteNormal, Brushes.Black, 0, y);
-                y += saltoLinea+15;
+                e.Graphics.DrawString("NOMBRE DEL SOCIO: \n" + ObtenerNombreSocio(numSoc).ToUpper(), fuenteNormal, Brushes.Black, 0, y);
+                y += (saltoLinea * 2);
+                e.Graphics.DrawString("NÚM. SOCIO: " + ObtenerDatoDataTableMembresia("numSocio").ToString(), fuenteNormal, Brushes.Black, 0, y);
+                y += saltoLinea + 5;
                 e.Graphics.DrawString("INICIO: " + DateTime.Parse(ObtenerDatoDataTableMembresia("fecha_ini").ToString()).ToString("dd/MM/yyyy"), fuenteNormal, Brushes.Black, 0, y);
                 e.Graphics.DrawString("FIN: " + DateTime.Parse(ObtenerDatoDataTableMembresia("fecha_fin").ToString()).ToString("dd/MM/yyyy"), fuenteNormal, Brushes.Black, e.PageBounds.Width / 2, y);
                 y += saltoLinea;
@@ -917,7 +919,7 @@ namespace GYM.Clases
         {
             try
             {
-                string sql = "SELECT m.fecha_ini, m.fecha_fin, r.tipo, r.precio, r.folio_remision FROM membresias AS m INNER JOIN registro_membresias AS r ON (m.id=r.membresia_id) WHERE m.numSocio = '" + numSoc + "' ORDER BY r.id DESC LIMIT 1";
+                string sql = "SELECT m.numSocio, m.fecha_ini, m.fecha_fin, r.tipo, r.precio, r.folio_remision FROM membresias AS m INNER JOIN registro_membresias AS r ON (m.id=r.membresia_id) WHERE m.numSocio = '" + numSoc + "' ORDER BY r.id DESC LIMIT 1";
                 dtMembresia = Clases.ConexionBD.EjecutarConsultaSelect(sql);
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
