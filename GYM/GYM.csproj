@@ -83,7 +83,13 @@
       <HintPath>..\..\..\..\..\..\Program Files\DigitalPersona\U.are.U SDK\Windows\Lib\.NET\DPXUru.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp">
-      <HintPath>..\..\Software Leo\GYM CSY 1.4.1\GYM\bin\Debug\itextsharp.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\itextsharp-all-5.5.4\itextsharp-dll-core\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\..\..\..\Desktop\itextsharp-all-5.5.4\itextsharp-dll-pdfa\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>..\..\..\..\Desktop\itextsharp-all-5.5.4\itextsharp-dll-xtra\itextsharp.xtra.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
@@ -118,6 +124,7 @@
     <Compile Include="Clases\CRegistro_trabajadores.cs" />
     <Compile Include="Clases\CTrabajador.cs" />
     <Compile Include="Clases\HuellaDigital.cs" />
+    <Compile Include="Clases\PDF.cs" />
     <Compile Include="Clases\Ticket\CTicket.cs" />
     <Compile Include="Clases\Ticket\CTicketFunciones.cs" />
     <Compile Include="Clases\Ticket\CTicketVariables.cs" />

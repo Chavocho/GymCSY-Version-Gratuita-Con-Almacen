@@ -1211,3 +1211,7 @@ C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\De
 C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.frmConfiguracionBaseDatos.sk.resources
 C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\es-MX\GYM.resources.dll
 C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\sk\GYM.resources.dll
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\bin\Debug\itextsharp.dll
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\bin\Debug\itextsharp.pdfa.dll
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\bin\Debug\itextsharp.xtra.dll
+C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\bin\Debug\itextsharp.xml

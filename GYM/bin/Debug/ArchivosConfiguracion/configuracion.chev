@@ -3,19 +3,13 @@
   <general>
     <soloRegistro>N+vHEU14oFA=</soloRegistro>
   </general>
-  <baseDatos>
-    <servidor>zvTeDRrHY/uBjw53VYdUTA==</servidor>
-    <base>RfWw4tJUXr/jw9O6MgwIDg==</base>
-    <usuario>W6dleDll19E=</usuario>
-    <pass>48PTujIMCA4=</pass>
-  </baseDatos>
   <sonidos>
-    <activar>u0f/8tw9dgA=</activar>
-    <bien>UBvu/1gbGICxB5omgy/4fw==</bien>
-    <mal>UBvu/1gbGICxB5omgy/4fw==</mal>
+    <activar>N+vHEU14oFA=</activar>
+    <bien>8ZSxTvWEsmnjw9O6MgwIDg==</bien>
+    <mal>8ZSxTvWEsmnjw9O6MgwIDg==</mal>
   </sonidos>
   <caja>
-    <estado>u0f/8tw9dgA=</estado>
+    <estado>N+vHEU14oFA=</estado>
   </caja>
   <huella>
     <usar>N+vHEU14oFA=</usar>
@@ -37,7 +31,31 @@
     <promo05>GzR2ldQ65M8=</promo05>
     <promo06>GzR2ldQ65M8=</promo06>
   </promociones>
+  <baseDatos>
+    <servidor>zvTeDRrHY/uBjw53VYdUTA==</servidor>
+    <base>RfWw4tJUXr/jw9O6MgwIDg==</base>
+    <usuario>W6dleDll19E=</usuario>
+    <pass>48PTujIMCA4=</pass>
+  </baseDatos>
   <membresia>
     <folio>u0f/8tw9dgA=</folio>
   </membresia>
+  <ticket>
+    <lineaSup01>48PTujIMCA4=</lineaSup01>
+    <lineaSup02>48PTujIMCA4=</lineaSup02>
+    <lineaSup03>48PTujIMCA4=</lineaSup03>
+    <lineaSup04>48PTujIMCA4=</lineaSup04>
+    <lineaSup05>48PTujIMCA4=</lineaSup05>
+    <lineaSup06>48PTujIMCA4=</lineaSup06>
+    <lineaSup07>48PTujIMCA4=</lineaSup07>
+    <lineaInf01>48PTujIMCA4=</lineaInf01>
+    <lineaInf02>48PTujIMCA4=</lineaInf02>
+    <lineaInf03>48PTujIMCA4=</lineaInf03>
+    <impresora>zwpLp03/SW9wJiS+KK1eV2mEx2DgiwLWRqeo5Lj+U0w=</impresora>
+    <tamPapel>dOb+iCadBDw=</tamPapel>
+    <turnoMat>hzUCRcOgLzHjw9O6MgwIDg==</turnoMat>
+    <turnoVes>hzUCRcOgLzHjw9O6MgwIDg==</turnoVes>
+    <preguntar>u0f/8tw9dgA=</preguntar>
+    <imprimir>u0f/8tw9dgA=</imprimir>
+  </ticket>
 </configuraciones>

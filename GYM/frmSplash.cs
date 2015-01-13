@@ -61,6 +61,7 @@ namespace GYM
         private void ConfigBaseDatos()
         {
             Formularios.frmConfiguracionBaseDatos.Instancia.ShowDialog(this);
+            System.Threading.Thread.Sleep(0);
         }
 
         private void CrearConfiguracionTema()
@@ -324,7 +325,6 @@ namespace GYM
                 }
                 else
                     CFuncionesGenerales.soloRegistro = bool.Parse(CConfiguracionXML.LeerConfiguración("general", "soloRegistro"));
-                ConfiguracionBase();
                 CargarLector();
                 CargarSonidos();
                 if (!CConfiguracionXML.ExisteConfiguracion("caja", "estado"))
@@ -339,6 +339,24 @@ namespace GYM
                     CFuncionesGenerales.usarHuella = bool.Parse(CConfiguracionXML.LeerConfiguración("huella", "usar"));
                 }
                 bgwCargar.ReportProgress(10);
+
+                if (!CConfiguracionXML.ExisteConfiguracion("tema"))
+                {
+                    CrearConfiguracionTema();
+                    CargarInterfaz();
+                }
+                else
+                    CargarInterfaz();
+                if (!CConfiguracionXML.ExisteConfiguracion("promociones"))
+                {
+                    CrearConfiguracionPromociones();
+                    CargarPromociones();
+                }
+                else
+                    CargarPromociones();
+                bgwCargar.ReportProgress(20);
+
+                ConfiguracionBase();
                 try
                 {
                     CMembresia.DesactivarMembresia();
@@ -364,22 +382,6 @@ namespace GYM
                 {
                     CFuncionesGenerales.MensajeError("No se ha podido desactivar los lockers a los usuarios. Ocurrio un error genérico.", ex);
                 }
-
-                bgwCargar.ReportProgress(20);
-                if (!CConfiguracionXML.ExisteConfiguracion("tema"))
-                {
-                    CrearConfiguracionTema();
-                    CargarInterfaz();
-                }
-                else
-                    CargarInterfaz();
-                if (!CConfiguracionXML.ExisteConfiguracion("promociones"))
-                {
-                    CrearConfiguracionPromociones();
-                    CargarPromociones();
-                }
-                else
-                    CargarPromociones();
                 CMiembro.ObtenerHuellas();
                 EnviarLog();
                 bgwCargar.ReportProgress(100);

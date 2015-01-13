@@ -228,9 +228,9 @@ namespace GYM.Clases
                 else
                 {
                     e.Graphics.DrawString("SERVICIO: CIERRE DE CAJA", fuenteNormal, Brushes.Black, 0, y+=saltoLineaPeque);
-                    y += saltoLinea;
-                    e.Graphics.DrawString("FECHA: " + DateTime.Now.ToString("dd/MM/yyyy"), fuenteNormal, Brushes.Black, 0, y);
                 }
+                y += saltoLinea;
+                e.Graphics.DrawString("FECHA: " + DateTime.Now.ToString("dd/MM/yyyy"), fuenteNormal, Brushes.Black, 0, y);
                 y += saltoLinea + 5;
                 if (DateTime.Now.TimeOfDay >= turnoMat && DateTime.Now.TimeOfDay < turnoVes)
                     turno = "MATUTINO";
@@ -557,6 +557,8 @@ namespace GYM.Clases
                     if (ta > 0)
                         totTa += ta;
                     efRet = ef;
+                    y += saltoLinea;
+                    e.Graphics.DrawString(dr["descripcion"].ToString(), fuentePequeña, Brushes.Black, 0F, y);
                     y += saltoLinea;
                     AgregarLinea(ref e, new Pen(Brushes.Black));
                 }
