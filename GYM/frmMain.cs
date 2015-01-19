@@ -329,7 +329,7 @@ namespace GYM
         {
             if (!GYM.Clases.CFuncionesGenerales.versionGratuita)
             {
-                if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("caja", "estado")))
+                if (Clases.Caja.EstadoCaja())
                 {
                     DialogResult d = MessageBox.Show("La caja se encuentra abierta, ¿Desea cerrarla?", "Advertencia", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation);
                     if (d == System.Windows.Forms.DialogResult.Yes)
@@ -592,7 +592,7 @@ namespace GYM
 
         private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("caja", "estado")))
+            if (Clases.Caja.EstadoCaja())
             {
                 (new Formularios.Caja.frmCerrarCaja()).Show();
             }
@@ -688,6 +688,14 @@ namespace GYM
             {
                 OcultarElementosBarra();
             }
+        }
+
+        private void ventasDiariasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Formularios.Reportes.frmReporteVentaDia.Instancia.Visible)
+                Formularios.Reportes.frmReporteVentaDia.Instancia.Show();
+            else
+                Formularios.Reportes.frmReporteVentaDia.Instancia.Select();
         }   
     }
 }

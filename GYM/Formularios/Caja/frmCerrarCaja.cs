@@ -331,7 +331,7 @@ namespace GYM.Formularios.Caja
                     if (decimal.Parse(txtEfectivo.Text) <= efectivoCaja)
                     {
                         CerrarCaja();
-                        CambiarEstadoCaja();
+                        Clases.Caja.CambiarEstadoCaja(false);
                         if (frm != null)
                         {
                             frm.CargarTotalCaja();
@@ -348,7 +348,7 @@ namespace GYM.Formularios.Caja
                 else
                 {
                     CerrarCaja();
-                    CambiarEstadoCaja();
+                    Clases.Caja.CambiarEstadoCaja(false);
                     if (frm != null)
                     {
                         frm.CargarTotalCaja();

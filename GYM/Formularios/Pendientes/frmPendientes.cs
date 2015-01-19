@@ -110,7 +110,7 @@ namespace GYM.Formularios
                         if (!numSocios.Contains((int)dr["numSocio"]))
                         {
                             numSocios.Add((int)dr["numSocio"]);
-                            dgvPendientes.Rows.Add(new object[] { dr["id"], dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), "", dr["descripcion"], fechaIni.ToString("dd/MM/yyyy"), fechaFin.ToString("dd/MM/yyyy"), fechaPago.ToString("dd/MM/yyyy"), dr["folio_remision"], ((decimal)dr["precio"]).ToString("C2"), CFuncionesGenerales.NombreUsuario(dr["create_user_id"].ToString()) });
+                            dgvPendientes.Rows.Add(new object[] { dr["id"], dr["numSocio"].ToString(), dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), "", dr["descripcion"].ToString(), fechaIni.ToString("dd/MM/yyyy"), fechaFin.ToString("dd/MM/yyyy"), fechaPago.ToString("dd/MM/yyyy"), dr["folio_remision"].ToString(), ((decimal)dr["precio"]).ToString("C2"), CFuncionesGenerales.NombreUsuario(dr["create_user_id"].ToString()) });
                         }
                     }
                     else
@@ -123,7 +123,7 @@ namespace GYM.Formularios
                             nom = dr["nombre"].ToString() + " " + dr["apellidos"].ToString();
                         if (dr["numSocio"] != DBNull.Value)
                             numSocio = dr["numSocio"].ToString();
-                        dgvPendientes.Rows.Add(new object[] { dr["id"], numSocio, nom, dr["num"], dr["descripcion"], fechaIni.ToString("dd/MM/yyyy"), fechaFin.ToString("dd/MM/yyyy"), fechaPago.ToString("dd/MM/yyyy"), dr["folio_remision"], ((decimal)dr["precio"]).ToString("C2"), CFuncionesGenerales.NombreUsuario(dr["create_user_id"].ToString()) });
+                        dgvPendientes.Rows.Add(new object[] { dr["id"], numSocio, nom, dr["num"], dr["descripcion"].ToString(), fechaIni.ToString("dd/MM/yyyy"), fechaFin.ToString("dd/MM/yyyy"), fechaPago.ToString("dd/MM/yyyy"), dr["folio_remision"], ((decimal)dr["precio"]).ToString("C2"), CFuncionesGenerales.NombreUsuario(dr["create_user_id"].ToString()) });
                     }
                 }
             }
@@ -308,7 +308,7 @@ namespace GYM.Formularios
         {
             try
             {
-                if (dgvPendientes.RowCount > 0)
+                if (dgvPendientes.RowCount > 0 && e.RowIndex >= 0)
                 {
                     id = (int)dgvPendientes[0, e.RowIndex].Value;
                     if (cboPendientes.SelectedIndex == 0)
@@ -349,6 +349,11 @@ namespace GYM.Formularios
             {
 
             }
+        }
+
+        private void dgvPendientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

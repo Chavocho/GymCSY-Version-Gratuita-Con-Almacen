@@ -258,14 +258,13 @@ namespace GYM.Formularios.Caja
                     if (!(decimal.Parse(txtEfectivo.Text) < 0))
                     {
                         AbrirCaja();
-                        CambiarEstadoCaja();
+                        Clases.Caja.CambiarEstadoCaja(true);
                         if (this.frm != null)
                         {
                             frm.CargarTotalCaja();
                             frm.CargarVentas(DateTime.Now, DateTime.Now);
                             frm.btnAbrirCerrar.Text = "Cerrar Caja";
                         }
-
                         MessageBox.Show("Se ha abierto la caja con éxito.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
@@ -275,7 +274,7 @@ namespace GYM.Formularios.Caja
                 else
                 {
                     AbrirCaja();
-                    CambiarEstadoCaja();
+                    Clases.Caja.CambiarEstadoCaja(true);
                     if (this.frm != null)
                     {
                         frm.CargarTotalCaja();

@@ -99,6 +99,7 @@
             this.pcbUsuario = new System.Windows.Forms.PictureBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblBETA = new System.Windows.Forms.Label();
+            this.ventasDiariasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUsuario)).BeginInit();
             this.SuspendLayout();
@@ -327,7 +328,8 @@
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.membresíasToolStripMenuItem,
-            this.ventasToolStripMenuItem1});
+            this.ventasToolStripMenuItem1,
+            this.ventasDiariasToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.reportesToolStripMenuItem.Text = "Report&es";
@@ -335,14 +337,14 @@
             // membresíasToolStripMenuItem
             // 
             this.membresíasToolStripMenuItem.Name = "membresíasToolStripMenuItem";
-            this.membresíasToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.membresíasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.membresíasToolStripMenuItem.Text = "Membresías";
             this.membresíasToolStripMenuItem.Click += new System.EventHandler(this.membresíasToolStripMenuItem_Click);
             // 
             // ventasToolStripMenuItem1
             // 
             this.ventasToolStripMenuItem1.Name = "ventasToolStripMenuItem1";
-            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
+            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.ventasToolStripMenuItem1.Text = "Venta&s";
             this.ventasToolStripMenuItem1.Click += new System.EventHandler(this.ventasToolStripMenuItem1_Click);
             // 
@@ -664,6 +666,13 @@
             this.lblBETA.Text = "BETA";
             this.lblBETA.Visible = false;
             // 
+            // ventasDiariasToolStripMenuItem
+            // 
+            this.ventasDiariasToolStripMenuItem.Name = "ventasDiariasToolStripMenuItem";
+            this.ventasDiariasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ventasDiariasToolStripMenuItem.Text = "Ventas diarias";
+            this.ventasDiariasToolStripMenuItem.Click += new System.EventHandler(this.ventasDiariasToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -764,5 +773,6 @@
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem promocionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem preciosDemembresíasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ventasDiariasToolStripMenuItem;
     }
 }

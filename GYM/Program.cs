@@ -25,8 +25,9 @@ namespace GYM
                     Application.SetCompatibleTextRenderingDefault(false);
                     Application.Run(new Init());
                 }
-                catch
+                catch (Exception ex)
                 {
+                    MessageBox.Show(ex.ToString());
                 }
                 finally
                 { instanceLock.ReleaseMutex(); }

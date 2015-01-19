@@ -397,7 +397,7 @@ namespace GYM.Formularios
         {
             try
             {
-                if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("caja", "estado")))
+                if (Clases.Caja.EstadoCaja())
                 {
                     if (ValidarCampos())
                     {
@@ -490,6 +490,7 @@ namespace GYM.Formularios
             try
             {
                 numSocio = (int)dgvSocios[0, e.RowIndex].Value;
+                
             }
             catch
             {

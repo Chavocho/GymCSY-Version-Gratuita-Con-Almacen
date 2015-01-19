@@ -99,6 +99,7 @@ namespace GYM.Formularios.Membresia
                             break;
                     }
                     dgvPromociones.Rows.Add(new object[] { dr["id"], "", "", dr["descripcion"].ToString(), precio.ToString("C2"), duracion });
+                    dgvPromociones_RowEnter(dgvPromociones, new DataGridViewCellEventArgs(0, 0));
                 }
             }
             catch (MySqlException ex)
@@ -170,6 +171,7 @@ namespace GYM.Formularios.Membresia
                             break;
                     }
                     dgvPromociones.Rows.Add(new object[] { dr["id"], DateTime.Parse("01-01-0001 " + dr["hora_inicio"].ToString()).ToString("hh:mm tt"), DateTime.Parse("01-01-0001 " + dr["hora_fin"].ToString()).ToString("hh:mm tt"), dr["descripcion"].ToString(), precio.ToString("C2"), duracion });
+                    dgvPromociones_RowEnter(dgvPromociones, new DataGridViewCellEventArgs(0, 0));
                 }
             }
             catch (MySqlException ex)
@@ -229,8 +231,11 @@ namespace GYM.Formularios.Membresia
         {
             try
             {
-                id = (int)dgvPromociones[0, dgvPromociones.CurrentRow.Index].Value;
-                precio = decimal.Parse(dgvPromociones[4, e.RowIndex].Value.ToString(), System.Globalization.NumberStyles.Currency);
+                if (dgvPromociones.CurrentRow != null)
+                {
+                    id = (int)dgvPromociones[0, dgvPromociones.CurrentRow.Index].Value;
+                    precio = decimal.Parse(dgvPromociones[4, e.RowIndex].Value.ToString(), System.Globalization.NumberStyles.Currency);
+                }
             }
             catch
             {

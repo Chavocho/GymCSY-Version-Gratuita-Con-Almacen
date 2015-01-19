@@ -111,6 +111,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Caja.cs" />
     <Compile Include="Clases\CConfiguracionXML.cs" />
     <Compile Include="Clases\CCorreos.cs" />
     <Compile Include="Clases\CFuncionesGenerales.cs" />
@@ -446,6 +447,12 @@
     <Compile Include="Formularios\Reportes\frmReporteMembresíasSocio.Designer.cs">
       <DependentUpon>frmReporteMembresíasSocio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Reportes\frmReporteVentaDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Reportes\frmReporteVentaDia.Designer.cs">
+      <DependentUpon>frmReporteVentaDia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Reportes\frmReporteVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -727,6 +734,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Reportes\frmReporteMembresíasSocio.resx">
       <DependentUpon>frmReporteMembresíasSocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Reportes\frmReporteVentaDia.resx">
+      <DependentUpon>frmReporteVentaDia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Reportes\frmReporteVentas.resx">
       <DependentUpon>frmReporteVentas.cs</DependentUpon>

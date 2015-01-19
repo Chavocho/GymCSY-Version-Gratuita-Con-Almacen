@@ -523,8 +523,9 @@ namespace GYM.Clases
         {
             try
             {
-                decimal totTa = 0;
-                decimal efRet = 0;
+                decimal totTa = 0M;
+                decimal efRet = 0M, efAp = 0M;
+                decimal totEfMem = 0M, totTaMem = 0M, totEfRen = 0M, totTaRen = 0M, totEfVen = 0M, totTaVen = 0M;
                 e.Graphics.DrawString("EFVO", fuenteResaltada, Brushes.Black, 0F, y);
                 e.Graphics.DrawString("VOUCHERS", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) - 15, y);
                 e.Graphics.DrawString("MOV.", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) * 2 - 10, y);
@@ -556,12 +557,71 @@ namespace GYM.Clases
                     e.Graphics.DrawString(fe.ToString("dd/MM/yyyy"), fuentePequeña, Brushes.Black, (e.PageBounds.Width / 4) * 3 - 25, y);
                     if (ta > 0)
                         totTa += ta;
-                    efRet = ef;
                     y += saltoLinea;
                     e.Graphics.DrawString(dr["descripcion"].ToString(), fuentePequeña, Brushes.Black, 0F, y);
                     y += saltoLinea;
                     AgregarLinea(ref e, new Pen(Brushes.Black));
+                    switch (dr["descripcion"].ToString())
+                    {
+                        case "CIERRE DE CAJA":
+                            efRet = ef;
+                            break;
+                        case "APERTURA DE CAJA":
+                            efAp = ef;
+                            break;
+                        case "NUEVA MEMBRESÍA":
+                            totEfMem += ef;
+                            totTaMem += ta;
+                            break;
+                        case "RENOVACIÓN MEMBRESÍA":
+                            totEfRen += ef;
+                            totTaRen += ta;
+                            break;
+                        case "VENTA POS":
+                            totEfVen += ef;
+                            totTaVen += ta;
+                            break;
+                        case "VENTA MOSTRADOR":
+                            totEfVen += ef;
+                            totTaVen += ta;
+                            break;
+                    }
                 }
+                e.Graphics.DrawString("CERRÓ CAJA: " + UsuarioCierre(), fuenteResaltada, Brushes.Black, 0F, y);
+                y += saltoLinea;
+                e.Graphics.DrawString("EFECTIVO APERTURA: " + (efAp).ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
+                y += saltoLinea;
+                AgregarLinea(ref e, new Pen(Brushes.Black));
+                y += saltoLineaPeque;
+
+                //Totales de membresías
+                e.Graphics.DrawString("TOTALES DE NUEVAS MEMBRESÍAS", fuenteResaltada, Brushes.Black, 0F, y);
+                y += saltoLinea;
+                e.Graphics.DrawString("EFECTIVO: " + totEfMem.ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
+                y += saltoLinea;
+                e.Graphics.DrawString("VOUCHERS: " + totTaMem.ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
+                y += saltoLinea;
+                AgregarLinea(ref e, new Pen(Brushes.Black));
+                y += saltoLineaPeque;
+                //Totales de renovaciones
+                e.Graphics.DrawString("TOTALES DE RENOVACIÓN DE MEMBRESÍAS", fuenteResaltada, Brushes.Black, 0F, y);
+                y += saltoLinea;
+                e.Graphics.DrawString("EFECTIVO: " + totEfRen.ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
+                y += saltoLinea;
+                e.Graphics.DrawString("VOUCHERS: " + totTaRen.ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
+                y += saltoLinea;
+                AgregarLinea(ref e, new Pen(Brushes.Black));
+                y += saltoLineaPeque;
+                //Totales de ventas
+                e.Graphics.DrawString("TOTALES DE VENTAS MOSTRADOR", fuenteResaltada, Brushes.Black, 0F, y);
+                y += saltoLinea;
+                e.Graphics.DrawString("EFECTIVO: " + totEfVen.ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
+                y += saltoLinea;
+                e.Graphics.DrawString("VOUCHERS: " + totTaVen.ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
+                y += saltoLinea;
+                AgregarLinea(ref e, new Pen(Brushes.Black));
+                y += saltoLineaPeque;
+
                 e.Graphics.DrawString("EFECTIVO RETIRADO: " + (efRet * -1).ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
                 y += saltoLinea;
                 e.Graphics.DrawString("TOTAL DE VOUCHERS: " + totTa.ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
@@ -964,7 +1024,7 @@ namespace GYM.Clases
         {
             try
             {
-                string sql = "SELECT * FROM caja WHERE id BETWEEN '" + idApertura + "' AND '" + idCierre + "'";
+                string sql = "SELECT * FROM caja WHERE id BETWEEN '" + idApertura + "' AND '" + idCierre + "' ORDER BY descripcion ASC";
                 dtCaja = Clases.ConexionBD.EjecutarConsultaSelect(sql);
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
@@ -1002,6 +1062,30 @@ namespace GYM.Clases
                 throw ex;
             }
             return total;
+        }
+
+        private string UsuarioCierre()
+        {
+            string usu = "Sin información";
+            try
+            {
+                string sql = "SELECT u.userName FROM caja AS c INNER JOIN usuarios AS u ON (c.create_user_id=u.id) WHERE c.id='" + idCierre + "'";
+                DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    if (dr["userName"] != DBNull.Value)
+                        usu = dr["userName"].ToString();
+                }
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return usu;
         }
 
         /// <summary>

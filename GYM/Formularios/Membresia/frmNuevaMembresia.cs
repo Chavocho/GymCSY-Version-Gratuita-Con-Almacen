@@ -346,7 +346,7 @@ namespace GYM.Formularios.Membresia
         {
             try
             {
-                if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("caja", "estado")))
+                if (Clases.Caja.EstadoCaja())
                 {
                     if (ValidarDatos())
                     {

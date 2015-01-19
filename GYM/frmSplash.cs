@@ -327,8 +327,6 @@ namespace GYM
                     CFuncionesGenerales.soloRegistro = bool.Parse(CConfiguracionXML.LeerConfiguración("general", "soloRegistro"));
                 CargarLector();
                 CargarSonidos();
-                if (!CConfiguracionXML.ExisteConfiguracion("caja", "estado"))
-                    CConfiguracionXML.GuardarConfiguracion("caja", "estado", false.ToString());
                 if (!CConfiguracionXML.ExisteConfiguracion("huella", "usar"))
                 {
                     CConfiguracionXML.GuardarConfiguracion("huella", "usar", false.ToString());
@@ -368,6 +366,23 @@ namespace GYM
                 catch (Exception ex)
                 {
                     CFuncionesGenerales.MensajeError("No se ha podido desactivar las membresías a los usuarios. Ocurrio un error genérico.", ex);
+                }
+
+                try
+                {
+                    Caja.CrearEstadoCaja();
+                }
+                catch (CajaException ex)
+                {
+                    CFuncionesGenerales.MensajeError("Ocurrió un error al crear el estado de la caja. Es posible que algunas funciones del software no funcionen correctamente.", ex);
+                }
+                catch (MySqlException ex)
+                {
+                    CFuncionesGenerales.MensajeError("Ocurrió un error al verificar el estado de la caja. No se pudo conectar con la base de datos.", ex);
+                }
+                catch (Exception ex)
+                {
+                    CFuncionesGenerales.MensajeError("Ocurrió un error al verificar el estado de la caja. Ocurrió un error genérico.", ex);
                 }
 
                 try

@@ -147,8 +147,8 @@ namespace GYM.Formularios.Membresia
 
         public void AsignarPromocion(int duracion, decimal precio, string descripcion)
         {
-            lblPrecio.Text = precio.ToString("C2");
             btnQuitarPromo.Enabled = true;
+            lblPrecio.Text = precio.ToString("C2");
             txtDescripcion.Text = descripcion;
             cbxTipo.SelectedIndex = duracion;
             cbxTipo.Enabled = false;
@@ -417,7 +417,7 @@ namespace GYM.Formularios.Membresia
         {
             try
             {
-                if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("caja", "estado")))
+                if (Clases.Caja.EstadoCaja())
                 {
                     if (ValidarDatos())
                     {
@@ -545,16 +545,14 @@ namespace GYM.Formularios.Membresia
 
         private void dtpFechaInicio_ValueChanged(object sender, EventArgs e)
         {
-            if (es == CMembresia.EstadoMembresia.Activa || es == CMembresia.EstadoMembresia.Pendiente)
-            {
-                Fechas(dtpFechaInicio.Enabled);
-            }
+            Fechas(dtpFechaInicio.Enabled);
             //if (dtpFechaInicio.Value.Date < mem.FechaFin.Date && es == CMembresia.EstadoMembresia.Activa)
             //    dtpFechaInicio.Value = mem.FechaFin;
             //else if (dtpFechaInicio.Value.Date < DateTime.Now.Date)
             //    dtpFechaInicio.Value = DateTime.Now;
             
         }
+
         private void Fechas(bool noEsMembresiaActiva)
         {
             if (noEsMembresiaActiva)

@@ -83,7 +83,7 @@ namespace GYM.Formularios.POS
                 sql.Parameters.AddWithValue("@tarjeta", tarjeta.ToString("0.00"));
                 //Entrada = 0, Salida = 1
                 sql.Parameters.AddWithValue("@tipoMov", 0);
-                sql.Parameters.AddWithValue("@descripcion", "VENTA POS");
+                sql.Parameters.AddWithValue("@descripcion", "VENTA MOSTRADOR");
                 sql.Parameters.AddWithValue("@create_user_id", frmMain.id);
                 Clases.ConexionBD.EjecutarConsulta(sql);
             }
@@ -314,6 +314,7 @@ namespace GYM.Formularios.POS
                 lblTotal.Text = (total).ToString("C2");
                 lblFolio.Text = idVenta.ToString("00000000");
                 lblCantidad.Text = cant.ToString();
+                txtEfectivo.Select();
                 CalcularCambio();
             }
             catch (FormatException ex)

@@ -612,7 +612,7 @@ namespace GYM.Formularios.POS
         {
             try
             {
-                if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("caja", "estado")))
+                if (Clases.Caja.EstadoCaja())
                 {
                     if (!abierta)
                     {
@@ -729,7 +729,7 @@ namespace GYM.Formularios.POS
         {
             try
             {
-                if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("caja", "estado")))
+                if (Clases.Caja.EstadoCaja())
                 {
                     if (!abierta)
                         (new frmRecuperarVenta(this)).ShowDialog(this);
@@ -839,7 +839,18 @@ namespace GYM.Formularios.POS
         {
             try
             {
-                (new frmCancelarVenta()).ShowDialog(this);
+                if (Clases.Caja.EstadoCaja())
+                {
+                    (new frmCancelarVenta()).ShowDialog(this);
+                }
+                else
+                {
+                    if (MessageBox.Show("No puedes realizar operaciones de venta si la caja esta cerrada.\n¿Deseas abrirla?", "GymCSY", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == System.Windows.Forms.DialogResult.Yes)
+                    {
+                        (new Formularios.Caja.frmAbrirCaja()).ShowDialog(this);
+                        btnCancelar.PerformClick();
+                    }
+                }
             }
             catch (FormatException ex)
             {
