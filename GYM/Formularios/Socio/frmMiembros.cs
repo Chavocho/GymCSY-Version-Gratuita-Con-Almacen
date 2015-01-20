@@ -61,9 +61,8 @@ namespace GYM.Formularios.Socio
                         cel = "No especificado";
                     if (dr["fecha_nac"] != DBNull.Value)
                         fecha = fecha = DateTime.Parse(dr["fecha_nac"].ToString()).ToString("dd") + " de " + DateTime.Parse(dr["fecha_nac"].ToString()).ToString("MMMM");
-                    dgvPersonas.Rows.Add(new object[] { dr["numSocio"].ToString(), dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), tel,cel,fecha });
-                }
-                    
+                    dgvPersonas.Rows.Add(new object[] { dr["numSocio"].ToString(), dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), tel, cel, DateTime.Parse(dr["fecha_nac"].ToString()) });
+                } 
             }
             catch (Exception ex)
             {

@@ -91,13 +91,14 @@
             // 
             this.CFecha.HeaderText = "Fecha de compra";
             this.CFecha.Name = "CFecha";
+            this.CFecha.DefaultCellStyle.Format = "dd 'de' MMMM 'del' yyyy hh:mm:ss tt";
             this.CFecha.ReadOnly = true;
             this.CFecha.Width = 230;
             // 
             // CUsuario
             // 
             this.CUsuario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CUsuario.HeaderText = "Usuario";
+            this.CUsuario.HeaderText = "Comprador";
             this.CUsuario.Name = "CUsuario";
             this.CUsuario.ReadOnly = true;
             // 
@@ -112,6 +113,7 @@
             // 
             this.CTotal.HeaderText = "Total de compra";
             this.CTotal.Name = "CTotal";
+            this.CTotal.DefaultCellStyle.Format = "C2";
             this.CTotal.ReadOnly = true;
             this.CTotal.Width = 120;
             // 

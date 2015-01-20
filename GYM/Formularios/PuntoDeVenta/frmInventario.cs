@@ -62,7 +62,7 @@ namespace GYM.Formularios.PuntoDeVenta
         {
             try
             {
-                string sql = "SELECT id, nombre, cant, cant_alm, control_stock FROM producto WHERE cant<=10 OR cant_alm<=10";
+                string sql = "SELECT id, nombre, cant, cant_alm, control_stock FROM producto WHERE (cant<=10 OR cant_alm<=10) AND control_stock=1";
                 DataTable dt = Clases.ConexionBD.EjecutarConsultaSelect(sql);
                 LlenarDataGrid(dt);
             }

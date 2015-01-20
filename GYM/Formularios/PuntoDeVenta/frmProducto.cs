@@ -68,7 +68,7 @@ namespace GYM.Formularios.PuntoDeVenta
                         des = dr["descripcion"].ToString();
                     else
                         des = "";
-                    dgvProducto.Rows.Add(new object[] { dr["id"].ToString(), dr["nombre"].ToString(), dr["marca"].ToString(), des, dr["precio"] });
+                    dgvProducto.Rows.Add(new object[] { dr["id"].ToString(), dr["nombre"].ToString(), dr["marca"].ToString(), des, (decimal)dr["precio"] });
                 }
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)

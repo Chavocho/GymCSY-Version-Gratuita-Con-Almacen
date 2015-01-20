@@ -107,6 +107,7 @@
             this.Telefono.HeaderText = "Teléfono";
             this.Telefono.Name = "Telefono";
             this.Telefono.ReadOnly = true;
+            this.Telefono.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Telefono.Width = 150;
             // 
             // Estado

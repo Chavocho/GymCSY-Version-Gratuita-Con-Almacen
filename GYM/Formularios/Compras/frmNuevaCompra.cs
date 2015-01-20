@@ -50,7 +50,7 @@ namespace GYM.Formularios.Compras
                     DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
                     foreach (DataRow dr in dt.Rows)
                     {
-                        dgvProductos.Rows.Add(new object[] { id, dr["nombre"], decimal.Parse(dr["costo"].ToString()).ToString("C2"), cant, desc.ToString("C2") });
+                        dgvProductos.Rows.Add(new object[] { id, dr["nombre"], decimal.Parse(dr["costo"].ToString()), cant, desc });
                     }
                 }
                 CalcularTotales();

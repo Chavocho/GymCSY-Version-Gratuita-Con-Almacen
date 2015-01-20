@@ -29,19 +29,22 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAsignarPromo));
             this.dgvPromociones = new System.Windows.Forms.DataGridView();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.cboTipoPromo = new System.Windows.Forms.ComboBox();
+            this.lblETipoPromo = new System.Windows.Forms.Label();
             this.CID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CHoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CHoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CDuracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.cboTipoPromo = new System.Windows.Forms.ComboBox();
-            this.lblETipoPromo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPromociones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,26 +75,26 @@
             this.CDescripcion,
             this.CPrecio,
             this.CDuracion});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPromociones.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPromociones.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvPromociones.Location = new System.Drawing.Point(12, 47);
             this.dgvPromociones.Name = "dgvPromociones";
             this.dgvPromociones.ReadOnly = true;
             this.dgvPromociones.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPromociones.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPromociones.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPromociones.RowHeadersVisible = false;
             this.dgvPromociones.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvPromociones.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -99,48 +102,6 @@
             this.dgvPromociones.Size = new System.Drawing.Size(870, 274);
             this.dgvPromociones.TabIndex = 2;
             this.dgvPromociones.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPromociones_RowEnter);
-            // 
-            // CID
-            // 
-            this.CID.HeaderText = "ID";
-            this.CID.Name = "CID";
-            this.CID.ReadOnly = true;
-            this.CID.Visible = false;
-            // 
-            // CHoraInicio
-            // 
-            this.CHoraInicio.HeaderText = "Hora inicio";
-            this.CHoraInicio.Name = "CHoraInicio";
-            this.CHoraInicio.ReadOnly = true;
-            this.CHoraInicio.Visible = false;
-            this.CHoraInicio.Width = 130;
-            // 
-            // CHoraFin
-            // 
-            this.CHoraFin.HeaderText = "Hora terminación";
-            this.CHoraFin.Name = "CHoraFin";
-            this.CHoraFin.ReadOnly = true;
-            this.CHoraFin.Visible = false;
-            this.CHoraFin.Width = 130;
-            // 
-            // CDescripcion
-            // 
-            this.CDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CDescripcion.HeaderText = "Descripción";
-            this.CDescripcion.Name = "CDescripcion";
-            this.CDescripcion.ReadOnly = true;
-            // 
-            // CPrecio
-            // 
-            this.CPrecio.HeaderText = "Precio";
-            this.CPrecio.Name = "CPrecio";
-            this.CPrecio.ReadOnly = true;
-            // 
-            // CDuracion
-            // 
-            this.CDuracion.HeaderText = "Duración";
-            this.CDuracion.Name = "CDuracion";
-            this.CDuracion.ReadOnly = true;
             // 
             // btnAceptar
             // 
@@ -178,6 +139,54 @@
             this.lblETipoPromo.Size = new System.Drawing.Size(124, 19);
             this.lblETipoPromo.TabIndex = 0;
             this.lblETipoPromo.Text = "Tipo de promoción";
+            // 
+            // CID
+            // 
+            this.CID.HeaderText = "ID";
+            this.CID.Name = "CID";
+            this.CID.ReadOnly = true;
+            this.CID.Visible = false;
+            // 
+            // CHoraInicio
+            // 
+            dataGridViewCellStyle2.Format = "hh:mm tt";
+            this.CHoraInicio.DefaultCellStyle = dataGridViewCellStyle2;
+            this.CHoraInicio.HeaderText = "Hora inicio";
+            this.CHoraInicio.Name = "CHoraInicio";
+            this.CHoraInicio.ReadOnly = true;
+            this.CHoraInicio.Visible = false;
+            this.CHoraInicio.Width = 130;
+            // 
+            // CHoraFin
+            // 
+            dataGridViewCellStyle3.Format = "hh:mm tt";
+            this.CHoraFin.DefaultCellStyle = dataGridViewCellStyle3;
+            this.CHoraFin.HeaderText = "Hora terminación";
+            this.CHoraFin.Name = "CHoraFin";
+            this.CHoraFin.ReadOnly = true;
+            this.CHoraFin.Visible = false;
+            this.CHoraFin.Width = 130;
+            // 
+            // CDescripcion
+            // 
+            this.CDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CDescripcion.HeaderText = "Descripción";
+            this.CDescripcion.Name = "CDescripcion";
+            this.CDescripcion.ReadOnly = true;
+            // 
+            // CPrecio
+            // 
+            dataGridViewCellStyle4.Format = "C2";
+            this.CPrecio.DefaultCellStyle = dataGridViewCellStyle4;
+            this.CPrecio.HeaderText = "Precio";
+            this.CPrecio.Name = "CPrecio";
+            this.CPrecio.ReadOnly = true;
+            // 
+            // CDuracion
+            // 
+            this.CDuracion.HeaderText = "Duración";
+            this.CDuracion.Name = "CDuracion";
+            this.CDuracion.ReadOnly = true;
             // 
             // frmAsignarPromo
             // 

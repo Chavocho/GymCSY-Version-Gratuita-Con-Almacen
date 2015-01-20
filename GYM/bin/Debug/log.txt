@@ -1072,3 +1072,11 @@ System.FormatException: La cadena de entrada no tiene el formato correcto.
    en System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
    en System.Decimal.Parse(String s, NumberStyles style)
    en GYM.Formularios.frmCaja.CalcularTotales()|
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.DateTime.Parse(String s)
+   en GYM.Formularios.Membresia.frmMembresia.BuscarMiembros(String textoBusqueda) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Membresia\frmMembresia.cs:línea 123|
+System.FormatException: No se puede reconocer la cadena como valor DateTime válido.
+   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.DateTime.Parse(String s)
+   en GYM.Formularios.Membresia.frmMembresia.BuscarMiembros(String textoBusqueda) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Membresia\frmMembresia.cs:línea 123|

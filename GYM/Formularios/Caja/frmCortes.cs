@@ -51,7 +51,7 @@ namespace GYM.Formularios.Caja
                 foreach (DataRow dr in dt.Rows)
                 {
                     fechas = DateTime.Parse(dr["fecha"].ToString());
-                    dgvCaja.Rows.Add(new object[] { dr["id"], fechas.ToString("dd") + " de " + fechas.ToString("MMMM") + " del " + fechas.ToString("yyyy"), (decimal.Parse(dr["efectivo"].ToString()) * -1).ToString("C2"), (decimal.Parse(dr["tarjeta"].ToString()) * -1).ToString("C2") });
+                    dgvCaja.Rows.Add(new object[] { dr["id"], fechas, (decimal.Parse(dr["efectivo"].ToString()) * -1), (decimal.Parse(dr["tarjeta"].ToString()) * -1) });
                 }
             }
             catch (FormatException ex)

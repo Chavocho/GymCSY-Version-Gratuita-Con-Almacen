@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteVentaDia));
             this.dgvVentas = new System.Windows.Forms.DataGridView();
             this.cboTurno = new System.Windows.Forms.ComboBox();
@@ -90,7 +92,7 @@
             this.dgvVentas.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVentas.Size = new System.Drawing.Size(984, 423);
-            this.dgvVentas.TabIndex = 3;
+            this.dgvVentas.TabIndex = 7;
             this.dgvVentas.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_RowEnter);
             // 
             // cboTurno
@@ -105,7 +107,7 @@
             this.cboTurno.Location = new System.Drawing.Point(710, 12);
             this.cboTurno.Name = "cboTurno";
             this.cboTurno.Size = new System.Drawing.Size(205, 25);
-            this.cboTurno.TabIndex = 4;
+            this.cboTurno.TabIndex = 5;
             // 
             // lblETurno
             // 
@@ -114,7 +116,7 @@
             this.lblETurno.Location = new System.Drawing.Point(656, 15);
             this.lblETurno.Name = "lblETurno";
             this.lblETurno.Size = new System.Drawing.Size(48, 19);
-            this.lblETurno.TabIndex = 5;
+            this.lblETurno.TabIndex = 4;
             this.lblETurno.Text = "Turno:";
             // 
             // pnlProductos
@@ -126,8 +128,8 @@
             this.pnlProductos.BackColor = System.Drawing.SystemColors.Control;
             this.pnlProductos.Location = new System.Drawing.Point(12, 472);
             this.pnlProductos.Name = "pnlProductos";
-            this.pnlProductos.Size = new System.Drawing.Size(984, 225);
-            this.pnlProductos.TabIndex = 6;
+            this.pnlProductos.Size = new System.Drawing.Size(984, 193);
+            this.pnlProductos.TabIndex = 8;
             // 
             // dtpFecha
             // 
@@ -137,7 +139,7 @@
             this.dtpFecha.Location = new System.Drawing.Point(150, 12);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(196, 25);
-            this.dtpFecha.TabIndex = 7;
+            this.dtpFecha.TabIndex = 1;
             this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
             // 
             // lblEFecha
@@ -147,7 +149,7 @@
             this.lblEFecha.Location = new System.Drawing.Point(99, 15);
             this.lblEFecha.Name = "lblEFecha";
             this.lblEFecha.Size = new System.Drawing.Size(44, 19);
-            this.lblEFecha.TabIndex = 8;
+            this.lblEFecha.TabIndex = 0;
             this.lblEFecha.Text = "Fecha";
             // 
             // lblEReporte
@@ -157,7 +159,7 @@
             this.lblEReporte.Location = new System.Drawing.Point(352, 15);
             this.lblEReporte.Name = "lblEReporte";
             this.lblEReporte.Size = new System.Drawing.Size(87, 19);
-            this.lblEReporte.TabIndex = 10;
+            this.lblEReporte.TabIndex = 2;
             this.lblEReporte.Text = "Tipo reporte:";
             // 
             // cboReporte
@@ -172,7 +174,7 @@
             this.cboReporte.Location = new System.Drawing.Point(445, 12);
             this.cboReporte.Name = "cboReporte";
             this.cboReporte.Size = new System.Drawing.Size(205, 25);
-            this.cboReporte.TabIndex = 9;
+            this.cboReporte.TabIndex = 3;
             // 
             // bgwMembresia
             // 
@@ -186,7 +188,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(921, 12);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 25);
-            this.btnBuscar.TabIndex = 11;
+            this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -206,10 +208,10 @@
             this.lblETotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblETotal.AutoSize = true;
             this.lblETotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblETotal.Location = new System.Drawing.Point(12, 700);
+            this.lblETotal.Location = new System.Drawing.Point(12, 668);
             this.lblETotal.Name = "lblETotal";
             this.lblETotal.Size = new System.Drawing.Size(248, 21);
-            this.lblETotal.TabIndex = 12;
+            this.lblETotal.TabIndex = 9;
             this.lblETotal.Text = "Total de ventas de membresías:";
             // 
             // lblTotal
@@ -217,10 +219,10 @@
             this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblTotal.Location = new System.Drawing.Point(266, 701);
+            this.lblTotal.Location = new System.Drawing.Point(266, 669);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(44, 20);
-            this.lblTotal.TabIndex = 13;
+            this.lblTotal.TabIndex = 10;
             this.lblTotal.Text = "$0.00";
             // 
             // lblEfectivo
@@ -228,10 +230,10 @@
             this.lblEfectivo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblEfectivo.AutoSize = true;
             this.lblEfectivo.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblEfectivo.Location = new System.Drawing.Point(586, 701);
+            this.lblEfectivo.Location = new System.Drawing.Point(586, 669);
             this.lblEfectivo.Name = "lblEfectivo";
             this.lblEfectivo.Size = new System.Drawing.Size(44, 20);
-            this.lblEfectivo.TabIndex = 15;
+            this.lblEfectivo.TabIndex = 12;
             this.lblEfectivo.Text = "$0.00";
             // 
             // lblEEfectivo
@@ -239,10 +241,10 @@
             this.lblEEfectivo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblEEfectivo.AutoSize = true;
             this.lblEEfectivo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblEEfectivo.Location = new System.Drawing.Point(343, 700);
+            this.lblEEfectivo.Location = new System.Drawing.Point(343, 668);
             this.lblEEfectivo.Name = "lblEEfectivo";
             this.lblEEfectivo.Size = new System.Drawing.Size(237, 21);
-            this.lblEEfectivo.TabIndex = 14;
+            this.lblEEfectivo.TabIndex = 11;
             this.lblEEfectivo.Text = "Total efectivo de membresías:";
             // 
             // lblVoucher
@@ -250,10 +252,10 @@
             this.lblVoucher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVoucher.AutoSize = true;
             this.lblVoucher.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblVoucher.Location = new System.Drawing.Point(913, 701);
+            this.lblVoucher.Location = new System.Drawing.Point(913, 669);
             this.lblVoucher.Name = "lblVoucher";
             this.lblVoucher.Size = new System.Drawing.Size(44, 20);
-            this.lblVoucher.TabIndex = 17;
+            this.lblVoucher.TabIndex = 14;
             this.lblVoucher.Text = "$0.00";
             // 
             // lblEVoucher
@@ -261,10 +263,10 @@
             this.lblEVoucher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEVoucher.AutoSize = true;
             this.lblEVoucher.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblEVoucher.Location = new System.Drawing.Point(663, 700);
+            this.lblEVoucher.Location = new System.Drawing.Point(663, 668);
             this.lblEVoucher.Name = "lblEVoucher";
             this.lblEVoucher.Size = new System.Drawing.Size(244, 21);
-            this.lblEVoucher.TabIndex = 16;
+            this.lblEVoucher.TabIndex = 13;
             this.lblEVoucher.Text = "Total vouchers de membresías:";
             // 
             // CID
@@ -282,12 +284,16 @@
             // 
             // CEfectivo
             // 
+            dataGridViewCellStyle1.Format = "C2";
+            this.CEfectivo.DefaultCellStyle = dataGridViewCellStyle1;
             this.CEfectivo.HeaderText = "Efectivo";
             this.CEfectivo.Name = "CEfectivo";
             this.CEfectivo.ReadOnly = true;
             // 
             // CVouchers
             // 
+            dataGridViewCellStyle2.Format = "C2";
+            this.CVouchers.DefaultCellStyle = dataGridViewCellStyle2;
             this.CVouchers.HeaderText = "Vouchers";
             this.CVouchers.Name = "CVouchers";
             this.CVouchers.ReadOnly = true;
@@ -301,8 +307,8 @@
             // 
             // CHora
             // 
-            dataGridViewCellStyle1.Format = "hh:mm tt";
-            this.CHora.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Format = "hh:mm tt";
+            this.CHora.DefaultCellStyle = dataGridViewCellStyle3;
             this.CHora.HeaderText = "Hora";
             this.CHora.Name = "CHora";
             this.CHora.ReadOnly = true;
@@ -324,7 +330,7 @@
             // frmReporteVentaDia
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1008, 730);
+            this.ClientSize = new System.Drawing.Size(1008, 698);
             this.Controls.Add(this.lblVoucher);
             this.Controls.Add(this.lblEVoucher);
             this.Controls.Add(this.lblEfectivo);
@@ -342,10 +348,12 @@
             this.Controls.Add(this.dgvVentas);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1024, 736);
             this.Name = "frmReporteVentaDia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Reporte de venta diario";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.SizeChanged += new System.EventHandler(this.frmReporteVentaDia_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -77,7 +77,7 @@ namespace GYM.Formularios.Compras
                     else if (dr["tipo_pago"].ToString() == "1")
                         tipoPago = "Tarjeta";
 
-                    dgvCompras.Rows.Add(new object[] { dr["id"],  fecha.ToString("dd") + " de " + fecha.ToString("MMMM") + " del " + fecha.ToString("yyyy"), dr["userName"], tipoPago, (subtotal + importe - descuento).ToString("C2") });
+                    dgvCompras.Rows.Add(new object[] { dr["id"],  fecha, dr["userName"], tipoPago, (subtotal + importe - descuento) });
                 }
             }
             catch (InvalidOperationException ex)

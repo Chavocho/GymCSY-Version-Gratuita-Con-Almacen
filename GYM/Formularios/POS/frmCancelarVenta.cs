@@ -148,7 +148,7 @@ namespace GYM.Formularios.POS
                         estaAbierta = "Normal";
                     else
                         estaAbierta = "Cancelada";
-                    dgvVentas.Rows.Add(new object[] { int.Parse(dr["id"].ToString()).ToString("00000000"), DateTime.Parse(dr["fecha"].ToString()).ToString("dd/MM/yyyy hh:mm tt"), decimal.Parse(dr["total"].ToString()).ToString("C2"), estaAbierta });
+                    dgvVentas.Rows.Add(new object[] { int.Parse(dr["id"].ToString()).ToString("00000000"), DateTime.Parse(dr["fecha"].ToString()), decimal.Parse(dr["total"].ToString()), estaAbierta });
                     if (dr["estado"].ToString() == "0")
                     {
                         dgvVentas.Rows[dgvVentas.RowCount - 1].DefaultCellStyle.BackColor = Color.WhiteSmoke;

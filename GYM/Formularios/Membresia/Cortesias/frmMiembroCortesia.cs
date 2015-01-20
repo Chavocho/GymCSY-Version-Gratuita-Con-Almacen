@@ -58,7 +58,7 @@ namespace GYM.Formularios.Membresia
                             tel = dr["telefono"].ToString();
                         else if (dr["celular"].ToString() != "")
                             tel = dr["celular"].ToString();
-                        dgvPersonas.Rows.Add(new object[] { dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), tel });
+                        dgvPersonas.Rows.Add(new object[] { (int)dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), tel });
                     }
                 }
             }

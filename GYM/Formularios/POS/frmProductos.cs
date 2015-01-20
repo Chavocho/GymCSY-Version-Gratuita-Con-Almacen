@@ -41,7 +41,7 @@ namespace GYM.Formularios.POS
                 DataTable dt = Clases.ConexionBD.EjecutarConsultaSelect(sql);
                 foreach (DataRow dr in dt.Rows)
                 {
-                    dgvProductos.Rows.Add(dr["id"], dr["nombre"], int.Parse(dr["cant"].ToString()), decimal.Parse(dr["precio"].ToString()).ToString("C2"), dr["control_stock"]);
+                    dgvProductos.Rows.Add(dr["id"], dr["nombre"], int.Parse(dr["cant"].ToString()), decimal.Parse(dr["precio"].ToString()), dr["control_stock"]);
                     cant.Add(Convert.ToInt32(dr["cant"]));
                 }
             }

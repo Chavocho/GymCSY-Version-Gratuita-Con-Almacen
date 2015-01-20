@@ -79,7 +79,7 @@ namespace GYM.Formularios.POS
                         estaAbierta = "Cerrada";
                     else
                         estaAbierta = "Abierta";
-                    dgvVentas.Rows.Add(new object[] { int.Parse(dr["id"].ToString()).ToString("00000000"), DateTime.Parse(dr["fecha"].ToString()).ToString("dd/MM/yyyy hh:mm tt"), decimal.Parse(dr["total"].ToString()).ToString("C2"), estaAbierta });
+                    dgvVentas.Rows.Add(new object[] { int.Parse(dr["id"].ToString()).ToString("00000000"), DateTime.Parse(dr["fecha"].ToString()), decimal.Parse(dr["total"].ToString()), estaAbierta });
                 }
             }
             catch (FormatException ex)

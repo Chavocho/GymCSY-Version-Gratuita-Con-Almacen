@@ -142,13 +142,13 @@ namespace GYM.Formularios.POS
                     {
                         if ((int)dr["cant"] > 0)
                         {
-                            dgvProductos.Rows.Add(idProd, dr["nombre"], cantidad, decimal.Parse(dr["precio"].ToString()).ToString("C2"));
+                            dgvProductos.Rows.Add(idProd, dr["nombre"], cantidad, decimal.Parse(dr["precio"].ToString()));
                             if (insertarBase)
                                 InsertarProductoVenta(idProd, cantidad, decimal.Parse(dr["precio"].ToString()));
                         }
                         else if (dr["control_stock"].ToString() == "0")
                         {
-                            dgvProductos.Rows.Add(idProd, dr["nombre"], cantidad, decimal.Parse(dr["precio"].ToString()).ToString("C2"));
+                            dgvProductos.Rows.Add(idProd, dr["nombre"], cantidad, decimal.Parse(dr["precio"].ToString()));
                             if (insertarBase)
                                 InsertarProductoVenta(idProd, cantidad, decimal.Parse(dr["precio"].ToString()));
                         }

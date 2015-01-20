@@ -184,7 +184,7 @@ namespace GYM.Formularios
                     nomUsu = CFuncionesGenerales.NombreUsuario(dr["create_user_id"].ToString());
                 else
                     nomUsu = "Sin información";
-                dgvCaja.Rows.Add(new object[] { DateTime.Parse(dr["fecha"].ToString()).ToString("dd-MM-yyyy hh:mm tt"), decimal.Parse(dr["efectivo"].ToString()).ToString("C2"), decimal.Parse(dr["tarjeta"].ToString()).ToString("C2"), tipoMov, dr["descripcion"].ToString(), nomUsu });
+                dgvCaja.Rows.Add(new object[] { DateTime.Parse(dr["fecha"].ToString()), decimal.Parse(dr["efectivo"].ToString()), decimal.Parse(dr["tarjeta"].ToString()), tipoMov, dr["descripcion"].ToString(), nomUsu });
             }
             //idMems.Clear();
             //foreach (DataRow dr in dtm.Rows)

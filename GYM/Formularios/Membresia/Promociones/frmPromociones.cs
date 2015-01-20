@@ -102,7 +102,7 @@ namespace GYM.Formularios.Membresia
                     else
                         genero = "Mujer";
 
-                    dgvPromociones.Rows.Add(new object[] { dr["id"], dr["descripcion"], precio.ToString("C2"), duracion, genero, fechaIni.ToString("dd") + " de " + fechaIni.ToString("MMMM") + " del " + fechaIni.ToString("yyyy"), fechaFin.ToString("dd") + " de " + fechaFin.ToString("MMMM") + " del " + fechaFin.ToString("yyyy") });
+                    dgvPromociones.Rows.Add(new object[] { dr["id"], dr["descripcion"], precio, duracion, genero, fechaIni, fechaFin, null, null });
                 }
             }
             catch (MySqlException ex)
@@ -174,7 +174,7 @@ namespace GYM.Formularios.Membresia
                     else
                         genero = "Mujer";
 
-                    dgvPromociones.Rows.Add(new object[] { dr["id"], dr["descripcion"], precio.ToString("C2"), duracion, genero, horaIni.ToString("hh:mm tt"), horaFin.ToString("hh:mm tt")});
+                    dgvPromociones.Rows.Add(new object[] { dr["id"], dr["descripcion"], precio.ToString("C2"), duracion, genero, null, null, horaIni, horaFin });
                 }
             }
             catch (MySqlException ex)
@@ -279,13 +279,17 @@ namespace GYM.Formularios.Membresia
             switch (cboTipoPromo.SelectedIndex)
             {
                 case 0 :
-                    dgvPromociones.Columns[5].HeaderText = "Fecha de inicio";
-                    dgvPromociones.Columns[6].HeaderText = "Fecha de terminación";
+                    dgvPromociones.Columns[5].Visible = true;
+                    dgvPromociones.Columns[6].Visible = true;
+                    dgvPromociones.Columns[7].Visible = false;
+                    dgvPromociones.Columns[8].Visible = false;
                     BuscarPromocionesFechas();
                     break;
                 case 1:
-                    dgvPromociones.Columns[5].HeaderText = "Hora de inicio";
-                    dgvPromociones.Columns[6].HeaderText = "Hora de terminación";
+                    dgvPromociones.Columns[5].Visible = false;
+                    dgvPromociones.Columns[6].Visible = false;
+                    dgvPromociones.Columns[7].Visible = true;
+                    dgvPromociones.Columns[8].Visible = true;
                     BuscarPromocionesHorarios();
                     break;
             }

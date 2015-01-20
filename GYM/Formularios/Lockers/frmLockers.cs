@@ -91,7 +91,7 @@ namespace GYM.Formularios
                     {
                         nombre = dr["nom_persona"].ToString();
                     }
-                    dgvLockers.Rows.Add(new object[] { dr["id"], dr["num"], nombre, tel, estado });
+                    dgvLockers.Rows.Add(new object[] { dr["id"], (int)dr["num"], nombre, tel, estado });
                 }
             }
             catch (MySqlException ex)

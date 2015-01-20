@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductosCompra));
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblEtiquetaTotal = new System.Windows.Forms.Label();
@@ -38,14 +39,14 @@
             this.lblInstrucciones = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.CCodigoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CCosto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtDescuento = new System.Windows.Forms.TextBox();
             this.lblDescuento = new System.Windows.Forms.Label();
             this.bgwBusqueda = new System.ComponentModel.BackgroundWorker();
             this.tmrEspera = new System.Windows.Forms.Timer(this.components);
+            this.CCodigoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CCosto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
@@ -162,39 +163,6 @@
             this.dgvProductos.TabIndex = 2;
             this.dgvProductos.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_RowEnter);
             // 
-            // CCodigoProducto
-            // 
-            this.CCodigoProducto.Frozen = true;
-            this.CCodigoProducto.HeaderText = "Código Producto";
-            this.CCodigoProducto.Name = "CCodigoProducto";
-            this.CCodigoProducto.ReadOnly = true;
-            this.CCodigoProducto.Width = 150;
-            // 
-            // CNombre
-            // 
-            this.CNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.CNombre.Frozen = true;
-            this.CNombre.HeaderText = "Nombre";
-            this.CNombre.Name = "CNombre";
-            this.CNombre.ReadOnly = true;
-            this.CNombre.Width = 278;
-            // 
-            // CCantidad
-            // 
-            this.CCantidad.Frozen = true;
-            this.CCantidad.HeaderText = "Cantidad Existente";
-            this.CCantidad.Name = "CCantidad";
-            this.CCantidad.ReadOnly = true;
-            this.CCantidad.Width = 120;
-            // 
-            // CCosto
-            // 
-            this.CCosto.Frozen = true;
-            this.CCosto.HeaderText = "Costo";
-            this.CCosto.Name = "CCosto";
-            this.CCosto.ReadOnly = true;
-            this.CCosto.Width = 120;
-            // 
             // txtDescuento
             // 
             this.txtDescuento.Font = new System.Drawing.Font("Segoe UI", 11F);
@@ -224,6 +192,41 @@
             // 
             this.tmrEspera.Interval = 300;
             this.tmrEspera.Tick += new System.EventHandler(this.tmrEspera_Tick);
+            // 
+            // CCodigoProducto
+            // 
+            this.CCodigoProducto.Frozen = true;
+            this.CCodigoProducto.HeaderText = "Código Producto";
+            this.CCodigoProducto.Name = "CCodigoProducto";
+            this.CCodigoProducto.ReadOnly = true;
+            this.CCodigoProducto.Width = 150;
+            // 
+            // CNombre
+            // 
+            this.CNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.CNombre.Frozen = true;
+            this.CNombre.HeaderText = "Nombre";
+            this.CNombre.Name = "CNombre";
+            this.CNombre.ReadOnly = true;
+            this.CNombre.Width = 278;
+            // 
+            // CCantidad
+            // 
+            this.CCantidad.Frozen = true;
+            this.CCantidad.HeaderText = "Cantidad Existente";
+            this.CCantidad.Name = "CCantidad";
+            this.CCantidad.ReadOnly = true;
+            this.CCantidad.Width = 120;
+            // 
+            // CCosto
+            // 
+            dataGridViewCellStyle1.Format = "C2";
+            this.CCosto.DefaultCellStyle = dataGridViewCellStyle1;
+            this.CCosto.Frozen = true;
+            this.CCosto.HeaderText = "Costo";
+            this.CCosto.Name = "CCosto";
+            this.CCosto.ReadOnly = true;
+            this.CCosto.Width = 120;
             // 
             // frmProductosCompra
             // 

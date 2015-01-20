@@ -28,13 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNuevaCompra));
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.CIDP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CNomProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CCosto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CDescuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbTotales = new System.Windows.Forms.GroupBox();
             this.lblDescuento = new System.Windows.Forms.Label();
             this.lblEDescuento = new System.Windows.Forms.Label();
@@ -57,6 +54,11 @@
             this.lblFolioFactura = new System.Windows.Forms.Label();
             this.txtFactura = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.CIDP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CNomProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CCosto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CDescuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.grbTotales.SuspendLayout();
             this.grbCompra.SuspendLayout();
@@ -92,38 +94,6 @@
             this.dgvProductos.TabIndex = 0;
             this.dgvProductos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellDoubleClick);
             this.dgvProductos.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_RowEnter);
-            // 
-            // CIDP
-            // 
-            this.CIDP.HeaderText = "Código de producto";
-            this.CIDP.Name = "CIDP";
-            this.CIDP.ReadOnly = true;
-            this.CIDP.Width = 150;
-            // 
-            // CNomProd
-            // 
-            this.CNomProd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CNomProd.HeaderText = "Nombre de producto";
-            this.CNomProd.Name = "CNomProd";
-            this.CNomProd.ReadOnly = true;
-            // 
-            // CCosto
-            // 
-            this.CCosto.HeaderText = "Costo";
-            this.CCosto.Name = "CCosto";
-            this.CCosto.ReadOnly = true;
-            // 
-            // CCantidad
-            // 
-            this.CCantidad.HeaderText = "Cantidad";
-            this.CCantidad.Name = "CCantidad";
-            this.CCantidad.ReadOnly = true;
-            // 
-            // CDescuento
-            // 
-            this.CDescuento.HeaderText = "Descuento";
-            this.CDescuento.Name = "CDescuento";
-            this.CDescuento.ReadOnly = true;
             // 
             // grbTotales
             // 
@@ -375,6 +345,42 @@
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
+            // CIDP
+            // 
+            this.CIDP.HeaderText = "Código de producto";
+            this.CIDP.Name = "CIDP";
+            this.CIDP.ReadOnly = true;
+            this.CIDP.Width = 150;
+            // 
+            // CNomProd
+            // 
+            this.CNomProd.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CNomProd.HeaderText = "Nombre de producto";
+            this.CNomProd.Name = "CNomProd";
+            this.CNomProd.ReadOnly = true;
+            // 
+            // CCosto
+            // 
+            dataGridViewCellStyle1.Format = "C2";
+            this.CCosto.DefaultCellStyle = dataGridViewCellStyle1;
+            this.CCosto.HeaderText = "Costo";
+            this.CCosto.Name = "CCosto";
+            this.CCosto.ReadOnly = true;
+            // 
+            // CCantidad
+            // 
+            this.CCantidad.HeaderText = "Cantidad";
+            this.CCantidad.Name = "CCantidad";
+            this.CCantidad.ReadOnly = true;
+            // 
+            // CDescuento
+            // 
+            dataGridViewCellStyle2.Format = "C2";
+            this.CDescuento.DefaultCellStyle = dataGridViewCellStyle2;
+            this.CDescuento.HeaderText = "Descuento";
+            this.CDescuento.Name = "CDescuento";
+            this.CDescuento.ReadOnly = true;
+            // 
             // frmNuevaCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,11 +423,6 @@
         private System.Windows.Forms.Label lblEDescuento;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnProductos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CIDP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CNomProd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CCosto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CCantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CDescuento;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.ComboBox cboTipoPago;
         private System.Windows.Forms.Label lblTipoPago;
@@ -432,5 +433,10 @@
         private System.Windows.Forms.TextBox txtFactura;
         private System.Windows.Forms.RadioButton rabRemision;
         private System.Windows.Forms.RadioButton rabFactura;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CIDP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CNomProd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CCosto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CCantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CDescuento;
     }
 }

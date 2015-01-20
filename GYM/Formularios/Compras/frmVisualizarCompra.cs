@@ -104,7 +104,7 @@ namespace GYM.Formularios.Compras
                 {
                     decimal costo = decimal.Parse(dr["precio"].ToString()), descuento = decimal.Parse(dr["descuento"].ToString());
                     int cant = int.Parse(dr["cantidad"].ToString());
-                    dgvCompraDetallada.Rows.Add(new object[] { dr["id_producto"], dr["nom"], cant, costo.ToString("C2"), descuento.ToString("C2"), ((cant * costo) - descuento).ToString("C2") });
+                    dgvCompraDetallada.Rows.Add(new object[] { dr["id_producto"], dr["nom"], cant, costo, descuento, ((cant * costo) - descuento) });
                 }
             }
             catch (MySqlException ex)

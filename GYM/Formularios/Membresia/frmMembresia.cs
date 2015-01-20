@@ -120,7 +120,7 @@ namespace GYM.Formularios.Membresia
                     }
                     else
                         fechaIni = "Sin información";
-                    dgvPersonas.Rows.Add(new object[] { dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), status, fechaIni, fecha, dr["genero"] });
+                    dgvPersonas.Rows.Add(new object[] { (int)dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), status, fechaIni, fecha, dr["genero"] });
                 }
             }
             catch (MySqlException ex)
@@ -271,14 +271,10 @@ namespace GYM.Formularios.Membresia
 
         private void frmMembresia_Load(object sender, EventArgs e)
         {
-            try
-            {
-                Clases.CFuncionesGenerales.CargarInterfaz(this);
-            }
-            catch (Exception ex)
-            {
-                Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un error genérico.", ex);
-            }
+            if (frmMain.nivelUsuario == 3)
+                btnPendiente.Visible = true;
+            else
+                btnPendiente.Visible = false;
         }
 
         private void dgvPersonas_RowEnter(object sender, DataGridViewCellEventArgs e)

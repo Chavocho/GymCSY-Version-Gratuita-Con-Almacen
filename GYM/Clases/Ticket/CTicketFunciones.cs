@@ -230,7 +230,7 @@ namespace GYM.Clases
                     e.Graphics.DrawString("SERVICIO: CIERRE DE CAJA", fuenteNormal, Brushes.Black, 0, y+=saltoLineaPeque);
                 }
                 y += saltoLinea;
-                e.Graphics.DrawString("FECHA: " + DateTime.Now.ToString("dd/MM/yyyy"), fuenteNormal, Brushes.Black, 0, y);
+                e.Graphics.DrawString("FECHA: " + DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt"), fuenteNormal, Brushes.Black, 0, y);
                 y += saltoLinea + 5;
                 if (DateTime.Now.TimeOfDay >= turnoMat && DateTime.Now.TimeOfDay < turnoVes)
                     turno = "MATUTINO";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProducto));
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -35,12 +36,12 @@
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvProducto = new System.Windows.Forms.DataGridView();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnImprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,6 +133,19 @@
             this.dgvProducto.TabIndex = 3;
             this.dgvProducto.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducto_RowEnter);
             // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnImprimir.Image = global::GYM.Properties.Resources.impresora;
+            this.btnImprimir.Location = new System.Drawing.Point(9, 192);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(120, 56);
+            this.btnImprimir.TabIndex = 6;
+            this.btnImprimir.Text = "Imprimir código de barras";
+            this.btnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
             // Codigo
             // 
             this.Codigo.HeaderText = "Código";
@@ -161,22 +175,11 @@
             // 
             // precio
             // 
+            dataGridViewCellStyle1.Format = "C2";
+            this.precio.DefaultCellStyle = dataGridViewCellStyle1;
             this.precio.HeaderText = "Precio";
             this.precio.Name = "precio";
             this.precio.ReadOnly = true;
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnImprimir.Image = global::GYM.Properties.Resources.impresora;
-            this.btnImprimir.Location = new System.Drawing.Point(9, 192);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(120, 56);
-            this.btnImprimir.TabIndex = 6;
-            this.btnImprimir.Text = "Imprimir código de barras";
-            this.btnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // frmProducto
             // 

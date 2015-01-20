@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCortes));
             this.dgvCaja = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Efectivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vouchers = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblEtiquetaFechaFin = new System.Windows.Forms.Label();
             this.lblEtiquetaFechaInicio = new System.Windows.Forms.Label();
             this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
@@ -43,6 +42,10 @@
             this.bgwCortes = new System.ComponentModel.BackgroundWorker();
             this.tmrEspera = new System.Windows.Forms.Timer(this.components);
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Efectivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vouchers = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCaja)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,34 +77,6 @@
             this.dgvCaja.Size = new System.Drawing.Size(640, 244);
             this.dgvCaja.TabIndex = 4;
             this.dgvCaja.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCaja_RowEnter);
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // Fecha
-            // 
-            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            // 
-            // Efectivo
-            // 
-            this.Efectivo.HeaderText = "Efectivo retirado";
-            this.Efectivo.Name = "Efectivo";
-            this.Efectivo.ReadOnly = true;
-            this.Efectivo.Width = 150;
-            // 
-            // Vouchers
-            // 
-            this.Vouchers.HeaderText = "Vouchers";
-            this.Vouchers.Name = "Vouchers";
-            this.Vouchers.ReadOnly = true;
-            this.Vouchers.Width = 150;
             // 
             // lblEtiquetaFechaFin
             // 
@@ -179,6 +154,40 @@
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // Fecha
+            // 
+            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle1.Format = "dd \'de\' MMMM \'del\' yyyy \',\' hh:mm:ss tt";
+            this.Fecha.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // Efectivo
+            // 
+            dataGridViewCellStyle2.Format = "C2";
+            this.Efectivo.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Efectivo.HeaderText = "Efectivo retirado";
+            this.Efectivo.Name = "Efectivo";
+            this.Efectivo.ReadOnly = true;
+            this.Efectivo.Width = 150;
+            // 
+            // Vouchers
+            // 
+            dataGridViewCellStyle3.Format = "C2";
+            this.Vouchers.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Vouchers.HeaderText = "Vouchers";
+            this.Vouchers.Name = "Vouchers";
+            this.Vouchers.ReadOnly = true;
+            this.Vouchers.Width = 150;
             // 
             // frmCortes
             // 

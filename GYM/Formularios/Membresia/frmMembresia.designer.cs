@@ -33,18 +33,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMembresia));
             this.dgvPersonas = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Socio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaVencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.lblInstruccionesBusqueda = new System.Windows.Forms.Label();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnPendiente = new System.Windows.Forms.Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Socio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaVencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,53 +102,6 @@
             this.dgvPersonas.Size = new System.Drawing.Size(914, 356);
             this.dgvPersonas.TabIndex = 3;
             this.dgvPersonas.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonas_RowEnter);
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "Número Socio";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ID.Width = 150;
-            // 
-            // Socio
-            // 
-            this.Socio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Socio.HeaderText = "Nombre y apellido";
-            this.Socio.Name = "Socio";
-            this.Socio.ReadOnly = true;
-            this.Socio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado Membresía";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Estado.Width = 180;
-            // 
-            // FechaInicio
-            // 
-            this.FechaInicio.HeaderText = "Fecha Inicio";
-            this.FechaInicio.Name = "FechaInicio";
-            this.FechaInicio.ReadOnly = true;
-            this.FechaInicio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.FechaInicio.Width = 170;
-            // 
-            // fechaVencimiento
-            // 
-            this.fechaVencimiento.HeaderText = "Fecha Vencimiento";
-            this.fechaVencimiento.Name = "fechaVencimiento";
-            this.fechaVencimiento.ReadOnly = true;
-            this.fechaVencimiento.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.fechaVencimiento.Width = 170;
-            // 
-            // Genero
-            // 
-            this.Genero.HeaderText = "Genero";
-            this.Genero.Name = "Genero";
-            this.Genero.ReadOnly = true;
-            this.Genero.Visible = false;
             // 
             // lblTitulo
             // 
@@ -222,6 +175,55 @@
             this.btnPendiente.UseVisualStyleBackColor = true;
             this.btnPendiente.Click += new System.EventHandler(this.btnPendiente_Click);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "Número Socio";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ID.Width = 150;
+            // 
+            // Socio
+            // 
+            this.Socio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Socio.HeaderText = "Nombre y apellido";
+            this.Socio.Name = "Socio";
+            this.Socio.ReadOnly = true;
+            this.Socio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado Membresía";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Estado.Width = 180;
+            // 
+            // FechaInicio
+            // 
+            this.FechaInicio.HeaderText = "Fecha Inicio";
+            this.FechaInicio.Name = "FechaInicio";
+            this.FechaInicio.ReadOnly = true;
+            this.FechaInicio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.FechaInicio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.FechaInicio.Width = 170;
+            // 
+            // fechaVencimiento
+            // 
+            this.fechaVencimiento.HeaderText = "Fecha Vencimiento";
+            this.fechaVencimiento.Name = "fechaVencimiento";
+            this.fechaVencimiento.ReadOnly = true;
+            this.fechaVencimiento.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.fechaVencimiento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.fechaVencimiento.Width = 170;
+            // 
+            // Genero
+            // 
+            this.Genero.HeaderText = "Genero";
+            this.Genero.Name = "Genero";
+            this.Genero.ReadOnly = true;
+            this.Genero.Visible = false;
+            // 
             // frmMembresia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -256,13 +258,13 @@
         private System.Windows.Forms.Label lblInstruccionesBusqueda;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnPendiente;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Socio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaVencimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Genero;
-        private System.Windows.Forms.Button btnPendiente;
 
     }
 }

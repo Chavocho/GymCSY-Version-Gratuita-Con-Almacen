@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVisualizarCompra));
             this.pnlCompra = new System.Windows.Forms.Panel();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -52,13 +55,13 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblEFecha = new System.Windows.Forms.Label();
             this.dgvCompraDetallada = new System.Windows.Forms.DataGridView();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.CIDProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CCosto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CDescuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAceptar = new System.Windows.Forms.Button();
             this.pnlCompra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompraDetallada)).BeginInit();
             this.SuspendLayout();
@@ -331,15 +334,27 @@
             this.dgvCompraDetallada.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvCompraDetallada.RowHeadersVisible = false;
             this.dgvCompraDetallada.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvCompraDetallada.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvCompraDetallada.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCompraDetallada.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCompraDetallada.ShowEditingIcon = false;
             this.dgvCompraDetallada.Size = new System.Drawing.Size(1008, 506);
             this.dgvCompraDetallada.TabIndex = 1;
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAceptar.Location = new System.Drawing.Point(921, 627);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 2;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // CIDProd
             // 
@@ -361,33 +376,27 @@
             // 
             // CCosto
             // 
+            dataGridViewCellStyle1.Format = "C2";
+            this.CCosto.DefaultCellStyle = dataGridViewCellStyle1;
             this.CCosto.HeaderText = "Costo";
             this.CCosto.Name = "CCosto";
             this.CCosto.Width = 130;
             // 
             // CDescuento
             // 
+            dataGridViewCellStyle2.Format = "C2";
+            this.CDescuento.DefaultCellStyle = dataGridViewCellStyle2;
             this.CDescuento.HeaderText = "Descuento";
             this.CDescuento.Name = "CDescuento";
             this.CDescuento.Width = 130;
             // 
             // CTotal
             // 
+            dataGridViewCellStyle3.Format = "C2";
+            this.CTotal.DefaultCellStyle = dataGridViewCellStyle3;
             this.CTotal.HeaderText = "Total de producto";
             this.CTotal.Name = "CTotal";
             this.CTotal.Width = 130;
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAceptar.Location = new System.Drawing.Point(921, 627);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 2;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // frmVisualizarCompra
             // 
@@ -435,12 +444,12 @@
         private System.Windows.Forms.Label lblImporte;
         private System.Windows.Forms.Label lblEImporte;
         private System.Windows.Forms.DataGridView dgvCompraDetallada;
+        private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.DataGridViewTextBoxColumn CIDProd;
         private System.Windows.Forms.DataGridViewTextBoxColumn CNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn CCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn CCosto;
         private System.Windows.Forms.DataGridViewTextBoxColumn CDescuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn CTotal;
-        private System.Windows.Forms.Button btnAceptar;
     }
 }

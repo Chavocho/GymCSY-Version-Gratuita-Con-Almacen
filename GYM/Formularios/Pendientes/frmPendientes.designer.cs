@@ -30,8 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPendientes));
             this.dgvPendientes = new System.Windows.Forms.DataGridView();
             this.cboPendientes = new System.Windows.Forms.ComboBox();
@@ -91,27 +95,27 @@
             this.CUsuario,
             this.CBtnAceptar,
             this.CBtnRechazar});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPendientes.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPendientes.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPendientes.Location = new System.Drawing.Point(12, 47);
             this.dgvPendientes.MultiSelect = false;
             this.dgvPendientes.Name = "dgvPendientes";
             this.dgvPendientes.ReadOnly = true;
             this.dgvPendientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPendientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPendientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvPendientes.RowHeadersVisible = false;
             this.dgvPendientes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvPendientes.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -195,6 +199,8 @@
             // 
             // CFechaIni
             // 
+            dataGridViewCellStyle2.Format = "dd \'de\' MMMM \'del\' yyyy";
+            this.CFechaIni.DefaultCellStyle = dataGridViewCellStyle2;
             this.CFechaIni.HeaderText = "Fecha inicio";
             this.CFechaIni.Name = "CFechaIni";
             this.CFechaIni.ReadOnly = true;
@@ -202,6 +208,8 @@
             // 
             // CFechaFin
             // 
+            dataGridViewCellStyle3.Format = "dd \'de\' MMMM \'del\' yyyy";
+            this.CFechaFin.DefaultCellStyle = dataGridViewCellStyle3;
             this.CFechaFin.HeaderText = "Fecha terminación";
             this.CFechaFin.Name = "CFechaFin";
             this.CFechaFin.ReadOnly = true;
@@ -209,6 +217,8 @@
             // 
             // CFechaPago
             // 
+            dataGridViewCellStyle4.Format = "dd \'de\' MMMM \'del\' yyyy hh:mm:ss tt";
+            this.CFechaPago.DefaultCellStyle = dataGridViewCellStyle4;
             this.CFechaPago.HeaderText = "Fecha pago";
             this.CFechaPago.Name = "CFechaPago";
             this.CFechaPago.ReadOnly = true;
@@ -223,6 +233,8 @@
             // 
             // CMonto
             // 
+            dataGridViewCellStyle5.Format = "C2";
+            this.CMonto.DefaultCellStyle = dataGridViewCellStyle5;
             this.CMonto.HeaderText = "Monto";
             this.CMonto.Name = "CMonto";
             this.CMonto.ReadOnly = true;
@@ -230,7 +242,7 @@
             // 
             // CUsuario
             // 
-            this.CUsuario.HeaderText = "Usuario";
+            this.CUsuario.HeaderText = "Atendió";
             this.CUsuario.Name = "CUsuario";
             this.CUsuario.ReadOnly = true;
             this.CUsuario.Width = 140;

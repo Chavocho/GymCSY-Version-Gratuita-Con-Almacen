@@ -49,7 +49,7 @@ namespace GYM.Formularios.Compras
                 dgvProductos.Rows.Clear();
                 foreach (DataRow dr in dt.Rows)
                 {
-                    dgvProductos.Rows.Add(new object[] { dr["id"], dr["nombre"], int.Parse(dr["cant"].ToString())+int.Parse(dr["cant_alm"].ToString()), decimal.Parse(dr["costo"].ToString()).ToString("C2") });
+                    dgvProductos.Rows.Add(new object[] { dr["id"], dr["nombre"], int.Parse(dr["cant"].ToString()) + int.Parse(dr["cant_alm"].ToString()), decimal.Parse(dr["costo"].ToString()) });
                 }
             }
             catch (FormatException ex)

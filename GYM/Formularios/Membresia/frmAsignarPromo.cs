@@ -98,7 +98,7 @@ namespace GYM.Formularios.Membresia
                             duracion = "Doce meses";
                             break;
                     }
-                    dgvPromociones.Rows.Add(new object[] { dr["id"], "", "", dr["descripcion"].ToString(), precio.ToString("C2"), duracion });
+                    dgvPromociones.Rows.Add(new object[] { dr["id"], "", "", dr["descripcion"].ToString(), precio, duracion });
                     dgvPromociones_RowEnter(dgvPromociones, new DataGridViewCellEventArgs(0, 0));
                 }
             }
@@ -170,7 +170,7 @@ namespace GYM.Formularios.Membresia
                             duracion = "Doce meses";
                             break;
                     }
-                    dgvPromociones.Rows.Add(new object[] { dr["id"], DateTime.Parse("01-01-0001 " + dr["hora_inicio"].ToString()).ToString("hh:mm tt"), DateTime.Parse("01-01-0001 " + dr["hora_fin"].ToString()).ToString("hh:mm tt"), dr["descripcion"].ToString(), precio.ToString("C2"), duracion });
+                    dgvPromociones.Rows.Add(new object[] { dr["id"], DateTime.Parse("01-01-0001 " + dr["hora_inicio"].ToString()), DateTime.Parse("01-01-0001 " + dr["hora_fin"].ToString()), dr["descripcion"].ToString(), precio, duracion });
                     dgvPromociones_RowEnter(dgvPromociones, new DataGridViewCellEventArgs(0, 0));
                 }
             }

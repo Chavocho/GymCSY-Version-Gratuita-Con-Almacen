@@ -34,14 +34,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMiembroCortesia));
             this.dgvPersonas = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Socio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.lblInstruccionesBusqueda = new System.Windows.Forms.Label();
             this.tmrEspera = new System.Windows.Forms.Timer(this.components);
             this.bgwConsulta = new System.ComponentModel.BackgroundWorker();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Socio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,27 +97,6 @@
             this.dgvPersonas.TabIndex = 2;
             this.dgvPersonas.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPersonas_RowEnter);
             // 
-            // ID
-            // 
-            this.ID.HeaderText = "Número Socio";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 150;
-            // 
-            // Socio
-            // 
-            this.Socio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Socio.HeaderText = "Nombre y apellido";
-            this.Socio.Name = "Socio";
-            this.Socio.ReadOnly = true;
-            // 
-            // Telefono
-            // 
-            this.Telefono.HeaderText = "Teléfono";
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            this.Telefono.Width = 175;
-            // 
             // btnAceptar
             // 
             this.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -163,6 +142,28 @@
             this.bgwConsulta.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwConsulta_DoWork);
             this.bgwConsulta.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwConsulta_RunWorkerCompleted);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "Número Socio";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 150;
+            // 
+            // Socio
+            // 
+            this.Socio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Socio.HeaderText = "Nombre y apellido";
+            this.Socio.Name = "Socio";
+            this.Socio.ReadOnly = true;
+            // 
+            // Telefono
+            // 
+            this.Telefono.HeaderText = "Teléfono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            this.Telefono.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Telefono.Width = 175;
+            // 
             // frmMiembroCortesia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,14 +188,14 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvPersonas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Socio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Label lblInstruccionesBusqueda;
         private System.Windows.Forms.Timer tmrEspera;
         private System.ComponentModel.BackgroundWorker bgwConsulta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Socio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
 
     }
 }

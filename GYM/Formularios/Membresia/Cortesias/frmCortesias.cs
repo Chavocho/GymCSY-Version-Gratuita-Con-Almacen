@@ -57,7 +57,7 @@ namespace GYM.Formularios.Membresia
                         tel = dr["celular"].ToString();
                     else
                         tel = dr["telefono"].ToString() + ", " + dr["celular"].ToString();
-                    dgvPersonas.Rows.Add(new object[] { dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), tel, fecha.ToString("dd") + " de " + fecha.ToString("MMMM") + " del " + fecha.ToString("yyyy"), dr["genero"] });
+                    dgvPersonas.Rows.Add(new object[] { (int)dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), tel, fecha, dr["genero"] });
                 }
             }
             catch (MySqlException ex)

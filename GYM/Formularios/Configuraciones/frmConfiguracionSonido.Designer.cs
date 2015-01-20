@@ -148,9 +148,9 @@
             this.chbSonidosMembresias.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.chbSonidosMembresias.Location = new System.Drawing.Point(12, 12);
             this.chbSonidosMembresias.Name = "chbSonidosMembresias";
-            this.chbSonidosMembresias.Size = new System.Drawing.Size(364, 25);
+            this.chbSonidosMembresias.Size = new System.Drawing.Size(345, 25);
             this.chbSonidosMembresias.TabIndex = 0;
-            this.chbSonidosMembresias.Text = "Utilizar alertas de sonido en registro de entradas";
+            this.chbSonidosMembresias.Text = "Utilizar alertas de sonido en ingreso de socios";
             this.chbSonidosMembresias.UseVisualStyleBackColor = true;
             this.chbSonidosMembresias.CheckedChanged += new System.EventHandler(this.chbSonidosMembresias_CheckedChanged);
             // 

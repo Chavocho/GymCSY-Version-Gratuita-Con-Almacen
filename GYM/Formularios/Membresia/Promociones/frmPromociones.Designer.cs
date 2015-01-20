@@ -29,13 +29,20 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPromociones));
             this.btnNueva = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dgvPromociones = new System.Windows.Forms.DataGridView();
+            this.cboTipoPromo = new System.Windows.Forms.ComboBox();
+            this.lblETipoPromo = new System.Windows.Forms.Label();
             this.CID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,8 +50,8 @@
             this.Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CFechaIni = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CFechaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cboTipoPromo = new System.Windows.Forms.ComboBox();
-            this.lblETipoPromo = new System.Windows.Forms.Label();
+            this.CHoraIni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CHoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPromociones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,28 +118,30 @@
             this.CDuracion,
             this.Genero,
             this.CFechaIni,
-            this.CFechaFin});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPromociones.DefaultCellStyle = dataGridViewCellStyle2;
+            this.CFechaFin,
+            this.CHoraIni,
+            this.CHoraFin});
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPromociones.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvPromociones.Location = new System.Drawing.Point(133, 47);
             this.dgvPromociones.MultiSelect = false;
             this.dgvPromociones.Name = "dgvPromociones";
             this.dgvPromociones.ReadOnly = true;
             this.dgvPromociones.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPromociones.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPromociones.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvPromociones.RowHeadersVisible = false;
             this.dgvPromociones.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvPromociones.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -140,52 +149,6 @@
             this.dgvPromociones.Size = new System.Drawing.Size(1039, 363);
             this.dgvPromociones.TabIndex = 2;
             this.dgvPromociones.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPromociones_RowEnter);
-            // 
-            // CID
-            // 
-            this.CID.HeaderText = "ID";
-            this.CID.Name = "CID";
-            this.CID.ReadOnly = true;
-            this.CID.Visible = false;
-            // 
-            // CDescripcion
-            // 
-            this.CDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CDescripcion.HeaderText = "Descripción";
-            this.CDescripcion.Name = "CDescripcion";
-            this.CDescripcion.ReadOnly = true;
-            // 
-            // CPrecio
-            // 
-            this.CPrecio.HeaderText = "Precio";
-            this.CPrecio.Name = "CPrecio";
-            this.CPrecio.ReadOnly = true;
-            // 
-            // CDuracion
-            // 
-            this.CDuracion.HeaderText = "Duración";
-            this.CDuracion.Name = "CDuracion";
-            this.CDuracion.ReadOnly = true;
-            // 
-            // Genero
-            // 
-            this.Genero.HeaderText = "Genero";
-            this.Genero.Name = "Genero";
-            this.Genero.ReadOnly = true;
-            // 
-            // CFechaIni
-            // 
-            this.CFechaIni.HeaderText = "Fecha de inicio";
-            this.CFechaIni.Name = "CFechaIni";
-            this.CFechaIni.ReadOnly = true;
-            this.CFechaIni.Width = 200;
-            // 
-            // CFechaFin
-            // 
-            this.CFechaFin.HeaderText = "Fecha de terminación";
-            this.CFechaFin.Name = "CFechaFin";
-            this.CFechaFin.ReadOnly = true;
-            this.CFechaFin.Width = 200;
             // 
             // cboTipoPromo
             // 
@@ -211,6 +174,79 @@
             this.lblETipoPromo.Size = new System.Drawing.Size(124, 19);
             this.lblETipoPromo.TabIndex = 0;
             this.lblETipoPromo.Text = "Tipo de promoción";
+            // 
+            // CID
+            // 
+            this.CID.HeaderText = "ID";
+            this.CID.Name = "CID";
+            this.CID.ReadOnly = true;
+            this.CID.Visible = false;
+            // 
+            // CDescripcion
+            // 
+            this.CDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CDescripcion.HeaderText = "Descripción";
+            this.CDescripcion.Name = "CDescripcion";
+            this.CDescripcion.ReadOnly = true;
+            // 
+            // CPrecio
+            // 
+            dataGridViewCellStyle2.Format = "C2";
+            this.CPrecio.DefaultCellStyle = dataGridViewCellStyle2;
+            this.CPrecio.HeaderText = "Precio";
+            this.CPrecio.Name = "CPrecio";
+            this.CPrecio.ReadOnly = true;
+            // 
+            // CDuracion
+            // 
+            this.CDuracion.HeaderText = "Duración";
+            this.CDuracion.Name = "CDuracion";
+            this.CDuracion.ReadOnly = true;
+            this.CDuracion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Genero
+            // 
+            this.Genero.HeaderText = "Genero";
+            this.Genero.Name = "Genero";
+            this.Genero.ReadOnly = true;
+            // 
+            // CFechaIni
+            // 
+            dataGridViewCellStyle3.Format = "dd \'de\' MMMM \'del\' yyyy";
+            this.CFechaIni.DefaultCellStyle = dataGridViewCellStyle3;
+            this.CFechaIni.HeaderText = "Fecha de inicio";
+            this.CFechaIni.Name = "CFechaIni";
+            this.CFechaIni.ReadOnly = true;
+            this.CFechaIni.Width = 200;
+            // 
+            // CFechaFin
+            // 
+            dataGridViewCellStyle4.Format = "dd \'de\' MMMM \'del\' yyyy";
+            this.CFechaFin.DefaultCellStyle = dataGridViewCellStyle4;
+            this.CFechaFin.HeaderText = "Fecha de terminación";
+            this.CFechaFin.Name = "CFechaFin";
+            this.CFechaFin.ReadOnly = true;
+            this.CFechaFin.Width = 200;
+            // 
+            // CHoraIni
+            // 
+            dataGridViewCellStyle5.Format = "hh:mm tt";
+            this.CHoraIni.DefaultCellStyle = dataGridViewCellStyle5;
+            this.CHoraIni.HeaderText = "Hora de inicio";
+            this.CHoraIni.Name = "CHoraIni";
+            this.CHoraIni.ReadOnly = true;
+            this.CHoraIni.Visible = false;
+            this.CHoraIni.Width = 120;
+            // 
+            // CHoraFin
+            // 
+            dataGridViewCellStyle6.Format = "hh:mm tt";
+            this.CHoraFin.DefaultCellStyle = dataGridViewCellStyle6;
+            this.CHoraFin.HeaderText = "Hora de fin";
+            this.CHoraFin.Name = "CHoraFin";
+            this.CHoraFin.ReadOnly = true;
+            this.CHoraFin.Visible = false;
+            this.CHoraFin.Width = 120;
             // 
             // frmPromociones
             // 
@@ -249,5 +285,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Genero;
         private System.Windows.Forms.DataGridViewTextBoxColumn CFechaIni;
         private System.Windows.Forms.DataGridViewTextBoxColumn CFechaFin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CHoraIni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CHoraFin;
     }
 }

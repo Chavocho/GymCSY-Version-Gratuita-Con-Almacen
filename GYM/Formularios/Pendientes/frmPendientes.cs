@@ -110,7 +110,7 @@ namespace GYM.Formularios
                         if (!numSocios.Contains((int)dr["numSocio"]))
                         {
                             numSocios.Add((int)dr["numSocio"]);
-                            dgvPendientes.Rows.Add(new object[] { dr["id"], dr["numSocio"].ToString(), dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), "", dr["descripcion"].ToString(), fechaIni.ToString("dd/MM/yyyy"), fechaFin.ToString("dd/MM/yyyy"), fechaPago.ToString("dd/MM/yyyy"), dr["folio_remision"].ToString(), ((decimal)dr["precio"]).ToString("C2"), CFuncionesGenerales.NombreUsuario(dr["create_user_id"].ToString()) });
+                            dgvPendientes.Rows.Add(new object[] { dr["id"], dr["numSocio"].ToString(), dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), "", dr["descripcion"].ToString(), fechaIni, fechaFin, fechaPago, dr["folio_remision"].ToString(), ((decimal)dr["precio"]), CFuncionesGenerales.NombreUsuario(dr["create_user_id"].ToString()) });
                         }
                     }
                     else
@@ -123,7 +123,7 @@ namespace GYM.Formularios
                             nom = dr["nombre"].ToString() + " " + dr["apellidos"].ToString();
                         if (dr["numSocio"] != DBNull.Value)
                             numSocio = dr["numSocio"].ToString();
-                        dgvPendientes.Rows.Add(new object[] { dr["id"], numSocio, nom, dr["num"], dr["descripcion"].ToString(), fechaIni.ToString("dd/MM/yyyy"), fechaFin.ToString("dd/MM/yyyy"), fechaPago.ToString("dd/MM/yyyy"), dr["folio_remision"], ((decimal)dr["precio"]).ToString("C2"), CFuncionesGenerales.NombreUsuario(dr["create_user_id"].ToString()) });
+                        dgvPendientes.Rows.Add(new object[] { dr["id"], numSocio, nom, dr["num"], dr["descripcion"].ToString(), fechaIni, fechaFin, fechaPago, dr["folio_remision"], ((decimal)dr["precio"]), CFuncionesGenerales.NombreUsuario(dr["create_user_id"].ToString()) });
                     }
                 }
             }

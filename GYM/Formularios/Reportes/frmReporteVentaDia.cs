@@ -247,10 +247,10 @@ namespace GYM.Formularios.Reportes
                 {
                     foreach (DataRow dr in dtV.Rows)
                     {
-                        dgvVentas.Rows.Add(new object[] { dr["idv"], "", decimal.Parse(dr["efectivo"].ToString()), decimal.Parse(dr["tarjeta"].ToString()), dr["idv"].ToString(), DateTime.Parse(dr["fecha"].ToString()).ToString("hh:mm tt"), dr["descripcion"].ToString(), dr["userName"].ToString() });
+                        dgvVentas.Rows.Add(new object[] { dr["idv"], "", decimal.Parse(dr["efectivo"].ToString()), decimal.Parse(dr["tarjeta"].ToString()), dr["idv"].ToString(), DateTime.Parse(dr["fecha"].ToString()), dr["descripcion"].ToString(), dr["userName"].ToString() });
                     } 
-                    dgvVentas_RowEnter(dgvVentas, new DataGridViewCellEventArgs(0, 0));
                 }
+                dgvVentas_RowEnter(dgvVentas, new DataGridViewCellEventArgs(0, 0));
 	        }
 	        catch (Exception ex)
 	        {
@@ -269,6 +269,7 @@ namespace GYM.Formularios.Reportes
             Label lblPrecio;
             Label lblECant;
             Label lblCant;
+            int tabIndex = 0;
             try
             {
                 Graphics e = this.CreateGraphics();
@@ -285,10 +286,14 @@ namespace GYM.Formularios.Reportes
                 lblECant = new Label();
 
                 //Asignamos sus propiedades usando el método PropiedadesLabelEtiqueta
-                PropiedadesLabelEtiqueta(ref lblECodProd, "lblECodProd", "Código de producto", new Point(lCod, y));
-                PropiedadesLabelEtiqueta(ref lblENombre, "lblENombre", "Nombre", new Point(lNom, y));
-                PropiedadesLabelEtiqueta(ref lblEPrecio, "lblEPrecio", "Precio", new Point(lPre, y));
-                PropiedadesLabelEtiqueta(ref lblECant, "lblECant", "Cantidad", new Point(lCan, y));
+                PropiedadesLabelEtiqueta(ref lblECodProd, "lblECodProd", "Código de producto", new Point(lCod, y), tabIndex);
+                tabIndex++;
+                PropiedadesLabelEtiqueta(ref lblENombre, "lblENombre", "Nombre", new Point(lNom, y), tabIndex);
+                tabIndex++;
+                PropiedadesLabelEtiqueta(ref lblEPrecio, "lblEPrecio", "Precio", new Point(lPre, y), tabIndex);
+                tabIndex++;
+                PropiedadesLabelEtiqueta(ref lblECant, "lblECant", "Cantidad", new Point(lCan, y), tabIndex);
+                tabIndex++;
 
                 //Agregamos los controles al panel
                 pnlProductos.Controls.Add(lblECodProd);
@@ -305,10 +310,14 @@ namespace GYM.Formularios.Reportes
                     lblCant = new Label();
                     
                     //Asignamos sus propiedades usando el método PropiedadesLabel
-                    PropiedadesLabel(ref lblCodProd, "lblCodProd" + x.ToString("000"), dr["id_producto"].ToString(), new Point(lCod, y));
-                    PropiedadesLabel(ref lblNombre, "lblNombre" + x.ToString("000"), dr["nombre"].ToString(), new Point(lNom, y));
-                    PropiedadesLabel(ref lblPrecio, "lblPrecio" + x.ToString("000"), dr["precio"].ToString(), new Point(lPre, y));
-                    PropiedadesLabel(ref lblCant, "lblCant" + x.ToString("000"), dr["cantidad"].ToString(), new Point(lCan, y));
+                    PropiedadesLabel(ref lblCodProd, "lblCodProd" + x.ToString("000"), dr["id_producto"].ToString(), new Point(lCod, y), tabIndex);
+                    tabIndex++;
+                    PropiedadesLabel(ref lblNombre, "lblNombre" + x.ToString("000"), dr["nombre"].ToString(), new Point(lNom, y), tabIndex);
+                    tabIndex++;
+                    PropiedadesLabel(ref lblPrecio, "lblPrecio" + x.ToString("000"), dr["precio"].ToString(), new Point(lPre, y), tabIndex);
+                    tabIndex++;
+                    PropiedadesLabel(ref lblCant, "lblCant" + x.ToString("000"), dr["cantidad"].ToString(), new Point(lCan, y), tabIndex);
+                    tabIndex++;
 
                     //Agregamos los controles al panel
                     pnlProductos.Controls.Add(lblCodProd);
@@ -325,7 +334,7 @@ namespace GYM.Formularios.Reportes
             }
         }
 
-        private void PropiedadesLabelEtiqueta(ref Label lbl, string name, string texto, Point location)
+        private void PropiedadesLabelEtiqueta(ref Label lbl, string name, string texto, Point location, int tabIndex)
         {
             try
             {
@@ -334,6 +343,7 @@ namespace GYM.Formularios.Reportes
                 lbl.Font = new Font("Segoe UI", 12, FontStyle.Bold);
                 lbl.Text = texto;
                 lbl.Location = location;
+                lbl.TabIndex = tabIndex;
             }
             catch (Exception ex)
             {
@@ -341,7 +351,7 @@ namespace GYM.Formularios.Reportes
             }
         }
 
-        private void PropiedadesLabel(ref Label lbl, string name, string texto, Point location)
+        private void PropiedadesLabel(ref Label lbl, string name, string texto, Point location, int tabIndex)
         {
             try
             {
@@ -350,6 +360,7 @@ namespace GYM.Formularios.Reportes
                 lbl.Font = new Font("Segoe UI", 11, FontStyle.Regular);
                 lbl.Text = texto;
                 lbl.Location = location;
+                lbl.TabIndex = tabIndex;
             }
             catch (Exception ex)
             {
@@ -424,9 +435,19 @@ namespace GYM.Formularios.Reportes
                     }
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void frmReporteVentaDia_SizeChanged(object sender, EventArgs e)
+        {
+            if (cboReporte.SelectedIndex == 1)
+            {
+                if (dgvVentas.CurrentRow != null)
+                {
+                    LlenarPanelProductos();
+                }
             }
         }
     }
