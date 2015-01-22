@@ -366,7 +366,7 @@ namespace GYM.Formularios
         {
             try
             {
-                if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("caja", "estado")))
+                if (Clases.Caja.EstadoCaja())
                 {
                     Formularios.Caja.frmEntradaSalida frm = new Formularios.Caja.frmEntradaSalida();
                     frm.TipoMovimiento = Formularios.Caja.frmEntradaSalida.Movimiento.Entrada;
@@ -435,7 +435,7 @@ namespace GYM.Formularios
         {
             try
             {
-                if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("caja", "estado")))
+                if (Clases.Caja.EstadoCaja())
                 {
                     Formularios.Caja.frmEntradaSalida frm = new Formularios.Caja.frmEntradaSalida();
                     frm.TipoMovimiento = Formularios.Caja.frmEntradaSalida.Movimiento.Salida;

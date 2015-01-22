@@ -34,6 +34,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteVentaDia));
             this.dgvVentas = new System.Windows.Forms.DataGridView();
+            this.CID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CNumSocio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CEfectivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CVouchers = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CFolio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cboTurno = new System.Windows.Forms.ComboBox();
             this.lblETurno = new System.Windows.Forms.Label();
             this.pnlProductos = new System.Windows.Forms.Panel();
@@ -51,14 +59,6 @@
             this.lblEEfectivo = new System.Windows.Forms.Label();
             this.lblVoucher = new System.Windows.Forms.Label();
             this.lblEVoucher = new System.Windows.Forms.Label();
-            this.CID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CNumSocio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CEfectivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CVouchers = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CFolio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,6 +94,64 @@
             this.dgvVentas.Size = new System.Drawing.Size(984, 423);
             this.dgvVentas.TabIndex = 7;
             this.dgvVentas.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_RowEnter);
+            // 
+            // CID
+            // 
+            this.CID.HeaderText = "ID";
+            this.CID.Name = "CID";
+            this.CID.ReadOnly = true;
+            this.CID.Visible = false;
+            // 
+            // CNumSocio
+            // 
+            this.CNumSocio.HeaderText = "Núm. Socio";
+            this.CNumSocio.Name = "CNumSocio";
+            this.CNumSocio.ReadOnly = true;
+            // 
+            // CEfectivo
+            // 
+            dataGridViewCellStyle1.Format = "C2";
+            this.CEfectivo.DefaultCellStyle = dataGridViewCellStyle1;
+            this.CEfectivo.HeaderText = "Efectivo";
+            this.CEfectivo.Name = "CEfectivo";
+            this.CEfectivo.ReadOnly = true;
+            // 
+            // CVouchers
+            // 
+            dataGridViewCellStyle2.Format = "C2";
+            this.CVouchers.DefaultCellStyle = dataGridViewCellStyle2;
+            this.CVouchers.HeaderText = "Vouchers";
+            this.CVouchers.Name = "CVouchers";
+            this.CVouchers.ReadOnly = true;
+            // 
+            // CFolio
+            // 
+            this.CFolio.HeaderText = "Folio";
+            this.CFolio.Name = "CFolio";
+            this.CFolio.ReadOnly = true;
+            this.CFolio.Width = 130;
+            // 
+            // CHora
+            // 
+            dataGridViewCellStyle3.Format = "hh:mm tt";
+            this.CHora.DefaultCellStyle = dataGridViewCellStyle3;
+            this.CHora.HeaderText = "Hora";
+            this.CHora.Name = "CHora";
+            this.CHora.ReadOnly = true;
+            // 
+            // CDescripcion
+            // 
+            this.CDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CDescripcion.HeaderText = "Descripción";
+            this.CDescripcion.Name = "CDescripcion";
+            this.CDescripcion.ReadOnly = true;
+            // 
+            // CUsuario
+            // 
+            this.CUsuario.HeaderText = "Atendió";
+            this.CUsuario.Name = "CUsuario";
+            this.CUsuario.ReadOnly = true;
+            this.CUsuario.Width = 150;
             // 
             // cboTurno
             // 
@@ -210,16 +268,16 @@
             this.lblETotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblETotal.Location = new System.Drawing.Point(12, 668);
             this.lblETotal.Name = "lblETotal";
-            this.lblETotal.Size = new System.Drawing.Size(248, 21);
+            this.lblETotal.Size = new System.Drawing.Size(171, 21);
             this.lblETotal.TabIndex = 9;
-            this.lblETotal.Text = "Total de ventas de membresías:";
+            this.lblETotal.Text = "Total de membresías:";
             // 
             // lblTotal
             // 
             this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblTotal.Location = new System.Drawing.Point(266, 669);
+            this.lblTotal.Location = new System.Drawing.Point(189, 669);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(44, 20);
             this.lblTotal.TabIndex = 10;
@@ -230,7 +288,7 @@
             this.lblEfectivo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblEfectivo.AutoSize = true;
             this.lblEfectivo.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblEfectivo.Location = new System.Drawing.Point(586, 669);
+            this.lblEfectivo.Location = new System.Drawing.Point(547, 669);
             this.lblEfectivo.Name = "lblEfectivo";
             this.lblEfectivo.Size = new System.Drawing.Size(44, 20);
             this.lblEfectivo.TabIndex = 12;
@@ -241,7 +299,7 @@
             this.lblEEfectivo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblEEfectivo.AutoSize = true;
             this.lblEEfectivo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblEEfectivo.Location = new System.Drawing.Point(343, 668);
+            this.lblEEfectivo.Location = new System.Drawing.Point(304, 668);
             this.lblEEfectivo.Name = "lblEEfectivo";
             this.lblEEfectivo.Size = new System.Drawing.Size(237, 21);
             this.lblEEfectivo.TabIndex = 11;
@@ -263,69 +321,11 @@
             this.lblEVoucher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEVoucher.AutoSize = true;
             this.lblEVoucher.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblEVoucher.Location = new System.Drawing.Point(663, 668);
+            this.lblEVoucher.Location = new System.Drawing.Point(662, 668);
             this.lblEVoucher.Name = "lblEVoucher";
             this.lblEVoucher.Size = new System.Drawing.Size(244, 21);
             this.lblEVoucher.TabIndex = 13;
             this.lblEVoucher.Text = "Total vouchers de membresías:";
-            // 
-            // CID
-            // 
-            this.CID.HeaderText = "ID";
-            this.CID.Name = "CID";
-            this.CID.ReadOnly = true;
-            this.CID.Visible = false;
-            // 
-            // CNumSocio
-            // 
-            this.CNumSocio.HeaderText = "Núm. Socio";
-            this.CNumSocio.Name = "CNumSocio";
-            this.CNumSocio.ReadOnly = true;
-            // 
-            // CEfectivo
-            // 
-            dataGridViewCellStyle1.Format = "C2";
-            this.CEfectivo.DefaultCellStyle = dataGridViewCellStyle1;
-            this.CEfectivo.HeaderText = "Efectivo";
-            this.CEfectivo.Name = "CEfectivo";
-            this.CEfectivo.ReadOnly = true;
-            // 
-            // CVouchers
-            // 
-            dataGridViewCellStyle2.Format = "C2";
-            this.CVouchers.DefaultCellStyle = dataGridViewCellStyle2;
-            this.CVouchers.HeaderText = "Vouchers";
-            this.CVouchers.Name = "CVouchers";
-            this.CVouchers.ReadOnly = true;
-            // 
-            // CFolio
-            // 
-            this.CFolio.HeaderText = "Folio";
-            this.CFolio.Name = "CFolio";
-            this.CFolio.ReadOnly = true;
-            this.CFolio.Width = 130;
-            // 
-            // CHora
-            // 
-            dataGridViewCellStyle3.Format = "hh:mm tt";
-            this.CHora.DefaultCellStyle = dataGridViewCellStyle3;
-            this.CHora.HeaderText = "Hora";
-            this.CHora.Name = "CHora";
-            this.CHora.ReadOnly = true;
-            // 
-            // CDescripcion
-            // 
-            this.CDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CDescripcion.HeaderText = "Descripción";
-            this.CDescripcion.Name = "CDescripcion";
-            this.CDescripcion.ReadOnly = true;
-            // 
-            // CUsuario
-            // 
-            this.CUsuario.HeaderText = "Atendió";
-            this.CUsuario.Name = "CUsuario";
-            this.CUsuario.ReadOnly = true;
-            this.CUsuario.Width = 150;
             // 
             // frmReporteVentaDia
             // 

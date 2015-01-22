@@ -110,7 +110,7 @@ namespace GYM.Formularios
                         if (!numSocios.Contains((int)dr["numSocio"]))
                         {
                             numSocios.Add((int)dr["numSocio"]);
-                            dgvPendientes.Rows.Add(new object[] { dr["id"], dr["numSocio"].ToString(), dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), "", dr["descripcion"].ToString(), fechaIni, fechaFin, fechaPago, dr["folio_remision"].ToString(), ((decimal)dr["precio"]), CFuncionesGenerales.NombreUsuario(dr["create_user_id"].ToString()) });
+                            dgvPendientes.Rows.Add(new object[] { dr["id"], (int)dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), "", dr["descripcion"].ToString(), fechaIni, fechaFin, fechaPago, dr["folio_remision"].ToString(), ((decimal)dr["precio"]), CFuncionesGenerales.NombreUsuario(dr["create_user_id"].ToString()) });
                         }
                     }
                     else

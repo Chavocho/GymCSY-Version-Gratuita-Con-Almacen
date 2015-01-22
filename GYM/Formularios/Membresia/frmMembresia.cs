@@ -302,6 +302,10 @@ namespace GYM.Formularios.Membresia
                         dgvPersonas[2, dgvPersonas.CurrentRow.Index].Value = "Pendiente";
                     }
                 }
+                else if (dgvPersonas[2, dgvPersonas.CurrentRow.Index].Value.ToString() == "Rechazada")
+                {
+                    MessageBox.Show("Para reactivar la membresía de " + dgvPersonas[1, dgvPersonas.CurrentRow.Index].Value.ToString() + " es necesario renovar la membresía");
+                }
             }
         }
     }

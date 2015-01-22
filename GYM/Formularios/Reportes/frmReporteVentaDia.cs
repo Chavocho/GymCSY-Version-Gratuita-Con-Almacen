@@ -46,11 +46,11 @@ namespace GYM.Formularios.Reportes
             fecha = dtpFecha.Value;
         }
 
-        private void ObtenerTotalVentasMembresias()
+        private void ObtenerTotalVentasMembresias(int turno)
         {
             try
             {
-                lblETotal.Text = "Total de ventas de membresías:";
+                lblETotal.Text = "Total de membresías:";
                 lblEEfectivo.Text = "Total efectivo de membresías:";
                 lblEVoucher.Text = "Total vouchers de membresías:";
                 lblTotal.Left = lblETotal.Right + 6;
@@ -60,8 +60,16 @@ namespace GYM.Formularios.Reportes
                 MySqlCommand sql = new MySqlCommand();
                 sql.CommandText = "SELECT SUM(efectivo) AS ef, SUM(tarjeta) AS ta, SUM(efectivo + tarjeta) AS tot FROM caja " + 
                     "WHERE (fecha BETWEEN ?fechaIni AND ?fechaFin) AND (descripcion=?concepto01 OR descripcion=?concepto02)";
-                sql.Parameters.AddWithValue("?fechaIni", dtpFecha.Value.ToString("yyyy-MM-dd") + " 00:00:00");
-                sql.Parameters.AddWithValue("?fechaFin", dtpFecha.Value.ToString("yyyy-MM-dd") + " 23:59:59");
+                if (turno == 0)
+                {
+                    sql.Parameters.AddWithValue("?fechaIni", dtpFecha.Value.ToString("yyyy-MM-dd") + " 00:00:00");
+                    sql.Parameters.AddWithValue("?fechaFin", dtpFecha.Value.ToString("yyyy-MM-dd") + " " + horaFin.ToString("HH:mm") + ":00");
+                }
+                else
+                {
+                    sql.Parameters.AddWithValue("?fechaIni", dtpFecha.Value.ToString("yyyy-MM-dd") + " " + horaFin.ToString("HH:mm") + ":00");
+                    sql.Parameters.AddWithValue("?fechaFin", dtpFecha.Value.ToString("yyyy-MM-dd") + " 23:59:59");
+                }
                 sql.Parameters.AddWithValue("?concepto01", "NUEVA MEMBRESÍA");
                 sql.Parameters.AddWithValue("?concepto02", "RENOVACIÓN MEMBRESÍA");
                 DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
@@ -99,7 +107,7 @@ namespace GYM.Formularios.Reportes
             }
         }
 
-        private void ObtenerTotalVentasPOS()
+        private void ObtenerTotalVentasPOS(int turno)
         {
             try
             {
@@ -113,8 +121,16 @@ namespace GYM.Formularios.Reportes
                 MySqlCommand sql = new MySqlCommand();
                 sql.CommandText = "SELECT SUM(efectivo) AS ef, SUM(tarjeta) AS ta, SUM(efectivo + tarjeta) AS tot FROM caja " +
                     "WHERE (fecha BETWEEN ?fechaIni AND ?fechaFin) AND (descripcion=?concepto01 OR descripcion=?concepto02)";
-                sql.Parameters.AddWithValue("?fechaIni", dtpFecha.Value.ToString("yyyy-MM-dd") + " 00:00:00");
-                sql.Parameters.AddWithValue("?fechaFin", dtpFecha.Value.ToString("yyyy-MM-dd") + " 23:59:59");
+                if (turno == 0)
+                {
+                    sql.Parameters.AddWithValue("?fechaIni", dtpFecha.Value.ToString("yyyy-MM-dd") + " 00:00:00");
+                    sql.Parameters.AddWithValue("?fechaFin", dtpFecha.Value.ToString("yyyy-MM-dd") + " " + horaFin.ToString("HH:mm") + ":00");
+                }
+                else
+                {
+                    sql.Parameters.AddWithValue("?fechaIni", dtpFecha.Value.ToString("yyyy-MM-dd") + " " + horaFin.ToString("HH:mm") + ":00");
+                    sql.Parameters.AddWithValue("?fechaFin", dtpFecha.Value.ToString("yyyy-MM-dd") + " 23:59:59");
+                }
                 sql.Parameters.AddWithValue("?concepto01", "VENTA POS");
                 sql.Parameters.AddWithValue("?concepto02", "VENTA MOSTRADOR");
                 DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
@@ -399,12 +415,12 @@ namespace GYM.Formularios.Reportes
             switch (cboReporte.SelectedIndex)
             {
                 case 0:
-                    ObtenerTotalVentasMembresias();
+                    ObtenerTotalVentasMembresias(cboTurno.SelectedIndex);
                     dgvVentas.Columns[1].Visible = true;
                     bgwMembresia.RunWorkerAsync(cboTurno.SelectedIndex);
                     break;
                 case 1:
-                    ObtenerTotalVentasPOS();
+                    ObtenerTotalVentasPOS(cboTurno.SelectedIndex);
                     dgvVentas.Columns[1].Visible = false;
                     bgwVentas.RunWorkerAsync(cboTurno.SelectedIndex);
                     break;

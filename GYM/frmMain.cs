@@ -259,7 +259,8 @@ namespace GYM
             DetalladoCajaToolStripMenuItem.Visible = false;
             cortesDeCajaToolStripMenuItem.Visible = false;
             empleadoToolStripMenuItem.Visible = false;
-            reportesToolStripMenuItem.Visible = false;
+            ventasToolStripMenuItem1.Visible = false;
+            membresíasToolStripMenuItem.Visible = false;
             pendientesToolStripMenuItem.Visible = false;
             preciosDemembresíasToolStripMenuItem.Visible = false;
             promocionesToolStripMenuItem.Visible = false;
@@ -296,7 +297,7 @@ namespace GYM
                 MessageBox.Show("Esta opción no está disponible en la versión gratuita de GymCSY .\nContacta con el proveedor para adquirir la versión completa.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("caja", "estado")))
+            if (Clases.Caja.EstadoCaja())
             {
                 Formularios.Caja.frmEntradaSalida frm = new Formularios.Caja.frmEntradaSalida();
                 frm.TipoMovimiento = Formularios.Caja.frmEntradaSalida.Movimiento.Entrada;
@@ -314,7 +315,7 @@ namespace GYM
                 MessageBox.Show("Esta opción no está disponible en la versión gratuita de GymCSY .\nContacta con el proveedor para adquirir la versión completa.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("caja", "estado")))
+            if (Clases.Caja.EstadoCaja())
             {
                 Formularios.Caja.frmEntradaSalida frm = new Formularios.Caja.frmEntradaSalida();
                 frm.TipoMovimiento = Formularios.Caja.frmEntradaSalida.Movimiento.Salida;

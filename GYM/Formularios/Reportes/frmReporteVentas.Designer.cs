@@ -36,6 +36,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteVentas));
             this.dgvVentas = new System.Windows.Forms.DataGridView();
+            this.IDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CTipoPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CCantidadProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CAtendio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbFechas = new System.Windows.Forms.GroupBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblFechaFin = new System.Windows.Forms.Label();
@@ -51,12 +57,6 @@
             this.lblEEfectivo = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblETotal = new System.Windows.Forms.Label();
-            this.IDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CTipoPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CCantidadProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CAtendio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             this.grbFechas.SuspendLayout();
             this.SuspendLayout();
@@ -115,6 +115,53 @@
             this.dgvVentas.Size = new System.Drawing.Size(984, 379);
             this.dgvVentas.TabIndex = 1;
             this.dgvVentas.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_RowEnter);
+            // 
+            // IDV
+            // 
+            this.IDV.Frozen = true;
+            this.IDV.HeaderText = "IDVenta";
+            this.IDV.Name = "IDV";
+            this.IDV.ReadOnly = true;
+            this.IDV.Visible = false;
+            // 
+            // Fecha
+            // 
+            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Format = "dd \'de\'  MMMM \'del\' yyyy \', \' hh:mm tt";
+            this.Fecha.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // CTotal
+            // 
+            dataGridViewCellStyle3.Format = "C2";
+            this.CTotal.DefaultCellStyle = dataGridViewCellStyle3;
+            this.CTotal.HeaderText = "Total";
+            this.CTotal.Name = "CTotal";
+            this.CTotal.ReadOnly = true;
+            this.CTotal.Width = 120;
+            // 
+            // CTipoPago
+            // 
+            this.CTipoPago.HeaderText = "Tipo de pago";
+            this.CTipoPago.Name = "CTipoPago";
+            this.CTipoPago.ReadOnly = true;
+            this.CTipoPago.Width = 150;
+            // 
+            // CCantidadProducto
+            // 
+            this.CCantidadProducto.HeaderText = "Total de productos";
+            this.CCantidadProducto.Name = "CCantidadProducto";
+            this.CCantidadProducto.ReadOnly = true;
+            this.CCantidadProducto.Width = 150;
+            // 
+            // CAtendio
+            // 
+            this.CAtendio.HeaderText = "Atendió";
+            this.CAtendio.Name = "CAtendio";
+            this.CAtendio.ReadOnly = true;
+            this.CAtendio.Width = 130;
             // 
             // grbFechas
             // 
@@ -213,7 +260,7 @@
             this.lblVoucher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVoucher.AutoSize = true;
             this.lblVoucher.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblVoucher.Location = new System.Drawing.Point(897, 669);
+            this.lblVoucher.Location = new System.Drawing.Point(819, 669);
             this.lblVoucher.Name = "lblVoucher";
             this.lblVoucher.Size = new System.Drawing.Size(44, 20);
             this.lblVoucher.TabIndex = 20;
@@ -224,18 +271,18 @@
             this.lblEVoucher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEVoucher.AutoSize = true;
             this.lblEVoucher.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblEVoucher.Location = new System.Drawing.Point(659, 668);
+            this.lblEVoucher.Location = new System.Drawing.Point(688, 668);
             this.lblEVoucher.Name = "lblEVoucher";
-            this.lblEVoucher.Size = new System.Drawing.Size(232, 21);
+            this.lblEVoucher.Size = new System.Drawing.Size(125, 21);
             this.lblEVoucher.TabIndex = 19;
-            this.lblEVoucher.Text = "Total vouchers en mostrador:";
+            this.lblEVoucher.Text = "Total vouchers:";
             // 
             // lblEfectivo
             // 
             this.lblEfectivo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblEfectivo.AutoSize = true;
             this.lblEfectivo.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblEfectivo.Location = new System.Drawing.Point(570, 669);
+            this.lblEfectivo.Location = new System.Drawing.Point(492, 669);
             this.lblEfectivo.Name = "lblEfectivo";
             this.lblEfectivo.Size = new System.Drawing.Size(44, 20);
             this.lblEfectivo.TabIndex = 18;
@@ -246,18 +293,18 @@
             this.lblEEfectivo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblEEfectivo.AutoSize = true;
             this.lblEEfectivo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblEEfectivo.Location = new System.Drawing.Point(339, 668);
+            this.lblEEfectivo.Location = new System.Drawing.Point(368, 668);
             this.lblEEfectivo.Name = "lblEEfectivo";
-            this.lblEEfectivo.Size = new System.Drawing.Size(225, 21);
+            this.lblEEfectivo.Size = new System.Drawing.Size(118, 21);
             this.lblEEfectivo.TabIndex = 17;
-            this.lblEEfectivo.Text = "Total efectivo en mostrador:";
+            this.lblEEfectivo.Text = "Total efectivo:";
             // 
             // lblTotal
             // 
             this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblTotal.Location = new System.Drawing.Point(250, 669);
+            this.lblTotal.Location = new System.Drawing.Point(204, 669);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(44, 20);
             this.lblTotal.TabIndex = 16;
@@ -270,56 +317,9 @@
             this.lblETotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblETotal.Location = new System.Drawing.Point(8, 668);
             this.lblETotal.Name = "lblETotal";
-            this.lblETotal.Size = new System.Drawing.Size(236, 21);
+            this.lblETotal.Size = new System.Drawing.Size(190, 21);
             this.lblETotal.TabIndex = 15;
-            this.lblETotal.Text = "Total de ventas en mostrador:";
-            // 
-            // IDV
-            // 
-            this.IDV.Frozen = true;
-            this.IDV.HeaderText = "IDVenta";
-            this.IDV.Name = "IDV";
-            this.IDV.ReadOnly = true;
-            this.IDV.Visible = false;
-            // 
-            // Fecha
-            // 
-            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Format = "dd \'de\'  MMMM \'del\' yyyy \', \' hh:mm tt";
-            this.Fecha.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            // 
-            // CTotal
-            // 
-            dataGridViewCellStyle3.Format = "C2";
-            this.CTotal.DefaultCellStyle = dataGridViewCellStyle3;
-            this.CTotal.HeaderText = "Total";
-            this.CTotal.Name = "CTotal";
-            this.CTotal.ReadOnly = true;
-            this.CTotal.Width = 120;
-            // 
-            // CTipoPago
-            // 
-            this.CTipoPago.HeaderText = "Tipo de pago";
-            this.CTipoPago.Name = "CTipoPago";
-            this.CTipoPago.ReadOnly = true;
-            this.CTipoPago.Width = 150;
-            // 
-            // CCantidadProducto
-            // 
-            this.CCantidadProducto.HeaderText = "Total de productos";
-            this.CCantidadProducto.Name = "CCantidadProducto";
-            this.CCantidadProducto.ReadOnly = true;
-            this.CCantidadProducto.Width = 150;
-            // 
-            // CAtendio
-            // 
-            this.CAtendio.HeaderText = "Atendió";
-            this.CAtendio.Name = "CAtendio";
-            this.CAtendio.ReadOnly = true;
-            this.CAtendio.Width = 130;
+            this.lblETotal.Text = "Total ventas mostrador:";
             // 
             // frmReporteVentas
             // 

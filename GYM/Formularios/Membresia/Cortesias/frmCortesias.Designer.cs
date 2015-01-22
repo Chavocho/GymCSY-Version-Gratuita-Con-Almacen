@@ -174,7 +174,7 @@
             // 
             // fechaVencimiento
             // 
-            dataGridViewCellStyle2.Format = "dd \'de\' MMMM \'del\' yyyy hh:mm:ss tt";
+            dataGridViewCellStyle2.Format = "dd \'de\' MMMM \'del\' yyyy";
             this.fechaVencimiento.DefaultCellStyle = dataGridViewCellStyle2;
             this.fechaVencimiento.HeaderText = "Fecha Vencimiento";
             this.fechaVencimiento.Name = "fechaVencimiento";

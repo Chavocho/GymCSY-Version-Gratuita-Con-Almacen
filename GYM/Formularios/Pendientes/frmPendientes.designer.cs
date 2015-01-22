@@ -217,7 +217,7 @@
             // 
             // CFechaPago
             // 
-            dataGridViewCellStyle4.Format = "dd \'de\' MMMM \'del\' yyyy hh:mm:ss tt";
+            dataGridViewCellStyle4.Format = "dd \'de\' MMMM \'del\' yyyy";
             this.CFechaPago.DefaultCellStyle = dataGridViewCellStyle4;
             this.CFechaPago.HeaderText = "Fecha pago";
             this.CFechaPago.Name = "CFechaPago";
