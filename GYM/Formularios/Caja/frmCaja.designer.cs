@@ -34,6 +34,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCaja));
             this.dgvCaja = new System.Windows.Forms.DataGridView();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Efectivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vouchers = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoMovimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CVendedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEntrada = new System.Windows.Forms.Button();
             this.btnSalida = new System.Windows.Forms.Button();
             this.btnAbrirCerrar = new System.Windows.Forms.Button();
@@ -58,12 +64,6 @@
             this.btnBuscarConcepto = new System.Windows.Forms.Button();
             this.bgwCaja = new System.ComponentModel.BackgroundWorker();
             this.tmrEspera = new System.Windows.Forms.Timer(this.components);
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Efectivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vouchers = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoMovimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CVendedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCaja)).BeginInit();
             this.grbFechas.SuspendLayout();
             this.grbTotales.SuspendLayout();
@@ -99,6 +99,52 @@
             this.dgvCaja.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCaja.Size = new System.Drawing.Size(984, 242);
             this.dgvCaja.TabIndex = 2;
+            // 
+            // Fecha
+            // 
+            dataGridViewCellStyle1.Format = "dd \'de\' MMMM \'del\' yyyy hh:mm:ss tt";
+            this.Fecha.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 200;
+            // 
+            // Efectivo
+            // 
+            dataGridViewCellStyle2.Format = "C2";
+            this.Efectivo.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Efectivo.HeaderText = "Efectivo";
+            this.Efectivo.Name = "Efectivo";
+            this.Efectivo.ReadOnly = true;
+            // 
+            // Vouchers
+            // 
+            dataGridViewCellStyle3.Format = "C2";
+            this.Vouchers.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Vouchers.HeaderText = "Vouchers";
+            this.Vouchers.Name = "Vouchers";
+            this.Vouchers.ReadOnly = true;
+            // 
+            // TipoMovimiento
+            // 
+            this.TipoMovimiento.HeaderText = "Tipo de movimiento";
+            this.TipoMovimiento.Name = "TipoMovimiento";
+            this.TipoMovimiento.ReadOnly = true;
+            this.TipoMovimiento.Width = 150;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
+            // CVendedor
+            // 
+            this.CVendedor.HeaderText = "Atendió";
+            this.CVendedor.Name = "CVendedor";
+            this.CVendedor.ReadOnly = true;
+            this.CVendedor.Width = 150;
             // 
             // btnEntrada
             // 
@@ -362,52 +408,6 @@
             // 
             this.tmrEspera.Interval = 300;
             this.tmrEspera.Tick += new System.EventHandler(this.tmrEspera_Tick);
-            // 
-            // Fecha
-            // 
-            dataGridViewCellStyle1.Format = "dd \'de\' MMMM \'del\' yyyy hh:mm:ss tt";
-            this.Fecha.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 200;
-            // 
-            // Efectivo
-            // 
-            dataGridViewCellStyle2.Format = "C2";
-            this.Efectivo.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Efectivo.HeaderText = "Efectivo";
-            this.Efectivo.Name = "Efectivo";
-            this.Efectivo.ReadOnly = true;
-            // 
-            // Vouchers
-            // 
-            dataGridViewCellStyle3.Format = "C2";
-            this.Vouchers.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Vouchers.HeaderText = "Vouchers";
-            this.Vouchers.Name = "Vouchers";
-            this.Vouchers.ReadOnly = true;
-            // 
-            // TipoMovimiento
-            // 
-            this.TipoMovimiento.HeaderText = "Tipo de movimiento";
-            this.TipoMovimiento.Name = "TipoMovimiento";
-            this.TipoMovimiento.ReadOnly = true;
-            this.TipoMovimiento.Width = 150;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            // 
-            // CVendedor
-            // 
-            this.CVendedor.HeaderText = "Atendió";
-            this.CVendedor.Name = "CVendedor";
-            this.CVendedor.ReadOnly = true;
-            this.CVendedor.Width = 150;
             // 
             // frmCaja
             // 

@@ -128,6 +128,7 @@ namespace GYM.Formularios
                     else if (dr["celular"] != DBNull.Value)
                         tel = dr["celular"].ToString();
                     dgvSocios.Rows.Add(new object[] { dr["numSocio"], dr["nombre"] + " " + dr["apellidos"], tel });
+                    Application.DoEvents();
                 }
             }
             catch (Exception ex)
@@ -385,7 +386,10 @@ namespace GYM.Formularios
         {
             tmrConteo.Enabled = false;
             CFuncionesGenerales.frmEsperaClose();
+            System.Threading.Thread.Sleep(300);
             LlenarDataGrid();
+            txtBusqueda.Enabled = true;
+            CFuncionesGenerales.HabilitarBotonCerrar(this);
         }
 
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
@@ -435,7 +439,12 @@ namespace GYM.Formularios
         {
             if (e.KeyCode == Keys.Enter)
             {
-                bgwLocker.RunWorkerAsync(txtBusqueda.Text);
+                if (!bgwLocker.IsBusy)
+                {
+                    bgwLocker.RunWorkerAsync(txtBusqueda.Text);
+                    txtBusqueda.Enabled = false;
+                    CFuncionesGenerales.DeshabilitarBotonCerrar(this);
+                }
             }
         }
 

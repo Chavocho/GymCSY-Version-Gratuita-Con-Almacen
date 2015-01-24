@@ -50,6 +50,7 @@ namespace GYM.Formularios.Compras
                 foreach (DataRow dr in dt.Rows)
                 {
                     dgvProductos.Rows.Add(new object[] { dr["id"], dr["nombre"], int.Parse(dr["cant"].ToString()) + int.Parse(dr["cant_alm"].ToString()), decimal.Parse(dr["costo"].ToString()) });
+                    Application.DoEvents();
                 }
             }
             catch (FormatException ex)
@@ -106,8 +107,13 @@ namespace GYM.Formularios.Compras
         {
             if (e.KeyCode == Keys.Enter)
             {
-                tmrEspera.Enabled = true;
-                bgwBusqueda.RunWorkerAsync(txtCodigo.Text);
+                if (!bgwBusqueda.IsBusy)
+                {
+                    txtCodigo.Enabled = false;
+                    CFuncionesGenerales.DeshabilitarBotonCerrar(this);
+                    tmrEspera.Enabled = true;
+                    bgwBusqueda.RunWorkerAsync(txtCodigo.Text);
+                }
             }
         }
 
@@ -120,7 +126,10 @@ namespace GYM.Formularios.Compras
         {
             tmrEspera.Enabled = false;
             CFuncionesGenerales.frmEsperaClose();
+            System.Threading.Thread.Sleep(300);
             LlenarDataGrid();
+            txtCodigo.Enabled = true;
+            CFuncionesGenerales.HabilitarBotonCerrar(this);
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)

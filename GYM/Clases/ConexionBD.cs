@@ -119,6 +119,8 @@ namespace GYM.Clases
         public static DataTable EjecutarConsultaSelect(string consulta)
         {
             DataTable dt = new DataTable();
+            dt.BeginInit();
+            DataSet ds = new DataSet();
             MySqlConnection conexion = null;
             try
             {

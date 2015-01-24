@@ -34,7 +34,7 @@ namespace GYM.Formularios.Reportes
         }
         #endregion
 
-        DataTable dtV = new DataTable(), dtVD = new DataTable(), dtM = new DataTable();
+        DataTable dtV = new DataTable(), dtVD = new DataTable(), dtM = new DataTable(), dtP = new DataTable();
         DateTime horaIni = DateTime.Parse(DateTime.Now.ToString("dd-MM-yyyy") + " " + CConfiguracionXML.LeerConfiguración("ticket", "turnoMat")),
             horaFin = DateTime.Parse(DateTime.Now.ToString("dd-MM-yyyy") + " " + CConfiguracionXML.LeerConfiguración("ticket", "turnoVes")),
             fecha;
@@ -58,7 +58,7 @@ namespace GYM.Formularios.Reportes
                 lblVoucher.Left = lblEVoucher.Right + 6;
 
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "SELECT SUM(efectivo) AS ef, SUM(tarjeta) AS ta, SUM(efectivo + tarjeta) AS tot FROM caja " + 
+                sql.CommandText = "SELECT SUM(efectivo) AS ef, SUM(tarjeta) AS ta, SUM(efectivo + tarjeta) AS tot FROM caja " +
                     "WHERE (fecha BETWEEN ?fechaIni AND ?fechaFin) AND (descripcion=?concepto01 OR descripcion=?concepto02)";
                 if (turno == 0)
                 {
@@ -101,9 +101,13 @@ namespace GYM.Formularios.Reportes
                     }
                 }
             }
+            catch (MySqlException ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al obtener el total de las membresías. No se pudo realizar la conexión con la base de datos.", ex);
+            }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al obtener el total de las membresías. Ocurrió un error genérico.", ex);
             }
         }
 
@@ -162,9 +166,13 @@ namespace GYM.Formularios.Reportes
                     }
                 }
             }
+            catch (MySqlException ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al obtener el total de las ventas. No se pudo realizar la conexión con la base de datos.", ex);
+            }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al obtener el total de las ventas. Ocurrió un error genérico.", ex);
             }
         }
 
@@ -185,15 +193,15 @@ namespace GYM.Formularios.Reportes
                     sql.Parameters.AddWithValue("?fechaFin", fecha.ToString("yyyy-MM-dd") + " 23:59:59");
                 }
                 dtV = ConexionBD.EjecutarConsultaSelect(sql);
-	        }
+            }
             catch (MySqlException ex)
             {
-                MessageBox.Show(ex.ToString());
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al obtener los datos de las ventas. No se pudo realizar la conexión con la base de datos.", ex);
             }
-	        catch (Exception ex)
-            {   
-                MessageBox.Show(ex.ToString());
-	        }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al obtener los datos de las ventas. Ocurrió un error genérico.", ex);
+            }
         }
 
         private void ObtenerDatosVentasDetalladas(int id)
@@ -201,18 +209,47 @@ namespace GYM.Formularios.Reportes
             try 
 	        {
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "SELECT v.id_producto, v.cantidad, v.precio, p.nombre FROM venta_detallada AS v INNER JOIN producto AS p ON (p.id=v.id_producto) WHERE v.id_venta=?id_venta";
+                sql.CommandText = "SELECT v.id_producto, v.cantidad, v.precio, p.nombre, p.descripcion FROM venta_detallada AS v INNER JOIN producto AS p ON (p.id=v.id_producto) WHERE v.id_venta=?id_venta";
                 sql.Parameters.AddWithValue("?id_venta", id);
                 dtVD = ConexionBD.EjecutarConsultaSelect(sql);
-	        }
-            catch(MySqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
             }
-	        catch (Exception ex)
-	        {
-                MessageBox.Show(ex.ToString());
-	        }
+            catch (MySqlException ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al obtener el detallado de las ventas. No se pudo realizar la conexión con la base de datos.", ex);
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al obtener el detallado de las ventas. Ocurrió un error genérico.", ex);
+            }
+        }
+
+        private void ObtenerDatosProductosFecha(int turno)
+        {
+            try
+            {
+                MySqlCommand sql = new MySqlCommand();
+                sql.CommandText = "SELECT p.nombre, p.descripcion, SUM(vd.cantidad) AS cant FROM venta_detallada AS vd INNER JOIN venta AS v ON (v.id=vd.id_venta) INNER JOIN producto AS p ON (vd.id_producto=p.id) WHERE v.fecha BETWEEN ?fechaIni AND ?fechaFin GROUP BY vd.id_producto";
+                if (turno == 0)
+                {
+                    sql.Parameters.AddWithValue("?fechaIni", fecha.ToString("yyyy-MM-dd") + " 00:00:00");
+                    sql.Parameters.AddWithValue("?fechaFin", fecha.ToString("yyyy-MM-dd") + " " + horaFin.ToString("HH:mm") + ":00");
+                }
+                else
+                {
+                    sql.Parameters.AddWithValue("?fechaIni", fecha.ToString("yyyy-MM-dd") + " " + horaFin.ToString("HH:mm") + ":00");
+                    sql.Parameters.AddWithValue("?fechaFin", fecha.ToString("yyyy-MM-dd") + " 23:59:59");
+                }
+                dtP = ConexionBD.EjecutarConsultaSelect(sql);
+                LlenarPanelTotalProductos();
+            }
+            catch (MySqlException ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al obtener el total de productos de ventas. No se pudo realizar la conexión con la base de datos.", ex);
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al obtener el total de productos de ventas. Ocurrió un error genérico.", ex);
+            }
         }
 
         private void ObtenerDatosMembresias(int turno)
@@ -236,15 +273,15 @@ namespace GYM.Formularios.Reportes
                     sql.Parameters.AddWithValue("?fechaFin01", fecha.ToString("yyyy-MM-dd") + " 23:59:59");
                 }
                 dtM = ConexionBD.EjecutarConsultaSelect(sql);
-	        }
+            }
             catch (MySqlException ex)
             {
-                MessageBox.Show(ex.ToString());
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al obtener los datos de las membresías. No se pudo realizar la conexión con la base de datos.", ex);
             }
-	        catch (Exception ex)
-	        {
-                MessageBox.Show(ex.ToString());
-	        }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al obtener los datos de las membresías. Ocurrió un error genérico.", ex);
+            }
         }
 
         private void LlenarDataGrid()
@@ -257,6 +294,7 @@ namespace GYM.Formularios.Reportes
                     foreach (DataRow dr in dtM.Rows)
 	                {
                         dgvVentas.Rows.Add(new object[] { dr["id"], dr["numSocio"].ToString(), decimal.Parse(dr["efectivo"].ToString()), decimal.Parse(dr["tarjeta"].ToString()), dr["folio_remision"].ToString(), DateTime.Parse(dr["fecha"].ToString()), dr["descripcion"].ToString(), dr["userName"].ToString() });
+                        Application.DoEvents();
 	                }
                 }
                 else if (cboReporte.SelectedIndex == 1)
@@ -264,13 +302,14 @@ namespace GYM.Formularios.Reportes
                     foreach (DataRow dr in dtV.Rows)
                     {
                         dgvVentas.Rows.Add(new object[] { dr["idv"], "", decimal.Parse(dr["efectivo"].ToString()), decimal.Parse(dr["tarjeta"].ToString()), dr["idv"].ToString(), DateTime.Parse(dr["fecha"].ToString()), dr["descripcion"].ToString(), dr["userName"].ToString() });
+                        Application.DoEvents();
                     } 
                 }
                 dgvVentas_RowEnter(dgvVentas, new DataGridViewCellEventArgs(0, 0));
 	        }
 	        catch (Exception ex)
 	        {
-                MessageBox.Show(ex.ToString());
+                CFuncionesGenerales.MensajeError("Ocurrió un error genérico al mostrar la información.", ex);
 	        }
         }
 
@@ -281,6 +320,8 @@ namespace GYM.Formularios.Reportes
             Label lblCodProd;
             Label lblENombre;
             Label lblNombre;
+            Label lblEDescripcion;
+            Label lblDescripcion;
             Label lblEPrecio;
             Label lblPrecio;
             Label lblECant;
@@ -292,12 +333,14 @@ namespace GYM.Formularios.Reportes
                 int y = 10;
                 int salto = (int)(e.MeasureString("Algo", new Font("Segoe UI", 12, FontStyle.Bold)).Height) + 5;
                 int lCod = 10;
-                int lNom = 250;
+                int lNom = 200;
+                int lDes = (pnlProductos.Width / 4) * 2 - 150;
                 int lPre = (pnlProductos.Width / 4) * 3;
                 int lCan = (pnlProductos.Width / 4) * 3 + 100;
 
                 lblECodProd = new Label();
                 lblENombre = new Label();
+                lblEDescripcion = new Label();
                 lblEPrecio = new Label();
                 lblECant = new Label();
 
@@ -305,6 +348,8 @@ namespace GYM.Formularios.Reportes
                 PropiedadesLabelEtiqueta(ref lblECodProd, "lblECodProd", "Código de producto", new Point(lCod, y), tabIndex);
                 tabIndex++;
                 PropiedadesLabelEtiqueta(ref lblENombre, "lblENombre", "Nombre", new Point(lNom, y), tabIndex);
+                tabIndex++;
+                PropiedadesLabelEtiqueta(ref lblEDescripcion, "lblEDescripcion", "Descripción", new Point(lDes, y), tabIndex);
                 tabIndex++;
                 PropiedadesLabelEtiqueta(ref lblEPrecio, "lblEPrecio", "Precio", new Point(lPre, y), tabIndex);
                 tabIndex++;
@@ -314,6 +359,7 @@ namespace GYM.Formularios.Reportes
                 //Agregamos los controles al panel
                 pnlProductos.Controls.Add(lblECodProd);
                 pnlProductos.Controls.Add(lblENombre);
+                pnlProductos.Controls.Add(lblEDescripcion);
                 pnlProductos.Controls.Add(lblEPrecio);
                 pnlProductos.Controls.Add(lblECant);
                 y += salto;
@@ -322,6 +368,7 @@ namespace GYM.Formularios.Reportes
                     int x = 0;
                     lblCodProd = new Label();
                     lblNombre = new Label();
+                    lblDescripcion = new Label();
                     lblPrecio = new Label();
                     lblCant = new Label();
                     
@@ -329,6 +376,8 @@ namespace GYM.Formularios.Reportes
                     PropiedadesLabel(ref lblCodProd, "lblCodProd" + x.ToString("000"), dr["id_producto"].ToString(), new Point(lCod, y), tabIndex);
                     tabIndex++;
                     PropiedadesLabel(ref lblNombre, "lblNombre" + x.ToString("000"), dr["nombre"].ToString(), new Point(lNom, y), tabIndex);
+                    tabIndex++;
+                    PropiedadesLabel(ref lblDescripcion, "lblDescripcion" + x.ToString("000"), dr["descripcion"].ToString(), new Point(lDes, y), tabIndex);
                     tabIndex++;
                     PropiedadesLabel(ref lblPrecio, "lblPrecio" + x.ToString("000"), dr["precio"].ToString(), new Point(lPre, y), tabIndex);
                     tabIndex++;
@@ -338,6 +387,7 @@ namespace GYM.Formularios.Reportes
                     //Agregamos los controles al panel
                     pnlProductos.Controls.Add(lblCodProd);
                     pnlProductos.Controls.Add(lblNombre);
+                    pnlProductos.Controls.Add(lblDescripcion);
                     pnlProductos.Controls.Add(lblPrecio);
                     pnlProductos.Controls.Add(lblCant);
                     y += salto;
@@ -346,7 +396,72 @@ namespace GYM.Formularios.Reportes
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                CFuncionesGenerales.MensajeError("Ocurrió un error genérico al mostrar la información de los productos.", ex);
+            }
+        }
+
+        private void LlenarPanelTotalProductos()
+        {
+            pnlTotalProds.Controls.Clear();
+            Label lblENomProd;
+            Label lblNomProd;
+            Label lblEDesc;
+            Label lblDesc;
+            Label lblECant;
+            Label lblCant;
+            int tabIndex = 0;
+            try
+            {
+                Graphics e = this.CreateGraphics();
+                int y = 10;
+                int salto = (int)(e.MeasureString("Algo", new Font("Segoe UI", 12, FontStyle.Bold)).Height) + 5;
+                int lNom = 10;
+                int lDesc = 350;
+                int lCant = (pnlProductos.Width / 4) * 3;
+
+                lblENomProd = new Label();
+                lblEDesc = new Label();
+                lblECant = new Label();
+
+                //Asignamos sus propiedades usando el método PropiedadesLabelEtiqueta
+                PropiedadesLabelEtiqueta(ref lblENomProd, "lblENomProd", "Nombre", new Point(lNom, y), tabIndex);
+                tabIndex++;
+                PropiedadesLabelEtiqueta(ref lblEDesc, "lblEDescripcion", "Descripción", new Point(lDesc, y), tabIndex);
+                tabIndex++;
+                PropiedadesLabelEtiqueta(ref lblECant, "lblECant", "Cantidad", new Point(lCant, y), tabIndex);
+                tabIndex++;
+
+                //Agregamos los controles al panel
+                pnlTotalProds.Controls.Add(lblENomProd);
+                pnlTotalProds.Controls.Add(lblEDesc);
+                pnlTotalProds.Controls.Add(lblECant);
+                y += salto;
+
+                foreach (DataRow dr in dtP.Rows)
+                {
+                    int x = 0;
+                    lblNomProd = new Label();
+                    lblDesc = new Label();
+                    lblCant = new Label();
+
+                    //Asignamos sus propiedades usando el método PropiedadesLabel
+                    PropiedadesLabel(ref lblNomProd, "lblNomProd" + x.ToString("000"), dr["nombre"].ToString(), new Point(lNom, y), tabIndex);
+                    tabIndex++;
+                    PropiedadesLabel(ref lblDesc, "lblDescripcion" + x.ToString("000"), dr["descripcion"].ToString(), new Point(lDesc, y), tabIndex);
+                    tabIndex++;
+                    PropiedadesLabel(ref lblCant, "lblCant" + x.ToString("000"), dr["cant"].ToString(), new Point(lCant, y), tabIndex);
+                    tabIndex++;
+
+                    //Agregamos los controles al panel
+                    pnlTotalProds.Controls.Add(lblNomProd);
+                    pnlTotalProds.Controls.Add(lblDesc);
+                    pnlTotalProds.Controls.Add(lblCant);
+                    y += salto;
+                }
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("Ocurrió un error genérico al mostrar la información de los totales de productos.", ex);
             }
         }
 
@@ -361,9 +476,8 @@ namespace GYM.Formularios.Reportes
                 lbl.Location = location;
                 lbl.TabIndex = tabIndex;
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.ToString());
             }
         }
 
@@ -378,9 +492,8 @@ namespace GYM.Formularios.Reportes
                 lbl.Location = location;
                 lbl.TabIndex = tabIndex;
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.ToString());
             }
         }
 
@@ -411,16 +524,24 @@ namespace GYM.Formularios.Reportes
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             pnlProductos.Controls.Clear();
+            pnlTotalProds.Controls.Clear();
             tmrEspera.Enabled = true;
             switch (cboReporte.SelectedIndex)
             {
                 case 0:
+                    dgvVentas.Size = new Size(dgvVentas.Width, pnlTotalProds.Bottom - dgvVentas.Location.Y);
+                    pnlProductos.Visible = false;
+                    pnlTotalProds.Visible = false;
                     ObtenerTotalVentasMembresias(cboTurno.SelectedIndex);
                     dgvVentas.Columns[1].Visible = true;
                     bgwMembresia.RunWorkerAsync(cboTurno.SelectedIndex);
                     break;
                 case 1:
+                    dgvVentas.Size = new Size(dgvVentas.Width, pnlProductos.Location.Y - dgvVentas.Location.Y - 6);
+                    pnlProductos.Visible = true;
+                    pnlTotalProds.Visible = true;
                     ObtenerTotalVentasPOS(cboTurno.SelectedIndex);
+                    ObtenerDatosProductosFecha(cboTurno.SelectedIndex);
                     dgvVentas.Columns[1].Visible = false;
                     bgwVentas.RunWorkerAsync(cboTurno.SelectedIndex);
                     break;
@@ -463,6 +584,7 @@ namespace GYM.Formularios.Reportes
                 if (dgvVentas.CurrentRow != null)
                 {
                     LlenarPanelProductos();
+                    LlenarPanelTotalProductos();
                 }
             }
         }

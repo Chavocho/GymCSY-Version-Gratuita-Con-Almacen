@@ -73,6 +73,7 @@ namespace GYM.Formularios.Reportes
                     CMembresia.EstadoMembresia es = (CMembresia.EstadoMembresia)Enum.Parse(typeof(CMembresia.EstadoMembresia), dr["estado"].ToString());
                     DateTime fechaIni = DateTime.Parse(dr["fecha_ini"].ToString()), fechaFin = DateTime.Parse(dr["fecha_fin"].ToString());
                     dgvPersonas.Rows.Add(new object[] { dr["id"], dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"], es.ToString(), fechaIni.ToString("dd/MM/yyyy"), fechaFin.ToString("dd/MM/yyyy") });
+                    Application.DoEvents();
                 }
                 catch (FormatException ex)
                 {
@@ -119,7 +120,16 @@ namespace GYM.Formularios.Reportes
         private void btnMembresias_Click(object sender, EventArgs e)
         {
             if (dgvPersonas.CurrentRow != null)
+            {
+                string sql = "SELECT * FROM registro_membresias WHERE membresia_id='" + idM + "' ORDER BY create_time";
+                DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
+                if (dt.Rows.Count == 0)
+                {
+                    MessageBox.Show(nomSocio + " no cuenta con registros de membresías", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
                 (new frmVisualizarMembresias(idM, numSocio, nomSocio)).ShowDialog(this);
+            }
             else
                 MessageBox.Show("Debes seleccionar antes a un socio para visualizar ésta información.", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

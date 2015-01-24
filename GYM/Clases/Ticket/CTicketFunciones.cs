@@ -525,7 +525,7 @@ namespace GYM.Clases
             {
                 decimal totTa = 0M;
                 decimal efRet = 0M, efAp = 0M;
-                decimal totEfMem = 0M, totTaMem = 0M, totEfRen = 0M, totTaRen = 0M, totEfVen = 0M, totTaVen = 0M;
+                decimal totEfMem = 0M, totTaMem = 0M, totEfRen = 0M, totTaRen = 0M, totEfVen = 0M, totTaVen = 0M, totEnt = 0M, totSal = 0M;
                 e.Graphics.DrawString("EFVO", fuenteResaltada, Brushes.Black, 0F, y);
                 e.Graphics.DrawString("VOUCHERS", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) - 15, y);
                 e.Graphics.DrawString("MOV.", fuenteResaltada, Brushes.Black, (e.PageBounds.Width / 4) * 2 - 10, y);
@@ -585,6 +585,12 @@ namespace GYM.Clases
                             totEfVen += ef;
                             totTaVen += ta;
                             break;
+                        default:
+                            if (ef < 0)
+                                totSal += ef;
+                            else
+                                totEnt += ef;
+                            break;
                     }
                 }
                 e.Graphics.DrawString("CERRÓ CAJA: " + UsuarioCierre(), fuenteResaltada, Brushes.Black, 0F, y);
@@ -618,6 +624,16 @@ namespace GYM.Clases
                 e.Graphics.DrawString("EFECTIVO: " + totEfVen.ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
                 y += saltoLinea;
                 e.Graphics.DrawString("VOUCHERS: " + totTaVen.ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
+                y += saltoLinea;
+                AgregarLinea(ref e, new Pen(Brushes.Black));
+                y += saltoLineaPeque;
+
+                //Entradas y salidas
+                e.Graphics.DrawString("OTROS CONCEPTOS", fuenteResaltada, Brushes.Black, 0F, y);
+                y += saltoLinea;
+                e.Graphics.DrawString("TOTAL DE ENTRADAS: " + totEnt.ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
+                y += saltoLinea;
+                e.Graphics.DrawString("TOTAL DE SALIDAS: " + totSal.ToString("C2"), fuenteResaltada, Brushes.Black, 0F, y);
                 y += saltoLinea;
                 AgregarLinea(ref e, new Pen(Brushes.Black));
                 y += saltoLineaPeque;
@@ -1024,7 +1040,7 @@ namespace GYM.Clases
         {
             try
             {
-                string sql = "SELECT * FROM caja WHERE id BETWEEN '" + idApertura + "' AND '" + idCierre + "' ORDER BY descripcion ASC";
+                string sql = "SELECT * FROM caja WHERE id BETWEEN '" + idApertura + "' AND '" + idCierre + "'";
                 dtCaja = Clases.ConexionBD.EjecutarConsultaSelect(sql);
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)

@@ -59,6 +59,7 @@
             this.lblEEfectivo = new System.Windows.Forms.Label();
             this.lblVoucher = new System.Windows.Forms.Label();
             this.lblEVoucher = new System.Windows.Forms.Label();
+            this.pnlTotalProds = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,7 +92,7 @@
             this.dgvVentas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvVentas.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVentas.Size = new System.Drawing.Size(984, 423);
+            this.dgvVentas.Size = new System.Drawing.Size(984, 623);
             this.dgvVentas.TabIndex = 7;
             this.dgvVentas.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_RowEnter);
             // 
@@ -179,15 +180,16 @@
             // 
             // pnlProductos
             // 
-            this.pnlProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlProductos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlProductos.AutoScroll = true;
             this.pnlProductos.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlProductos.Location = new System.Drawing.Point(12, 472);
+            this.pnlProductos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlProductos.Location = new System.Drawing.Point(12, 383);
             this.pnlProductos.Name = "pnlProductos";
-            this.pnlProductos.Size = new System.Drawing.Size(984, 193);
+            this.pnlProductos.Size = new System.Drawing.Size(984, 138);
             this.pnlProductos.TabIndex = 8;
+            this.pnlProductos.Visible = false;
             // 
             // dtpFecha
             // 
@@ -327,10 +329,24 @@
             this.lblEVoucher.TabIndex = 13;
             this.lblEVoucher.Text = "Total vouchers de membresías:";
             // 
+            // pnlTotalProds
+            // 
+            this.pnlTotalProds.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlTotalProds.AutoScroll = true;
+            this.pnlTotalProds.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlTotalProds.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTotalProds.Location = new System.Drawing.Point(12, 527);
+            this.pnlTotalProds.Name = "pnlTotalProds";
+            this.pnlTotalProds.Size = new System.Drawing.Size(984, 138);
+            this.pnlTotalProds.TabIndex = 9;
+            this.pnlTotalProds.Visible = false;
+            // 
             // frmReporteVentaDia
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1008, 698);
+            this.Controls.Add(this.pnlTotalProds);
             this.Controls.Add(this.lblVoucher);
             this.Controls.Add(this.lblEVoucher);
             this.Controls.Add(this.lblEfectivo);
@@ -388,5 +404,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CHora;
         private System.Windows.Forms.DataGridViewTextBoxColumn CDescripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn CUsuario;
+        private System.Windows.Forms.Panel pnlTotalProds;
     }
 }

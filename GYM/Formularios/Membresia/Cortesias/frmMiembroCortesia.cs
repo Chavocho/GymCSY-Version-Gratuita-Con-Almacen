@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GYM.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,6 +60,7 @@ namespace GYM.Formularios.Membresia
                         else if (dr["celular"].ToString() != "")
                             tel = dr["celular"].ToString();
                         dgvPersonas.Rows.Add(new object[] { (int)dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), tel });
+                        Application.DoEvents();
                     }
                 }
             }
@@ -81,6 +83,8 @@ namespace GYM.Formularios.Membresia
             if (e.KeyCode == Keys.Enter && !bgwConsulta.IsBusy)
             {
                 tmrEspera.Enabled = true;
+                txtBusqueda.Enabled = false;
+                CFuncionesGenerales.DeshabilitarBotonCerrar(this);
                 bgwConsulta.RunWorkerAsync(txtBusqueda.Text);
             }
         }
@@ -94,7 +98,10 @@ namespace GYM.Formularios.Membresia
         {
             tmrEspera.Enabled = false;
             Clases.CFuncionesGenerales.frmEsperaClose();
+            System.Threading.Thread.Sleep(300);
             LlenarDataTable();
+            txtBusqueda.Enabled = true;
+            CFuncionesGenerales.HabilitarBotonCerrar(this);
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)

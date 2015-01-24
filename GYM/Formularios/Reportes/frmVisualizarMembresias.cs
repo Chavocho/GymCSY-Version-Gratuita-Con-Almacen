@@ -36,12 +36,6 @@ namespace GYM.Formularios.Reportes
             {
                 string sql = "SELECT * FROM registro_membresias WHERE membresia_id='" + idM + "' ORDER BY create_time";
                 DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
-                if (dt.Rows.Count == 0)
-                {
-                    MessageBox.Show(nomSoc + " no cuenta con registros de membresías", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                    return;
-                }
                 foreach (DataRow dr in dt.Rows)
                 {
                     DateTime fechaIni = DateTime.Parse(dr["fecha_ini"].ToString()), fechaFin = DateTime.Parse(dr["fecha_fin"].ToString()), fechaPago = (DateTime)dr["create_time"];

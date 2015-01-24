@@ -773,6 +773,7 @@ namespace GYM.Clases
         public static void frmEspera(string mensaje, IWin32Window f)
         {
             frm = new frmEspera(mensaje);
+            frm.AllowTransparency = false;
             frm.ShowDialog(f);
         }
 
@@ -782,9 +783,15 @@ namespace GYM.Clases
         public static void frmEsperaClose()
         {
             if (frm != null)
+            {
                 if (!frm.IsDisposed)
+                {
                     if (frm.Visible)
+                    {
                         frm.Close();
+                    }
+                }
+            }
             frm = null;
         }
 
@@ -908,6 +915,37 @@ namespace GYM.Clases
         public static void NoSiempreEncima(int handle)
         {
             SetWindowPos(handle, HWND_NOTOPMOST, 0, 0, 0, 0, wFlags);
+        }
+        #endregion
+
+        #region DesactivarBotonCerrar
+        [DllImport("user32.dll")]
+        private static extern IntPtr GetSystemMenu(IntPtr HWNDValue, bool isRevert);
+
+        [DllImport("user32.dll")]
+        private static extern int EnableMenuItem(IntPtr tMenu, int targetItem, int targetStatus);
+
+        internal const int SC_CLOSE = 0xF060;           //close button's code in Windows API
+        internal const int MF_ENABLED = 0x00000000;     //enabled button status
+        internal const int MF_GRAYED = 0x1;             //disabled button status (enabled = false)
+        internal const int MF_DISABLED = 0x00000002;    //disabled button status
+
+        /// <summary>
+        /// Función que deshabilita el botón cerrar de un formulario
+        /// </summary>
+        /// <param name="f">Formulario al que se deshabilitará el botón cerrar</param>
+        public static void DeshabilitarBotonCerrar(IWin32Window f)
+        {
+            EnableMenuItem(GetSystemMenu(f.Handle, false), SC_CLOSE, MF_GRAYED);
+        }
+
+        /// <summary>
+        /// Función que habilita el botón cerrar de un formulario
+        /// </summary>
+        /// <param name="f">Formulario al que se habilitará el botón cerrar</param>
+        public static void HabilitarBotonCerrar(IWin32Window f)
+        {
+            EnableMenuItem(GetSystemMenu(f.Handle, false), SC_CLOSE, MF_ENABLED);
         }
         #endregion
 

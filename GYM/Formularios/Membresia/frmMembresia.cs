@@ -14,6 +14,7 @@ namespace GYM.Formularios.Membresia
 {
     public partial class frmMembresia : Form
     {
+        DataTable dt = new DataTable();
         int numSocio = 0, sexo;
 
         #region Instancia
@@ -88,7 +89,22 @@ namespace GYM.Formularios.Membresia
             {
                 //Fecha_fin
                 string sql = "SELECT mi.numSocio, mi.nombre, mi.apellidos, mi.telefono, mi.celular, mi.genero, me.estado, me.fecha_ini, me.fecha_fin AS fecha FROM miembros AS mi LEFT JOIN membresias AS me ON (mi.numSocio=me.numSocio) WHERE mi.numSocio='" + textoBusqueda + "' OR mi.nombre LIKE '%" + textoBusqueda + "%' OR mi.apellidos LIKE '%" + textoBusqueda + "%'";
-                DataTable dt = Clases.ConexionBD.EjecutarConsultaSelect(sql);
+                dt = Clases.ConexionBD.EjecutarConsultaSelect(sql);                
+            }
+            catch (MySqlException ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un error al tratar de conectar con la base de datos.", ex);
+            }
+            catch (Exception ex)
+            {
+                Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un error genérico.", ex);
+            }
+        }
+
+        private void LlenarDataGrid()
+        {
+            try
+            {
                 foreach (DataRow dr in dt.Rows)
                 {
                     string status = null;
@@ -121,11 +137,8 @@ namespace GYM.Formularios.Membresia
                     else
                         fechaIni = "Sin información";
                     dgvPersonas.Rows.Add(new object[] { (int)dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), status, fechaIni, fecha, dr["genero"] });
+                    Application.DoEvents();
                 }
-            }
-            catch (MySqlException ex)
-            {
-                Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un error al tratar de conectar con la base de datos.", ex);
             }
             catch (FormatException ex)
             {
@@ -170,7 +183,15 @@ namespace GYM.Formularios.Membresia
         private void txtBusqueda_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-                BuscarMiembros(txtBusqueda.Text);
+            {
+                if (!bgwBusqueda.IsBusy)
+                {
+                    txtBusqueda.Enabled = false;
+                    CFuncionesGenerales.DeshabilitarBotonCerrar(this);
+                    tmrEspera.Enabled = true;
+                    bgwBusqueda.RunWorkerAsync(txtBusqueda.Text);
+                }
+            }
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -307,6 +328,27 @@ namespace GYM.Formularios.Membresia
                     MessageBox.Show("Para reactivar la membresía de " + dgvPersonas[1, dgvPersonas.CurrentRow.Index].Value.ToString() + " es necesario renovar la membresía");
                 }
             }
+        }
+
+        private void bgwBusqueda_DoWork(object sender, DoWorkEventArgs e)
+        {
+            BuscarMiembros(e.Argument.ToString());
+        }
+
+        private void bgwBusqueda_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            tmrEspera.Enabled = false;
+            CFuncionesGenerales.frmEsperaClose();
+            System.Threading.Thread.Sleep(300);
+            LlenarDataGrid();
+            txtBusqueda.Enabled = true;
+            CFuncionesGenerales.HabilitarBotonCerrar(this);
+        }
+
+        private void tmrEspera_Tick(object sender, EventArgs e)
+        {
+            tmrEspera.Enabled = false;
+            CFuncionesGenerales.frmEspera("Espere, buscando socios", this);
         }
     }
 }

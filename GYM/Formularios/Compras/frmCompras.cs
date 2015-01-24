@@ -78,6 +78,7 @@ namespace GYM.Formularios.Compras
                         tipoPago = "Tarjeta";
 
                     dgvCompras.Rows.Add(new object[] { dr["id"],  fecha, dr["userName"], tipoPago, (subtotal + importe - descuento) });
+                    Application.DoEvents();
                 }
             }
             catch (InvalidOperationException ex)
@@ -100,8 +101,13 @@ namespace GYM.Formularios.Compras
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            bgwBusqueda.RunWorkerAsync(new object[] { dtpFechaInicio.Value, dtpFechaFin.Value });
-            tmrEspera.Enabled = true;
+            if (!bgwBusqueda.IsBusy)
+            {
+                bgwBusqueda.RunWorkerAsync(new object[] { dtpFechaInicio.Value, dtpFechaFin.Value });
+                tmrEspera.Enabled = true;
+                btnBuscar.Enabled = false;
+                CFuncionesGenerales.DeshabilitarBotonCerrar(this);
+            }
         }
 
         private void bgwBusqueda_DoWork(object sender, DoWorkEventArgs e)
@@ -114,7 +120,10 @@ namespace GYM.Formularios.Compras
         {
             tmrEspera.Enabled = false;
             CFuncionesGenerales.frmEsperaClose();
+            System.Threading.Thread.Sleep(300);
             LlenarDataGrid();
+            btnBuscar.Enabled = true;
+            CFuncionesGenerales.HabilitarBotonCerrar(this);
         }
 
         private void tmrEspera_Tick(object sender, EventArgs e)

@@ -6,6 +6,7 @@ using MySql.Data.MySqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GYM.Clases;
@@ -15,6 +16,8 @@ namespace GYM.Formularios
     public partial class frmCaja : Form
     {
         DataTable dt;
+        delegate void Llenar();
+        Thread h;
         decimal totEfe = 0, totTar = 0;
 
         #region Instancia
@@ -185,29 +188,8 @@ namespace GYM.Formularios
                 else
                     nomUsu = "Sin información";
                 dgvCaja.Rows.Add(new object[] { DateTime.Parse(dr["fecha"].ToString()), decimal.Parse(dr["efectivo"].ToString()), decimal.Parse(dr["tarjeta"].ToString()), tipoMov, dr["descripcion"].ToString(), nomUsu });
+                Application.DoEvents();
             }
-            //idMems.Clear();
-            //foreach (DataRow dr in dtm.Rows)
-            //{
-            //    idVenta = "Sin información";
-            //    if (dr["tipo_movimiento"].ToString() == "0")
-            //        tipoMov = "Entrada";
-            //    else
-            //        tipoMov = "Salida";
-            //    if (dr["um"] != DBNull.Value)
-            //        nomUsu = CFuncionesGenerales.NombreUsuario(dr["um"].ToString());
-            //    else
-            //        nomUsu = "Sin información"; 
-            //    if (dr["folio_remision"] != DBNull.Value)
-            //        idMembresia = dr["folio_remision"].ToString();
-            //    else
-            //        idMembresia = "Sin información";
-            //    //if (!idMems.Contains(dr["mem"].ToString()))
-            //    //{
-            //    //    idMems.Add(dr["mem"].ToString());
-            //        dgvCaja.Rows.Add(new object[] { idVenta, idMembresia, DateTime.Parse(dr["fecha"].ToString()).ToString("dd-MM-yyyy hh:mm tt"), decimal.Parse(dr["efectivo"].ToString()).ToString("C2"), decimal.Parse(dr["tarjeta"].ToString()).ToString("C2"), tipoMov, dr["descripcion"].ToString(), nomUsu });
-            //    //}
-            //}
         }
 
         public void CargarTotalCaja()
@@ -567,6 +549,9 @@ namespace GYM.Formularios
         {
             if (!bgwCaja.IsBusy)
             {
+                CFuncionesGenerales.DeshabilitarBotonCerrar(this);
+                btnBuscar.Enabled = false;
+                btnBuscarConcepto.Enabled = false;
                 tmrEspera.Enabled = true;
                 bgwCaja.RunWorkerAsync(new object[] { dtpFechaInicio.Value, dtpFechaFin.Value });
             }
@@ -576,6 +561,8 @@ namespace GYM.Formularios
         {
             if (!bgwCaja.IsBusy)
             {
+                btnBuscar.Enabled = false;
+                btnBuscarConcepto.Enabled = false;
                 tmrEspera.Enabled = true;
                 if (chbRespetarFechas.Checked)
                 {
@@ -609,8 +596,12 @@ namespace GYM.Formularios
         {
             tmrEspera.Enabled = false;
             CFuncionesGenerales.frmEsperaClose();
+            System.Threading.Thread.Yield();
+            
             LlenarDataGrid(dt);
             CalcularTotales();
+            btnBuscar.Enabled = true;
+            CFuncionesGenerales.HabilitarBotonCerrar(this);
         }
 
         private void tmrEspera_Tick(object sender, EventArgs e)

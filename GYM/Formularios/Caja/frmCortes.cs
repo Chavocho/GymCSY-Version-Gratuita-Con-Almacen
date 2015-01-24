@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using GYM.Clases;
 
 namespace GYM.Formularios.Caja
 {
@@ -52,6 +53,7 @@ namespace GYM.Formularios.Caja
                 {
                     fechas = DateTime.Parse(dr["fecha"].ToString());
                     dgvCaja.Rows.Add(new object[] { dr["id"], fechas, (decimal.Parse(dr["efectivo"].ToString()) * -1), (decimal.Parse(dr["tarjeta"].ToString()) * -1) });
+                    Application.DoEvents();
                 }
             }
             catch (FormatException ex)
@@ -98,7 +100,8 @@ namespace GYM.Formularios.Caja
             tmrEspera.Enabled = false;
             Clases.CFuncionesGenerales.frmEsperaClose();
             LlenarDataGrid();
-
+            btnBuscar.Enabled = true;
+            CFuncionesGenerales.HabilitarBotonCerrar(this);
         }
 
         private void tmrEspera_Tick(object sender, EventArgs e)
@@ -121,6 +124,8 @@ namespace GYM.Formularios.Caja
                 dtpFechaInicio.Value = dtpFechaFin.Value.AddDays(-1);
             if (dtpFechaFin.Value < dtpFechaInicio.Value)
                 dtpFechaFin.Value = dtpFechaInicio.Value.AddDays(1);
+            btnBuscar.Enabled = false;
+            CFuncionesGenerales.DeshabilitarBotonCerrar(this);
             bgwCortes.RunWorkerAsync(new object[] { dtpFechaInicio.Value, dtpFechaFin.Value });
             tmrEspera.Enabled = true;
         }

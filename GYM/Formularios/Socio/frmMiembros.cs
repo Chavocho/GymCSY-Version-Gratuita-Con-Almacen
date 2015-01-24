@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GYM.Clases;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +15,7 @@ namespace GYM.Formularios.Socio
     public partial class frmMiembros : Form
     {
         int numSocio = 0;
+        DataTable dt = new DataTable();
 
         #region Instancia
         private static frmMiembros frmInstancia;
@@ -47,7 +50,23 @@ namespace GYM.Formularios.Socio
             try
             {
                 string sql = "SELECT numSocio, nombre, apellidos, telefono, celular, fecha_nac FROM miembros WHERE numSocio='" + busqueda + "' OR nombre LIKE '%" + busqueda + "%' OR apellidos LIKE '%" + busqueda + "%'";
-                DataTable dt = Clases.ConexionBD.EjecutarConsultaSelect(sql);
+                dt = Clases.ConexionBD.EjecutarConsultaSelect(sql);
+
+            }
+            catch (MySqlException ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al buscar los socios. No se ha podido conectar a la base de datos.", ex);
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error genérico al buscar los socios. ", ex);
+            }
+        }
+
+        private void LlenarDataGrid()
+        {
+            try
+            {
                 foreach (DataRow dr in dt.Rows)
                 {
                     string tel=null, cel=null, fecha=null;
@@ -61,12 +80,14 @@ namespace GYM.Formularios.Socio
                         cel = "No especificado";
                     if (dr["fecha_nac"] != DBNull.Value)
                         fecha = fecha = DateTime.Parse(dr["fecha_nac"].ToString()).ToString("dd") + " de " + DateTime.Parse(dr["fecha_nac"].ToString()).ToString("MMMM");
-                    dgvPersonas.Rows.Add(new object[] { dr["numSocio"].ToString(), dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), tel, cel, DateTime.Parse(dr["fecha_nac"].ToString()) });
+                    dgvPersonas.Rows.Add(new object[] { (int)dr["numSocio"], dr["nombre"].ToString() + " " + dr["apellidos"].ToString(), tel, cel, DateTime.Parse(dr["fecha_nac"].ToString()) });
+                    Application.DoEvents();
                 } 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.ToString());
+                
+                throw;
             }
         }
         #endregion
@@ -85,8 +106,13 @@ namespace GYM.Formularios.Socio
 
         private void txtBusqueda_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter)
-                BuscarMiembros(txtBusqueda.Text);
+            if (e.KeyChar == (char)Keys.Enter && !bgwBusqueda.IsBusy)
+            {
+                tmrEspera.Enabled = true;
+                bgwBusqueda.RunWorkerAsync(txtBusqueda.Text);
+                txtBusqueda.Enabled = false;
+                CFuncionesGenerales.DeshabilitarBotonCerrar(this);
+            }
         }
         #endregion
 
@@ -111,6 +137,26 @@ namespace GYM.Formularios.Socio
             catch
             {
             }
+        }
+
+        private void bgwBusqueda_DoWork(object sender, DoWorkEventArgs e)
+        {
+            BuscarMiembros(e.Argument.ToString());
+        }
+
+        private void bgwBusqueda_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            tmrEspera.Enabled = false;
+            CFuncionesGenerales.frmEsperaClose();
+            LlenarDataGrid();
+            txtBusqueda.Enabled = true;
+            CFuncionesGenerales.HabilitarBotonCerrar(this);
+        }
+
+        private void tmrEspera_Tick(object sender, EventArgs e)
+        {
+            tmrEspera.Enabled = false;
+            CFuncionesGenerales.frmEspera("Espere, buscando socios", this);
         }
     }
 }

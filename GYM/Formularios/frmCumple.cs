@@ -111,6 +111,7 @@ namespace GYM.Formularios
                         c.Adjuntos = new string[] { Application.StartupPath + "\\Img\\imagencorreo.jpeg" };
                         c.EnviarCorreo();
                     }
+                    Application.DoEvents();
                 }
                 catch (MySqlException ex)
                 {

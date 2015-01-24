@@ -124,6 +124,7 @@ namespace GYM.Formularios
                         if (dr["numSocio"] != DBNull.Value)
                             numSocio = dr["numSocio"].ToString();
                         dgvPendientes.Rows.Add(new object[] { dr["id"], numSocio, nom, dr["num"], dr["descripcion"].ToString(), fechaIni, fechaFin, fechaPago, dr["folio_remision"], ((decimal)dr["precio"]), CFuncionesGenerales.NombreUsuario(dr["create_user_id"].ToString()) });
+                        
                     }
                 }
             }
@@ -275,8 +276,13 @@ namespace GYM.Formularios
                     ColumnasLocker();
                     break;
             }
-            tmrEspera.Enabled = true;
-            bgwBusqueda.RunWorkerAsync(cboPendientes.SelectedIndex);
+            if (!bgwBusqueda.IsBusy)
+            {
+                tmrEspera.Enabled = true;
+                bgwBusqueda.RunWorkerAsync(cboPendientes.SelectedIndex);
+                cboPendientes.Enabled = false;
+                CFuncionesGenerales.DeshabilitarBotonCerrar(this);
+            }
         }
 
         private void bgwBusqueda_DoWork(object sender, DoWorkEventArgs e)
@@ -296,6 +302,8 @@ namespace GYM.Formularios
             tmrEspera.Enabled = false;
             CFuncionesGenerales.frmEsperaClose();
             LlenarDataGrid();
+            cboPendientes.Enabled = true;
+            CFuncionesGenerales.HabilitarBotonCerrar(this);
         }
 
         private void tmrEspera_Tick(object sender, EventArgs e)
@@ -343,6 +351,7 @@ namespace GYM.Formularios
                             }
                         }
                     }
+                    Application.DoEvents();
                 }
             }
             catch

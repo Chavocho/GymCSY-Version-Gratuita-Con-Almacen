@@ -14,7 +14,7 @@ namespace GYM.Formularios.Reportes
 {
     public partial class frmReporteVentas : Form
     {
-        DataTable dt = new DataTable(), dtVD = new DataTable();
+        DataTable dt = new DataTable(), dtVD = new DataTable(), dtP = new DataTable();
         delegate void Mensajes(string mensaje);
 
         #region Instancia
@@ -155,7 +155,7 @@ namespace GYM.Formularios.Reportes
             try
             {
                 MySqlCommand sql = new MySqlCommand();
-                sql.CommandText = "SELECT v.id_producto, v.cantidad, v.precio, p.nombre FROM venta_detallada AS v INNER JOIN producto AS p ON (p.id=v.id_producto) WHERE v.id_venta=?id_venta";
+                sql.CommandText = "SELECT v.id_producto, v.cantidad, v.precio, p.nombre, p.descripcion FROM venta_detallada AS v INNER JOIN producto AS p ON (p.id=v.id_producto) WHERE v.id_venta=?id_venta";
                 sql.Parameters.AddWithValue("?id_venta", id);
                 dtVD = ConexionBD.EjecutarConsultaSelect(sql);
             }
@@ -169,6 +169,26 @@ namespace GYM.Formularios.Reportes
             }
         }
 
+        private void ObtenerDatosProductosFecha(DateTime fechaIni, DateTime fechaFin)
+        {
+            try
+            {
+                MySqlCommand sql = new MySqlCommand();
+                sql.CommandText = "SELECT p.nombre, p.descripcion, SUM(vd.cantidad) AS cant FROM venta_detallada AS vd INNER JOIN venta AS v ON (v.id=vd.id_venta) INNER JOIN producto AS p ON (vd.id_producto=p.id) WHERE v.fecha BETWEEN ?fechaIni AND ?fechaFin GROUP BY vd.id_producto";
+                sql.Parameters.AddWithValue("?fechaIni", fechaIni.ToString("yyyy-MM-dd") + " 00:00:00");
+                sql.Parameters.AddWithValue("?fechaFin", fechaFin.ToString("yyyy-MM-dd") + " 23:59:59");
+                dtP = ConexionBD.EjecutarConsultaSelect(sql);
+            }
+            catch (MySqlException ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al obtener el total de productos de ventas. No se pudo realizar la conexión con la base de datos.", ex);
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al obtener el total de productos de ventas. Ocurrió un error genérico.", ex);
+            }
+        }
+
         private void LlenarPanelProductos()
         {
             pnlProductos.Controls.Clear();
@@ -176,6 +196,8 @@ namespace GYM.Formularios.Reportes
             Label lblCodProd;
             Label lblENombre;
             Label lblNombre;
+            Label lblEDescripcion;
+            Label lblDescripcion;
             Label lblEPrecio;
             Label lblPrecio;
             Label lblECant;
@@ -187,12 +209,14 @@ namespace GYM.Formularios.Reportes
                 int y = 10;
                 int salto = (int)(e.MeasureString("Algo", new Font("Segoe UI", 12, FontStyle.Bold)).Height) + 5;
                 int lCod = 10;
-                int lNom = 250;
+                int lNom = 200;
+                int lDes = (pnlProductos.Width / 4) * 2 - 150;
                 int lPre = (pnlProductos.Width / 4) * 3;
                 int lCan = (pnlProductos.Width / 4) * 3 + 100;
 
                 lblECodProd = new Label();
                 lblENombre = new Label();
+                lblEDescripcion = new Label();
                 lblEPrecio = new Label();
                 lblECant = new Label();
 
@@ -200,6 +224,8 @@ namespace GYM.Formularios.Reportes
                 PropiedadesLabelEtiqueta(ref lblECodProd, "lblECodProd", "Código de producto", new Point(lCod, y), tabIndex);
                 tabIndex++;
                 PropiedadesLabelEtiqueta(ref lblENombre, "lblENombre", "Nombre", new Point(lNom, y), tabIndex);
+                tabIndex++;
+                PropiedadesLabelEtiqueta(ref lblEDescripcion, "lblEDescripcion", "Descripción", new Point(lDes, y), tabIndex);
                 tabIndex++;
                 PropiedadesLabelEtiqueta(ref lblEPrecio, "lblEPrecio", "Precio", new Point(lPre, y), tabIndex);
                 tabIndex++;
@@ -209,6 +235,7 @@ namespace GYM.Formularios.Reportes
                 //Agregamos los controles al panel
                 pnlProductos.Controls.Add(lblECodProd);
                 pnlProductos.Controls.Add(lblENombre);
+                pnlProductos.Controls.Add(lblEDescripcion);
                 pnlProductos.Controls.Add(lblEPrecio);
                 pnlProductos.Controls.Add(lblECant);
                 y += salto;
@@ -217,6 +244,7 @@ namespace GYM.Formularios.Reportes
                     int x = 0;
                     lblCodProd = new Label();
                     lblNombre = new Label();
+                    lblDescripcion = new Label();
                     lblPrecio = new Label();
                     lblCant = new Label();
 
@@ -224,6 +252,8 @@ namespace GYM.Formularios.Reportes
                     PropiedadesLabel(ref lblCodProd, "lblCodProd" + x.ToString("000"), dr["id_producto"].ToString(), new Point(lCod, y), tabIndex);
                     tabIndex++;
                     PropiedadesLabel(ref lblNombre, "lblNombre" + x.ToString("000"), dr["nombre"].ToString(), new Point(lNom, y), tabIndex);
+                    tabIndex++;
+                    PropiedadesLabel(ref lblDescripcion, "lblDescripcion" + x.ToString("000"), dr["descripcion"].ToString(), new Point(lDes, y), tabIndex);
                     tabIndex++;
                     PropiedadesLabel(ref lblPrecio, "lblPrecio" + x.ToString("000"), dr["precio"].ToString(), new Point(lPre, y), tabIndex);
                     tabIndex++;
@@ -233,6 +263,7 @@ namespace GYM.Formularios.Reportes
                     //Agregamos los controles al panel
                     pnlProductos.Controls.Add(lblCodProd);
                     pnlProductos.Controls.Add(lblNombre);
+                    pnlProductos.Controls.Add(lblDescripcion);
                     pnlProductos.Controls.Add(lblPrecio);
                     pnlProductos.Controls.Add(lblCant);
                     y += salto;
@@ -241,7 +272,72 @@ namespace GYM.Formularios.Reportes
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                CFuncionesGenerales.MensajeError("Ocurrió un error genérico al mostrar la información de los productos.", ex);
+            }
+        }
+
+        private void LlenarPanelTotalProductos()
+        {
+            pnlTotalProds.Controls.Clear();
+            Label lblENomProd;
+            Label lblNomProd;
+            Label lblEDesc;
+            Label lblDesc;
+            Label lblECant;
+            Label lblCant;
+            int tabIndex = 0;
+            try
+            {
+                Graphics e = this.CreateGraphics();
+                int y = 10;
+                int salto = (int)(e.MeasureString("Algo", new Font("Segoe UI", 12, FontStyle.Bold)).Height) + 5;
+                int lNom = 10;
+                int lDesc = 350;
+                int lCant = (pnlProductos.Width / 4) * 3;
+
+                lblENomProd = new Label();
+                lblEDesc = new Label();
+                lblECant = new Label();
+
+                //Asignamos sus propiedades usando el método PropiedadesLabelEtiqueta
+                PropiedadesLabelEtiqueta(ref lblENomProd, "lblENomProd", "Nombre", new Point(lNom, y), tabIndex);
+                tabIndex++;
+                PropiedadesLabelEtiqueta(ref lblEDesc, "lblEDescripcion", "Descripción", new Point(lDesc, y), tabIndex);
+                tabIndex++;
+                PropiedadesLabelEtiqueta(ref lblECant, "lblECant", "Cantidad", new Point(lCant, y), tabIndex);
+                tabIndex++;
+
+                //Agregamos los controles al panel
+                pnlTotalProds.Controls.Add(lblENomProd);
+                pnlTotalProds.Controls.Add(lblEDesc);
+                pnlTotalProds.Controls.Add(lblECant);
+                y += salto;
+
+                foreach (DataRow dr in dtP.Rows)
+                {
+                    int x = 0;
+                    lblNomProd = new Label();
+                    lblDesc = new Label();
+                    lblCant = new Label();
+
+                    //Asignamos sus propiedades usando el método PropiedadesLabel
+                    PropiedadesLabel(ref lblNomProd, "lblNomProd" + x.ToString("000"), dr["nombre"].ToString(), new Point(lNom, y), tabIndex);
+                    tabIndex++;
+                    PropiedadesLabel(ref lblDesc, "lblDescripcion" + x.ToString("000"), dr["descripcion"].ToString(), new Point(lDesc, y), tabIndex);
+                    tabIndex++;
+                    PropiedadesLabel(ref lblCant, "lblCant" + x.ToString("000"), dr["cant"].ToString(), new Point(lCant, y), tabIndex);
+                    tabIndex++;
+
+                    //Agregamos los controles al panel
+                    pnlTotalProds.Controls.Add(lblNomProd);
+                    pnlTotalProds.Controls.Add(lblDesc);
+                    pnlTotalProds.Controls.Add(lblCant);
+                    y += salto;
+                }
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("Ocurrió un error genérico al mostrar la información de los totales de productos.", ex);
             }
         }
 
@@ -294,6 +390,7 @@ namespace GYM.Formularios.Reportes
                     else if (dr["tipo_pago"].ToString() == "1")
                         tipoPago = "Tarjeta";
                     dgvVentas.Rows.Add(new object[] { dr["id"], fecha, total, tipoPago, dr["c"], CFuncionesGenerales.NombreUsuario(dr["create_user_id"].ToString()) });
+                    Application.DoEvents();
                 }
                 dgvVentas_RowEnter(dgvVentas, new DataGridViewCellEventArgs(0, 0));
             }
@@ -330,6 +427,7 @@ namespace GYM.Formularios.Reportes
         {
             object[] a = (object[])e.Argument;
             BuscarVentas((DateTime)a[0], (DateTime)a[1]);
+            ObtenerDatosProductosFecha((DateTime)a[0], (DateTime)a[1]);
         }
 
         private void bgwBusqueda_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -337,6 +435,7 @@ namespace GYM.Formularios.Reportes
             tmrEspera.Enabled = false;
             CFuncionesGenerales.frmEsperaClose();
             LlenarDataGrid();
+            LlenarPanelTotalProductos();
         }
 
         private void tmrEspera_Tick(object sender, EventArgs e)
@@ -373,6 +472,7 @@ namespace GYM.Formularios.Reportes
         private void frmReporteVentas_Resize(object sender, EventArgs e)
         {
             LlenarPanelProductos();
+            LlenarPanelTotalProductos();
         }
     }
 }
