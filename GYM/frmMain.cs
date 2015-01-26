@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using MySql.Data.MySqlClient;
+using GYM.Formularios.Reportes;
 
 namespace GYM
 {
@@ -693,10 +694,18 @@ namespace GYM
 
         private void ventasDiariasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!Formularios.Reportes.frmReporteVentaDia.Instancia.Visible)
-                Formularios.Reportes.frmReporteVentaDia.Instancia.Show();
+            if (!frmReporteVentaDia.Instancia.Visible)
+                frmReporteVentaDia.Instancia.Show();
             else
-                Formularios.Reportes.frmReporteVentaDia.Instancia.Select();
+                frmReporteVentaDia.Instancia.Select();
+        }
+
+        private void ventaDeMembresíasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!frmReporteMembresias.Instancia.Visible)
+                frmReporteMembresias.Instancia.Show();
+            else
+                frmReporteMembresias.Instancia.Select();
         }   
     }
 }

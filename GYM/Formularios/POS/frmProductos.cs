@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GYM.Formularios.POS;
+using GYM.Clases;
 
 namespace GYM.Formularios.POS
 {
@@ -16,6 +17,7 @@ namespace GYM.Formularios.POS
         string id;
         decimal precio;
         List<int> cant;
+        DataTable dt = new DataTable();
         frmPuntoVenta frm;
 
         public frmProductos(IWin32Window frm)
@@ -28,7 +30,12 @@ namespace GYM.Formularios.POS
         private void txtCodigo_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-                BuscarProducto(txtCodigo.Text);
+            {
+                CFuncionesGenerales.DeshabilitarBotonCerrar(this);
+                tmrEspera.Enabled = true;
+                txtCodigo.Enabled = false;
+                bgwBusqueda.RunWorkerAsync(txtCodigo.Text);
+            }
         }
 
         private void BuscarProducto(string paramBusqueda)
@@ -38,12 +45,7 @@ namespace GYM.Formularios.POS
                 cant = new List<int>();
                 dgvProductos.Rows.Clear();
                 string sql = "SELECT id, nombre, precio, cant, control_stock FROM producto WHERE id='" + paramBusqueda + "' OR nombre LIKE '%" + paramBusqueda + "%' ORDER BY precio ASC";
-                DataTable dt = Clases.ConexionBD.EjecutarConsultaSelect(sql);
-                foreach (DataRow dr in dt.Rows)
-                {
-                    dgvProductos.Rows.Add(dr["id"], dr["nombre"], int.Parse(dr["cant"].ToString()), decimal.Parse(dr["precio"].ToString()), dr["control_stock"]);
-                    cant.Add(Convert.ToInt32(dr["cant"]));
-                }
+                dt = Clases.ConexionBD.EjecutarConsultaSelect(sql);
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
@@ -68,6 +70,22 @@ namespace GYM.Formularios.POS
             catch (Exception ex)
             {
                 Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un error genérico.", ex);
+            }
+        }
+
+        private void LlenarDataGrid()
+        {
+            try
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    dgvProductos.Rows.Add(dr["id"], dr["nombre"], int.Parse(dr["cant"].ToString()), decimal.Parse(dr["precio"].ToString()), dr["control_stock"]);
+                    cant.Add(Convert.ToInt32(dr["cant"]));
+                }
+            }
+            catch (Exception ex)
+            {
+                CFuncionesGenerales.MensajeError("Ha ocurrido un error al mostrar la información.", ex);
             }
         }
 
@@ -167,6 +185,26 @@ namespace GYM.Formularios.POS
             {
                 Clases.CFuncionesGenerales.MensajeError("Ha ocurrido un error genérico.", ex);
             }
+        }
+
+        private void bgwBusqueda_DoWork(object sender, DoWorkEventArgs e)
+        {
+            BuscarProducto(e.Argument.ToString());
+        }
+
+        private void bgwBusqueda_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            tmrEspera.Enabled = false;
+            CFuncionesGenerales.frmEsperaClose();
+            CFuncionesGenerales.HabilitarBotonCerrar(this);
+            txtCodigo.Enabled = true;
+            LlenarDataGrid();
+        }
+
+        private void tmrEspera_Tick(object sender, EventArgs e)
+        {
+            tmrEspera.Enabled = false;
+            CFuncionesGenerales.frmEspera("Espere, buscando productos", this);
         }
     }
 }

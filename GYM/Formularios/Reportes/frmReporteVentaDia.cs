@@ -316,6 +316,7 @@ namespace GYM.Formularios.Reportes
         private void LlenarPanelProductos()
         {
             pnlProductos.Controls.Clear();
+            Label lblTitulo;
             Label lblECodProd;
             Label lblCodProd;
             Label lblENombre;
@@ -338,6 +339,7 @@ namespace GYM.Formularios.Reportes
                 int lPre = (pnlProductos.Width / 4) * 3;
                 int lCan = (pnlProductos.Width / 4) * 3 + 100;
 
+                lblTitulo = new Label();
                 lblECodProd = new Label();
                 lblENombre = new Label();
                 lblEDescripcion = new Label();
@@ -345,6 +347,11 @@ namespace GYM.Formularios.Reportes
                 lblECant = new Label();
 
                 //Asignamos sus propiedades usando el método PropiedadesLabelEtiqueta
+                PropiedadesLabelEtiqueta(ref lblTitulo, "lblTitulo", "Detalle de venta", new Point(lCod, y), tabIndex);
+                lblTitulo.Font = new Font("Segoe UI", 14, FontStyle.Bold);
+                tabIndex++;
+                y += salto;
+
                 PropiedadesLabelEtiqueta(ref lblECodProd, "lblECodProd", "Código de producto", new Point(lCod, y), tabIndex);
                 tabIndex++;
                 PropiedadesLabelEtiqueta(ref lblENombre, "lblENombre", "Nombre", new Point(lNom, y), tabIndex);
@@ -357,6 +364,7 @@ namespace GYM.Formularios.Reportes
                 tabIndex++;
 
                 //Agregamos los controles al panel
+                pnlProductos.Controls.Add(lblTitulo);
                 pnlProductos.Controls.Add(lblECodProd);
                 pnlProductos.Controls.Add(lblENombre);
                 pnlProductos.Controls.Add(lblEDescripcion);
@@ -403,6 +411,7 @@ namespace GYM.Formularios.Reportes
         private void LlenarPanelTotalProductos()
         {
             pnlTotalProds.Controls.Clear();
+            Label lblTitulo;
             Label lblENomProd;
             Label lblNomProd;
             Label lblEDesc;
@@ -419,11 +428,17 @@ namespace GYM.Formularios.Reportes
                 int lDesc = 350;
                 int lCant = (pnlProductos.Width / 4) * 3;
 
+                lblTitulo = new Label();
                 lblENomProd = new Label();
                 lblEDesc = new Label();
                 lblECant = new Label();
 
                 //Asignamos sus propiedades usando el método PropiedadesLabelEtiqueta
+                PropiedadesLabelEtiqueta(ref lblTitulo, "lblTitulo", "Total de productos vendidos", new Point(lNom, y), tabIndex);
+                lblTitulo.Font = new Font("Segoe UI", 14, FontStyle.Bold);
+                tabIndex++;
+                y += salto;
+
                 PropiedadesLabelEtiqueta(ref lblENomProd, "lblENomProd", "Nombre", new Point(lNom, y), tabIndex);
                 tabIndex++;
                 PropiedadesLabelEtiqueta(ref lblEDesc, "lblEDescripcion", "Descripción", new Point(lDesc, y), tabIndex);
@@ -432,6 +447,7 @@ namespace GYM.Formularios.Reportes
                 tabIndex++;
 
                 //Agregamos los controles al panel
+                pnlTotalProds.Controls.Add(lblTitulo);
                 pnlTotalProds.Controls.Add(lblENomProd);
                 pnlTotalProds.Controls.Add(lblEDesc);
                 pnlTotalProds.Controls.Add(lblECant);
@@ -507,6 +523,8 @@ namespace GYM.Formularios.Reportes
             tmrEspera.Enabled = false;
             CFuncionesGenerales.frmEsperaClose();
             LlenarDataGrid();
+            btnBuscar.Enabled = true;
+            CFuncionesGenerales.HabilitarBotonCerrar(this);
         }
 
         private void bgwVentas_DoWork(object sender, DoWorkEventArgs e)
@@ -519,6 +537,8 @@ namespace GYM.Formularios.Reportes
             tmrEspera.Enabled = false;
             CFuncionesGenerales.frmEsperaClose();
             LlenarDataGrid();
+            btnBuscar.Enabled = true;
+            CFuncionesGenerales.HabilitarBotonCerrar(this);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -526,6 +546,8 @@ namespace GYM.Formularios.Reportes
             pnlProductos.Controls.Clear();
             pnlTotalProds.Controls.Clear();
             tmrEspera.Enabled = true;
+            CFuncionesGenerales.DeshabilitarBotonCerrar(this);
+            btnBuscar.Enabled = false;
             switch (cboReporte.SelectedIndex)
             {
                 case 0:
@@ -546,6 +568,7 @@ namespace GYM.Formularios.Reportes
                     bgwVentas.RunWorkerAsync(cboTurno.SelectedIndex);
                     break;
             }
+
         }
 
         private void dtpFecha_ValueChanged(object sender, EventArgs e)

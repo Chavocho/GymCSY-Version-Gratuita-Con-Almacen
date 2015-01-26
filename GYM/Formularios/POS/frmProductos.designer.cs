@@ -28,9 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductos));
             this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.CodigoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ControlStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblInstrucciones = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
@@ -38,11 +44,8 @@
             this.lblCantidad = new System.Windows.Forms.Label();
             this.lblEtiquetaTotal = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.CodigoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ControlStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bgwBusqueda = new System.ComponentModel.BackgroundWorker();
+            this.tmrEspera = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +77,48 @@
             this.dgvProductos.Size = new System.Drawing.Size(648, 232);
             this.dgvProductos.TabIndex = 2;
             this.dgvProductos.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_RowEnter);
+            // 
+            // CodigoProducto
+            // 
+            this.CodigoProducto.Frozen = true;
+            this.CodigoProducto.HeaderText = "Código Producto";
+            this.CodigoProducto.Name = "CodigoProducto";
+            this.CodigoProducto.ReadOnly = true;
+            this.CodigoProducto.Width = 150;
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Nombre.Frozen = true;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 278;
+            // 
+            // Cantidad1
+            // 
+            this.Cantidad1.Frozen = true;
+            this.Cantidad1.HeaderText = "Cantidad";
+            this.Cantidad1.Name = "Cantidad1";
+            this.Cantidad1.ReadOnly = true;
+            // 
+            // Precio1
+            // 
+            dataGridViewCellStyle4.Format = "C2";
+            this.Precio1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Precio1.Frozen = true;
+            this.Precio1.HeaderText = "Precio";
+            this.Precio1.Name = "Precio1";
+            this.Precio1.ReadOnly = true;
+            this.Precio1.Width = 120;
+            // 
+            // ControlStock
+            // 
+            this.ControlStock.Frozen = true;
+            this.ControlStock.HeaderText = "ControlStock";
+            this.ControlStock.Name = "ControlStock";
+            this.ControlStock.ReadOnly = true;
+            this.ControlStock.Visible = false;
             // 
             // txtCodigo
             // 
@@ -160,47 +205,15 @@
             this.lblTotal.TabIndex = 6;
             this.lblTotal.Text = "$0.00";
             // 
-            // CodigoProducto
+            // bgwBusqueda
             // 
-            this.CodigoProducto.Frozen = true;
-            this.CodigoProducto.HeaderText = "Código Producto";
-            this.CodigoProducto.Name = "CodigoProducto";
-            this.CodigoProducto.ReadOnly = true;
-            this.CodigoProducto.Width = 150;
+            this.bgwBusqueda.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwBusqueda_DoWork);
+            this.bgwBusqueda.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwBusqueda_RunWorkerCompleted);
             // 
-            // Nombre
+            // tmrEspera
             // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Nombre.Frozen = true;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 278;
-            // 
-            // Cantidad1
-            // 
-            this.Cantidad1.Frozen = true;
-            this.Cantidad1.HeaderText = "Cantidad";
-            this.Cantidad1.Name = "Cantidad1";
-            this.Cantidad1.ReadOnly = true;
-            // 
-            // Precio1
-            // 
-            dataGridViewCellStyle1.Format = "C2";
-            this.Precio1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Precio1.Frozen = true;
-            this.Precio1.HeaderText = "Precio";
-            this.Precio1.Name = "Precio1";
-            this.Precio1.ReadOnly = true;
-            this.Precio1.Width = 120;
-            // 
-            // ControlStock
-            // 
-            this.ControlStock.Frozen = true;
-            this.ControlStock.HeaderText = "ControlStock";
-            this.ControlStock.Name = "ControlStock";
-            this.ControlStock.ReadOnly = true;
-            this.ControlStock.Visible = false;
+            this.tmrEspera.Interval = 300;
+            this.tmrEspera.Tick += new System.EventHandler(this.tmrEspera_Tick);
             // 
             // frmProductos
             // 
@@ -246,5 +259,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ControlStock;
+        private System.ComponentModel.BackgroundWorker bgwBusqueda;
+        private System.Windows.Forms.Timer tmrEspera;
     }
 }

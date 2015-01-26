@@ -28,11 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRecuperarVenta));
             this.dgvVentas = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtFolio = new System.Windows.Forms.TextBox();
             this.lblInstrucciones = new System.Windows.Forms.Label();
             this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
@@ -41,10 +45,9 @@
             this.lblEtiquetaFin = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.grbFechas = new System.Windows.Forms.GroupBox();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.bgwBusqueda = new System.ComponentModel.BackgroundWorker();
+            this.tmrEspera = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             this.grbFechas.SuspendLayout();
             this.SuspendLayout();
@@ -58,14 +61,6 @@
             this.dgvVentas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvVentas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvVentas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVentas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -80,16 +75,47 @@
             this.dgvVentas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvVentas.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVentas.Size = new System.Drawing.Size(660, 242);
+            this.dgvVentas.Size = new System.Drawing.Size(739, 242);
             this.dgvVentas.TabIndex = 3;
             this.dgvVentas.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_RowEnter);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "Folio";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Fecha
+            // 
+            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle1.Format = "dd \'de\' MMMM \'del\' yyyy hh:mm:ss tt";
+            this.Fecha.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // Total
+            // 
+            dataGridViewCellStyle2.Format = "C2";
+            this.Total.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            this.Total.Width = 130;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Width = 120;
             // 
             // txtFolio
             // 
             this.txtFolio.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtFolio.Location = new System.Drawing.Point(446, 49);
+            this.txtFolio.Location = new System.Drawing.Point(523, 49);
             this.txtFolio.Name = "txtFolio";
-            this.txtFolio.Size = new System.Drawing.Size(226, 29);
+            this.txtFolio.Size = new System.Drawing.Size(228, 29);
             this.txtFolio.TabIndex = 2;
             this.txtFolio.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFolio_KeyDown);
             // 
@@ -97,7 +123,7 @@
             // 
             this.lblInstrucciones.AutoSize = true;
             this.lblInstrucciones.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblInstrucciones.Location = new System.Drawing.Point(442, 26);
+            this.lblInstrucciones.Location = new System.Drawing.Point(519, 26);
             this.lblInstrucciones.Name = "lblInstrucciones";
             this.lblInstrucciones.Size = new System.Drawing.Size(107, 19);
             this.lblInstrucciones.TabIndex = 1;
@@ -149,7 +175,7 @@
             this.btnAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnAceptar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnAceptar.Location = new System.Drawing.Point(584, 339);
+            this.btnAceptar.Location = new System.Drawing.Point(663, 339);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(88, 32);
             this.btnAceptar.TabIndex = 4;
@@ -159,6 +185,7 @@
             // 
             // grbFechas
             // 
+            this.grbFechas.Controls.Add(this.btnBuscar);
             this.grbFechas.Controls.Add(this.lblEtiquetaInicio);
             this.grbFechas.Controls.Add(this.lblEtiquetaFin);
             this.grbFechas.Controls.Add(this.dtpFechaInicio);
@@ -166,46 +193,35 @@
             this.grbFechas.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.grbFechas.Location = new System.Drawing.Point(12, 9);
             this.grbFechas.Name = "grbFechas";
-            this.grbFechas.Size = new System.Drawing.Size(424, 76);
+            this.grbFechas.Size = new System.Drawing.Size(505, 76);
             this.grbFechas.TabIndex = 0;
             this.grbFechas.TabStop = false;
             this.grbFechas.Text = "Buscar por fechas";
             // 
-            // ID
+            // btnBuscar
             // 
-            this.ID.HeaderText = "Folio";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
+            this.btnBuscar.Location = new System.Drawing.Point(418, 46);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(81, 23);
+            this.btnBuscar.TabIndex = 4;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // Fecha
+            // bgwBusqueda
             // 
-            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Format = "dd \'de\' MMMM \'del\' yyyy hh:mm:ss tt";
-            this.Fecha.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
+            this.bgwBusqueda.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwBusqueda_DoWork);
+            this.bgwBusqueda.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwBusqueda_RunWorkerCompleted);
             // 
-            // Total
+            // tmrEspera
             // 
-            dataGridViewCellStyle3.Format = "C2";
-            this.Total.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            this.Total.Width = 130;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Width = 120;
+            this.tmrEspera.Interval = 300;
+            this.tmrEspera.Tick += new System.EventHandler(this.tmrEspera_Tick);
             // 
             // frmRecuperarVenta
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(684, 383);
+            this.ClientSize = new System.Drawing.Size(763, 383);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtFolio);
             this.Controls.Add(this.lblInstrucciones);
@@ -242,5 +258,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.ComponentModel.BackgroundWorker bgwBusqueda;
+        private System.Windows.Forms.Timer tmrEspera;
     }
 }

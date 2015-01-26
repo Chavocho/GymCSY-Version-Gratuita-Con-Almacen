@@ -28,22 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCancelarVenta));
             this.txtFolio = new System.Windows.Forms.TextBox();
             this.lblInstrucciones = new System.Windows.Forms.Label();
             this.dgvVentas = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbFechas = new System.Windows.Forms.GroupBox();
             this.lblEtiquetaInicio = new System.Windows.Forms.Label();
             this.lblEtiquetaFin = new System.Windows.Forms.Label();
             this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.bgwBusqueda = new System.ComponentModel.BackgroundWorker();
+            this.tmrEspera = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             this.grbFechas.SuspendLayout();
             this.SuspendLayout();
@@ -51,9 +55,9 @@
             // txtFolio
             // 
             this.txtFolio.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtFolio.Location = new System.Drawing.Point(446, 49);
+            this.txtFolio.Location = new System.Drawing.Point(519, 52);
             this.txtFolio.Name = "txtFolio";
-            this.txtFolio.Size = new System.Drawing.Size(226, 29);
+            this.txtFolio.Size = new System.Drawing.Size(254, 29);
             this.txtFolio.TabIndex = 2;
             this.txtFolio.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFolio_KeyDown);
             // 
@@ -61,7 +65,7 @@
             // 
             this.lblInstrucciones.AutoSize = true;
             this.lblInstrucciones.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblInstrucciones.Location = new System.Drawing.Point(442, 26);
+            this.lblInstrucciones.Location = new System.Drawing.Point(515, 30);
             this.lblInstrucciones.Name = "lblInstrucciones";
             this.lblInstrucciones.Size = new System.Drawing.Size(107, 19);
             this.lblInstrucciones.TabIndex = 1;
@@ -71,7 +75,9 @@
             // 
             this.dgvVentas.AllowUserToAddRows = false;
             this.dgvVentas.AllowUserToDeleteRows = false;
-            this.dgvVentas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvVentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVentas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.dgvVentas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvVentas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -90,12 +96,44 @@
             this.dgvVentas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvVentas.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVentas.Size = new System.Drawing.Size(660, 238);
+            this.dgvVentas.Size = new System.Drawing.Size(761, 286);
             this.dgvVentas.TabIndex = 3;
             this.dgvVentas.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_RowEnter);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "Folio";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // Fecha
+            // 
+            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Format = "dd \'de\' MMMM \'del\' yyyy hh:mm:ss tt";
+            this.Fecha.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // Total
+            // 
+            dataGridViewCellStyle4.Format = "C2";
+            this.Total.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            this.Total.Width = 130;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Width = 120;
+            // 
             // grbFechas
             // 
+            this.grbFechas.Controls.Add(this.btnBuscar);
             this.grbFechas.Controls.Add(this.lblEtiquetaInicio);
             this.grbFechas.Controls.Add(this.lblEtiquetaFin);
             this.grbFechas.Controls.Add(this.dtpFechaInicio);
@@ -103,7 +141,7 @@
             this.grbFechas.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.grbFechas.Location = new System.Drawing.Point(12, 9);
             this.grbFechas.Name = "grbFechas";
-            this.grbFechas.Size = new System.Drawing.Size(424, 76);
+            this.grbFechas.Size = new System.Drawing.Size(501, 76);
             this.grbFechas.TabIndex = 0;
             this.grbFechas.TabStop = false;
             this.grbFechas.Text = "Buscar por fechas";
@@ -156,51 +194,40 @@
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnCancelar.Image = global::GYM.Properties.Resources.ImgCancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(517, 339);
+            this.btnCancelar.Location = new System.Drawing.Point(618, 387);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(155, 40);
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar venta";
-            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // ID
+            // btnBuscar
             // 
-            this.ID.HeaderText = "Folio";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
+            this.btnBuscar.Location = new System.Drawing.Point(418, 47);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(77, 23);
+            this.btnBuscar.TabIndex = 4;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // Fecha
+            // bgwBusqueda
             // 
-            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.Format = "dd \'de\' MMMM \'del\' yyyy hh:mm:ss tt";
-            this.Fecha.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
+            this.bgwBusqueda.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwBusqueda_DoWork);
+            this.bgwBusqueda.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwBusqueda_RunWorkerCompleted);
             // 
-            // Total
+            // tmrEspera
             // 
-            dataGridViewCellStyle2.Format = "C2";
-            this.Total.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            this.Total.Width = 130;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Width = 120;
+            this.tmrEspera.Interval = 300;
+            this.tmrEspera.Tick += new System.EventHandler(this.tmrEspera_Tick);
             // 
             // frmCancelarVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 391);
+            this.ClientSize = new System.Drawing.Size(785, 439);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txtFolio);
             this.Controls.Add(this.lblInstrucciones);
@@ -236,5 +263,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.ComponentModel.BackgroundWorker bgwBusqueda;
+        private System.Windows.Forms.Timer tmrEspera;
     }
 }

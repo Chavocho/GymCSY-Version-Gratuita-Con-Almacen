@@ -100,6 +100,8 @@ namespace GYM.Formularios.Reportes
             tmrConteo.Enabled = false;
             CFuncionesGenerales.frmEsperaClose();
             LlenarDataGrid();
+            txtBusqueda.Enabled = true;
+            CFuncionesGenerales.HabilitarBotonCerrar(this);
         }
 
         private void tmrConteo_Tick(object sender, EventArgs e)
@@ -112,6 +114,8 @@ namespace GYM.Formularios.Reportes
         {
             if (e.KeyCode == Keys.Enter)
             {
+                txtBusqueda.Enabled = false;
+                CFuncionesGenerales.DeshabilitarBotonCerrar(this);
                 tmrConteo.Enabled = true;
                 bgwBusqueda.RunWorkerAsync(txtBusqueda.Text);
             }

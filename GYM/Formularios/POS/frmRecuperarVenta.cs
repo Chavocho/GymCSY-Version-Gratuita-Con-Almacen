@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GYM.Formularios.POS;
+using GYM.Clases;
 
 namespace GYM.Formularios.POS
 {
@@ -15,6 +16,7 @@ namespace GYM.Formularios.POS
     {
         int folio;
         frmPuntoVenta frm;
+        DataTable dt = new DataTable();
 
         public frmRecuperarVenta(IWin32Window frm)
         {
@@ -30,8 +32,7 @@ namespace GYM.Formularios.POS
                 int fol;
                 int.TryParse(folio, out fol);
                 string sql = "SELECT id, fecha, total, estado, abierta FROM venta WHERE id='" + fol.ToString() + "' AND estado=1";
-                DataTable dt = Clases.ConexionBD.EjecutarConsultaSelect(sql);
-                LlenarDataGrid(dt);
+                dt = Clases.ConexionBD.EjecutarConsultaSelect(sql);
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
@@ -53,8 +54,7 @@ namespace GYM.Formularios.POS
                 //y así te quitas muchos pedos Chava u.u
                 sql.Parameters.AddWithValue("@fechaIni", fechaIni.ToString("yyyy-MM-dd") + " 00:00:00");
                 sql.Parameters.AddWithValue("@fechaFin", fechaFin.ToString("yyyy-MM-dd") + " 23:59:59");
-                DataTable dt = Clases.ConexionBD.EjecutarConsultaSelect(sql);
-                LlenarDataGrid(dt);
+                dt = Clases.ConexionBD.EjecutarConsultaSelect(sql);
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
@@ -66,7 +66,7 @@ namespace GYM.Formularios.POS
             }
         }
 
-        private void LlenarDataGrid(DataTable dt)
+        private void LlenarDataGrid()
         {
             try
             {
@@ -106,31 +106,36 @@ namespace GYM.Formularios.POS
 
         private void txtFolio_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-                BuscarVentaFolio(txtFolio.Text);
+            if (e.KeyCode == Keys.Enter && !bgwBusqueda.IsBusy)
+            {
+                tmrEspera.Enabled = true;
+                CFuncionesGenerales.DeshabilitarBotonCerrar(this);
+                btnBuscar.Enabled = false;
+                txtFolio.Enabled = false;
+                bgwBusqueda.RunWorkerAsync(new object[] { txtFolio.Text });
+            }
         }
 
         private void dtpFechaInicio_ValueChanged(object sender, EventArgs e)
         {
             if (dtpFechaInicio.Value > dtpFechaFin.Value)
                 dtpFechaInicio.Value = dtpFechaFin.Value.AddDays(-1);
-            BuscarVentaFechas(dtpFechaInicio.Value, dtpFechaFin.Value);
         }
 
         private void dtpFechaFin_ValueChanged(object sender, EventArgs e)
         {
             if (dtpFechaFin.Value < dtpFechaInicio.Value)
                 dtpFechaFin.Value = dtpFechaInicio.Value.AddDays(1);
-            BuscarVentaFechas(dtpFechaInicio.Value, dtpFechaFin.Value);
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             if (dgvVentas.CurrentRow == null)
             {
-                MessageBox.Show("¡Debes seleccionar una venta!");
+                MessageBox.Show("¡Debes seleccionar una venta!", "GymCSY", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            //.0
             frm.RecuperarVenta(folio);
             this.Close();
         }
@@ -151,6 +156,48 @@ namespace GYM.Formularios.POS
             {
                 Clases.CFuncionesGenerales.MensajeError("Ocurrio un error al dar click en el DataGridView", ex);
             }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (!bgwBusqueda.IsBusy)
+            {
+                tmrEspera.Enabled = true;
+                CFuncionesGenerales.DeshabilitarBotonCerrar(this);
+                btnBuscar.Enabled = false;
+                txtFolio.Enabled = false;
+                bgwBusqueda.RunWorkerAsync(new object[] { dtpFechaInicio.Value, dtpFechaFin.Value });
+            }
+        }
+
+        private void bgwBusqueda_DoWork(object sender, DoWorkEventArgs e)
+        {
+            Array a = (Array)e.Argument;
+            switch (a.Length)
+            {
+                case 1:
+                    BuscarVentaFolio(a.GetValue(0).ToString());
+                    break;
+                case 2:
+                    BuscarVentaFechas((DateTime)a.GetValue(0), (DateTime)a.GetValue(1));
+                    break;
+            }
+        }
+
+        private void bgwBusqueda_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            tmrEspera.Enabled = false;
+            CFuncionesGenerales.frmEsperaClose();
+            CFuncionesGenerales.HabilitarBotonCerrar(this);
+            btnBuscar.Enabled = true;
+            txtFolio.Enabled = true;
+            LlenarDataGrid();
+        }
+
+        private void tmrEspera_Tick(object sender, EventArgs e)
+        {
+            tmrEspera.Enabled = false;
+            CFuncionesGenerales.frmEspera("Espere, buscando ventas sin terminar", this);
         }
     }
 }

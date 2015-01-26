@@ -59,6 +59,7 @@
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.membresíasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ventasDiariasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.puntodeVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -99,7 +100,7 @@
             this.pcbUsuario = new System.Windows.Forms.PictureBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblBETA = new System.Windows.Forms.Label();
-            this.ventasDiariasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ventaDeMembresíasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUsuario)).BeginInit();
             this.SuspendLayout();
@@ -328,6 +329,7 @@
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.membresíasToolStripMenuItem,
+            this.ventaDeMembresíasToolStripMenuItem,
             this.ventasToolStripMenuItem1,
             this.ventasDiariasToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
@@ -337,16 +339,23 @@
             // membresíasToolStripMenuItem
             // 
             this.membresíasToolStripMenuItem.Name = "membresíasToolStripMenuItem";
-            this.membresíasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.membresíasToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.membresíasToolStripMenuItem.Text = "Membresías";
             this.membresíasToolStripMenuItem.Click += new System.EventHandler(this.membresíasToolStripMenuItem_Click);
             // 
             // ventasToolStripMenuItem1
             // 
             this.ventasToolStripMenuItem1.Name = "ventasToolStripMenuItem1";
-            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.ventasToolStripMenuItem1.Text = "Venta&s";
+            this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(187, 22);
+            this.ventasToolStripMenuItem1.Text = "Venta&s mostrador";
             this.ventasToolStripMenuItem1.Click += new System.EventHandler(this.ventasToolStripMenuItem1_Click);
+            // 
+            // ventasDiariasToolStripMenuItem
+            // 
+            this.ventasDiariasToolStripMenuItem.Name = "ventasDiariasToolStripMenuItem";
+            this.ventasDiariasToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.ventasDiariasToolStripMenuItem.Text = "Ventas diarias";
+            this.ventasDiariasToolStripMenuItem.Click += new System.EventHandler(this.ventasDiariasToolStripMenuItem_Click);
             // 
             // puntodeVentaToolStripMenuItem
             // 
@@ -666,12 +675,12 @@
             this.lblBETA.Text = "BETA";
             this.lblBETA.Visible = false;
             // 
-            // ventasDiariasToolStripMenuItem
+            // ventaDeMembresíasToolStripMenuItem
             // 
-            this.ventasDiariasToolStripMenuItem.Name = "ventasDiariasToolStripMenuItem";
-            this.ventasDiariasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.ventasDiariasToolStripMenuItem.Text = "Ventas diarias";
-            this.ventasDiariasToolStripMenuItem.Click += new System.EventHandler(this.ventasDiariasToolStripMenuItem_Click);
+            this.ventaDeMembresíasToolStripMenuItem.Name = "ventaDeMembresíasToolStripMenuItem";
+            this.ventaDeMembresíasToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.ventaDeMembresíasToolStripMenuItem.Text = "Venta de membresías";
+            this.ventaDeMembresíasToolStripMenuItem.Click += new System.EventHandler(this.ventaDeMembresíasToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -774,5 +783,6 @@
         private System.Windows.Forms.ToolStripMenuItem promocionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem preciosDemembresíasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasDiariasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ventaDeMembresíasToolStripMenuItem;
     }
 }
