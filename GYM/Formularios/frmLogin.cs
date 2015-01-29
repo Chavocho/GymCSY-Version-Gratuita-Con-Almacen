@@ -24,7 +24,7 @@ namespace GYM.Formularios
             //Validar si es la primera ejecucion
             try
             {
-                DataTable data = Clases.ConexionBD.EjecutarConsultaSelect("select * from usuarios where nivel = 3");
+                DataTable data = Clases.ConexionBD.EjecutarConsultaSelect("SELECT * FROM usuarios WHERE nivel=3 AND eliminado=0");
                 if (data.Rows.Count == 0)
                 {
                     DialogResult resultado = MessageBox.Show("No hay usuario registrados que puedan operar el software.\nFavor de registrar un usuario", "No hay usuarios registrados", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
@@ -89,7 +89,7 @@ namespace GYM.Formularios
             {
                 try
                 {
-                    string sql = "SELECT * FROM usuarios WHERE userName='" + tbxUsuario.Text + "' AND password='" + CFuncionesGenerales.GetHashString(tbxPassword.Text) + "'";
+                    string sql = "SELECT * FROM usuarios WHERE userName='" + tbxUsuario.Text + "' AND password='" + CFuncionesGenerales.GetHashString(tbxPassword.Text) + "' AND eliminado=0";
                     DataTable dt = ConexionBD.EjecutarConsultaSelect(sql);
                     foreach (DataRow dr in dt.Rows)
                     {
@@ -169,13 +169,5 @@ namespace GYM.Formularios
         {
             ImagenUsuario(e.Argument.ToString());
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            DateTime fecha01 = new DateTime(2009, 1, 10), fecha02 = new DateTime(2015, 12, 23);
-            
-            MessageBox.Show("Años: " + (fecha02.Year - fecha01.Year).ToString());
-        }
-
     }
 }

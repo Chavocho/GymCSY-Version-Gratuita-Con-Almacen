@@ -43,7 +43,7 @@ namespace GYM.Formularios
         public void CargarUsuarios()
         {
             dgvUsuarios.Rows.Clear();
-            string sql = "SELECT * FROM usuarios ORDER BY nivel DESC";
+            string sql = "SELECT * FROM usuarios WHERE eliminado=0 ORDER BY nivel DESC";
             DataTable dt = Clases.ConexionBD.EjecutarConsultaSelect(sql);
             foreach (DataRow dr in dt.Rows)
             {
@@ -61,7 +61,7 @@ namespace GYM.Formularios
 
         private void EliminarUsuario(string id)
         {
-            string sql = "DELETE FROM usuarios WHERE id='" + id + "'";
+            string sql = "UPDATE usuarios SET eliminado=1 WHERE id='" + id + "'";
             Clases.ConexionBD.EjecutarConsultaSelect(sql);
             dgvUsuarios.Rows.RemoveAt(dgvUsuarios.CurrentRow.Index);
         }

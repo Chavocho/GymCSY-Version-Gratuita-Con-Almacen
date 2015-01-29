@@ -119,14 +119,13 @@
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnEliminar.Image = global::GYM.Properties.Resources.ImgEliminar;
-            this.btnEliminar.Location = new System.Drawing.Point(164, 267);
+            this.btnEliminar.Location = new System.Drawing.Point(509, 267);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(109, 37);
             this.btnEliminar.TabIndex = 27;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Visible = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
@@ -134,7 +133,7 @@
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnEditar.Image = global::GYM.Properties.Resources.ImgEditar;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(509, 267);
+            this.btnEditar.Location = new System.Drawing.Point(394, 267);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(109, 37);
             this.btnEditar.TabIndex = 2;
@@ -148,7 +147,7 @@
             this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnNuevo.Image = global::GYM.Properties.Resources.ImgAgregarUsuario;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(394, 267);
+            this.btnNuevo.Location = new System.Drawing.Point(279, 267);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(109, 37);
             this.btnNuevo.TabIndex = 1;
