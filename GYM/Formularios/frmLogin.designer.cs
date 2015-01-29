@@ -37,6 +37,7 @@
             this.tbxPassword = new System.Windows.Forms.TextBox();
             this.pbxUsuario = new System.Windows.Forms.PictureBox();
             this.bgwImagen = new System.ComponentModel.BackgroundWorker();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,6 +119,16 @@
             // 
             this.bgwImagen.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwImagen_DoWork);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(414, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Pruebas";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmLogin
             // 
             this.AcceptButton = this.btnIngresar;
@@ -125,6 +136,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(501, 215);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tbxPassword);
             this.Controls.Add(this.tbxUsuario);
             this.Controls.Add(this.lblPassword);
@@ -156,5 +168,6 @@
         private System.Windows.Forms.TextBox tbxUsuario;
         private System.Windows.Forms.TextBox tbxPassword;
         private System.ComponentModel.BackgroundWorker bgwImagen;
+        private System.Windows.Forms.Button button1;
     }
 }

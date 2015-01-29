@@ -58,6 +58,7 @@
             this.preciosDemembresíasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.membresíasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ventaDeMembresíasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasDiariasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.puntodeVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -100,7 +101,7 @@
             this.pcbUsuario = new System.Windows.Forms.PictureBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblBETA = new System.Windows.Forms.Label();
-            this.ventaDeMembresíasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gananciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbUsuario)).BeginInit();
             this.SuspendLayout();
@@ -331,7 +332,8 @@
             this.membresíasToolStripMenuItem,
             this.ventaDeMembresíasToolStripMenuItem,
             this.ventasToolStripMenuItem1,
-            this.ventasDiariasToolStripMenuItem});
+            this.ventasDiariasToolStripMenuItem,
+            this.gananciaToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.reportesToolStripMenuItem.Text = "Report&es";
@@ -342,6 +344,13 @@
             this.membresíasToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.membresíasToolStripMenuItem.Text = "Membresías";
             this.membresíasToolStripMenuItem.Click += new System.EventHandler(this.membresíasToolStripMenuItem_Click);
+            // 
+            // ventaDeMembresíasToolStripMenuItem
+            // 
+            this.ventaDeMembresíasToolStripMenuItem.Name = "ventaDeMembresíasToolStripMenuItem";
+            this.ventaDeMembresíasToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.ventaDeMembresíasToolStripMenuItem.Text = "Venta de membresías";
+            this.ventaDeMembresíasToolStripMenuItem.Click += new System.EventHandler(this.ventaDeMembresíasToolStripMenuItem_Click);
             // 
             // ventasToolStripMenuItem1
             // 
@@ -675,12 +684,12 @@
             this.lblBETA.Text = "BETA";
             this.lblBETA.Visible = false;
             // 
-            // ventaDeMembresíasToolStripMenuItem
+            // gananciaToolStripMenuItem
             // 
-            this.ventaDeMembresíasToolStripMenuItem.Name = "ventaDeMembresíasToolStripMenuItem";
-            this.ventaDeMembresíasToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.ventaDeMembresíasToolStripMenuItem.Text = "Venta de membresías";
-            this.ventaDeMembresíasToolStripMenuItem.Click += new System.EventHandler(this.ventaDeMembresíasToolStripMenuItem_Click);
+            this.gananciaToolStripMenuItem.Name = "gananciaToolStripMenuItem";
+            this.gananciaToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.gananciaToolStripMenuItem.Text = "Gananc&ia";
+            this.gananciaToolStripMenuItem.Click += new System.EventHandler(this.gananciaToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -784,5 +793,6 @@
         private System.Windows.Forms.ToolStripMenuItem preciosDemembresíasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventasDiariasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ventaDeMembresíasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gananciaToolStripMenuItem;
     }
 }

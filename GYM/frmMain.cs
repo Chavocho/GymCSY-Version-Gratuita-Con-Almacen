@@ -706,6 +706,14 @@ namespace GYM
                 frmReporteMembresias.Instancia.Show();
             else
                 frmReporteMembresias.Instancia.Select();
+        }
+
+        private void gananciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!frmReporteGanancia.Instancia.Visible)
+                frmReporteGanancia.Instancia.Show();
+            else
+                frmReporteGanancia.Instancia.Select();
         }   
     }
 }

@@ -37,6 +37,7 @@ namespace GYM.Formularios.Compras
             decimal des;
             decimal.TryParse(txtDescuento.Text, out des);
             frm.ModificarProducto(id, (int)nudCantidad.Value, des);
+            this.Close();
         }
     }
 }

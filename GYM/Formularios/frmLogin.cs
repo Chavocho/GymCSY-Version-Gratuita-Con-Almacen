@@ -170,5 +170,12 @@ namespace GYM.Formularios
             ImagenUsuario(e.Argument.ToString());
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DateTime fecha01 = new DateTime(2009, 1, 10), fecha02 = new DateTime(2015, 12, 23);
+            
+            MessageBox.Show("Años: " + (fecha02.Year - fecha01.Year).ToString());
+        }
+
     }
 }

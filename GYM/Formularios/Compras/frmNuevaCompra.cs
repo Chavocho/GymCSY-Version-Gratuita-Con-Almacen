@@ -394,7 +394,7 @@ namespace GYM.Formularios.Compras
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (bool.Parse(Clases.CConfiguracionXML.LeerConfiguración("caja", "estado")))
+            if (Clases.Caja.EstadoCaja())
             {
                 if (ValidarCampos())
                 {
@@ -449,7 +449,7 @@ namespace GYM.Formularios.Compras
         {
             try
             {
-                id = dgvProductos[e.ColumnIndex, e.RowIndex].Value.ToString();
+                id = dgvProductos[0, e.RowIndex].Value.ToString();
             }
             catch
             {

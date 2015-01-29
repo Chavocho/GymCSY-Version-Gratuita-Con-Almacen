@@ -52,6 +52,7 @@ namespace GYM.Formularios.Compras
                     dgvProductos.Rows.Add(new object[] { dr["id"], dr["nombre"], int.Parse(dr["cant"].ToString()) + int.Parse(dr["cant_alm"].ToString()), decimal.Parse(dr["costo"].ToString()) });
                     Application.DoEvents();
                 }
+                dgvProductos_RowEnter(dgvProductos, new DataGridViewCellEventArgs(0, 0));
             }
             catch (FormatException ex)
             {
@@ -205,7 +206,7 @@ namespace GYM.Formularios.Compras
         {
             try
             {
-                if (dgvProductos.RowCount > 0)
+                if (dgvProductos.CurrentRow != null)
                     CalcularTotales();
                 else
                     lblTotal.Text = "$0.00";

@@ -1083,3 +1083,7 @@ System.FormatException: No se puede reconocer la cadena como valor DateTime vál
 MySql.Data.MySqlClient.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'c.*, r.folio_remision, r.tipo_pago, m.numSocio, u.userName FROM caja AS c INNER ' at line 1
    en GYM.Clases.ConexionBD.EjecutarConsultaSelect(MySqlCommand comando) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\ConexionBD.cs:línea 171
    en GYM.Formularios.Reportes.frmReporteMembresias.BuscarMembresias(DateTime fechaIni, DateTime fechaFin) en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Reportes\frmReporteMembresias.cs:línea 108|
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en GYM.Formularios.Compras.frmProductosCompra.CalcularTotales() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Compras\frmProductosCompra.cs:línea 80|
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en GYM.Formularios.Compras.frmProductosCompra.CalcularTotales() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Compras\frmProductosCompra.cs:línea 80|
