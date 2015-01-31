@@ -265,6 +265,8 @@ namespace GYM
             pendientesToolStripMenuItem.Visible = false;
             preciosDemembresíasToolStripMenuItem.Visible = false;
             promocionesToolStripMenuItem.Visible = false;
+            gananciaToolStripMenuItem.Visible = false;
+            ventaDeMembresíasToolStripMenuItem.Visible = false;
            
         }
 

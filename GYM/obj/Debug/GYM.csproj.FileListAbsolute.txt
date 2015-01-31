@@ -1218,3 +1218,15 @@ C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\bin\De
 C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reportes.frmReporteVentaDia.resources
 C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reportes.frmReporteMembresias.resources
 C:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reportes.frmReporteGanancia.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\bin\Debug\es-MX\GYM.resources.dll
+F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\bin\Debug\sk\GYM.resources.dll
+F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\bin\Debug\itextsharp.xml
+F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Membresia.frmEditarPromocionHorario.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Membresia.frmNuevaPromocionHorario.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reportes.frmReporteGanancia.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reportes.frmReporteMembresias.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.Reportes.frmReporteVentaDia.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.frmConfiguracionBaseDatos.es-MX.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\GYM.Formularios.frmConfiguracionBaseDatos.sk.resources
+F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\es-MX\GYM.resources.dll
+F:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\obj\Debug\sk\GYM.resources.dll
