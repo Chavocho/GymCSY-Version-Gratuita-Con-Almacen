@@ -1087,3 +1087,26 @@ System.NullReferenceException: Referencia a objeto no establecida como instancia
    en GYM.Formularios.Compras.frmProductosCompra.CalcularTotales() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Compras\frmProductosCompra.cs:línea 80|
 System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
    en GYM.Formularios.Compras.frmProductosCompra.CalcularTotales() en c:\Users\Chavocho\Trabajos\GitHub\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Compras\frmProductosCompra.cs:línea 80|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host 'localhost' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'gymdtbs' ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown database 'gymdtbs'
+   en MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   en MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   en GYM.Clases.Caja.EstadoCaja() en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\Caja.cs:línea 79
+   en GYM.frmMain.frmMain_FormClosing(Object sender, FormClosingEventArgs e) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\frmMain.cs:línea 336
+   en System.Windows.Forms.Form.OnFormClosing(FormClosingEventArgs e)
+   en System.Windows.Forms.Form.RaiseFormClosingOnAppExit()
+   en System.Windows.Forms.Application.ExitInternal()
+   en System.Windows.Forms.Application.Exit(CancelEventArgs e)
+   en System.Windows.Forms.Application.Exit()
+   en GYM.Formularios.frmConfiguracionBaseDatos.btnAceptar_Click(Object sender, EventArgs e) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Configuraciones\frmConfiguracionBaseDatos.cs:línea 112|
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   en GYM.Clases.Caja.EstadoCaja() en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Clases\Caja.cs:línea 79
+   en GYM.frmMain.frmMain_FormClosing(Object sender, FormClosingEventArgs e) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\frmMain.cs:línea 336
+   en System.Windows.Forms.Form.OnFormClosing(FormClosingEventArgs e)
+   en System.Windows.Forms.Form.RaiseFormClosingOnAppExit()
+   en System.Windows.Forms.Application.ExitInternal()
+   en System.Windows.Forms.Application.Exit(CancelEventArgs e)
+   en System.Windows.Forms.Application.Exit()
+   en GYM.Formularios.frmConfiguracionBaseDatos.btnAceptar_Click(Object sender, EventArgs e) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Configuraciones\frmConfiguracionBaseDatos.cs:línea 112|
+System.FormatException: No se puede reconocer la cadena como un tipo booleano válido.
+   en System.Boolean.Parse(String value)
+   en GYM.Formularios.frmCaja.frmCaja_Load(Object sender, EventArgs e) en f:\Proyectos\Github\GymCSY-Version-Gratuita-Con-Almacen\GYM\Formularios\Caja\frmCaja.cs:línea 294|
